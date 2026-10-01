@@ -1,0 +1,10 @@
+# 运行时生成的文件
+__pycache__/
+*.pyc
+build/
+.build/
+challenge-runs/
+*.exe
+workspace/replays/
+tools/
+rerun/

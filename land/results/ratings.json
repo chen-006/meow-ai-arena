@@ -1,0 +1,456 @@
+{
+  "method": "bradley-terry-mle, duel + melee (pairwise), 50/50",
+  "total_raw_best": 100.0,
+  "renormalized_from_frozen": [],
+  "modes": {
+    "duel": {
+      "games": 26400,
+      "theta_best": 5.691692207444755,
+      "bots": {
+        "anchor-greedy": 0.0,
+        "anchor-random": -4.1486,
+        "anchor-sparring": 5.083573,
+        "deepseek-4.1f@workbuddy#1": -0.198924,
+        "glm-5.3@workbuddy#1": 0.669545,
+        "gpt-6-astra@codex#1": 4.116387,
+        "gpt-6-sol@codex#1": 3.075303,
+        "kimi-k3@workbuddy#1": 1.250352,
+        "mimo-2.6-pro@zcode#1": 2.86985,
+        "mystery-model@zcode#1": -0.461121,
+        "opus-5.5@claude-code#1": 4.622159,
+        "sonnet-5@claude-code#1": 5.691692
+      }
+    },
+    "melee": {
+      "games": 21600,
+      "theta_best": 1.6696020326657477,
+      "bots": {
+        "anchor-greedy": 0.0,
+        "anchor-random": -3.502033,
+        "anchor-sparring": 1.173984,
+        "deepseek-4.1f@workbuddy#1": -2.224801,
+        "glm-5.3@workbuddy#1": -0.467504,
+        "gpt-6-astra@codex#1": 1.519168,
+        "gpt-6-sol@codex#1": 0.414426,
+        "kimi-k3@workbuddy#1": 0.192197,
+        "mimo-2.6-pro@zcode#1": 0.241174,
+        "mystery-model@zcode#1": -1.258893,
+        "opus-5.5@claude-code#1": 1.294524,
+        "sonnet-5@claude-code#1": 1.669602
+      }
+    }
+  },
+  "models": {
+    "sonnet-5@claude-code": {
+      "score": 100.0,
+      "score_ci95": [
+        100.0,
+        100.0
+      ],
+      "rank_ci95": [
+        1,
+        1
+      ],
+      "modes": {
+        "duel": {
+          "score": 100.0,
+          "score_ci95": [
+            100.0,
+            100.0
+          ],
+          "theta": 5.6917,
+          "runs": {
+            "sonnet-5@claude-code#1": 5.6917
+          }
+        },
+        "melee": {
+          "score": 100.0,
+          "score_ci95": [
+            100.0,
+            100.0
+          ],
+          "theta": 1.6696,
+          "runs": {
+            "sonnet-5@claude-code#1": 1.6696
+          }
+        }
+      }
+    },
+    "gpt-6-astra@codex": {
+      "score": 81.66,
+      "score_ci95": [
+        78.5,
+        85.4
+      ],
+      "rank_ci95": [
+        2,
+        3
+      ],
+      "modes": {
+        "duel": {
+          "score": 72.32,
+          "score_ci95": [
+            70.2,
+            74.3
+          ],
+          "theta": 4.1164,
+          "runs": {
+            "gpt-6-astra@codex#1": 4.1164
+          }
+        },
+        "melee": {
+          "score": 90.99,
+          "score_ci95": [
+            84.6,
+            98.5
+          ],
+          "theta": 1.5192,
+          "runs": {
+            "gpt-6-astra@codex#1": 1.5192
+          }
+        }
+      }
+    },
+    "anchor-sparring": {
+      "score": 79.82,
+      "score_ci95": [
+        76.8,
+        82.9
+      ],
+      "rank_ci95": null,
+      "modes": {
+        "duel": {
+          "score": 89.32,
+          "score_ci95": [
+            87.2,
+            91.3
+          ],
+          "theta": 5.0836,
+          "runs": {
+            "anchor-sparring": 5.0836
+          }
+        },
+        "melee": {
+          "score": 70.32,
+          "score_ci95": [
+            64.5,
+            75.8
+          ],
+          "theta": 1.174,
+          "runs": {
+            "anchor-sparring": 1.174
+          }
+        }
+      }
+    },
+    "opus-5.5@claude-code": {
+      "score": 79.37,
+      "score_ci95": [
+        76.2,
+        82.6
+      ],
+      "rank_ci95": [
+        2,
+        3
+      ],
+      "modes": {
+        "duel": {
+          "score": 81.21,
+          "score_ci95": [
+            79.0,
+            83.2
+          ],
+          "theta": 4.6222,
+          "runs": {
+            "opus-5.5@claude-code#1": 4.6222
+          }
+        },
+        "melee": {
+          "score": 77.53,
+          "score_ci95": [
+            71.0,
+            83.6
+          ],
+          "theta": 1.2945,
+          "runs": {
+            "opus-5.5@claude-code#1": 1.2945
+          }
+        }
+      }
+    },
+    "gpt-6-sol@codex": {
+      "score": 39.43,
+      "score_ci95": [
+        36.5,
+        42.7
+      ],
+      "rank_ci95": [
+        4,
+        4
+      ],
+      "modes": {
+        "duel": {
+          "score": 54.03,
+          "score_ci95": [
+            51.7,
+            56.4
+          ],
+          "theta": 3.0753,
+          "runs": {
+            "gpt-6-sol@codex#1": 3.0753
+          }
+        },
+        "melee": {
+          "score": 24.82,
+          "score_ci95": [
+            19.7,
+            30.7
+          ],
+          "theta": 0.4144,
+          "runs": {
+            "gpt-6-sol@codex#1": 0.4144
+          }
+        }
+      }
+    },
+    "mimo-2.6-pro@zcode": {
+      "score": 32.43,
+      "score_ci95": [
+        29.3,
+        35.4
+      ],
+      "rank_ci95": [
+        5,
+        5
+      ],
+      "modes": {
+        "duel": {
+          "score": 50.42,
+          "score_ci95": [
+            48.3,
+            52.3
+          ],
+          "theta": 2.8699,
+          "runs": {
+            "mimo-2.6-pro@zcode#1": 2.8699
+          }
+        },
+        "melee": {
+          "score": 14.45,
+          "score_ci95": [
+            9.4,
+            20.1
+          ],
+          "theta": 0.2412,
+          "runs": {
+            "mimo-2.6-pro@zcode#1": 0.2412
+          }
+        }
+      }
+    },
+    "kimi-k3@workbuddy": {
+      "score": 16.74,
+      "score_ci95": [
+        13.6,
+        19.7
+      ],
+      "rank_ci95": [
+        6,
+        6
+      ],
+      "modes": {
+        "duel": {
+          "score": 21.97,
+          "score_ci95": [
+            19.9,
+            23.5
+          ],
+          "theta": 1.2504,
+          "runs": {
+            "kimi-k3@workbuddy#1": 1.2504
+          }
+        },
+        "melee": {
+          "score": 11.51,
+          "score_ci95": [
+            5.6,
+            17.8
+          ],
+          "theta": 0.1922,
+          "runs": {
+            "kimi-k3@workbuddy#1": 0.1922
+          }
+        }
+      }
+    },
+    "glm-5.3@workbuddy": {
+      "score": 5.88,
+      "score_ci95": [
+        5.0,
+        6.7
+      ],
+      "rank_ci95": [
+        7,
+        7
+      ],
+      "modes": {
+        "duel": {
+          "score": 11.76,
+          "score_ci95": [
+            10.0,
+            13.5
+          ],
+          "theta": 0.6695,
+          "runs": {
+            "glm-5.3@workbuddy#1": 0.6695
+          }
+        },
+        "melee": {
+          "score": 0.0,
+          "score_ci95": [
+            0.0,
+            0.0
+          ],
+          "theta": -0.4675,
+          "runs": {
+            "glm-5.3@workbuddy#1": -0.4675
+          }
+        }
+      }
+    },
+    "anchor-greedy": {
+      "score": 0.0,
+      "score_ci95": [
+        0.0,
+        0.0
+      ],
+      "rank_ci95": null,
+      "modes": {
+        "duel": {
+          "score": 0.0,
+          "score_ci95": [
+            0.0,
+            0.0
+          ],
+          "theta": 0.0,
+          "runs": {
+            "anchor-greedy": 0.0
+          }
+        },
+        "melee": {
+          "score": 0.0,
+          "score_ci95": [
+            0.0,
+            0.0
+          ],
+          "theta": 0.0,
+          "runs": {
+            "anchor-greedy": 0.0
+          }
+        }
+      }
+    },
+    "mystery-model@zcode": {
+      "score": 0.0,
+      "score_ci95": [
+        0.0,
+        0.0
+      ],
+      "rank_ci95": [
+        8,
+        8
+      ],
+      "modes": {
+        "duel": {
+          "score": 0.0,
+          "score_ci95": [
+            0.0,
+            0.0
+          ],
+          "theta": -0.4611,
+          "runs": {
+            "mystery-model@zcode#1": -0.4611
+          }
+        },
+        "melee": {
+          "score": 0.0,
+          "score_ci95": [
+            0.0,
+            0.0
+          ],
+          "theta": -1.2589,
+          "runs": {
+            "mystery-model@zcode#1": -1.2589
+          }
+        }
+      }
+    },
+    "deepseek-4.1f@workbuddy": {
+      "score": 0.0,
+      "score_ci95": [
+        0.0,
+        0.0
+      ],
+      "rank_ci95": [
+        9,
+        9
+      ],
+      "modes": {
+        "duel": {
+          "score": 0.0,
+          "score_ci95": [
+            0.0,
+            0.0
+          ],
+          "theta": -0.1989,
+          "runs": {
+            "deepseek-4.1f@workbuddy#1": -0.1989
+          }
+        },
+        "melee": {
+          "score": 0.0,
+          "score_ci95": [
+            0.0,
+            0.0
+          ],
+          "theta": -2.2248,
+          "runs": {
+            "deepseek-4.1f@workbuddy#1": -2.2248
+          }
+        }
+      }
+    },
+    "anchor-random": {
+      "score": 0.0,
+      "score_ci95": [
+        0.0,
+        0.0
+      ],
+      "rank_ci95": null,
+      "modes": {
+        "duel": {
+          "score": 0.0,
+          "score_ci95": [
+            0.0,
+            0.0
+          ],
+          "theta": -4.1486,
+          "runs": {
+            "anchor-random": -4.1486
+          }
+        },
+        "melee": {
+          "score": 0.0,
+          "score_ci95": [
+            0.0,
+            0.0
+          ],
+          "theta": -3.502,
+          "runs": {
+            "anchor-random": -3.502
+          }
+        }
+      }
+    }
+  }
+}

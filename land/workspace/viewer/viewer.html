@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>圈地回放</title>
+<style>
+:root {
+  --bg: #f6f5f2; --panel: #ffffff; --ink: #1d1d1f; --muted: #6b6b70; --line: #e3e1dc;
+  --cell: #ecebe7; --p0: #2f6fdf; --p0-land: #bcd0f5; --p0-trail: #6f9ae8;
+  --p1: #d9621b; --p1-land: #f5cfb4; --p1-trail: #e8955f; --accent: #1d1d1f;
+  --p2: #2e9a4f; --p2-land: #bfe3c8; --p2-trail: #6cc184;
+  --p3: #8a4fd1; --p3-land: #dccaf3; --p3-trail: #ab84e2;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #151517; --panel: #1f1f22; --ink: #ececec; --muted: #9a9aa0; --line: #313136;
+    --cell: #26262a; --p0-land: #26406f; --p0-trail: #4b78c9; --p1-land: #6a3a1c; --p1-trail: #c07542;
+    --p2-land: #1f5a33; --p2-trail: #3f9a5c; --p3-land: #4a2f73; --p3-trail: #8663c2;
+    --accent: #ececec;
+  }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink);
+  font: 14px/1.5 system-ui, -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif; }
+main { max-width: 1100px; margin: 0 auto; padding: 20px 16px 40px; }
+h1 { font-size: 18px; margin: 0 0 4px; }
+.sub { color: var(--muted); margin: 0 0 16px; }
+.layout { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 16px; align-items: start; }
+@media (max-width: 820px) { .layout { grid-template-columns: 1fr; } }
+.card { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 14px; }
+canvas { width: 100%; height: auto; display: block; border-radius: 6px; image-rendering: pixelated; }
+#drop { border: 1.5px dashed var(--line); border-radius: 10px; padding: 36px 16px; text-align: center; color: var(--muted); }
+#drop.hot { border-color: var(--accent); color: var(--ink); }
+.controls { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 12px; }
+button, select { font: inherit; color: var(--ink); background: var(--bg); border: 1px solid var(--line);
+  border-radius: 6px; padding: 5px 10px; cursor: pointer; }
+button:hover { border-color: var(--muted); }
+input[type=range] { flex: 1; min-width: 160px; accent-color: var(--accent); }
+.turn { font-variant-numeric: tabular-nums; min-width: 88px; }
+.player { display: grid; grid-template-columns: 14px 1fr auto; gap: 4px 8px; align-items: center; margin-bottom: 12px; }
+.sw { width: 14px; height: 14px; border-radius: 3px; }
+.name { font-weight: 600; overflow-wrap: anywhere; }
+.big { font-size: 20px; font-weight: 650; font-variant-numeric: tabular-nums; }
+.kv { grid-column: 2 / 4; color: var(--muted); font-size: 12px; font-variant-numeric: tabular-nums; }
+.bar { height: 8px; border-radius: 4px; overflow: hidden; display: flex; background: var(--cell); margin: 4px 0 14px; }
+#log { max-height: 260px; overflow: auto; font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; }
+#log div { padding: 2px 0; border-bottom: 1px solid var(--line); }
+#result { font-weight: 600; margin-bottom: 10px; }
+label.inline { color: var(--muted); display: flex; gap: 6px; align-items: center; }
+</style>
+</head>
+<body>
+<main>
+  <h1>圈地回放</h1>
+  <p class="sub">把 referee.py 或 tournament.py 生成的回放 JSON 拖到下方，或点击选择（可多选）。空格键播放/暂停，← → 逐回合。</p>
+  <div id="drop">拖入回放文件，或 <button id="pick">选择文件</button><input id="file" type="file" accept=".json" multiple hidden></div>
+  <div class="layout" id="ui" hidden>
+    <div class="card">
+      <canvas id="cv"></canvas>
+      <div class="controls">
+        <button id="play">播放</button>
+        <button id="prev">◀</button><button id="next">▶</button>
+        <span class="turn" id="turn"></span>
+        <input type="range" id="scrub" min="0" value="0">
+      </div>
+      <div class="controls">
+        <label class="inline">速度 <select id="speed">
+          <option value="5">5 回合/秒</option><option value="15">15 回合/秒</option>
+          <option value="30" selected>30 回合/秒</option><option value="60">60 回合/秒</option><option value="200">200 回合/秒</option>
+        </select></label>
+        <label class="inline">回放 <select id="which"></select></label>
+      </div>
+    </div>
+    <div class="card">
+      <div id="result"></div>
+      <div id="players"></div>
+      <div class="bar" id="bar"></div>
+      <div style="font-weight:600;margin-bottom:4px">事件</div>
+      <div id="log"></div>
+    </div>
+  </div>
+</main>
+<script>
+const $ = id => document.getElementById(id);
+const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const DEATH = { wall: '撞墙', head: '撞头', self: '撞到自己的轨迹', cut: '轨迹被切断' };
+let replays = [], R = null, states = [], cur = 0, timer = null;
+
+function load(files) {
+  const list = [...files].filter(f => f.name.endsWith('.json'));
+  Promise.all(list.map(f => f.text().then(t => { const j = JSON.parse(t); j._file = f.name; return j; })))
+    .then(rs => {
+      replays = rs.filter(r => r.frames);
+      if (!replays.length) return alert('没有找到回放数据');
+      $('which').innerHTML = replays.map((r, i) => `<option value="${i}">${r._file}</option>`).join('');
+      $('drop').hidden = true; $('ui').hidden = false;
+      open(0);
+    }).catch(e => alert('读取失败：' + e));
+}
+
+// Rebuild every turn's state once; 600 turns x 1600 cells is small.
+function open(i) {
+  stop();
+  R = replays[i];
+  const W = R.config.width, H = R.config.height, n = R.names.length;
+  let owner = Int8Array.from(R.initial_owner, c => c === '.' ? -1 : +c);
+  let trails = Array.from({ length: n }, () => []);
+  let pos = R.spawns.map((s, j) => [s[0], s[1], R.init_dirs[j]]);
+  const snap = (events, t) => ({ owner: owner.slice(), trails: trails.map(t => t.slice()), pos, events, t });
+  states = [snap([], 0)];
+  const deaths = new Array(n).fill(0);
+  R.frames.forEach((f, t) => {
+    for (const j of f.trail_clear || []) trails[j] = [];
+    for (const [j, k] of f.trail_add || []) trails[j].push(k);
+    for (const [k, j] of f.owner || []) owner[k] = j;
+    pos = f.pos;
+    for (const e of f.events || []) if (e.type === 'death') deaths[e.player]++;
+    const s = snap(f.events || [], t + 1); s.deaths = deaths.slice(); states.push(s);
+  });
+  states[0].deaths = new Array(n).fill(0);
+  const cv = $('cv'), cs = Math.max(8, Math.floor(720 / Math.max(W, H)));
+  cv.width = W * cs; cv.height = H * cs; cv.dataset.cs = cs;
+  $('scrub').max = states.length - 1;
+  const res = R.result, names = R.names;
+  if (n > 2) {
+    const order = names.map((nm, j) => j).sort((a, b) => res.ranks[a] - res.ranks[b]);
+    $('result').textContent = '混战名次：' + order.map(j => `${res.ranks[j]}. ${names[j]}${res.forfeit[j] ? '（判负）' : ''}`).join('　') + ` · 种子 ${R.seed}`;
+  } else {
+    $('result').textContent = res.winner === -1 ? `平局 · 种子 ${R.seed}` :
+      `胜者：${names[res.winner]}${res.forfeit.some(Boolean) ? '（对手判负：' + res.forfeit.filter(Boolean).join('/') + '）' : ''} · 种子 ${R.seed}`;
+  }
+  const log = [];
+  states.forEach(s => s.events.forEach(e => {
+    const who = names[e.player];
+    log.push(e.type === 'death'
+      ? `<div>T${s.t - 1} ${who} 阵亡（${DEATH[e.reason]}${e.reason === 'cut' || e.reason === 'head' ? '，' + names[e.by] : ''}）</div>`
+      : e.type === 'out' ? `<div>T${s.t - 1} ${who} 判负出局（${e.reason === 'crash' ? '程序崩溃' : '错误过多'}）</div>`
+      : `<div>T${s.t - 1} ${who} 圈地 +${e.cells}</div>`);
+  }));
+  $('log').innerHTML = log.join('') || '<div>无事件</div>';
+  show(0);
+}
+
+function show(t) {
+  cur = Math.max(0, Math.min(states.length - 1, t));
+  const s = states[cur], W = R.config.width, H = R.config.height;
+  const cv = $('cv'), ctx = cv.getContext('2d'), cs = +cv.dataset.cs;
+  const P = [0, 1, 2, 3], land = P.map(j => css(`--p${j}-land`)), trail = P.map(j => css(`--p${j}-trail`)),
+        head = P.map(j => css(`--p${j}`));
+  ctx.fillStyle = css('--bg'); ctx.fillRect(0, 0, cv.width, cv.height);
+  for (let k = 0; k < W * H; k++) {
+    const o = s.owner[k];
+    ctx.fillStyle = o < 0 ? css('--cell') : land[o];
+    ctx.fillRect((k % W) * cs, Math.floor(k / W) * cs, cs - 1, cs - 1);
+  }
+  const pr = R.config.protect_radius;
+  R.spawns.forEach(([sx, sy], j) => {
+    ctx.strokeStyle = head[j]; ctx.lineWidth = 1.5;
+    ctx.strokeRect((sx - pr) * cs + 1, (sy - pr) * cs + 1, (2 * pr + 1) * cs - 3, (2 * pr + 1) * cs - 3);
+  });
+  s.trails.forEach((tr, j) => {
+    ctx.fillStyle = trail[j];
+    for (const k of tr) ctx.fillRect((k % W) * cs + 1, Math.floor(k / W) * cs + 1, cs - 3, cs - 3);
+  });
+  s.pos.forEach(([x, y], j) => {
+    ctx.fillStyle = head[j];
+    ctx.fillRect(x * cs - 1, y * cs - 1, cs + 1, cs + 1);
+    ctx.strokeStyle = css('--panel'); ctx.lineWidth = 2;
+    ctx.strokeRect(x * cs, y * cs, cs - 1, cs - 1);
+  });
+  const areas = R.names.map((_, j) => s.owner.reduce((a, o) => a + (o === j), 0));
+  $('players').innerHTML = R.names.map((nm, j) => `<div class="player">
+      <span class="sw" style="background:${head[j]}"></span><span class="name">${nm}</span><span class="big">${areas[j]}</span>
+      <span class="kv">轨迹 ${s.trails[j].length} · 阵亡 ${s.deaths[j]} · 占比 ${(100 * areas[j] / (W * H)).toFixed(1)}%</span></div>`).join('');
+  $('bar').innerHTML = areas.map((a, j) => `<span style="width:${100 * a / (W * H)}%;background:${head[j]}"></span>`).join('');
+  $('turn').textContent = `回合 ${cur} / ${states.length - 1}`;
+  $('scrub').value = cur;
+}
+
+function stop() { clearInterval(timer); timer = null; $('play').textContent = '播放'; }
+function toggle() {
+  if (timer) return stop();
+  if (cur >= states.length - 1) show(0);
+  $('play').textContent = '暂停';
+  timer = setInterval(() => { if (cur >= states.length - 1) stop(); else show(cur + 1); }, 1000 / +$('speed').value);
+}
+
+$('pick').onclick = () => $('file').click();
+$('file').onchange = e => load(e.target.files);
+const drop = $('drop');
+['dragenter', 'dragover'].forEach(ev => document.addEventListener(ev, e => { e.preventDefault(); drop.classList.add('hot'); }));
+document.addEventListener('dragleave', () => drop.classList.remove('hot'));
+document.addEventListener('drop', e => { e.preventDefault(); drop.classList.remove('hot'); load(e.dataTransfer.files); });
+$('play').onclick = toggle;
+$('prev').onclick = () => { stop(); show(cur - 1); };
+$('next').onclick = () => { stop(); show(cur + 1); };
+$('scrub').oninput = e => { stop(); show(+e.target.value); };
+$('speed').onchange = () => { if (timer) { stop(); toggle(); } };
+$('which').onchange = e => open(+e.target.value);
+document.addEventListener('keydown', e => {
+  if (!R) return;
+  if (e.key === ' ') { e.preventDefault(); toggle(); }
+  if (e.key === 'ArrowLeft') { stop(); show(cur - 1); }
+  if (e.key === 'ArrowRight') { stop(); show(cur + 1); }
+});
+matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => R && show(cur));
+</script>
+</body>
+</html>

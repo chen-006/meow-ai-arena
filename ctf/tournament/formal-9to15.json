@@ -1,0 +1,31 @@
+{
+ "game": "../workspace/engine.py",
+ "anchor": "基准",
+ "players": {
+  "基准": "../workspace/baseline.cpp",
+  "Fable 5.1": "../bots/fable-5.1.cpp",
+  "Opus 5.5": "../bots/opus-5.5.cpp",
+  "Sonnet 5.5": "../bots/sonnet-5.5.cpp",
+  "GPT-6 Astra": "../bots/gpt-6-astra.cpp",
+  "GPT-6.1 Sol": "../bots/gpt-6.1-sol.cpp",
+  "DeepSeek V4.1 Flash": "../bots/deepseek-v4.1-flash.cpp",
+  "Qwen 3.8 Max": "../bots/qwen-3.8-max.cpp",
+  "GLM 5.3": "../bots/glm-5.3.cpp",
+  "MiMo V2.6 Pro": "../bots/mimo-v2.6-pro.cpp",
+  "豆包 Seed 2.1 Turbo": "../bots/doubao-seed-2.1-turbo.cpp",
+  "Kimi K3": "../bots/kimi-k3.cpp"
+ },
+ "sizes": [
+  9,
+  10,
+  11,
+  12,
+  13,
+  14,
+  15
+ ],
+ "maps_per_size": 110,
+ "copies": 2,
+ "seed": 91187465621305,
+ "replays": false
+}

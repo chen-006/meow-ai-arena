@@ -1,0 +1,30 @@
+{
+  "anchor": "Base",
+  "ratings": {
+    "GPT-6 Astra": 488.6160620445595,
+    "GPT-6 Sol": 301.8571721066339,
+    "Opus 5.5": 321.8028412889035,
+    "Kimi K3": 230.43598851665354,
+    "GLM 5.3": 175.0416259720694,
+    "DeepSeek V4.1 Flash": 270.7100448514885,
+    "豆包 Seed 2.1": 95.39701164205128,
+    "Qwen 3.8 Max": 226.48396624105837,
+    "MiMo V2.6 Pro": 39.35499178959065,
+    "Base": 0.0
+  },
+  "valid_games_by_size": {
+    "5": 1000,
+    "6": 1020,
+    "4": 1000,
+    "10": 1000,
+    "2": 990,
+    "8": 960,
+    "3": 990,
+    "9": 990,
+    "7": 980
+  },
+  "iterations": 113,
+  "size_weight": "equal_total",
+  "scale": "400 * log10(strength / baseline_strength)",
+  "smoothing": "one virtual draw per observed pair after weighting"
+}
