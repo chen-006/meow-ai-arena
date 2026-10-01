@@ -4,7 +4,7 @@
 
 | 文件夹 | 模型 | 工具 |
 |---|---|---|
-| `sonnet-5@claude-code#1` | Sonnet 5（日志模型 ID `claude-sonnet-5`） | Claude Code |
+| `sonnet-5@claude-code#1` | Sonnet 5.5（日志模型 ID 是 `claude-sonnet-5`，实际被灰度到 5.5，见 `../CONDITIONS.md` 注 1） | Claude Code |
 | `gpt-6-astra@codex#1` | GPT-6 Astra | Codex |
 | `opus-5.5@claude-code#1` | Opus 5.5 | Claude Code |
 | `gpt-6-sol@codex#1` | GPT-6 Sol | Codex |

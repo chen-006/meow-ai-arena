@@ -47,6 +47,7 @@ python challenge.py 你的bot.cpp --full    # 再加 3 人局，1320 局，约 1
 
 ```bash
 cd workspace
+# 先把你的代码存成 submission/bot.cpp（可以复制 baseline.cpp 起步）
 python engine/build.py --compile --source baseline.cpp --output baseline.exe
 python engine/build.py --compile --source submission/bot.cpp --output bot.exe
 python engine/arena.py --bots Mine=bot.exe Base=baseline.exe --seed 1 --replay replays/duel.html

@@ -16,7 +16,7 @@
 
 | 编号（`bots/` 里的文件夹名） | 模型 | 工具 | 第一版 | 交卷 |
 |---|---|---|---:|---:|
-| `sonnet-5@claude-code#1` | Sonnet 5（注 1） | Claude Code | 4.2 分钟 | 56.4 分钟 |
+| `sonnet-5@claude-code#1` | Sonnet 5.5（注 1） | Claude Code | 4.2 分钟 | 56.4 分钟 |
 | `gpt-6-astra@codex#1` | GPT-6 Astra | Codex | 5.3 | 56.2 |
 | `opus-5.5@claude-code#1` | Opus 5.5 | Claude Code | 3.4 | 38.6 |
 | `gpt-6-sol@codex#1` | GPT-6 Sol | Codex | 4.0 | 49.3 |
@@ -26,7 +26,7 @@
 | `mystery-model@zcode#1` | Spacebunny（注 2） | ZCode | 6.6 | 41.1 |
 | `deepseek-4.1f@workbuddy#1` | DeepSeek V4.1 Flash | WorkBuddy | 5.8 | 26.5 |
 
-- **注 1**：Sonnet 本期日志里的模型 ID 是 `claude-sonnet-5`。比赛时 Anthropic 正在灰度 Sonnet 5.5，第 2 集视频也称它为"上期冠军 Sonnet 5.5"。
+- **注 1**：Sonnet 本期日志里的模型 ID 是 `claude-sonnet-5`，但当时 Anthropic 正在灰度 Sonnet 5.5，主办方用知识截止日期测试过，确认实际调用到的是 5.5，所以记为 Sonnet 5.5。到第 2 集开赛前，灰度已经结束、模型变回 Sonnet 5，所以 Sonnet 缺席了第 2 集。
 - **注 2**：比赛时这是 OpenRouter 上的匿名隐身模型 **Spacebunny**（视频里称"神秘模型"），后来被确认为 **MiniMax M3.1 Flash**。
 - `tournament/sparring.cpp` 是**出题方写的陪练 bot**，不是参赛模型。它不发给选手，只作为每期固定的强度参照参加正式赛（`anchor-sparring`）。
 

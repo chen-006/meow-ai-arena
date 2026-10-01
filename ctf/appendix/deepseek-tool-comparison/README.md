@@ -4,8 +4,8 @@
 
 | 文件 | 工具 | 实力值（基准 = 0） | 95% 区间 | 用时 |
 |---|---|---:|---|---|
-| `dsh-standard.cpp` | dsh 0.2.0（DeepSeek 官方工具），标准模式 | **+124** | 105 ~ 147 | 35 分钟 |
-| `dsh-minimal.cpp` | dsh 0.2.0，极简模式 | +32 | 9 ~ 53 | 55 分钟 |
+| `dsh-standard.cpp` | dsh 0.2.0-rc.2（DeepSeek 官方工具），标准模式 | **+124** | 105 ~ 147 | 35 分钟 |
+| `dsh-minimal.cpp` | dsh 0.2.0-rc.2，极简模式 | +32 | 9 ~ 53 | 55 分钟 |
 | `opencode.cpp` | OpenCode | −2 | −25 ~ 22 | 54 分钟 |
 | `zcode.cpp` | ZCode | −7 | −29 ~ 14 | 67 分钟 |
 
