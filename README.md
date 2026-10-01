@@ -60,4 +60,6 @@ python challenge.py 你的bot.cpp
 
 ## 致谢
 
-视频里的角色形象大多来自 B 站博主 **zipzippipe**，特此致谢。角色形象、配音和剪辑都不在本仓库内，也不在 MIT 许可范围内。
+视频里的角色形象大多来自 B 站博主 **ZipZipPipe**（[主页](https://space.bilibili.com/4168597)），特此致谢。按其主页公告，鲸鱼娘形象是基于上善无形原创角色的二创，以 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans)（署名、非商业性使用、相同方式共享）授权。
+
+角色形象、配音和剪辑都不在本仓库内，也不适用本仓库的 MIT 许可；如需使用角色形象，请遵守原作者的协议。
