@@ -1,0 +1,193 @@
+{
+  "match_id": "7TqhJbNeR7M1coY5",
+  "port": 18792,
+  "wake_timeout_minutes": 45,
+  "rematch_of": "20261001_0319",
+  "seed": 4293894677,
+  "intro": "【新的一局】上一局已经结束：S1906M 全体同意协议和局。得分：英国 36.82、德国 22.27、意大利 16.36、土耳其 16.36、法国 4.09、俄国 4.09、奥地利 0。\n现在开始新的一局。七位玩家与上一局完全相同，但国家已重新随机抽签：你这局代表 {power}，不知道其他玩家这局各在哪国。你对上一局的记忆和留下的笔记都可以利用；规则与计分不变，上一局的约定、命令和消息不再有效。你的工作目录沿用上一局（目录名是你上一局的国家，与本局身份无关），规则、说明、客户端和连接信息已更新为本局。\n\n",
+  "players": {
+    "AUSTRIA": {
+      "harness": "opencode",
+      "model": "deepseek/deepseek-v4-pro",
+      "effort": "high",
+      "label": "DeepSeek V4 Pro",
+      "workspace": "C:\\bench\\外交\\20261001_0319\\GERMANY",
+      "session_id": "ses_b235f3916e564f8d82eab4b1",
+      "session_ready": true,
+      "previous_power": "GERMANY",
+      "usage_base": {
+        "cost_usd": 0.012138,
+        "usage": null
+      },
+      "msg_cursor": 39,
+      "hist_cursor": 14,
+      "wakes": 38,
+      "busy": false,
+      "last_reason": "event",
+      "usage_total": {
+        "cost_usd": 1.2357989529999993,
+        "input_tokens": 546909,
+        "output_tokens": 59326,
+        "reasoning_tokens": 981309,
+        "cache_read_tokens": 25528576,
+        "cache_write_tokens": 0
+      },
+      "interrupted": false,
+      "failures": 0,
+      "started": true
+    },
+    "ENGLAND": {
+      "harness": "claude",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "label": "Opus 5.5",
+      "workspace": "C:\\bench\\外交\\20261001_0319\\RUSSIA",
+      "session_id": "1c24890a-9b53-4e59-b755-5e4ace939d44",
+      "session_ready": true,
+      "previous_power": "RUSSIA",
+      "usage_base": {
+        "cost_usd": 6.008355800000001,
+        "usage": null
+      },
+      "msg_cursor": 121,
+      "hist_cursor": 32,
+      "wakes": 113,
+      "busy": false,
+      "last_reason": "event",
+      "started": true,
+      "interrupted": false,
+      "failures": 0
+    },
+    "FRANCE": {
+      "harness": "opencode",
+      "model": "deepseek/deepseek-flash",
+      "effort": "high",
+      "label": "DeepSeek V4.1 Flash",
+      "workspace": "C:\\bench\\外交\\20261001_0319\\FRANCE",
+      "session_id": "ses_a2a1c10d1aa24742bdfbe6a6",
+      "session_ready": true,
+      "previous_power": "FRANCE",
+      "usage_base": {
+        "cost_usd": 0.001578,
+        "usage": null
+      },
+      "msg_cursor": 134,
+      "hist_cursor": 29,
+      "wakes": 132,
+      "busy": false,
+      "last_reason": "event",
+      "usage_total": {
+        "cost_usd": 0.7120056899999999,
+        "input_tokens": 315803,
+        "output_tokens": 93062,
+        "reasoning_tokens": 722673,
+        "cache_read_tokens": 58398080,
+        "cache_write_tokens": 0
+      },
+      "started": true,
+      "interrupted": false,
+      "failures": 0
+    },
+    "GERMANY": {
+      "harness": "codex",
+      "model": "gpt-6.1-sol",
+      "effort": "high",
+      "label": "GPT-6.1 Sol",
+      "workspace": "C:\\bench\\外交\\20261001_0319\\TURKEY",
+      "session_id": "01a0f3c2-4b08-79b3-84be-9f22b0f518e0",
+      "session_ready": true,
+      "previous_power": "TURKEY",
+      "usage_base": {
+        "cost_usd": null,
+        "usage": {
+          "input_tokens": 8668446,
+          "cached_input_tokens": 8186624,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 139401,
+          "reasoning_output_tokens": 101894
+        }
+      },
+      "msg_cursor": 135,
+      "hist_cursor": 31,
+      "wakes": 80,
+      "busy": false,
+      "last_reason": "event",
+      "started": true,
+      "interrupted": false,
+      "failures": 0
+    },
+    "ITALY": {
+      "harness": "claude",
+      "model": "claude-sonnet-5-5",
+      "effort": "high",
+      "label": "Sonnet 5.5",
+      "workspace": "C:\\bench\\外交\\20261001_0319\\AUSTRIA",
+      "session_id": "324db99b-0f94-4d5a-b4be-2cc883184d3f",
+      "session_ready": true,
+      "previous_power": "AUSTRIA",
+      "usage_base": {
+        "cost_usd": 0.6697484000000001,
+        "usage": null
+      },
+      "msg_cursor": 142,
+      "hist_cursor": 32,
+      "wakes": 122,
+      "busy": false,
+      "last_reason": "event",
+      "started": true,
+      "interrupted": false,
+      "failures": 0
+    },
+    "RUSSIA": {
+      "harness": "claude",
+      "model": "claude-fable-5-1",
+      "effort": "high",
+      "label": "Fable 5.1",
+      "workspace": "C:\\bench\\外交\\20261001_0319\\ENGLAND",
+      "session_id": "d987053f-3df2-412c-8e3c-8d96a7c4623f",
+      "session_ready": true,
+      "previous_power": "ENGLAND",
+      "usage_base": {
+        "cost_usd": 14.550270249999999,
+        "usage": null
+      },
+      "msg_cursor": 188,
+      "hist_cursor": 32,
+      "wakes": 116,
+      "busy": false,
+      "last_reason": "event",
+      "started": true,
+      "interrupted": false,
+      "failures": 0
+    },
+    "TURKEY": {
+      "harness": "codex",
+      "model": "gpt-6-astra",
+      "effort": "high",
+      "label": "GPT-6 Astra",
+      "workspace": "C:\\bench\\外交\\20261001_0319\\ITALY",
+      "session_id": "01a0f3c2-4ad9-77f3-b5be-ac96f7c9cdaf",
+      "session_ready": true,
+      "previous_power": "ITALY",
+      "usage_base": {
+        "cost_usd": null,
+        "usage": {
+          "input_tokens": 11608757,
+          "cached_input_tokens": 11289472,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 101044,
+          "reasoning_output_tokens": 74920
+        }
+      },
+      "msg_cursor": 143,
+      "hist_cursor": 32,
+      "wakes": 99,
+      "busy": false,
+      "last_reason": "event",
+      "started": true,
+      "interrupted": false,
+      "failures": 0
+    }
+  },
+  "notice": "【管理员通知】提醒本局目标：按计分规则让自己的得分尽可能高。单独获胜得 100 分，远高于任何和局份额；协议和局需要所有在场国家一致同意，任何一家都可以拒绝。请认真权衡何时追求胜利、何时接受和局。"
+}

@@ -1,0 +1,7 @@
+{
+ "X_allhold": ["A WAR H", "A LVN S A WAR", "A GAL S A WAR", "A BUD S A GAL", "F RUM H"],
+ "Y_gal_bud": ["A WAR H", "A LVN S A WAR", "A GAL H", "A BUD S A GAL", "F RUM H"],
+ "Z_galsil": ["A WAR H", "A LVN S A WAR", "A GAL - SIL", "A BUD S A GAL", "F RUM H"],
+ "W_lvnpru": ["A WAR H", "A LVN - PRU", "A GAL S A WAR", "A BUD S A GAL", "F RUM H"],
+ "V_warsup": ["A WAR S A LVN", "A LVN H", "A GAL S A WAR", "A BUD S A GAL", "F RUM H"]
+}

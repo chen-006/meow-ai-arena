@@ -1,0 +1,47 @@
+﻿{
+    "ENGLAND":  [
+                    "F HEL - DEN",
+                    "F NTH S F HEL - DEN",
+                    "F SKA - SWE",
+                    "F HOL S A RUH - KIE",
+                    "F LON H"
+                ],
+    "FRANCE":  [
+                   "A RUH - KIE",
+                   "A MUN S A RUH - KIE",
+                   "A BUR S A MUN",
+                   "A MAR - PIE",
+                   "F ENG - MAO",
+                   "F WES - TUN",
+                   "F BEL H"
+               ],
+    "GERMANY":  [
+                    "F KIE H"
+                ],
+    "TURKEY":  [
+                   "F CON H",
+                   "F SMY S F CON",
+                   "A ARM H"
+               ],
+    "ITALY":  [
+                  "A VEN - PIE",
+                  "A BUD H",
+                  "A VIE S A BUD",
+                  "A SER S A BUD",
+                  "F ION - TUN",
+                  "F AEG H",
+                  "F BUL/SC H",
+                  "F GRE H"
+              ],
+    "RUSSIA":  [
+                   "A SIL - MUN",
+                   "A BER S A SIL - MUN",
+                   "F DEN S F NWY - NTH",
+                   "F NWY - NTH",
+                   "A SWE S F DEN",
+                   "A RUM H",
+                   "A GAL H",
+                   "A UKR H",
+                   "F SEV H"
+               ]
+}

@@ -1,0 +1,62 @@
+{
+  "rematch_of": "20261001_0319",
+  "seed": 4293894677,
+  "players": [
+    {
+      "power": "AUSTRIA",
+      "harness": "opencode",
+      "model": "deepseek/deepseek-v4-pro",
+      "effort": "high",
+      "label": "DeepSeek V4 Pro",
+      "previous_power": "GERMANY"
+    },
+    {
+      "power": "ENGLAND",
+      "harness": "claude",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "label": "Opus 5.5",
+      "previous_power": "RUSSIA"
+    },
+    {
+      "power": "FRANCE",
+      "harness": "opencode",
+      "model": "deepseek/deepseek-flash",
+      "effort": "high",
+      "label": "DeepSeek V4.1 Flash",
+      "previous_power": "FRANCE"
+    },
+    {
+      "power": "GERMANY",
+      "harness": "codex",
+      "model": "gpt-6.1-sol",
+      "effort": "high",
+      "label": "GPT-6.1 Sol",
+      "previous_power": "TURKEY"
+    },
+    {
+      "power": "ITALY",
+      "harness": "claude",
+      "model": "claude-sonnet-5-5",
+      "effort": "high",
+      "label": "Sonnet 5.5",
+      "previous_power": "AUSTRIA"
+    },
+    {
+      "power": "RUSSIA",
+      "harness": "claude",
+      "model": "claude-fable-5-1",
+      "effort": "high",
+      "label": "Fable 5.1",
+      "previous_power": "ENGLAND"
+    },
+    {
+      "power": "TURKEY",
+      "harness": "codex",
+      "model": "gpt-6-astra",
+      "effort": "high",
+      "label": "GPT-6 Astra",
+      "previous_power": "ITALY"
+    }
+  ]
+}

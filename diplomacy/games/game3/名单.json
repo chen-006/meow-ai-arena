@@ -1,0 +1,97 @@
+{
+  "rematch_of": "20261001_1002",
+  "game_number": 3,
+  "seed": 4057491873,
+  "players": [
+    {
+      "power": "AUSTRIA",
+      "harness": "claude",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "label": "Opus 5.5",
+      "previous_power": "ENGLAND",
+      "past_powers": [
+        "ENGLAND",
+        "RUSSIA"
+      ]
+    },
+    {
+      "power": "ENGLAND",
+      "harness": "opencode",
+      "model": "cline/deepseek/deepseek-v4-pro",
+      "effort": "high",
+      "label": "DeepSeek V4 Pro",
+      "previous_power": "AUSTRIA",
+      "past_powers": [
+        "AUSTRIA",
+        "GERMANY"
+      ],
+      "换人记录": [
+        {
+          "旧": "DeepSeek V4 Pro",
+          "新": "DeepSeek V4 Pro",
+          "结算至": "S1913R"
+        }
+      ]
+    },
+    {
+      "power": "FRANCE",
+      "harness": "codex",
+      "model": "gpt-6.1-sol",
+      "effort": "high",
+      "label": "GPT-6.1 Sol",
+      "previous_power": "GERMANY",
+      "past_powers": [
+        "GERMANY",
+        "TURKEY"
+      ]
+    },
+    {
+      "power": "GERMANY",
+      "harness": "claude",
+      "model": "claude-sonnet-5-5",
+      "effort": "high",
+      "label": "Sonnet 5.5",
+      "previous_power": "ITALY",
+      "past_powers": [
+        "AUSTRIA",
+        "ITALY"
+      ]
+    },
+    {
+      "power": "ITALY",
+      "harness": "claude",
+      "model": "claude-fable-5-1",
+      "effort": "high",
+      "label": "Fable 5.1",
+      "previous_power": "RUSSIA",
+      "past_powers": [
+        "ENGLAND",
+        "RUSSIA"
+      ]
+    },
+    {
+      "power": "RUSSIA",
+      "harness": "codex",
+      "model": "gpt-6-astra",
+      "effort": "high",
+      "label": "GPT-6 Astra",
+      "previous_power": "TURKEY",
+      "past_powers": [
+        "ITALY",
+        "TURKEY"
+      ]
+    },
+    {
+      "power": "TURKEY",
+      "harness": "opencode",
+      "model": "deepseek/deepseek-flash",
+      "effort": "high",
+      "label": "DeepSeek V4.1 Flash",
+      "previous_power": "FRANCE",
+      "past_powers": [
+        "FRANCE"
+      ]
+    }
+  ]
+}

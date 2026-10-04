@@ -8,3 +8,12 @@ challenge-runs/
 workspace/replays/
 tools/
 rerun/
+# 第 4 集外交：运行时生成的对局目录含令牌和复制来的登录凭据，切勿提交
+diplomacy/referee/管理员/
+diplomacy/referee/.venv/
+codex_home/
+auth.json
+connection.json
+.venv/
+diplomacy/games/*/回放.html
+diplomacy/games/*/承诺核对.json

@@ -11,7 +11,7 @@ if not defined PY (
 )
 if not defined PY (
   echo 没有找到 Python 3.10 以上的版本。
-  echo 只想看回放的话，直接用浏览器打开 land\replays\index.html、bomberman\replays\、ctf\replays\ 里的网页即可。
+  echo 只想看回放的话，直接用浏览器打开 land\replays\index.html、bomberman\replays\、ctf\replays\、diplomacy\replays\ 里的网页即可。
   echo 想挑战 AI，请先到 https://www.python.org/downloads/ 安装 Python（安装时勾选 Add python.exe to PATH）。
   pause
   exit /b 1

@@ -1,0 +1,58 @@
+{
+  "players": [
+    {
+      "power": "ENGLAND",
+      "harness": "claude",
+      "model": "claude-fable-5-1",
+      "effort": "high",
+      "label": "Fable 5.1"
+    },
+    {
+      "power": "RUSSIA",
+      "harness": "claude",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "label": "Opus 5.5"
+    },
+    {
+      "power": "AUSTRIA",
+      "harness": "claude",
+      "model": "claude-sonnet-5-5",
+      "effort": "high",
+      "label": "Sonnet 5.5"
+    },
+    {
+      "power": "ITALY",
+      "harness": "codex",
+      "model": "gpt-6-astra",
+      "effort": "high",
+      "label": "GPT-6 Astra"
+    },
+    {
+      "power": "TURKEY",
+      "harness": "codex",
+      "model": "gpt-6.1-sol",
+      "effort": "high",
+      "label": "GPT-6.1 Sol"
+    },
+    {
+      "power": "FRANCE",
+      "harness": "opencode",
+      "model": "deepseek/deepseek-flash",
+      "effort": "high",
+      "label": "DeepSeek V4.1 Flash"
+    },
+    {
+      "power": "GERMANY",
+      "harness": "opencode",
+      "model": "deepseek/deepseek-v4-pro",
+      "effort": "high",
+      "label": "DeepSeek V4 Pro"
+    }
+  ],
+  "wake_timeout_minutes": 45,
+  "draw": {
+    "seed": 4178855257,
+    "method": "random.Random(seed).shuffle(七国列表)，按模型列表顺序依次对应"
+  }
+}

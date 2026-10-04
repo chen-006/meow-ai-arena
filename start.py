@@ -19,7 +19,12 @@ GAMES = {
     "3": ("第 3 集 · 夺旗", "ctf", "workspace/submission/bot.cpp",
           [("十五人混战", "replays/15p-melee.html"), ("冠亚军单挑 Astra vs Sol", "replays/2p-astra-vs-sol.html"),
            ("八人混战", "replays/8p-melee.html"), ("豆包 vs 基准", "replays/2p-doubao-vs-baseline.html")]),
+    "4": ("第 4 集 · 外交", "diplomacy", None,
+          [("第 3 局（最后一局，意大利单独获胜）", "replays/game3.html"), ("第 2 局", "replays/game2.html"),
+           ("第 1 局", "replays/game1.html")]),
 }
+# 第 4 集是模型直接当玩家，没有 bot 可挑战
+CHALLENGES = {k: v for k, v in GAMES.items() if v[2]}
 
 
 def find_compiler():
@@ -72,9 +77,9 @@ def challenge():
     if not find_compiler():
         print("挑战需要 C++ 编译器，先按下面的提示装好：")
         check(); return
-    for k, (title, _, _, _) in GAMES.items():
+    for k, (title, _, _, _) in CHALLENGES.items():
         print(f"  {k}. {title}")
-    title, folder, template, _ = GAMES[ask("挑战哪一集的 AI？", list(GAMES))]
+    title, folder, template, _ = CHALLENGES[ask("挑战哪一集的 AI？", list(CHALLENGES))]
     print(f"把你的 bot（.cpp 文件）拖进这个窗口再回车；直接回车则用模板 {folder}/{template}。规则见 {folder}/workspace/。")
     raw = input("你的 bot：").strip().strip('"').strip("'")
     args = [sys.executable, "-X", "utf8", str(ROOT / folder / "challenge.py")] + ([raw] if raw else [])

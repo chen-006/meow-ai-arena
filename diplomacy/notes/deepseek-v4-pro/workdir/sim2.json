@@ -1,0 +1,6 @@
+{
+  "ENGLAND": ["F ENG C A PIC - LON", "F EDI - NTH", "F NWY H"],
+  "FRANCE": ["A PIC - LON VIA", "A PAR H", "F BRE H", "F BEL S F ENG", "A BUR - GAS", "A MUN H"],
+  "RUSSIA": ["A BER S A MUN", "F SEV H", "A SWE H", "A GAL H", "A RUM H", "F BAL H", "F DEN H", "A UKR H"],
+  "ITALY": ["A WAL - LON", "F IRI - ENG", "F MAO S F IRI - ENG", "A MAR - BUR", "A GAS S A MAR - BUR", "A TYR - MUN", "A BOH S A TYR - MUN", "F LVP H", "F POR H", "A PIE H", "A BUD H", "A BUL H", "A SER H", "A VIE H", "F CON H", "F ANK H", "A VEN H"]
+}
