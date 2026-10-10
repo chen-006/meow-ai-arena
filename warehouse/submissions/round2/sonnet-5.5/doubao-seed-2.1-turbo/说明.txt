@@ -1,0 +1,1 @@
+case1.in: sim.cpp 第6步移动 + util.cpp BFS_FILL(generation counter)。移动直接读 BFS_DIST 而不检查 BFS_VISIT 代数，目标不可达的格子读到上一次BFS留下的旧距离；走廊里机器人去取货途中被BLOCK隔断后，基线应等待，B仍继续按旧距离移动。

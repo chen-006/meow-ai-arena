@@ -1,0 +1,8 @@
+{
+  "结构与可读性": {"分": 2, "证据": "RunSim() 是 sim.cpp:147-481 的巨型函数，7 个阶段只靠 `// ====== N. ======` 分隔（sim.cpp:149/229/242/255/299/338/420）；平行数组 RX/RY/RB/RTX/RTY/RWS/RDS/RSTI 原样保留（common.h:49-52）。有真进步：到达判定抽成 arrive() 并合并了基线重复的两处（sim.cpp:122-144），派单快照抽成 rebuildPendCache()（sim.cpp:19-42），状态与占位由 setRST/occMove 统一入口维护（util.cpp:168-189）。"},
+  "行为保真的可见性": {"分": 4, "证据": "HANDOFF.md:25-32 列了 6 条「必须知道的怪行为（别『修』）」，干净参考标注的 5 条里覆盖了 4 条（取消计数、半血救援、90% 充电、派单 `<=`），并把 DIST 不对称单列警告「改派单时千万别顺手简化」；现场标注有 sim.cpp:280「注意基线是 <=：并列时取编号大的（原样保留）」、sim.cpp:192、sim.cpp:274/276、util.cpp:11、util.cpp:191。未给满分：sim.cpp:230 写「充满电恢复」（实际 PRM[0]/2）、sim.cpp:247 写「充满了就走」（实际 90%），两条现场注释与怪行为相反；延迟四舍五入（sim.cpp:493）未列入清单。"},
+  "可修改性": {"分": 3, "证据": "变更 2 要改 4 处：停机 sim.cpp:346、正常走 sim.cpp:412、让路 sim.cpp:396、派单 sim.cpp:279。变更 1 与 PEND_DIRTY 快照优化冲突：快照只在 PEND 变动时重建（sim.cpp:257、294），老化让有效优先级每 tick 都变，必须改成每 tick 重建或把 eff 加进 PKey（sim.cpp:13、35-41）。变更 3 可用 OINT 的 arrival（common.h:60-63），加在 sim.cpp:475。HANDOFF.md:40-42 的 p2 指引是对的（扩 PRM 到 8、热点独立、新状态加进 STNAME）。"},
+  "优化逻辑的清晰度": {"分": 4, "证据": "失效收敛到唯一入口：blkAdd/blkRemove 同时改 BLKG 并调用 fieldInvalidate()（util.cpp:78-92），setRST/occMove 唯一入口维护 OCCG（util.cpp:168-189）；HANDOFF.md:19-23 逐条给出等价理由并要求「改状态必须走 setRST、改位置必须走 occMove」。扣分点：BLKVER 的注释说「FIELD 缓存据此失效」（common.h:39）与 common.h:86「结果按 (起点, 封锁版本) 缓存」都不准——实际是 g_fields.clear() 整表清空，版本号没参与任何判断；g_fieldCap 的换算（util.cpp:69）也只有一句注释。"},
+  "技术债清理": {"分": 3, "证据": "删掉 old_stuff.cpp 并说明理由（HANDOFF.md:14）、移除两个 FLAG_* 开关。残留：BLKVER 只写不读（main.cpp:11、sim.cpp:109、util.cpp:81/89，全代码无读取点）；ALL_CHG() 只是「兼容旧接口」的空壳、无人调用（util.cpp:159-161）；sim.cpp:230、sim.cpp:247 两条与怪行为冲突的过时注释没改。"},
+  "一句话点评": "维护入口设计得好，可惜版本号只写不读、注释还把 90% 说成充满。"
+}

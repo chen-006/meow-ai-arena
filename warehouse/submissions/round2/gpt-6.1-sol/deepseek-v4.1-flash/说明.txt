@@ -1,0 +1,2 @@
+01_eager_unreachable_timeout.in：submissions/队D/src/sim.cpp::RunSim 第4阶段在检查 a=DIST(机器人,取货点) 之前预计算并缓存订单的 bMemo/cMemo。取货点被封锁时基线立即跳过，而该实现仍用 util.cpp::DIST、CHG_DIST 搜完整片大区域；每 tick g_blkGen 变化又使订单缓存失效。800单、2200tick的合法输入，基线约7.4秒，被测60秒超时。
+

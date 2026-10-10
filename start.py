@@ -22,8 +22,11 @@ GAMES = {
     "4": ("第 4 集 · 外交", "diplomacy", None,
           [("第 3 局（最后一局，意大利单独获胜）", "replays/game3.html"), ("第 2 局", "replays/game2.html"),
            ("第 1 局", "replays/game1.html")]),
+    "5": ("第 5 集 · 仓储调度", "warehouse", None,
+          [("最终成绩（三张榜和全部明细）", "results/最终成绩.md"), ("第 2 轮找到的 7 个缺陷点", "results/round2/缺陷点归类.md"),
+           ("比赛条件与异常记录", "CONDITIONS.md")]),
 }
-# 第 4 集是模型直接当玩家，没有 bot 可挑战
+# 第 4 集是模型直接当玩家，第 5 集是接力优化代码，都没有 bot 可挑战；第 5 集也没有回放，列的是成绩文档
 CHALLENGES = {k: v for k, v in GAMES.items() if v[2]}
 
 
@@ -69,7 +72,10 @@ def watch():
         print(f"  {i}. {name}")
     i = int(ask("选一局：", [str(i) for i in range(1, len(g[3]) + 1)])) - 1
     path = ROOT / g[1] / g[3][i][1]
-    print(f"正在用浏览器打开 {path}（{g[1]}/replays/ 里还有更多）")
+    if (ROOT / g[1] / "replays").is_dir():
+        print(f"正在用浏览器打开 {path}（{g[1]}/replays/ 里还有更多）")
+    else:
+        print(f"这一集没有回放，正在打开 {path}（Markdown 文档；打不开的话用任意文本编辑器看，更多材料见 {g[1]}/README.md）")
     webbrowser.open(path.as_uri())
 
 

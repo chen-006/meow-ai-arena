@@ -1,0 +1,7 @@
+case1_stale_bfs_unreachable.in
+缺陷位置：sim.cpp RunSim 第 6 步（移动）里的 bfs_get_at / MOVE_BFS_CACHE，配合 util.cpp BFS_FILL 的 generation 计数。
+原因：BFS_FILL 用 BFS_VISIT 代数标记代替清零，未访问格子的 BFS_DIST 留着上一次 BFS 的旧值；
+移动阶段直接读 dist_ptr[y*W+x]（以及整份拷贝进 MOVE_BFS_CACHE.dist），没有像 _bfs_get 那样检查 visit==gen，
+所以"从目标出发到不了的邻格"读到的是旧距离而不是 BIGNUM。
+本用例：机器人去 (6,1) 取货途中 (4,1) 被封锁，目标本身可通行但不可达。基线 best>=BIGNUM 原地等待；
+队B 读到上一 tick 的旧距离，继续往前走一步，之后位置/电量/步数/等待数全部不同。

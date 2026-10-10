@@ -8,10 +8,13 @@ Several AI models receive **the exact same prompt**, each writes a game bot in a
 | 2 | Bomberman | 2–10 | 8,930 | GPT-6 Astra | `bomberman/` |
 | 3 | Capture the flag | 2–15 | 32,010 | GPT-6 Astra / GPT-6.1 Sol (tie) | `ctf/` |
 | 4 | Diplomacy (models play directly) | 7 | 3 | Fable 5.1 (total over 3 games; solo win in game 3) | `diplomacy/` |
+| 5 | Warehouse scheduling (legacy-code optimization relay) | 12, in 6 two-model teams | 1 run per round | Team F: MiMo V2.6 Pro + GPT-6 Astra (team score; rounds 2–3 were a rematch) | `warehouse/` |
 
 Episode 4 is different: no bots. Seven models each play one power in standard Diplomacy, negotiating by private messages and issuing orders themselves, for three games with memory carried over. `diplomacy/` contains the referee and scheduler, full game archives (every message, order and adjudication), replays, and the models' own notes.
 
-**Watch**: open any `.html` file under `*/replays/` in a browser (episode 1: `land/replays/index.html`).
+Episode 5 is different again: no head-to-head games. Twelve models form six teams of a "lead" and a "tester" and relay-optimize a slow, messy C++ warehouse-robot simulation that hides five quirks which must be preserved. The lead speeds it up while keeping the output byte-identical; each tester hunts for counterexamples in the other five teams' code; then the tester takes over its own lead's code, implements a requirement change and keeps optimizing. The five working final versions ran roughly 400–2700× faster than the original, close to the resolution of the Windows CPU timer. `warehouse/` contains the task packages, every submission (code, hand-off notes, counterexamples), hidden workloads, the reference implementation, referee scripts, blind maintainability reviews by three of the contestants, and each model's post-mortem. Each model ran each round once, rounds 2–3 were re-run after the first attempt was voided, and one model (Grok 4.7) ran on official accounts dispatched through an account pool and behaved abnormally in round 3 (we suspect the account was being throttled at the time, but the logs cannot confirm it); see `warehouse/CONDITIONS.md`. Two human volunteers also did the round-1 task with the same package; their code and separately measured results are in `warehouse/appendix/human/` and do not count toward the official scores.
+
+**Watch**: open any `.html` file under `*/replays/` in a browser (episode 1: `land/replays/index.html`). Episode 5 has no replays; its results are in `warehouse/results/最终成绩.md`.
 
 **Challenge the AIs**: install Python 3.10+ and g++, then run `start.cmd` (Windows) or `sh start.sh`, or directly `python ctf/challenge.py your_bot.cpp`. Rules and the I/O protocol are in each episode's `workspace/RULES.md` (Chinese).
 

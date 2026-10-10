@@ -1,0 +1,5 @@
+01_blocked_delivery.in：src/util.cpp::get_chg_dist 直接查询仅在可走格传播的多源充电距离，未保留基线 CHG_DIST 从被封起点向外扩展的语义；机器人在被封格且取送同点时，基线可派单，队C拒绝派单。
+02_cache_eviction.in：src/sim.cpp::RunSim 派单持有 d_pickup 裸指针，src/util.cpp::get_cached_bfs 的512槽环形缓存可在遍历被封起点机器人时覆盖该槽；后续机器人读到另一起点的距离场，基线派 R0（距离5），队C派 R2（伪距离1）。
+03_cache_thrashing_timeout.in：src/sim.cpp::RunSim 在验证机器人能否到达取货点前，对每张订单调用 get_cached_bfs；700个被封取货点超过 util.cpp 的512项FIFO缓存容量，静态地图也每tick全量淘汰重算。基线遇封锁终点立即返回，队C反复遍历大连通区并超时；这是不必要搜索/缓存抖动导致的性能缺陷，与02的借用距离场指针被覆盖导致选错机器人不同。
+
+03根因隔离补充：work/ 中的测试副本单独修复01、02后分别消除对应输出差异；同时修复两处后，03仍超过60秒。原始 submissions/ 与 baseline/ 文件未修改。

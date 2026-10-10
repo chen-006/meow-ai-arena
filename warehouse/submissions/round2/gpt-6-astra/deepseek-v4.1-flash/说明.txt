@@ -1,0 +1,2 @@
+01_eager_tail_timeout.in：src/sim.cpp::RunSim 第295-300行将 DIST(取货,送货) 和 CHG_DIST 提前到机器人可达性检查之前；1000张单的取货点均已封住，连续1500个tick改变封锁版本，基线 DIST(robot,pickup) 立即失败，队D却随地图版本变化反复做两次长距离BFS。本机基线约5.4秒，队D超过60秒。
+

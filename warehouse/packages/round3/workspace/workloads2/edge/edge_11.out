@@ -1,0 +1,16 @@
+0 CANCEL_FAIL 2
+1 CANCEL_FAIL 2
+2 CANCEL_FAIL 2
+15 CANCEL 1
+23 CANCEL 4
+31 CANCEL_FAIL 4
+37 REJECT 18
+39 CANCEL 14
+43 REPORT pending=17 aged=17 idle=2 to_pickup=0 delivering=0 to_charger=0 charging=0 dead=0 hot=6,1,1
+44 CANCEL 20
+47 REJECT 25
+54 REJECT 28
+SUMMARY delivered=0 lost=0 rejected=3 cancelled=5 open=22
+LATENCY sum=0 max=0 avg=0
+ROBOT R0 7 2 25 IDLE 0 0
+ROBOT R1 4 7 25 IDLE 0 0

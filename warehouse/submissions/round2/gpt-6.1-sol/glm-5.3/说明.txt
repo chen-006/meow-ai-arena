@@ -1,0 +1,1 @@
+01_eager_dispatch_timeout.in：submissions/队E/src/sim.cpp::RunSim 第4阶段在遍历机器人前无条件计算每个待派单的 DIST、CHG_DIST、FIELD；唯一机器人长期 DELIVERING、无 IDLE，基线根本不做这些 BFS。每 tick 切换封锁又使 util.cpp::fieldInvalidate 清空所有缓存，造成反复全图 BFS（基线约6秒；被测60秒超时）。

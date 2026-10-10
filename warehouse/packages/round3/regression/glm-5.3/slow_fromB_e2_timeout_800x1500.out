@@ -1,0 +1,7 @@
+0 ASSIGN 1 R0 1
+0 PICK 1 R0
+1 DELIVER 1 R0 1
+2 GO_CHARGE R0 2 5
+SUMMARY delivered=1 lost=0 rejected=0 cancelled=0 open=800
+LATENCY sum=1 max=1 avg=1
+ROBOT R0 3 3 98 TO_CHARGER 2 1497

@@ -1,0 +1,2 @@
+01_chg_blocked.in：缺陷在 util.cpp 的 get_chg_dist / ensure_chg_dist。多源 BFS 只填 OK 格，非 OK 查询格保持 BIGNUM。
+基线 CHG_DIST 从封锁格出发会扩到 OK 邻居，距离为 1+邻居桩距。取货点=送货点且该格被封锁时基线会 ASSIGN，队C 认为到不了桩而不派单。

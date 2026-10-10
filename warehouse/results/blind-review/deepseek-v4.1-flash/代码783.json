@@ -1,0 +1,8 @@
+{
+  "结构与可读性": {"分": 2, "证据": "RunSim() 从 sim.cpp:104 一路到 sim.cpp:550，7 个阶段仍靠 `// ====== N. ======` 注释分隔（sim.cpp:113/190/207/220/300/349/482），平行数组 RX/RY/RB/RTX/RTY/RWS/RDS 原样保留（common.h:39-42），与基线同构。有进步：订单/状态/事件都改成结构体加枚举（common.h:35-68），抽出了 dispatchLess（sim.cpp:95-101）与 utilReset（util.cpp:240），但整体仍是「一个大函数 + 一堆全局」。"},
+  "行为保真的可见性": {"分": 5, "证据": "HANDOFF.md:37-54 有「基线的怪行为（都是特性，别当 bug 修！）」13 条并逐条解释，覆盖派单 `a<=best` 取编号大、排序第三关键字用 atoi、DIST 同点返回 0、CHG_DIST 不可走起点、90% 充电与半电救援、CANCEL 先计数、只有行进状态才趴窝、死人不占格、SIDESTEP、PEND 快照排序、排队充电、热点并列、延迟四舍五入；代码现场逐处呼应：sim.cpp:270-271「以代码为准」、sim.cpp:246、sim.cpp:212「（基线如此）」、sim.cpp:191、sim.cpp:378、sim.cpp:393、sim.cpp:412、sim.cpp:496，util.cpp:5「!!! 方向顺序不能改」、util.cpp:66、util.cpp:173-175。"},
+  "可修改性": {"分": 3, "证据": "变更 2 要改 4 处：停机判断 sim.cpp:377、正常走 sim.cpp:452、让路 sim.cpp:433、派单电量 sim.cpp:269。变更 1 除了排序比较器（sim.cpp:95-101、232），还要动 pendDirty 快照优化（sim.cpp:107、230-234、294-295）——老化让有效优先级每 tick 都变，「只在 PEND 变化时重排」这条前提会失效，是容易漏的一处。变更 3 加在报表串 sim.cpp:544。"},
+  "优化逻辑的清晰度": {"分": 4, "证据": "BLKVER 是唯一的失效令牌，只在 sim.cpp:179 与 sim.cpp:185 递增；缓存实现集中在 util.cpp:63-110，契约写在注释里：util.cpp:64-65「按 (x,y) 缓存，BLK 变化即失效…缓存只省时间，命中与否不影响结果」、util.cpp:98「缓存清空也不会悬垂」、util.cpp:132-133 说明多源 BFS 与基线单向 BFS 等价；HANDOFF.md:24-35 逐条列出优化与维护要求（改格子能否通行要递增 BLKVER、改机器人位置/生死要维护 occAdd/occRemove、差分数组别改回 (S+1)^2）。扣分点：热点那块（sim.cpp:498-543）只有注释没有函数边界，static vector chgUse/diff 在循环里反复 assign（sim.cpp:308-309、501-502）属于隐藏状态。"},
+  "技术债清理": {"分": 5, "证据": "old_stuff.cpp 明确删除并在交接文档里说明理由（HANDOFF.md:16-17），FLAG_FAST_BFS/USE_NEW_DISPATCH/FLAG_VERBOSE 全部移除，全文件找不到无调用者的函数或变量，注释也已更新（CNT 的用途注释改成 0-5，common.h:74）。"},
+  "一句话点评": "怪行为清单最全，但主循环还是那条 450 行的老路。"
+}

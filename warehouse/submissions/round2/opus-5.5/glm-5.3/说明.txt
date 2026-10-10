@@ -1,0 +1,12 @@
+三个用例是同一个缺陷（同一根因）的轻/中/重三档，只是 tick 数不同（1150 / 1700 / 2300），用来适应评测机快慢：
+case1_block_churn_light.in, case2_block_churn_mid.in, case3_block_churn_heavy.in
+判定方式：被测程序 60 秒内跑不完（输出内容本身一致）。本机实测 mid 档：基线约 6~8 秒，队E 约 158 秒（约 20 倍）。
+heavy 档在机器较慢时基线可能超过 10 秒而无效，属预期，届时以 light/mid 为准。
+
+缺陷位置：sim.cpp RunSim 第 4 步派单——b = DIST(px,py,dx,dy)、c = CHG_DIST(dx,dy)、FIELD(px,py) 被提到机器人循环之外，
+对每个待派订单无条件计算；配合 util.cpp blkAdd/blkRemove -> fieldInvalidate()（封锁每次真实变化就清空全部距离场缓存）。
+原因：基线的 a/b/c 是惰性的——只有存在"IDLE 且电量 >= lowThreshold"的候选机器人时才会做 BFS；没有候选时每个订单只是扫一遍机器人状态。
+队E 不管有没有候选机器人，每 tick 都给每个待派订单算 FIELD(送货点) 和 FIELD(取货点)，而缓存在封锁变化时整体失效。
+构造：60x60 空地图，唯一的机器人送完一单后电量 < lowThreshold(=batteryMax)，且唯一充电桩被封锁 -> 永远是"IDLE 但不可派"；
+随后 600 个取/送货点各不相同的订单一直积压，同时每 tick 对 (58,1) 做一次 BLOCK/UNBLOCK 真实翻转。
+基线每 tick 0 次派单 BFS；队E 每 tick 重算约 1200 张 60x60 距离场，整体比基线慢约 20 倍，超过 60 秒上限。

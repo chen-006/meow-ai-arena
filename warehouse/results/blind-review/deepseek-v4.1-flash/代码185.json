@@ -1,0 +1,8 @@
+{
+  "结构与可读性": {"分": 3, "证据": "按阶段拆得很干净：dispatch/goCharge/moveRobots/report/handleEvent 各自成函数（sim.cpp:703/756/841/914/959），另有 repairBlock/repairUnblock/onMapChange/fdist/pickRobot/tryAssign/PendWalker 等小函数，命名也准确。但只有「一个 1232 行的实现文件 + 9 行头文件」这一层模块边界（common.h 仅 3 个入口声明），文件内约 40 个匿名命名空间级变量承担全部状态（sim.cpp:81-123、149-178、318-320、540-542、561），getField 返回裸指针、靠调用方对照 validR（sim.cpp:253）——正是「按阶段拆成函数，但全局状态多」的形态。"},
+  "行为保真的可见性": {"分": 4, "证据": "HANDOFF.md:24-35 有「必须保留的基线行为（都是故意的）」一节 8 条，覆盖 BFS 起点可否通行、派单 `a <= best` 取编号大、选充电桩两级规则、移动方向序与 SIDESTEP、死车不占位加半电救援、CANCEL 先计数、热点并列；代码现场也逐处标注（sim.cpp:288-289、611、846、917、993、83、1177）。缺口：延迟四舍五入（sim.cpp:1209）既没进清单也没有注释，90% 充电只在 sim.cpp:1177 顺带一句、没写「故意如此」。"},
+  "可修改性": {"分": 4, "证据": "变更 2 融入得很干净：int cost = (r.st == R_DELIVERING) ? carryCost : 1 一处算好（sim.cpp:846），停机判断 sim.cpp:847 与扣电 sim.cpp:906 共用；HANDOFF.md:16-22 还有一张「需求变更落在哪里」的表。扣分点：派单电量条件散在下界机制里（setLower sim.cpp:113-116、pickRobot 开头 sim.cpp:577、静态下界 sim.cpp:585、精确计算 sim.cpp:610），HANDOFF.md:93-94 自己承认「这四处要一起改」。"},
+  "优化逻辑的清晰度": {"分": 5, "证据": "不变量写得很到位：validR 的语义与两条用法写在 sim.cpp:146-148 与 HANDOFF.md:48-56（「场里存的值 <= validR 的可通行格是精确的…直接读 getField() 的返回值时必须自己对照 validR」）；失效集中走 onMapChange() 这一个入口（sim.cpp:407-463），mapVersion/mapChanged/chgValid 都由它更新；增量派单的不变量写在 sim.cpp:699-702；HANDOFF.md:88-100 专列「失效条件 / 改需求时要注意」6 条；sim.cpp:392-393 还给出松弛队列容量的推理。"},
+  "技术债清理": {"分": 5, "证据": "完全重写：没有 old_stuff.cpp、没有 FLAG_* 开关；#ifdef PROF 的计数器是显式的可选诊断，默认 #define PCNT(x) ((void)0)（sim.cpp:166）；全文件找不到无调用者的函数或变量，注释与代码一致。"},
+  "一句话点评": "优化机制讲得最透，代价是一个 1232 行、全靠全局状态撑着的文件。"
+}

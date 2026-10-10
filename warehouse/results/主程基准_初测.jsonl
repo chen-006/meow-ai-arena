@@ -1,0 +1,54 @@
+{"entry": "队A", "lead": "Kimi K3", "workload": "h2_medium", "status": "ok", "cpu": 0.9844}
+{"entry": "队A", "lead": "Kimi K3", "workload": "h2_flood", "status": "ok", "cpu": 0.7812}
+{"entry": "队A", "lead": "Kimi K3", "workload": "h2_lowbattery", "status": "ok", "cpu": 0.4688}
+{"entry": "队A", "lead": "Kimi K3", "workload": "h2_dynamic", "status": "ok", "cpu": 6.7188}
+{"entry": "队A", "lead": "Kimi K3", "workload": "h2_mixed", "status": "ok", "cpu": 6.0}
+{"entry": "队A", "lead": "Kimi K3", "workload": "h2_long", "status": "ok", "cpu": 0.875}
+{"entry": "队A", "lead": "Kimi K3", "workload": "h2_heavy_c", "status": "ok", "cpu": 17.7031}
+{"entry": "队A", "lead": "Kimi K3", "workload": "h2_heavy_b", "status": "ok", "cpu": 30.2031}
+{"entry": "队A", "lead": "Kimi K3", "workload": "h2_heavy_a", "status": "ok", "cpu": 42.2031}
+{"entry": "队B", "lead": "豆包 Seed 2.1 Turbo", "workload": "h2_medium", "status": "ok", "cpu": 17.2188}
+{"entry": "队B", "lead": "豆包 Seed 2.1 Turbo", "workload": "h2_flood", "status": "ok", "cpu": 7.7656}
+{"entry": "队B", "lead": "豆包 Seed 2.1 Turbo", "workload": "h2_lowbattery", "status": "ok", "cpu": 7.9219}
+{"entry": "队B", "lead": "豆包 Seed 2.1 Turbo", "workload": "h2_dynamic", "status": "ok", "cpu": 13.9062}
+{"entry": "队B", "lead": "豆包 Seed 2.1 Turbo", "workload": "h2_mixed", "status": "ok", "cpu": 23.9844}
+{"entry": "队B", "lead": "豆包 Seed 2.1 Turbo", "workload": "h2_long", "status": "ok", "cpu": 9.6406}
+{"entry": "队B", "lead": "豆包 Seed 2.1 Turbo", "workload": "h2_heavy_c", "status": "ok", "cpu": 34.3438}
+{"entry": "队B", "lead": "豆包 Seed 2.1 Turbo", "workload": "h2_heavy_b", "status": "ok", "cpu": 124.9688}
+{"entry": "队B", "lead": "豆包 Seed 2.1 Turbo", "workload": "h2_heavy_a", "status": "ok", "cpu": 88.5312}
+{"entry": "队C", "lead": "Gemini 3.8 Flash", "workload": "h2_medium", "status": "ok", "cpu": 0.8438}
+{"entry": "队C", "lead": "Gemini 3.8 Flash", "workload": "h2_flood", "status": "ok", "cpu": 0.7031}
+{"entry": "队C", "lead": "Gemini 3.8 Flash", "workload": "h2_lowbattery", "status": "ok", "cpu": 0.4062}
+{"entry": "队C", "lead": "Gemini 3.8 Flash", "workload": "h2_dynamic", "status": "ok", "cpu": 6.0781}
+{"entry": "队C", "lead": "Gemini 3.8 Flash", "workload": "h2_mixed", "status": "ok", "cpu": 5.375}
+{"entry": "队C", "lead": "Gemini 3.8 Flash", "workload": "h2_long", "status": "ok", "cpu": 0.7188}
+{"entry": "队C", "lead": "Gemini 3.8 Flash", "workload": "h2_heavy_c", "status": "ok", "cpu": 16.1875}
+{"entry": "队C", "lead": "Gemini 3.8 Flash", "workload": "h2_heavy_b", "status": "ok", "cpu": 29.7969}
+{"entry": "队C", "lead": "Gemini 3.8 Flash", "workload": "h2_heavy_a", "status": "ok", "cpu": 47.2188}
+{"entry": "队D", "lead": "DeepSeek V4.1 Flash", "workload": "h2_medium", "status": "ok", "cpu": 22.3281}
+{"entry": "队D", "lead": "DeepSeek V4.1 Flash", "workload": "h2_flood", "status": "ok", "cpu": 31.9688}
+{"entry": "队D", "lead": "DeepSeek V4.1 Flash", "workload": "h2_lowbattery", "status": "ok", "cpu": 4.1875}
+{"entry": "队D", "lead": "DeepSeek V4.1 Flash", "workload": "h2_dynamic", "status": "ok", "cpu": 36.125}
+{"entry": "队D", "lead": "DeepSeek V4.1 Flash", "workload": "h2_mixed", "status": "ok", "cpu": 23.6406}
+{"entry": "队D", "lead": "DeepSeek V4.1 Flash", "workload": "h2_long", "status": "ok", "cpu": 24.5781}
+{"entry": "队D", "lead": "DeepSeek V4.1 Flash", "workload": "h2_heavy_c", "status": "ok", "cpu": 198.0312}
+{"entry": "队D", "lead": "DeepSeek V4.1 Flash", "workload": "h2_heavy_b", "status": "ok", "cpu": 435.9219}
+{"entry": "队D", "lead": "DeepSeek V4.1 Flash", "workload": "h2_heavy_a", "status": "ok", "cpu": 274.5469}
+{"entry": "队E", "lead": "GLM 5.3", "workload": "h2_medium", "status": "ok", "cpu": 26.0625}
+{"entry": "队E", "lead": "GLM 5.3", "workload": "h2_flood", "status": "ok", "cpu": 20.1875}
+{"entry": "队E", "lead": "GLM 5.3", "workload": "h2_lowbattery", "status": "ok", "cpu": 6.1406}
+{"entry": "队E", "lead": "GLM 5.3", "workload": "h2_dynamic", "status": "ok", "cpu": 154.7812}
+{"entry": "队E", "lead": "GLM 5.3", "workload": "h2_mixed", "status": "ok", "cpu": 37.9844}
+{"entry": "队E", "lead": "GLM 5.3", "workload": "h2_long", "status": "ok", "cpu": 20.2344}
+{"entry": "队E", "lead": "GLM 5.3", "workload": "h2_heavy_c", "status": "未测（终版全部出错，增值必为 0，省时间）", "cpu": 476.17}
+{"entry": "队E", "lead": "GLM 5.3", "workload": "h2_heavy_b", "status": "未测（终版全部出错，增值必为 0，省时间）", "cpu": 992.41}
+{"entry": "队E", "lead": "GLM 5.3", "workload": "h2_heavy_a", "status": "未测（终版全部出错，增值必为 0，省时间）", "cpu": 666.72}
+{"entry": "队F", "lead": "MiMo V2.6 Pro", "workload": "h2_medium", "status": "ok", "cpu": 0.9219}
+{"entry": "队F", "lead": "MiMo V2.6 Pro", "workload": "h2_flood", "status": "ok", "cpu": 0.4219}
+{"entry": "队F", "lead": "MiMo V2.6 Pro", "workload": "h2_lowbattery", "status": "ok", "cpu": 0.4688}
+{"entry": "队F", "lead": "MiMo V2.6 Pro", "workload": "h2_dynamic", "status": "ok", "cpu": 7.1562}
+{"entry": "队F", "lead": "MiMo V2.6 Pro", "workload": "h2_mixed", "status": "ok", "cpu": 6.375}
+{"entry": "队F", "lead": "MiMo V2.6 Pro", "workload": "h2_long", "status": "ok", "cpu": 0.6406}
+{"entry": "队F", "lead": "MiMo V2.6 Pro", "workload": "h2_heavy_c", "status": "ok", "cpu": 20.5469}
+{"entry": "队F", "lead": "MiMo V2.6 Pro", "workload": "h2_heavy_b", "status": "ok", "cpu": 35.1719}
+{"entry": "队F", "lead": "MiMo V2.6 Pro", "workload": "h2_heavy_a", "status": "ok", "cpu": 49.0469}

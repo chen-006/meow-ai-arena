@@ -1,0 +1,2 @@
+01_stale_bfs.in：缺陷在 sim.cpp 移动阶段 bfs_get_at / MOVE_BFS_CACHE。它直接读 BFS_DIST 原值，未访问格不查 BFS_VISIT，残留 0 被当成距离 0。
+机器人站在封锁格上时会走进从目标不可达的邻居；基线该格是 BIGNUM，不会走，所以热点和后续轨迹不一致。

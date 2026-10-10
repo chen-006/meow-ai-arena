@@ -1,0 +1,13 @@
+0 ASSIGN 1 R1 0
+0 ASSIGN 2 R0 5
+0 PICK 1 R1
+0 REPORT pending=512 aged=0 idle=1 to_pickup=1 delivering=1 to_charger=0 charging=0 dead=0 hot=1,1,1
+1 CANCEL 2
+1 ASSIGN 1000 R0 5
+1 DELIVER 1 R1 1
+1 REPORT pending=512 aged=0 idle=2 to_pickup=1 delivering=0 to_charger=0 charging=0 dead=0 hot=1,1,1
+SUMMARY delivered=1 lost=0 rejected=0 cancelled=1 open=513
+LATENCY sum=1 max=1 avg=1
+ROBOT R0 1 1 20 TO_PICKUP 0 2
+ROBOT R1 2 1 20 IDLE 0 0
+ROBOT R2 1 2 20 IDLE 0 0

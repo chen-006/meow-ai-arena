@@ -1,0 +1,76 @@
+2 REJECT 1
+4 CANCEL_FAIL 3
+5 ASSIGN 2 R3 0
+5 PICK 2 R3
+7 ASSIGN 3 R1 0
+7 PICK 3 R1
+8 ASSIGN 4 R6 0
+8 PICK 4 R6
+9 DELIVER 4 R6 1
+12 CANCEL_FAIL 9
+16 CANCEL 7
+17 REJECT 9
+19 REPORT pending=3 aged=3 idle=5 to_pickup=0 delivering=2 to_charger=0 charging=0 dead=0 hot=4,1,7
+21 CANCEL_FAIL 2
+22 CANCEL_FAIL 4
+22 ASSIGN 11 R2 1
+26 ASSIGN 12 R6 0
+26 PICK 12 R6
+28 CANCEL_FAIL 9
+29 ASSIGN 13 R4 1
+31 REJECT 16
+33 REJECT 17
+35 CANCEL_FAIL 17
+38 REJECT 21
+39 REPORT pending=9 aged=9 idle=2 to_pickup=2 delivering=3 to_charger=0 charging=0 dead=0 hot=4,1,7
+41 CANCEL_FAIL 2
+52 CANCEL 10
+52 CANCEL 27
+53 ASSIGN 29 R0 0
+53 PICK 29 R0
+54 CANCEL 25
+54 DELIVER 29 R0 1
+57 ASSIGN 33 R0 1
+59 REPORT pending=17 aged=17 idle=1 to_pickup=3 delivering=3 to_charger=0 charging=0 dead=0 hot=4,1,7
+79 REPORT pending=22 aged=21 idle=1 to_pickup=3 delivering=3 to_charger=0 charging=0 dead=0 hot=4,1,7
+80 CANCEL 13
+80 CANCEL 33
+80 ASSIGN 15 R4 1
+80 ASSIGN 36 R0 0
+80 PICK 36 R0
+81 REJECT 41
+97 CANCEL 34
+99 REPORT pending=26 aged=26 idle=1 to_pickup=2 delivering=4 to_charger=0 charging=0 dead=0 hot=4,1,7
+103 REJECT 48
+110 REJECT 51
+119 CANCEL 40
+119 REPORT pending=29 aged=27 idle=1 to_pickup=2 delivering=4 to_charger=0 charging=0 dead=0 hot=4,1,7
+135 CANCEL 32
+136 CANCEL 49
+138 REJECT 65
+139 REPORT pending=39 aged=39 idle=1 to_pickup=2 delivering=4 to_charger=0 charging=0 dead=0 hot=4,1,7
+146 REJECT 68
+151 CANCEL_FAIL 40
+153 CANCEL_FAIL 49
+158 CANCEL_FAIL 36
+159 REPORT pending=46 aged=45 idle=1 to_pickup=2 delivering=4 to_charger=0 charging=0 dead=0 hot=4,1,7
+164 CANCEL 19
+166 CANCEL_FAIL 41
+166 REJECT 78
+168 CANCEL 11
+168 ASSIGN 37 R2 0
+168 PICK 37 R2
+169 DELIVER 37 R2 94
+170 ASSIGN 47 R2 0
+170 PICK 47 R2
+171 DELIVER 47 R2 75
+172 ASSIGN 54 R2 1
+SUMMARY delivered=4 lost=0 rejected=11 cancelled=18 open=55
+LATENCY sum=171 max=94 avg=43
+ROBOT R0 7 1 3 DELIVERING 0 116
+ROBOT R1 5 1 3 DELIVERING 0 166
+ROBOT R2 6 1 3 TO_PICKUP 0 148
+ROBOT R3 4 1 3 DELIVERING 0 168
+ROBOT R4 3 1 3 TO_PICKUP 0 145
+ROBOT R5 1 1 3 IDLE 0 0
+ROBOT R6 8 1 3 DELIVERING 0 147

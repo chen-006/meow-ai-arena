@@ -1,0 +1,2 @@
+01_new_format.in：submissions/final5/src/sim.cpp 的 ReadAll 仍只读取 6 个 PARAMS 参数，随后把 agingEvery 当作 ROBOTS 标签、carryCost 当作机器人数量；读取机器人坐标时遇到真正的 ROBOTS，流失败，继续使用未初始化的局部坐标，导致越界。本例没有事件、不输出 REPORT，排除了老化/耗电/报表逻辑的干扰。tools/try_case.py 本地确认参考实现正常结束，被测退出码 3221225477（访问冲突）。按一个“新输入格式未接入”的独立根因计数。
+源码中还保留旧派单排序、每步耗电 1、旧停机条件及缺少 aged 的报表；但新格式解析已先失败，未将这些未经独立输入验证的现象另算缺陷点。

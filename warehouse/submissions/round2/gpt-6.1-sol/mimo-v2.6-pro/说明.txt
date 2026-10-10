@@ -1,0 +1,1 @@
+01_eager_unreachable_timeout.in：submissions/队F/src/sim.cpp::dispatch 先算订单 b/c（调用 dist.cpp::DistTable 和 CHG_DIST），之后才检查机器人到取货点的 a。所有取货点被封锁时，基线的 DIST 对不可走终点立即返回 INF；该实现仍对不同取送货点反复全图 BFS，且每 tick 封锁变动让 DistInvalidate 清缓存。基线约6秒，被测60秒超时。

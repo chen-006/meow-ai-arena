@@ -1,0 +1,1 @@
+01_stale_distance.in：submissions/队B/src/sim.cpp::RunSim 移动阶段直接读取 BFS_DIST/MOVE_BFS_CACHE.dist，未检查 BFS_VISIT 的 generation。封路使目标与机器人断开后，未访问格子保留旧距离（或初始化的 0），被当作可达距离，基线则等待不动。

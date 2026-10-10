@@ -1,0 +1,420 @@
+{
+  "matrix": {
+    "队A": {
+      "队B": {
+        "result": "击穿",
+        "cases": [
+          {
+            "file": "case1.in",
+            "基线秒": 0.38,
+            "目标秒": 0.19,
+            "verdict": "击穿",
+            "why": "第 2 行不同：基线 19 REPORT pending=0 idle=0 to_pickup=1 delivering=0 to_charger=0 charging=0 dead / 目标 19 REPORT pending=0 idle=0 to_pickup=1 delivering=0 to_charger=0 charging=0 dead"
+          }
+        ]
+      },
+      "队C": {
+        "result": "击穿",
+        "cases": [
+          {
+            "file": "case1.in",
+            "基线秒": 0.38,
+            "目标秒": 0.26,
+            "verdict": "击穿",
+            "why": "第 1 行不同：基线 0 ASSIGN 1 R0 0 / 目标 9 REPORT pending=1 idle=1 to_pickup=0 delivering=0 to_charger=0 charging=0 dead="
+          }
+        ]
+      },
+      "队D": {
+        "result": "未提交",
+        "cases": []
+      },
+      "队E": {
+        "result": "未提交",
+        "cases": []
+      },
+      "队F": {
+        "result": "未提交",
+        "cases": []
+      }
+    },
+    "队B": {
+      "队A": {
+        "result": "未提交",
+        "cases": []
+      },
+      "队C": {
+        "result": "击穿",
+        "cases": [
+          {
+            "file": "c1_blocked_chgdist.in",
+            "基线秒": 0.38,
+            "目标秒": 0.26,
+            "verdict": "击穿",
+            "why": "第 9 行不同：基线 28 ASSIGN 194731455 R0 0 / 目标 30 ASSIGN 20 R1 2"
+          }
+        ]
+      },
+      "队D": {
+        "result": "未提交",
+        "cases": []
+      },
+      "队E": {
+        "result": "击穿",
+        "cases": [
+          {
+            "file": "e1_timeout_500x1500.in",
+            "基线秒": 2.42,
+            "目标秒": 43.41,
+            "verdict": "守住",
+            "why": "一致（43.4 秒，基线 2.4 秒）"
+          },
+          {
+            "file": "e2_timeout_800x1500.in",
+            "基线秒": 4.0,
+            "目标秒": 67.11,
+            "复核秒": [
+              67.1,
+              61,
+              61
+            ],
+            "verdict": "击穿",
+            "why": "超时：3 次都超过 60 秒（第 1 次 67.1 秒，基线 4.0 秒）",
+            "kind": "超时"
+          },
+          {
+            "file": "e3_timeout_600x1500.in",
+            "基线秒": 3.11,
+            "目标秒": 51.32,
+            "verdict": "守住",
+            "why": "一致（51.3 秒，基线 3.1 秒）"
+          }
+        ]
+      },
+      "队F": {
+        "result": "未提交",
+        "cases": []
+      }
+    },
+    "队C": {
+      "队A": {
+        "result": "未提交",
+        "cases": []
+      },
+      "队B": {
+        "result": "击穿",
+        "cases": [
+          {
+            "file": "01_stale_distance.in",
+            "基线秒": 0.01,
+            "目标秒": 0.01,
+            "verdict": "击穿",
+            "why": "第 3 行不同：基线 1 REPORT pending=0 idle=0 to_pickup=1 delivering=0 to_charger=0 charging=0 dead= / 目标 1 REPORT pending=0 idle=0 to_pickup=1 delivering=0 to_charger=0 charging=0 dead="
+          }
+        ]
+      },
+      "队D": {
+        "result": "击穿",
+        "cases": [
+          {
+            "file": "01_eager_unreachable_timeout.in",
+            "基线秒": 7.45,
+            "目标秒": 74.06,
+            "复核秒": [
+              74.1,
+              61,
+              61
+            ],
+            "verdict": "击穿",
+            "why": "超时：3 次都超过 60 秒（第 1 次 74.1 秒，基线 7.5 秒）",
+            "kind": "超时"
+          }
+        ]
+      },
+      "队E": {
+        "result": "击穿",
+        "cases": [
+          {
+            "file": "01_eager_dispatch_timeout.in",
+            "基线秒": 7.45,
+            "目标秒": 79.0,
+            "复核秒": [
+              79.0,
+              61,
+              61
+            ],
+            "verdict": "击穿",
+            "why": "超时：3 次都超过 60 秒（第 1 次 79.0 秒，基线 7.5 秒）",
+            "kind": "超时"
+          }
+        ]
+      },
+      "队F": {
+        "result": "击穿",
+        "cases": [
+          {
+            "file": "01_eager_unreachable_timeout.in",
+            "基线秒": 8.24,
+            "目标秒": 74.03,
+            "复核秒": [
+              74.0,
+              61,
+              61
+            ],
+            "verdict": "击穿",
+            "why": "超时：3 次都超过 60 秒（第 1 次 74.0 秒，基线 8.2 秒）",
+            "kind": "超时"
+          }
+        ]
+      }
+    },
+    "队D": {
+      "队A": {
+        "result": "未提交",
+        "cases": []
+      },
+      "队B": {
+        "result": "击穿",
+        "cases": [
+          {
+            "file": "case1_stale_bfs_unreachable.in",
+            "基线秒": 0.01,
+            "目标秒": 0.0,
+            "verdict": "击穿",
+            "why": "第 3 行不同：基线 9 REPORT pending=0 idle=0 to_pickup=1 delivering=0 to_charger=0 charging=0 dead= / 目标 9 REPORT pending=0 idle=0 to_pickup=1 delivering=0 to_charger=0 charging=0 dead="
+          }
+        ]
+      },
+      "队C": {
+        "result": "击穿",
+        "cases": [
+          {
+            "file": "case1_blocked_delivery_chgdist.in",
+            "基线秒": 0.01,
+            "目标秒": 0.01,
+            "verdict": "击穿",
+            "why": "第 1 行不同：基线 1 ASSIGN 1 R0 0 / 目标 4 REPORT pending=1 idle=1 to_pickup=0 delivering=0 to_charger=0 charging=0 dead="
+          },
+          {
+            "file": "case2_blocked_pickup_churn_slow_a.in",
+            "基线秒": 5.32,
+            "目标秒": 29.08,
+            "verdict": "守住",
+            "why": "一致（29.1 秒，基线 5.3 秒）"
+          },
+          {
+            "file": "case3_blocked_pickup_churn_slow_b.in",
+            "基线秒": 5.07,
+            "目标秒": 27.39,
+            "verdict": "守住",
+            "why": "一致（27.4 秒，基线 5.1 秒）"
+          }
+        ]
+      },
+      "队E": {
+        "result": "击穿",
+        "cases": [
+          {
+            "file": "case1_block_churn_light.in",
+            "基线秒": 2.47,
+            "目标秒": 39.06,
+            "verdict": "守住",
+            "why": "一致（39.1 秒，基线 2.5 秒）"
+          },
+          {
+            "file": "case2_block_churn_mid.in",
+            "基线秒": 3.89,
+            "目标秒": 57.8,
+            "verdict": "守住",
+            "why": "一致（57.8 秒，基线 3.9 秒）"
+          },
+          {
+            "file": "case3_block_churn_heavy.in",
+            "基线秒": 5.87,
+            "目标秒": 75.82,
+            "复核秒": [
+              75.8,
+              61,
+              61
+            ],
+            "verdict": "击穿",
+            "why": "超时：3 次都超过 60 秒（第 1 次 75.8 秒，基线 5.9 秒）",
+            "kind": "超时"
+          }
+        ]
+      },
+      "队F": {
+        "result": "击穿",
+        "cases": [
+          {
+            "file": "case1_blocked_pickup_churn_light.in",
+            "基线秒": 2.4,
+            "目标秒": 32.59,
+            "verdict": "守住",
+            "why": "一致（32.6 秒，基线 2.4 秒）"
+          },
+          {
+            "file": "case2_blocked_pickup_churn_mid.in",
+            "基线秒": 3.67,
+            "目标秒": 45.18,
+            "verdict": "守住",
+            "why": "一致（45.2 秒，基线 3.7 秒）"
+          },
+          {
+            "file": "case3_blocked_pickup_churn_heavy.in",
+            "基线秒": 5.28,
+            "目标秒": 61.29,
+            "复核秒": [
+              61.3,
+              61,
+              61
+            ],
+            "verdict": "击穿",
+            "why": "超时：3 次都超过 60 秒（第 1 次 61.3 秒，基线 5.3 秒）",
+            "kind": "超时"
+          }
+        ]
+      }
+    },
+    "队E": {
+      "队A": {
+        "result": "未提交",
+        "cases": []
+      },
+      "队B": {
+        "result": "击穿",
+        "cases": [
+          {
+            "file": "01_stale_bfs.in",
+            "基线秒": 0.01,
+            "目标秒": 0.0,
+            "verdict": "击穿",
+            "why": "第 3 行不同：基线 1 REPORT pending=0 idle=0 to_pickup=1 delivering=0 to_charger=0 charging=0 dead= / 目标 1 REPORT pending=0 idle=0 to_pickup=1 delivering=0 to_charger=0 charging=0 dead="
+          }
+        ]
+      },
+      "队C": {
+        "result": "击穿",
+        "cases": [
+          {
+            "file": "01_chg_blocked.in",
+            "基线秒": 0.0,
+            "目标秒": 0.01,
+            "verdict": "击穿",
+            "why": "第 1 行不同：基线 0 ASSIGN 7 R0 0 / 目标 0 REPORT pending=1 idle=1 to_pickup=0 delivering=0 to_charger=0 charging=0 dead="
+          }
+        ]
+      },
+      "队D": {
+        "result": "未提交",
+        "cases": []
+      },
+      "队F": {
+        "result": "未提交",
+        "cases": []
+      }
+    },
+    "队F": {
+      "队A": {
+        "result": "未提交",
+        "cases": []
+      },
+      "队B": {
+        "result": "击穿",
+        "cases": [
+          {
+            "file": "01_stale_distance.in",
+            "基线秒": 0.0,
+            "目标秒": 0.0,
+            "verdict": "击穿",
+            "why": "第 3 行不同：基线 1 REPORT pending=0 idle=0 to_pickup=1 delivering=0 to_charger=0 charging=0 dead= / 目标 1 REPORT pending=0 idle=0 to_pickup=1 delivering=0 to_charger=0 charging=0 dead="
+          }
+        ]
+      },
+      "队C": {
+        "result": "击穿",
+        "cases": [
+          {
+            "file": "01_blocked_delivery.in",
+            "基线秒": 0.0,
+            "目标秒": 0.01,
+            "verdict": "击穿",
+            "why": "第 1 行不同：基线 0 ASSIGN 1 R0 0 / 目标 0 REPORT pending=1 idle=1 to_pickup=0 delivering=0 to_charger=0 charging=0 dead="
+          },
+          {
+            "file": "02_cache_eviction.in",
+            "基线秒": 0.01,
+            "目标秒": 0.01,
+            "verdict": "击穿",
+            "why": "第 6 行不同：基线 1 ASSIGN 1000 R0 5 / 目标 1 ASSIGN 1000 R2 1"
+          },
+          {
+            "file": "03_cache_thrashing_timeout.in",
+            "基线秒": 3.53,
+            "目标秒": 63.53,
+            "复核秒": [
+              63.5,
+              61,
+              61
+            ],
+            "verdict": "击穿",
+            "why": "超时：3 次都超过 60 秒（第 1 次 63.5 秒，基线 3.5 秒）",
+            "kind": "超时"
+          }
+        ]
+      },
+      "队D": {
+        "result": "击穿",
+        "cases": [
+          {
+            "file": "01_eager_tail_timeout.in",
+            "基线秒": 5.18,
+            "目标秒": 77.62,
+            "复核秒": [
+              77.6,
+              61,
+              61
+            ],
+            "verdict": "击穿",
+            "why": "超时：3 次都超过 60 秒（第 1 次 77.6 秒，基线 5.2 秒）",
+            "kind": "超时"
+          }
+        ]
+      },
+      "队E": {
+        "result": "击穿",
+        "cases": [
+          {
+            "file": "01_eager_dispatch_timeout.in",
+            "基线秒": 2.01,
+            "目标秒": 73.13,
+            "复核秒": [
+              73.1,
+              61,
+              61
+            ],
+            "verdict": "击穿",
+            "why": "超时：3 次都超过 60 秒（第 1 次 73.1 秒，基线 2.0 秒）",
+            "kind": "超时"
+          }
+        ]
+      }
+    }
+  },
+  "attack": {
+    "队A": 2,
+    "队B": 2,
+    "队C": 4,
+    "队D": 4,
+    "队E": 2,
+    "队F": 4
+  },
+  "broken_by": {
+    "队A": 0,
+    "队B": 5,
+    "队C": 5,
+    "队D": 2,
+    "队E": 4,
+    "队F": 2
+  }
+}

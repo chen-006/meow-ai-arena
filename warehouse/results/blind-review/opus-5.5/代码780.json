@@ -1,0 +1,8 @@
+{
+  "结构与可读性": {"分": 2, "证据": "sim.cpp 的 RunSim()（148–481 行）仍是七阶段一整块；main.cpp 6–28 行二十多个全局，平行数组 `RX, RY, RB, RTX, RTY, RWS, RDS, RSTI` 原样保留并新增 OCCG/BLKG/OINT/EVTOK/EVB；订单仍用字符串下标 `ORD[id][6]`、`S2I(ORD[oid][2])`。只抽出了 arrive()（sim.cpp 122）和 rebuildPendCache()，属于「有少量拆分，主体仍是一大块」。"},
+  "行为保真的可见性": {"分": 3, "证据": "HANDOFF §3「必须知道的怪行为（别修）」列了 `a <= best`、BFS 距离不对称、九成电、`PRM[0]/2`、`CNT[3]`；代码内有 sim.cpp 192 `CNT[3]++; // 基线：只要订单存在就计数，哪怕后面取消失败`、280 `// 注意基线是 <=：并列时取编号大的（原样保留）`、util.cpp 127 的不对称说明。但 sim.cpp 230 `// 停机 100 tick 以后派人去救，充满电恢复`（实际只给一半）、247 `// 充满了就走`（实际 90%）这两条误导注释原样留着，493 的四舍五入只写「整数除法」；无编号、分散。"},
+  "可修改性": {"分": 2, "证据": "未实现 CHANGE。触点与基线同构：`for (i < 6) in >> PRM[i]` + 魔法下标；`RB[i]--` 在 sim.cpp 396、412 两处；停机 `RB[i] == 0`（346）；电量式 `RB[i] < a + b + c + PRM[3]`（279）；REPORT 拼串（475）。另有一处容易漏：rebuildPendCache() 只在 `PEND_DIRTY` 时重排（sim.cpp 257），老化后有效优先级每 tick 都变，这个快照前提失效，而 HANDOFF §5 的 p2 提示只说「扩展成读 8 个即可」。横评时由 3 下调到 2，与同类对齐。"},
+  "优化逻辑的清晰度": {"分": 4, "证据": "common.h 给每个加速结构写了维护规则：54 行 `setRST` 「状态迁移唯一入口（自动维护 RST/RSTI/OCCG）」、55 行 `occMove` 「唯一改 RX/RY 的入口」、84–89 行 FIELD 的语义与失效；失效集中在 util.cpp 的 blkAdd/blkRemove → fieldInvalidate()。欠缺：`BLKVER` 只自增、无人读取，common.h 39 行「FIELD 缓存据此失效」和「按 (起点, 封锁版本) 缓存」与实际的整体清空不符；`PEND_DIRTY = true` 手工散在 sim.cpp 113/183/195/294/355 五处。"},
+  "技术债清理": {"分": 3, "证据": "删除了 old_stuff.cpp 和 USE_NEW_DISPATCH/FLAG_FAST_BFS 开关（HANDOFF §1）。明显残留：util.cpp 159 `ALL_CHG()`「兼容旧接口」已无调用方；`BLKVER` 无用；`EVT` 原始行存档只为切词；`CNT[8]` 的「6,7 备用」；writeLog 仍靠首 token 解析做统计（util.cpp 221–231）；findRobot 逐个拼名字比较；两处过时注释（「充满电恢复」「充满了就走」）。"},
+  "一句话点评": "缓存入口收得干净，可主循环还是那座山，只是修了条高速路"
+}

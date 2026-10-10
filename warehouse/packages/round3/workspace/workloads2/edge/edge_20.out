@@ -1,0 +1,23 @@
+19 CANCEL 4
+20 CANCEL 2
+20 CANCEL_FAIL 6
+24 CANCEL 3
+26 CANCEL_FAIL 10
+33 REJECT 12
+40 CANCEL 8
+45 CANCEL_FAIL 4
+47 REPORT pending=10 aged=5 idle=6 to_pickup=0 delivering=0 to_charger=0 charging=0 dead=0 hot=2,4,3
+67 REJECT 21
+68 CANCEL 9
+70 CANCEL 20
+90 CANCEL 5
+91 CANCEL 32
+95 REPORT pending=23 aged=12 idle=6 to_pickup=0 delivering=0 to_charger=0 charging=0 dead=0 hot=2,4,3
+SUMMARY delivered=0 lost=0 rejected=2 cancelled=9 open=24
+LATENCY sum=0 max=0 avg=0
+ROBOT R0 6 7 21 IDLE 0 0
+ROBOT R1 7 4 21 IDLE 0 0
+ROBOT R2 3 5 21 IDLE 0 0
+ROBOT R3 2 1 21 IDLE 0 0
+ROBOT R4 4 4 21 IDLE 0 0
+ROBOT R5 2 5 21 IDLE 0 0

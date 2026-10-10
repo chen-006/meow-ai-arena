@@ -1,0 +1,6 @@
+0 ASSIGN 1 R0 1
+0 PICK 1 R0
+1 DELIVER 1 R0 1
+SUMMARY delivered=1 lost=0 rejected=0 cancelled=0 open=600
+LATENCY sum=1 max=1 avg=1
+ROBOT R0 3 1 99999 IDLE 1 0

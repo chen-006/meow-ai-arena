@@ -1,0 +1,57 @@
+{
+  "队A": {
+    "total": 0,
+    "fixed": 0,
+    "cases": {}
+  },
+  "队B": {
+    "total": 5,
+    "fixed": 5,
+    "cases": {
+      "fromA_case1": true,
+      "fromC_01_stale_distance": true,
+      "fromD_case1_stale_bfs_unreachable": true,
+      "fromE_01_stale_bfs": true,
+      "fromF_01_stale_distance": true
+    }
+  },
+  "队C": {
+    "total": 7,
+    "fixed": 7,
+    "cases": {
+      "fromA_case1": true,
+      "fromB_c1_blocked_chgdist": true,
+      "fromD_case1_blocked_delivery_chgdist": true,
+      "fromE_01_chg_blocked": true,
+      "fromF_01_blocked_delivery": true,
+      "fromF_02_cache_eviction": true,
+      "slow_fromF_03_cache_thrashing_timeout": true
+    }
+  },
+  "队D": {
+    "total": 2,
+    "fixed": 2,
+    "cases": {
+      "slow_fromC_01_eager_unreachable_timeout": true,
+      "slow_fromF_01_eager_tail_timeout": true
+    }
+  },
+  "队E": {
+    "total": 4,
+    "fixed": 0,
+    "cases": {
+      "slow_fromB_e2_timeout_800x1500": false,
+      "slow_fromC_01_eager_dispatch_timeout": false,
+      "slow_fromD_case3_block_churn_heavy": false,
+      "slow_fromF_01_eager_dispatch_timeout": false
+    }
+  },
+  "队F": {
+    "total": 2,
+    "fixed": 2,
+    "cases": {
+      "slow_fromC_01_eager_unreachable_timeout": true,
+      "slow_fromD_case3_blocked_pickup_churn_heavy": true
+    }
+  }
+}

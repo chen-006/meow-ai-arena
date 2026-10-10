@@ -1,0 +1,8 @@
+{
+  "结构与可读性": {"分": 2, "证据": "sim.cpp 的 RunSim()（87–478 行）仍是一整块；订单改成了 `struct Order`（common.h 66–73），但机器人仍是平行数组 `RX, RY, RB, RTX, RTY, RWS, RDS`，状态是 `#define S_IDLE 0` 一类宏；到达逻辑原样重复两遍（sim.cpp 298–323 与 415–439）；`#if USE_NEW_DISPATCH … #else oldDispatch(t); #endif` 还夹在主循环里；派单判断是七层嵌套 if（216–236）。"},
+  "行为保真的可见性": {"分": 2, "证据": "代码里几乎没有标注：sim.cpp 128 `CNT[3]++;`、177 `RB[i] = PRM[0] / 2;`、191 `RB[i] * 10 >= PRM[0] * 9`、226 `if (a <= best)`、490 `avg = (CNT[4] + CNT[0] / 2) / CNT[0];` 全部裸奔，连基线原有的注释也删了。HANDOFF「三、几个怪行为」列了 7 条，其中 `<=`、90%、DIST 不对称有原因说明，但漏了「取消失败也计数」「平均延迟四舍五入」，救援半电只在第四节表格里顺带一句，还混入「PEND 删除用构造新 vector」这类实现细节。"},
+  "可修改性": {"分": 2, "证据": "未实现 CHANGE。要改的位置和基线几乎一一对应：`for (int i = 0; i < 6; i++) in >> PRM[i];`（sim.cpp 25）、排序 lambda（203–209）、埋在七层 if 里的 `RB[i] >= a + b + c + PRM[3]`（225）、`RB[i]--` 两处（393、410）、`RB[i] == 0`（325）、REPORT 拼串（472）；全靠 `PRM[n]` 魔法下标。好处是每 tick 现排序、没有与老化冲突的缓存。HANDOFF 第四节的表只指到「第几步」。"},
+  "优化逻辑的清晰度": {"分": 3, "证据": "机制简单：全局 `BFS_DIST/BFS_VISIT/BFS_GEN` 代数计数 + 单条目 `MOVE_BFS_CACHE`，HANDOFF 2.6 写了失效条件「目标不同 或 BLK_VERSION 变化」。但缓存判定直接内联在大函数里（sim.cpp 353–368），`BLK_VERSION++` 散在事件分支两处（155、163）；`_bfs_get()` 只对最近一次 `BFS_FILL` 有效这个别名约束没有写下来；`EVT_PTR` 依赖「事件按 tick 非递减」的输入假设，代码里无注释，仅 HANDOFF 2.5 一句带过。"},
+  "技术债清理": {"分": 2, "证据": "old_stuff.cpp 整个保留并改写到能编译（oldDispatch、bfs_fast_cached 仍在）；common.h 25–28 行 `MAXR / FLAG_FAST_BFS / FLAG_VERBOSE / USE_NEW_DISPATCH` 全在；新增死代码 `BFS_FILL_FROM_TARGET`、`orderStatusStr`、`ALL_CHG`、`Event.raw`；common.h 64 行「改用并行数组，索引为 oid_int」与实际不符，98–103 行注释重复两遍；HANDOFF 第七节还建议「先看 FLAG_FAST_BFS 等开关回退」，而该开关已不起任何作用。仅清理了有 bug 的缓存 map、`#if 0 zoneDispatch`、`dumpCacheStat`。"},
+  "一句话点评": "跑得快了，屋子没收拾：旧开关、旧文件、旧重复一件没扔"
+}

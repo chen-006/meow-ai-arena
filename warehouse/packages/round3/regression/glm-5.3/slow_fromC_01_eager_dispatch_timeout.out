@@ -1,0 +1,5 @@
+0 ASSIGN 1 R0 0
+0 PICK 1 R0
+SUMMARY delivered=0 lost=0 rejected=0 cancelled=0 open=801
+LATENCY sum=0 max=0 avg=0
+ROBOT R0 1 1 100000 DELIVERING 0 2199

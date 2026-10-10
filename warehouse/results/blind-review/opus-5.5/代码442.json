@@ -1,0 +1,8 @@
+{
+  "结构与可读性": {"分": 2, "证据": "sim.cpp 的 RunSim()（148–527）七阶段一整块；机器人仍是平行数组 `extern vector<int> RX, RY, RB, RTX, RTY, RWS, RDS;`（common.h 85）；派单段 294–324 五层嵌套 if。拆出来的只有 `static void onArrive(int t, int i)`（sim.cpp 121）、`struct Order`，以及 util.cpp 里分层清楚的 BFS 内核（bfsAll / bfsFirst / pickCharger / bfsRobotNeighborDist）。"},
+  "行为保真的可见性": {"分": 3, "证据": "HANDOFF §3「从基线里挖出来的怪行为（都是故意的）」10 条带解释（DIST 不对称、SIDESTEP 不要求更近、救援只充 `PRM[0]/2` 并指出原注释过时、CANCEL 不清 RDS 等），`<=` 写在 §2.8（「别改成 <」）。但清单漏了「取消失败也计数」「平均延迟四舍五入」「90% 即走」。代码内：sim.cpp 316 `// 一样近取编号大的（与旧版一致）`、428–429「这个怪行为必须原样保留」、246 改成了「充满一半电恢复」；而 202 `CNT[3]++;` 无注释，267 仍是 `// 充满了就走`，539 只写「整数除法」。"},
+  "可修改性": {"分": 2, "证据": "未实现 CHANGE。`extern multiset<int, OrdCmp> PEND;`（common.h 116）把排序键固化进有序容器，老化后键随 tick 变化必须换结构；HANDOFF §2.4 还特意叮嘱「不要给 OrdCmp 加新的并列规则，也不要改成无序容器」，与这次变更正面冲突。电量式连同保守剪枝要同步改三处：sim.cpp 294 `maxIdleBat >= man + PRM[3]`、304 `int need = b + c + PRM[3];`、309/315；`RB[i]--` 两处（437、456）；`RB[i] == 0`（384）；`PRM[6]` 魔法下标；全在一个 380 行函数里。"},
+  "优化逻辑的清晰度": {"分": 3, "证据": "核心是「观察点提前退出」的 BFS 内核：util.cpp 10–14、45–46、81–83 写明时间戳、观察点、并列规则的约定，HANDOFF §2.7 给了正确性依据；没有全图缓存，§5 解释了取舍；订单 `memoGen/bMemo/cMemo` 按 `g_blkGen` 失效。扣分：`g_blkGen++` 内联在事件分支两处（sim.cpp 229、239）；`LIVE[]` 手写维护在 57/255/404/433–436/452–455 五处，HANDOFF §2.6 靠文字列举，且那句「不改动位置的地方一定不要漏改 LIVE」本身写反了；`g_mark/g_markNow/g_hit/g_firstDist` 这组文件级工作区要求调用方先标后搜。不变量写了但失效点不集中，3/4 之间取低。"},
+  "技术债清理": {"分": 3, "证据": "old_stuff.cpp 删除，并在 HANDOFF §1 说明旧缓存出错的根因（没考虑 BLK 会变）；三个开关移除。明显残留：common.h 第 2 行和 sim.cpp 2–4 行的「老王/张/李」历史注释、main.cpp「v3.2」；sim.cpp 267 `// 充满了就走` 过时注释；`SPLIT()`、`S2I()` 已无调用方；`<fstream>/<sstream>/<map>/<queue>` 无用头；`CNT[8]`「6,7 没用」；writeLog 仍解析首词做统计，HANDOFF 还要求「别绕过它直接改 CNT」。"},
+  "一句话点评": "BFS 内核讲得明白，但交接文档亲手把老化需求的路堵死了"
+}

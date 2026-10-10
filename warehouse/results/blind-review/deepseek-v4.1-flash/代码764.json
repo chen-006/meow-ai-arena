@@ -1,0 +1,8 @@
+{
+  "结构与可读性": {"分": 4, "证据": "六个模块职责清楚（HANDOFF.md:9-16 有职责表），函数都不长：dispatch 50 行（sim.cpp:130-180）、movePhase 55 行（sim.cpp:231-285）、handleEvents 60 行（sim.cpp:344-404）、report 50 行（sim.cpp:291-341），并把距离查表抽成 distSrc/distRev（sim.cpp:56-75）、充电桩占用抽成 chargerUsed（sim.cpp:183-191）。扣分点：跨模块可变全局状态仍很多（common.h:58-68 一套 extern 加各 TU 的 static，如 sim.cpp:16/39/47），report 里旋转坐标差分那 30 行（sim.cpp:304-334）没有独立函数边界。"},
+  "行为保真的可见性": {"分": 5, "证据": "HANDOFF.md:35-56 一节「⚠️ 怪行为清单（基线行为 = 规格，必须保留！）」列了 14 条并逐条说原因，覆盖派单平局、90% 充电、半血救援、延迟四舍五入、取消计数、DIST(a,a)=0、取货点被封锁后不退单、按编号顺序移动、SIDESTEP 条件、死人不占格、热点含封锁格、重复订单号、pending 与 open 的区别、tick 用 atoi；代码现场逐处标注：sim.cpp:160「注意是 <=：相同 a 取编号大的（基线行为）」、sim.cpp:369「（怪行为，保留）」、sim.cpp:97、sim.cpp:414、sim.cpp:428、sim.cpp:460、dist.cpp:117、dist.cpp:9-11。"},
+  "可修改性": {"分": 2, "证据": "载货耗电要改 4 处：停机 sim.cpp:237、正常走 sim.cpp:278、让路 sim.cpp:260、派单 sim.cpp:159。更麻烦的是变更 1：待派队列是 set<int, PendCmp>（sim.cpp:39），比较器只按 (prio, arrival, id) 排序（sim.cpp:30-38），老化让有效优先级随时间变，set 的键无法原地更新，必须换成每 tick 重排或分桶归并；而 HANDOFF.md:69-70 给的指引却是「老化可以在 RunSim() 每 tick 开头加个阶段」，会把人带偏。变更 3 加在报表 sim.cpp:336。"},
+  "优化逻辑的清晰度": {"分": 4, "证据": "缓存的依据和失效点写清楚了：dist.cpp:3-6「BFS 距离只取决于墙+封锁…封锁一变就整体失效」，HANDOFF.md:23-25 指明 BLOCK_VERSION 由 DistInvalidate() 递增、缓存整体失效，并提醒引入新的距离查询要直接用 DIST()/DistTable()、不要自己写 BFS；订单级 OCACHE 的失效条件写在 HANDOFF.md:28-29 与 sim.cpp:142，OCCN 的维护义务写在 HANDOFF.md:30。扣分点：LRU 淘汰是线性扫（dist.cpp:103-105）却没写代价，g_version 与 BLOCK_VERSION 两套版本号并存（dist.cpp:43、50、61、67）容易看混，ALL_CHG 用 cachedW/cachedH 做缓存守卫（dist.cpp:136-147）没有解释。"},
+  "技术债清理": {"分": 4, "证据": "没有 old_stuff.cpp、没有 FLAG_* 开关，注释与代码一致，HANDOFF.md:91-96 还主动列了「已知技术债（可接受，但别再欠新的）」。残留一处：DIST() 只被声明和定义（common.h:83、dist.cpp:116-120），全代码没有调用者。"},
+  "一句话点评": "结构清楚、清单齐全，但待派队列那个 set 会把老化需求绊住。"
+}

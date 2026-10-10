@@ -1,0 +1,11 @@
+三个用例是同一个缺陷（同一根因）的轻/中/重三档，只是 tick 数不同（1100 / 1600 / 2200），用来适应评测机快慢：
+case1_blocked_pickup_churn_light.in, case2_blocked_pickup_churn_mid.in, case3_blocked_pickup_churn_heavy.in
+判定方式：被测程序 60 秒内跑不完（输出内容本身一致）。本机实测 1400 tick 版本：基线约 6 秒，队F 约 117 秒（约 19 倍）。
+heavy 档在机器较慢时基线可能超过 10 秒而无效，属预期，届时以 light/mid 为准。
+
+缺陷位置：sim.cpp dispatch() 里的订单级缓存 OCACHE——od.b / od.c 在机器人循环之前无条件计算（DistTable(取货点) + CHG_DIST(送货点)），
+配合 dist.cpp DistInvalidate()（封锁每次真实变化就清空全部距离表、BLOCK_VERSION++，OCACHE 随之全部失效）。
+原因：基线派单是惰性的，先算 a = DIST(机器人, 取货点)；取货点被封锁且机器人不在其上时 DIST 直接返回 BIGNUM，不做任何 BFS，b、c 根本不会算。
+队F 只要有候选机器人(pool>0)，就在看 a 之前给每个待派订单重算 b、c（各一次 60x60 全图 BFS），封锁一变又全部作废。
+构造：60x60 空地图，1 个空闲满电机器人；tick 0 封锁 600 个互不相同的格子并下 600 个以这些格子为取货点的订单（基线永远派不出去，零 BFS），
+之后每 tick 对 (58,1) 做一次 BLOCK/UNBLOCK 真实翻转。队F 每 tick 重算约 1200 张距离表，整体比基线慢约 19 倍，超过 60 秒上限。

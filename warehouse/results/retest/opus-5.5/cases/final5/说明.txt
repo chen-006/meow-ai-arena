@@ -1,0 +1,17 @@
+final5 —— 找到 1 个缺陷点（两个用例是同一个根因的轻重两档，都已用 tools/try_case.py 在本地确认"不一致"）
+
+缺陷：这份终版根本没有实现 CHANGE.md，仍然是第一阶段的代码，只按旧的 6 参数格式解析输入。
+  位置：sim.cpp ReadAll()  `for (int i = 0; i < 6; i++) in >> PRM[i];`，main.cpp/common.h 里 `int PRM[6]`。
+  原因：新格式的 PARAMS 行有 8 个数。ReadAll 只读 6 个，接着 `in >> tmp >> NR` 把 agingEvery 当成 "ROBOTS"
+        这个单词、把 carryCost 当成机器人数 NR；随后读机器人坐标时碰到字符串 "ROBOTS"，流进入失败状态，
+        坐标/事件数全是 0 或垃圾值，后面访问越界崩溃（Windows 退出码 0xC0000005）。
+        任何合法的新格式输入都会触发，所以被测程序"异常退出"，判不一致。
+  同一份代码里还能看到的后续缺失（被上面的解析问题完全遮住，没法单独构造用例，所以不另算缺陷点）：
+        - 派单排序 rebuildPendCache() 仍按原始优先级排序，没有老化；
+        - 派单电量条件仍是 a + b + c + PRM[3]（没有乘 carryCost）；
+        - 移动阶段仍是"电量为 0 才停机"、每步耗 1；
+        - REPORT 没有 aged= 字段。
+        HANDOFF.md 第 5 节"第二阶段（p2）提示"也写明这些都还没做。
+
+case1_tiny.in   4x7 地图、1 个机器人、5 个事件。ReadAll 按 6 参数解析 → 崩溃（退出码 3221225477）。
+case2_small.in  稍大一点的同类输入（多机器人、带 CANCEL/BLOCK），同一根因 → 崩溃（退出码 3221225477）。

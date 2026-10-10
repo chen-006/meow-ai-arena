@@ -1,0 +1,113 @@
+0 ASSIGN 1 R1 1
+0 PICK 1 R1
+2 ASSIGN 2 R3 2
+3 PICK 2 R3
+4 CANCEL_FAIL 1
+4 ASSIGN 3 R2 2
+4 REPORT pending=0 aged=0 idle=1 to_pickup=1 delivering=2 to_charger=0 charging=0 dead=0 hot=2,2,2
+5 ASSIGN 4 R0 2
+5 PICK 3 R2
+6 SIDESTEP R1
+6 DELIVER 3 R2 2
+8 ASSIGN 5 R2 5
+9 REPORT pending=1 aged=0 idle=0 to_pickup=2 delivering=2 to_charger=0 charging=0 dead=0 hot=4,3,3
+10 SIDESTEP R3
+12 PICK 4 R0
+12 PICK 5 R2
+14 REPORT pending=2 aged=0 idle=0 to_pickup=0 delivering=4 to_charger=0 charging=0 dead=0 hot=2,4,3
+18 SIDESTEP R2
+19 REPORT pending=4 aged=0 idle=0 to_pickup=0 delivering=4 to_charger=0 charging=0 dead=0 hot=2,5,3
+20 CANCEL 8
+21 CANCEL_FAIL 1
+23 SIDESTEP R2
+23 DELIVER 2 R3 21
+24 ASSIGN 10 R3 1
+24 REPORT pending=5 aged=0 idle=0 to_pickup=1 delivering=3 to_charger=0 charging=0 dead=0 hot=3,5,3
+29 REPORT pending=9 aged=0 idle=0 to_pickup=1 delivering=3 to_charger=0 charging=0 dead=0 hot=2,5,3
+30 SIDESTEP R0
+34 REPORT pending=10 aged=0 idle=0 to_pickup=1 delivering=3 to_charger=0 charging=0 dead=0 hot=2,5,3
+36 SIDESTEP R0
+39 REPORT pending=10 aged=0 idle=0 to_pickup=1 delivering=3 to_charger=0 charging=0 dead=0 hot=2,5,3
+42 SIDESTEP R0
+44 REPORT pending=12 aged=0 idle=0 to_pickup=1 delivering=3 to_charger=0 charging=0 dead=0 hot=2,5,3
+48 SIDESTEP R0
+49 REPORT pending=12 aged=0 idle=0 to_pickup=1 delivering=3 to_charger=0 charging=0 dead=0 hot=2,5,3
+54 CANCEL 12
+54 SIDESTEP R0
+54 REPORT pending=15 aged=0 idle=0 to_pickup=1 delivering=3 to_charger=0 charging=0 dead=0 hot=3,5,3
+56 CANCEL_FAIL 1
+59 REPORT pending=20 aged=0 idle=0 to_pickup=1 delivering=3 to_charger=0 charging=0 dead=0 hot=2,5,3
+60 SIDESTEP R0
+64 CANCEL 19
+64 REPORT pending=20 aged=0 idle=0 to_pickup=1 delivering=3 to_charger=0 charging=0 dead=0 hot=2,5,3
+66 SIDESTEP R0
+69 REPORT pending=23 aged=0 idle=0 to_pickup=1 delivering=3 to_charger=0 charging=0 dead=0 hot=2,5,3
+70 REJECT 33
+74 REPORT pending=23 aged=0 idle=0 to_pickup=1 delivering=3 to_charger=0 charging=0 dead=0 hot=2,5,3
+75 REJECT 34
+76 DELIVER 5 R2 68
+77 ASSIGN 22 R2 2
+79 REPORT pending=23 aged=0 idle=0 to_pickup=2 delivering=2 to_charger=0 charging=0 dead=0 hot=3,3,2
+81 SIDESTEP R2
+84 REPORT pending=25 aged=0 idle=0 to_pickup=2 delivering=2 to_charger=0 charging=0 dead=0 hot=4,3,2
+89 REPORT pending=27 aged=0 idle=0 to_pickup=2 delivering=2 to_charger=0 charging=0 dead=0 hot=4,3,2
+91 CANCEL 21
+94 REPORT pending=30 aged=0 idle=0 to_pickup=2 delivering=2 to_charger=0 charging=0 dead=0 hot=4,3,2
+96 CANCEL_FAIL 3
+99 REPORT pending=33 aged=0 idle=0 to_pickup=2 delivering=2 to_charger=0 charging=0 dead=0 hot=4,3,2
+100 CANCEL 39
+101 CANCEL 11
+104 REPORT pending=33 aged=0 idle=0 to_pickup=2 delivering=2 to_charger=0 charging=0 dead=0 hot=4,3,2
+109 REPORT pending=33 aged=1 idle=0 to_pickup=2 delivering=2 to_charger=0 charging=0 dead=0 hot=4,3,2
+114 CANCEL_FAIL 19
+114 REPORT pending=33 aged=2 idle=0 to_pickup=2 delivering=2 to_charger=0 charging=0 dead=0 hot=4,3,2
+117 CANCEL 17
+119 REPORT pending=33 aged=3 idle=0 to_pickup=2 delivering=2 to_charger=0 charging=0 dead=0 hot=4,3,2
+124 CANCEL 30
+124 REPORT pending=33 aged=3 idle=0 to_pickup=2 delivering=2 to_charger=0 charging=0 dead=0 hot=4,3,2
+129 CANCEL 13
+129 REPORT pending=34 aged=6 idle=0 to_pickup=2 delivering=2 to_charger=0 charging=0 dead=0 hot=4,3,2
+134 REPORT pending=36 aged=6 idle=0 to_pickup=2 delivering=2 to_charger=0 charging=0 dead=0 hot=4,3,2
+139 REPORT pending=39 aged=6 idle=0 to_pickup=2 delivering=2 to_charger=0 charging=0 dead=0 hot=4,3,2
+144 REPORT pending=39 aged=7 idle=0 to_pickup=2 delivering=2 to_charger=0 charging=0 dead=0 hot=3,3,2
+147 SIDESTEP R2
+149 REPORT pending=40 aged=7 idle=0 to_pickup=2 delivering=2 to_charger=0 charging=0 dead=0 hot=3,3,2
+150 REJECT 59
+152 REJECT 61
+153 SIDESTEP R2
+154 REPORT pending=42 aged=9 idle=0 to_pickup=2 delivering=2 to_charger=0 charging=0 dead=0 hot=3,3,2
+159 SIDESTEP R2
+159 REPORT pending=42 aged=14 idle=0 to_pickup=2 delivering=2 to_charger=0 charging=0 dead=0 hot=4,3,2
+164 REPORT pending=44 aged=15 idle=0 to_pickup=2 delivering=2 to_charger=0 charging=0 dead=0 hot=3,3,2
+165 CANCEL 46
+165 SIDESTEP R2
+166 CANCEL 44
+166 CANCEL_FAIL 39
+169 REPORT pending=46 aged=17 idle=0 to_pickup=2 delivering=2 to_charger=0 charging=0 dead=0 hot=3,3,2
+171 SIDESTEP R2
+173 CANCEL 26
+174 REPORT pending=47 aged=16 idle=0 to_pickup=2 delivering=2 to_charger=0 charging=0 dead=0 hot=3,3,2
+177 SIDESTEP R2
+179 REPORT pending=49 aged=17 idle=0 to_pickup=2 delivering=2 to_charger=0 charging=0 dead=0 hot=3,3,2
+183 SIDESTEP R2
+184 REPORT pending=54 aged=19 idle=0 to_pickup=2 delivering=2 to_charger=0 charging=0 dead=0 hot=3,3,2
+186 REJECT 78
+189 SIDESTEP R2
+189 REPORT pending=55 aged=20 idle=0 to_pickup=2 delivering=2 to_charger=0 charging=0 dead=0 hot=4,3,2
+190 CANCEL 22
+194 REPORT pending=58 aged=24 idle=1 to_pickup=1 delivering=2 to_charger=0 charging=0 dead=0 hot=4,3,2
+196 REJECT 84
+199 REPORT pending=60 aged=25 idle=1 to_pickup=1 delivering=2 to_charger=0 charging=0 dead=0 hot=4,3,2
+200 CANCEL 48
+204 REPORT pending=60 aged=26 idle=1 to_pickup=1 delivering=2 to_charger=0 charging=0 dead=0 hot=4,3,2
+208 REJECT 87
+209 REPORT pending=60 aged=26 idle=1 to_pickup=1 delivering=2 to_charger=0 charging=0 dead=0 hot=4,3,2
+210 CANCEL_FAIL 22
+211 REJECT 90
+212 REJECT 91
+SUMMARY delivered=3 lost=0 rejected=9 cancelled=21 open=65
+LATENCY sum=91 max=68 avg=30
+ROBOT R0 3 3 40 DELIVERING 23 185
+ROBOT R1 2 5 54 DELIVERING 9 204
+ROBOT R2 4 2 33 IDLE 30 155
+ROBOT R3 3 5 53 TO_PICKUP 10 201

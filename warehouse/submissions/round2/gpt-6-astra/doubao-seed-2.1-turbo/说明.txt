@@ -1,0 +1,1 @@
+01_stale_distance.in：src/sim.cpp::RunSim 移动阶段直接读取 BFS_DIST / MOVE_BFS_CACHE.dist，丢失 BFS_VISIT 时间戳；封路断开连通分量后，不可达格仍带有旧距离，机器人错误移动而非等待。

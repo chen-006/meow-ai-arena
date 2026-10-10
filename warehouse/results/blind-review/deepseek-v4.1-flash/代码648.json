@@ -1,0 +1,8 @@
+{
+  "结构与可读性": {"分": 4, "证据": "模块边界清楚且名副其实：input.cpp 只做扫描与按 tick 分桶（input.cpp:32-56），output.cpp 只管缓冲与统计（output.cpp:18-58），dist.cpp 只管距离与连通性，sim.cpp 只管仿真阶段，接口集中声明在 common.h:70-112；命名准确（arrive/die/dispatch/goCharge/movePhase/hotspot）。扣分点：dispatch 有 100 行（sim.cpp:172-272）、hotspot 66 行（sim.cpp:387-453）、repair 57 行（dist.cpp:77-133），且大量状态由函数内 static 承担（sim.cpp:177-179、sim.cpp:388-392、sim.cpp:482-484），dist.cpp:10-32 另有 20 多个文件级 static 变量。"},
+  "行为保真的可见性": {"分": 5, "证据": "HANDOFF.md:68-78 有「必须保留的基线细节」11 条，把派单平局取编号大、DIST(a,a)=0、移动检查顺序、耗电按移动前状态、让路条件、DEAD 不占格/半电救援/90% 充电、取消失败也计数、REQUEUE 不改 arrival、热点含封锁格、机器人按编号顺序移动、延迟四舍五入全部列全；代码现场逐处呼应：sim.cpp:170-171 解释 `a<=best`「SPEC 说取编号小的，是错的，必须保留基线行为」，sim.cpp:516 标「（怪行为，保留）」，sim.cpp:139 写「注意基线不清目标，保持一致」，sim.cpp:5 直接指向 HANDOFF 清单，dist.cpp:1-2 写明封锁起点仍是合法 BFS 根。"},
+  "可修改性": {"分": 4, "证据": "CHANGE 三条都融得干净：载货耗电抽成一个局部量 stepCost（sim.cpp:334），在停机判断 sim.cpp:335、正常走 sim.cpp:376、让路 sim.cpp:358 三处复用；老化只在桶头合并时算一次有效优先级（sim.cpp:202、213）；aged 由 PEND.aged 与报表 sim.cpp:470 给出。扣分点：耗电公式在派单里重复出现（sim.cpp:225、237、244 的 b*PRM[7]+c+PRM[3]），dist.cpp:320 的 CanEverDispatch 又独立写了一遍同样的能量下界公式，改耗电语义要记得这第 4 处。"},
+  "优化逻辑的清晰度": {"分": 5, "证据": "缓存契约写在头文件里（common.h:80-86：DistTable 是当前完整距离，MoveTable 仅保证当前机器人邻格的最小值与方向平局正确），HANDOFF.md:44-51 给出 MoveTable 的几何判据与「不要将 MoveTable 用作任意两点距离查询」，HANDOFF.md:86 列出「失效条件均回退到正确算法」的四条退路；失效点集中：DistInvalidate 只在 sim.cpp:549 按本 tick 净变化调用一次（dist.cpp:137-143），OCACHE 用 version!=BLOCK_VERSION 判失效（sim.cpp:234），PEND.scanAfter 的重置条件写在 sim.cpp:173-175；反直觉处均有注释（dist.cpp:153-157、dist.cpp:184-187）。"},
+  "技术债清理": {"分": 5, "证据": "整份重写：没有 old_stuff.cpp、没有任何 FLAG_* 开关；基线的 BFS/BFS2/CHG_DIST 三份重复实现被合并成一套缓存（dist.cpp:54-133）；基线 writeLog 里「写日志顺便统计」的耦合被拆开并注明等价（output.cpp:17-25）；注释与当前代码一致，没有过时留言。"},
+  "一句话点评": "把怪行为列成清单、把缓存契约写进头文件，重写得很克制。"
+}

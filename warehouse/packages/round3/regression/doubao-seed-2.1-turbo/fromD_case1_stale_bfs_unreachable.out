@@ -1,0 +1,10 @@
+0 ASSIGN 1 R0 5
+4 REPORT pending=0 aged=0 idle=0 to_pickup=1 delivering=0 to_charger=0 charging=0 dead=0 hot=1,1,1
+9 REPORT pending=0 aged=0 idle=0 to_pickup=1 delivering=0 to_charger=0 charging=0 dead=0 hot=1,1,1
+14 REPORT pending=0 aged=0 idle=0 to_pickup=1 delivering=0 to_charger=0 charging=0 dead=0 hot=1,1,1
+19 REPORT pending=0 aged=0 idle=0 to_pickup=1 delivering=0 to_charger=0 charging=0 dead=0 hot=1,1,1
+24 REPORT pending=0 aged=0 idle=0 to_pickup=1 delivering=0 to_charger=0 charging=0 dead=0 hot=1,1,1
+29 REPORT pending=0 aged=0 idle=0 to_pickup=1 delivering=0 to_charger=0 charging=0 dead=0 hot=1,1,1
+SUMMARY delivered=0 lost=0 rejected=0 cancelled=0 open=1
+LATENCY sum=0 max=0 avg=0
+ROBOT R0 2 1 99 TO_PICKUP 1 29

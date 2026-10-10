@@ -1,0 +1,8 @@
+{
+  "结构与可读性": {"分": 2, "证据": "RunSim() 是 sim.cpp:108-533 的单个巨型函数，7 个阶段只靠 `// ====== N. ======` 分隔（sim.cpp:112/188/204/217/298/344/500）；到达判定那段逻辑在 sim.cpp:353-381 与 sim.cpp:470-497 各写一遍（PICK/DELIVER/CHARGE 三段全重复）。进步处：数据换成 struct Robot/Order 加状态枚举（common.h:43-87），网格用 is_wall/is_blocked/occ_robot 二维数组（common.h:32-34），并把 compute_hotspot 单独提到 util.cpp:180-241。"},
+  "行为保真的可见性": {"分": 4, "证据": "HANDOFF.md:46-70 有「关键基线怪异行为（Bug-for-Bug 行为对照，切勿修改！）」6 条，写得挺细，而且干净参考里标注的 5 条怪行为全覆盖：派单 `a <= best`（HANDOFF.md:50-54）、半血救援（57）、90% 充电（59-60）、延迟四舍五入（62-63）、CANCEL 计数（65-66），另外补了 BFS 起点语义（68-69）；sim.cpp:264 有就地注释「Baseline uses <= so later robots break ties!」。仍缺：死人不占格、热点并列取行优先靠前、方向序、SIDESTEP 条件、REQUEUE 保留到达 tick 都没列，且 90%/半血/CANCEL/四舍五入在现场没有注释（sim.cpp:194、209、148、549）。"},
+  "可修改性": {"分": 3, "证据": "代码侧其实不难改：派单每 tick 重新拷贝并排序 active_pending（sim.cpp:232-236），老化只需改比较器；送货段耗电被归成一个 tail（sim.cpp:251）。但 HANDOFF.md:85-97 的「第二阶段指南」把两个新参数猜错了（建议 battery -= (1 + PRM[7])，并把 agingEvery 当成「电池容量衰减」），会把人带偏；battery-- 仍在两处（sim.cpp:445 让路、sim.cpp:464 正常走），停机判断在 sim.cpp:383。"},
+  "优化逻辑的清晰度": {"分": 3, "证据": "机制本身能看懂、失效点集中：grid_version 只在 sim.cpp:174/182 递增，BFS 缓存（util.cpp:41-113）与充电桩场（util.cpp:124-155）都靠它失效，HANDOFF.md:36 交代了「当且仅当有效 BLOCK/UNBLOCK 时版本号递增」。但不变量没有写下来：环形缓存的淘汰与 cell_to_cache 同步那几行（util.cpp:71-86）几乎没有注释，多源充电桩场的适用前提也没写成条目；HANDOFF.md:101-107 的「核心优化点」更像性能宣传（命中率 > 95%、单次 BFS < 5 微秒），不是可维护性说明。"},
+  "技术债清理": {"分": 3, "证据": "old_stuff.cpp 内容已清空（old_stuff.cpp:1-2）、FLAG_* 开关已移除，算明显进步。但残留：num_prm 只写不读（sim.cpp:13、47、49）；空文件仍留在工程里；HANDOFF.md:73-97 那段基于「逆向分析」的错误需求猜测没有删改；MAX_W/MAX_H=205、g_rnames[1000]、diff_grid[415][415]（util.cpp:178）这些硬上限都没有注释说明来源。"},
+  "一句话点评": "优化做得实在，交接文档却在猜需求，还猜错了。"
+}

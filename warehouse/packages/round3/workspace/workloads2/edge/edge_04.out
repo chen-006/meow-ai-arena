@@ -1,0 +1,34 @@
+0 ASSIGN 1 R3 0
+0 PICK 1 R3
+1 CANCEL_FAIL 1
+1 ASSIGN 2 R1 0
+1 PICK 2 R1
+1 DELIVER 1 R3 1
+5 ASSIGN 3 R2 0
+5 PICK 3 R2
+6 REJECT 6
+7 CANCEL_FAIL 9
+7 REJECT 8
+9 ASSIGN 9 R0 0
+9 PICK 9 R0
+10 REJECT 11
+10 CANCEL 7
+10 DELIVER 9 R0 1
+14 CANCEL 5
+15 REPORT pending=7 aged=7 idle=2 to_pickup=0 delivering=2 to_charger=0 charging=0 dead=0 hot=1,1,4
+31 REPORT pending=18 aged=18 idle=2 to_pickup=0 delivering=2 to_charger=0 charging=0 dead=0 hot=1,1,4
+35 REJECT 29
+35 CANCEL_FAIL 7
+40 CANCEL_FAIL 34
+44 REJECT 37
+47 REPORT pending=26 aged=26 idle=2 to_pickup=0 delivering=2 to_charger=0 charging=0 dead=0 hot=1,1,4
+48 CANCEL 17
+53 CANCEL_FAIL 40
+62 CANCEL 16
+63 REPORT pending=25 aged=25 idle=2 to_pickup=0 delivering=2 to_charger=0 charging=0 dead=0 hot=1,1,4
+SUMMARY delivered=2 lost=0 rejected=5 cancelled=6 open=27
+LATENCY sum=2 max=1 avg=1
+ROBOT R0 1 4 47 IDLE 0 0
+ROBOT R1 1 2 47 DELIVERING 0 64
+ROBOT R2 1 3 47 DELIVERING 0 60
+ROBOT R3 1 1 47 IDLE 0 0

@@ -1,0 +1,8 @@
+{
+  "结构与可读性": {"分": 2, "证据": "RunSim() 是 sim.cpp:148-527 的巨型函数，7 个阶段靠 `// ====== N. ======` 分隔（sim.cpp:154/245/262/275/341/377/466）；平行数组 RX/RY/RB/RTX/RTY/RWS/RDS 原样保留（common.h:85-88）。进步处：到位处理抽成 onArrive（sim.cpp:121-143，消掉了基线的两处重复），util.cpp 里有一个像样的 BFS 内核（bfsAll/bfsFirst/markChargers，util.cpp:47-151）和按用途命名的查询（DIST/CHG_DIST/CHG_NEAR/pickCharger/bfsRobotNeighborDist），common.h:4-20 还有一段交代重构动机的抬头注释。"},
+  "行为保真的可见性": {"分": 3, "证据": "HANDOFF.md:96-127 列了 10 条怪行为，覆盖面广（DIST 不对称、CHG_DIST 起点、SIDESTEP 不要求更近、q.push/q.back() 等价、死车不占位、半血救援、同 tick ORDER/CANCEL 次序、CANCEL ASSIGNED 不清 RDS、热点 hc 可能为 -1、报表 tick 公式），第 6 条还主动指出「注释里写『充满电恢复』，是过时注释」；`a <= best` 的警告放在 HANDOFF.md:74，现场 sim.cpp:316 也有标注。但干净参考标注的 5 条怪行为只覆盖了 2 条：取消失败也计数（CNT[3]++，sim.cpp:202 无注释）、充到 90% 就走（sim.cpp:267 的注释还写成「充满了就走」）、延迟平均四舍五入（sim.cpp:539 无注释）都没进清单——恰恰是最容易被当成 bug 顺手修掉的三条。"},
+  "可修改性": {"分": 2, "证据": "载货耗电要改 4 处：停机 sim.cpp:384、正常走 sim.cpp:456、让路 sim.cpp:437、派单 need = b + c + PRM[3]（sim.cpp:304，已归成一个变量）。变更 1 更麻烦：PEND 是有序 multiset<int, OrdCmp>（common.h:106-116、116），键是 (prio, arrival, idNum)，老化让主键随时间变，必须每 tick 重建或换成分桶归并，而 HANDOFF.md:46 还专门叮嘱「不要给 OrdCmp 加新的并列规则，也不要改成无序容器」。变更 3 加在报表 sim.cpp:520。"},
+  "优化逻辑的清晰度": {"分": 5, "证据": "不变量和失效时机都写下来了：common.h:16-19 说明「观察点提前退出」并指出证明见 HANDOFF.md，HANDOFF.md:57-65 给出正确性依据（「只影响『搜索多少』，不影响『任何已赋值格子的距离』」）并提醒 bfsRobotNeighborDist 只看可走邻居；g_blkGen 的失效条件写在 HANDOFF.md:21、49、138（「任何改地图的地方都要 g_blkGen++」），实际只在 sim.cpp:229、239 两处递增；LIVE[] 的维护点被逐个列出（HANDOFF.md:53-55）；util.cpp:21-29 还解释了时间戳溢出的兜底。"},
+  "技术债清理": {"分": 4, "证据": "old_stuff.cpp 已删除，而且 HANDOFF.md:18-21 解释了它既是死代码、其缓存又正是当年「结果对不上」的元凶，FLAG_* 开关一并移除；sim.cpp:246 把基线那条「充满电恢复」改成了「充满一半电恢复」。残留：SPLIT（util.cpp:178-182）与 S2I（util.cpp:184）全代码无调用者；sim.cpp:267 的「充满了就走」仍是与 90% 判据不符的旧注释。"},
+  "一句话点评": "优化说明写得像证明，偏偏漏掉了最容易顺手修掉的三条怪行为。"
+}

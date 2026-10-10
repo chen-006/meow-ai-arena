@@ -1,0 +1,8 @@
+{
+  "结构与可读性": {"分": 2, "证据": "RunSim() 是 sim.cpp:153-438 的巨型函数，7 个阶段靠 `// ====== N. ======` 分隔（sim.cpp:162/204/217/229/289/330/391）；抽出了 arrive（sim.cpp:129-150）、chgDist（sim.cpp:111-121）、removePending（sim.cpp:123-126）和三个日志小助手（sim.cpp:9-18）。数据组织比常见的平行数组好：用 struct Robot/Order 数组（common.h:25-38、56-58），OK/INMAP/OCC 收成内联（common.h:71-79）。"},
+  "行为保真的可见性": {"分": 4, "证据": "HANDOFF.md:63-69 有「保留的基线怪行为（别『修』）」6 条：派单 `a <= best` 取编号大、DIST(a,b) 的双重规则、取消也计数、90% 充电与半血救援、热点取行优先第一个最大值且 DEAD 不计、走阶段的六步顺序；干净参考标注的 5 条里覆盖 4 条。现场标注：sim.cpp:275「相同距离取编号大的（基线行为）」、sim.cpp:270「基线 DIST：终点不可通行直接 BIGNUM」、sim.cpp:272、common.h:82-83 写清距离场语义、util.cpp:5 方向序。缺口：延迟四舍五入（sim.cpp:451）未列入清单也无注释，sim.cpp:183/210/223 也没有就地标注。"},
+  "可修改性": {"分": 4, "证据": "CHANGE 三条都融得干净：cost 一处算好（sim.cpp:335）供停机 sim.cpp:336 与两次扣电 sim.cpp:374/386 使用；need = bVal*carry + cVal + margin 一处（sim.cpp:260）；HANDOFF.md:19-26 有一张「需求变更的实现位置」表。扣分点：老化排序把 (有效优先级, 到达, 编号) 压进一个 uint64（sim.cpp:240-241），依赖 eff<65536、arrival<65536 等隐含范围却没有写下来，改排序键时容易踩。"},
+  "优化逻辑的清晰度": {"分": 5, "证据": "这是全 12 份里把「缓存为什么还准」写得最细的一份：util.cpp:48-53 明确给出不变式（「只要每次 UNBLOCK 的格子 c 的所有邻格都有 F ≥ val，则任何格子 x 的真实距离 ≥ min(F[x], val+1)」）与梯度验证的含义，util.cpp:93-96 说明截断表里 DIST_INF 是「未知」而不是「不可达」，HANDOFF.md:30-41 逐条讲机制与失效判定，HANDOFF.md:58-61 列性能退化场景，HANDOFF.md:79-81 甚至记录了一次放宽规则失败回退的原因和补救方向。失效入口唯一：setBlocked（util.cpp:38-46）追加 CHLOG 并递增 BLK_VER，判定集中在 fieldValid/chargerFieldValid（util.cpp:73-91、234-243）。"},
+  "技术债清理": {"分": 4, "证据": "整份按基线语义重写，没有 old_stuff.cpp、没有 FLAG_* 开关，注释与代码一致，HANDOFF.md:3-6 还说明了为什么弃用旧版。残留一处：I2S（common.h:69、util.cpp:16-20）全代码无调用者（sim.cpp 一律直接用 appendInt）。"},
+  "一句话点评": "把「陈旧缓存为何仍可用」写成不变式，可惜留了个没人用的 I2S。"
+}

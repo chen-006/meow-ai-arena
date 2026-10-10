@@ -1,0 +1,8 @@
+{
+  "结构与可读性": {"分": 2, "证据": "RunSim() 是 sim.cpp:87-478 的单个巨型函数，7 个阶段只用 `// ====== N. ======` 注释分隔（sim.cpp:94/171/186/199/256/295/442）；平行数组 RX/RY/RB/RTX/RTY/RWS/RDS 原样保留（common.h:57-61）；同一段到达判定在 sim.cpp:298-323 与 sim.cpp:415-439 各写一遍，PEND 过滤重建也写了两遍（sim.cpp:130-133、245-248）。真正的改进只在数据表示：订单换成 struct Order + 哈希索引（common.h:66-75），状态换成 int 枚举（common.h:31-37）。"},
+  "行为保真的可见性": {"分": 3, "证据": "HANDOFF.md:60-68 列了 7 条怪行为并说明原因（如派单 `a <= best` 处写「这个行为必须保留，输出顺序依赖它」），但干净参考标注的 5 条怪行为里漏了 3 条：CNT[3]++ 在状态判断之前、取消失败也计数（sim.cpp:128）、救援只恢复半电（sim.cpp:177）、延迟平均 (CNT[4]+CNT[0]/2)/CNT[0] 的四舍五入（sim.cpp:490）都没写进清单；代码现场也几乎没有标注，sim.cpp:226 的 `if (a <= best)` 和 sim.cpp:191 的 90% 判据都无注释。"},
+  "可修改性": {"分": 3, "证据": "变更 1 只需改 sim.cpp:203-209 的排序 lambda（每 tick 重新拷贝排序，不受缓存约束），变更 3 加在报表串 sim.cpp:472-474；但变更 2 要改 4 处：派单电量检查 sim.cpp:225、停机判断 sim.cpp:325、正常移动扣电 sim.cpp:410、以及最容易漏掉的让路扣电 sim.cpp:393；另外要把 int PRM[6]（common.h:53）和读取循环（sim.cpp:25）扩到 7 个参数。"},
+  "优化逻辑的清晰度": {"分": 4, "证据": "机制与不变量写下来了：HANDOFF.md:17-26 说明 generation counter 与 BLK_VERSION，HANDOFF.md:45-48 明确「缓存失效条件：目标不同 或 BLK_VERSION 变化」，HANDOFF.md:85 还提醒以后新增改变地形的事件要记得递增 BLK_VERSION；失效点集中在 sim.cpp:155 与 sim.cpp:163。扣分点：MOVE_BFS_CACHE 的命中与填充直接内联在移动循环里（sim.cpp:352-368），还用 bfs_get_at lambda 绕开 _bfs_get 的 generation 检查（sim.cpp:366-368），这层不变量没有文字说明；BFS_FILL 里另有 static vector qv 这种隐藏全局（util.cpp:99）。"},
+  "技术债清理": {"分": 2, "证据": "old_stuff.cpp 整文件保留（bfs_fast_cached、oldDispatch 均无调用者，old_stuff.cpp:16/37），FLAG_FAST_BFS、USE_NEW_DISPATCH、FLAG_VERBOSE 三个危险开关全在（common.h:26-28），ALL_CHG（util.cpp:136）、findRobot（util.cpp:176）、orderStatusStr（util.cpp:9）、BFS_FILL_FROM_TARGET（util.cpp:124）四个函数只定义不调用；只有把 BFS/BFS2/CHG_DIST 三份重复实现统一成 BFS_FILL（util.cpp:89-126）算一点清理。"},
+  "一句话点评": "数据表示换新、主循环骨架没动，死代码和危险开关一起交接。"
+}

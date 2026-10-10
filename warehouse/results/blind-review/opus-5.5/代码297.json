@@ -1,0 +1,8 @@
+{
+  "结构与可读性": {"分": 2, "证据": "sim.cpp 的 RunSim()（147–481 行）七阶段仍是一整块；main.cpp 6–28 行全是全局变量，平行数组 `vector<int> RX, RY, RB, RTX, RTY, RWS, RDS, RSTI;` 保留；订单仍是 `map<string, vector<string>> ORD`，用 `ORD[id][6] = 'ASSIGNED'` 式的字符串下标，另挂一份 `OINT` 整数镜像。拆出来的只有 `static void arrive(int i, int t)`（sim.cpp 122）和匿名命名空间里的 rebuildPendCache()。"},
+  "行为保真的可见性": {"分": 3, "证据": "HANDOFF §3「必须知道的怪行为（都是基线原样保留的，别修）」列出 `a <= best`、BFS 距离不对称（并提醒「改派单时千万别顺手简化」）、九成电、`PRM[0]/2`、`CNT[3]`；代码内 sim.cpp 192 `// 基线：只要订单存在就计数，哪怕后面取消失败`、280 `// 注意基线是 <=：并列时取编号大的（原样保留）`、util.cpp 121–127。但 sim.cpp 230 `// 停机 100 tick 以后派人去救，充满电恢复`、247 `// 充满了就走` 与真实行为相反的旧注释还在，493 四舍五入只写「平均延迟，整数除法」；标注无编号、散落。"},
+  "可修改性": {"分": 2, "证据": "未实现 CHANGE。`extern int PRM[6]` + 魔法下标；耗电 `RB[i]--` 在 sim.cpp 396、412 两处；停机 `if (RB[i] == 0)`（346）；电量式 `if (RB[i] < a + b + c + PRM[3]) continue;`（279）；REPORT（475）。容易漏的一处：派单顺序由 `if (PEND_DIRTY) rebuildPendCache();`（257）缓存，「只有 PEND 变动才重排」与订单老化直接冲突，HANDOFF §5 的 p2 提示只讲「PRM 扩到 8 个」。横评时由 3 下调到 2。"},
+  "优化逻辑的清晰度": {"分": 4, "证据": "common.h 54–55 行写明 `setRST` 是「状态迁移唯一入口」、`occMove` 是「唯一改 RX/RY 的入口」，84–89 行写明 FIELD「起点恒为 0…与基线完全一致」及失效时机；util.cpp 78–92 的 blkAdd/blkRemove 是唯一失效点，HANDOFF §2、§4 说明了缓存上限和封锁抖动的退化。欠缺：`BLKVER`（common.h 39「FIELD 缓存据此失效」）实际没人读，缓存是整体 clear；`PEND_DIRTY = true` 散在 sim.cpp 113/183/195/294/355。"},
+  "技术债清理": {"分": 3, "证据": "old_stuff.cpp 与三个编译开关已删（HANDOFF §1 有说明）。残留：`vector<pair<int,int>> ALL_CHG()`（util.cpp 159）注释写「兼容旧接口」却无人调用；`BLKVER` 只增不读；`EVT` 原始行存档；`CNT[8]`「6,7 备用」；writeLog 仍靠 `firstTokenIs(msg, 'DELIVER')` 一类前缀解析做统计；`findRobot` 线性拼名字；sim.cpp 230、247 两处过时注释；HANDOFF 引用不在交付里的 `work/` 脚本。"},
+  "一句话点评": "加速结构有规矩有入口，业务主体却原封不动地躺在一个函数里"
+}

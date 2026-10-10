@@ -1,0 +1,15 @@
+case1_blocked_delivery_chgdist.in
+缺陷位置：util.cpp get_chg_dist / ensure_chg_dist（派单时的 c = 送货点到最近充电桩距离）。
+原因：队C 把基线的 CHG_DIST(dx,dy) 改成"从所有可通行充电桩出发的多源 BFS"再查 chg_dist[dy][dx]。
+基线 CHG_DIST 的 BFS 以送货点为起点，起点即使被封锁也记 0 并向外扩展；多源 BFS 永远到不了被封锁的格子，
+所以送货点被封锁时队C 得到 BIGNUM，基线得到有限值。
+本用例：机器人站在 (1,1)，该格被 BLOCK，随后来一个取货点=送货点=(1,1) 的订单。
+基线 a=0,b=0,c=2 -> ASSIGN/PICK/DELIVER；队C c=INF，订单永远派不出去。
+
+case2_blocked_pickup_churn_slow_a.in, case3_blocked_pickup_churn_slow_b.in   （另一个缺陷：性能退化导致超时；两个文件同一根因，只是 tick 数 2150 / 2050；本机实测 2050 档：基线 9.1 秒、队C 64 秒）
+判定方式：被测程序 60 秒内跑不完（输出内容一致）。队C 在这类输入上比基线慢约 6.5~8 倍，窗口很窄：需要基线落在约 8.5~10 秒之间才成立，
+机器较快时队C 可能刚好在 60 秒内跑完（判一致），机器较慢时基线超 10 秒（无效），都属预期。
+缺陷位置：sim.cpp RunSim 第 4 步派单里 `const int* d_pickup = get_cached_bfs(px, py);`（以及随后的 calc_dist）在机器人循环之前对每个待派订单无条件执行，
+配合 util.cpp get_cached_bfs 的缓存按 grid_version 整体失效（且只有 512 个槽位的环形缓存，600 个不同取货点本身就会互相淘汰）。
+原因：基线先算 a = DIST(机器人, 取货点)，取货点被封锁时直接返回 BIGNUM、一次 BFS 都不做；队C 每 tick 给每个待派订单都做一次全图 BFS。
+构造：600 个取货点互不相同且都被封锁的订单永远积压，1 个空闲机器人，每 tick 一次 BLOCK/UNBLOCK 真实翻转。

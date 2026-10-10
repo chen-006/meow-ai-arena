@@ -1,0 +1,58 @@
+{
+  "hid_medium": {
+    "seed": 20261006,
+    "digest": "bbd71a719da681d8251b5a344434abcb52f2582d65f8d8206db1c62e6fb809c3",
+    "baseline_cpu": 147.5625,
+    "baseline_mem_mb": 10.5,
+    "output_lines": 33583
+  },
+  "hid_huge": {
+    "seed": 20261006,
+    "digest": "ce36aec9050eb21c17af206f3e0ee5745c6af508f396238d47a368d8c11a4d42",
+    "baseline_cpu": 111.890625,
+    "baseline_mem_mb": 5.5,
+    "output_lines": 6421
+  },
+  "hid_crowded": {
+    "seed": 20261006,
+    "digest": "916dfc2ea028b43dd03b59dbeff7e34bb00f417f799fd244a8439184a34104a8",
+    "baseline_cpu": 187.015625,
+    "baseline_mem_mb": 12.3,
+    "output_lines": 60308
+  },
+  "hid_dynamic": {
+    "seed": 20261006,
+    "digest": "492f49b77b9c3abe1845a03c19f7f0eff2acf2775dbc90d13943a34e0180e6eb",
+    "baseline_cpu": 99.15625,
+    "baseline_mem_mb": 8.0,
+    "output_lines": 18386
+  },
+  "hid_flood": {
+    "seed": 20261006,
+    "digest": "902c27ccda7c8d857ce2b21241f6ac6e7ec38b6347d60e65d3ee601f6491d619",
+    "baseline_cpu": 217.671875,
+    "baseline_mem_mb": 12.8,
+    "output_lines": 14588
+  },
+  "hid_lowbattery": {
+    "seed": 20261006,
+    "digest": "971da834e3e5c4fa1abc6cf2ad99aa96ad84fe1a28382e15d47211d871edca2c",
+    "baseline_cpu": 34.828125,
+    "baseline_mem_mb": 6.2,
+    "output_lines": 10623
+  },
+  "hid_long": {
+    "seed": 20261006,
+    "digest": "608cdb23ba4fd48f8945323c6b9472558e1494adaf32a1f29b7e4a03589897b4",
+    "baseline_cpu": 212.015625,
+    "baseline_mem_mb": 10.7,
+    "output_lines": 35252
+  },
+  "hid_mixed": {
+    "seed": 20261006,
+    "digest": "ccf347b39483ec4be49ab382c877fdb3c1db59ba14c03e50cf8bd1b0809d7b1e",
+    "baseline_cpu": 86.296875,
+    "baseline_mem_mb": 6.9,
+    "output_lines": 16180
+  }
+}

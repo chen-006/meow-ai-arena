@@ -1,0 +1,1 @@
+case1.in: sim.cpp 派单 / util.cpp get_chg_dist。基线 CHG_DIST 从送货点出发做BFS（起点即使被BLOCK也能扩展），C 改成从充电桩出发的预计算多源距离场，无法穿过被封锁的送货点；取货点=送货点且该格被封锁、机器人恰好站在上面时，基线 c 有限、正常 ASSIGN，C 得到 INF 不派单。

@@ -1,0 +1,3 @@
+c1_blocked_chgdist.in：util.cpp 的 ensure_chg_dist/get_chg_dist 用"从所有可通行充电桩出发的多源 BFS"替代基线 CHG_DIST(dx,dy)。
+  基线 CHG_DIST 从送货点出发做 BFS，起点即使被封锁也记 0 并向可通行邻居扩展；多源场里被封锁的格子永远是 INF。
+  用例：机器人站在被 BLOCK 的格子上，订单的取货点=送货点=该格（a=0、b=0），基线算出 c 有限并 ASSIGN，队C 认为 c=INF 不派单（第 28 tick 起输出不同）。

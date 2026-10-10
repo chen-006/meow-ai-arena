@@ -1,0 +1,4 @@
+0 ASSIGN 1 R0 2
+SUMMARY delivered=0 lost=0 rejected=0 cancelled=0 open=1001
+LATENCY sum=0 max=0 avg=0
+ROBOT R0 2 1 99999 TO_PICKUP 1 649

@@ -7,4 +7,5 @@ for py in python3 python; do
     fi
 done
 echo '没有找到 Python 3.10 以上的版本。只想看回放的话，直接用浏览器打开各集 replays/ 里的网页即可。' >&2
+echo '第 5 集没有回放，成绩在 warehouse/results/最终成绩.md，用文本编辑器打开即可。' >&2
 exit 1

@@ -1,0 +1,183 @@
+== 等终版复测封存 15:12:32
+GPT-6 Astra：等待解压…（14:16:25）
+GPT-6 Astra 开赛 14:44:36，封存 15:29:36
+GPT-6 Astra 已封存 15:29:38：2 个用例
+Opus 5.5：等待解压…（14:16:25）
+Opus 5.5 开赛 14:44:42，封存 15:29:42
+Opus 5.5 已封存 15:29:43：2 个用例
+== 终版复测判定 15:30:03
+[GPT-6 Astra → final3 豆包 Seed 2.1 Turbo → Fable 5.1] 01_blocked_pickup_cache_thrash.in        击穿  超时：3 次都超过 60 秒（第 1 次 97.3 秒，参考实现 5.9 秒）
+[GPT-6 Astra → final5 GLM 5.3 → Grok 4.7] 01_new_format.in                         击穿  退出码 3221225477
+[Opus 5.5 → final5 GLM 5.3 → Grok 4.7] case1_tiny.in                            击穿  退出码 3221225477
+[Opus 5.5 → final5 GLM 5.3 → Grok 4.7] case2_small.in                           击穿  退出码 3221225477
+== 精确重测：第二阶段评测 15:34:08
+[队A] h2_medium       ok           加速 240.3 倍
+[队A] h2_flood        ok           加速 295.2 倍
+[队A] h2_lowbattery   ok           加速 131.9 倍
+[队A] h2_dynamic      ok           加速 87.9 倍
+[队A] h2_mixed        ok           加速 139.7 倍
+[队A] h2_long         ok           加速 237.0 倍
+[队A] h2_heavy_c      ok           加速 122.8 倍
+[队A] h2_heavy_b      ok           加速 153.0 倍
+[队A] h2_heavy_a      ok           加速 87.0 倍
+[队B] h2_medium       ok           加速 287.2 倍
+[队B] h2_flood        ok           加速 696.0 倍
+[队B] h2_lowbattery   ok           加速 112.6 倍
+[队B] h2_dynamic      ok           加速 80.4 倍
+[队B] h2_mixed        ok           加速 129.1 倍
+[队B] h2_long         ok           加速 379.5 倍
+[队B] h2_heavy_c      ok           加速 111.7 倍
+[队B] h2_heavy_b      ok           加速 145.5 倍
+[队B] h2_heavy_a      ok           加速 69.4 倍
+[队C] h2_medium       ok           加速 1220.7 倍
+[队C] h2_flood        ok           加速 2686.1 倍
+[队C] h2_lowbattery   ok           加速 694.6 倍
+[队C] h2_dynamic      ok           加速 618.9 倍
+[队C] h2_mixed        ok           加速 829.2 倍
+[队C] h2_long         ok           加速 1374.2 倍
+[队C] h2_heavy_c      ok           加速 858.5 倍
+[队C] h2_heavy_b      ok           加速 1418.2 倍
+[队C] h2_heavy_a      ok           加速 1007.9 倍
+[队D] h2_medium       ok           加速 1229.2 倍
+[队D] h2_flood        ok           加速 2665.5 倍
+[队D] h2_lowbattery   ok           加速 668.3 倍
+[队D] h2_dynamic      ok           加速 810.3 倍
+[队D] h2_mixed        ok           加速 1086.5 倍
+[队D] h2_long         ok           加速 1435.3 倍
+[队D] h2_heavy_c      ok           加速 1031.3 倍
+[队D] h2_heavy_b      ok           加速 1418.1 倍
+[队D] h2_heavy_a      ok           加速 1283.3 倍
+[队E] h2_medium       crash        
+[队E] h2_flood        crash        
+[队E] h2_lowbattery   crash        
+[队E] h2_dynamic      crash        
+[队E] h2_mixed        crash        
+[队E] h2_long         crash        
+[队E] h2_heavy_c      crash        
+[队E] h2_heavy_b      crash        
+[队E] h2_heavy_a      crash        
+[队F] h2_medium       ok           加速 971.0 倍
+[队F] h2_flood        ok           加速 2332.7 倍
+[队F] h2_lowbattery   ok           加速 540.5 倍
+[队F] h2_dynamic      ok           加速 414.6 倍
+[队F] h2_mixed        ok           加速 662.7 倍
+[队F] h2_long         ok           加速 1191.0 倍
+[队F] h2_heavy_c      ok           加速 539.7 倍
+[队F] h2_heavy_b      ok           加速 1018.8 倍
+[队F] h2_heavy_a      ok           加速 646.6 倍
+== 精确重测：主程原版基准 15:36:36
+[队A Kimi K3] h2_medium      ok       0.88 秒
+[队A Kimi K3] h2_flood       ok       0.76 秒
+[队A Kimi K3] h2_lowbattery  ok       0.42 秒
+[队A Kimi K3] h2_dynamic     ok       7.34 秒
+[队A Kimi K3] h2_mixed       ok       6.50 秒
+[队A Kimi K3] h2_long        ok       0.81 秒
+[队A Kimi K3] h2_heavy_c     ok       22.19 秒
+[队A Kimi K3] h2_heavy_b     ok       38.14 秒
+[队A Kimi K3] h2_heavy_a     ok       52.44 秒
+[队B 豆包 Seed 2.1 Turbo] h2_medium      ok       20.42 秒
+[队B 豆包 Seed 2.1 Turbo] h2_flood       ok       9.42 秒
+[队B 豆包 Seed 2.1 Turbo] h2_lowbattery  ok       9.00 秒
+[队B 豆包 Seed 2.1 Turbo] h2_dynamic     ok       16.69 秒
+[队B 豆包 Seed 2.1 Turbo] h2_mixed       ok       28.95 秒
+[队B 豆包 Seed 2.1 Turbo] h2_long        ok       11.19 秒
+[队B 豆包 Seed 2.1 Turbo] h2_heavy_c     ok       40.88 秒
+[队B 豆包 Seed 2.1 Turbo] h2_heavy_b     ok       153.09 秒
+[队B 豆包 Seed 2.1 Turbo] h2_heavy_a     ok       101.64 秒
+[队C Gemini 3.8 Flash] h2_medium      ok       0.74 秒
+[队C Gemini 3.8 Flash] h2_flood       ok       0.60 秒
+[队C Gemini 3.8 Flash] h2_lowbattery  ok       0.36 秒
+[队C Gemini 3.8 Flash] h2_dynamic     ok       6.47 秒
+[队C Gemini 3.8 Flash] h2_mixed       ok       5.55 秒
+[队C Gemini 3.8 Flash] h2_long        ok       0.66 秒
+[队C Gemini 3.8 Flash] h2_heavy_c     ok       18.67 秒
+[队C Gemini 3.8 Flash] h2_heavy_b     ok       32.39 秒
+[队C Gemini 3.8 Flash] h2_heavy_a     ok       47.64 秒
+[队D DeepSeek V4.1 Flash] h2_medium      ok       22.19 秒
+[队D DeepSeek V4.1 Flash] h2_flood       ok       32.84 秒
+[队D DeepSeek V4.1 Flash] h2_lowbattery  ok       3.97 秒
+[队D DeepSeek V4.1 Flash] h2_dynamic     ok       30.06 秒
+[队D DeepSeek V4.1 Flash] h2_mixed       ok       18.23 秒
+[队D DeepSeek V4.1 Flash] h2_long        ok       20.56 秒
+[队D DeepSeek V4.1 Flash] h2_heavy_c     ok       170.94 秒
+[队D DeepSeek V4.1 Flash] h2_heavy_b     ok       356.92 秒
+[队D DeepSeek V4.1 Flash] h2_heavy_a     ok       218.70 秒
+[队F MiMo V2.6 Pro] h2_medium      ok       0.84 秒
+[队F MiMo V2.6 Pro] h2_flood       ok       0.39 秒
+[队F MiMo V2.6 Pro] h2_lowbattery  ok       0.42 秒
+[队F MiMo V2.6 Pro] h2_dynamic     ok       5.52 秒
+[队F MiMo V2.6 Pro] h2_mixed       ok       5.11 秒
+[队F MiMo V2.6 Pro] h2_long        ok       0.62 秒
+[队F MiMo V2.6 Pro] h2_heavy_c     ok       15.09 秒
+[队F MiMo V2.6 Pro] h2_heavy_b     ok       24.84 秒
+[队F MiMo V2.6 Pro] h2_heavy_a     ok       35.05 秒
+== 计分 16:04:09
+# 团体攻防接力赛 成绩
+
+## 团队总分
+
+| 名次 | 队伍 | 主程 | 攻手 | 总分 | 主程速度 | 抗击穿 | 主程盲评 | 攻击 | 接手正确 | 接手速度 | 终版盲评 |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | 队F | MiMo V2.6 Pro | GPT-6 Astra | **90.8** | 99 | 59（被 2 人找到反例） | 70 | 100（6 个缺陷点） | 100（修复 2/2） | 94 | 78 |
+| 2 | 队C | Gemini 3.8 Flash | GPT-6.1 Sol | **77.9** | 99 | 0（被 5 人找到反例） | 48 | 79（4 个缺陷点） | 100（修复 7/7） | 98 | 52 |
+| 3 | 队A | Kimi K3 | Sonnet 5.5 | **71.4** | 96 | 96（被 0 人找到反例） | 57 | 22（2 个缺陷点） | 100（修复 0/0） | 71 | 60 |
+| 4 | 队D | DeepSeek V4.1 Flash | Opus 5.5 | **70.3** | 45 | 27（被 2 人找到反例） | 45 | 60（4 个缺陷点） | 100（修复 2/2） | 100 | 65 |
+| 5 | 队B | 豆包 Seed 2.1 Turbo | Fable 5.1 | **56.4** | 46 | 0（被 5 人找到反例） | 35 | 35（2 个缺陷点） | 100（修复 5/5） | 72 | 63 |
+| 6 | 队E | GLM 5.3 | Grok 4.7 | **20.4** | 39 | 8（被 4 人找到反例） | 48 | 33（2 个缺陷点） | 0（修复 0/4） | 0 | 48 |
+
+权重：主程速度 15、抗击穿 10、主程盲评 5、攻击 20、接手正确 20、接手速度 20、终版盲评 10。
+
+## 主程榜（弱档）
+
+| 名次 | 主程 | 队伍 | 得分 | 速度 | 抗击穿 | 盲评 |
+|---|---|---|---|---|---|---|
+| 1 | Kimi K3 | 队A | **89.4** | 96 | 96 | 57 |
+| 2 | MiMo V2.6 Pro | 队F | **80.8** | 99 | 59 | 70 |
+| 3 | Gemini 3.8 Flash | 队C | **57.6** | 99 | 0 | 48 |
+| 4 | DeepSeek V4.1 Flash | 队D | **39.3** | 45 | 27 | 45 |
+| 5 | GLM 5.3 | 队E | **30.2** | 39 | 8 | 48 |
+| 6 | 豆包 Seed 2.1 Turbo | 队B | **28.7** | 46 | 0 | 35 |
+
+得分 = (15 × 速度 + 10 × 抗击穿 + 5 × 盲评) / 30。
+
+## 攻手榜（强档）
+
+| 名次 | 攻手 | 队伍 | 得分 | 找反例 | 接手正确 | 接手速度 | 增值 | 终版盲评 |
+|---|---|---|---|---|---|---|---|---|
+| 1 | GPT-6 Astra | 队F | **86.2** | 100 | 100 | 94 | 53（平均 31.44 倍） | 78 |
+| 2 | Opus 5.5 | 队D | **84.8** | 60 | 100 | 100 | 100（平均 628.88 倍） | 65 |
+| 3 | GPT-6.1 Sol | 队C | **79.1** | 79 | 100 | 98 | 60（平均 48.43 倍） | 52 |
+| 4 | Fable 5.1 | 队B | **65.3** | 35 | 100 | 72 | 63（平均 54.23 倍） | 63 |
+| 5 | Sonnet 5.5 | 队A | **55.1** | 22 | 100 | 71 | 32（平均 8.07 倍） | 60 |
+| 6 | Grok 4.7 | 队E | **15.4** | 33 | 0 | 0 | 0（平均 — 倍） | 48 |
+
+得分 = 0.25 找反例 + 0.20 接手正确 + 0.20 接手速度 + 0.20 增值 + 0.15 终版盲评。增值看同一批数据上终版比主程原版快多少倍（括号里是各组的几何平均）。
+== 终版体检：边界对拍（每份 1500 个，新格式） 16:04:09
+-- 边界对拍 队A 16:04:09
+共 1500 个用例，不一致 0 个
+覆盖到的事件类型： ASSIGN=12852 CANCEL=24505 CHARGE=1742 CHARGED=1727 CHARGING=15 DEAD=618 DELIVER=8543 DELIVERING=2007 IDLE=4113 LATENCY=1500 LOST=268 PICK=10818 REJECT=15722 REPORT=21570 REQUEUE=36 RESCUE=230 ROBOT=7842 SIDESTEP=10040 SUMMARY=1500
+-- 边界对拍 队B 16:04:54
+共 1500 个用例，不一致 0 个
+覆盖到的事件类型： ASSIGN=12852 CANCEL=24505 CHARGE=1742 CHARGED=1727 CHARGING=15 DEAD=618 DELIVER=8543 DELIVERING=2007 IDLE=4113 LATENCY=1500 LOST=268 PICK=10818 REJECT=15722 REPORT=21570 REQUEUE=36 RESCUE=230 ROBOT=7842 SIDESTEP=10040 SUMMARY=1500
+-- 边界对拍 队C 16:05:37
+共 1500 个用例，不一致 0 个
+覆盖到的事件类型： ASSIGN=12852 CANCEL=24505 CHARGE=1742 CHARGED=1727 CHARGING=15 DEAD=618 DELIVER=8543 DELIVERING=2007 IDLE=4113 LATENCY=1500 LOST=268 PICK=10818 REJECT=15722 REPORT=21570 REQUEUE=36 RESCUE=230 ROBOT=7842 SIDESTEP=10040 SUMMARY=1500
+-- 边界对拍 队D 16:06:21
+共 1500 个用例，不一致 0 个
+覆盖到的事件类型： ASSIGN=12852 CANCEL=24505 CHARGE=1742 CHARGED=1727 CHARGING=15 DEAD=618 DELIVER=8543 DELIVERING=2007 IDLE=4113 LATENCY=1500 LOST=268 PICK=10818 REJECT=15722 REPORT=21570 REQUEUE=36 RESCUE=230 ROBOT=7842 SIDESTEP=10040 SUMMARY=1500
+-- 边界对拍 队F 16:07:05
+共 1500 个用例，不一致 0 个
+覆盖到的事件类型： ASSIGN=12852 CANCEL=24505 CHARGE=1742 CHARGED=1727 CHARGING=15 DEAD=618 DELIVER=8543 DELIVERING=2007 IDLE=4113 LATENCY=1500 LOST=268 PICK=10818 REJECT=15722 REPORT=21570 REQUEUE=36 RESCUE=230 ROBOT=7842 SIDESTEP=10040 SUMMARY=1500
+-- 极端对拍（5 份一起，1500 个） 16:07:48
+共 1500 个用例（跳过太慢的 196 个）；队A.exe 不一致 0，队B.exe 不一致 0，队C.exe 不一致 0，队D.exe 不一致 0，队F.exe 不一致 0
+== 终版体检：性能探针 16:32:24
+原打C_F_03_cache_thrashing_timeout.in 参考 1.6 秒 | 队A 0.38秒 队B 0.38秒 队C 0.36秒 队D 0.16秒 队E 异常退出 队F 0.34秒
+原打D_C_01_eager_unreachable_timeout.in 参考 2.5 秒 | 队A 0.03秒 队B 0.39秒 队C 0.01秒 队D 0.07秒 队E 异常退出 队F 0.00秒
+原打D_F_01_eager_tail_timeout.in 参考 1.7 秒 | 队A 0.02秒 队B 0.30秒 队C 0.04秒 队D 0.09秒 队E 异常退出 队F 0.05秒
+原打E_B_e2_timeout_800x1500.in 参考 1.4 秒 | 队A 0.01秒 队B 0.01秒 队C 0.00秒 队D 0.01秒 队E 异常退出 队F 0.00秒
+原打E_C_01_eager_dispatch_timeout.in 参考 2.5 秒 | 队A 0.01秒 队B 0.01秒 队C 0.00秒 队D 0.01秒 队E 异常退出 队F 0.00秒
+原打E_D_case3_block_churn_heavy.in 参考 2.0 秒 | 队A 0.02秒 队B 0.01秒 队C 0.00秒 队D 0.03秒 队E 异常退出 队F 0.00秒
+原打E_F_01_eager_dispatch_timeout.in 参考 0.7 秒 | 队A 0.01秒 队B 0.01秒 队C 0.00秒 队D 0.01秒 队E 异常退出 队F 0.00秒
+原打F_C_01_eager_unreachable_timeout.in 参考 2.8 秒 | 队A 0.03秒 队B 4.02秒 队C 0.01秒 队D 0.08秒 队E 异常退出 队F 0.00秒
+原打F_D_case3_blocked_pickup_churn_heavy.in 参考 1.8 秒 | 队A 0.02秒 队B 2.96秒 队C 0.05秒 队D 4.97秒 队E 异常退出 队F 0.04秒
+ALLDONE 16:33:19
