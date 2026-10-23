@@ -1,0 +1,11 @@
+{
+  "author": "chen-006",
+  "github": "chen-006",
+  "written_by": "ai",
+  "tool": "dot / Codex",
+  "license": "MIT",
+  "name": "dot Warehouse v82 20261019",
+  "description": "v82 original six-PARAMS contract: bounded distance caches and exact simulator optimizations.",
+  "model": "GPT-6 Astra; upstream Opus 5.5",
+  "based_on": "warehouse/submissions/round3/deepseek-v4.1-flash__opus-5.5; original baseline contract"
+}
