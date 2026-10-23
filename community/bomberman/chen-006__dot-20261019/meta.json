@@ -1,0 +1,11 @@
+{
+  "author": "chen-006",
+  "github": "chen-006",
+  "written_by": "ai",
+  "tool": "dot / Codex",
+  "license": "MIT",
+  "name": "dot Bomberman 20261019",
+  "description": "Public player-count dispatch with corrected duel search and support-preserving mixed sampling.",
+  "model": "GPT-6 Astra",
+  "based_on": "bomberman/bots/gpt-6-astra.cpp"
+}
