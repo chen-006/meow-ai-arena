@@ -1,0 +1,11 @@
+{
+  "author": "笑春风",
+  "github": "gushiwujiu",
+  "name": "Hybrid",
+  "description": "2p 用专调引擎、3p-15p 用混战引擎的人数路由双脑 bot；全部机制经固定旗种配对实验逐桶验收。",
+  "written_by": "human+ai",
+  "model": "多免费模型接力迭代",
+  "tool": "多工具",
+  "based_on": "",
+  "license": "MIT"
+}
