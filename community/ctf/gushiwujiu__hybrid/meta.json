@@ -6,6 +6,6 @@
   "written_by": "human+ai",
   "model": "多免费模型接力迭代",
   "tool": "多工具",
-  "based_on": "ctf/bots/fable-5.1.cpp（最初底盘参考，此后自研迭代）",
+  "based_on": "ctf/bots/fable-5.1.cpp（最初底盘）；机制设计参考 gpt-6.1-sol、gpt-6-astra 等强模型源码",
   "license": "MIT"
 }
