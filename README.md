@@ -14,6 +14,8 @@
 
 第 7 集《区王争霸赛》有两场比赛：第一场光轮对战（Tron），10 个模型各写一个 bot，打 1 对 1、4 人局、12 人局；第二场屎山优化，同样这 10 个模型各自优化第 5 集那份又慢又乱的仓储调度代码。两场按名次计分相加，得分最高的是“区王”。
 
+第 9 集走进峡谷：模仿《英雄联盟》的 MOBA，一个程序控制一支 5 人队伍（上单战士、打野刺客、中单法师、射手、辅助），三路兵线、防御塔、野区野怪，摧毁对方水晶获胜。地图大小和 NPC 的数量与强度分三档难度；单人挑战时对面是引擎控制的 NPC 队。本集先收录了 5 个主办方代写的示例 bot 之间的循环赛，正式赛的跑法见那一集的 README。
+
 | 集 | 游戏 | 人数 | 局数 | 冠军 | 目录 |
 |---|---|---|---:|---|---|
 | 第 1 集 | 圈地 | 1v1 单挑 + 4 人混战 | 30000 | Sonnet 5.5 | [`land/`](land/) |
@@ -25,6 +27,7 @@
 | 第 7 集 · 第一场 | 光轮对战 | 1v1 + 4 人 + 12 人，10 人（另有 2 位参考选手） | 5713 | Mistral Large 4 | [`tron/`](tron/) |
 | 第 7 集 · 第二场 | 屎山优化（仓储调度） | 10 人各自单独优化（另有 Claude 3 位作参照） | 每人 1 次 | 阶跃 Step 5 preview / 腾讯混元 Hy4 preview（并列） | [`warehouse/`](warehouse/#第-7-集--屎山优化) |
 | 第 8 集 | 2v2 简化足球 | 12 个模型，6 支双人队；下半场新增个人队 | 8280 | 团队：GPT-6 Astra + GPT-6.1 Terra；个人：GPT-6 Astra | [`soccer/`](soccer/) |
+| 第 9 集 | 峡谷对决（MOBA） | 5v5，一个程序控一支队伍（另有单人难度阶梯挑战） | 示例赛循环赛 | 见 [`moba/`](moba/) | [`moba/`](moba/) |
 
 第 7 集两场合计的“区王”是阶跃 Step 5 preview（两场各按名次给 10～1 分相加，见 [`tron/README.md`](tron/README.md) 文末）。
 
@@ -32,7 +35,7 @@
 
 ## 30 秒上手
 
-**只想看比赛**：不需要装任何东西。用浏览器打开任意一集 `replays/` 文件夹里的 `.html` 文件，就能逐回合播放。第 1 集打开 `land/replays/index.html`；第 4 集的回放带着全部私信，打开 `diplomacy/replays/game3.html` 看最后一局。第 5 集没有回放，成绩在 `warehouse/results/最终成绩.md`。第 6 集打开 `tank/replays/final-astra-vs-soluf.html` 看冠亚军。第 7 集光轮对战的回放是随机抽的 30 局，在 `tron/replays/`（清单见那里的 `README.md`）；屎山优化没有回放，成绩在 `warehouse/README.md` 的第 7 集一节。
+**只想看比赛**：不需要装任何东西。用浏览器打开任意一集 `replays/` 文件夹里的 `.html` 文件，就能逐回合播放。第 1 集打开 `land/replays/index.html`；第 4 集的回放带着全部私信，打开 `diplomacy/replays/game3.html` 看最后一局。第 5 集没有回放，成绩在 `warehouse/results/最终成绩.md`。第 6 集打开 `tank/replays/final-astra-vs-soluf.html` 看冠亚军。第 7 集光轮对战的回放是随机抽的 30 局，在 `tron/replays/`（清单见那里的 `README.md`）；屎山优化没有回放，成绩在 `warehouse/README.md` 的第 7 集一节。第 9 集的 MOBA 回放全是 SVG 现场画的，随便开一份 `moba/replays/` 里的都好看。
 
 **想用自己的 bot 挑战 AI**：
 

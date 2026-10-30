@@ -42,3 +42,9 @@ soccer/out/
 soccer/workspace/_soccer_box/
 soccer/workspace/bots/*.exe
 soccer/workspace/replays/
+
+# 第 9 集峡谷对决：回放网页里已经内嵌了完整数据，旁边的 .json 只是本地副产物
+moba/replays/*.json
+
+# ZCode 安全钩子的本地状态，不是比赛材料
+.mimosa/
