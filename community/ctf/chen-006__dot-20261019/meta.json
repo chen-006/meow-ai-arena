@@ -1,0 +1,11 @@
+{
+  "author": "chen-006",
+  "github": "chen-006",
+  "written_by": "ai",
+  "tool": "dot / Codex",
+  "license": "MIT",
+  "name": "dot CTF 20261019",
+  "description": "Uniform value continuation with learned policy/value models and joint tactical search.",
+  "model": "GPT-6 Astra; upstream GPT-6.1 Sol / GPT-6 Astra",
+  "based_on": "community/ctf/huixiong806__meowmind; ctf/bots/gpt-6-astra.cpp (parser)"
+}
