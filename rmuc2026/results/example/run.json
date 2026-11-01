@@ -1,0 +1,17 @@
+{
+  "format": "meow-rmuc2026-tournament-v1",
+  "seeds": [
+    11
+  ],
+  "source_hashes": {
+    "assault": "405e7e01a442d26fd51f5c5b5c59ae336eb8f20a6ed174567f2e1ffa68f40167",
+    "guard": "0144252c9350bc8ffa42032e8ddb8136dd0e945cd30d25a5c3fca40b1db779d7"
+  },
+  "score": {
+    "win": 1,
+    "draw": 0.5,
+    "loss": 0
+  },
+  "duration_s": 420,
+  "note": "Example or user-supplied teams; not official model tournament results."
+}

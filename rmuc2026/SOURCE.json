@@ -1,0 +1,206 @@
+{
+  "repository": "https://github.com/RM-Arena/Arena-1",
+  "commit": "e70c1f010edfd5d2b4454c6d5a21bee71c0baba4",
+  "files": [
+    {
+      "path": "rmuc_arena/action_protocol.py",
+      "sha256": "7e82cad1d8944fa061b93abb420220a3c26201e4a74317266d6684810179cf54"
+    },
+    {
+      "path": "rmuc_arena/battle_settings.py",
+      "sha256": "cc4f439a2f3a330ec6aed4ae559fb9c9b10b6e7579c074327c1d0f1cb17f6595"
+    },
+    {
+      "path": "rmuc_arena/communication.py",
+      "sha256": "b1c485fcb926676d166e9983c114e0af49ccb6f7dbb9ef61570e87c65980ca07"
+    },
+    {
+      "path": "rmuc_arena/decks.py",
+      "sha256": "ce5eefcde2858068c08e1f468e89610c1a4c486f1fec71884b2cf644f06112b3"
+    },
+    {
+      "path": "rmuc_arena/engine.py",
+      "sha256": "88017173f7538ae6cd3906261ad3564ac76ae41332612353b738c40bb8f1f7e9"
+    },
+    {
+      "path": "rmuc_arena/legacy_engine.py",
+      "sha256": "a9569612dc9b41ac733cd5e1009f86d980c6fbb0be99356914a9cdad20fc6ea9"
+    },
+    {
+      "path": "rmuc_arena/models.py",
+      "sha256": "981c8c075455f0fd941c216663ca11eb51be83745f2c50fc8c65137ef8c708e7"
+    },
+    {
+      "path": "rmuc_arena/paths.py",
+      "sha256": "876a10cdd1a7a7c0d857846ba39e7d6d3550c537583459fbd87080a78e2d3806"
+    },
+    {
+      "path": "rmuc_arena/platform_support.py",
+      "sha256": "ce543cf71f69a94ab67156d6f073da6b873a21db1b5097f7e2d412a90e0e8695"
+    },
+    {
+      "path": "rmuc_arena/referee.py",
+      "sha256": "e8b72840e649fadc032c8b7dc03e5feb3b35b3940e2f96b72dc554606d1f570e"
+    },
+    {
+      "path": "rmuc_arena/replays.py",
+      "sha256": "69a5bdac6a9d520356395818d78a4ebb148fc15c1f24daa8c694964983d06ebc"
+    },
+    {
+      "path": "rmuc_arena/runner.py",
+      "sha256": "e7b541e67a142ae0318c23cbe7b33003b2cb220081521ca338d4c73e8ee24bf7"
+    },
+    {
+      "path": "rmuc_arena/sdk.py",
+      "sha256": "a7aefff4222a45be5efa7202d0bbc76ecfcb22bff03614dfa2d1789925e55baf"
+    },
+    {
+      "path": "rmuc_arena/seasons.py",
+      "sha256": "5fae03c08cae2583d8a67c413b6a569bebd9a63d14e9eac4307a4492847224ab"
+    },
+    {
+      "path": "rmuc_arena/showcase.py",
+      "sha256": "376cdd826413057a1e3ad5bb4f6b9b94b6199b431a6f8bdcb26841f43d542a6a"
+    },
+    {
+      "path": "rmuc_arena/strategy_names.py",
+      "sha256": "4a58528d1c223d7a550565e7b4abeaf87def649e98ac4deef85b25ec0568c70b"
+    },
+    {
+      "path": "rmuc_arena/strategy_sources.py",
+      "sha256": "c169ceedfc8d557978246f7e23c30b7dd919077ebe5bfb123b4971431957ebe3"
+    },
+    {
+      "path": "rmuc_arena/submissions.py",
+      "sha256": "751d557b6aa219a484fc20bdea49196f4966c859c9e7d54cf24f1e263b423422"
+    },
+    {
+      "path": "rmuc_arena/worker.py",
+      "sha256": "bb23bc4068a5f8a589050cb1692d73f7deda3f4f55944dadc72cecdd61987f13"
+    },
+    {
+      "path": "rmuc_arena/__init__.py",
+      "sha256": "107d2263594673657d8f84a92435bb80f29238f6ce37e8ffac86113640d99b28"
+    },
+    {
+      "path": "config/rules.json",
+      "sha256": "d0338c14c310721f7ce1c19864e889a541532f398fabf6975615a1ed7a6c31d6"
+    },
+    {
+      "path": "config/battle_settings.json",
+      "sha256": "354046c0eb520c44fd3714c40e7b6ad79f481391a15693c9be3247ea0dd37b5d"
+    },
+    {
+      "path": "simulation/Cargo.toml",
+      "sha256": "aeb03de759954bafa4f965d86baea325f4b2666ea7681f7584efd284f2434dad"
+    },
+    {
+      "path": "simulation/Cargo.lock",
+      "sha256": "64a81344440eee31f9c7cee07dde15d58b9a7075f7b6381a1c1fb781484fd390"
+    },
+    {
+      "path": "simulation/src/assembly_2027_regression_tests.rs",
+      "sha256": "91f880236515245bd9ec9bd08bb156e6616680751053dea51eceb6a4e7a26aba"
+    },
+    {
+      "path": "simulation/src/combat_2027_regression_tests.rs",
+      "sha256": "5e44b5d38d0714799e98af813c7fe87dc9eed926be3f5f96044f72dce7c6a1a2"
+    },
+    {
+      "path": "simulation/src/damage_tests.rs",
+      "sha256": "9460f909161cdc48e6b2fbbcf8688e1d4d2a6207470ac192e5a78157febf5dfa"
+    },
+    {
+      "path": "simulation/src/deck_tests.rs",
+      "sha256": "47257e9b1b6e1a7bfc59d1ba1fddc2c18184d17337f669a6e125da8e9dfb35cd"
+    },
+    {
+      "path": "simulation/src/field_2027_regression_tests.rs",
+      "sha256": "ba7b95d9bf9e24bc6f234bbb9e5de02e6e3bf2130c0d159db0c99caed1842810"
+    },
+    {
+      "path": "simulation/src/lib.rs",
+      "sha256": "8251f6eadead8243c2d8fb488a139a3fafca9ef3d0d7ad7dff7dccb3bee097fc"
+    },
+    {
+      "path": "simulation/src/main.rs",
+      "sha256": "38cf45daa53ab5a3e357e4315324bba3ef21f4d466982b0c123a5e4356b7c05f"
+    },
+    {
+      "path": "simulation/src/mechanism_tests.rs",
+      "sha256": "fce7691fb5696be01c290b4866ec46c300893ef988a4223f777622bf40db244e"
+    },
+    {
+      "path": "simulation/src/model_tests.rs",
+      "sha256": "15e03aabd3336dcc55f56d6f59ac63c02f9f624f3e479174746fef0cc1bf9fd4"
+    },
+    {
+      "path": "simulation/src/penalties.rs",
+      "sha256": "fe9d3235b3fb6cffa2326be03f334dc249e8982a348e738a4d4124f4acc5547f"
+    },
+    {
+      "path": "simulation/src/physics.rs",
+      "sha256": "48d21c0fce906ba9dfc0e5a016efffa33135ae0ec8d282bdcbd098f1c68e2130"
+    },
+    {
+      "path": "simulation/src/pickup.rs",
+      "sha256": "9e697f3f0e002a1c42ef86bba92e34a1f33e1dbc887302c1b89e10040ba3e06d"
+    },
+    {
+      "path": "simulation/src/realism_tests.rs",
+      "sha256": "0d637cf460b61f4736b3b73218c6ede592c8d48016520c72970c7c5b510a9152"
+    },
+    {
+      "path": "simulation/src/rule_audit_tests.rs",
+      "sha256": "4fd75799cc66ca965738eec26feef28dc74652bc2e02578edb88bec9495c2e3c"
+    },
+    {
+      "path": "simulation/src/rulebook.rs",
+      "sha256": "ca97ca7de0031dfcbf2fa81893558a6eb88194bff26b57d949574be24bf01e35"
+    },
+    {
+      "path": "simulation/src/season2027.rs",
+      "sha256": "c020284fb790ad9ae8d22524ba66b031b570379438c1e2e634745dac581ecfa6"
+    },
+    {
+      "path": "simulation/src/season2027_tests.rs",
+      "sha256": "c172ee966237676c188ab1d28c9d0670090c40de8192b7ffdabf7081abcc8c14"
+    },
+    {
+      "path": "simulation/src/spin_tests.rs",
+      "sha256": "c80753e1f0e4a245eb19d1aaa73d6978abea3f82d7a9cb35d19cd52f9b065794"
+    },
+    {
+      "path": "simulation/src/structures.rs",
+      "sha256": "e78ff8f91ce099b0222d55773cfc6cee6f2312de28d08bfe56c9a6c6c2e3ded6"
+    },
+    {
+      "path": "simulation/src/tests.rs",
+      "sha256": "c9dbdc121e30a5b2161d0ef62872152944642d6d9330b946472d9c0f93d6b806"
+    },
+    {
+      "path": "simulation/src/training_scenario.rs",
+      "sha256": "7e2af1a3783e33f8b4a186bfd52930f90763c5c1c7047851168c86c4d576801b"
+    },
+    {
+      "path": "simulation/src/vision.rs",
+      "sha256": "ddbdca6cc7c6e77b2e9cbf96e7a6b758bca91b002892e64edfbc46cfa5bc881a"
+    },
+    {
+      "path": "simulation/src/vision_tests.rs",
+      "sha256": "7414352c963496f740b1ec07a812d088e5b3fd2cdcb1e3e566780b25a248114f"
+    }
+  ],
+  "baseline": {
+    "repository": "https://github.com/RM-Arena/Arena-1",
+    "commit": "4303d7ca38957019420b38e4b9d2d4dee6718121",
+    "path": "examples/claude_opus55_xhigh_team/strategy.py",
+    "sha256": "405e7e01a442d26fd51f5c5b5c59ae336eb8f20a6ed174567f2e1ffa68f40167",
+    "attribution": "Historical Claude Opus 5.5 xhigh baseline; guard changes DEFENSIVE to True. Not a new model evaluation."
+  },
+  "mechanics_reference": {
+    "commit": "e70c1f010edfd5d2b4454c6d5a21bee71c0baba4",
+    "path": "docs/agent_guides/zh/team.md",
+    "extraction": "section 2 onward; episode RULES.md replaces application authoring workflow"
+  }
+}
