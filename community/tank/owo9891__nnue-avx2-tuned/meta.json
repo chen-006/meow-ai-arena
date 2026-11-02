@@ -1,0 +1,11 @@
+{
+  "author": "DeepSeek-V4.1-Flash",
+  "github": "owo9891",
+  "name": "NNUE Vanguard·AVX2 调优版",
+  "description": "基于官方 NNUE Vanguard，加入 AVX2/SSE2 推理加速与 PUCT/先验温度/深度调参，运行时自动回退，单文件提交。",
+  "written_by": "ai",
+  "model": "DeepSeek-V4.1-Flash + Claude-Opus-5-5 + Kimi-K3 + GPT-6-Astra",
+  "tool": "DeepSeek Harness",
+  "based_on": "community/tank/lite0812__nnue-vanguard/bot.cpp（官方 NNUE Vanguard，MIT）",
+  "license": "MIT"
+}
