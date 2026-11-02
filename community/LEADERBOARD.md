@@ -105,10 +105,11 @@
 | 名次 | 作品 | 作者 | 谁写的 | 模型 / 工具 | 实力值 | 终场赛参照名次 | 评测日期 |
 |---:|---|---|---|---|---:|---|---|
 | 1 | [Overmatch（超越火力）](tank/genshinkleenahida__overmatch/) | genshinkleenahida（[@genshinkleenahida](https://github.com/genshinkleenahida)） | AI 写 | GPT-6.1 Sol / Codex | 887 | 1 / 15 | 2026-10-26 |
-| 2 | [MCTS Vanguard](tank/lite0812__mcts-vanguard/) | Lite0812（[@lite0812](https://github.com/lite0812)） | AI 写 | GPT-6.1 Sol / Codex | 818 | 1 / 15 | 2026-10-27 |
-| 3 | [NNUE Vanguard](tank/lite0812__nnue-vanguard/) | Lite0812（[@lite0812](https://github.com/lite0812)） | AI 写 | GPT-6.1 Sol / Codex | 818 | 1 / 15 | 2026-10-27 |
-| 4 | [value-based PUCT](tank/slzhta__value-based-puct/) | slzhta（[@slzhta](https://github.com/slzhta)） | 人和 AI 合写 | GPT-6 Astra / Codex | 765 | 1 / 15 | 2026-10-21 |
-| 5 | [神经网络搜索 (自适应预算版)](tank/mbfcasper__neural-search/) | mbfcasper（[@mbfcasper](https://github.com/mbfcasper)） | AI 写 | GPT-6.1 Sol + Gemini 4 Argon + Gemini 3.8 Flash + Claude Opus 5.5 / Codex / Antigravity / Claude Code | 670 | 1 / 15 | 2026-10-20 |
+| 2 | [NNUE Vanguard·AVX2 调优版](tank/owo9891__nnue-avx2-tuned/) | DeepSeek-V4.1-Flash（[@owo9891](https://github.com/owo9891)） | AI 写 | DeepSeek-V4.1-Flash + Claude-Opus-5-5 + Kimi-K3 + GPT-6-Astra / DeepSeek Harness | 850 | 1 / 15 | 2026-11-02 |
+| 3 | [MCTS Vanguard](tank/lite0812__mcts-vanguard/) | Lite0812（[@lite0812](https://github.com/lite0812)） | AI 写 | GPT-6.1 Sol / Codex | 818 | 1 / 15 | 2026-10-27 |
+| 4 | [NNUE Vanguard](tank/lite0812__nnue-vanguard/) | Lite0812（[@lite0812](https://github.com/lite0812)） | AI 写 | GPT-6.1 Sol / Codex | 818 | 1 / 15 | 2026-10-27 |
+| 5 | [value-based PUCT](tank/slzhta__value-based-puct/) | slzhta（[@slzhta](https://github.com/slzhta)） | 人和 AI 合写 | GPT-6 Astra / Codex | 765 | 1 / 15 | 2026-10-21 |
+| 6 | [神经网络搜索 (自适应预算版)](tank/mbfcasper__neural-search/) | mbfcasper（[@mbfcasper](https://github.com/mbfcasper)） | AI 写 | GPT-6.1 Sol + Gemini 4 Argon + Gemini 3.8 Flash + Claude Opus 5.5 / Codex / Antigravity / Claude Code | 670 | 1 / 15 | 2026-10-20 |
 
 固定参照来自 [`tank/results/final/成绩.md`](../tank/results/final/成绩.md)。社区对局使用新地图，在不同机器上运行，局数较少；参照分数不是本次在虚拟机上重新测出的官方成绩。
 
