@@ -13,7 +13,8 @@ python rmuc2026/build.py --docker
 python rmuc2026/arena.py --duration 30 --replay rmuc2026/practice/opening.html
 python rmuc2026/challenge.py rmuc2026/workspace/strategy.py --output rmuc2026/practice/eval-001
 python rmuc2026/tournament.py rmuc2026/bots/assault.py rmuc2026/bots/guard.py --output rmuc2026/practice/round-robin
-python -B -m unittest discover -s rmuc2026 -p test_episode.py -v
+python -B -m unittest discover -s rmuc2026 -p 'test*.py' -v
+RMUC_DOCKER_TESTS=1 python -B -m unittest discover -s rmuc2026 -p 'test*.py' -v
 ```
 
 Write `act(observation, state)` in the provided template. Read-only, non-root, network-free Docker policies receive 1 CPU, 1 GiB RAM and a 200 ms wall-clock budget per decision. Policies run at 10 Hz in simulation time. Recoverable missed decisions remain in-play; disabled or uninitializable policies forfeit, with both sides disabled scored as a draw. Host/referee failures abort evaluation rather than silently creating a draw. All scored technical losses stay in the ledger.
@@ -22,6 +23,6 @@ Round robins freeze sources before running, pair both sides for every seed, scor
 
 [Example results and silent HTML replays](results/README.md) are from the actual scored games, sampled once per simulation second. The offline 2D viewer uses no external resources and is not a full frame-by-frame verification trace. Development timing is organizer-managed; use the same [prompt](prompt.md), template, SDK and public opponents for all contestants.
 
-The [source manifest](SOURCE.json) pins the unmodified referee and runtime; the two example opponents are an attributed historical baseline and a defensive variant, not new model contest entries. [Conditions](CONDITIONS.md) record the actual validation and limitations.
+The [source manifest](SOURCE.json) pins the unmodified physics referee and records both upstream and patched hashes for the runner/worker transport fixes. New results include `runtime_revision`. Regression tests cover nonreading policies, failed container entrypoints and colliding output paths; a read-only Ubuntu CI builds the referee and sandbox and runs the full suite. The two example opponents are an attributed historical baseline and a defensive variant, not new model contest entries. [Conditions](CONDITIONS.md) record the actual validation and limitations.
 
 This subtree retains the [Arena-1 Non-Commercial Learning License](LICENSE), independently of the parent repository's MIT license. See [third-party notices](THIRD_PARTY_NOTICES.md). **No music, audio, videos, GLB assets, textures or original rulebook PDFs are included or downloaded.** This is an independent simulation, not an official RoboMaster event.

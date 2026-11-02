@@ -306,6 +306,18 @@ class EncodedObservation:
         self.static = static
 
 
+class PolicyRuntimeError(RuntimeError):
+    """The policy worker could not start, before importing contestant code."""
+
+
+class PolicyStartupError(RuntimeError):
+    """The worker started, but contestant import/initialization failed."""
+
+
+class PolicyInputTimeout(TimeoutError):
+    """Input was not fully delivered within the current decision window."""
+
+
 class Policy:
     def __init__(self, path, seed, sandbox="docker", timeout=0.2, expected_digest=None, deadline=None, stop_event=None, dynamic_messages=False):
         self.timeout, self.sandbox, self.disabled = timeout, sandbox, False
@@ -348,28 +360,81 @@ class Policy:
         try:
             self.process = subprocess.Popen(command, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE,
                                             cwd=stage, env=env, start_new_session=True)
-        except BaseException:
+        except OSError as exc:
             self.temp.cleanup()
-            raise
+            raise PolicyRuntimeError(f"Could not launch policy runtime: {exc}") from exc
+        # Only this daemon owns the duplicate descriptor. Raw writes never hold the
+        # BufferedWriter lock, so closing stdin cannot deadlock behind a blocked write.
+        self.input_jobs = queue.Queue(maxsize=1)
+        self.input_stopped = threading.Event()
+        write_fd = os.dup(self.process.stdin.fileno())
+        self.input_writer = threading.Thread(target=self._write_input, args=(write_fd,), daemon=True)
+        self.input_writer.start()
         threading.Thread(target=self._read_output, daemon=True).start()
         threading.Thread(target=self._read_errors, daemon=True).start()
+        runtime_started = False
         try:
             ready_until = min(time.monotonic() + STARTUP_LIMIT[sandbox], deadline or float("inf"))
-            while True:
-                remaining = ready_until - time.monotonic()
-                if remaining <= 0 or (stop_event and stop_event.is_set()):
-                    raise TimeoutError("Policy initialization deadline reached")
-                try:
-                    ready = self.lines.get(timeout=min(.1, remaining))
-                    break
-                except queue.Empty:
-                    continue
+            # The trusted worker announces itself BEFORE it loads strategy.py.
+            # Docker/entrypoint failures produce no handshake and must abort the host.
+            started = self._startup_message(ready_until)
+            if json.loads(started) != {"worker_started": True}:
+                raise ValueError("Missing worker startup handshake")
+            runtime_started = True
+            ready = self._startup_message(ready_until)
             if json.loads(ready) != {"ready": True}:
                 raise ValueError("Invalid ready response")
         except BaseException as exc:
             details = " ".join(self.logs)[-1500:]
             self.close()
-            raise RuntimeError(f"Policy did not initialize: {details or str(exc)}") from exc
+            if isinstance(exc, (KeyboardInterrupt, SystemExit)):
+                raise
+            failure = PolicyStartupError if runtime_started else PolicyRuntimeError
+            raise failure(f"Policy did not initialize: {details or str(exc)}") from exc
+
+    def _startup_message(self, until):
+        while True:
+            remaining = until - time.monotonic()
+            if remaining <= 0 or (self.stop_event and self.stop_event.is_set()):
+                raise TimeoutError("Policy initialization deadline reached")
+            try:
+                return self.lines.get(timeout=min(.1, remaining))
+            except queue.Empty:
+                continue
+
+    def _write_input(self, fd):
+        try:
+            while not self.input_stopped.is_set():
+                job = self.input_jobs.get()
+                if job is None:
+                    break
+                payload, complete, errors = job
+                try:
+                    remaining = memoryview(payload)
+                    while remaining and not self.input_stopped.is_set():
+                        written = os.write(fd, remaining)
+                        if written <= 0:
+                            raise BrokenPipeError("Policy input pipe closed")
+                        remaining = remaining[written:]
+                except OSError as exc:
+                    errors.append(exc)
+                finally:
+                    complete.set()
+        finally:
+            os.close(fd)
+
+    def _send(self, payload, until):
+        complete, errors = threading.Event(), []
+        self.input_jobs.put_nowait((payload, complete, errors))
+        while not complete.is_set():
+            remaining = until - time.monotonic()
+            if remaining <= 0 or (self.stop_event and self.stop_event.is_set()):
+                raise PolicyInputTimeout("policy input exceeded decision deadline")
+            complete.wait(min(.02, remaining))
+        if errors:
+            raise errors[0]
+        if time.monotonic() >= until:
+            raise PolicyInputTimeout("policy input exceeded decision deadline")
 
     def _read_output(self):
         try:
@@ -418,11 +483,18 @@ class Policy:
             if time.monotonic() >= until:
                 raise queue.Empty
             self.pending_response = controlled, has_messages
-            self.process.stdin.write(payload)
-            self.process.stdin.flush()
+            self._send(payload, until)
             actions = self._receive(until, message_limit)
             self.consecutive_timeouts = 0
             return actions, None
+        except PolicyInputTimeout as exc:
+            # A partial JSON line cannot be abandoned and followed by a new request.
+            # Kill the reader so the raw writer also unblocks; do not attempt recovery.
+            self.errors += 1
+            message = str(exc)
+            self.logs.append(message)
+            self.close()
+            return {}, message
         except queue.Empty:
             self.errors += 1
             self.consecutive_timeouts += 1
@@ -469,6 +541,12 @@ class Policy:
 
     def close(self):
         self.disabled = True
+        if hasattr(self, "input_stopped"):
+            self.input_stopped.set()
+            try:
+                self.input_jobs.put_nowait(None)
+            except queue.Full:
+                pass
         if hasattr(self, "process"):
             if self.sandbox == "docker":
                 # Killing docker's client alone does not always kill its container.

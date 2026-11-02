@@ -28,6 +28,10 @@ def main():
     except (ImportError, ValueError, OSError):
         pass
     output = sys.stdout
+    # Trusted-runtime handshake precedes all contestant imports. Absence of this
+    # message means the container/worker did not start, not a contestant forfeit.
+    output.write('{"worker_started":true}\n')
+    output.flush()
     state = None
     # Match-constant observation fields (the arena map), delivered once with the first
     # observation and merged into every later one by the host's request.

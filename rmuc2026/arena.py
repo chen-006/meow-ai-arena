@@ -15,7 +15,7 @@ os.environ.pop("RMUC_SIM_BINARY", None)
 sys.path.insert(0, str(RUNTIME))
 from rmuc_arena.engine import Match
 from rmuc_arena.models import normalize_team_lineup
-from rmuc_arena.runner import Battle, Policy
+from rmuc_arena.runner import Battle, Policy, PolicyStartupError
 import rmuc_arena.runner as runner
 from rmuc_arena.submissions import save_submission
 from replay import write_viewer
@@ -24,7 +24,8 @@ from build import IMAGE
 runner.IMAGE = IMAGE
 CONFIG = json.loads((ROOT / "lineup.json").read_text(encoding="utf-8"))
 LINEUP = normalize_team_lineup(CONFIG["lineup"], "2026")
-SOURCE_COMMIT = json.loads((ROOT / "SOURCE.json").read_text())["commit"]
+SOURCE = json.loads((ROOT / "SOURCE.json").read_text())
+SOURCE_COMMIT = SOURCE["commit"]
 
 
 def check_environment(trusted_local):
@@ -85,9 +86,9 @@ def play(red, blue, *, seed=42, duration=420, trusted_local=False, replay_path=N
                 policy = Policy(submissions[team] / "strategy.py", seed * 100 + (10 if team == "blue" else 0),
                                 sandbox=backend, timeout=CONFIG["decision_timeout_s"])
                 policy.close()
-            except RuntimeError as exc:
-                # A Docker/host failure must not be mistaken for a player loss.
-                check_environment(trusted_local)
+            except PolicyStartupError as exc:
+                # Only failures AFTER the trusted worker handshake are player faults.
+                # Runtime/entrypoint failures propagate and never create a scored draw.
                 startup_errors[team] = str(exc)[-1500:]
         frames = []
         arena = {}
@@ -116,10 +117,26 @@ def play(red, blue, *, seed=42, duration=420, trusted_local=False, replay_path=N
         result.update(seed=seed, season="2026", lineup=LINEUP, strategies=identity,
                       ranked=duration == 420 and not trusted_local,
                       duration_s=duration, backend=backend, source_commit=SOURCE_COMMIT,
+                      runtime_revision=SOURCE["runtime_revision"],
                       wall_seconds=round(time.monotonic() - started, 3), **fingerprints)
         if replay_path:
             write_viewer(Path(replay_path), {"result": result, "arena": arena, "frames": frames})
         return result
+
+
+def validate_output_paths(output, replay=None):
+    output = output.resolve()
+    replay = replay.resolve() if replay is not None else None
+    if replay is not None and (output == replay or output in replay.parents or replay in output.parents):
+        raise ValueError("--output and --replay must be distinct files with no ancestor/descendant relationship")
+    for path in (output, replay):
+        if path is None:
+            continue
+        if path.exists():
+            raise ValueError("output already exists; select new filenames")
+        if any(parent.exists() and not parent.is_dir() for parent in path.parents):
+            raise ValueError(f"output parent is not a directory: {path.parent}")
+    return output, replay
 
 
 def main():
@@ -132,8 +149,10 @@ def main():
     parser.add_argument("--output", type=Path, default=ROOT / "practice/match.json")
     parser.add_argument("--replay", type=Path, help="write a standalone silent HTML replay of this exact match")
     args = parser.parse_args()
-    if args.output.exists() or (args.replay and args.replay.exists()):
-        parser.error("output already exists; select new filenames")
+    try:
+        args.output, args.replay = validate_output_paths(args.output, args.replay)
+    except ValueError as exc:
+        parser.error(str(exc))
     result = play(args.red, args.blue, seed=args.seed, duration=args.duration,
                   trusted_local=args.trusted_local, replay_path=args.replay)
     args.output.parent.mkdir(parents=True, exist_ok=True)

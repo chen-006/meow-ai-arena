@@ -4,7 +4,7 @@ import subprocess
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
-IMAGE = "meow-rmuc2026-policy:e70c1f0"
+IMAGE = "meow-rmuc2026-policy:e70c1f0-r2"
 
 
 def main():

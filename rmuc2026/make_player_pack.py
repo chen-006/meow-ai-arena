@@ -18,7 +18,7 @@ def main():
     output.mkdir(parents=True)
     episode = output / "rmuc2026"
     episode.mkdir()
-    for name in ("arena.py", "build.py", "make_player_pack.py", "Dockerfile", ".gitignore", "replay.py", "challenge.py", "tournament.py", "test_episode.py", "lineup.json",
+    for name in ("arena.py", "build.py", "make_player_pack.py", "Dockerfile", ".gitignore", "replay.py", "challenge.py", "tournament.py", "test_episode.py", "test_transport_regressions.py", "lineup.json",
                  "SOURCE.json", "LICENSE", "THIRD_PARTY_NOTICES.md", "prompt.md", "README.md", "README_en.md", "CONDITIONS.md"):
         shutil.copyfile(ROOT / name, episode / name)
     for name in ("runtime", "workspace", "bots", "results"):
