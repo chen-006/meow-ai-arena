@@ -73,10 +73,6 @@ python challenge.py 你的bot.cpp
 
 之后 GitHub Actions 会自动评测，维护者看过后合并。社区榜是在 GitHub 的虚拟机上测的，局数少，和节目里的正式成绩不能直接比。规则、`meta.json` 的写法和成绩口径见 [`community/README.md`](community/README.md)。
 
-## 候选新玩法
-
-[RMUC 2026 机器人全队对抗](rmuc2026/README.md)：一个 Python 程序控制 6v6 队伍，双方 3 / 4 / 7 号统一使用 305 串联腿步兵。宿主要求 Python 3.12+。附固定阵容、引擎源码、选手包、公开基准、循环赛和静音回放；这是玩法提案，尚未列为节目集数。`rmuc2026/` 保留 Arena-1 非商业学习许可，详见目录内说明。
-
 ## 每集目录里有什么
 
 | 路径 | 内容 |
@@ -110,7 +106,7 @@ python challenge.py 你的bot.cpp
 
 ## 许可
 
-[MIT](LICENSE)。欢迎拿去复现、改编、出新题。第 4 集回放里的地图图形来自 jDip（GPL），经 `diplomacy` 包渲染，不适用 MIT 许可。候选玩法 `rmuc2026/` 保留其 [Arena-1 非商业学习许可证](rmuc2026/LICENSE)，不适用上层 MIT 许可。
+[MIT](LICENSE)。欢迎拿去复现、改编、出新题。第 4 集回放里的地图图形来自 jDip（GPL），经 `diplomacy` 包渲染，不适用 MIT 许可。
 
 ## 致谢
 

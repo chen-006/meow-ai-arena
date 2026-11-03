@@ -8,7 +8,7 @@
 
 每队六台机器人。双方同编号的机器人硬件、初始状态和规则完全相同。编号只是标识，并不连续（没有 5 号）。
 
-用户确认阵容后，工作区会动态生成六个位置的型号、性能和机构能力。当前通用规则不指定出战型号。
+本社区比赛的出战型号固定在 `lineup.json`，英雄为 1、工程为 201，3 / 4 / 7 号步兵均为 305 串联腿，空中为 601。
 
 - “弹量”指允许发射的弹丸数。地面机器人开局弹量为 0，必须先用金币兑换才能射击（见「金币、弹药、回血与复活」）。
 - 三台步兵的规则完全相同，区别只在硬件和默认性能（见「性能选择、等级与经验」）。
@@ -16,7 +16,7 @@
 
 各机器人的硬件参数（完整数据见 `sdk.DESIGNS`）：
 
-用户确认阵容后，工作区会动态生成六个位置的型号、性能和机构能力。当前通用规则不指定出战型号。
+各型号的完整硬件数值见 `sdk.DESIGNS`；参赛程序应读取受控编号和实际机器人状态。
 
 参考速度是驱动控制的目标速度，实际速度受功率、坡度、载重和抓地影响。装甲中心高与炮口高均为离地高度。
 
@@ -45,7 +45,7 @@
 - 场地还有公路、起伏路段、隧道、飞坡（中间有 0.65 m 宽的沟隙）、堡垒台（高 0.15 m）等结构。轮式机器人不能直接越过垂直台阶，上高地要走坡道。中央高地（0.4 m）朝向两侧堡垒的一面是 0.2 m + 0.2 m 的两级台阶而不是坡道，普通轮式机器人上不去；要先从公路缺口西侧的 10° 坡上到 0.2 m 的公路（缺口南沿是 0.2 m 的公路跨越台阶），绕过护边进入公路；再全速驶过铺满护边以南路面的起伏路段（见「底盘物理与精细控制」），然后走高地两端 10.5° 的端坡；双轮足型号可以跳上去（见「底盘物理与精细控制」）。地面从两条长边向中线有 1.5° 的轻微抬升。
 - 中央高地正中是装配区底座（长 1.9 m、宽 0.6 m、高 0.3 m）和能量机关龙门（两根立柱与两端立柱底座），它们都是实体障碍，把装配平台分成红蓝两半；龙门横梁在约 2.8 m 高处，只挡弹丸。
 - 双方基地本体、对方的补给区、装配区和停机坪是禁入区。飞坡坡顶之后的沟隙、着陆台和其后的飞坡卡是双方的公路禁区：只有从坡底完整冲上 17° 坡再飞入才允许进入，之后可以停留或驶出。
-- 完整几何在 `observation["arena"]`（与 `arena.json` 中的 `map` 相同）：`terrain` 是地形，每项的 `polygon` 才是实际形状，`x, y, w, h` 只是外接矩形，坡道用 `ramp_start`、`ramp_end` 表示方向；`obstacles` 是墙体，可能带 `rotation`（旋转角）和 `bottom`（离地高度，如隧道顶）；`zones` 是增益点；`forbidden` 是禁入区；`navigation` 是公开路网节点；`flight_lanes`、`pads`、`charging_docks`、`rune` 分别是空中航道、停机坪、充电装置和能量机关。
+- 完整几何在 `observation["arena"]`，静态配置见比赛目录的 `runtime/config/rules.json` 中 `maps.rmuc2026`：`terrain` 是地形，每项的 `polygon` 才是实际形状，`x, y, w, h` 只是外接矩形，坡道用 `ramp_start`、`ramp_end` 表示方向；`obstacles` 是墙体，可能带 `rotation`（旋转角）和 `bottom`（离地高度，如隧道顶）；`zones` 是增益点；`forbidden` 是禁入区；`navigation` 是公开路网节点；`flight_lanes`、`pads`、`charging_docks`、`rune` 分别是空中航道、停机坪、充电装置和能量机关。
 - `sdk.terrain_height(arena, x, y)` 查询地面高度，`sdk.navigate(robot, point, arena)` 给出绕开墙体、沿坡道行进的移动方向。你也可以自己实现导航。
 
 ### 2.3 一局的时间线
@@ -667,7 +667,7 @@ def act(observation: dict, state) -> tuple[dict, object]:
 | `projectiles` | 可见弹丸：己方全部，加上视野内的敌方弹丸 |
 | `arena` | 地图几何，见「比赛概览」 |
 | `referee` | 裁判快照，见下节 |
-| `specs`、`rulebook_rules`、`simulation_assumptions` | 参数摘要；完整数值请用 `sdk.RULES`、`sdk.DESIGNS` 或 `arena.json` |
+| `specs`、`rulebook_rules`、`simulation_assumptions` | 参数摘要；完整数值请用 `sdk.RULES`、`sdk.DESIGNS` 或比赛目录的 `runtime/config/rules.json` |
 
 `robots` 中每台机器人的常用字段：
 
@@ -827,56 +827,52 @@ def act(obs, state):
 - 收件信封为 `{"from": "red-1", "to": "red-2", "tick": 0, "delivery_tick": 2, "data": ...}`。首轮收件箱为空，下一轮只出现一次；需要保留的情报自行存入 `state`。
 - 同轮消息按发送者部署编号、消息列表顺序送达，与策略动作字典顺序或进程完成顺序无关。不存在的自由赛接收者不送达；程序停用后不再发送或处理消息。
 - 消息不会改变视觉 `enemies`，也不会给独立进程自动共享私有状态。主动报告看到的敌人、目标和计划时，应附带时间并处理情报时效。
-- 回放的决策步 `actions[i]["communication"]` 保存发送者、接收者列表、发送与送达tick及内容；消息不交给物理引擎，也不在第二个保持动作的比赛步重复发送。
+- 消息不交给物理引擎，也不在第二个保持动作的比赛步重复发送。本包的 HTML 回放只保存采样状态，不提供逐步 `actions` 或通信日志。
 
-## 15. 练习与提交
+## 15. 本地练习、结果和交付
 
-所有命令都在你的工作目录中运行：
+以下命令在比赛目录 `community/contests/rmuc2026/` 中执行；使用导出的选手包时，进入该输出目录即可。宿主需要 Python 3.12+、Rust/Cargo 和运行中的 Docker。
 
-```bash
-python3 -B arena.py status                  # 剩余时间、已提交版本、练习任务
-python3 -B arena.py test [选项]              # 用当前 strategy.py 启动一批练习对局
-python3 -B arena.py results JOB_ID           # 查看练习进度与结果
-python3 -B arena.py replay JOB_ID --game 0   # 把第 0 局的完整回放保存到 practice/
-python3 -B arena.py submit                   # 提交当前 strategy.py
+### 15.1 构建与单局练习
+
+```sh
+python3 build.py --docker
+python3 -B arena.py --red workspace/strategy.py --blue bots/guard.py --duration 30 --seed 42 --output practice/opening.json --replay practice/opening.html
 ```
 
-### 15.1 练习对局
+`arena.py` 同步运行一局，完成后在终端输出 JSON 并写入指定文件。每次使用新的输出文件名；已有输出会被拒绝。30 秒短局只做功能练习，完整比赛时长为 420 秒。
 
 | 选项 | 默认 | 说明 |
 | --- | --- | --- |
-| `--opponent` | `baseline` | `baseline`：公开基准策略（偏防守）；`self`：和当前代码自己对战；也可以填 `status` 中列出的你自己已提交的版本号 |
-| `--duration` | 30 | 每局时长（秒），1–420；正式比赛为 420 |
-| `--games` | 1 | 局数，种子从 `--seed` 起依次加 1 |
-| `--seed` | 42 | 第一局的种子 |
-| `--swap-sides` | 关闭 | 每个种子红蓝各打一局，局数翻倍 |
+| `--red` | `workspace/strategy.py` | 红方 Python 源码 |
+| `--blue` | `bots/guard.py` | 蓝方 Python 源码；自博弈时也可填自己的源码 |
+| `--duration` | 420 | 仿真秒数，1–420；短局不排名 |
+| `--seed` | 42 | 本局种子 |
+| `--output` | `practice/match.json` | 单局 JSON 结果，必须是新路径 |
+| `--replay` | 不生成 | 从这场比赛采样生成静音 HTML |
+| `--trusted-local` | 关闭 | 只用于自己的可信代码调试，无容器隔离，始终不排名 |
 
-```bash
-python3 -B arena.py test --opponent baseline --duration 30
-python3 -B arena.py test --opponent self --duration 420 --games 4 --swap-sides
-python3 -B arena.py test --opponent 版本号 --duration 420 --games 2 --seed 200
+### 15.2 多种子与红蓝配对
+
+```sh
+python3 challenge.py workspace/strategy.py --seeds 11 23 --output practice/eval-001
+python3 tournament.py bots/assault.py bots/guard.py --seeds 11 23 --output practice/round-robin
 ```
 
-- 启动时会给当前 `strategy.py` 拍快照，之后修改文件不影响这批对局。
-- 同一时间只能运行一批练习，服务繁忙时会排队。排队和运行时间都计入开发时间；一局 420 s 的对局需要数分钟真实时间，请据此安排。
-- 练习使用与正式比赛相同的容器和限制，不计排名，也不消耗正式比赛次数。
-- 练习中你的程序控制己方全部机器人；`self` 对战时双方都是你的代码。
+- `challenge.py` 让你的策略对两个公开基准按每个种子自动换边，以上示例共 8 局；在 `games.jsonl` 中保存逐局结果，结束后写 `summary.json`。
+- `tournament.py` 对传入的 Python 源码做全循环，每组、每个种子自动换边，结果保存为 `games.jsonl` 和 `standings.json`，收卷快照及语法错误保存在该次输出目录里。
+- 两个工具都同步执行，均拒绝覆盖已有输出目录；开发计时和截止收卷由社区比赛组织者统一管理。
+- 队伍文件名必须满足跨平台唯一性要求：Unicode NFC 归一化、大小写折叠并去除末尾空格和点后，名称不能重复。例如 `GPT.py` 与 `gpt.py` 不可同时参赛。
 
-### 15.2 结果与回放
+### 15.3 查看结果与交付
 
-- `results` 返回每局的胜方、判定原因、结束时间、你所在的一方（`candidate_team`）、双方队伍数据（攻击伤害、击杀、金币等），以及你的程序出错的次数（`policy_errors`）。程序出错时，`diagnostics` 会附带错误信息和最近的日志（包括 `print` 输出）。
-- `replay` 把完整回放保存到 `practice/`：包括每一步的全场状态、双方动作和事件，可以用自己写的脚本分析。420 s 对局的回放约 300 MB，请按需下载。
+JSON 结果包含胜方、判定原因和策略错误诊断。用浏览器直接打开指定的 HTML，可以查看位置、血量和建筑状态的每秒采样；这不是逐帧动作轨迹，未生成的日志不能从中还原。语法检查判负的页面只展示诊断，标记为未启动仿真。
 
-### 15.3 提交
-
-- `submit` 把当前 `strategy.py` 保存为一个不可修改的版本，并返回版本号。
-- 可以多次提交，**截止前最后一次成功提交即参赛版本**。之前提交的版本可以用作练习对手（`--opponent 版本号`）。
-- 提交前确认：练习中没有错误或超时；没有依赖 `practice/` 里的文件；最坏情况下的耗时远低于 200 ms。
-- 不要把最后一次提交拖到截止前一刻，也不要把练习过但没提交的代码当成最终版本。截止后仍可查看已有的结果和回放，但不能再练习或提交。
+截止时向组织者交付 `workspace/strategy.py`。组织者运行循环赛时统一冻结源码和哈希。请尽早用短局检查接口，再用完整时长、多种子和红蓝配对确认战术；不依赖 `practice/` 中的文件，并检查最坏情况下的决策耗时。
 
 ## 16. 起步代码与策略建议
 
-工作目录里的 `strategy.py` 已经是完整可运行的模板，覆盖补弹、复活、工程装配、空中支援和攻击建筑，可以直接在它的基础上改进。下面的最小骨架只用来说明接口，并不是一个强策略：
+比赛目录中的 `workspace/strategy.py` 是可运行模板，覆盖补弹、复活、工程装配、空中支援和攻击建筑，可以直接在它的基础上改进。下面的最小骨架只用来说明接口，并不是一个强策略：
 
 ```python
 from sdk import action, aim_at, aim_pitch, can_fire, nearest_enemy
@@ -915,7 +911,7 @@ def decide(robot, obs):
 - 对方基地护甲闭合时只有 42mm 能造成伤害，英雄（尤其是部署状态）是攻击基地的主力。
 - 空中支援的免费时间有限，超出后按秒消耗金币；把它用在关键时刻。
 - 注意热量和弹量，避免永久锁定；注意功率缓冲，避免断电。
-- 用多个种子并加上 `--swap-sides` 练习，避免策略只在某一侧或某个种子上有效。
+- 使用 `challenge.py` 或 `tournament.py` 的多种子、自动红蓝配对，避免策略只在某一侧或某个种子上有效。
 
 ## 附录：等级性能表
 

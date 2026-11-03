@@ -18,13 +18,11 @@ def main():
     if any(output.is_relative_to(ROOT / name) for name in ("runtime", "workspace", "bots", "results")):
         parser.error("output cannot be inside a source directory")
     output.mkdir(parents=True)
-    episode = output / "rmuc2026"
-    episode.mkdir()
-    for name in ("arena.py", "build.py", "make_player_pack.py", "Dockerfile", ".gitignore", "replay.py", "challenge.py", "tournament.py", "test_episode.py", "test_transport_regressions.py", "test_tournament_regressions.py", "test_startup_regressions.py", "lineup.json",
+    for name in ("arena.py", "build.py", "make_player_pack.py", "Dockerfile", ".gitignore", "replay.py", "challenge.py", "tournament.py", "test_episode.py", "test_transport_regressions.py", "test_tournament_regressions.py", "test_startup_regressions.py", "test_package_regressions.py", "lineup.json",
                  "SOURCE.json", "LICENSE", "THIRD_PARTY_NOTICES.md", "prompt.md", "README.md", "README_en.md", "CONDITIONS.md"):
-        shutil.copyfile(ROOT / name, episode / name)
+        shutil.copyfile(ROOT / name, output / name)
     for name in ("runtime", "workspace", "bots", "results"):
-        shutil.copytree(ROOT / name, episode / name,
+        shutil.copytree(ROOT / name, output / name,
                         ignore=shutil.ignore_patterns("target", "__pycache__", "*.pyc"))
     print(output)
 

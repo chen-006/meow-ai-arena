@@ -206,7 +206,7 @@
     "commit": "e70c1f010edfd5d2b4454c6d5a21bee71c0baba4",
     "path": "docs/agent_guides/zh/team.md",
     "extraction": "section 2 onward; episode RULES.md replaces application authoring workflow",
-    "adaptation": "Clarify the final troubleshooting bullet to match RULES.md: first exception/invalid output, three consecutive response timeouts, and immediate input-write timeout shutdown."
+    "adaptation": "Community contest adaptation: replace the inherited service/subcommand workflow with the shipped synchronous CLI, correct fixed-roster/configuration/replay references, and align failure rules with the runtime."
   },
   "runtime_revision": "pr39-process-reuse-r3"
 }

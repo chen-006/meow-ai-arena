@@ -5,6 +5,7 @@ import itertools
 import json
 from pathlib import Path
 import shutil
+import unicodedata
 from arena import play, frozen_strategy, check_environment, CONFIG, LINEUP, SOURCE
 from replay import write_viewer
 from rmuc_arena.worker import SOURCE_LIMIT
@@ -53,8 +54,11 @@ def main():
     parser.add_argument("--output", type=Path, required=True)
     args = parser.parse_args()
     names = [p.stem for p in args.strategies]
-    if len(names) < 2 or len(set(names)) != len(names):
-        parser.error("at least two teams with distinct file stems required")
+    # Use one conservative naming rule on every host, before creating any output.
+    # macOS can normalize Unicode/case; Windows also strips directory suffixes.
+    portable_names = [unicodedata.normalize("NFC", name).casefold().rstrip(" .") for name in names]
+    if len(names) < 2 or not all(portable_names) or len(set(portable_names)) != len(names):
+        parser.error("at least two distinct team names required after Unicode normalization, case folding and trimming trailing spaces/dots")
     if not args.seeds or len(set(args.seeds)) != len(args.seeds):
         parser.error("distinct seeds required")
     if args.output.exists():
