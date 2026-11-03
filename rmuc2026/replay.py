@@ -16,7 +16,7 @@ const D=JSON.parse(document.getElementById('data').textContent), ns='http://www.
 const field=document.getElementById('field'),seek=document.getElementById('seek');
 const colors={red:'#ff7777',blue:'#78bbff'};let index=0,playing=false;
 function shape(tag,attrs,text){const e=document.createElementNS(ns,tag);for(const [k,v] of Object.entries(attrs))e.setAttribute(k,v);if(text!==undefined)e.textContent=text;field.appendChild(e);return e}
-function draw(){field.replaceChildren();const f=D.frames[index];if(!f){document.getElementById('status').textContent='未进入比赛：参见结果中的启动错误。';return}
+function draw(){field.replaceChildren();const f=D.frames[index];if(!f){document.getElementById('status').textContent='未进入比赛：参见结果中的校验或启动错误。';return}
 for(const w of D.arena.obstacles||[])shape('rect',{x:w.x*40,y:w.y*40,width:w.w*40,height:w.h*40,fill:'#67717c',transform:`rotate(${(w.rotation||0)*180/Math.PI} ${(w.x+w.w/2)*40} ${(w.y+w.h/2)*40})`});
 for(const z of D.arena.zones||[])if(z.x!==undefined)shape('circle',{cx:z.x*40,cy:z.y*40,r:10,fill:'none',stroke:'#bbb'});
 for(const [kind,objects] of [['基地',f.bases],['前哨',f.outposts]])for(const [side,b] of Object.entries(objects||{})){shape('rect',{x:b.x*40-15,y:b.y*40-15,width:30,height:30,fill:colors[side]||'#aaa',opacity:b.hp>0?.8:.2});shape('text',{x:b.x*40+18,y:b.y*40-15,fill:colors[side]||'#eee','font-size':13},`${kind} ${Math.round(b.hp||0)}`)}
