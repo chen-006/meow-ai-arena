@@ -45,7 +45,7 @@ The Chinese series **AI 算法对抗大赛** is on Bilibili. The English edition
 
 ## Proposed games
 
-[RMUC 2026 robot team battle](rmuc2026/README_en.md): one Python program controls a 6v6 team, with identical rosters and model 305 serial-leg infantry in slots 3 / 4 / 7 on both sides. Includes source, player materials, reference bots, a round robin and silent replays. This is a proposal, not an announced episode. The subtree retains its Arena-1 Non-Commercial Learning License.
+[RMUC 2026 robot team battle](rmuc2026/README_en.md): one Python program controls a 6v6 team, with identical rosters and model 305 serial-leg infantry in slots 3 / 4 / 7 on both sides. Hosts require Python 3.12+. Includes source, player materials, reference bots, a round robin and silent replays. This is a proposal, not an announced episode. The subtree retains its Arena-1 Non-Commercial Learning License.
 
 ## Submit your own
 

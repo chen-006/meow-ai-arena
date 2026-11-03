@@ -1,5 +1,6 @@
 """Fixed-roster RMUC 2026 matches, using the unmodified Arena-1 referee."""
 import argparse
+from contextlib import ExitStack
 import json
 import os
 from pathlib import Path
@@ -7,6 +8,9 @@ import subprocess
 import sys
 import tempfile
 import time
+from build import IMAGE, require_host_python
+
+require_host_python()
 
 ROOT = Path(__file__).resolve().parent
 RUNTIME = ROOT / "runtime"
@@ -19,7 +23,6 @@ from rmuc_arena.runner import Battle, Policy, PolicyStartupError
 import rmuc_arena.runner as runner
 from rmuc_arena.submissions import save_submission
 from replay import write_viewer
-from build import IMAGE
 
 runner.IMAGE = IMAGE
 CONFIG = json.loads((ROOT / "lineup.json").read_text(encoding="utf-8"))
@@ -39,6 +42,7 @@ def check_environment(trusted_local):
 
 def frozen_strategy(source, destination):
     """Compile and hash a single source; importing/running it happens only in Policy."""
+    require_host_python()
     return save_submission(destination, "team", {"team": Path(source)},
                            team_lineup=LINEUP, season="2026")
 
@@ -65,6 +69,7 @@ def sample(frame):
 
 
 def play(red, blue, *, seed=42, duration=420, trusted_local=False, replay_path=None):
+    require_host_python()
     if isinstance(seed, bool) or not -(2**31) <= seed < 2**31:
         raise ValueError("seed must be a signed 32-bit integer")
     if not 1 <= duration <= 420:
@@ -74,18 +79,21 @@ def play(red, blue, *, seed=42, duration=420, trusted_local=False, replay_path=N
     started = time.monotonic()
     paths = {"red": Path(red).resolve(), "blue": Path(blue).resolve()}
     identity = {}
-    with tempfile.TemporaryDirectory(prefix="meow-rmuc2026-") as temp:
+    with tempfile.TemporaryDirectory(prefix="meow-rmuc2026-") as temp, ExitStack() as cleanup:
         submissions = {team: Path(temp) / team for team in paths}
         for team, path in paths.items():
             manifest = frozen_strategy(path, submissions[team])
             identity[team] = {"name": path.stem, "sha256": manifest["hashes"]["strategy.py"]}
-        # Isolated imports are attributed to the offending side, before constructing Battle.
-        startup_errors = {}
+        # Import each contestant exactly once. The same ready processes enter Battle.
+        # The stack also closes an already-ready peer if any later construction fails.
+        startup_errors, prepared = {}, {}
         for team in paths:
             try:
                 policy = Policy(submissions[team] / "strategy.py", seed * 100 + (10 if team == "blue" else 0),
-                                sandbox=backend, timeout=CONFIG["decision_timeout_s"])
-                policy.close()
+                                sandbox=backend, timeout=CONFIG["decision_timeout_s"],
+                                expected_digest=identity[team]["sha256"])
+                cleanup.callback(policy.close)
+                prepared[team] = policy
             except PolicyStartupError as exc:
                 # Only failures AFTER the trusted worker handshake are player faults.
                 # Runtime/entrypoint failures propagate and never create a scored draw.
@@ -102,7 +110,7 @@ def play(red, blue, *, seed=42, duration=420, trusted_local=False, replay_path=N
             with Battle(red=submissions["red"], blue=submissions["blue"], seed=seed,
                         duration=duration, map_name=CONFIG["map"], sandbox=backend,
                         timeout=CONFIG["decision_timeout_s"], team_lineup=LINEUP,
-                        record=False) as battle:
+                        record=False, prepared_policies=prepared) as battle:
                 arena = battle.match.snapshot()["arena"]
                 if replay_path:
                     frames.append(sample(battle.match.snapshot()))
@@ -140,6 +148,7 @@ def validate_output_paths(output, replay=None):
 
 
 def main():
+    require_host_python()
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--red", type=Path, default=ROOT / "workspace/strategy.py")
     parser.add_argument("--blue", type=Path, default=ROOT / "bots/guard.py")

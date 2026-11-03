@@ -27,7 +27,7 @@
 
 ## 从源码开赛
 
-主办方准备 **Python 3.10+、stable Rust/Cargo 和运行中的 Docker**。策略容器固定 Python 3.12；Python 宿主脚本只用标准库，不需要安装前端、Electron、Node、Bun 或 FastAPI。
+主办方准备 **Python 3.12+、stable Rust/Cargo 和运行中的 Docker**。策略容器固定 Python 3.12，参赛源码应以 Python 3.12 为目标；宿主版本即使更高也不改变策略语言版本。构建、收卷、挑战和比赛入口会在源码校验及输出创建前拒绝旧版宿主，避免把合法的 3.12 语法误记成选手失败。宿主脚本只用标准库，不需要安装前端、Electron、Node、Bun 或 FastAPI。
 
 从仓库根目录运行：
 
@@ -49,6 +49,8 @@ python rmuc2026/tournament.py rmuc2026/bots/assault.py rmuc2026/bots/guard.py --
 
 默认使用 Docker。`--trusted-local` 仅供自己的可信代码调试，该结果总是标为不排名；不要用来执行陌生投稿。`--duration 30` 等短局也明确标为不排名。
 
+每方策略只启动和导入一次。通过启动检查的同一进程会直接进入比赛，保留相同的初始化状态；构造比赛时不重新导入。源码哈希、种子、后端和资源预算须与该场匹配。选手启动失败照常判负；宿主故障中止时，也会清理已启动的另一方进程。
+
 ## 交给模型开发
 
 使用统一 [prompt.md](prompt.md)，从 [workspace/strategy.py](workspace/strategy.py) 模板改进，交付单个 Python 源文件。两份公开陪练的来源和差异见 [SOURCE.json](SOURCE.json)，所有参赛者都可见。
@@ -69,11 +71,11 @@ python -B -m unittest discover -s rmuc2026 -p 'test*.py' -v
 RMUC_DOCKER_TESTS=1 python -B -m unittest discover -s rmuc2026 -p 'test*.py' -v
 ```
 
-这些检查覆盖实际引擎中的双方串联腿阵容、源文件指纹、冻结后篡改、故障计分、回放 HTML 转义，以及不读 stdin、容器启动失败、输出路径冲突、含错误源码的循环赛和停用时机。只读权限的 Ubuntu CI 构建引擎和沙箱后运行全部测试。完整示例赛、真实容器错误注入和运行条件见 [CONDITIONS.md](CONDITIONS.md)。构建、回放生成与单局是否可运行，不代表跨机器性能或模型能力排名。
+这些检查覆盖实际引擎中的双方串联腿阵容、源文件指纹、冻结后篡改、故障计分、回放 HTML 转义，以及不读 stdin、容器启动失败、输出路径冲突、含错误源码的循环赛、停用时机、启动进程复用与清理、Python 3.12 语法和旧宿主拒绝。只读权限的 Ubuntu CI 使用 Python 3.12 构建引擎和沙箱后运行全部测试。完整示例赛、真实容器错误注入和运行条件见 [CONDITIONS.md](CONDITIONS.md)。构建、回放生成与单局是否可运行，不代表跨机器性能或模型能力排名。
 
 ## 来源和许可
 
-运行时从 Arena-1 的固定提交抽取，逐文件哈希见 [SOURCE.json](SOURCE.json)；核心物理规则未修改。执行器与 worker 另有本 PR 的输入时限和启动握手补丁，清单同时保留原文件哈希与当前哈希，并在新结果中记录 `runtime_revision`。源码中含共享的 2027 分支，本包比赛入口只使用 2026。
+运行时从 Arena-1 的固定提交抽取，逐文件哈希见 [SOURCE.json](SOURCE.json)；核心物理规则未修改。执行器与 worker 另有本 PR 的输入时限、启动握手和进程复用补丁，清单同时保留原文件哈希与当前哈希，并在新结果中记录 `runtime_revision`。源码中含共享的 2027 分支，本包比赛入口只使用 2026。
 
 本目录适用 [Arena-1 非商业学习许可证](LICENSE)，**不由上层 MIT 许可重新授权**；第三方依赖仍按各自许可。详见 [第三方说明](THIRD_PARTY_NOTICES.md)。不含音乐、音效、录音、视频、GLB、纹理或原版赛事规则 PDF，也没有音频下载入口。
 

@@ -48,9 +48,9 @@
     },
     {
       "path": "rmuc_arena/runner.py",
-      "sha256": "1ea828bfae3021a07f1e83d59744f650e779fe9c434e9c3cd28a1c57e6828bcc",
+      "sha256": "40187c07afc214d328d1e40352e52c0ca93e2fda0980e5bc45e0ba534bb4d319",
       "upstream_sha256": "e7b541e67a142ae0318c23cbe7b33003b2cb220081521ca338d4c73e8ee24bf7",
-      "patch": "PR #39: bound policy input writes by the decision deadline; classify pre-import runtime failures separately from contestant startup failures."
+      "patch": "PR #39: bound policy input writes, classify pre-import runtime failures, reuse verified ready team processes, and make process cleanup idempotent."
     },
     {
       "path": "rmuc_arena/sdk.py",
@@ -208,5 +208,5 @@
     "extraction": "section 2 onward; episode RULES.md replaces application authoring workflow",
     "adaptation": "Clarify the final troubleshooting bullet to match RULES.md: first exception/invalid output, three consecutive response timeouts, and immediate input-write timeout shutdown."
   },
-  "runtime_revision": "pr39-transport-r2"
+  "runtime_revision": "pr39-process-reuse-r3"
 }

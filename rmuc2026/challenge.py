@@ -4,6 +4,7 @@ import json
 from pathlib import Path
 import shutil
 from arena import ROOT, play, frozen_strategy
+from build import require_host_python
 
 
 def score(result, candidate_side):
@@ -11,6 +12,7 @@ def score(result, candidate_side):
 
 
 def main():
+    require_host_python()
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("strategy", nargs="?", type=Path, default=ROOT / "workspace/strategy.py")
     parser.add_argument("--seeds", nargs="+", type=int, default=[11, 23])

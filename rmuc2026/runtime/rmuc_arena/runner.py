@@ -321,6 +321,7 @@ class PolicyInputTimeout(TimeoutError):
 class Policy:
     def __init__(self, path, seed, sandbox="docker", timeout=0.2, expected_digest=None, deadline=None, stop_event=None, dynamic_messages=False):
         self.timeout, self.sandbox, self.disabled = timeout, sandbox, False
+        self.seed, self._closed = seed, False
         self.deadline, self.stop_event = deadline, stop_event
         self.dynamic_messages = dynamic_messages
         self.logs, self.lines, self.calls, self.errors = deque(maxlen=32), queue.Queue(maxsize=2), 0, 0
@@ -540,6 +541,9 @@ class Policy:
         return actions
 
     def close(self):
+        if getattr(self, "_closed", False):
+            return
+        self._closed = True
         self.disabled = True
         if hasattr(self, "input_stopped"):
             self.input_stopped.set()
@@ -585,7 +589,14 @@ class Policy:
 
 
 class Battle:
-    def __init__(self, red, blue, seed=42, duration=420, map_name=None, sandbox="docker", timeout=0.2, deadline=None, stop_event=None, decks=None, team_lineup=None, team_lineups=None, practice_lineup=False, free_team_strategies=None, battle_settings=None, record=True):
+    def __init__(self, red, blue, seed=42, duration=420, map_name=None, sandbox="docker", timeout=0.2, deadline=None, stop_event=None, decks=None, team_lineup=None, team_lineups=None, practice_lineup=False, free_team_strategies=None, battle_settings=None, record=True, prepared_policies=None):
+        # Optional ready whole-team processes are borrowed during construction and
+        # closed with the battle once accepted. Callers must clean up on any failure;
+        # Policy.close is idempotent so one owner can guard the entire lifetime.
+        if prepared_policies is not None:
+            prepared_policies = dict(prepared_policies)
+            if decks is not None or set(prepared_policies) != {"red", "blue"}:
+                raise ValueError("prepared policies require exactly red and blue whole-team controllers")
         # The field follows the strategies' rules season unless the caller names it.
         if map_name is None:
             from .submissions import manifest_season
@@ -680,6 +691,8 @@ class Battle:
                     raise ValueError(f"This submission does not use the {season} rules; create and submit a {season} strategy workspace")
                 if manifest["mode"] not in ("team", "squad", "distributed"):
                     raise ValueError("Assemble robot submissions into a squad before matching")
+                if prepared_policies is not None and manifest["mode"] != "team":
+                    raise ValueError("prepared policies require whole-team submissions")
                 profile = load_profile(source)
                 self.metadata["teams"][team] = {"name": Path(source).name, "version": manifest["version"], "mode": manifest["mode"], "agent": profile["agent"],
                                                 **({"display_name": profile["display_name"]} if profile.get("display_name") else {})}
@@ -689,8 +702,19 @@ class Battle:
                     if self.cancelled():
                         raise TimeoutError("Practice development window ended")
                     slots = None if manifest["mode"] == "team" else [int(key)]
-                    policy = Policy(path, seed * 100 + (0 if team == "red" else 10) + (int(key) if slots else 0), sandbox, timeout,
-                                    expected_digest=manifest["hashes"][manifest["entries"][key]],deadline=deadline,stop_event=stop_event)
+                    policy_seed = seed * 100 + (0 if team == "red" else 10) + (int(key) if slots else 0)
+                    digest = manifest["hashes"][manifest["entries"][key]]
+                    if prepared_policies is None:
+                        policy = Policy(path, policy_seed, sandbox, timeout,
+                                        expected_digest=digest,deadline=deadline,stop_event=stop_event)
+                    else:
+                        policy = prepared_policies[team]
+                        if (policy.disabled or policy.calls or policy.pending_response is not None
+                                or policy.digest != digest or policy.seed != policy_seed
+                                or policy.sandbox != sandbox or policy.timeout != timeout
+                                or policy.deadline != deadline or policy.stop_event is not stop_event
+                                or policy.dynamic_messages):
+                            raise ValueError(f"Invalid prepared policy for {team}: source, seed or runtime differs")
                     self.policies.append((team, slots, policy))
         except BaseException:
             self.close()

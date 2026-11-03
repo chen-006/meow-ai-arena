@@ -8,6 +8,7 @@ import shutil
 from arena import play, frozen_strategy, check_environment, CONFIG, LINEUP, SOURCE
 from replay import write_viewer
 from rmuc_arena.worker import SOURCE_LIMIT
+from build import require_host_python
 
 
 def standings(games, names):
@@ -45,6 +46,7 @@ def validation_forfeit(red, blue, seed, errors, source_hashes, fingerprints):
 
 
 def main():
+    require_host_python()
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("strategies", nargs="+", type=Path)
     parser.add_argument("--seeds", nargs="+", type=int, default=[11, 23])
