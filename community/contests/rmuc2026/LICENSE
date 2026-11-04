@@ -1,0 +1,64 @@
+Arena-1 Non-Commercial Learning License 1.0
+Arena-1 非商业学习许可证 1.0
+
+Copyright (c) 2026 RM-Arena and contributors. All rights reserved except
+as expressly granted below.
+
+1. Scope and permitted purpose
+Subject to these terms, you may access, run, copy, study and modify the
+original Arena-1 software and project-created assets solely for non-commercial
+personal learning and non-commercial educational activities. You may share
+unmodified or modified copies solely for the same permitted purpose, without
+charging a fee, provided you retain this license, copyright notices and
+applicable third-party notices, and clearly identify your changes.
+
+2. Commercial use is prohibited
+This license does not permit any commercial use. Prohibited uses include
+selling or licensing the software or derivatives; incorporating them into
+commercial products, services or business production systems; operating paid
+or advertising-supported hosted services; and using the software to provide
+paid training, consulting or other services. Making the software available
+for free does not by itself make an otherwise commercial use non-commercial.
+Any use outside the permitted purpose requires prior written permission from
+the relevant copyright holders. No such permission is implied by public
+availability, a contribution, a download or a GitHub fork.
+
+3. Derivatives and redistribution
+The permissions above may not be used to remove or bypass the non-commercial
+learning restriction on the original work. Recipients must receive these
+terms. You may separately license your original additions only to the extent
+that doing so does not grant rights to Arena-1 beyond this license.
+
+4. Third-party material and trademarks
+This license covers only material the licensor is entitled to license.
+Third-party libraries, runtimes, recordings and other separately identified
+material remain subject to their respective licenses and permissions. This
+license does not relicense those materials or grant trademark, endorsement,
+or affiliation rights. Consult THIRD_PARTY_NOTICES.md and notices distributed
+with binaries.
+
+5. Termination
+The permissions granted here terminate automatically if you violate these
+terms. You must stop use and distribution of the covered material unless the
+relevant copyright holders expressly reinstate permission in writing.
+
+6. Disclaimer
+TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE SOFTWARE AND ASSETS ARE
+PROVIDED "AS IS", WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED,
+INCLUDING MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE
+FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY ARISING FROM OR IN CONNECTION WITH
+THE SOFTWARE OR ASSETS OR THEIR USE.
+
+中文说明（与上述条款一并阅读）：
+本项目仅供非商业个人学习及非商业教学活动使用，允许在该范围内阅读、
+运行、复制、修改及免费分享，但必须保留本许可证、版权及第三方声明，
+并注明修改。禁止商用，包括销售、商业产品集成、企业生产运营、收费或
+广告支持的在线服务，以及收费培训、咨询等服务。免费提供不当然等于
+非商业使用。超出上述用途，必须事先取得相关权利人的书面授权。
+第三方依赖及外部素材仍适用各自许可，本许可证不改变其权利归属。
+项目按现状提供，不附带保证，责任限制以适用法律允许的范围为限。
+
+This is a source-available license with use restrictions, not an
+OSI-approved open-source license. In case of a translation discrepancy,
+the English terms above govern.

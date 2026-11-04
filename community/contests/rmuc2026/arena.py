@@ -1,0 +1,173 @@
+"""Fixed-roster RMUC 2026 matches, using the unmodified Arena-1 referee."""
+import argparse
+from contextlib import ExitStack
+import json
+import os
+from pathlib import Path
+import subprocess
+import sys
+import tempfile
+import time
+from build import IMAGE, require_host_python
+
+require_host_python()
+
+ROOT = Path(__file__).resolve().parent
+RUNTIME = ROOT / "runtime"
+os.environ["RMUC_RESOURCE_ROOT"] = str(RUNTIME)
+os.environ.pop("RMUC_SIM_BINARY", None)
+sys.path.insert(0, str(RUNTIME))
+from rmuc_arena.engine import Match
+from rmuc_arena.models import normalize_team_lineup
+from rmuc_arena.runner import Battle, Policy, PolicyStartupError
+import rmuc_arena.runner as runner
+from rmuc_arena.submissions import save_submission
+from replay import write_viewer
+
+runner.IMAGE = IMAGE
+CONFIG = json.loads((ROOT / "lineup.json").read_text(encoding="utf-8"))
+LINEUP = normalize_team_lineup(CONFIG["lineup"], "2026")
+SOURCE = json.loads((ROOT / "SOURCE.json").read_text())
+SOURCE_COMMIT = SOURCE["commit"]
+
+
+def check_environment(trusted_local):
+    if not trusted_local:
+        subprocess.run(["docker", "image", "inspect", IMAGE], check=True,
+                       stdout=subprocess.DEVNULL)
+    # Check embedded rules and the actual binary before attributing any fault to a bot.
+    with Match(duration=1, map_name=CONFIG["map"]) as engine:
+        return {key: engine.snapshot()[key] for key in ("engine_hash", "rules_hash")}
+
+
+def frozen_strategy(source, destination):
+    """Compile and hash a single source; importing/running it happens only in Policy."""
+    require_host_python()
+    return save_submission(destination, "team", {"team": Path(source)},
+                           team_lineup=LINEUP, season="2026")
+
+
+def adjudicate(winner, diagnostics):
+    """Recoverable timeouts remain in-play; a disabled team forfeits, never vanishes."""
+    disabled = {entry["team"] for entry in diagnostics if entry.get("disabled")}
+    if len(disabled) == 2:
+        return None, "double_policy_forfeit"
+    if disabled:
+        return ("blue" if "red" in disabled else "red"), "policy_forfeit"
+    return winner, "engine"
+
+
+def sample(frame):
+    keys = ("slot", "team", "x", "y", "z", "hp", "max_hp", "alive", "role", "aim")
+    structures = ("x", "y", "z", "hp", "max_hp", "owner", "ever_destroyed")
+    return {"time": frame["time"],
+            "robots": [{k: robot.get(k) for k in keys} for robot in frame["robots"]],
+            **{name: {team: {key: value[key] for key in structures if key in value}
+                       for team, value in frame[name].items()} for name in ("bases", "outposts")},
+            "teams": {team: {key: value[key] for key in ("resources", "attack_damage", "kills")}
+                      for team, value in frame["teams"].items()}}
+
+
+def play(red, blue, *, seed=42, duration=420, trusted_local=False, replay_path=None):
+    require_host_python()
+    if isinstance(seed, bool) or not -(2**31) <= seed < 2**31:
+        raise ValueError("seed must be a signed 32-bit integer")
+    if not 1 <= duration <= 420:
+        raise ValueError("duration must be 1..420")
+    fingerprints = check_environment(trusted_local)
+    backend = "trusted-local" if trusted_local else "docker"
+    started = time.monotonic()
+    paths = {"red": Path(red).resolve(), "blue": Path(blue).resolve()}
+    identity = {}
+    with tempfile.TemporaryDirectory(prefix="meow-rmuc2026-") as temp, ExitStack() as cleanup:
+        submissions = {team: Path(temp) / team for team in paths}
+        for team, path in paths.items():
+            manifest = frozen_strategy(path, submissions[team])
+            identity[team] = {"name": path.stem, "sha256": manifest["hashes"]["strategy.py"]}
+        # Import each contestant exactly once. The same ready processes enter Battle.
+        # The stack also closes an already-ready peer if any later construction fails.
+        startup_errors, prepared = {}, {}
+        for team in paths:
+            try:
+                policy = Policy(submissions[team] / "strategy.py", seed * 100 + (10 if team == "blue" else 0),
+                                sandbox=backend, timeout=CONFIG["decision_timeout_s"],
+                                expected_digest=identity[team]["sha256"])
+                cleanup.callback(policy.close)
+                prepared[team] = policy
+            except PolicyStartupError as exc:
+                # Only failures AFTER the trusted worker handshake are player faults.
+                # Runtime/entrypoint failures propagate and never create a scored draw.
+                startup_errors[team] = str(exc)[-1500:]
+        frames = []
+        arena = {}
+        if startup_errors:
+            winner = None if len(startup_errors) == 2 else ("blue" if "red" in startup_errors else "red")
+            result = {"winner": winner, "engine_winner": None, "reason": "startup_forfeit", "adjudication": "startup_forfeit",
+                      "policy_errors": len(startup_errors), "diagnostics": [
+                          {"team": team, "disabled": True, "time": 0, "message": message}
+                          for team, message in startup_errors.items()]}
+        else:
+            with Battle(red=submissions["red"], blue=submissions["blue"], seed=seed,
+                        duration=duration, map_name=CONFIG["map"], sandbox=backend,
+                        timeout=CONFIG["decision_timeout_s"], team_lineup=LINEUP,
+                        record=False, prepared_policies=prepared) as battle:
+                arena = battle.match.snapshot()["arena"]
+                if replay_path:
+                    frames.append(sample(battle.match.snapshot()))
+                while battle.match.status != "finished":
+                    frame = battle.step()
+                    if replay_path and (battle.match.tick % 20 == 0 or battle.match.status == "finished"):
+                        frames.append(sample(frame))
+                raw = battle.result()
+                winner, rule = adjudicate(raw["winner"], battle.diagnostics)
+                result = {**raw, "engine_winner": raw["winner"], "winner": winner,
+                          "adjudication": rule, "diagnostics": battle.diagnostics}
+        result.update(seed=seed, season="2026", lineup=LINEUP, strategies=identity,
+                      ranked=duration == 420 and not trusted_local,
+                      duration_s=duration, backend=backend, source_commit=SOURCE_COMMIT,
+                      runtime_revision=SOURCE["runtime_revision"],
+                      wall_seconds=round(time.monotonic() - started, 3), **fingerprints)
+        if replay_path:
+            write_viewer(Path(replay_path), {"result": result, "arena": arena, "frames": frames})
+        return result
+
+
+def validate_output_paths(output, replay=None):
+    output = output.resolve()
+    replay = replay.resolve() if replay is not None else None
+    if replay is not None and (output == replay or output in replay.parents or replay in output.parents):
+        raise ValueError("--output and --replay must be distinct files with no ancestor/descendant relationship")
+    for path in (output, replay):
+        if path is None:
+            continue
+        if path.exists():
+            raise ValueError("output already exists; select new filenames")
+        if any(parent.exists() and not parent.is_dir() for parent in path.parents):
+            raise ValueError(f"output parent is not a directory: {path.parent}")
+    return output, replay
+
+
+def main():
+    require_host_python()
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--red", type=Path, default=ROOT / "workspace/strategy.py")
+    parser.add_argument("--blue", type=Path, default=ROOT / "bots/guard.py")
+    parser.add_argument("--seed", type=int, default=42)
+    parser.add_argument("--duration", type=int, default=420)
+    parser.add_argument("--trusted-local", action="store_true", help="ONLY for your own trusted code; unranked")
+    parser.add_argument("--output", type=Path, default=ROOT / "practice/match.json")
+    parser.add_argument("--replay", type=Path, help="write a standalone silent HTML replay of this exact match")
+    args = parser.parse_args()
+    try:
+        args.output, args.replay = validate_output_paths(args.output, args.replay)
+    except ValueError as exc:
+        parser.error(str(exc))
+    result = play(args.red, args.blue, seed=args.seed, duration=args.duration,
+                  trusted_local=args.trusted_local, replay_path=args.replay)
+    args.output.parent.mkdir(parents=True, exist_ok=True)
+    args.output.write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    print(json.dumps(result, ensure_ascii=False))
+
+
+if __name__ == "__main__":
+    main()

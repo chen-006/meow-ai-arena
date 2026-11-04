@@ -1,0 +1,251 @@
+[
+  {
+    "path": "projectile_spread_half_angle_deg.17mm",
+    "label": "17 mm 弹丸散布半角",
+    "group": "弹道与视觉",
+    "min": 0,
+    "max": 15,
+    "step": 0.1,
+    "unit": "°"
+  },
+  {
+    "path": "projectile_spread_half_angle_deg.42mm",
+    "label": "42 mm 弹丸散布半角",
+    "group": "弹道与视觉",
+    "min": 0,
+    "max": 15,
+    "step": 0.1,
+    "unit": "°"
+  },
+  {
+    "path": "ground_camera_fov_deg.horizontal",
+    "label": "地面相机水平视场",
+    "group": "弹道与视觉",
+    "min": 10,
+    "max": 180,
+    "step": 1,
+    "unit": "°"
+  },
+  {
+    "path": "ground_camera_fov_deg.vertical",
+    "label": "地面相机垂直视场",
+    "group": "弹道与视觉",
+    "min": 10,
+    "max": 150,
+    "step": 1,
+    "unit": "°"
+  },
+  {
+    "path": "overheat_vision_range_multiplier",
+    "label": "过热时视距倍率",
+    "group": "弹道与视觉",
+    "min": 0.05,
+    "max": 1,
+    "step": 0.05,
+    "unit": "×"
+  },
+  {
+    "path": "core_move_delay_s",
+    "label": "科技核心移动延迟",
+    "group": "机械臂与装配",
+    "min": 0.05,
+    "max": 30,
+    "step": 0.05,
+    "unit": "s"
+  },
+  {
+    "path": "arm_insert_speed_mps",
+    "label": "机械臂插入速度",
+    "group": "机械臂与装配",
+    "min": 0.01,
+    "max": 1,
+    "step": 0.01,
+    "unit": "m/s"
+  },
+  {
+    "path": "arm_translate_speed_mps",
+    "label": "机械臂平移速度",
+    "group": "机械臂与装配",
+    "min": 0.01,
+    "max": 1,
+    "step": 0.01,
+    "unit": "m/s"
+  },
+  {
+    "path": "arm_rotate_speed_deg_s",
+    "label": "机械臂旋转速度",
+    "group": "机械臂与装配",
+    "min": 1,
+    "max": 720,
+    "step": 1,
+    "unit": "°/s"
+  },
+  {
+    "path": "assembly_difficulties.0.tip_tolerance_m",
+    "label": "1 级装配末端容差",
+    "group": "机械臂与装配",
+    "min": 0.001,
+    "max": 0.2,
+    "step": 0.001,
+    "unit": "m"
+  },
+  {
+    "path": "assembly_difficulties.0.confirm_hold_s",
+    "label": "1 级装配确认时间",
+    "group": "机械臂与装配",
+    "min": 0.05,
+    "max": 5,
+    "step": 0.05,
+    "unit": "s"
+  },
+  {
+    "path": "assembly_difficulties.1.tip_tolerance_m",
+    "label": "2 级装配末端容差",
+    "group": "机械臂与装配",
+    "min": 0.001,
+    "max": 0.2,
+    "step": 0.001,
+    "unit": "m"
+  },
+  {
+    "path": "assembly_difficulties.1.confirm_hold_s",
+    "label": "2 级装配确认时间",
+    "group": "机械臂与装配",
+    "min": 0.05,
+    "max": 5,
+    "step": 0.05,
+    "unit": "s"
+  },
+  {
+    "path": "assembly_difficulties.2.tip_tolerance_m",
+    "label": "3 级装配末端容差",
+    "group": "机械臂与装配",
+    "min": 0.001,
+    "max": 0.2,
+    "step": 0.001,
+    "unit": "m"
+  },
+  {
+    "path": "assembly_difficulties.2.confirm_hold_s",
+    "label": "3 级装配确认时间",
+    "group": "机械臂与装配",
+    "min": 0.05,
+    "max": 5,
+    "step": 0.05,
+    "unit": "s"
+  },
+  {
+    "path": "assembly_difficulties.3.tip_tolerance_m",
+    "label": "4 级装配末端容差",
+    "group": "机械臂与装配",
+    "min": 0.001,
+    "max": 0.2,
+    "step": 0.001,
+    "unit": "m"
+  },
+  {
+    "path": "assembly_difficulties.3.confirm_hold_s",
+    "label": "4 级装配确认时间",
+    "group": "机械臂与装配",
+    "min": 0.05,
+    "max": 5,
+    "step": 0.05,
+    "unit": "s"
+  },
+  {
+    "path": "launcher_install.stationary_s",
+    "label": "发射机构安装静止时间",
+    "group": "2027 空中与重型机器人",
+    "min": 0.5,
+    "max": 60,
+    "step": 0.5,
+    "unit": "s",
+    "seasons": [
+      "2027"
+    ]
+  },
+  {
+    "path": "launcher_install.dock_radius_m",
+    "label": "发射机构安装距离",
+    "group": "2027 空中与重型机器人",
+    "min": 0.05,
+    "max": 1,
+    "step": 0.05,
+    "unit": "m",
+    "seasons": [
+      "2027"
+    ]
+  },
+  {
+    "path": "launcher_install.max_speed_mps",
+    "label": "安装时最大底盘速度",
+    "group": "2027 空中与重型机器人",
+    "min": 0.01,
+    "max": 0.5,
+    "step": 0.01,
+    "unit": "m/s",
+    "seasons": [
+      "2027"
+    ]
+  },
+  {
+    "path": "drone_impact.min_normal_speed_mps",
+    "label": "无人机撞击最低法向速度",
+    "group": "2027 空中与重型机器人",
+    "min": 0.1,
+    "max": 10,
+    "step": 0.1,
+    "unit": "m/s",
+    "seasons": [
+      "2027"
+    ]
+  },
+  {
+    "path": "drone_impact.min_impulse_n_s",
+    "label": "无人机撞击最低冲量",
+    "group": "2027 空中与重型机器人",
+    "min": 0.01,
+    "max": 5,
+    "step": 0.01,
+    "unit": "N·s",
+    "seasons": [
+      "2027"
+    ]
+  },
+  {
+    "path": "drone_impact.plate_interval_s",
+    "label": "同护甲撞击判定间隔",
+    "group": "2027 空中与重型机器人",
+    "min": 0.05,
+    "max": 5,
+    "step": 0.05,
+    "unit": "s",
+    "seasons": [
+      "2027"
+    ]
+  },
+  {
+    "path": "drone_impact.recovery_s",
+    "label": "无人机撞击恢复时间",
+    "group": "2027 空中与重型机器人",
+    "min": 0.05,
+    "max": 10,
+    "step": 0.05,
+    "unit": "s",
+    "seasons": [
+      "2027"
+    ]
+  },
+  {
+    "path": "drone_projectile_hits.17mm_integrity_wear",
+    "label": "17 mm 命中无人机护圈损耗",
+    "group": "2027 空中与重型机器人",
+    "min": 0,
+    "max": 1,
+    "step": 0.05,
+    "unit": "",
+    "seasons": [
+      "2027"
+    ]
+  }
+]
