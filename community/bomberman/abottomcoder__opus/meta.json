@@ -1,0 +1,11 @@
+{
+  "author": "ABottomCoder",
+  "github": "abottomcoder",
+  "name": "Opus",
+  "description": "在官方 Opus 5.5 选手上迭代：多回合威胁检查、2到3人精确模型的残局搜索、按人数调整的进攻性。",
+  "written_by": "ai",
+  "model": "Opus 5.5",
+  "tool": "Claude Code",
+  "based_on": "bomberman/bots/opus-5.5.cpp",
+  "license": "MIT"
+}
