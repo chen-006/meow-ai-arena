@@ -1,0 +1,68 @@
+{
+ "commit": "cf46e8c1f0177f745af473c804240262f5d9d444",
+ "detail": {
+  "ci95": null,
+  "field": [
+   {
+    "name": "GPT-6 Astra",
+    "score": 381.9
+   },
+   {
+    "name": "GPT-6 Sol",
+    "score": 295.6
+   },
+   {
+    "name": "Opus 5.5",
+    "score": 289.9
+   },
+   {
+    "name": "DeepSeek V4.1 Flash",
+    "score": 247.7
+   },
+   {
+    "name": "Qwen 3.8 Max",
+    "score": 188.2
+   },
+   {
+    "name": "GLM 5.3",
+    "score": 181.2
+   },
+   {
+    "name": "Kimi K3",
+    "score": 152.5
+   },
+   {
+    "name": "豆包 Seed 2.1",
+    "score": 130.5
+   },
+   {
+    "name": "MiMo V2.6 Pro",
+    "score": 38.2
+   },
+   {
+    "name": "Base",
+    "score": 0.0
+   }
+  ],
+  "field_size": 11,
+  "games_note": "330 局",
+  "rank": 2
+ },
+ "entry": "abottomcoder__opus",
+ "env": {
+  "compiler": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+  "cpus": 4,
+  "platform": "Linux-7.0.0-1017-azure-x86_64-with-glibc2.39",
+  "python": "3.12.3"
+ },
+ "episode": "bomberman",
+ "errors": [],
+ "files": {
+  "bot.cpp": "f0ea1e86681dacdbd10e85ef2ea4f0c87a029a4511d6c49e0fe985036b80521b"
+ },
+ "mode": "quick",
+ "schema": 1,
+ "score": 367.3,
+ "status": "pass",
+ "time": "2026-11-05T12:07:22Z"
+}
