@@ -1,0 +1,79 @@
+{
+ "commit": "7013bcc90929cc1abeb56c7915b67a6a5a6e9eee",
+ "detail": {
+  "ci95": [
+   188.8,
+   272.8
+  ],
+  "field": [
+   {
+    "name": "Fable 5.1",
+    "score": 176.2
+   },
+   {
+    "name": "GPT-6.1 Sol",
+    "score": 170.6
+   },
+   {
+    "name": "GPT-6 Astra",
+    "score": 158.7
+   },
+   {
+    "name": "Sonnet 5.5",
+    "score": 106.4
+   },
+   {
+    "name": "Opus 5.5",
+    "score": 100.3
+   },
+   {
+    "name": "DeepSeek V4.1 Flash",
+    "score": 86.2
+   },
+   {
+    "name": "MiMo V2.6 Pro",
+    "score": 15.2
+   },
+   {
+    "name": "基准",
+    "score": 0.0
+   },
+   {
+    "name": "Kimi K3",
+    "score": -10.2
+   },
+   {
+    "name": "Qwen 3.8 Max",
+    "score": -19.3
+   },
+   {
+    "name": "GLM 5.3",
+    "score": -85.9
+   },
+   {
+    "name": "豆包 Seed 2.1 Turbo",
+    "score": -221.2
+   }
+  ],
+  "field_size": 13,
+  "games_note": "180 局",
+  "rank": 1
+ },
+ "entry": "mbfcasper__meowmind-p3-distill",
+ "env": {
+  "compiler": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+  "cpus": 4,
+  "platform": "Linux-7.0.0-1017-azure-x86_64-with-glibc2.39",
+  "python": "3.12.3"
+ },
+ "episode": "ctf",
+ "errors": [],
+ "files": {
+  "bot.cpp": "efce09324d989b5668ff0a14bdcf111e0564fb5b9099113794c252cedd2ce0e2"
+ },
+ "mode": "quick",
+ "schema": 1,
+ "score": 231.2,
+ "status": "pass",
+ "time": "2026-11-05T18:24:51Z"
+}
