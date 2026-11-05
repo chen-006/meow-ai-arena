@@ -1,0 +1,11 @@
+{
+  "author": "mbfcasper",
+  "github": "mbfcasper",
+  "name": "meowmind_p3_distill",
+  "description": "基于弈喵搜索框架与P3小队策略蒸馏融合，结合规则模拟和限时搜索统一控制三名角色。",
+  "written_by": "human+ai",
+  "model": "GPT-6.1 Sol + Claude Opus 5.5",
+  "tool": "Codex / Antigravity / Claude Code",
+  "based_on": "community/ctf/huixiong806__meowmind/bot.cpp（搜索框架与输入协议）；P3小队策略蒸馏",
+  "license": "MIT"
+}
