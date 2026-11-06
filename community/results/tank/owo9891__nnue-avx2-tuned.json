@@ -1,5 +1,5 @@
 {
- "commit": "c32f4496f04bd9c0ad3427b1d2919a92a31a21a2",
+ "commit": "d29ef39dbe811aac20f68b9780856ec6c35d52d1",
  "detail": {
   "budget": {
    "budget_kind": "cpu",
@@ -80,10 +80,10 @@
    {
     "display": "GPT-6.1 Sol Ultrafast（Codex CLI）",
     "draws": 0,
-    "losses": 1,
+    "losses": 0,
     "name": "SolUF",
     "rating": 466.92800596466685,
-    "wins": 19
+    "wins": 20
    },
    {
     "display": "Gemini 4 Argon Contributor（OpenCode Go）",
@@ -96,18 +96,18 @@
    {
     "display": "GPT-6.1 Sol",
     "draws": 0,
-    "losses": 0,
+    "losses": 1,
     "name": "Sol",
     "rating": 318.7995999432353,
-    "wins": 20
+    "wins": 19
    },
    {
     "display": "Claude Opus 5.5",
     "draws": 0,
-    "losses": 0,
+    "losses": 1,
     "name": "Opus",
     "rating": 258.78757366446996,
-    "wins": 20
+    "wins": 19
    },
    {
     "display": "Muse Wonder Full",
@@ -211,11 +211,11 @@
  "episode": "tank",
  "errors": [],
  "files": {
-  "bot.cpp": "5abe3e5a9fc4531e6e191e5eee92a734ee97e9bde06d8113046701d50edf88b2"
+  "bot.cpp": "e1e992f0d67bd7d5dff50ce3735aa11485ef87217a941e078e2501115348e3f9"
  },
  "mode": "quick",
  "schema": 1,
- "score": 887.4,
+ "score": 867.6,
  "status": "pass",
- "time": "2026-11-06T00:09:19Z"
+ "time": "2026-11-06T18:02:53Z"
 }
