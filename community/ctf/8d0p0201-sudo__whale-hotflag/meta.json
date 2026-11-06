@@ -1,0 +1,11 @@
+{
+  "author": "小鲸鱼",
+  "github": "8d0p0201-sudo",
+  "name": "小鲸鱼热旗（Whale HotFlag）",
+  "description": "按人数换打法：5 方以内在 Astra 上加热旗、多场景推演和自适应限时，6 方以上用 Sol 的混战打法。",
+  "written_by": "human+ai",
+  "model": "Opus 5.5",
+  "tool": "Claude Code",
+  "based_on": "ctf/bots/gpt-6-astra.cpp（5 方以内）；ctf/bots/gpt-6.1-sol.cpp（6 方以上）",
+  "license": "MIT"
+}
