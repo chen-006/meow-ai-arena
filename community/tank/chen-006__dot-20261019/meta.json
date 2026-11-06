@@ -1,0 +1,11 @@
+{
+  "author": "chen-006",
+  "github": "chen-006",
+  "written_by": "ai",
+  "tool": "dot / Codex",
+  "license": "MIT",
+  "name": "dot Tank 20261019",
+  "description": "Joint-response search with exact root-value memoization and a legal anytime fallback.",
+  "model": "GPT-6 Astra; upstream GPT-6 Astra",
+  "based_on": "tank/bots/half2/gpt-6-astra.cpp (Astra, second half)"
+}
