@@ -1,5 +1,5 @@
 {
- "commit": "8a75aa5383250c23dbabaeccc966b8efed8d896c",
+ "commit": "c32f4496f04bd9c0ad3427b1d2919a92a31a21a2",
  "detail": {
   "budget": {
    "budget_kind": "cpu",
@@ -72,18 +72,18 @@
    {
     "display": "GPT-6 Astra",
     "draws": 0,
-    "losses": 1,
+    "losses": 0,
     "name": "Astra",
     "rating": 506.9454874458487,
-    "wins": 19
+    "wins": 20
    },
    {
     "display": "GPT-6.1 Sol Ultrafast（Codex CLI）",
     "draws": 0,
-    "losses": 0,
+    "losses": 1,
     "name": "SolUF",
     "rating": 466.92800596466685,
-    "wins": 20
+    "wins": 19
    },
    {
     "display": "Gemini 4 Argon Contributor（OpenCode Go）",
@@ -96,18 +96,18 @@
    {
     "display": "GPT-6.1 Sol",
     "draws": 0,
-    "losses": 1,
+    "losses": 0,
     "name": "Sol",
     "rating": 318.7995999432353,
-    "wins": 19
+    "wins": 20
    },
    {
     "display": "Claude Opus 5.5",
     "draws": 0,
-    "losses": 1,
+    "losses": 0,
     "name": "Opus",
     "rating": 258.78757366446996,
-    "wins": 19
+    "wins": 20
    },
    {
     "display": "Muse Wonder Full",
@@ -211,11 +211,11 @@
  "episode": "tank",
  "errors": [],
  "files": {
-  "bot.cpp": "6956a6ba57363e402199bcfb871fbbdd11ba274736616def5e69a62e3d3dd59a"
+  "bot.cpp": "5abe3e5a9fc4531e6e191e5eee92a734ee97e9bde06d8113046701d50edf88b2"
  },
  "mode": "quick",
  "schema": 1,
- "score": 849.6,
+ "score": 887.4,
  "status": "pass",
- "time": "2026-11-02T19:08:45Z"
+ "time": "2026-11-06T00:09:19Z"
 }
