@@ -1,0 +1,13 @@
+# 本地副产物：回放网页里已经内嵌了完整数据，旁边的 .json 只是本地副本
+replays/*.json
+
+# 本地编译、回放和复盘产物
+workspace/build/
+workspace/replays/
+challenge-runs/
+*.exe
+__pycache__/
+*.pyc
+
+# ZCode 安全钩子的本地状态，不是比赛材料
+.mimosa/

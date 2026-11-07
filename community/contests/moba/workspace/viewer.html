@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>峡谷对决回放</title>
+<style>
+:root{color-scheme:dark;--bg:#0d1219;--panel:#161e2a;--line:#2a3547;--ink:#e6ecf5;--muted:#93a1b5;font-family:"Segoe UI","Microsoft YaHei",sans-serif}
+*{box-sizing:border-box}body{margin:0;padding:16px;background:var(--bg);color:var(--ink)}
+header{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:baseline;margin-bottom:10px}h1{font-size:21px;margin:0}.muted{color:var(--muted);font-size:12px}
+.layout{display:grid;grid-template-columns:minmax(380px,1fr) 350px;gap:12px}.panel{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:10px}
+svg{width:100%;display:block;border-radius:6px;background:#101722}
+.controls{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:8px}
+button,select,input{background:#243149;color:var(--ink);border:1px solid #3c4d68;border-radius:6px;padding:5px 9px;font:inherit;font-size:13px}
+button{cursor:pointer}button:hover{background:#31425d}input[type=range]{flex:1;min-width:140px;padding:0}
+.team{border:1px solid var(--line);border-radius:8px;padding:6px 8px;margin-bottom:8px;font-size:12px}
+.hero{display:grid;grid-template-columns:22px 34px 1fr 30px;gap:6px;align-items:center;padding:2px 0}
+.glyph{width:20px;height:20px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#0b111a}
+.hpbar{height:6px;border-radius:3px;background:#313c4e;overflow:hidden}.hpbar i{display:block;height:100%}
+h2{font-size:13px;color:var(--muted);margin:10px 0 6px}#events,#orders{font-size:12px;line-height:1.65;max-height:180px;overflow:auto;white-space:pre-wrap}
+@media(max-width:900px){.layout{grid-template-columns:1fr}body{padding:10px}}
+</style></head><body>
+<header><h1>峡谷对决</h1><span class="muted" id="sub"></span></header>
+<div class="layout">
+<section class="panel"><svg id="board"></svg>
+<div class="controls"><button id="play">播放</button><button id="prev">◀</button><button id="next">▶</button>
+<input id="seek" type="range" min="0" value="0" aria-label="回合"><span id="turn" class="muted"></span>
+<select id="speed" aria-label="速度"><option value="1">1×</option><option value="3" selected>3×</option><option value="8">8×</option><option value="20">20×</option></select></div>
+<div class="controls"><select id="keys" aria-label="关键回合"><option value="">跳到关键回合…</option></select></div>
+<div class="muted" style="margin-top:6px">圆底汉字 = 英雄（数字为等级，金环 = 技能就绪），方块 = 小兵，塔楼 = 防御塔，菱形 = 水晶，兽头 = 野区营地。点右侧阵营可高亮。←→ 逐回合，空格播放。</div>
+</section>
+<aside class="panel"><div id="teams"></div><h2>本回合事件</h2><div id="events"></div><h2>指令</h2><div id="orders"></div></aside>
+</div>
+<script>
+const R=/*__REPLAY__*/null;
+const $=id=>document.getElementById(id);
+const C=['#4da3ff','#ff5d73'];                       // 0 号队蓝、1 号队红
+const CLS_GLYPH=['战','刺','法','射','辅'];
+let i=0,playing=false,last=0,focus=-1;
+const S=R?R.header.size:0;
+const name=id=>{                      // 单位的可读名字
+  if(id<10)return (id<5?'蓝':'红')+'·'+CLS_GLYPH[id%5];
+  if(id<22)return (id<16?'蓝':'红')+'塔'+id;
+  if(id<24)return (id===22?'蓝':'红')+'水晶';
+  if(R.header.camps.some(c=>c.id===id))return '野怪'+id;
+  return '兵'+id;
+};
+function teamC(t){return C[t%2]}
+const CLS_NAME=R?R.header.classes.map(c=>c.pos+' '+c.cls):[];
+const MV={N:'上',S:'下',E:'右',W:'左',WAIT:'停'},AC={attack:'普攻',skill:'技能',wait:'-'};
+function un(e){
+  switch(e.type){
+    case'attack':return`${name(e.src)} 普攻 ${name(e.tgt)}（${e.amount} 伤害）`;
+    case'fireball':return`${name(e.src)} 火球 → ${name(e.tgt)}（${e.amount} 伤害）`;
+    case'pierce':return`${name(e.src)} 穿云箭贯穿 ${name(e.tgt)}（${e.amount} 伤害）`;
+    case'heal':return`${name(e.src)} 治疗 ${name(e.tgt)} +${e.amount}`;
+    case'dash':return`${name(e.id)} 突袭`;
+    case'death':return`${name(e.id)} 阵亡${e.kind==='hero'?'':e.kind==='tower'?'（防御塔被毁）':e.kind==='camp'?'（野怪被清）':''}`;
+    case'levelup':return`${name(e.id)} 升到 ${e.level} 级`;
+    case'tower':return`${e.team?'红':'蓝'}方摧毁了一座防御塔`;
+    case'crystal':return`★ ${e.team?'红':'蓝'}方水晶被摧毁！`;
+    case'respawn':return`${name(e.id)} 在泉水重生`;
+    default:return e.line||JSON.stringify(e);
+  }
+}
+function esc(t){return String(t).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]))}
+
+// ---------- 静态地图（只画一次） ----------
+function isLane(x,y){
+  const d=x+y;
+  if(d===S-2||d===S-1||d===S)return 'mid';
+  if(x===2||x===3||y===2||y===3||x===S-4||x===S-3||y===S-4||y===S-3)return 'side';
+  return null;
+}
+function inBase(x,y){
+  return (R.header.base_rects||[]).some(b=>x>=b[0][0]&&x<=b[1][0]&&y>=b[0][1]&&y<=b[1][1]);
+}
+function drawStatic(){
+  const H=R.header,rows=H.map;
+  const board=$('board');
+  board.setAttribute('viewBox',`0 0 ${S} ${S}`);
+  board.setAttribute('preserveAspectRatio','xMidYMid meet');
+  let s=`<rect width="${S}" height="${S}" fill="#101722"/>`;
+  for(let y=0;y<S;y++)for(let x=0;x<S;x++){
+    const wall=rows[y][x]==='#';
+    if(wall){
+      const j=((x*7+y*13)%3);
+      s+=`<rect x="${x}" y="${y}" width="1.06" height="1.06" rx=".28" fill="${['#2a323e','#262e39','#2e3644'][j]}"/>`;
+    }else{
+      const lane=isLane(x,y),base=inBase(x,y);
+      let fill=lane==='mid'?'#4c4234':lane==='side'?'#463e31':'#2b4133';
+      if(base)fill='none';
+      if(fill!=='none')s+=`<rect x="${x}" y="${y}" width="1" height="1" fill="${fill}"/>`;
+    }
+  }
+  (R.header.base_rects||[]).forEach((b,t)=>{
+    s+=`<rect x="${b[0][0]}" y="${b[0][1]}" width="${b[1][0]-b[0][0]+1}" height="${b[1][1]-b[0][1]+1}"
+        rx="1.2" fill="${C[t]}" opacity=".10" stroke="${C[t]}" stroke-opacity=".35" stroke-dasharray=".3 .2"/>`;
+  });
+  (R.header.spawns||[]).forEach((sp,t)=>{
+    sp.forEach(p=>{s+=`<circle cx="${p[0]+.5}" cy="${p[1]+.5}" r=".14" fill="${C[t]}" opacity=".45"/>`});
+  });
+  board.innerHTML=`<g id="static">${s}</g><g id="fx"></g><g id="dyn"></g>`;
+}
+
+// ---------- 动态层 ----------
+function towerSvg(t,hp,maxhp){
+  const[x,y]=t.pos,c=x+.5,cy=y+.5,col=t.team?'#ff5d73':'#4da3ff';
+  if(hp<=0)return`<g opacity=".5"><rect x="${x+.12}" y="${y+.55}" width=".76" height=".34" rx=".1" fill="#4a4f58"/>
+    <rect x="${x+.3}" y="${y+.35}" width=".4" height=".26" rx=".08" fill="#565c66"/></g>`;
+  const f=hp/maxhp;
+  let g=`<rect x="${x+.18}" y="${y+.3}" width=".64" height=".58" rx=".12" fill="#3a4250" stroke="${col}" stroke-width=".09"/>
+    <polygon points="${c},${y+.06} ${x+.82},${y+.38} ${x+.18},${y+.38}" fill="${col}"/>
+    <circle cx="${c}" cy="${y+.26}" r=".13" fill="#ffe08a"/>`;
+  if(f<.67)g+=`<line x1="${x+.35}" y1="${y+.4}" x2="${x+.5}" y2="${y+.75}" stroke="#1c222c" stroke-width=".08"/>`;
+  if(f<.34)g+=`<line x1="${x+.62}" y1="${y+.36}" x2="${x+.45}" y2="${y+.8}" stroke="#1c222c" stroke-width=".08"/>`;
+  g+=bar(x,y-.06,f,col);
+  return g;
+}
+function bar(x,y,f,col){
+  return`<rect x="${x+.05}" y="${y}" width=".9" height=".14" rx=".07" fill="#10151d" opacity=".85"/>
+    <rect x="${x+.05}" y="${y}" width="${Math.max(0,Math.min(1,f))*.9}" height=".14" rx=".07" fill="${col}"/>`;
+}
+function crystalSvg(c,hp,maxhp){
+  const[x,y]=c.pos,cx=x+.5,cy=y+.5,col=c.team?'#ff5d73':'#4da3ff',f=Math.max(0,hp/maxhp);
+  let g=`<polygon points="${cx},${y+.08} ${x+.88},${cy} ${cx},${y+.92} ${x+.12},${cy}" fill="${col}" opacity="${.25+.45*f}"/>
+    <polygon points="${cx},${y+.26} ${x+.7},${cy} ${cx},${y+.74} ${x+.3},${cy}" fill="${col}"/>
+    <circle cx="${cx}" cy="${cy}" r=".62" fill="none" stroke="${col}" stroke-opacity=".3" stroke-width=".05"/>`;
+  g+=bar(x,y-.12,f,'#ffd75e');
+  return g;
+}
+function campSvg(c,hp){
+  const[x,y]=c.pos,cx=x+.5,cy=y+.5;
+  let g=`<circle cx="${x+.5}" cy="${y+.5}" r=".46" fill="#5a6b46" opacity=".35"/>
+    <ellipse cx="${cx}" cy="${cy+.08}" rx=".3" ry=".22" fill="#77855a"/>
+    <circle cx="${cx}" cy="${cy-.12}" r=".17" fill="#8b9a68"/>
+    <polygon points="${x+.28},${y+.18} ${x+.36},${y+.3} ${x+.22},${y+.3}" fill="#d8c9a0"/>
+    <polygon points="${x+.72},${y+.18} ${x+.78},${y+.3} ${x+.64},${y+.3}" fill="#d8c9a0"/>`;
+  if(hp>0&&hp<c.maxhp)g+=bar(x,y-.1,hp/c.maxhp,'#a8c47c');
+  return g;
+}
+function minionSvg(m,hp,maxhp){
+  const[x,y]=m.pos,col=teamC(m.team);
+  let g=`<rect x="${x+.24}" y="${y+.24}" width=".52" height=".52" rx=".14" fill="${col}" opacity=".9"/>
+    <rect x="${x+.36}" y="${y+.12}" width=".28" height=".24" rx=".06" fill="${col}"/>`;
+  if(hp<maxhp)g+=bar(x,y-.02,hp/maxhp,col);
+  return g;
+}
+function heroSvg(h,clsIdx){
+  const[x,y]=h.pos,cx=x+.5,cy=y+.5,col=teamC(Math.floor(h.id/5));
+  let g=`<circle cx="${cx}" cy="${cy}" r=".4" fill="${col}"/>
+    <circle cx="${cx}" cy="${cy}" r=".46" fill="none" stroke="${h.cd===0?'#ffd75e':col}" stroke-width=".07"
+      ${h.cd===0?'':'stroke-opacity=".0"'}/>`;
+  g+=`<text x="${cx}" y="${cy+.15}" font-size=".4" text-anchor="middle" fill="#0b111a" font-weight="700">${CLS_GLYPH[clsIdx]}</text>`;
+  g+=`<circle cx="${x+.78}" cy="${y+.2}" r=".16" fill="#10151d"/><text x="${x+.78}" y="${y+.27}" font-size=".2" text-anchor="middle" fill="#ffe08a" font-weight="700">${h.level}</text>`;
+  g+=bar(x,y-.16,h.hp/h.maxhp,col);
+  return g;
+}
+function render(){
+  if(!R)return;
+  const f=R.frames[i],H=R.header;
+  let fx='',dyn='';
+  for(const e of f.events){
+    const pos=id=>{const u=f.heroes.find(z=>z.id===id);if(u&&u.pos)return u.pos;
+      const m=f.minions.find(z=>z.id===id);if(m)return m.pos;
+      const d=f.events.find(z=>z.type==='death'&&z.id===id);return d?d.pos:null;};
+    if(e.type==='attack'){const a=pos(e.src),b=pos(e.tgt);if(a&&b)fx+=`<line x1="${a[0]+.5}" y1="${a[1]+.5}" x2="${b[0]+.5}" y2="${b[1]+.5}" stroke="#ffe7a0" stroke-width=".09" opacity=".85"/>`;}
+    if(e.type==='fireball'){const a=pos(e.src),b=pos(e.tgt);if(a&&b){fx+=`<line x1="${a[0]+.5}" y1="${a[1]+.5}" x2="${b[0]+.5}" y2="${b[1]+.5}" stroke="#ff9c4a" stroke-width=".13" opacity=".9"/><circle cx="${b[0]+.5}" cy="${b[1]+.5}" r=".3" fill="none" stroke="#ff9c4a" stroke-width=".08"/>`;}}
+    if(e.type==='pierce'){const a=pos(e.src),b=pos(e.tgt);if(a&&b)fx+=`<line x1="${a[0]+.5}" y1="${a[1]+.5}" x2="${b[0]+.5}" y2="${b[1]+.5}" stroke="#bfe0ff" stroke-width=".16" opacity=".9"/>`;}
+    if(e.type==='heal'){const b=pos(e.tgt);if(b)fx+=`<path d="M ${b[0]+.35} ${b[1]+.5} h .3 M ${b[0]+.5} ${b[1]+.35} v .3" stroke="#7de3a2" stroke-width=".12" transform="translate(0,-.55)"/>`;}
+    if(e.type==='dash'){const h=f.heroes.find(z=>z.id===e.id);if(h&&h.pos&&e.via)fx+=`<polyline points="${e.via[0]+.5},${e.via[1]+.5} ${h.pos[0]+.5},${h.pos[1]+.5}" stroke="#c9b6ff" stroke-width=".1" stroke-dasharray=".16 .12" fill="none" opacity=".9"/>`;}
+    if(e.type==='death'&&e.pos){fx+=`<path d="M ${e.pos[0]+.25} ${e.pos[1]+.25} L ${e.pos[0]+.75} ${e.pos[1]+.75} M ${e.pos[0]+.75} ${e.pos[1]+.25} L ${e.pos[0]+.25} ${e.pos[1]+.75}" stroke="#ff7d66" stroke-width=".1" opacity=".9"/>`;}
+    if(e.type==='levelup'){const b=pos(e.id);if(b)fx+=`<text x="${b[0]+.5}" y="${b[1]+.1}" font-size=".45" text-anchor="middle" fill="#ffe08a">✦</text>`;}
+    if(e.type==='respawn'&&e.pos){fx+=`<circle cx="${e.pos[0]+.5}" cy="${e.pos[1]+.5}" r=".55" fill="none" stroke="#ffffff" stroke-width=".08" opacity=".7"/>`;}
+  }
+  for(const t of H.towers){const cur=f.towers.find(z=>z.id===t.id);dyn+=towerSvg(t,cur.hp,t.maxhp);}
+  for(const c of H.crystal){const hp=f.crystal[c.team];dyn+=crystalSvg(c,hp,c.maxhp);}
+  for(const c of H.camps){const cur=f.camps.find(z=>z.id===c.id);if(cur.hp>0)dyn+=campSvg(c,cur.hp);}
+  const teamOf=id=>id<10?Math.floor(id/5):R.header.towers.find(t=>t.id===id)?.team;
+  for(const m of f.minions){if(focus>=0&&m.team!==focus)continue;dyn+=minionSvg(m,m.hp,R.header.rules?m.hp*2:70);}
+  for(const h of f.heroes){
+    if(!h.pos)continue;
+    const t=Math.floor(h.id/5);
+    if(focus>=0&&t!==focus)continue;
+    dyn+=heroSvg(h,h.id%5);
+  }
+  $('fx').innerHTML=fx;$('dyn').innerHTML=dyn;
+  $('turn').textContent=`${f.turn} / ${R.frames[R.frames.length-1].turn}`;
+  $('seek').value=i;
+  const order=[0,1].sort((a,b)=>f.crystal[b]-f.crystal[a]);
+  $('teams').replaceChildren(...order.map(t=>{
+    const d=document.createElement('div');d.className='team';d.style.borderColor=focus===t?C[t]:'var(--line)';
+    d.style.cursor='pointer';d.onclick=()=>{focus=focus===t?-1:t;render()};
+    const towersAlive=H.towers.filter(z=>z.team===t&&f.towers.find(q=>q.id===z.id).hp>0).length;
+    const teamSize = t === 0 ? 5 : (H.npc_heroes || 5);
+    const rows = H.classes.slice(0, teamSize).map((c, k) => {
+      const h = f.heroes[5 * t + k];
+      if (!h) return '';
+      const alive = h.pos && h.hp > 0;
+      return`<div class="hero" style="${focus>=0&&focus!==t?'opacity:.45':''}${alive?'':'opacity:.35;filter:grayscale(1)'}">
+        <span class="glyph" style="background:${C[t]}">${CLS_GLYPH[k]}</span>
+        <span class="muted">${c.pos}${alive?'':' ✝'}</span>
+        <span><span class="hpbar"><i style="width:${Math.max(0,h.hp/h.maxhp*100)}%;background:${C[t]}"></i></span></span>
+        <span>${alive?h.level+'级':'-'}</span></div>`;
+    }).join('');
+    const mine=t===0&&H.teams===1;
+    d.innerHTML=`<b style="color:${C[t]}">${t===0?'蓝方':'红方'}${mine?'（你）':(H.teams===1?'（NPC 队）':'')}</b>
+      <span class="muted">　防御塔 ${towersAlive}/6 · 水晶 ${f.crystal[t]}</span>${rows}`;
+    return d;
+  }));
+  $('events').textContent=f.events.map(un).join('\n')+(f.faults?'\n'+f.faults.map(x=>`程序故障：${x.reason}`).join('\n'):'')||'无';
+  $('orders').textContent=Object.entries(f.orders).filter(([t])=>focus<0||+t===focus).map(([t,cs])=>
+    `${+t===0?'蓝':'红'}：`+cs.map(c=>`${CLS_GLYPH[c.id%5]} ${MV[c.move]??'停'} ${c.act==='skill'?'Q'+(c.target!==undefined?'→'+c.target:''):c.act==='attack'?'打'+c.target:'-'}`).join('，')).join('\n')||'—';
+}
+function go(k){playing=false;$('play').textContent='播放';i=Math.max(0,Math.min(R.frames.length-1,k));render()}
+function tick(t){if(playing&&t-last>=300/+$('speed').value){last=t;if(i<R.frames.length-1){i++;render()}else go(i)}requestAnimationFrame(tick)}
+if(R){
+  const r=R.result;
+  $('sub').textContent=`难度 ${R.header.difficulty_label} · 地图 ${R.header.size}×${R.header.size} · 种子 ${R.header.seed} · ${r.names.join(' vs ')} · ${r.reason||''}`;
+  $('seek').max=R.frames.length-1;
+  R.frames.forEach((f,k)=>{
+    const big=f.events.filter(e=>['tower','crystal','death','levelup'].includes(e.type)&&e.type!=='death'||(e.type==='death'&&e.kind==='hero'));
+    if(big.length){const o=document.createElement('option');o.value=k;o.textContent=`${f.turn} 回合：${big.slice(0,3).map(un).join('；')}`;$('keys').append(o)}
+  });
+  $('play').onclick=()=>{if(i===R.frames.length-1)i=0;playing=!playing;$('play').textContent=playing?'暂停':'播放'};
+  $('prev').onclick=()=>go(i-1);$('next').onclick=()=>go(i+1);
+  $('seek').oninput=e=>go(+e.target.value);$('keys').onchange=e=>{if(e.target.value!=='')go(+e.target.value)};
+  addEventListener('keydown',e=>{if(e.target.tagName==='SELECT'||e.target.tagName==='INPUT')return;
+    if(e.key==='ArrowRight')go(i+1);if(e.key==='ArrowLeft')go(i-1);
+    if(e.key===' '){e.preventDefault();$('play').click()}});
+  drawStatic();render();requestAnimationFrame(tick);
+}else $('sub').textContent='这是回放模板，请打开对战后生成的 HTML 文件。';
+</script></body></html>
