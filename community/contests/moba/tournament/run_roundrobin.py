@@ -21,11 +21,10 @@ import core  # noqa: E402
 from engine import VERSION, Game, DIFF_LABELS  # noqa: E402
 
 BOTS = {
-    "速推": "../bots/rush.cpp",
-    "发育": "../bots/farm.cpp",
-    "游走": "../bots/gank.cpp",
-    "抱团": "../bots/siege.cpp",
-    "均衡": "../bots/balance.cpp",
+    "kimi-k3.1-pro": "../bots/kimi-k3.1-pro.cpp",
+    "deepseek-v4.1-flash": "../bots/deepseek-v4.1-flash.cpp",
+    "doubao-seed-2.1-Lite": "../bots/doubao-seed-2.1-Lite.cpp",
+    "MiniMax-M3.1": "../bots/MiniMax-M3.1.cpp",
 }
 
 
@@ -49,6 +48,7 @@ def main():
                     help="每个对阵每档难度打的局数（≥2 的偶数，成对换边且使用同一地图种子）")
     ap.add_argument("--workers", type=int, default=0)
     ap.add_argument("--replays", action="store_true", help="把普通难度的每场都存成回放（文件名带种子）")
+    ap.add_argument("--label", default="示例赛", help="成绩文件与标题的前缀，默认「示例赛」")
     ap.add_argument("--seed", type=int, default=101)
     a = ap.parse_args()
     a.games_per_pair = max(2, a.games_per_pair)
@@ -154,12 +154,14 @@ def main():
 
     out = root / "results"
     out.mkdir(exist_ok=True)
-    games_path = out / "示例赛-对局.json"
+    games_path = out / f"{a.label}-对局.json"
     games_path.write_text(json.dumps(results, ensure_ascii=False, indent=1), encoding="utf-8")
 
-    lines = [f"# 峡谷对决 · 示例赛成绩（{VERSION}）", "",
-             f"{len(names)} 个示例 bot 循环赛，每个对阵在每档难度换边各打 {per} 局，共 {len(results)} 局。",
-             "胜 1 分、平 0.5 分。这是**主办方代写的示例 bot 之间的表演赛**，用来演示赛制，不计入正式成绩。", "",
+    note = ("这是**主办方代写的示例 bot 之间的表演赛**，用来演示赛制，不计入正式成绩。"
+            if a.label == "示例赛" else f"{a.label}：参赛程序之间的循环赛，计入正式成绩。")
+    lines = [f"# 峡谷对决 · {a.label}成绩（{VERSION}）", "",
+             f"{len(names)} 个 bot 循环赛，每个对阵在每档难度换边各打 {per} 局，共 {len(results)} 局。",
+             f"胜 1 分、平 0.5 分。{note}", "",
              "排名依次比较：总积分 → 同分者小循环积分 → 对手分（所有对手最终积分之和）→ 并列。",
              "同一轮次的所有对阵、以及同一对阵的换边两局使用相同地图种子。", "",
              "## 参赛文件", "",
@@ -194,8 +196,8 @@ def main():
         winner = "平局" if r["winner"] < 0 else (r["a"] if r["winner"] == 0 else r["b"])
         lines.append(f"| {DIFF_LABELS[r['difficulty']]} | {r['round']} | {r['seed']} | {r['a']} | {r['b']} "
                      f"| {winner} | {r['turns']} | {r['kda'][0]:.2f} | {r['kda'][1]:.2f} | {r['reason']} |")
-    (out / "示例赛-成绩.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
-    print(f"成绩表：{out / '示例赛-成绩.md'}")
+    (out / f"{a.label}-成绩.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
+    print(f"成绩表：{out / f'{a.label}-成绩.md'}")
 
     if a.replays:
         # 回放已经在正式对局里一起落盘了，这里只按成绩生成索引页

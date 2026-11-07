@@ -109,7 +109,7 @@ def main():
         pve_ladder(cmd)
     if "--pvp" in sys.argv or "--pvp-only" in sys.argv:
         pvp_examples(cmd)
-    print("\n打完想留个名次，可以把 bot 投到社区榜（见仓库根 README）。")
+    print("\n打完想留个名次，可以把自己的 bot 放进 bots/ 跑循环赛（见 tournament/run_roundrobin.py）。")
 
 
 if __name__ == "__main__":
