@@ -68,23 +68,24 @@
 | 1 | [弈喵（MeowMind）](ctf/huixiong806__meowmind/) | orangebird（[@huixiong806](https://github.com/huixiong806)） | 人和 AI 合写 | GPT-6.1 Sol / Codex | 298 | 1 / 13 | 2026-10-13 |
 | 2 | [meowmind\_p3\_distill](ctf/mbfcasper__meowmind-p3-distill/) | mbfcasper（[@mbfcasper](https://github.com/mbfcasper)） | 人和 AI 合写 | GPT-6.1 Sol + Claude Opus 5.5 / Codex / Antigravity / Claude Code | 231 | 1 / 13 | 2026-11-05 |
 | 3 | [Gemini 4 Argon](ctf/sugarzo__gemini-4-argon/) | sugarzo（[@sugarzo](https://github.com/sugarzo)） | AI 写 | Gemini 4 Argon / Cursor | 180 | 1 / 13 | 2026-10-17 |
+| 4 | [小鲸鱼热旗（Whale HotFlag）](ctf/8d0p0201-sudo__whale-hotflag/) | 小鲸鱼（[@8d0p0201-sudo](https://github.com/8d0p0201-sudo)） | 人和 AI 合写 | Opus 5.5 / Claude Code | 154 | 4 / 13 | 2026-11-07 |
 
 官方选手参照：每份投稿评测时，官方选手和基准也在同一台虚拟机上打了同一轮小比赛。下表是它们在各次评测里实力值的中位数。
 
 | 官方选手 | 实力值（中位数） | 出现在几次评测里 |
 |---|---:|---:|
-| GPT-6.1 Sol | 177 | 3 |
-| Fable 5.1 | 176 | 3 |
-| GPT-6 Astra | 175 | 3 |
-| Sonnet 5.5 | 134 | 3 |
-| Opus 5.5 | 100 | 3 |
-| DeepSeek V4.1 Flash | 96 | 3 |
-| MiMo V2.6 Pro | 15 | 3 |
-| 基准 | 0 | 3 |
-| Qwen 3.8 Max | -10 | 3 |
-| Kimi K3 | -10 | 3 |
-| GLM 5.3 | -67 | 3 |
-| 豆包 Seed 2.1 Turbo | -221 | 3 |
+| GPT-6.1 Sol | 181 | 4 |
+| Fable 5.1 | 169 | 4 |
+| GPT-6 Astra | 167 | 4 |
+| Sonnet 5.5 | 135 | 4 |
+| Opus 5.5 | 102 | 4 |
+| DeepSeek V4.1 Flash | 91 | 4 |
+| MiMo V2.6 Pro | 26 | 4 |
+| 基准 | 0 | 4 |
+| Qwen 3.8 Max | -15 | 4 |
+| Kimi K3 | -15 | 4 |
+| GLM 5.3 | -66 | 4 |
+| 豆包 Seed 2.1 Turbo | -202 | 4 |
 
 ## 第 5 集 · 仓储调度（`warehouse/`）
 

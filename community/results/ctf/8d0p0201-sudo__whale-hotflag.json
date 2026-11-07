@@ -1,0 +1,79 @@
+{
+ "commit": "cfaeefa62f3a61573f50d70624b01cb62c0ba40b",
+ "detail": {
+  "ci95": [
+   84.6,
+   211.5
+  ],
+  "field": [
+   {
+    "name": "GPT-6.1 Sol",
+    "score": 201.3
+   },
+   {
+    "name": "GPT-6 Astra",
+    "score": 159.3
+   },
+   {
+    "name": "Fable 5.1",
+    "score": 156.3
+   },
+   {
+    "name": "Sonnet 5.5",
+    "score": 136.7
+   },
+   {
+    "name": "Opus 5.5",
+    "score": 104.3
+   },
+   {
+    "name": "DeepSeek V4.1 Flash",
+    "score": 59.9
+   },
+   {
+    "name": "MiMo V2.6 Pro",
+    "score": 37.8
+   },
+   {
+    "name": "基准",
+    "score": 0.0
+   },
+   {
+    "name": "Kimi K3",
+    "score": -20.5
+   },
+   {
+    "name": "Qwen 3.8 Max",
+    "score": -54.2
+   },
+   {
+    "name": "GLM 5.3",
+    "score": -64.6
+   },
+   {
+    "name": "豆包 Seed 2.1 Turbo",
+    "score": -183.4
+   }
+  ],
+  "field_size": 13,
+  "games_note": "180 局",
+  "rank": 4
+ },
+ "entry": "8d0p0201-sudo__whale-hotflag",
+ "env": {
+  "compiler": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+  "cpus": 4,
+  "platform": "Linux-7.0.0-1017-azure-x86_64-with-glibc2.39",
+  "python": "3.12.3"
+ },
+ "episode": "ctf",
+ "errors": [],
+ "files": {
+  "bot.cpp": "687c3c89f9057564bb4d86b244c915454ab30232998e507666d6a071be7ec675"
+ },
+ "mode": "quick",
+ "schema": 1,
+ "score": 153.5,
+ "status": "pass",
+ "time": "2026-11-07T00:09:48Z"
+}
