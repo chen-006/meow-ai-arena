@@ -1,5 +1,5 @@
 {
- "commit": "d29ef39dbe811aac20f68b9780856ec6c35d52d1",
+ "commit": "a4af56367d69d6df26418cdbc9d38c951a35ecce",
  "detail": {
   "budget": {
    "budget_kind": "cpu",
@@ -88,10 +88,10 @@
    {
     "display": "Gemini 4 Argon Contributor（OpenCode Go）",
     "draws": 0,
-    "losses": 0,
+    "losses": 2,
     "name": "Gemini",
     "rating": 355.4298340699916,
-    "wins": 20
+    "wins": 18
    },
    {
     "display": "GPT-6.1 Sol",
@@ -120,10 +120,10 @@
    {
     "display": "小米 MiMo V2.6 Pro",
     "draws": 0,
-    "losses": 0,
+    "losses": 1,
     "name": "MiMo",
     "rating": 28.926589497795632,
-    "wins": 20
+    "wins": 19
    },
    {
     "display": "Grok 4.7",
@@ -211,11 +211,11 @@
  "episode": "tank",
  "errors": [],
  "files": {
-  "bot.cpp": "e1e992f0d67bd7d5dff50ce3735aa11485ef87217a941e078e2501115348e3f9"
+  "bot.cpp": "2a9f411a1942abf61b39c51c5c9dc78c454f6563197fbc8fb75aa14f0331f7bf"
  },
  "mode": "quick",
  "schema": 1,
- "score": 867.6,
+ "score": 817.7,
  "status": "pass",
- "time": "2026-11-06T18:02:53Z"
+ "time": "2026-11-07T18:06:37Z"
 }
