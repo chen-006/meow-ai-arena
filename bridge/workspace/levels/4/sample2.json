@@ -1,0 +1,28 @@
+{
+ "name": "船 20 秒",
+ "vehicles": [
+  {
+   "type": "van",
+   "from": "left",
+   "t": 2.0
+  },
+  {
+   "type": "car",
+   "from": "right",
+   "t": 6.0
+  },
+  {
+   "type": "van",
+   "from": "right",
+   "t": 16.0
+  },
+  {
+   "type": "car",
+   "from": "left",
+   "t": 22.0
+  }
+ ],
+ "ship": {
+  "t": 20.0
+ }
+}

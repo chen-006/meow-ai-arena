@@ -1,0 +1,20 @@
+{
+ "name": "面包车先 三辆",
+ "vehicles": [
+  {
+   "type": "van",
+   "from": "left",
+   "t": 1.0
+  },
+  {
+   "type": "car",
+   "from": "left",
+   "t": 5.0
+  },
+  {
+   "type": "car",
+   "from": "left",
+   "t": 10.0
+  }
+ ]
+}

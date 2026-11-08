@@ -1,0 +1,10 @@
+{
+ "name": "小轿车 左→右",
+ "vehicles": [
+  {
+   "type": "car",
+   "from": "left",
+   "t": 1.0
+  }
+ ]
+}

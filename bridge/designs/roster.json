@@ -1,0 +1,11 @@
+[
+ {"id": "sol62", "name": "GPT-6.2 Sol", "harness": "Codex 桌面版", "harness_en": "Codex desktop app"},
+ {"id": "opus", "name": "Claude Opus 5.5", "harness": "Claude Code", "harness_en": "Claude Code"},
+ {"id": "astra", "name": "GPT-6 Astra", "harness": "Codex CLI", "harness_en": "Codex CLI"},
+ {"id": "gemini", "name": "Gemini 4 Argon", "harness": "OpenCode（Google Vertex AI）", "harness_en": "OpenCode (Google Vertex AI)"},
+ {"id": "grok", "name": "Grok 4.7", "harness": "Grok Build", "harness_en": "Grok Build"},
+ {"id": "kimi", "name": "Kimi K3.1 Pro", "harness": "Kimi Code", "harness_en": "Kimi Code"},
+ {"id": "hunyuan", "name": "腾讯混元 Hy4", "name_en": "Tencent Hunyuan Hy4", "harness": "OpenCode（OpenRouter，腾讯官方供应商）", "harness_en": "OpenCode (OpenRouter, Tencent as provider)"},
+ {"id": "doubao", "name": "豆包 Seed Evolving", "name_en": "Doubao Seed Evolving", "harness": "OpenCode（火山方舟）", "harness_en": "OpenCode (Volcengine Ark)"},
+ {"id": "deepseek", "name": "DeepSeek V4.1 Flash", "harness": "dsh", "harness_en": "dsh"}
+]

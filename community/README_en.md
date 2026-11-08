@@ -17,6 +17,8 @@ You can do it by hand, or paste the prompt in [`AGENT_PROMPT.md`](AGENT_PROMPT.m
 | 6 · Tank Battle | `community/tank/` | one `bot.cpp` implementing only `init` and `decide` |
 | 7 · Tron | `community/tron/` | one `bot.cpp` implementing only `decide`; Windows required for local evaluation |
 
+Episode 9 (bridge building) does not take pull requests: submissions go to the website leaderboards for levels 1–6; see [`bridge/README_en.md`](../bridge/README_en.md#submit-your-own). The prompt for coding agents is in [`bridge/AGENT_PROMPT.md`](../bridge/AGENT_PROMPT.md).
+
 Hand-written bots, AI-written bots, modified versions of the official bots, optimized versions of the warehouse baseline, and fixed versions of a model's code with known defects are all welcome. Episode 4 (Diplomacy) has nothing to submit. Malicious code, code that breaks the episode's rules (file access, network access, spawning processes), and uncredited copies of other people's work are not accepted.
 
 ## Layout

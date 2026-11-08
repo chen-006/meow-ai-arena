@@ -1,0 +1,552 @@
+{
+ "reference": {
+  "1": 3509.84,
+  "2": 10616.73,
+  "3": 7967.26,
+  "4": 12342.52,
+  "5": 8216.12,
+  "6": 16709.27
+ },
+ "players": {
+  "sol62": {
+   "name": "GPT-6.2 Sol",
+   "levels": {
+    "1": {
+     "score": 98.54,
+     "cost": 3561.67,
+     "passed": 3,
+     "n": 3,
+     "note": "",
+     "sha256": "7924c84bd162efbbdba82baba87e69704775f741262919281fdc097c1df045f5"
+    },
+    "2": {
+     "score": 137.85,
+     "cost": 7701.8,
+     "passed": 2,
+     "n": 2,
+     "note": "",
+     "sha256": "dffa60c9f155e06a554f896f9bee1275f48515233cf8c5333f32dc6e5acef564"
+    },
+    "3": {
+     "score": 103.27,
+     "cost": 7714.88,
+     "passed": 3,
+     "n": 3,
+     "note": "",
+     "sha256": "8afd9579e509b69047b5863d16d15403e5ff110975cc2ecf0ea237baef41fcd7"
+    },
+    "4": {
+     "score": 105.38,
+     "cost": 11712.2,
+     "passed": 2,
+     "n": 2,
+     "note": "",
+     "sha256": "51d417f809b7911adad53da52f29f6560200c81d52683a7147281473b6f5a076"
+    },
+    "5": {
+     "score": 95.31,
+     "cost": 8620.74,
+     "passed": 2,
+     "n": 2,
+     "note": "",
+     "sha256": "f8f743172bdfe9acb0f82c770250e6cb1c1a841406051c9d44a94ef85576cd68"
+    },
+    "6": {
+     "score": 97.07,
+     "cost": 17212.99,
+     "passed": 3,
+     "n": 3,
+     "note": "",
+     "sha256": "8db7d49f33a3d96009d83564c0f5260eb342e9291662b0f6d6ade875b2f1769c"
+    }
+   },
+   "闯关": 106.24,
+   "桥守住": 8,
+   "车攻破": 5,
+   "攻防": 81.25,
+   "final_bridge_sha256": "ccbebfa610626157690cfa8de6276c9c5e0d23d1d6a086dc7ec431a738ea2b9b",
+   "saboteur_sha256": "40b1fca0aed18a1160ca8ce1db31896683e3c8ae9a7755be0d2f6f73077db3e1",
+   "总分": 102.67
+  },
+  "opus": {
+   "name": "Claude Opus 5.5",
+   "levels": {
+    "1": {
+     "score": 99.38,
+     "cost": 3531.7,
+     "passed": 3,
+     "n": 3,
+     "note": "",
+     "sha256": "4bd6669b5d58579c50b9142fe597136aaa66285ffed3f167e0ba22ab50a62e03"
+    },
+    "2": {
+     "score": 114.93,
+     "cost": 9237.42,
+     "passed": 2,
+     "n": 2,
+     "note": "",
+     "sha256": "484462e5396eae7e15f3b0955dd15448ff6a182cd39b2f4d45887ddd641f7adc"
+    },
+    "3": {
+     "score": 101.99,
+     "cost": 7811.83,
+     "passed": 3,
+     "n": 3,
+     "note": "",
+     "sha256": "87fe78dc272e4b7a80abdd17a5dac76f923206f48fccc18646d5b5a874461f37"
+    },
+    "4": {
+     "score": 70.19,
+     "cost": 17584.81,
+     "passed": 2,
+     "n": 2,
+     "note": "",
+     "sha256": "f22527e4431676633a780ab6f03ef5e6c3d9c164dbf4edb0443ecf58996bfbaf"
+    },
+    "5": {
+     "score": 0.0,
+     "cost": null,
+     "passed": 0,
+     "n": 2,
+     "note": "造价 13472 超过预算 10000",
+     "sha256": "fbb13908f3533e47b11213711bb098f3748de3144c7a2ea106dcea6ba01133e9"
+    },
+    "6": {
+     "score": 91.64,
+     "cost": 18233.71,
+     "passed": 3,
+     "n": 3,
+     "note": "",
+     "sha256": "ab1353a707f27b9151dc64d61135c6551b483b2d9d39bc6d00921c81a6a64b83"
+    }
+   },
+   "闯关": 79.69,
+   "桥守住": 8,
+   "车攻破": 4,
+   "攻防": 75.0,
+   "final_bridge_sha256": "fe2fceb02d51dae41678141ae348eede88f90b565f77f53f552d161a4613dc72",
+   "saboteur_sha256": "3baabdaae5ed01750983188faffb1e855d126c438ebd17e9a807426d5e62057d",
+   "总分": 79.02
+  },
+  "astra": {
+   "name": "GPT-6 Astra",
+   "levels": {
+    "1": {
+     "score": 91.58,
+     "cost": 3832.47,
+     "passed": 3,
+     "n": 3,
+     "note": "",
+     "sha256": "cebb5a0162df89f635b8ee87deacbe0f952d7cf89c58e6673e5f48be9cda65db"
+    },
+    "2": {
+     "score": 95.99,
+     "cost": 11060.51,
+     "passed": 2,
+     "n": 2,
+     "note": "",
+     "sha256": "cc68a05d72933825d27a76f5d6806dc1d9cbac62cf4908595bd459b9b0a0ca83"
+    },
+    "3": {
+     "score": 88.45,
+     "cost": 9007.95,
+     "passed": 3,
+     "n": 3,
+     "note": "",
+     "sha256": "6c90c8c6b0736a850a8c1d0194eeff9f15ef295e007451b2a3d2a0c7c659aeae"
+    },
+    "4": {
+     "score": 65.94,
+     "cost": 18718.15,
+     "passed": 2,
+     "n": 2,
+     "note": "",
+     "sha256": "32d16dec43ad31efa1d37616656dce26ed9a3218bef8439338ba90aa4312250c"
+    },
+    "5": {
+     "score": 0.0,
+     "cost": null,
+     "passed": 0,
+     "n": 2,
+     "note": "造价 10199 超过预算 10000",
+     "sha256": "5c9503fc80c61a12f170f6797323429e17562a41ec54c518d235014feb1527f1"
+    },
+    "6": {
+     "score": 84.9,
+     "cost": 19681.97,
+     "passed": 3,
+     "n": 3,
+     "note": "",
+     "sha256": "904c4eabc58420bd8747c0ca46b8abde27205b1f8ab6c1812a26377c1cc6d80e"
+    }
+   },
+   "闯关": 71.14,
+   "桥守住": 8,
+   "车攻破": 6,
+   "攻防": 87.5,
+   "final_bridge_sha256": "ae8dfce416aa224267ca032d1d3b72dc4fcfda7f2018e4a33a935183ef5b1f78",
+   "saboteur_sha256": "ee64bf6b321e5c15735ca5b7384075db2dfc06846365b3cb21eab31f4d3175cb",
+   "总分": 73.48
+  },
+  "gemini": {
+   "name": "Gemini 4 Argon",
+   "levels": {
+    "1": {
+     "score": 93.46,
+     "cost": 3755.53,
+     "passed": 3,
+     "n": 3,
+     "note": "",
+     "sha256": "2d91d9e674db68a21a56610609e56dc9b7797701fc6a990cd73a026a5b15cc2e"
+    },
+    "2": {
+     "score": 78.02,
+     "cost": 13607.99,
+     "passed": 2,
+     "n": 2,
+     "note": "",
+     "sha256": "5a27719fa9ca17ef9062036514e0c18002c72597780fdbb25396ebe00e0a7dc3"
+    },
+    "3": {
+     "score": 83.22,
+     "cost": 9573.31,
+     "passed": 3,
+     "n": 3,
+     "note": "",
+     "sha256": "ba4fcebedc31ad60206b3fe43c8af3f081d019b7aeac17f4047eaf3a167fe138"
+    },
+    "4": {
+     "score": 0.0,
+     "cost": 19189.3,
+     "passed": 0,
+     "n": 2,
+     "note": "",
+     "sha256": "7b936c58518e55cf3e194d0f0bbc9db550dba3113240eca1c4ef998c742e95b1"
+    },
+    "5": {
+     "score": 0.0,
+     "cost": 9991.8,
+     "passed": 0,
+     "n": 2,
+     "note": "",
+     "sha256": "119373e38e63b9d145781119634b8ab0e9d0fb339aab71f2b5c48547fd236192"
+    },
+    "6": {
+     "score": 0.0,
+     "cost": 17922.1,
+     "passed": 0,
+     "n": 3,
+     "note": "",
+     "sha256": "27e2321d49e01b632b2a4a4c26f6f7eb831e13411aa6c2feb586ab86fb8e1635"
+    }
+   },
+   "闯关": 42.45,
+   "桥守住": 7,
+   "车攻破": 3,
+   "攻防": 62.5,
+   "final_bridge_sha256": "fa76caa99c69dd04085d9a672b377b4165fb397213723025f43c22176a4d578a",
+   "saboteur_sha256": "b0138066913ced9f18f9580324f5093d7b352eab8d179726550abcc38e9db2a9",
+   "总分": 45.31
+  },
+  "grok": {
+   "name": "Grok 4.7",
+   "levels": {
+    "1": {
+     "score": 91.25,
+     "cost": 3846.48,
+     "passed": 3,
+     "n": 3,
+     "note": "",
+     "sha256": "c4c697f5429e713b9f39a1ac8d8528db5aec6af8e87edd35b65cbe46e40b8c7a"
+    },
+    "2": {
+     "score": 68.72,
+     "cost": 15450.0,
+     "passed": 2,
+     "n": 2,
+     "note": "",
+     "sha256": "7280f36d8a121e1f54a6899669ed6e29bb420c6b4a94b39d53dfd95b086824f1"
+    },
+    "3": {
+     "score": 64.35,
+     "cost": 12381.56,
+     "passed": 3,
+     "n": 3,
+     "note": "",
+     "sha256": "236ed32e0cf1b00d3aef821179bb4dad8bc46de426ad5f278f9bbc3dcb81d786"
+    },
+    "4": {
+     "score": 0.0,
+     "cost": 24845.79,
+     "passed": 0,
+     "n": 2,
+     "note": "",
+     "sha256": "1e27c0a41efe13fbca20fe9cf5bb978408a9b81e96819129513c1a5784daee46"
+    },
+    "5": {
+     "score": 0.0,
+     "note": "未交",
+     "cost": null,
+     "passed": null,
+     "n": null,
+     "sha256": null
+    },
+    "6": {
+     "score": 0.0,
+     "note": "未交",
+     "cost": null,
+     "passed": null,
+     "n": null,
+     "sha256": null
+    }
+   },
+   "闯关": 37.39,
+   "桥守住": 4,
+   "车攻破": 0,
+   "攻防": 25.0,
+   "final_bridge_sha256": "f74755c656b26ba05231d5f735c0c4ba696e6d11131431def2802e860f170e83",
+   "saboteur_sha256": "b651194b23920825f6b84d03504350425626ec2d73aac757838a0a51ae78c42d",
+   "总分": 35.62
+  },
+  "kimi": {
+   "name": "Kimi K3.1 Pro",
+   "levels": {
+    "1": {
+     "score": 57.87,
+     "cost": 6065.4,
+     "passed": 3,
+     "n": 3,
+     "note": "",
+     "sha256": "78bab627f6802a7b89eee0e40338034dff3c808fd565d834f1a8ccf3e81efa0a"
+    },
+    "2": {
+     "score": 57.9,
+     "cost": 18337.64,
+     "passed": 2,
+     "n": 2,
+     "note": "",
+     "sha256": "91bf29046f823e719c2afa0a9cd15bbb51ac3fd4bd4d394a4d2cfdc5a6ba32ee"
+    },
+    "3": {
+     "score": 80.3,
+     "cost": 9921.72,
+     "passed": 3,
+     "n": 3,
+     "note": "",
+     "sha256": "13ae2251386e6a10e4fe8e725802210bcf0d87f84d5e50d0953b2a6b39a5a174"
+    },
+    "4": {
+     "score": 0.0,
+     "cost": 24934.63,
+     "passed": 0,
+     "n": 2,
+     "note": "",
+     "sha256": "f5cf97bf9cd7c608f492b1adb5334111475acb95c7b67977101b4f7c6def91bc"
+    },
+    "5": {
+     "score": 0.0,
+     "cost": 9780.1,
+     "passed": 0,
+     "n": 2,
+     "note": "",
+     "sha256": "1c9b557d58e9c74acad073c933b7bc6ff86fa5192d75a0dc39a7e961d679e98a"
+    },
+    "6": {
+     "score": 0.0,
+     "cost": 11741.43,
+     "passed": 0,
+     "n": 3,
+     "note": "",
+     "sha256": "d9e931c56fd5c721498057a6b25a76b906ac9bf5c0d703ba7e722599fc1d0ff2"
+    }
+   },
+   "闯关": 32.68,
+   "桥守住": 5,
+   "车攻破": 0,
+   "攻防": 31.25,
+   "final_bridge_sha256": "4d41586f7786ad3e45b41a59a16be62862f198c9fd77a9b648109ba0c5db0495",
+   "saboteur_sha256": "f8dfe2121050b7a133d75b623d58b860f4baae02d922a462b647c04e14510929",
+   "总分": 32.47
+  },
+  "hunyuan": {
+   "name": "腾讯混元 Hy4",
+   "levels": {
+    "1": {
+     "score": 85.33,
+     "cost": 4113.37,
+     "passed": 3,
+     "n": 3,
+     "note": "",
+     "sha256": "763895c0da551a9f4146a8ecc1176ad02a1245d91c99c94e43e6e43cd3a5f377"
+    },
+    "2": {
+     "score": 49.02,
+     "cost": 21656.32,
+     "passed": 2,
+     "n": 2,
+     "note": "",
+     "sha256": "1313262abe01b8640d9212bb808f4e5508d6fbb44c1e978e6944e1de76018e41"
+    },
+    "3": {
+     "score": 48.27,
+     "cost": 16505.2,
+     "passed": 3,
+     "n": 3,
+     "note": "",
+     "sha256": "335c2902816125d010cde6a56290e7a0126625bcad337b7ab88215e2c390854b"
+    },
+    "4": {
+     "score": 0.0,
+     "cost": 23141.69,
+     "passed": 0,
+     "n": 2,
+     "note": "",
+     "sha256": "00348443a9e59f3613bc2a4e872dabc218a24f9f31943b4c69b00b27a7bd1aee"
+    },
+    "5": {
+     "score": 0.0,
+     "cost": 5650.69,
+     "passed": 0,
+     "n": 2,
+     "note": "",
+     "sha256": "01c7926eb3616ac30ce7129166c513c12fa05d0bcbaf514b15cf818641bbc651"
+    },
+    "6": {
+     "score": 0.0,
+     "cost": null,
+     "passed": 0,
+     "n": 3,
+     "note": "造价 34497 超过预算 20000",
+     "sha256": "81aa74b605b240461e506642ec75c32f6adcda995a417f51e19d5279cdb3d0f3"
+    }
+   },
+   "闯关": 30.44,
+   "桥守住": 6,
+   "车攻破": 0,
+   "攻防": 37.5,
+   "final_bridge_sha256": "8c04373904a3778c3d3a86150db94639f8dff269b873a211ff2efd3ec3927f56",
+   "saboteur_sha256": "2a079045e999f4e4a37f971c5d517c5bc7c624dc6ef352a3b0b183cabfafa6ff",
+   "总分": 31.45
+  },
+  "doubao": {
+   "name": "豆包 Seed Evolving",
+   "levels": {
+    "1": {
+     "score": 90.4,
+     "cost": 3882.36,
+     "passed": 3,
+     "n": 3,
+     "note": "",
+     "sha256": "2d09d28b835e9d2e74310bcf9f7565b18a9af8a248573d5c283cecd6dbdd950c"
+    },
+    "2": {
+     "score": 52.75,
+     "cost": 20128.23,
+     "passed": 2,
+     "n": 2,
+     "note": "",
+     "sha256": "619c2d8a37f4555c75722419cb233c523b35f1b27c20f27576088876fdff779d"
+    },
+    "3": {
+     "score": 48.56,
+     "cost": 16406.38,
+     "passed": 3,
+     "n": 3,
+     "note": "",
+     "sha256": "9cba5182c579142ab7aedc4e99fc9cc45816aeebf3e29d8f33bd572747932ce9"
+    },
+    "4": {
+     "score": 0.0,
+     "cost": 22055.06,
+     "passed": 0,
+     "n": 2,
+     "note": "",
+     "sha256": "606271a9770acfb1745fa17b7d5bf8676ebb9683abad753cb2a72331c64f2c61"
+    },
+    "5": {
+     "score": 0.0,
+     "cost": 9416.33,
+     "passed": 0,
+     "n": 2,
+     "note": "",
+     "sha256": "75c54b60906a3482c34b26a471084272a8615d74015c8645d3a44882aa1e4564"
+    },
+    "6": {
+     "score": 0.0,
+     "cost": 15001.35,
+     "passed": 0,
+     "n": 3,
+     "note": "",
+     "sha256": "6f725201cd4c65e2e11c19d5cc316b5275e85792ca372c60066f12a40fa363f2"
+    }
+   },
+   "闯关": 31.95,
+   "桥守住": 4,
+   "车攻破": 0,
+   "攻防": 25.0,
+   "final_bridge_sha256": "725a9157503b1298c5034dbc9d14feb79890b185390e90495a0f5cb27901fecf",
+   "saboteur_sha256": "1d7f522ef61f2cf1650090e1d7014ef522d9cefff9091a4e971c6f53ff3ea6b4",
+   "总分": 30.96
+  },
+  "deepseek": {
+   "name": "DeepSeek V4.1 Flash",
+   "levels": {
+    "1": {
+     "score": 67.01,
+     "cost": 5237.57,
+     "passed": 3,
+     "n": 3,
+     "note": "",
+     "sha256": "a3b220d30a26b75d03c317ff7fde4061dd9f762ef1f7a1a37c94c1a675e83603"
+    },
+    "2": {
+     "score": 52.75,
+     "cost": 20128.23,
+     "passed": 2,
+     "n": 2,
+     "note": "",
+     "sha256": "d189d8125b08b9ad6350c69ef8848073d45ef080051b2f260ca2fd3d7ecb959d"
+    },
+    "3": {
+     "score": 50.72,
+     "cost": 15707.18,
+     "passed": 3,
+     "n": 3,
+     "note": "",
+     "sha256": "383eb0812dd4111befb17f5c18ecac0aa6360301ac9c1a03f5828108371f41b5"
+    },
+    "4": {
+     "score": 0.0,
+     "cost": 20838.55,
+     "passed": 0,
+     "n": 2,
+     "note": "",
+     "sha256": "4f2454f65268c7282db7fe5ac656d331bfa7b18fb7dab62c091eb9cd0d8894e2"
+    },
+    "5": {
+     "score": 0.0,
+     "cost": 5583.69,
+     "passed": 0,
+     "n": 2,
+     "note": "",
+     "sha256": "f19e727a8f4cb9dc02c61c5b5cb66b09aa7b0626b73d252647b9480cc668c3ac"
+    },
+    "6": {
+     "score": 0.0,
+     "cost": 19311.29,
+     "passed": 0,
+     "n": 3,
+     "note": "",
+     "sha256": "73bf9256e4fcdca4c82c9595233d3219a6bff341330430c27aae0a90a913e502"
+    }
+   },
+   "闯关": 28.41,
+   "桥守住": 4,
+   "车攻破": 0,
+   "攻防": 25.0,
+   "final_bridge_sha256": "677a226093812cacc1b57faed7c318a7b075cabe311d3bf5fc5fac83b8983b9d",
+   "saboteur_sha256": "f0896b055607cde993fbd5aefe2cb4b40d55199f0cacd9bc45079505588ff03f",
+   "总分": 27.93
+  }
+ }
+}

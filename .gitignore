@@ -42,3 +42,9 @@ soccer/out/
 soccer/workspace/_soccer_box/
 soccer/workspace/bots/*.exe
 soccer/workspace/replays/
+
+# 第 9 集造桥：本地编译的物理内核、bridge.py 自动存档、全部回放输出
+bridge/out/
+bridge/workspace/archive/
+bridge/workspace/submission/
+bridge/archive/

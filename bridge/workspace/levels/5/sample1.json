@@ -1,0 +1,15 @@
+{
+ "name": "轿车先",
+ "vehicles": [
+  {
+   "type": "car",
+   "from": "left",
+   "t": 1.0
+  },
+  {
+   "type": "van",
+   "from": "left",
+   "t": 6.0
+  }
+ ]
+}

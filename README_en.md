@@ -15,6 +15,7 @@ Several AI models receive **the exact same prompt**, each writes a game bot in a
 | 7, round 1 | Tron light cycles | 1v1 + 4p + 12p, 10 models (+2 reference) | 5,713 | Mistral Large 4 | `tron/` |
 | 7, round 2 | Legacy-code optimization (warehouse task) | 10 models, solo (+3 Claude reference runs) | 1 run each | StepFun Step 5 preview / Tencent Hunyuan Hy4 preview (tie) | `warehouse/` |
 | 8 | 2v2 simplified soccer | 12 models in 6 teams; individual teams added in the second half | 8,280 | Team: GPT-6 Astra + GPT-6.1 Terra; individual: GPT-6 Astra | [soccer/](soccer/README_en.md) |
+| 9 | Bridge building (6 challenge levels + 1 attack-and-defense level) | 9 | 72 (attack and defense) | GPT-6.2 Sol | [bridge/](bridge/README_en.md) |
 
 Episode 4 is different: no bots. Seven models each play one power in standard Diplomacy, negotiating by private messages and issuing orders themselves, for three games with memory carried over. `diplomacy/` contains the referee and scheduler, full game archives (every message, order and adjudication), replays, and the models' own notes.
 
@@ -23,6 +24,8 @@ Episode 5 is different again: no head-to-head games. Twelve models form six team
 Episode 6 returns to bot battles with two halves. Fourteen models write a first version of a 1-vs-1 tank-battle bot; all first versions play a round robin; at half time each model receives the standings, its own replays and the other models' first-version executables, and then improves its bot. Only the second-half version counts. `tank/` contains both versions of every bot, all three tournaments (half-time, final, and a progress tournament measuring each model's improvement), selected replays, the tournament platform and configs, trash talk and post-match reviews. Three of the fourteen were run by outside operators on a faster machine and were not timed by the organizer; five first halves were rerun after the originals were voided; see [tank conditions](tank/CONDITIONS_en.md) and [Tank Battle](tank/README_en.md).
 
 Episode 7, "District King Championship", has two rounds with the same ten models. Round 1 is Tron light cycles: each model writes one C++ bot that plays 1-vs-1, 4-player and 12-player games; ratings are Bradley–Terry per game type weighted 50/30/20, anchored at Doubao = 0 (the anchor was chosen after the race). GPT-6 Astra and DeepSeek V4.1 Flash ran as reference contestants and, with an organizer-written strong sparring bot, appear only on a separate strong-opponent board. `tron/` contains the task package, all sealed bots, both leaderboards, per-game results, 30 randomly sampled replays and a challenge script; it also lists, with links and thanks, the 2010 Google AI Challenge human bots used in a side experiment (their code is not included, as most have no license). There was no trash talk and no post-match review this time. Round 2 reuses the episode 5 warehouse task as a solo legacy-code optimization round (`warehouse/`, section "Episode 7"). Each round awards 10…1 points by place; the overall "District King" is StepFun Step 5 preview (see the end of `tron/README_en.md`).
+
+Episode 9, "Bridge Building", has no bots: nine models design bridges within 90 minutes, with all 7 levels handed out at the start. In levels 1–6 the given vehicles must cross in time and intact, and cheaper passing designs score higher; in level 7 everyone submits a final bridge and a saboteur vehicle, and they play each other. `bridge/` contains the contestant package, the physics core source (`bridge/build_engine.py`), every contestant's designs, the reference solutions, results, replays and `tournament/score.py`, which recomputes and checks all results; see [bridge/README_en.md](bridge/README_en.md).
 
 **Watch**: open any `.html` file under `*/replays/` in a browser (episode 1: `land/replays/index.html`). Episode 5 has no replays; its results are in `warehouse/results/最终成绩.md`.
 
@@ -47,7 +50,7 @@ The Chinese series **AI 算法对抗大赛** is on Bilibili. The English edition
 
 Your work can be added to this repository and, once merged, appears on the [community leaderboard](community/LEADERBOARD.md).
 
-**What you can submit**: a bot for episode 1, 2, 3, 6 or the Tron round of episode 7 (hand-written, AI-written, or modified from an official entry), an optimized version of the episode 5 warehouse code, or a fixed version of a model's code with known defects. Episode 4 has no program to submit.
+**What you can submit**: a bot for episode 1, 2, 3, 6 or the Tron round of episode 7 (hand-written, AI-written, or modified from an official entry), an optimized version of the episode 5 warehouse code, or a fixed version of a model's code with known defects. Episode 4 has no program to submit. Episode 9 (bridge building) takes submissions through the website leaderboard, not pull requests; see [bridge/README_en.md](bridge/README_en.md#submit-your-own).
 
 **The fastest way** is to hand it to your coding agent (Claude Code, Codex, Cursor, ...). Send it the line below; it will ask you a few questions, test locally, show you what it is about to submit, and open the pull request after you approve:
 

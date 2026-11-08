@@ -14,6 +14,8 @@
 
 第 7 集《区王争霸赛》有两场比赛：第一场光轮对战（Tron），10 个模型各写一个 bot，打 1 对 1、4 人局、12 人局；第二场屎山优化，同样这 10 个模型各自优化第 5 集那份又慢又乱的仓储调度代码。两场按名次计分相加，得分最高的是“区王”。
 
+第 9 集《造桥大赛》不写 bot：9 个模型在 90 分钟里设计桥梁，开局一次性拿到 7 关。第 1～6 关让规定的车辆按时完好过河，过关后比造价；第 7 关每人交一座决赛桥和一辆捣蛋车，两两攻防。
+
 | 集 | 游戏 | 人数 | 局数 | 冠军 | 目录 |
 |---|---|---|---:|---|---|
 | 第 1 集 | 圈地 | 1v1 单挑 + 4 人混战 | 30000 | Sonnet 5.5 | [`land/`](land/) |
@@ -25,6 +27,7 @@
 | 第 7 集 · 第一场 | 光轮对战 | 1v1 + 4 人 + 12 人，10 人（另有 2 位参考选手） | 5713 | Mistral Large 4 | [`tron/`](tron/) |
 | 第 7 集 · 第二场 | 屎山优化（仓储调度） | 10 人各自单独优化（另有 Claude 3 位作参照） | 每人 1 次 | 阶跃 Step 5 preview / 腾讯混元 Hy4 preview（并列） | [`warehouse/`](warehouse/#第-7-集--屎山优化) |
 | 第 8 集 | 2v2 简化足球 | 12 个模型，6 支双人队；下半场新增个人队 | 8280 | 团队：GPT-6 Astra + GPT-6.1 Terra；个人：GPT-6 Astra | [`soccer/`](soccer/) |
+| 第 9 集 | 造桥 | 9 个模型，6 关闯关 + 1 关攻防 | 72（攻防） | GPT-6.2 Sol | [`bridge/`](bridge/) |
 
 第 7 集两场合计的“区王”是阶跃 Step 5 preview（两场各按名次给 10～1 分相加，见 [`tron/README.md`](tron/README.md) 文末）。
 
@@ -53,7 +56,7 @@ python challenge.py 你的bot.cpp
 
 你的作品可以交到这个仓库里，合并后进[社区榜](community/LEADERBOARD.md)。
 
-**可以交什么**：第 1、2、3、6 集的 bot 和第 7 集的光轮 bot（自己写的、让 AI 写的、在官方选手代码上改的都行），第 5 集优化过的仓储调度代码，或者修好了某份模型代码里已知缺陷的版本。第 4 集没有可以提交的程序，不收。
+**可以交什么**：第 1、2、3、6 集的 bot 和第 7 集的光轮 bot（自己写的、让 AI 写的、在官方选手代码上改的都行），第 5 集优化过的仓储调度代码，或者修好了某份模型代码里已知缺陷的版本。第 4 集没有可以提交的程序，不收。第 9 集造桥的投稿走网站排行榜，不走 Pull Request，见 [`bridge/README.md`](bridge/README.md#投稿)。
 
 **最快的办法**是交给你的 coding agent（Claude Code、Codex、Cursor 等）。把下面这句话发给它，它会问你几个问题，在本地测一遍，然后把要提交的内容给你过目，你同意后再开 Pull Request：
 
@@ -95,6 +98,8 @@ python challenge.py 你的bot.cpp
 第 6 集回到 bot 对战，但每个模型交两版：`bots/half1/` 是上半场版本，`bots/half2/` 是下半场版本；`results/` 里有中场赛、终场赛、进步赛三场；另有赛前狠话和复盘（`notes/`），见 [`tank/README.md`](tank/README.md)。
 
 第 7 集光轮对战（`tron/`）的结构和第 6 集相近，只有一个半场；另有两位参考选手和主办方的强档陪练线，单独出一张强对手榜；没有赛前狠话和赛后复盘（这一期没有收集狠话，复盘消息没有发）。陪练在比赛时只给了可执行程序，开源版放源码，用 `tron/make_player_pack.py` 编译。第 7 集屎山优化并进了 `warehouse/`（`submissions/ep7/`、`results/ep7/`、`packages/ep7/`），见 [`warehouse/README.md`](warehouse/README.md) 文末。
+
+第 9 集造桥（`bridge/`）的结构不同：没有 bot 和挑战脚本，`designs/` 是每人 8 份设计 JSON（第 1～6 关、决赛桥、捣蛋车），`reference/` 是参考答案，`engine/` 是物理内核源码（用 `bridge/build_engine.py` 编译），`tournament/score.py` 重算并核对全部成绩，见 [`bridge/README.md`](bridge/README.md)。
 
 `community/` 是观众投稿和社区榜，见上面的“来投稿”。`arena/` 是第 3 集起使用的通用对战平台（赛程、Bradley–Terry 评分）。`docs/` 里有评分方法和"版本演化"实验的说明。
 

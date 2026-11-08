@@ -1,0 +1,30 @@
+{
+ "name": "早高峰 A",
+ "vehicles": [
+  {
+   "type": "car",
+   "from": "left",
+   "t": 1.0
+  },
+  {
+   "type": "car",
+   "from": "right",
+   "t": 1.5
+  },
+  {
+   "type": "van",
+   "from": "left",
+   "t": 2.3
+  },
+  {
+   "type": "van",
+   "from": "right",
+   "t": 3.0
+  },
+  {
+   "type": "car",
+   "from": "left",
+   "t": 3.6
+  }
+ ]
+}

@@ -1,0 +1,25 @@
+{
+ "name": "决赛车队（无捣蛋车）",
+ "vehicles": [
+  {
+   "type": "car",
+   "from": "left",
+   "t": 12.0
+  },
+  {
+   "type": "van",
+   "from": "left",
+   "t": 13.0
+  },
+  {
+   "type": "car",
+   "from": "left",
+   "t": 14.0
+  },
+  {
+   "type": "van",
+   "from": "left",
+   "t": 15.0
+  }
+ ]
+}

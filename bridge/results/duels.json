@@ -1,0 +1,2882 @@
+[
+ {
+  "bridge": "sol62",
+  "saboteur": "opus",
+  "breached": false,
+  "convoy_status": [
+   2,
+   2,
+   2,
+   2
+  ],
+  "sab_arrived": true,
+  "anomaly": 0,
+  "vehicles": [
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 10.0667
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 18.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 20.3667
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 21.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 22.8167
+   }
+  ]
+ },
+ {
+  "bridge": "sol62",
+  "saboteur": "astra",
+  "breached": false,
+  "convoy_status": [
+   2,
+   2,
+   2,
+   2
+  ],
+  "sab_arrived": true,
+  "anomaly": 0,
+  "vehicles": [
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 5.7167
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 18.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 20.3667
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 21.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 22.8167
+   }
+  ]
+ },
+ {
+  "bridge": "sol62",
+  "saboteur": "gemini",
+  "breached": false,
+  "convoy_status": [
+   2,
+   2,
+   2,
+   2
+  ],
+  "sab_arrived": true,
+  "anomaly": 0,
+  "vehicles": [
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 5.8
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 18.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 20.3667
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 21.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 22.8167
+   }
+  ]
+ },
+ {
+  "bridge": "sol62",
+  "saboteur": "grok",
+  "breached": false,
+  "convoy_status": [
+   2,
+   2,
+   2,
+   2
+  ],
+  "sab_arrived": true,
+  "anomaly": 0,
+  "vehicles": [
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 5.7333
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 18.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 20.3667
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 21.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 22.8167
+   }
+  ]
+ },
+ {
+  "bridge": "sol62",
+  "saboteur": "kimi",
+  "breached": false,
+  "convoy_status": [
+   2,
+   2,
+   2,
+   2
+  ],
+  "sab_arrived": true,
+  "anomaly": 0,
+  "vehicles": [
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 6.3167
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 18.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 20.3667
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 21.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 22.8167
+   }
+  ]
+ },
+ {
+  "bridge": "sol62",
+  "saboteur": "hunyuan",
+  "breached": false,
+  "convoy_status": [
+   2,
+   2,
+   2,
+   2
+  ],
+  "sab_arrived": true,
+  "anomaly": 0,
+  "vehicles": [
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 5.7833
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 18.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 20.3667
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 21.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 22.8167
+   }
+  ]
+ },
+ {
+  "bridge": "sol62",
+  "saboteur": "doubao",
+  "breached": false,
+  "convoy_status": [
+   2,
+   2,
+   2,
+   2
+  ],
+  "sab_arrived": true,
+  "anomaly": 0,
+  "vehicles": [
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 5.6833
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 18.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 20.3667
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 21.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 22.8167
+   }
+  ]
+ },
+ {
+  "bridge": "sol62",
+  "saboteur": "deepseek",
+  "breached": false,
+  "convoy_status": [
+   2,
+   2,
+   2,
+   2
+  ],
+  "sab_arrived": true,
+  "anomaly": 0,
+  "vehicles": [
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 5.7167
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 18.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 20.3667
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 21.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 22.8167
+   }
+  ]
+ },
+ {
+  "bridge": "opus",
+  "saboteur": "sol62",
+  "breached": false,
+  "convoy_status": [
+   2,
+   2,
+   2,
+   2
+  ],
+  "sab_arrived": true,
+  "anomaly": 0,
+  "vehicles": [
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 5.6833
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 18.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 20.3667
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 21.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 22.8167
+   }
+  ]
+ },
+ {
+  "bridge": "opus",
+  "saboteur": "astra",
+  "breached": false,
+  "convoy_status": [
+   2,
+   2,
+   2,
+   2
+  ],
+  "sab_arrived": true,
+  "anomaly": 0,
+  "vehicles": [
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 5.7167
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 18.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 20.3667
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 21.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 22.8167
+   }
+  ]
+ },
+ {
+  "bridge": "opus",
+  "saboteur": "gemini",
+  "breached": false,
+  "convoy_status": [
+   2,
+   2,
+   2,
+   2
+  ],
+  "sab_arrived": true,
+  "anomaly": 0,
+  "vehicles": [
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 5.7833
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 18.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 20.3667
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 21.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 22.8167
+   }
+  ]
+ },
+ {
+  "bridge": "opus",
+  "saboteur": "grok",
+  "breached": false,
+  "convoy_status": [
+   2,
+   2,
+   2,
+   2
+  ],
+  "sab_arrived": true,
+  "anomaly": 0,
+  "vehicles": [
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 5.7333
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 18.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 20.3667
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 21.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 22.8167
+   }
+  ]
+ },
+ {
+  "bridge": "opus",
+  "saboteur": "kimi",
+  "breached": false,
+  "convoy_status": [
+   2,
+   2,
+   2,
+   2
+  ],
+  "sab_arrived": true,
+  "anomaly": 0,
+  "vehicles": [
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 6.3167
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 18.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 20.3667
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 21.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 22.8167
+   }
+  ]
+ },
+ {
+  "bridge": "opus",
+  "saboteur": "hunyuan",
+  "breached": false,
+  "convoy_status": [
+   2,
+   2,
+   2,
+   2
+  ],
+  "sab_arrived": true,
+  "anomaly": 0,
+  "vehicles": [
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 5.7833
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 18.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 20.3667
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 21.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 22.8167
+   }
+  ]
+ },
+ {
+  "bridge": "opus",
+  "saboteur": "doubao",
+  "breached": false,
+  "convoy_status": [
+   2,
+   2,
+   2,
+   2
+  ],
+  "sab_arrived": true,
+  "anomaly": 0,
+  "vehicles": [
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 5.6833
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 18.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 20.3667
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 21.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 22.8167
+   }
+  ]
+ },
+ {
+  "bridge": "opus",
+  "saboteur": "deepseek",
+  "breached": false,
+  "convoy_status": [
+   2,
+   2,
+   2,
+   2
+  ],
+  "sab_arrived": true,
+  "anomaly": 0,
+  "vehicles": [
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 5.7167
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 18.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 20.3667
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 21.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 22.8167
+   }
+  ]
+ },
+ {
+  "bridge": "astra",
+  "saboteur": "sol62",
+  "breached": false,
+  "convoy_status": [
+   2,
+   2,
+   2,
+   2
+  ],
+  "sab_arrived": true,
+  "anomaly": 0,
+  "vehicles": [
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 5.6833
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 18.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 20.3667
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 21.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 22.8167
+   }
+  ]
+ },
+ {
+  "bridge": "astra",
+  "saboteur": "opus",
+  "breached": false,
+  "convoy_status": [
+   2,
+   2,
+   2,
+   2
+  ],
+  "sab_arrived": true,
+  "anomaly": 0,
+  "vehicles": [
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 10.0667
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 18.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 20.3667
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 21.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 22.8167
+   }
+  ]
+ },
+ {
+  "bridge": "astra",
+  "saboteur": "gemini",
+  "breached": false,
+  "convoy_status": [
+   2,
+   2,
+   2,
+   2
+  ],
+  "sab_arrived": true,
+  "anomaly": 0,
+  "vehicles": [
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 5.7833
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 18.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 20.3667
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 21.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 22.8167
+   }
+  ]
+ },
+ {
+  "bridge": "astra",
+  "saboteur": "grok",
+  "breached": false,
+  "convoy_status": [
+   2,
+   2,
+   2,
+   2
+  ],
+  "sab_arrived": true,
+  "anomaly": 0,
+  "vehicles": [
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 5.7333
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 18.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 20.3667
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 21.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 22.8167
+   }
+  ]
+ },
+ {
+  "bridge": "astra",
+  "saboteur": "kimi",
+  "breached": false,
+  "convoy_status": [
+   2,
+   2,
+   2,
+   2
+  ],
+  "sab_arrived": true,
+  "anomaly": 0,
+  "vehicles": [
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 6.3167
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 18.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 20.3667
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 21.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 22.8167
+   }
+  ]
+ },
+ {
+  "bridge": "astra",
+  "saboteur": "hunyuan",
+  "breached": false,
+  "convoy_status": [
+   2,
+   2,
+   2,
+   2
+  ],
+  "sab_arrived": true,
+  "anomaly": 0,
+  "vehicles": [
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 5.7833
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 18.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 20.3667
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 21.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 22.8167
+   }
+  ]
+ },
+ {
+  "bridge": "astra",
+  "saboteur": "doubao",
+  "breached": false,
+  "convoy_status": [
+   2,
+   2,
+   2,
+   2
+  ],
+  "sab_arrived": true,
+  "anomaly": 0,
+  "vehicles": [
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 5.6833
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 18.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 20.3667
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 21.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 22.8167
+   }
+  ]
+ },
+ {
+  "bridge": "astra",
+  "saboteur": "deepseek",
+  "breached": false,
+  "convoy_status": [
+   2,
+   2,
+   2,
+   2
+  ],
+  "sab_arrived": true,
+  "anomaly": 0,
+  "vehicles": [
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 5.7167
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 18.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 20.3667
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 21.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 22.8167
+   }
+  ]
+ },
+ {
+  "bridge": "gemini",
+  "saboteur": "sol62",
+  "breached": false,
+  "convoy_status": [
+   2,
+   2,
+   2,
+   2
+  ],
+  "sab_arrived": true,
+  "anomaly": 0,
+  "vehicles": [
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 5.7
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 18.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 20.3667
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 21.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 22.8167
+   }
+  ]
+ },
+ {
+  "bridge": "gemini",
+  "saboteur": "opus",
+  "breached": false,
+  "convoy_status": [
+   2,
+   2,
+   2,
+   2
+  ],
+  "sab_arrived": true,
+  "anomaly": 0,
+  "vehicles": [
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 10.0667
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 18.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 20.3667
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 21.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 22.8167
+   }
+  ]
+ },
+ {
+  "bridge": "gemini",
+  "saboteur": "astra",
+  "breached": true,
+  "convoy_status": [
+   3,
+   3,
+   3,
+   3
+  ],
+  "sab_arrived": true,
+  "anomaly": 0,
+  "vehicles": [
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 5.7167
+   },
+   {
+    "status": 3,
+    "reason": 1,
+    "t": 15.0667
+   },
+   {
+    "status": 3,
+    "reason": 2,
+    "t": 16.3333
+   },
+   {
+    "status": 3,
+    "reason": 2,
+    "t": 17.3667
+   },
+   {
+    "status": 3,
+    "reason": 2,
+    "t": 18.5833
+   }
+  ]
+ },
+ {
+  "bridge": "gemini",
+  "saboteur": "grok",
+  "breached": false,
+  "convoy_status": [
+   2,
+   2,
+   2,
+   2
+  ],
+  "sab_arrived": true,
+  "anomaly": 0,
+  "vehicles": [
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 5.7333
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 18.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 20.3667
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 21.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 22.8167
+   }
+  ]
+ },
+ {
+  "bridge": "gemini",
+  "saboteur": "kimi",
+  "breached": false,
+  "convoy_status": [
+   2,
+   2,
+   2,
+   2
+  ],
+  "sab_arrived": true,
+  "anomaly": 0,
+  "vehicles": [
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 6.3167
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 18.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 20.3667
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 21.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 22.8167
+   }
+  ]
+ },
+ {
+  "bridge": "gemini",
+  "saboteur": "hunyuan",
+  "breached": false,
+  "convoy_status": [
+   2,
+   2,
+   2,
+   2
+  ],
+  "sab_arrived": true,
+  "anomaly": 0,
+  "vehicles": [
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 5.7833
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 18.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 20.3667
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 21.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 22.8167
+   }
+  ]
+ },
+ {
+  "bridge": "gemini",
+  "saboteur": "doubao",
+  "breached": false,
+  "convoy_status": [
+   2,
+   2,
+   2,
+   2
+  ],
+  "sab_arrived": true,
+  "anomaly": 0,
+  "vehicles": [
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 5.7
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 18.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 20.3667
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 21.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 22.8167
+   }
+  ]
+ },
+ {
+  "bridge": "gemini",
+  "saboteur": "deepseek",
+  "breached": false,
+  "convoy_status": [
+   2,
+   2,
+   2,
+   2
+  ],
+  "sab_arrived": true,
+  "anomaly": 0,
+  "vehicles": [
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 5.7167
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 18.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 20.3667
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 21.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 22.8167
+   }
+  ]
+ },
+ {
+  "bridge": "grok",
+  "saboteur": "sol62",
+  "breached": true,
+  "convoy_status": [
+   3,
+   3,
+   3,
+   3
+  ],
+  "sab_arrived": true,
+  "anomaly": 0,
+  "vehicles": [
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 6.1667
+   },
+   {
+    "status": 3,
+    "reason": 1,
+    "t": 15.0667
+   },
+   {
+    "status": 3,
+    "reason": 2,
+    "t": 16.3333
+   },
+   {
+    "status": 3,
+    "reason": 2,
+    "t": 17.3667
+   },
+   {
+    "status": 3,
+    "reason": 2,
+    "t": 18.5833
+   }
+  ]
+ },
+ {
+  "bridge": "grok",
+  "saboteur": "opus",
+  "breached": true,
+  "convoy_status": [
+   3,
+   3,
+   3,
+   3
+  ],
+  "sab_arrived": false,
+  "anomaly": 0,
+  "vehicles": [
+   {
+    "status": 3,
+    "reason": 1,
+    "t": 9.3333
+   },
+   {
+    "status": 3,
+    "reason": 2,
+    "t": 14.025
+   },
+   {
+    "status": 3,
+    "reason": 2,
+    "t": 15.3458
+   },
+   {
+    "status": 3,
+    "reason": 1,
+    "t": 17.3833
+   },
+   {
+    "status": 3,
+    "reason": 2,
+    "t": 18.5167
+   }
+  ]
+ },
+ {
+  "bridge": "grok",
+  "saboteur": "astra",
+  "breached": true,
+  "convoy_status": [
+   3,
+   3,
+   3,
+   3
+  ],
+  "sab_arrived": false,
+  "anomaly": 0,
+  "vehicles": [
+   {
+    "status": 3,
+    "reason": 3,
+    "t": 5.0333
+   },
+   {
+    "status": 3,
+    "reason": 1,
+    "t": 15.0667
+   },
+   {
+    "status": 3,
+    "reason": 2,
+    "t": 16.3333
+   },
+   {
+    "status": 3,
+    "reason": 2,
+    "t": 17.3667
+   },
+   {
+    "status": 3,
+    "reason": 2,
+    "t": 18.5833
+   }
+  ]
+ },
+ {
+  "bridge": "grok",
+  "saboteur": "gemini",
+  "breached": true,
+  "convoy_status": [
+   3,
+   3,
+   3,
+   3
+  ],
+  "sab_arrived": true,
+  "anomaly": 0,
+  "vehicles": [
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 5.8333
+   },
+   {
+    "status": 3,
+    "reason": 2,
+    "t": 14.025
+   },
+   {
+    "status": 3,
+    "reason": 2,
+    "t": 15.3458
+   },
+   {
+    "status": 3,
+    "reason": 2,
+    "t": 17.3833
+   },
+   {
+    "status": 3,
+    "reason": 2,
+    "t": 18.5167
+   }
+  ]
+ },
+ {
+  "bridge": "grok",
+  "saboteur": "kimi",
+  "breached": false,
+  "convoy_status": [
+   2,
+   2,
+   2,
+   2
+  ],
+  "sab_arrived": true,
+  "anomaly": 0,
+  "vehicles": [
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 6.3167
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 18.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 20.3667
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 21.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 22.8167
+   }
+  ]
+ },
+ {
+  "bridge": "grok",
+  "saboteur": "hunyuan",
+  "breached": false,
+  "convoy_status": [
+   2,
+   2,
+   2,
+   2
+  ],
+  "sab_arrived": true,
+  "anomaly": 0,
+  "vehicles": [
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 5.7833
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 18.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 20.3667
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 21.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 22.8167
+   }
+  ]
+ },
+ {
+  "bridge": "grok",
+  "saboteur": "doubao",
+  "breached": false,
+  "convoy_status": [
+   2,
+   2,
+   2,
+   2
+  ],
+  "sab_arrived": true,
+  "anomaly": 0,
+  "vehicles": [
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 5.6833
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 18.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 20.3667
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 21.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 22.8167
+   }
+  ]
+ },
+ {
+  "bridge": "grok",
+  "saboteur": "deepseek",
+  "breached": false,
+  "convoy_status": [
+   2,
+   2,
+   2,
+   2
+  ],
+  "sab_arrived": true,
+  "anomaly": 0,
+  "vehicles": [
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 5.7167
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 18.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 20.3667
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 21.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 22.8167
+   }
+  ]
+ },
+ {
+  "bridge": "kimi",
+  "saboteur": "sol62",
+  "breached": true,
+  "convoy_status": [
+   3,
+   3,
+   3,
+   3
+  ],
+  "sab_arrived": true,
+  "anomaly": 0,
+  "vehicles": [
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 6.2667
+   },
+   {
+    "status": 3,
+    "reason": 1,
+    "t": 15.0667
+   },
+   {
+    "status": 3,
+    "reason": 2,
+    "t": 16.3333
+   },
+   {
+    "status": 3,
+    "reason": 2,
+    "t": 17.3667
+   },
+   {
+    "status": 3,
+    "reason": 2,
+    "t": 18.5833
+   }
+  ]
+ },
+ {
+  "bridge": "kimi",
+  "saboteur": "opus",
+  "breached": true,
+  "convoy_status": [
+   3,
+   3,
+   3,
+   3
+  ],
+  "sab_arrived": false,
+  "anomaly": 0,
+  "vehicles": [
+   {
+    "status": 3,
+    "reason": 1,
+    "t": 6.9333
+   },
+   {
+    "status": 3,
+    "reason": 1,
+    "t": 15.0667
+   },
+   {
+    "status": 3,
+    "reason": 2,
+    "t": 16.3333
+   },
+   {
+    "status": 3,
+    "reason": 2,
+    "t": 17.3667
+   },
+   {
+    "status": 3,
+    "reason": 2,
+    "t": 18.5833
+   }
+  ]
+ },
+ {
+  "bridge": "kimi",
+  "saboteur": "astra",
+  "breached": true,
+  "convoy_status": [
+   3,
+   3,
+   3,
+   3
+  ],
+  "sab_arrived": false,
+  "anomaly": 0,
+  "vehicles": [
+   {
+    "status": 3,
+    "reason": 3,
+    "t": 5.01
+   },
+   {
+    "status": 3,
+    "reason": 1,
+    "t": 15.0667
+   },
+   {
+    "status": 3,
+    "reason": 2,
+    "t": 16.3333
+   },
+   {
+    "status": 3,
+    "reason": 2,
+    "t": 17.3667
+   },
+   {
+    "status": 3,
+    "reason": 2,
+    "t": 18.5833
+   }
+  ]
+ },
+ {
+  "bridge": "kimi",
+  "saboteur": "gemini",
+  "breached": false,
+  "convoy_status": [
+   2,
+   2,
+   2,
+   2
+  ],
+  "sab_arrived": true,
+  "anomaly": 0,
+  "vehicles": [
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 5.7833
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 18.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 20.3667
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 21.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 22.8167
+   }
+  ]
+ },
+ {
+  "bridge": "kimi",
+  "saboteur": "grok",
+  "breached": false,
+  "convoy_status": [
+   2,
+   2,
+   2,
+   2
+  ],
+  "sab_arrived": true,
+  "anomaly": 0,
+  "vehicles": [
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 5.7333
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 18.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 20.3667
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 21.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 22.8167
+   }
+  ]
+ },
+ {
+  "bridge": "kimi",
+  "saboteur": "hunyuan",
+  "breached": false,
+  "convoy_status": [
+   2,
+   2,
+   2,
+   2
+  ],
+  "sab_arrived": true,
+  "anomaly": 0,
+  "vehicles": [
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 5.7833
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 18.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 20.3667
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 21.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 22.8167
+   }
+  ]
+ },
+ {
+  "bridge": "kimi",
+  "saboteur": "doubao",
+  "breached": false,
+  "convoy_status": [
+   2,
+   2,
+   2,
+   2
+  ],
+  "sab_arrived": true,
+  "anomaly": 0,
+  "vehicles": [
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 5.6833
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 18.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 20.3667
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 21.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 22.8167
+   }
+  ]
+ },
+ {
+  "bridge": "kimi",
+  "saboteur": "deepseek",
+  "breached": false,
+  "convoy_status": [
+   2,
+   2,
+   2,
+   2
+  ],
+  "sab_arrived": true,
+  "anomaly": 0,
+  "vehicles": [
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 5.7167
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 18.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 20.3667
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 21.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 22.8167
+   }
+  ]
+ },
+ {
+  "bridge": "hunyuan",
+  "saboteur": "sol62",
+  "breached": true,
+  "convoy_status": [
+   3,
+   3,
+   3,
+   3
+  ],
+  "sab_arrived": false,
+  "anomaly": 0,
+  "vehicles": [
+   {
+    "status": 3,
+    "reason": 1,
+    "t": 5.75
+   },
+   {
+    "status": 3,
+    "reason": 1,
+    "t": 15.0667
+   },
+   {
+    "status": 3,
+    "reason": 2,
+    "t": 16.3333
+   },
+   {
+    "status": 3,
+    "reason": 2,
+    "t": 17.3667
+   },
+   {
+    "status": 3,
+    "reason": 2,
+    "t": 18.5833
+   }
+  ]
+ },
+ {
+  "bridge": "hunyuan",
+  "saboteur": "opus",
+  "breached": false,
+  "convoy_status": [
+   2,
+   2,
+   2,
+   2
+  ],
+  "sab_arrived": true,
+  "anomaly": 0,
+  "vehicles": [
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 10.0667
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 18.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 20.3667
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 21.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 22.8167
+   }
+  ]
+ },
+ {
+  "bridge": "hunyuan",
+  "saboteur": "astra",
+  "breached": true,
+  "convoy_status": [
+   3,
+   3,
+   3,
+   3
+  ],
+  "sab_arrived": false,
+  "anomaly": 0,
+  "vehicles": [
+   {
+    "status": 3,
+    "reason": 1,
+    "t": 5.5
+   },
+   {
+    "status": 3,
+    "reason": 2,
+    "t": 14.7
+   },
+   {
+    "status": 3,
+    "reason": 2,
+    "t": 16.1008
+   },
+   {
+    "status": 3,
+    "reason": 1,
+    "t": 17.5333
+   },
+   {
+    "status": 3,
+    "reason": 2,
+    "t": 18.4067
+   }
+  ]
+ },
+ {
+  "bridge": "hunyuan",
+  "saboteur": "gemini",
+  "breached": false,
+  "convoy_status": [
+   2,
+   2,
+   2,
+   2
+  ],
+  "sab_arrived": true,
+  "anomaly": 0,
+  "vehicles": [
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 5.7833
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 18.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 20.3667
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 21.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 22.8167
+   }
+  ]
+ },
+ {
+  "bridge": "hunyuan",
+  "saboteur": "grok",
+  "breached": false,
+  "convoy_status": [
+   2,
+   2,
+   2,
+   2
+  ],
+  "sab_arrived": true,
+  "anomaly": 0,
+  "vehicles": [
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 5.7333
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 18.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 20.3667
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 21.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 22.8167
+   }
+  ]
+ },
+ {
+  "bridge": "hunyuan",
+  "saboteur": "kimi",
+  "breached": false,
+  "convoy_status": [
+   2,
+   2,
+   2,
+   2
+  ],
+  "sab_arrived": true,
+  "anomaly": 0,
+  "vehicles": [
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 6.3167
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 18.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 20.3667
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 21.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 22.8167
+   }
+  ]
+ },
+ {
+  "bridge": "hunyuan",
+  "saboteur": "doubao",
+  "breached": false,
+  "convoy_status": [
+   2,
+   2,
+   2,
+   2
+  ],
+  "sab_arrived": true,
+  "anomaly": 0,
+  "vehicles": [
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 5.6833
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 18.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 20.3667
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 21.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 22.8167
+   }
+  ]
+ },
+ {
+  "bridge": "hunyuan",
+  "saboteur": "deepseek",
+  "breached": false,
+  "convoy_status": [
+   2,
+   2,
+   2,
+   2
+  ],
+  "sab_arrived": true,
+  "anomaly": 0,
+  "vehicles": [
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 5.7167
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 18.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 20.3667
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 21.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 22.8167
+   }
+  ]
+ },
+ {
+  "bridge": "doubao",
+  "saboteur": "sol62",
+  "breached": true,
+  "convoy_status": [
+   3,
+   3,
+   3,
+   3
+  ],
+  "sab_arrived": true,
+  "anomaly": 0,
+  "vehicles": [
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 5.8
+   },
+   {
+    "status": 3,
+    "reason": 1,
+    "t": 15.0667
+   },
+   {
+    "status": 3,
+    "reason": 2,
+    "t": 16.3333
+   },
+   {
+    "status": 3,
+    "reason": 1,
+    "t": 17.7
+   },
+   {
+    "status": 3,
+    "reason": 2,
+    "t": 18.5167
+   }
+  ]
+ },
+ {
+  "bridge": "doubao",
+  "saboteur": "opus",
+  "breached": true,
+  "convoy_status": [
+   3,
+   3,
+   3,
+   3
+  ],
+  "sab_arrived": false,
+  "anomaly": 0,
+  "vehicles": [
+   {
+    "status": 3,
+    "reason": 1,
+    "t": 6.9167
+   },
+   {
+    "status": 3,
+    "reason": 1,
+    "t": 15.0667
+   },
+   {
+    "status": 3,
+    "reason": 2,
+    "t": 16.3333
+   },
+   {
+    "status": 3,
+    "reason": 2,
+    "t": 17.3667
+   },
+   {
+    "status": 3,
+    "reason": 2,
+    "t": 18.5833
+   }
+  ]
+ },
+ {
+  "bridge": "doubao",
+  "saboteur": "astra",
+  "breached": true,
+  "convoy_status": [
+   3,
+   3,
+   3,
+   3
+  ],
+  "sab_arrived": false,
+  "anomaly": 0,
+  "vehicles": [
+   {
+    "status": 3,
+    "reason": 1,
+    "t": 5.3333
+   },
+   {
+    "status": 3,
+    "reason": 1,
+    "t": 15.0667
+   },
+   {
+    "status": 3,
+    "reason": 2,
+    "t": 16.3333
+   },
+   {
+    "status": 3,
+    "reason": 2,
+    "t": 17.3667
+   },
+   {
+    "status": 3,
+    "reason": 2,
+    "t": 18.5833
+   }
+  ]
+ },
+ {
+  "bridge": "doubao",
+  "saboteur": "gemini",
+  "breached": true,
+  "convoy_status": [
+   3,
+   3,
+   3,
+   3
+  ],
+  "sab_arrived": false,
+  "anomaly": 0,
+  "vehicles": [
+   {
+    "status": 3,
+    "reason": 1,
+    "t": 4.65
+   },
+   {
+    "status": 3,
+    "reason": 1,
+    "t": 15.0667
+   },
+   {
+    "status": 3,
+    "reason": 2,
+    "t": 16.3333
+   },
+   {
+    "status": 3,
+    "reason": 2,
+    "t": 17.3667
+   },
+   {
+    "status": 3,
+    "reason": 2,
+    "t": 18.5833
+   }
+  ]
+ },
+ {
+  "bridge": "doubao",
+  "saboteur": "grok",
+  "breached": false,
+  "convoy_status": [
+   2,
+   2,
+   2,
+   2
+  ],
+  "sab_arrived": true,
+  "anomaly": 0,
+  "vehicles": [
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 5.7333
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 18.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 20.3667
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 21.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 22.8167
+   }
+  ]
+ },
+ {
+  "bridge": "doubao",
+  "saboteur": "kimi",
+  "breached": false,
+  "convoy_status": [
+   2,
+   2,
+   2,
+   2
+  ],
+  "sab_arrived": true,
+  "anomaly": 0,
+  "vehicles": [
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 6.3167
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 18.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 20.3667
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 21.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 22.8167
+   }
+  ]
+ },
+ {
+  "bridge": "doubao",
+  "saboteur": "hunyuan",
+  "breached": false,
+  "convoy_status": [
+   2,
+   2,
+   2,
+   2
+  ],
+  "sab_arrived": true,
+  "anomaly": 0,
+  "vehicles": [
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 5.7833
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 18.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 20.3667
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 21.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 22.8167
+   }
+  ]
+ },
+ {
+  "bridge": "doubao",
+  "saboteur": "deepseek",
+  "breached": false,
+  "convoy_status": [
+   2,
+   2,
+   2,
+   2
+  ],
+  "sab_arrived": true,
+  "anomaly": 0,
+  "vehicles": [
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 5.7167
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 18.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 20.3667
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 21.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 22.8167
+   }
+  ]
+ },
+ {
+  "bridge": "deepseek",
+  "saboteur": "sol62",
+  "breached": true,
+  "convoy_status": [
+   3,
+   3,
+   3,
+   3
+  ],
+  "sab_arrived": true,
+  "anomaly": 0,
+  "vehicles": [
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 6.2167
+   },
+   {
+    "status": 3,
+    "reason": 1,
+    "t": 15.0667
+   },
+   {
+    "status": 3,
+    "reason": 2,
+    "t": 16.3333
+   },
+   {
+    "status": 3,
+    "reason": 2,
+    "t": 17.3667
+   },
+   {
+    "status": 3,
+    "reason": 2,
+    "t": 18.5833
+   }
+  ]
+ },
+ {
+  "bridge": "deepseek",
+  "saboteur": "opus",
+  "breached": true,
+  "convoy_status": [
+   3,
+   3,
+   3,
+   3
+  ],
+  "sab_arrived": false,
+  "anomaly": 0,
+  "vehicles": [
+   {
+    "status": 3,
+    "reason": 1,
+    "t": 6.9167
+   },
+   {
+    "status": 3,
+    "reason": 1,
+    "t": 15.0667
+   },
+   {
+    "status": 3,
+    "reason": 2,
+    "t": 16.3333
+   },
+   {
+    "status": 3,
+    "reason": 2,
+    "t": 17.3667
+   },
+   {
+    "status": 3,
+    "reason": 2,
+    "t": 18.5833
+   }
+  ]
+ },
+ {
+  "bridge": "deepseek",
+  "saboteur": "astra",
+  "breached": true,
+  "convoy_status": [
+   3,
+   3,
+   3,
+   3
+  ],
+  "sab_arrived": false,
+  "anomaly": 0,
+  "vehicles": [
+   {
+    "status": 3,
+    "reason": 3,
+    "t": 4.9883
+   },
+   {
+    "status": 3,
+    "reason": 1,
+    "t": 15.0667
+   },
+   {
+    "status": 3,
+    "reason": 2,
+    "t": 16.3333
+   },
+   {
+    "status": 3,
+    "reason": 2,
+    "t": 17.3667
+   },
+   {
+    "status": 3,
+    "reason": 2,
+    "t": 18.5833
+   }
+  ]
+ },
+ {
+  "bridge": "deepseek",
+  "saboteur": "gemini",
+  "breached": true,
+  "convoy_status": [
+   3,
+   3,
+   3,
+   3
+  ],
+  "sab_arrived": false,
+  "anomaly": 0,
+  "vehicles": [
+   {
+    "status": 3,
+    "reason": 1,
+    "t": 4.6833
+   },
+   {
+    "status": 3,
+    "reason": 1,
+    "t": 15.0667
+   },
+   {
+    "status": 3,
+    "reason": 2,
+    "t": 16.3333
+   },
+   {
+    "status": 3,
+    "reason": 2,
+    "t": 17.3667
+   },
+   {
+    "status": 3,
+    "reason": 2,
+    "t": 18.5833
+   }
+  ]
+ },
+ {
+  "bridge": "deepseek",
+  "saboteur": "grok",
+  "breached": false,
+  "convoy_status": [
+   2,
+   2,
+   2,
+   2
+  ],
+  "sab_arrived": true,
+  "anomaly": 0,
+  "vehicles": [
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 5.7333
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 18.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 20.3667
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 21.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 22.8167
+   }
+  ]
+ },
+ {
+  "bridge": "deepseek",
+  "saboteur": "kimi",
+  "breached": false,
+  "convoy_status": [
+   2,
+   2,
+   2,
+   2
+  ],
+  "sab_arrived": true,
+  "anomaly": 0,
+  "vehicles": [
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 6.3167
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 18.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 20.3667
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 21.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 22.8167
+   }
+  ]
+ },
+ {
+  "bridge": "deepseek",
+  "saboteur": "hunyuan",
+  "breached": false,
+  "convoy_status": [
+   2,
+   2,
+   2,
+   2
+  ],
+  "sab_arrived": true,
+  "anomaly": 0,
+  "vehicles": [
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 5.7833
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 18.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 20.3667
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 21.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 22.8167
+   }
+  ]
+ },
+ {
+  "bridge": "deepseek",
+  "saboteur": "doubao",
+  "breached": false,
+  "convoy_status": [
+   2,
+   2,
+   2,
+   2
+  ],
+  "sab_arrived": true,
+  "anomaly": 0,
+  "vehicles": [
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 5.6833
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 18.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 20.3667
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 21.4
+   },
+   {
+    "status": 2,
+    "reason": 0,
+    "t": 22.8167
+   }
+  ]
+ }
+]

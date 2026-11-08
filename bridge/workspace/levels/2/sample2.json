@@ -1,0 +1,11 @@
+{
+ "name": "超载面包车 右→左",
+ "vehicles": [
+  {
+   "type": "van",
+   "from": "right",
+   "t": 1.0,
+   "mass": 2200
+  }
+ ]
+}

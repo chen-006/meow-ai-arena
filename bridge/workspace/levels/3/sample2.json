@@ -1,0 +1,25 @@
+{
+ "name": "面包车车队",
+ "vehicles": [
+  {
+   "type": "van",
+   "from": "left",
+   "t": 1.0
+  },
+  {
+   "type": "van",
+   "from": "left",
+   "t": 1.6
+  },
+  {
+   "type": "van",
+   "from": "right",
+   "t": 1.2
+  },
+  {
+   "type": "van",
+   "from": "right",
+   "t": 1.8
+  }
+ ]
+}

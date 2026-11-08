@@ -1,0 +1,33 @@
+{
+ "name": "船 24 秒 车流",
+ "vehicles": [
+  {
+   "type": "car",
+   "from": "left",
+   "t": 1.0
+  },
+  {
+   "type": "van",
+   "from": "right",
+   "t": 2.0
+  },
+  {
+   "type": "truck",
+   "from": "right",
+   "t": 8.0
+  },
+  {
+   "type": "van",
+   "from": "left",
+   "t": 12.0
+  },
+  {
+   "type": "car",
+   "from": "left",
+   "t": 27.0
+  }
+ ],
+ "ship": {
+  "t": 24.0
+ }
+}

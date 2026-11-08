@@ -1,0 +1,23 @@
+{
+ "name": "船 14 秒 卡车右来",
+ "vehicles": [
+  {
+   "type": "van",
+   "from": "left",
+   "t": 1.0
+  },
+  {
+   "type": "truck",
+   "from": "right",
+   "t": 3.0
+  },
+  {
+   "type": "car",
+   "from": "left",
+   "t": 21.0
+  }
+ ],
+ "ship": {
+  "t": 14.0
+ }
+}
