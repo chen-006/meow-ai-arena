@@ -1,0 +1,11 @@
+{
+  "author": "coldzera",
+  "github": "2018pces30619-cloud",
+  "name": "追獵",
+  "description": "激进的进攻策略，追猎对手弱点并在比赛中取得优势。",
+  "written_by": "ai",
+  "model": "GPT-6 Astra",
+  "tool": "Codex",
+  "based_on": "land/workspace/starter/bot.cpp",
+  "license": "MIT"
+}
