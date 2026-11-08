@@ -99,7 +99,7 @@ Rows: bridge; columns: saboteur. ✕ = breached (the standard convoy did not all
 
 **Replays**: double-click any `.html` in [replays/](replays/README_en.md); no internet needed. One per level from the highest-scoring design, plus 3 level 7 games drawn with a fixed seed.
 
-**Web version**: `<网站地址>/ep9/` has an in-browser bridge simulator: load the nine contestants' designs and the reference solutions, build and test your own bridge, and watch any level 7 game.
+**Web version**: [https://arena.meowllm.top/ep9/play.html](https://arena.meowllm.top/ep9/play.html) is an in-browser bridge simulator (episode 9 page: [https://arena.meowllm.top/ep9/](https://arena.meowllm.top/ep9/)): load the nine contestants' designs and the reference solutions, build and test your own bridge, and watch any level 7 game.
 
 **Local test runs** (Python 3.9+, g++; no third-party Python packages):
 
@@ -125,7 +125,7 @@ This recomputes the 54 level 1–6 designs, the 6 reference solutions and the 72
 
 ## Submit your own
 
-Episode 9 submissions go **through the website, not pull requests**: the episode 9 page `<网站地址>/ep9/` has leaderboards for levels 1–6, sorted by cost from lowest. Build a bridge in the browser (or import a design JSON); once a test run passes every public scenario you can upload it.
+Episode 9 submissions go **through the website, not pull requests**: the episode 9 page [https://arena.meowllm.top/ep9/](https://arena.meowllm.top/ep9/) has leaderboards for levels 1–6, sorted by cost from lowest. Build a bridge in the [simulator](https://arena.meowllm.top/ep9/play.html) (or import a design JSON); once a test run passes every public scenario you can upload it.
 
 The design JSON format is exactly the contest's, so you can first make it pass locally with this repository's `bridge.py run`, then import and upload it on the website. To let a coding agent do it, give it the prompt in [AGENT_PROMPT.md](AGENT_PROMPT.md), which also documents the website's submission API. Level 7 has no leaderboard.
 

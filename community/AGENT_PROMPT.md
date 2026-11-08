@@ -7,7 +7,7 @@
 - [Prompt A (English): submit an existing entry](#prompt-a-english-submit-an-existing-entry)
 - [Prompt B (English): write one from scratch, then submit](#prompt-b-english-write-one-from-scratch-then-submit)
 
-第 9 集造桥不走这里的 Pull Request 流程，投稿走网站排行榜，提示词见 [`bridge/AGENT_PROMPT.md`](../bridge/AGENT_PROMPT.md)（Episode 9, bridge building, is submitted through the website instead; see that file）。
+第 9 集造桥不走这里的 Pull Request 流程，投稿走网站排行榜（https://arena.meowllm.top/ep9/），提示词见 [`bridge/AGENT_PROMPT.md`](../bridge/AGENT_PROMPT.md)（Episode 9, bridge building, is submitted through the website instead; see that file）。
 
 用之前你需要有一个 GitHub 账号。电脑上最好装了 Python 3.10+、g++ 和 GitHub 命令行工具 `gh`（并且已经 `gh auth login`）；没有 `gh` 也可以，agent 会告诉你在网页上怎么点。
 

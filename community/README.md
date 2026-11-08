@@ -19,7 +19,7 @@ English: [README_en.md](README_en.md)
 | 第 6 集 · 坦克大战 | `community/tank/` | 一个 `bot.cpp`，只实现 `init` 和 `decide` |
 | 第 7 集 · 光轮对战 | `community/tron/` | 一个 `bot.cpp`，只实现 `decide`；本地评测需要 Windows |
 
-第 9 集 · 造桥不收 Pull Request：投稿走网站的第 1～6 关排行榜，见 [`bridge/README.md`](../bridge/README.md#投稿)；给 coding agent 的提示词在 [`bridge/AGENT_PROMPT.md`](../bridge/AGENT_PROMPT.md)。
+第 9 集 · 造桥不收 Pull Request：投稿走网站的第 1～6 关排行榜（[https://arena.meowllm.top/ep9/](https://arena.meowllm.top/ep9/)），见 [`bridge/README.md`](../bridge/README.md#投稿)；给 coding agent 的提示词在 [`bridge/AGENT_PROMPT.md`](../bridge/AGENT_PROMPT.md)。
 
 下面这些都可以：
 

@@ -5,7 +5,7 @@
 - [提示词（中文）](#提示词中文)
 - [Prompt (English)](#prompt-english)
 
-网站第 9 集页面：`<网站地址>/ep9/`。也可以不用 agent：在网页模拟器里导入设计 JSON（或直接搭桥），试车全部公开场景通过后点“上传到排行榜”。
+网站第 9 集页面：<https://arena.meowllm.top/ep9/>，模拟器：<https://arena.meowllm.top/ep9/play.html>。也可以不用 agent：在网页模拟器里导入设计 JSON（或直接搭桥），试车全部公开场景通过后点“上传到排行榜”。
 
 ## 提示词（中文）
 
@@ -20,7 +20,7 @@
      python bridge.py run <关> <设计.json> --no-archive -q
    run 的退出码 0 表示该关全部公开场景通过。只有全部通过的设计才能上传；目标是在全部通过的前提下把造价压低（排行榜按造价从低到高排）。可以对照 bridge/designs/ 里九位参赛模型的设计和 bridge/reference/ 里的参考答案。
 5. 上传前把这几样给我过目：关卡、造价、run 的完整输出、要上传的 JSON。我同意后再上传。
-6. 上传接口（前缀 <网站地址>/api/ep9/，JSON，UTF-8）：
+6. 上传接口（前缀 https://arena.meowllm.top/api/ep9/，JSON，UTF-8）：
      POST submit   请求体 {"level": 1～6, "nick": "昵称", "design": 设计对象}
                    返回 {"id", "cost", "rank", "dup"}；dup 为 true 表示同一关已经有完全相同的设计
      GET  board?level=N   看第 N 关排行榜
@@ -48,7 +48,7 @@ Please help me submit a bridge to the website leaderboard of meow-ai-arena episo
      python bridge.py run <level> <design.json> --no-archive -q
    Exit code 0 from run means every public scenario of the level passes. Only designs that pass every scenario may be uploaded; the goal is to make the passing design as cheap as possible (the leaderboard is sorted by cost, lowest first). You can compare with the nine contestants' designs in bridge/designs/ and the reference solutions in bridge/reference/.
 5. Before uploading, show me: the level, the cost, the full output of run, and the JSON to be uploaded. Upload only after I approve.
-6. Upload API (prefix <网站地址>/api/ep9/, JSON, UTF-8):
+6. Upload API (prefix https://arena.meowllm.top/api/ep9/, JSON, UTF-8):
      POST submit   body {"level": 1-6, "nick": "nickname", "design": design object}
                    returns {"id", "cost", "rank", "dup"}; dup = true means an identical design is already on that level's board
      GET  board?level=N   the leaderboard of level N

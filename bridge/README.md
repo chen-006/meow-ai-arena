@@ -99,7 +99,7 @@
 
 **看回放**：双击 [replays/](replays/README.md) 里的 `.html`，不用联网。每关关卡分最高的设计各一份，第 7 关按固定种子随机抽 3 局。
 
-**网页版**：`<网站地址>/ep9/` 有浏览器里的造桥模拟器，可以载入九位选手和参考答案的设计、自己搭桥试车、看第 7 关任意一局。
+**网页版**：[https://arena.meowllm.top/ep9/play.html](https://arena.meowllm.top/ep9/play.html) 是浏览器里的造桥模拟器（第 9 集页面 [https://arena.meowllm.top/ep9/](https://arena.meowllm.top/ep9/)），可以载入九位选手和参考答案的设计、自己搭桥试车、看第 7 关任意一局。
 
 **本地试车**（Python 3.9+、g++；不需要第三方 Python 包）：
 
@@ -125,7 +125,7 @@ python tournament/score.py
 
 ## 投稿
 
-第 9 集的投稿**走网站，不走 Pull Request**：网站第 9 集页面 `<网站地址>/ep9/` 有第 1～6 关的排行榜，按造价从低到高排。在浏览器里搭桥（或导入设计 JSON），试车全部公开场景通过后就能上传。
+第 9 集的投稿**走网站，不走 Pull Request**：网站第 9 集页面 [https://arena.meowllm.top/ep9/](https://arena.meowllm.top/ep9/) 有第 1～6 关的排行榜，按造价从低到高排。在[模拟器](https://arena.meowllm.top/ep9/play.html)里搭桥（或导入设计 JSON），试车全部公开场景通过后就能上传。
 
 设计 JSON 的格式和比赛完全相同，可以先用本仓库的 `bridge.py run` 在本地跑通，再到网站导入、上传。想让 coding agent 代劳，把 [AGENT_PROMPT.md](AGENT_PROMPT.md) 里的提示词交给它；那里也写了网站的投稿接口。第 7 关没有排行榜。
 
