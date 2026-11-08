@@ -31,7 +31,7 @@ The reference solutions were made by the organizer beforehand; see [reference/](
 
 | Contestant | Tool | Configured reasoning level |
 |---|---|---|
-| GPT-6.2 Sol | Codex desktop app | highest |
+| GPT-6.2 Sol | Codex desktop app | max |
 | Claude Opus 5.5 | Claude Code | max |
 | GPT-6 Astra | Codex CLI | max |
 | Gemini 4 Argon | OpenCode (Google Vertex AI) | high (thinkingLevel) |

@@ -16,7 +16,7 @@
 
 | 选手 | 工具 | 接入 | 配置思考档 |
 |---|---|---|---|
-| GPT-6.2 Sol | Codex 桌面版 | 未在赛事配置中记录 | 最高档 |
+| GPT-6.2 Sol | Codex 桌面版 | 未在赛事配置中记录 | max |
 | Claude Opus 5.5 | Claude Code | 未在赛事配置中记录 | max |
 | GPT-6 Astra | Codex CLI | 未在赛事配置中记录 | max（`model_reasoning_effort`） |
 | Gemini 4 Argon | OpenCode | Google Vertex AI | high（`thinkingLevel`） |

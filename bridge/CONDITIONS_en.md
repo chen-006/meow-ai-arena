@@ -16,7 +16,7 @@ Contest date: 2026-11-07 (Los Angeles local time, UTC−8).
 
 | Contestant | Tool | Access | Configured reasoning level |
 |---|---|---|---|
-| GPT-6.2 Sol | Codex desktop app | not recorded in the contest configuration | highest |
+| GPT-6.2 Sol | Codex desktop app | not recorded in the contest configuration | max |
 | Claude Opus 5.5 | Claude Code | not recorded in the contest configuration | max |
 | GPT-6 Astra | Codex CLI | not recorded in the contest configuration | max (`model_reasoning_effort`) |
 | Gemini 4 Argon | OpenCode | Google Vertex AI | high (`thinkingLevel`) |
