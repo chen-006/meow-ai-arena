@@ -1,0 +1,11 @@
+{
+  "author": "Swe-et",
+  "github": "Swe-et",
+  "name": "Astra6.？",
+  "description": "统一规划三名角色的抢旗、护送与集火，结合路径评估和限时战术搜索。",
+  "written_by": "ai",
+  "model": "Astra6.2（灰测）",
+  "tool": "Codex",
+  "based_on": "ctf/workspace/submission/bot.cpp（输入解析模板）",
+  "license": "MIT"
+}
