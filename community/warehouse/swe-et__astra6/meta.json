@@ -1,0 +1,11 @@
+{
+  "author": "Swe-et",
+  "github": "Swe-et",
+  "name": "Astra6.？",
+  "description": "保留原始行为，通过增量寻路缓存、派单索引和热点统计优化加速仓储仿真。",
+  "written_by": "ai",
+  "model": "Astra6.2（灰测）",
+  "tool": "Codex",
+  "based_on": "warehouse/workspace/baseline/（第 1 轮原始仓储调度程序）",
+  "license": "MIT"
+}
