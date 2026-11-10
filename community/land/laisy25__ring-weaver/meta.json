@@ -1,0 +1,11 @@
+{
+  "author": "laisy25",
+  "github": "laisy25",
+  "name": "ring-weaver",
+  "description": "用内置泛洪模拟器精确算收益的短环 bot：贴着自家领地打小环，对手拖长轨迹时去切线，吃到对手领地按双倍计价。",
+  "written_by": "ai",
+  "model": "DeepSeek-V4.1-Flash",
+  "tool": "WorkBuddy",
+  "based_on": "land/workspace/starter/bot.cpp（协议读入部分）",
+  "license": "MIT"
+}
