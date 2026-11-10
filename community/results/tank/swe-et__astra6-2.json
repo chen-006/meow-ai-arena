@@ -1,0 +1,221 @@
+{
+ "commit": "e8edef099943672a73e303ad2c27a64fec008239",
+ "detail": {
+  "budget": {
+   "budget_kind": "cpu",
+   "first_ms": 2000,
+   "turn_ms": 50
+  },
+  "ci95": null,
+  "field": [
+   {
+    "name": "GPT-6 Astra",
+    "score": 506.9
+   },
+   {
+    "name": "GPT-6.1 Sol Ultrafast（Codex CLI）",
+    "score": 466.9
+   },
+   {
+    "name": "Gemini 4 Argon Contributor（OpenCode Go）",
+    "score": 355.4
+   },
+   {
+    "name": "GPT-6.1 Sol",
+    "score": 318.8
+   },
+   {
+    "name": "Claude Opus 5.5",
+    "score": 258.8
+   },
+   {
+    "name": "Muse Wonder Full",
+    "score": 55.5
+   },
+   {
+    "name": "小米 MiMo V2.6 Pro",
+    "score": 28.9
+   },
+   {
+    "name": "Grok 4.7",
+    "score": 25.5
+   },
+   {
+    "name": "DeepSeek V4.1 Flash",
+    "score": -6.3
+   },
+   {
+    "name": "Doubao-Seed-Evolving",
+    "score": -30.7
+   },
+   {
+    "name": "Kimi K3",
+    "score": -129.3
+   },
+   {
+    "name": "Claude Haiku 5.5",
+    "score": -149.2
+   },
+   {
+    "name": "通义千问 Qwen 3.8 Max",
+    "score": -205.1
+   },
+   {
+    "name": "智谱 GLM 5.3",
+    "score": -314.6
+   }
+  ],
+  "field_size": 15,
+  "games": 320,
+  "games_note": "320 局（16 个对手，每个 20 局）",
+  "opponents": [
+   {
+    "display": "GPT-6 Astra",
+    "draws": 0,
+    "losses": 8,
+    "name": "Astra",
+    "rating": 506.9454874458487,
+    "wins": 12
+   },
+   {
+    "display": "GPT-6.1 Sol Ultrafast（Codex CLI）",
+    "draws": 0,
+    "losses": 5,
+    "name": "SolUF",
+    "rating": 466.92800596466685,
+    "wins": 15
+   },
+   {
+    "display": "Gemini 4 Argon Contributor（OpenCode Go）",
+    "draws": 0,
+    "losses": 3,
+    "name": "Gemini",
+    "rating": 355.4298340699916,
+    "wins": 17
+   },
+   {
+    "display": "GPT-6.1 Sol",
+    "draws": 0,
+    "losses": 1,
+    "name": "Sol",
+    "rating": 318.7995999432353,
+    "wins": 19
+   },
+   {
+    "display": "Claude Opus 5.5",
+    "draws": 0,
+    "losses": 0,
+    "name": "Opus",
+    "rating": 258.78757366446996,
+    "wins": 20
+   },
+   {
+    "display": "Muse Wonder Full",
+    "draws": 0,
+    "losses": 0,
+    "name": "Muse",
+    "rating": 55.491122284551025,
+    "wins": 20
+   },
+   {
+    "display": "小米 MiMo V2.6 Pro",
+    "draws": 0,
+    "losses": 1,
+    "name": "MiMo",
+    "rating": 28.926589497795632,
+    "wins": 19
+   },
+   {
+    "display": "Grok 4.7",
+    "draws": 0,
+    "losses": 0,
+    "name": "Grok",
+    "rating": 25.542800587458515,
+    "wins": 20
+   },
+   {
+    "display": "DeepSeek V4.1 Flash",
+    "draws": 0,
+    "losses": 1,
+    "name": "DeepSeek",
+    "rating": -6.273278067612878,
+    "wins": 19
+   },
+   {
+    "display": "Doubao-Seed-Evolving",
+    "draws": 0,
+    "losses": 1,
+    "name": "Doubao",
+    "rating": -30.703456814699337,
+    "wins": 19
+   },
+   {
+    "display": "Kimi K3",
+    "draws": 0,
+    "losses": 0,
+    "name": "Kimi",
+    "rating": -129.30187896853465,
+    "wins": 20
+   },
+   {
+    "display": "Claude Haiku 5.5",
+    "draws": 0,
+    "losses": 0,
+    "name": "Haiku",
+    "rating": -149.18553791082107,
+    "wins": 20
+   },
+   {
+    "display": "通义千问 Qwen 3.8 Max",
+    "draws": 0,
+    "losses": 0,
+    "name": "Qwen",
+    "rating": -205.13582963867123,
+    "wins": 20
+   },
+   {
+    "display": "智谱 GLM 5.3",
+    "draws": 0,
+    "losses": 0,
+    "name": "GLM",
+    "rating": -314.5845826194731,
+    "wins": 20
+   },
+   {
+    "display": "出题方参照",
+    "draws": 0,
+    "losses": 4,
+    "name": "sparring",
+    "rating": 488.5601095787485,
+    "wins": 16
+   },
+   {
+    "display": "基准",
+    "draws": 0,
+    "losses": 0,
+    "name": "baseline",
+    "rating": 0.0,
+    "wins": 20
+   }
+  ],
+  "rank": 1,
+  "rating_method": "fixed-final"
+ },
+ "entry": "swe-et__astra6-2",
+ "env": {
+  "compiler": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+  "cpus": 4,
+  "platform": "Linux-7.0.0-1017-azure-x86_64-with-glibc2.39",
+  "python": "3.12.3"
+ },
+ "episode": "tank",
+ "errors": [],
+ "files": {
+  "bot.cpp": "65262c10bb99b78976f2e46f9dae2ed010863dc5391325016c3cb313786155dd"
+ },
+ "mode": "quick",
+ "schema": 1,
+ "score": 632.6,
+ "status": "pass",
+ "time": "2026-11-10T18:05:06Z"
+}
