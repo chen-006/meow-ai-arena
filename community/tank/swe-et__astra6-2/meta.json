@@ -1,0 +1,11 @@
+{
+  "author": "Swe-et",
+  "github": "Swe-et",
+  "name": "Astra6.2",
+  "description": "三车协同进攻、防守和争夺补给，结合危险评估与局面推演选择行动。",
+  "written_by": "ai",
+  "model": "Astra6.2",
+  "tool": "Codex",
+  "based_on": "tank/workspace/submission/bot.cpp（起步模板）；在本人上半场版本上继续优化。",
+  "license": "MIT"
+}
