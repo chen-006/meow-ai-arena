@@ -51,6 +51,7 @@
 #include <chrono>
 #include <condition_variable>
 #include <cstdio>
+#include <cwctype>
 #include <cstdlib>
 #include <deque>
 #include <memory>
@@ -90,7 +91,6 @@ soccer::Config g_cfg;
 std::wstring g_stderr_dir, g_replay_dir;
 double g_per_ms = 1;
 std::mutex g_out_mu;
-std::atomic<unsigned> g_box_counter{0};
 std::wstring g_box_root;  // 沙箱目录的根（见 setup_common）
 
 void emit(const std::string& line) {
@@ -477,14 +477,127 @@ bool join_reader(HANDLE th) {
 
 // -------------------------------------------------------------------- 沙箱（AppContainer）
 
-// 删除残留的沙箱目录和 AppContainer 配置（之前的 arena 被强行结束时会留下）
+// 沙箱名额。每名选手每局仍然新建一个 AppContainer、局后删除，但名字不再每局不同（旧版是
+// soccer2v2.<进程号>.<序号>），而是从固定名额 soccer2v2.<根目录标记>.s0、s1、s2…里取一个空闲的，用完放回。
+// 根目录标记是沙箱根目录全路径（小写，UTF-16LE）的 SHA-256 前 128 位（32 位十六进制）：不同根目录用不同的名字，所以某个根目录里被强行结束的裁判
+// 留下的程序副本（这个名额的 SID 有读权限），在别的根目录里分到同一个名额号的选手程序读不到；它在这个根目录
+// 下次占用这个名额时被删掉。
+// 原因：Windows 内核给每个新出现的 AppContainer SID 记一份 LowBox 记录（内核池标签 SeLs），删除配置后
+// 也不释放，要到重启才清空。名字每局不同时这份记录随局数一直增长，累计几万个之后 CreateProcess 报
+// 错误 1450（系统资源不足），只能重启机器。同名的 AppContainer 删掉重建后 SID 不变，不再新增记录。
+// 名额由一个命名互斥体占住：裁判进程退出或被强行结束时，系统关闭它的句柄，名额自动空出来；
+// 被强行结束的裁判留下的同名目录和配置，在这个名额下次被占用时先删掉再重建。目录删不掉（里面的
+// 程序副本还被某个进程占着）的名额先跳过，用下一个。
+constexpr unsigned MAX_BOX_SLOTS = 4096;
+const std::wstring BOX_PREFIX = L"soccer2v2.";
+
+// SHA-256（FIPS 180-4），只用来算根目录标记
+std::string sha256(const std::string& msg) {
+    static const uint32_t K[64] = {
+        0x428a2f98, 0x71374491, 0xb5c0fbcf, 0xe9b5dba5, 0x3956c25b, 0x59f111f1, 0x923f82a4, 0xab1c5ed5, 0xd807aa98,
+        0x12835b01, 0x243185be, 0x550c7dc3, 0x72be5d74, 0x80deb1fe, 0x9bdc06a7, 0xc19bf174, 0xe49b69c1, 0xefbe4786,
+        0x0fc19dc6, 0x240ca1cc, 0x2de92c6f, 0x4a7484aa, 0x5cb0a9dc, 0x76f988da, 0x983e5152, 0xa831c66d, 0xb00327c8,
+        0xbf597fc7, 0xc6e00bf3, 0xd5a79147, 0x06ca6351, 0x14292967, 0x27b70a85, 0x2e1b2138, 0x4d2c6dfc, 0x53380d13,
+        0x650a7354, 0x766a0abb, 0x81c2c92e, 0x92722c85, 0xa2bfe8a1, 0xa81a664b, 0xc24b8b70, 0xc76c51a3, 0xd192e819,
+        0xd6990624, 0xf40e3585, 0x106aa070, 0x19a4c116, 0x1e376c08, 0x2748774c, 0x34b0bcb5, 0x391c0cb3, 0x4ed8aa4a,
+        0x5b9cca4f, 0x682e6ff3, 0x748f82ee, 0x78a5636f, 0x84c87814, 0x8cc70208, 0x90befffa, 0xa4506ceb, 0xbef9a3f7,
+        0xc67178f2};
+    uint32_t h[8] = {0x6a09e667, 0xbb67ae85, 0x3c6ef372, 0xa54ff53a, 0x510e527f, 0x9b05688c, 0x1f83d9ab, 0x5be0cd19};
+    std::string m = msg;
+    const uint64_t bits = uint64_t(msg.size()) * 8;
+    m += char(0x80);
+    while (m.size() % 64 != 56) m += char(0);
+    for (int i = 7; i >= 0; --i) m += char((bits >> (i * 8)) & 0xff);
+    auto rotr = [](uint32_t x, int n) { return (x >> n) | (x << (32 - n)); };
+    for (size_t off = 0; off < m.size(); off += 64) {
+        uint32_t w[64];
+        for (int i = 0; i < 16; ++i)
+            w[i] = uint32_t((unsigned char)m[off + 4 * i]) << 24 | uint32_t((unsigned char)m[off + 4 * i + 1]) << 16 |
+                   uint32_t((unsigned char)m[off + 4 * i + 2]) << 8 | uint32_t((unsigned char)m[off + 4 * i + 3]);
+        for (int i = 16; i < 64; ++i) {
+            const uint32_t s0 = rotr(w[i - 15], 7) ^ rotr(w[i - 15], 18) ^ (w[i - 15] >> 3);
+            const uint32_t s1 = rotr(w[i - 2], 17) ^ rotr(w[i - 2], 19) ^ (w[i - 2] >> 10);
+            w[i] = w[i - 16] + s0 + w[i - 7] + s1;
+        }
+        uint32_t a = h[0], b = h[1], c = h[2], d = h[3], e = h[4], f = h[5], g = h[6], hh = h[7];
+        for (int i = 0; i < 64; ++i) {
+            const uint32_t t1 = hh + (rotr(e, 6) ^ rotr(e, 11) ^ rotr(e, 25)) + ((e & f) ^ (~e & g)) + K[i] + w[i];
+            const uint32_t t2 = (rotr(a, 2) ^ rotr(a, 13) ^ rotr(a, 22)) + ((a & b) ^ (a & c) ^ (b & c));
+            hh = g, g = f, f = e, e = d + t1, d = c, c = b, b = a, a = t1 + t2;
+        }
+        h[0] += a, h[1] += b, h[2] += c, h[3] += d, h[4] += e, h[5] += f, h[6] += g, h[7] += hh;
+    }
+    std::string out;
+    for (uint32_t x : h)
+        for (int i = 28; i >= 0; i -= 4) out += "0123456789abcdef"[(x >> i) & 15];
+    return out;
+}
+
+// 当前沙箱根目录的标记：全路径转小写后（UTF-16LE 字节）的 SHA-256 前 128 位，32 位十六进制
+std::wstring box_tag() {
+    std::string bytes;
+    for (wchar_t c : g_box_root) {
+        const unsigned v = unsigned(std::towlower(c));
+        bytes += char(v & 0xff);
+        bytes += char((v >> 8) & 0xff);
+    }
+    const std::string h = sha256(bytes).substr(0, 32);
+    return std::wstring(h.begin(), h.end());
+}
+
+// 标记为 tag 的根目录里第 k 个名额的互斥体名
+std::wstring slot_lock(const std::wstring& tag, unsigned k) {
+    return L"Global\\soccer2v2." + tag + L".slot." + std::to_wstring(k);
+}
+
+// 占用一个名额（互斥体名见 slot_lock）：成功返回互斥体句柄（关闭即释放），名额正被占用（或打不开）返回 nullptr
+HANDLE take_box_slot(const std::wstring& lock) {
+    HANDLE h = CreateMutexW(nullptr, FALSE, lock.c_str());
+    if (h && GetLastError() == ERROR_ALREADY_EXISTS) {
+        CloseHandle(h);
+        return nullptr;
+    }
+    return h;
+}
+
+// 删掉残留的沙箱目录（含程序副本）；目录删掉了（或本来就没有）才删同名 AppContainer 配置。返回目录是否已经不在
+bool remove_box(const std::wstring& name) {
+    const std::wstring dir = g_box_root + name;
+    DeleteFileW((dir + L"\\bot.exe").c_str());
+    RemoveDirectoryW(dir.c_str());
+    if (GetFileAttributesW(dir.c_str()) != INVALID_FILE_ATTRIBUTES) return false;
+    DeleteAppContainerProfile(name.c_str());
+    return true;
+}
+
+// 删除沙箱根目录里残留的沙箱目录和 AppContainer 配置（之前的 arena 被强行结束时会留下）
 void cleanup_stale_boxes() {
     WIN32_FIND_DATAW fd;
-    HANDLE h = FindFirstFileW((g_box_root + L"soccer2v2.*").c_str(), &fd);
+    HANDLE h = FindFirstFileW((g_box_root + BOX_PREFIX + L"*").c_str(), &fd);
     if (h == INVALID_HANDLE_VALUE) return;
     do {
         const std::wstring name = fd.cFileName;
-        const DWORD pid = DWORD(_wtoi(name.c_str() + 10));
+        const wchar_t* rest = name.c_str() + BOX_PREFIX.size();
+        // 名额式 <标记>.s<k>：标记是 32 位十六进制（现行），或 8 位十六进制（60465a8 版）
+        size_t taglen = 0;
+        while (std::iswxdigit(rest[taglen])) ++taglen;
+        const bool tagged = (taglen == 32 || taglen == 8) && rest[taglen] == L'.' && rest[taglen + 1] == L's';
+        if (tagged) {  // 名额空着才删（占着的是正在用的沙箱）
+            if (HANDLE slot = take_box_slot(slot_lock(std::wstring(rest, taglen), unsigned(_wtoi(rest + taglen + 2))))) {
+                remove_box(name);
+                CloseHandle(slot);
+            }
+            continue;
+        }
+        if (rest[0] == L's') {  // 2026-11-10 版的名额式 s<k>（互斥体 Global\soccer2v2.slot.<k>）：名额空着才删
+            if (HANDLE slot = take_box_slot(L"Global\\soccer2v2.slot." + std::to_wstring(_wtoi(rest + 1)))) {
+                remove_box(name);
+                CloseHandle(slot);
+            }
+            continue;
+        }
+        // 旧版 soccer2v2.<进程号>.<序号>：那个进程已经不在才删
+        const DWORD pid = DWORD(_wtoi(rest));
         if (pid == GetCurrentProcessId()) continue;
         bool alive = false;
         if (HANDLE p = OpenProcess(SYNCHRONIZE, FALSE, pid)) {
@@ -502,12 +615,23 @@ void cleanup_stale_boxes() {
 struct Box {
     std::wstring name, dir, exe;
     PSID sid = nullptr;
+    HANDLE slot = nullptr;  // 占着的名额（见 take_box_slot），destroy 时放回
     bool profile = false;
 
     // 建 AppContainer 配置 + 专用目录（只给这个容器读和执行的权限）+ 程序副本。失败返回说明
     std::string create(const std::wstring& src_exe, bool& src_missing) {
         src_missing = false;
-        name = L"soccer2v2." + std::to_wstring(GetCurrentProcessId()) + L"." + std::to_wstring(g_box_counter.fetch_add(1));
+        const std::wstring tag = box_tag();
+        for (unsigned k = 0; !slot; ++k) {
+            if (k >= MAX_BOX_SLOTS) return "取不到空闲的沙箱名额（" + std::to_string(MAX_BOX_SLOTS) + " 个都在用）";
+            slot = take_box_slot(slot_lock(tag, k));
+            if (!slot) continue;
+            name = BOX_PREFIX + tag + L".s" + std::to_wstring(k);
+            if (!remove_box(name)) {  // 上次留下的目录删不掉：跳过这个名额
+                CloseHandle(slot);
+                slot = nullptr;
+            }
+        }
         HRESULT hr = CreateAppContainerProfile(name.c_str(), name.c_str(), L"soccer2v2 player sandbox", nullptr, 0, &sid);
         if (hr == HRESULT_FROM_WIN32(ERROR_ALREADY_EXISTS)) {
             DeleteAppContainerProfile(name.c_str());
@@ -584,7 +708,9 @@ struct Box {
         if (!dir.empty()) RemoveDirectoryW(dir.c_str());
         if (profile) DeleteAppContainerProfile(name.c_str());
         if (sid) FreeSid(sid);
+        if (slot) CloseHandle(slot);  // 放回名额（目录和配置已经删掉）
         sid = nullptr;
+        slot = nullptr;
         profile = false;
         exe.clear();
         dir.clear();
@@ -726,12 +852,16 @@ struct Player {
         HANDLE inherit[3] = {in_r, out_w, err_w};
         SECURITY_CAPABILITIES caps{};
         caps.AppContainerSid = box.sid;
+        // 选手进程一创建就在 Job 里（不再先建后放）：裁判在两步之间被强行结束时，旧做法会留下一个不属于
+        // 任何 Job 的挂起进程，它一直占着沙箱里的程序副本，到重启才消失；现在 Job 句柄随裁判关闭，进程一并结束
+        HANDLE job_list[1] = {job};
         SIZE_T sz = 0;
-        InitializeProcThreadAttributeList(nullptr, 2, 0, &sz);
+        InitializeProcThreadAttributeList(nullptr, 3, 0, &sz);
         std::vector<char> attr_buf(sz);
         auto attrs = reinterpret_cast<LPPROC_THREAD_ATTRIBUTE_LIST>(attr_buf.data());
-        if (!InitializeProcThreadAttributeList(attrs, 2, 0, &sz) ||
-            !UpdateProcThreadAttribute(attrs, 0, PROC_THREAD_ATTRIBUTE_HANDLE_LIST, inherit, sizeof inherit, nullptr, nullptr))
+        if (!InitializeProcThreadAttributeList(attrs, 3, 0, &sz) ||
+            !UpdateProcThreadAttribute(attrs, 0, PROC_THREAD_ATTRIBUTE_HANDLE_LIST, inherit, sizeof inherit, nullptr, nullptr) ||
+            !UpdateProcThreadAttribute(attrs, 0, PROC_THREAD_ATTRIBUTE_JOB_LIST, job_list, sizeof job_list, nullptr, nullptr))
             fatal("设置子进程属性失败");
         if (sandboxed &&
             !UpdateProcThreadAttribute(attrs, 0, PROC_THREAD_ATTRIBUTE_SECURITY_CAPABILITIES, &caps, sizeof caps, nullptr, nullptr))
@@ -770,11 +900,6 @@ struct Player {
             if (err_file && err_file != INVALID_HANDLE_VALUE) CloseHandle(err_file);
             start_failed("CreateProcess 错误 " + win_err(ce));
             return false;
-        }
-        if (!AssignProcessToJobObject(job, pi.hProcess)) {
-            const DWORD e = GetLastError();
-            TerminateProcess(pi.hProcess, 1);
-            fatal("把选手进程放进 Job 失败（错误 " + win_err(e) + "），不能在没有限制的情况下运行");
         }
         proc = pi.hProcess;
         cpu->add(pi.dwProcessId, proc);
@@ -1276,7 +1401,7 @@ void setup_common() {
     // 子进程继承错误模式：崩溃不弹窗
     SetErrorMode(SEM_FAILCRITICALERRORS | SEM_NOGPFAULTERRORBOX | SEM_NOOPENFILEERRORBOX);
     if (!g_lim.sandbox) return;
-    // 沙箱目录的根（每名选手每局在下面建一个 soccer2v2.<进程号>.<序号> 目录，局后删除）：
+    // 沙箱目录的根（每名选手每局在下面建一个 soccer2v2.<根目录标记>.s<名额号> 目录，局后删除；名额见 take_box_slot）：
     //   1. 环境变量 SOCCER_BOX_ROOT 给了就只用它（试运行失败直接报错）；
     //   2. 否则先用 arena.exe 旁边的 _soccer_box\；
     //   3. 相邻目录试运行失败时停止，由调用者用 SOCCER_BOX_ROOT 指定其他目录。

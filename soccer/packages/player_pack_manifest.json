@@ -58,7 +58,7 @@
       "historical_sha256": "a5125c5085e3c471bf5cc559b1fbc4cc3d00df6f49c4ca463712e48ac8caad3b",
       "kind": "published-file",
       "published_source": "workspace/arena.cpp",
-      "published_sha256": "4e280adc2c283f9c88a2581547c3e8b0b49ec657312ddeb46a53fe40eb9dec63"
+      "published_sha256": "e5c74322932e2cb8b36b00f9acc2d228c8cfb0cf5cb3d0bf8ed35672c0e78173"
     },
     {
       "path": "arena.exe",

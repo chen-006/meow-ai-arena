@@ -100,5 +100,6 @@ This reruns 2,112 games and can take substantial time. Every output JSONL row ha
 
 - The [source manifest](../source_manifest.json) records compiler discovery, referee link libraries, sparring include paths, sandbox directory selection, rebuilding a stale referee and corresponding documentation changes. Physics, sealed contestant source, event seeds and results are unchanged.
 - No fixed organizer sandbox directory remains. The referee uses adjacent `_soccer_box/` or explicitly configured `SOCCER_BOX_ROOT`, and stops when the selected location fails its probe.
+- Referee sandboxes take their names from a fixed pool, `soccer2v2.<root tag>.s<k>`, instead of a new name per game, so Windows' kernel AppContainer records stop growing with the number of games and error 1450 no longer appears after tens of thousands of sandboxes. See the [README](../README_en.md#differences-from-the-event).
 - Static hashes for omitted clients do not make their services available. Accounts, proxies, raw sessions, hidden thinking, chats, identity values and voided data are excluded.
 - The inventory identifies what existed, what is available and what still requires local setup. It supports fixed development material, local play and archive verification, not turnkey recreation of the original event or guaranteed byte-identical historical binaries.
