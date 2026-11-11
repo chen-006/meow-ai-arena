@@ -118,6 +118,7 @@
 | 5 | [value-based PUCT](tank/slzhta__value-based-puct/) | slzhta（[@slzhta](https://github.com/slzhta)） | 人和 AI 合写 | GPT-6 Astra / Codex | 765 | 1 / 15 | 2026-10-21 |
 | 6 | [神经网络搜索 (自适应预算版)](tank/mbfcasper__neural-search/) | mbfcasper（[@mbfcasper](https://github.com/mbfcasper)） | AI 写 | GPT-6.1 Sol + Gemini 4 Argon + Gemini 3.8 Flash + Claude Opus 5.5 / Codex / Antigravity / Claude Code | 670 | 1 / 15 | 2026-10-20 |
 | 7 | [Astra6.2](tank/swe-et__astra6-2/) | Swe-et（[@swe-et](https://github.com/swe-et)） | AI 写 | Astra6.2 / Codex | 633 | 1 / 15 | 2026-11-10 |
+| 8 | [GPT-6.2 Sol](tank/t66sun__gpt-6-2-sol/) | t66sun（[@t66sun](https://github.com/t66sun)） | AI 写 | GPT-6.2 Sol / Codex | 619 | 1 / 15 | 2026-11-11 |
 
 固定参照来自 [`tank/results/final/成绩.md`](../tank/results/final/成绩.md)。社区对局使用新地图，在不同机器上运行，局数较少；参照分数不是本次在虚拟机上重新测出的官方成绩。
 
