@@ -111,10 +111,31 @@ python challenge.py 你的bot.cpp
 
 ## 许可
 
-[MIT](LICENSE)。欢迎拿去复现、改编、出新题。第 4 集回放里的地图图形来自 jDip（GPL），经 `diplomacy` 包渲染，不适用 MIT 许可。
+许可以目录为界，分三类：
 
-## 致谢
+| 内容 | 许可 |
+|---|---|
+| 游戏本体（引擎、规则、地图和关卡）、选手包、选手作品、裁判和计分脚本、成绩和回放、文档、社区投稿。除下面两行和"例外"列出的以外，都是这一类 | [MIT](LICENSE)。欢迎拿去复现、改编、出新题 |
+| 渲染器和通用美术素材：各集的 `renderer/` 目录（回放转视频的代码、场景主题、兵种和道具模型、出片脚本） | [CC BY-NC 4.0](LICENSES/CC-BY-NC-4.0.txt)：署名、非商业性使用 |
+| 各家 AI 的体素小人：顶层的 `characters/` 目录 | [CC BY-NC-SA 4.0](LICENSES/CC-BY-NC-SA-4.0.txt)：署名、非商业性使用、相同方式共享 |
+
+渲染器和体素小人从第 9 集之后新播出的一集起随视频公开，第 1～9 集不补，所以现在仓库里还没有这两个目录。公开时，目录里会附一份 `LICENSE.md` 说明适用的许可。用它们做出来的画面和视频同样只能非商业使用，并且要署名。什么公开、什么不公开、以后每集的目录怎么放，见 [开源范围](docs/open-source-scope.md)。
+
+例外：
+
+- 第 4 集的裁判依赖 [`diplomacy`](https://github.com/diplomacy/diplomacy) 包（AGPL-3.0 或更高版本，本仓库不包含）。回放网页里的地图图形来自 jDip（GPL），经这个包渲染，所以回放网页整体不适用 MIT 许可，见 [`diplomacy/README.md`](diplomacy/README.md#许可说明)。
+- 社区比赛 [`community/contests/rmuc2026/`](community/contests/rmuc2026/) 基于 Arena-1，沿用它自己目录里的非商业学习许可，不适用 MIT。
+- 第三方依赖（物理库、Blender 等）不打包进本仓库，按各自的许可使用。
+
+## 署名与致谢
 
 视频里的角色形象大多来自 B 站博主 **ZipZipPipe**（[主页](https://space.bilibili.com/4168597)），特此致谢。按其主页公告，鲸鱼娘形象是基于上善无形原创角色的二创（原作来源 [b23.tv/3dNz55h](https://b23.tv/3dNz55h)），以 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans)（署名、非商业性使用、相同方式共享）授权。
 
-角色形象、配音和剪辑都不在本仓库内，也不适用本仓库的 MIT 许可；如需使用角色形象，请遵守原作者的协议。
+视频里的立绘、配音和剪辑都不在本仓库内，也不适用本仓库的任何许可；如需使用立绘，请遵守原作者的协议。
+
+各家 AI 的体素小人是本项目照这些角色形象制作的衍生作品。使用或改编体素小人时，请同时署名两方：
+
+- 体素小人：meow-ai-arena（AI 算法对抗大赛）制作，CC BY-NC-SA 4.0；
+- 原形象：所依据角色的原作者。`characters/CREDITS.md` 逐个角色列出原形象出处；鲸鱼娘的原形象写作"ZipZipPipe，基于上善无形原创角色（[b23.tv/3dNz55h](https://b23.tv/3dNz55h)）"。
+
+角色名里的模型名和公司名属于各自的权利人，只用来说明角色对应哪个模型，不表示这些公司认可或参与本项目。
