@@ -22,6 +22,8 @@ def main():
     group.add_argument('--game', help='原始局号；见 results.json.gz 或 replays/selection.json')
     group.add_argument('--all', action='store_true', help='重打本场全部对局')
     ap.add_argument('--out', type=Path, required=True, help='新的输出目录，不能已经存在')
+    ap.add_argument('--sandbox', choices=['none', 'appcontainer'], default='none',
+                    help='默认 none；appcontainer = 赛时用的 Windows 身份隔离（复现成绩不需要它）')
     args = ap.parse_args()
     data = read(args.phase)
     selected = [g for g in data['games'] if args.all or g['id'] == args.game]
@@ -44,11 +46,11 @@ def main():
     args.out.mkdir(parents=True)
     replays = args.out / 'replays'
     replays.mkdir()
-    # 单局顺序运行，减少沙箱资源压力；任何启动失败都停止，不将故障当作平局。
+    # 单局顺序运行；任何启动失败都停止，不将故障当作平局。
     with (args.out / 'results.jsonl').open('w', encoding='utf-8') as f:
         for n, original in enumerate(selected):
             game = (n, original['seed'], original['first_kick'], [indices[s] for s in original['seats']])
-            result = match.run_batch(entries, [game], 1, ['--step-ms', '10'], replay_dir=replays)[0]
+            result = match.run_batch(entries, [game], 1, ['--step-ms', '10', '--sandbox', args.sandbox], replay_dir=replays)[0]
             if any(p['status'] == 'start_fail' for p in result['players']):
                 raise RuntimeError('主办方启动故障：停止，故障局不计入结果；回放保留供排查。')
             record = dict(result, original_id=original['id'], seed=original['seed'],

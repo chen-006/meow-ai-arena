@@ -14,7 +14,7 @@
 - 12000×8000 的封闭球场，四角切角，球撞墙反弹；两队各两人，一局 1200 步，进球多的队赢。没有越位、犯规、界外球或角球。
 - 每名球员由独立程序控制，每步输出 `AX AY KX KY MSG`：加速度、踢球向量、发给队友的 1 字节消息。消息下一步到达；对手看不到。
 - 每人看到的都是自己向右进攻的视角。队内 0/1 号按**种子在赛程中的序号**轮换（s0、s2…由 A 位选手踢 0 号；s1、s3…由 B 位踢 0 号），不是按随机种子的数值奇偶。
-- 程序 CPU 预算首步 1000 毫秒、以后每步 10 毫秒；单步超时动作作废，累计 30 次才结束程序。崩溃后该球员保持零动作，比赛继续。程序运行于 Windows AppContainer，不能联网、读写文件或创建子进程。
+- 程序 CPU 预算首步 1000 毫秒、以后每步 10 毫秒；单步超时动作作废，累计 30 次才结束程序。崩溃后该球员保持零动作，比赛继续。赛时程序运行于 Windows AppContainer，不能联网、读写文件或创建子进程（本地复现默认不用这层隔离，见下文"本地运行"）。
 - 完整规则见 [RULES.md](workspace/RULES.md)，物理实现以 [soccer.hpp](workspace/soccer.hpp) 为准。基础规则中“也可以照抄”是旧表述；**本期实际开赛消息和组队赛说明明确禁止整份或大段照搬队友代码**，个人队的两份程序也必须自己写。见 [提示词](prompt.md) 和 [判定说明](CONDITIONS.md)。
 
 ## 赛制
@@ -104,7 +104,7 @@ python match.py run --me template.cpp --mate template.cpp --opp baseline --seeds
 python match.py play ../bots/half2/team4_a.cpp ../bots/half2/team4_b.cpp baseline baseline --seed 3
 ```
 
-编译器可放进仓库的 `tools/w64devkit/bin/`，或加入 PATH，或设置 `CXX`。本地工具和沙箱沿用选手包；参照程序从源码编译。完整用法见 [workspace/README.md](workspace/README.md)。按原种子和座位重打一局、复算榜单见 [tournament/README.md](tournament/README.md)。
+编译器可放进仓库的 `tools/w64devkit/bin/`，或加入 PATH，或设置 `CXX`。参照程序从源码编译。本地对战和重打默认不做身份隔离（`--sandbox none`）：每步 CPU 预算、超时强杀、内存 1 GB、不能开子进程仍由裁判的 Job Object 照常限制，结果与赛时规则一致；想按赛时环境复查，给 `match.py` 或 `reproduce.py` 加 `--sandbox appcontainer`。裁判 `arena.cpp` 直接调用 Windows API，目前只能在 Windows 上运行。完整用法见 [workspace/README.md](workspace/README.md)。按原种子和座位重打一局、复算榜单见 [tournament/README.md](tournament/README.md)。
 
 ## 目录
 
@@ -124,7 +124,7 @@ python match.py play ../bots/half2/team4_a.cpp ../bots/half2/team4_b.cpp baselin
 
 ## 和比赛时的差别
 
-- 封存代码逐字节原样，包含换行符。基础选手包除下述适配外保留原文；`build.py` 只把主办方私有目录的编译器探测改成仓库 `tools/w64devkit`。陪练头文件只调整了引擎 include 相对路径。另为 `match.py` 自动重建裁判的命令补上 `-luserenv`（原包自带 exe，缺少这个链接库会导致从源码构建失败）。本次另移除裁判的固定绝对沙箱备用目录，只保留显式 `SOCCER_BOX_ROOT` 或裁判相邻目录；`match.py` 检测裁判源码/引擎头文件更新后重建缓存，选手包说明同步改写。所有适配记在哈希清单里。
+- 封存代码逐字节原样，包含换行符。基础选手包除下述适配外保留原文；`build.py` 只把主办方私有目录的编译器探测改成仓库 `tools/w64devkit`。陪练头文件只调整了引擎 include 相对路径。另为 `match.py` 自动重建裁判的命令补上 `-luserenv`（原包自带 exe，缺少这个链接库会导致从源码构建失败）。本次另移除裁判的固定绝对沙箱备用目录，只保留显式 `SOCCER_BOX_ROOT` 或裁判相邻目录；`match.py` 检测裁判源码/引擎头文件更新后重建缓存，选手包说明同步改写。`match.py` 和 `tournament/reproduce.py` 默认给裁判传 `--sandbox none`（赛时是 AppContainer；复现成绩不需要防越界，也免得被杀毒软件拦住沙箱目录），可用 `--sandbox appcontainer` 切回。所有适配记在哈希清单里。
 - 裁判的沙箱改为循环复用固定名额 `soccer2v2.<根目录标记>.s<k>`（标记是沙箱根目录路径的 SHA-256 前 128 位），不再每局用新名字 `soccer2v2.<进程号>.<序号>`。Windows 为每个新出现的 AppContainer 在内核里留一份记录（池标签 `SeLs`），删除沙箱后也要到重启才释放；连续打几万个沙箱后，`CreateProcess` 会报错 1450（系统资源不足），只能重启。复用名额后这份记录不再随局数增长；被强行结束的裁判留下的沙箱目录和配置，也会在这个根目录下次占用该名额时清掉；名字带根目录标记，别的根目录里的选手程序拿不到同一个身份，读不到这些残留的程序副本。选手进程也改为创建时就放进 Job（原来是先挂起创建、再放进 Job），裁判在这两步之间被强行结束时不会再留下一个一直挂起、占着程序副本的选手进程。沙箱的限制、比赛结果和回放不变。
 - 比赛时只提供三个参考 bot 的可执行文件，开源版提供源码及编译入口，不提交 exe。不同编译器产物不保证字节相同。不要把含陪练源码的本目录直接当作赛时选手包。
 - 主办方计时、封存、启动会话、账号/代理配置、权限审计和队聊服务不收录；提示词里的 `tc.py` / `clock.py` 仅记录历史流程，本目录不能直接自动举办原赛事。完整赛时文件清单、固定文件哈希、动态配置边界和中场包还原步骤见 [还原说明](packages/restore.md)。可还原中场成绩及对局清单，缺少的历史回放可重打，但不保证逐字节相同；没有另存完整重复材料。

@@ -19,7 +19,7 @@ python tournament/reproduce.py final --game team1-team2-s0-1 --out out/example
 python tournament/reproduce.py final --all --out out/final
 ```
 
-`--out` 必须是未存在的新目录，防止混入旧结果。`--all` 支持 `halftime`、`final`、`individual`，顺序逐局运行；总量 8280 局，可能耗时较长。重打使用原来每步 10 CPU 毫秒的裁判和 Windows 沙箱，遇启动失败停止，保留诊断回放，不把故障当平局。
+`--out` 必须是未存在的新目录，防止混入旧结果。`--all` 支持 `halftime`、`final`、`individual`，顺序逐局运行；总量 8280 局，可能耗时较长。重打使用原来每步 10 CPU 毫秒的裁判；默认 `--sandbox none`（不做身份隔离，超时、内存、子进程限制照旧），加 `--sandbox appcontainer` 可按赛时的 Windows 沙箱重打。遇启动失败停止，保留诊断回放，不把故障当平局。
 
 `reproduce.py` 从逐局结果读取已展开的实际 `seats`，避免把种子数值的奇偶错当成种子序号。参考队两座使用同一个参考 bot。历史种子、座位、源码都能复现，但 CPU 计时受机器状态和编译器影响，不保证每次比分或产物哈希相同。
 

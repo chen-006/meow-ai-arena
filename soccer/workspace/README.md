@@ -53,5 +53,5 @@ python replay.py gif replays\<回放>.txt 300 360 片段.gif
 - 程序的调试输出（标准错误）保存在回放旁边的 `_stderr` 目录里（`g<局号>_p<球员号>.txt`）。
 - 复盘工具只列事实。想知道两人有没有同时扑球、有没有人回防，用 `player` 看两人各自每步的观测和实际执行的动作，或在 `viewer.html` 里打开"队友消息"。
 - 计时是进程 CPU 时间，每步 10 毫秒。`check` 和 `play` 会显示每步平均和最多用了多少。电脑忙的时候测得会偏大，留出余量。
-- 你的程序在沙箱里运行（不能开子进程、不能读写文件，见 `RULES.md` 第 8 节），本地 `match.py` 也一样。`build.py` 编译前会做源码检查（不能包含 `windows.h` 等系统头文件，见 `RULES.md` 第 9 节）。
-- 若 `match.py` 报"沙箱目录都不能用"（杀毒软件拦截新复制出来的 exe 时会这样）：设环境变量 `SOCCER_BOX_ROOT` 指向一个能运行新 exe 的目录再试。开源版未设置该变量时只使用 `arena.exe` 旁边的 `_soccer_box\`；失败就停止，不再回退到主办方机器的固定目录。设置该变量时只使用指定目录。
+- 正式比赛时程序在 AppContainer 沙箱里运行（不能开子进程、不能读写文件，见 `RULES.md` 第 8 节）。开源版本地 `match.py` 默认 `--sandbox none`：不做身份隔离，但每步 CPU 计时、超时强杀、内存 1 GB、不能开子进程仍由裁判的 Job Object 限制；想按赛时环境复查就加 `--sandbox appcontainer`。`build.py` 编译前会做源码检查（不能包含 `windows.h` 等系统头文件，见 `RULES.md` 第 9 节）。
+- 用 `--sandbox appcontainer` 时若报"沙箱目录都不能用"（杀毒软件拦截新复制出来的 exe 时会这样）：设环境变量 `SOCCER_BOX_ROOT` 指向一个能运行新 exe 的目录再试。开源版未设置该变量时只使用 `arena.exe` 旁边的 `_soccer_box\`；失败就停止，不再回退到主办方机器的固定目录。设置该变量时只使用指定目录。
