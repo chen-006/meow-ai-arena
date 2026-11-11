@@ -1,13 +1,30 @@
-# 运行时生成的文件
+# 运行时生成的文件（各集通用）
 __pycache__/
 *.pyc
+.pytest_cache/
+.mypy_cache/
 build/
 .build/
+out/
 challenge-runs/
-*.exe
-workspace/replays/
-tools/
 rerun/
+*.exe
+*.o
+*.obj
+*.pdb
+*.ilk
+workspace/replays/
+# 本地放编译器（w64devkit）的目录，见顶层 README
+tools/
+
+# 系统和编辑器
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp
+
 # 第 4 集外交：运行时生成的对局目录含令牌和复制来的登录凭据，切勿提交
 diplomacy/referee/管理员/
 diplomacy/referee/.venv/
@@ -17,6 +34,7 @@ connection.json
 .venv/
 diplomacy/games/*/回放.html
 diplomacy/games/*/承诺核对.json
+
 # 第 5 集仓储调度：选手包和各轮包里的 tools/ 是比赛材料，不是上面那个放编译器的 tools/
 !warehouse/**/tools/
 
@@ -28,23 +46,23 @@ community/.cache/
 tank/workspace/history/
 tank/workspace/replays/
 tank/tournament/run-*/
-tank/out/
-ctf/out/
 
-# 第 7 集光轮对战：本地编出来的陪练、本地工具的版本存档和回放、打出来的选手包
+# 第 7 集光轮对战：本地编出来的陪练、本地工具的版本存档和回放
 tron/workspace/bots/*.dll
 tron/workspace/history/
 tron/workspace/replays/
-tron/out/
 
 # 第 8 集足球：本地编译、回放重打和沙箱产物
-soccer/out/
 soccer/workspace/_soccer_box/
 soccer/workspace/bots/*.exe
 soccer/workspace/replays/
 
-# 第 9 集造桥：本地编译的物理内核、bridge.py 自动存档、全部回放输出
-bridge/out/
+# 第 9 集造桥：bridge.py 自动存档、本地提交目录
 bridge/workspace/archive/
 bridge/workspace/submission/
 bridge/archive/
+
+# 渲染器（以后各集的 renderer/）：Blender 自动备份、渲染缓存和出片
+*.blend1
+*/renderer/cache/
+*/renderer/renders/
