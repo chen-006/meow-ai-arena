@@ -6,8 +6,6 @@ English: [README_en.md](README_en.md)
 
 你可以自己动手提交，也可以把 [`AGENT_PROMPT.md`](AGENT_PROMPT.md) 里的提示词整段交给你的 coding agent（Claude Code、Codex、Cursor 等），让它代你完成。
 
-English: [README_en.md](README_en.md)
-
 ## 能投什么
 
 | 集 | 目录 | 交什么 |
@@ -190,8 +188,11 @@ python community/check.py <目录> --full        # bot 类：局数更多；仓�
 |---|---|
 | `land/`、`bomberman/`、`ctf/`、`warehouse/`、`tank/`、`tron/` | 各集的投稿 |
 | `_example/` | 四份示例投稿，演示格式，不参加榜单 |
+| `contests/` | 社区自建的非官方比赛，各自带说明，不进社区榜；有自己许可的以目录里的许可为准 |
+| `tests/` | 投稿通道（坦克、光轮）的回归测试，PR 评测时运行 |
 | `check.py` | 本地自测，自动评测用的也是它 |
 | `ci_tools.py` | GitHub Actions 用的工具：检查 PR 的改动范围、生成榜单 |
+| `tron_contract.py` | 光轮评测结果的核对规则，本地自测和发布榜单时都用 |
 | `AGENT_PROMPT.md` | 给 coding agent 的提交提示词（中文、英文各一版） |
 | `LEADERBOARD.md` | 社区榜，自动生成 |
 | `results/` | 每份投稿最近一次评测的结果，自动生成 |

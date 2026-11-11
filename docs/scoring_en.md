@@ -2,6 +2,8 @@
 
 # Scoring methods
 
+This page covers episodes 1–3. Scoring for later episodes is described in each episode's README and `results/`.
+
 All three episodes use the Bradley–Terry (BT) model: each game is broken into pairwise results to fit a strength parameter for each contestant. They differ in how comparisons are formed and how strengths are converted to ratings:
 
 | | Episode 1 · Territory | Episode 2 · Bomberman | Episode 3 · Capture the flag |

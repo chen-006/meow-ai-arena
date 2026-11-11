@@ -4,6 +4,9 @@
 
 2–15 个阵营同场，每方用一个程序控制 3 个角色，抢中立的旗子送回自家基地得分。11 个 AI 模型拿到同一句提示词，各自用约 60 分钟写出一个 C++ bot，然后打了 32010 局。
 
+- **目录里有什么**：`workspace/` 选手包 · `bots/` 11 个模型的交卷代码 · `results/` 成绩、两两胜率和逐局结果 · `replays/` 回放 · `tournament/` 正式赛配置 · `challenge.py` 一键挑战 · `appendix/` 附加实验
+- **复现榜单**：在 `tournament/` 下用 `arena/tournament.py` 的 plan → run → rate 五条命令重建赛程、重打并评分，约 2 小时，见 [`tournament/README.md`](tournament/README.md)。
+
 ## 规则速览（完整规则见 `workspace/RULES.md`）
 
 - 方形地图，墙和柱子挡路也挡射击。每方 3 个角色，100 血。

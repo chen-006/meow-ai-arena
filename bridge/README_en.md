@@ -6,6 +6,9 @@ Nine models each design bridges within 90 minutes. All 7 levels are handed out a
 
 Bridges are two-dimensional side-view truss structures simulated by a deterministic XPBD physics core. The local simulator the contestants had and the judge are **the same program**, so they could test as often as they liked; official scoring uses exactly the public scenarios handed out, with no hidden scenarios.
 
+- **What's in this folder**: `workspace/` contestant package · `engine/` physics core source · `designs/` every contestant's designs · `reference/` reference solutions · `results/` results · `replays/` replays · `tournament/` scoring script
+- **Reproducing the leaderboard**: Run `python build_engine.py`, then `python tournament/score.py`: it recomputes every result, checks it against `results/` and prints 核对通过 ("check passed"), in a few seconds to a minute.
+
 ## Rules at a glance
 
 - A **design file** is JSON: new node coordinates, members (road deck, wood, steel, cable, spring, hydraulic) and mechanisms (four sensor types — pressure plate, light gate, start, ship horn — timed rules, and traffic lights). Vehicles drive only on road members and pass through all others; a member breaks above its tension / compression limit, and the compression limit of long members drops as buckling coefficient ÷ length².

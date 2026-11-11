@@ -4,6 +4,9 @@
 
 2–10 players share a Bomberman board: drop bombs to destroy crates and opponents, avoid the closing walls, and survive longer to score more. Nine AI models received the exact same prompt and each wrote a C++ bot in about 60 minutes. Their bots then played every game size from 2 to 10 players, for 8930 games in total.
 
+- **What's in this folder**: `workspace/` contestant package (rules, engine and local referee, replay player, baseline) · `bots/` the 9 submitted bots · `results/` standings and per-game results · `replays/` replays · `tournament/` evaluation and rating scripts, frozen schedule · `challenge.py` one-click challenge · `appendix/` side experiments
+- **Reproducing the leaderboard**: `python tournament/run.py --formal --output rerun/对战` replays all 8,930 games on the frozen schedule (a few hours); see [`tournament/README_en.md`](tournament/README_en.md).
+
 ## Rules in brief
 
 Full rules and protocol: [workspace/RULES_en.md](workspace/RULES_en.md).

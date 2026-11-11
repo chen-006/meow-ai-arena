@@ -6,6 +6,9 @@
 
 本目录使用 **2026-10-29 team2 从中场重赛下半场之后的最终版本**。中场赛 2112 局、终场团队赛 2904 局、个人赛 3264 局，共 8280 局（含对参考队的对局）。只公开团队榜和个人榜；赛时宣布的两项各占 50% 如实保留，存档合并“总分”不公开、不用于另排第三张榜。
 
+- **目录里有什么**：`workspace/` 选手包 · `prompt.md`、`prompts/` 主办方消息 · `packages/` 赛时包和队聊说明 · `bots/` 上下半场代码 · `sparring/` 基准和陪练 · `results/` 团队榜、个人榜和逐局结果 · `replays/` 回放 · `tournament/` 赛程、复算和重打脚本 · `notes/` 赛后复盘回答
+- **复现榜单**：`python build_reference.py` 后运行 `python tournament/score.py final`（个人榜：`python tournament/score.py individual --bt`），由逐局数据复算积分；重打对局见 [`tournament/README.md`](tournament/README.md)。
+
 ## 规则速览
 
 - 12000×8000 的封闭球场，四角切角，球撞墙反弹；两队各两人，一局 1200 步，进球多的队赢。没有越位、犯规、界外球或角球。

@@ -10,6 +10,9 @@ English guides: [competition conditions](CONDITIONS_en.md), [original prompt (re
 
 Contestant code, any model-authored notes, logs, session records, and replay data remain in their original form and language. Original Chinese task materials are unchanged; English versions are reference translations.
 
+- **What's in this folder**: `workspace/` contestant package · `bots/` submitted bots · `sparring/` sparring-bot source · `results/` official and strong-opponent boards with per-game results · `replays/` replays · `tournament/` final-tournament scripts and schedules · `challenge.py` one-click challenge
+- **Reproducing the leaderboard**: The final was driven by the organizer's control script, so the scripts here cannot re-run it as a whole; the schedule and per-game results are public, and any single game can be replayed from its seed and seating. See [`tournament/README_en.md`](tournament/README_en.md) and [`results/README_en.md`](results/README_en.md).
+
 ## Rules in brief (full rules: [English reference](workspace/RULES_en.md); exact implementation: `workspace/tron.hpp`)
 
 - Everyone moves one step **simultaneously** (up/right/down/left); visited cells become walls forever. Moving off the board, into an obstacle or into any trail kills you. Surviving longer ranks higher; players who die on the same turn tie.

@@ -4,6 +4,9 @@
 
 2–10 人同场的炸弹人：放炸弹炸开箱子、炸死对手，地图会从外向内缩圈，活得越久得分越高。9 个 AI 模型拿到同一句提示词，各自用约 60 分钟写出一个 C++ bot，然后从 2 人局打到 10 人局，一共 8930 局。
 
+- **目录里有什么**：`workspace/` 选手包（规则、引擎与本地裁判、回放播放器、基准）· `bots/` 9 个模型的交卷代码 · `results/` 成绩和逐局结果 · `replays/` 回放 · `tournament/` 正式赛评测和评分脚本、冻结赛程 · `challenge.py` 一键挑战 · `appendix/` 附加实验
+- **复现榜单**：`python tournament/run.py --formal --output rerun/对战`：按冻结赛程重打 8930 局，需要几个小时，见 [`tournament/README.md`](tournament/README.md)。
+
 ## 规则速览（完整规则见 `workspace/RULES.md`）
 
 - 方形地图，有永久墙和可炸的箱子。所有玩家同时行动：上下左右或等待，同一回合还可以在原地放炸弹（每人最多 2 颗在场）。
