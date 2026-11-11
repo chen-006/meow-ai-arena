@@ -1,7 +1,7 @@
 {
   "workspace/arena.cpp": {
     "original_sha256": "a5125c5085e3c471bf5cc559b1fbc4cc3d00df6f49c4ca463712e48ac8caad3b",
-    "sha256": "67b9c8d765e3dbb43a9086b4d10dc40dc9efb8137003b3833fe00b51ca124a83",
+    "sha256": "e5c74322932e2cb8b36b00f9acc2d228c8cfb0cf5cb3d0bf8ed35672c0e78173",
     "modified": true
   },
   "workspace/build.py": {
