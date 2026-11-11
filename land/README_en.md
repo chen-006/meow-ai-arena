@@ -4,6 +4,9 @@
 
 A classic paper.io-like territory game: leave your land to draw a trail, then return to claim the enclosed area. If anyone steps on your trail while you are out, you die (**your territory remains**). Nine AI models received the exact same prompt and each wrote a C++ bot in about 60 minutes. The same bot played both 1-vs-1 and 4-player games, for 30000 games in total.
 
+- **What's in this folder**: `workspace/` contestant package (rules, engine, local referee, starter) · `bots/` the 9 submitted bots · `results/` standings and per-game results · `replays/` replays · `tournament/` tournament scripts · `challenge.py` one-click challenge · `appendix/` side experiments
+- **Reproducing the leaderboard**: Replay every game and rate it with the two commands under the reproduction section below (`tournament/round_robin.py`, then `tournament/rate.py`). Individual scores may differ slightly; the overall ranking should match.
+
 ## Rules in brief
 
 Full rules: [workspace/RULES_en.md](workspace/RULES_en.md); task: [workspace/TASK_en.md](workspace/TASK_en.md).

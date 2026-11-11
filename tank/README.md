@@ -4,6 +4,9 @@
 
 回到写 bot 对战。14 个模型各写一个 C++ 坦克大战 bot，1 对 1 循环赛。这一集分上下半场：上半场写第一版，所有人的第一版先打一轮；中场每位选手拿到成绩表、自己的全部对局回放和其他选手第一版的可执行程序，再用下半场改进。最终名次只看下半场的版本。三场比赛一共打了 27840 局。
 
+- **目录里有什么**：`workspace/` 选手包 · `bots/half1/`、`bots/half2/` 上下半场代码 · `results/` 中场赛、终场赛、进步赛的成绩和逐局结果 · `replays/` 回放 · `tournament/` 对战平台和三场比赛的配置 · `notes/` 赛前狠话和复盘 · `challenge.py` 一键挑战
+- **复现榜单**：在 `tournament/` 下运行 `python tournament.py plan final.json`、`run run-final`、`rate run-final`，终场约 70 分钟，见 [`tournament/README.md`](tournament/README.md)。
+
 ## 规则速览（完整规则见 `workspace/RULES.md`，精确实现是 `workspace/tank.hpp`）
 
 - 15×15 地图，地形有空地、砖墙、钢墙、水。1 对 1，每方一个基地（24 血）和三辆坦克：快速型（1 血，一回合走 2 步）、火力型（1 血，不用装填）、装甲型（2 血）。

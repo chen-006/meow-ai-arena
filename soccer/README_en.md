@@ -8,6 +8,9 @@ This archive uses the **final versions after team2 replayed its second half from
 
 English guides: [conditions](CONDITIONS_en.md), [prompts](prompt_en.md), [rules](workspace/RULES_en.md), [workspace](workspace/README_en.md), [bots](bots/README_en.md), [results](results/README_en.md), [replays](replays/README_en.md), [reproduction](tournament/README_en.md), and [post-game reviews](notes/README_en.md). Original code, Chinese task materials and model-authored answers retain their original language; English task documents are reference translations. Session transcripts and thinking are excluded.
 
+- **What's in this folder**: `workspace/` contestant package · `prompt.md`, `prompts/` organizer messages · `packages/` contest-time packages and team-chat instructions · `bots/` first- and second-half bots · `sparring/` baseline and sparring bots · `results/` team and individual boards with per-game results · `replays/` replays · `tournament/` schedules, rescoring and replay scripts · `notes/` post-match review answers
+- **Reproducing the leaderboard**: Run `python build_reference.py`, then `python tournament/score.py final` (individual board: `python tournament/score.py individual --bt`) to recompute the points from the per-game data; replaying games is covered in [`tournament/README_en.md`](tournament/README_en.md).
+
 ## Rules in brief
 
 - An enclosed 12000×8000 field with cut corners, two players per side, 1,200 turns. The ball bounces off walls; more goals wins. No offside, fouls, throw-ins or corners.

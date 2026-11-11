@@ -4,6 +4,9 @@
 
 2–15 sides share one map. Each side's program controls a squad of 3 units, collecting neutral flags and bringing them home to score. Eleven AI models received the exact same prompt and each wrote a C++ bot in about 60 minutes, then their bots played 32010 games.
 
+- **What's in this folder**: `workspace/` contestant package · `bots/` the 11 submitted bots · `results/` standings, pairwise win rates and per-game results · `replays/` replays · `tournament/` tournament configs · `challenge.py` one-click challenge · `appendix/` side experiments
+- **Reproducing the leaderboard**: From `tournament/`, five `arena/tournament.py` commands (plan, run, rate) rebuild the schedule, replay it and rate it, in about 2 hours; see [`tournament/README_en.md`](tournament/README_en.md).
+
 ## Rules in brief
 
 Full rules and protocol: [workspace/RULES_en.md](workspace/RULES_en.md).

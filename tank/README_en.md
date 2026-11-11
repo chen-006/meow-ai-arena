@@ -8,6 +8,9 @@ English guides: [competition conditions](CONDITIONS_en.md), [original prompts (r
 
 Contestant source code, pre-match boasts, post-match reviews, logs, session records, and replay data remain in their original form and language. The Chinese task materials are preserved unchanged; their English versions are reference translations.
 
+- **What's in this folder**: `workspace/` contestant package · `bots/half1/`, `bots/half2/` first- and second-half bots · `results/` half-time, final and progress tournaments with per-game results · `replays/` replays · `tournament/` tournament platform and the three configs · `notes/` trash talk and post-match reviews · `challenge.py` one-click challenge
+- **Reproducing the leaderboard**: From `tournament/`, run `python tournament.py plan final.json`, then `run run-final` and `rate run-final` (about 70 minutes for the final); see [`tournament/README_en.md`](tournament/README_en.md).
+
 ## Rules in brief (full rules: [English reference](workspace/RULES_en.md), exact implementation: `workspace/tank.hpp`)
 
 - 15×15 map with empty cells, brick, steel and water. Each side has a base (24 HP) and three tanks: fast (1 HP, moves 2 cells per turn), fire (1 HP, no reload), armor (2 HP).

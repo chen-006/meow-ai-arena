@@ -2,7 +2,7 @@
 
 # arena · General-purpose game platform
 
-Shared tooling used from episode 3 (Capture the Flag) onward: run individual games, create schedules, run tournaments and fit Bradley–Terry ratings. To run a tournament for a new game, provide a rules engine with a `Game` class implementing the interface documented at the start of `core.py`.
+General-purpose tooling used for the episode 3 (Capture the Flag) official tournament (the other episodes ship their own tournament scripts under their `tournament/`, separate from these): run individual games, create schedules, run tournaments and fit Bradley–Terry ratings. To run a tournament for a new game, provide a rules engine with a `Game` class implementing the interface documented at the start of `core.py`.
 
 | File | Purpose |
 |---|---|

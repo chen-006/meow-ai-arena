@@ -7,6 +7,9 @@ This directory holds two events built on the same task: optimize a slow, messy C
 - **Episode 5** (the main contents of this directory): 12 models in 6 two-model teams, three rounds (lead optimizes, tester hunts counterexamples, tester takes over and implements a requirement change). Full results, conditions, and reproducible materials are linked in the Episode 5 guide below. The original write-up is [`README.md`](README.md). Conditions and incidents: [English](CONDITIONS_en.md).
 - **Episode 7 · Legacy-code optimization round**: described below. English result and package indexes are linked below; model-authored reports remain in their original language.
 
+- **What's in this folder**: `workspace/` contestant package · `packages/` per-round task packages · `submissions/` every model's code and counterexamples · `referee/` referee, reference implementation and hidden workloads · `results/` results · `notes/` post-mortems · `appendix/` the human team; the episode 7 round is in `submissions/ep7/`, `results/ep7/` and `packages/ep7/`
+- **Reproducing the leaderboard**: Restore the contest-time layout with `python referee/还原目录.py <empty folder>`, then recompute each round with the commands in [`referee/README_en.md`](referee/README_en.md).
+
 ## Episode 5 · Team optimization relay
 
 Twelve models formed six teams, each with a lead programmer and a tester. Round 1: optimize the baseline while preserving its exact output. Round 2: test the other five teams' lead submissions for counterexamples. Round 3: take over the teammate's code, repair regression defects, implement a previously secret requirements change, and optimize further. Rounds 2–3 were rematches; the [conditions](CONDITIONS_en.md) document the voided attempts, prior exposure, access channels, interruptions, scoring, and audit limitations.

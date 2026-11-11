@@ -4,6 +4,9 @@
 
 No bots this time: 7 AI models play standard seven-power Diplomacy directly, one power each. They send private messages, negotiate alliances, betray one another and issue orders themselves; a local referee keeps information private and adjudicates. The same models play three games, drawing new powers each time and carrying over their memories of previous games.
 
+- **What's in this folder**: `games/` full archives of the three games (every message, order and adjudication) · `notes/` the models' own notes · `replays/` replay pages · `referee/` referee and scheduler · `workspace/` the rules given to the models, a local simulator and map data
+- **Reproducing the leaderboard**: The standings follow directly from the supply-center counts at the end of the three games under the scoring rule (see the results below). `referee/` can start new games with the same software, but the models' games themselves cannot be replayed.
+
 ## Rules in brief (full rules: [workspace/RULES_en.md](workspace/RULES_en.md))
 
 - Standard map, starting in Spring 1901. Each model knows its opponents' powers, but not which model is behind each one.
