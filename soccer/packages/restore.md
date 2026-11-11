@@ -98,7 +98,7 @@ python tournament/reproduce.py halftime --all --out out/restored-halftime
 
 ## 4. 开源适配与复现边界
 
-- 固定文件适配详见 [source_manifest.json](../source_manifest.json)：编译器探测位置、裁判链接库、陪练 include 路径、沙箱目录选择、裁判源码更新后的缓存重建和相应说明。核心物理、封存选手源码、比赛种子和成绩没有改变。
+- 固定文件适配详见 [source_manifest.json](../source_manifest.json)：编译器探测位置、裁判链接库、陪练 include 路径、沙箱目录选择、裁判源码更新后的缓存重建、本地对战和重打默认 `--sandbox none`，以及相应说明。核心物理、封存选手源码、比赛种子和成绩没有改变。
 - 裁判不再使用任何主办方绝对备用目录；默认只用其相邻 `_soccer_box/`，或使用调用者明确设置的 `SOCCER_BOX_ROOT`。目录探测失败就停止。
 - 裁判的沙箱名字从固定名额 `soccer2v2.<根目录标记>.s<k>` 里循环取用（原来每局一个新名字），避免 Windows 内核的 AppContainer 记录随局数增长、几万个沙箱后报错 1450。详见 [README](../README.md#和比赛时的差别)。
 - 原客户端仅以静态哈希登记不等于已经发布可执行服务。账号、代理、原始会话、隐藏思考、聊天、身份配置原值与作废比赛材料均不提供。

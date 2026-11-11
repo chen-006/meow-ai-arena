@@ -14,7 +14,7 @@ BOTS = {'baseline': 'plan16', 'midfield': 'plan32_b1.5', 'sparring': 'pro_b0_n12
 
 def main():
     if os.name != 'nt':
-        raise SystemExit('正式裁判使用 Windows AppContainer，需要 Windows。')
+        raise SystemExit('裁判 arena.cpp 直接调用 Windows API（进程、管道、Job Object、CPU 计时），目前只能在 Windows 上编译运行。')
     compiler = build.find_compiler()
     if not compiler:
         raise SystemExit('没有找到 g++；请设置 CXX 或把编译器加入 PATH。')

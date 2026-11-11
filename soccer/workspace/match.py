@@ -18,6 +18,8 @@
       --mate 不写 = 两个座位都是我的程序。--opp 可写 "x"（两名对手都是 x）或 "x,y"。
       打印得分率（胜 1 平 0.5）、净胜球、故障统计；回放存进 replays/run-<时间>/
 共同选项：--step-ms（默认 10，正式值）--no-stderr（不保存程序的标准错误输出）
+  --sandbox none|appcontainer（默认 none：不做身份隔离；超时、内存 1 GB、不能开子进程照样由裁判的 Job Object 限制。
+  appcontainer = 正式比赛用的 Windows 隔离，只在想按赛时环境复查时用）
 看回放：python replay.py info <回放文件>，或用浏览器打开 viewer.html 把回放拖进去。
 """
 import argparse
@@ -71,7 +73,12 @@ def resolve(spec):
 
 
 def limit_args(a):
-    return ['--step-ms', str(a.step_ms)]
+    return ['--step-ms', str(a.step_ms), '--sandbox', getattr(a, 'sandbox', 'none')]
+
+
+def with_sandbox(extra):
+    """arena 自己默认 appcontainer（赛时设置）；本地工具没写就用 none。"""
+    return list(extra) if '--sandbox' in extra else [*extra, '--sandbox', 'none']
 
 
 def show_game(g, labels=None):
@@ -176,7 +183,7 @@ def run_batch(entries, games, workers, extra, replay_dir=None, stderr_dir=None):
     arena 非零退出、结果读不懂、局号不全或重复、回放没写完整：抛 ArenaError（partial 带上已收到的结果）。"""
     lines = [f'BOT {i} {n} {p}' for i, (n, p) in enumerate(entries)]
     lines += [f'GAME {gid} {seed} {fk} ' + ' '.join(str(x) for x in seats) for gid, seed, fk, seats in games]
-    cmd = [str(arena_exe()), 'batch', '--workers', str(workers), *extra]
+    cmd = [str(arena_exe()), 'batch', '--workers', str(workers), *with_sandbox(extra)]
     if replay_dir:
         cmd += ['--replay-dir', str(replay_dir)]
     if stderr_dir:
@@ -351,6 +358,7 @@ def main():
     for s in (p, r, c):
         s.add_argument('--step-ms', type=float, default=10)
         s.add_argument('--no-stderr', action='store_true')
+        s.add_argument('--sandbox', choices=['none', 'appcontainer'], default='none')
     a = ap.parse_args()
     try:
         sys.exit({'play': cmd_play, 'run': cmd_run, 'check': cmd_check}[a.cmd](a))
