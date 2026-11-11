@@ -51,6 +51,7 @@
 #include <chrono>
 #include <condition_variable>
 #include <cstdio>
+#include <cwctype>
 #include <cstdlib>
 #include <deque>
 #include <memory>
@@ -477,7 +478,10 @@ bool join_reader(HANDLE th) {
 // -------------------------------------------------------------------- 沙箱（AppContainer）
 
 // 沙箱名额。每名选手每局仍然新建一个 AppContainer、局后删除，但名字不再每局不同（旧版是
-// soccer2v2.<进程号>.<序号>），而是从固定名额 soccer2v2.s0、s1、s2…里取一个空闲的，用完放回。
+// soccer2v2.<进程号>.<序号>），而是从固定名额 soccer2v2.<根目录标记>.s0、s1、s2…里取一个空闲的，用完放回。
+// 根目录标记是沙箱根目录全路径（小写）的 8 位哈希：不同根目录用不同的名字，所以某个根目录里被强行结束的裁判
+// 留下的程序副本（这个名额的 SID 有读权限），在别的根目录里分到同一个名额号的选手程序读不到；它在这个根目录
+// 下次占用这个名额时被删掉。
 // 原因：Windows 内核给每个新出现的 AppContainer SID 记一份 LowBox 记录（内核池标签 SeLs），删除配置后
 // 也不释放，要到重启才清空。名字每局不同时这份记录随局数一直增长，累计几万个之后 CreateProcess 报
 // 错误 1450（系统资源不足），只能重启机器。同名的 AppContainer 删掉重建后 SID 不变，不再新增记录。
@@ -487,10 +491,26 @@ bool join_reader(HANDLE th) {
 constexpr unsigned MAX_BOX_SLOTS = 4096;
 const std::wstring BOX_PREFIX = L"soccer2v2.";
 
-// 占用第 k 个名额：成功返回互斥体句柄（关闭即释放），名额正被占用（或打不开）返回 nullptr
-HANDLE take_box_slot(unsigned k) {
-    const std::wstring m = L"Global\\soccer2v2.slot." + std::to_wstring(k);
-    HANDLE h = CreateMutexW(nullptr, FALSE, m.c_str());
+// 当前沙箱根目录的标记：全路径转小写后的 FNV-1a 32 位哈希，8 位十六进制
+std::wstring box_tag() {
+    unsigned h = 2166136261u;
+    for (wchar_t c : g_box_root) {
+        h ^= unsigned(std::towlower(c));
+        h *= 16777619u;
+    }
+    std::wstring t(8, L'0');
+    for (int i = 7; i >= 0; --i, h >>= 4) t[size_t(i)] = L"0123456789abcdef"[h & 15];
+    return t;
+}
+
+// 标记为 tag 的根目录里第 k 个名额的互斥体名
+std::wstring slot_lock(const std::wstring& tag, unsigned k) {
+    return L"Global\\soccer2v2." + tag + L".slot." + std::to_wstring(k);
+}
+
+// 占用一个名额（互斥体名见 slot_lock）：成功返回互斥体句柄（关闭即释放），名额正被占用（或打不开）返回 nullptr
+HANDLE take_box_slot(const std::wstring& lock) {
+    HANDLE h = CreateMutexW(nullptr, FALSE, lock.c_str());
     if (h && GetLastError() == ERROR_ALREADY_EXISTS) {
         CloseHandle(h);
         return nullptr;
@@ -516,8 +536,17 @@ void cleanup_stale_boxes() {
     do {
         const std::wstring name = fd.cFileName;
         const wchar_t* rest = name.c_str() + BOX_PREFIX.size();
-        if (rest[0] == L's') {  // 名额式：名额空着才删（占着的是正在用的沙箱）
-            if (HANDLE slot = take_box_slot(unsigned(_wtoi(rest + 1)))) {
+        bool tagged = name.size() > BOX_PREFIX.size() + 9 && rest[8] == L'.' && rest[9] == L's';
+        for (int i = 0; tagged && i < 8; ++i) tagged = std::iswxdigit(rest[i]) != 0;
+        if (tagged) {  // 名额式 <标记>.s<k>：名额空着才删（占着的是正在用的沙箱）
+            if (HANDLE slot = take_box_slot(slot_lock(std::wstring(rest, 8), unsigned(_wtoi(rest + 10))))) {
+                remove_box(name);
+                CloseHandle(slot);
+            }
+            continue;
+        }
+        if (rest[0] == L's') {  // 2026-11-10 版的名额式 s<k>（互斥体 Global\soccer2v2.slot.<k>）：名额空着才删
+            if (HANDLE slot = take_box_slot(L"Global\\soccer2v2.slot." + std::to_wstring(_wtoi(rest + 1)))) {
                 remove_box(name);
                 CloseHandle(slot);
             }
@@ -548,11 +577,12 @@ struct Box {
     // 建 AppContainer 配置 + 专用目录（只给这个容器读和执行的权限）+ 程序副本。失败返回说明
     std::string create(const std::wstring& src_exe, bool& src_missing) {
         src_missing = false;
+        const std::wstring tag = box_tag();
         for (unsigned k = 0; !slot; ++k) {
             if (k >= MAX_BOX_SLOTS) return "取不到空闲的沙箱名额（" + std::to_string(MAX_BOX_SLOTS) + " 个都在用）";
-            slot = take_box_slot(k);
+            slot = take_box_slot(slot_lock(tag, k));
             if (!slot) continue;
-            name = BOX_PREFIX + L"s" + std::to_wstring(k);
+            name = BOX_PREFIX + tag + L".s" + std::to_wstring(k);
             if (!remove_box(name)) {  // 上次留下的目录删不掉：跳过这个名额
                 CloseHandle(slot);
                 slot = nullptr;
@@ -1327,7 +1357,7 @@ void setup_common() {
     // 子进程继承错误模式：崩溃不弹窗
     SetErrorMode(SEM_FAILCRITICALERRORS | SEM_NOGPFAULTERRORBOX | SEM_NOOPENFILEERRORBOX);
     if (!g_lim.sandbox) return;
-    // 沙箱目录的根（每名选手每局在下面建一个 soccer2v2.s<名额号> 目录，局后删除；名额见 take_box_slot）：
+    // 沙箱目录的根（每名选手每局在下面建一个 soccer2v2.<根目录标记>.s<名额号> 目录，局后删除；名额见 take_box_slot）：
     //   1. 环境变量 SOCCER_BOX_ROOT 给了就只用它（试运行失败直接报错）；
     //   2. 否则先用 arena.exe 旁边的 _soccer_box\；
     //   3. 相邻目录试运行失败时停止，由调用者用 SOCCER_BOX_ROOT 指定其他目录。
