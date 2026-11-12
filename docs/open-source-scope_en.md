@@ -40,6 +40,15 @@ The goal is simple: anyone who clones this repository should be able to understa
 
 - The voxel (block-built) characters that stand for each model in the videos: model files, voxel data, the scripts that generate them, preview images, and the source of each character's original design.
 
+**Character illustrations and expression sheets**
+
+- The character illustrations made by the show (delivery versions) and each character's expressions (cut-out single images and avatars), including the show's own host character.
+
+**Image-generation prompts and parameters**
+
+- The prompts actually used for the final images, verbatim (including the shared style block), the model name, size, quality, background and other parameters, and the scripts that generate, tidy and slice the images. The scripts read the API key from an environment variable; no key is stored in the repository.
+- Reference images used during generation are not bundled. Third-party ones (vendor logos, other people's design sheets) are only described; the show's own reference images (early drafts, downscaled or cropped masters) are not added separately either, and the README says what each one was.
+
 ## What is not published
 
 - Voice-over, music, narration scripts, final cuts and editing projects.
@@ -54,34 +63,24 @@ Together with the video. Nothing from an episode that hasn't aired yet is publis
 
 ## Licenses
 
-Licensing follows directory boundaries:
+The whole repository uses a single license: [MIT](../LICENSE). Every category above is MIT: the games, contest materials, contestant submissions, referees and scoring, results, the renderer and art assets, character illustrations and expression sheets, voxel characters, image-generation prompts, documentation and community submissions.
 
-| What | License | License text |
-|---|---|---|
-| The game itself (engines, rules, maps and levels), contest materials, contestant submissions, referee and scoring, results, documentation, community submissions | MIT | [`LICENSE`](../LICENSE) |
-| The renderer and shared art assets: code, scene themes, unit and item models and render scripts under each episode's `renderer/` | CC BY-NC 4.0 (attribution, non-commercial) | [`LICENSES/CC-BY-NC-4.0.txt`](../LICENSES/CC-BY-NC-4.0.txt) |
-| The voxel characters: everything under the top-level `characters/` | CC BY-NC-SA 4.0 (attribution, non-commercial, share-alike) | [`LICENSES/CC-BY-NC-SA-4.0.txt`](../LICENSES/CC-BY-NC-SA-4.0.txt) |
-
-- **MIT**: use, modify and redistribute freely, including commercially, as long as the copyright and license notice is kept.
-- **CC BY-NC 4.0**: copy, modify and redistribute, with attribution, for non-commercial purposes only.
-- **CC BY-NC-SA 4.0**: as CC BY-NC 4.0, and adaptations you share must use the same license. The voxel characters are derivative works of the character designs in the videos, and some of those designs are themselves licensed under CC BY-NC-SA 4.0, so the whole set uses this license rather than a different one per character.
-- Images and videos made with the renderer or the voxel characters are likewise non-commercial only and need attribution. Footage that shows voxel characters is also subject to CC BY-NC-SA 4.0.
-- The non-commercial terms do not reach the games themselves: if you only use the engines, rules, maps and referees, without the renderer or the characters, only MIT applies.
-- Every directory under a non-commercial license carries a `LICENSE.md` that names the license and how to give credit; directories that use third-party dependencies also carry a `THIRD_PARTY_NOTICES.md` listing each one's name, version, source and license.
-- A few directories have their own license, stated inside them, for example the jDip map graphics (GPL) in the episode 4 replay pages and the community contest `community/contests/rmuc2026/` (Arena-1 non-commercial learning license).
+- **MIT**: use, modify and redistribute freely, including commercially, as long as the copyright and license notice is kept. The same goes for images and videos you make with the renderer, the illustrations or the voxel characters.
+- Third-party directories that carry their own license keep it, as stated inside them: the jDip map graphics in the episode 4 replay pages (GPL, rendered through the AGPL `diplomacy` package) and the community contest `community/contests/rmuc2026/` (Arena-1 non-commercial learning license).
+- Third-party dependencies are not bundled and are used under their own licenses; directories that use them carry a `THIRD_PARTY_NOTICES.md` listing each one's name, version, source and license.
 
 ### How to give credit
 
-- Renderer and shared assets: `meow-ai-arena (AI Coding Arena), CC BY-NC 4.0`, with a link to `https://github.com/chen-006/meow-ai-arena`.
-- Voxel characters: `Voxel characters made by meow-ai-arena (AI Coding Arena), CC BY-NC-SA 4.0; original design: <creator>`.
-- The original design source for each character is listed in `characters/CREDITS.md`. Most character designs in the videos come from the Bilibili creator ZipZipPipe ([profile](https://space.bilibili.com/4168597)); for the whale girl, write "ZipZipPipe, based on an original character by 上善无形 ([b23.tv/3dNz55h](https://b23.tv/3dNz55h))". Where the original creator has published terms of use, `CREDITS.md` states them too; where they haven't, it gives the source only.
-- Model and company names in character names belong to their owners and only indicate which model a character stands for. The voxel characters do not use any company's logos.
+- Code, rules and data: keep the MIT copyright and license notice.
+- Character designs from episode 10 on (illustrations, expression sheets, voxel characters): `Character design: 小叶子XIYZ (Bilibili); art and production: 喵了个猫了个咪了个猫`, with a link to `https://github.com/chen-006/meow-ai-arena`. The new designs are based on 小叶子XIYZ's designs and were made by the show. Per-character notes are in `art/README_en.md` and `characters/CREDITS.md`.
+- The older character designs in the episode 1–9 videos mostly come from the Bilibili creator ZipZipPipe ([profile](https://space.bilibili.com/4168597)); they are not in this repository and are not covered by its license.
+- Model and company names in character names belong to their owners and only indicate which model a character stands for; they do not imply endorsement by or involvement of those companies.
 
 ## Which episodes this applies to
 
-- The full scope applies from the first episode released after episode 9; the renderer and voxel characters are published from that episode on, together with its video.
-- Episodes 1–9 will not get a renderer or voxel characters retroactively. Their other materials were already published to roughly the same scope; where an episode falls short (for example, a final tournament that can only be re-run in full with the organizer's control script), its README says so in its section on differences from the contest or in its reproduction notes.
-- The voxel characters are shared across episodes, so they live in the top-level `characters/`, and new characters are added there.
+- The full scope applies from episode 10 (*Armchair Generals*, 纸上谈兵) on; the renderer, voxel characters, the new illustrations and expression sheets and the image-generation prompts are published from that episode on, together with its video.
+- Episodes 1–9 will not get a renderer, voxel characters or illustrations retroactively. Their other materials were already published to roughly the same scope; where an episode falls short (for example, a final tournament that can only be re-run in full with the organizer's control script), its README says so in its section on differences from the contest or in its reproduction notes. Old images and notes in those folders stay as they are.
+- Voxel characters, illustrations, expression sheets and image-generation prompts are shared across episodes, so they live in the top-level `characters/` and `art/`, and new characters are added there.
 
 ## Folder layout for each episode
 
@@ -100,9 +99,8 @@ Future episodes follow the layout below. The folder is named after the game, in 
 ├── replays/                        Representative replays (.html, open in a browser); the README states how they were picked
 ├── tournament/                     Referee, schedule (with seeds), scoring scripts; maps and levels hidden during the contest go in tournament/hidden/
 │   └── README.md                   The one command that reproduces the leaderboard, and the command that replays every game
-├── renderer/                       The renderer (CC BY-NC 4.0)
+├── renderer/                       The renderer
 │   ├── README.md                   Render commands, dependencies, tested Blender version
-│   ├── LICENSE.md                  CC BY-NC 4.0 and how to give credit
 │   ├── THIRD_PARTY_NOTICES.md      Third-party dependencies it uses
 │   ├── src/                        Replay-to-footage code
 │   ├── themes/                     Scene themes
@@ -114,12 +112,17 @@ Future episodes follow the layout below. The folder is named after the game, in 
 Shared material lives at the top level:
 
 ```text
-characters/                 Voxel characters for each AI (CC BY-NC-SA 4.0)
+characters/                 Voxel characters for each AI
 ├── README.md               File formats, how to load them, how to use them in a renderer
-├── LICENSE.md              CC BY-NC-SA 4.0 and how to give credit
-├── CREDITS.md              Original design source for every character (and the creator's published terms, if any)
-└── <character>/            Model files, voxel data, preview images
-LICENSES/                   Full texts of CC BY-NC 4.0 and CC BY-NC-SA 4.0
+├── CREDITS.md              Which illustration each character follows, and design credits
+├── <character>.glb, .json, _正面.png, _斜45.png   Model files, voxel data, preview images
+└── src/                    The scripts that generate them
+art/                        Character illustrations, expression sheets, image-generation prompts and scripts
+├── README.md               Character list, credits, model and parameters, what was used as reference
+├── portraits/              Illustrations (delivery versions)
+├── expressions/<character>/ Expressions (cut-out single images and avatars)
+├── prompts/                The prompts and job lists actually used for the final images
+└── tools/                  Scripts that generate, tidy and slice the images
 arena/                      General-purpose tournament platform (used for the episode 3 official tournament)
 community/                  Community submissions and the community leaderboard
 docs/                       Cross-episode documentation (scoring methods, this page, ...)
