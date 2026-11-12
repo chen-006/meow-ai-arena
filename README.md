@@ -2,7 +2,7 @@
 
 # meow-ai-arena · AI 算法对抗大赛
 
-让一群 AI 模型拿到**一字不差的同一句提示词**，各自在约 60 分钟里写出一个游戏 bot，再把这些 bot 扔进同一个赛场打几千到几万局，看谁最强。有几集换了玩法：模型直接当玩家下《外交》、接力优化老代码、设计桥梁。
+让一群 AI 模型拿到**一字不差的同一句提示词**，各自在约 60 分钟里写出一个游戏 bot，再把这些 bot 扔进同一个赛场打几千到几万局，看谁最强。有几集换了玩法：模型直接当玩家下《外交》、接力优化老代码、设计桥梁、排兵布阵。
 
 这里是视频系列"AI 算法对抗大赛"的全部比赛材料：题目、裁判、每个模型交上来的原样代码、逐局结果、评分脚本，以及可以直接上手的一键脚本。你可以看回放、复现正式赛，也可以**写一个自己的 bot，和这些 AI 一较高下**。
 
@@ -20,6 +20,7 @@
 | 7 · 第二场 | 屎山优化 | [`warehouse/`](warehouse/#第-7-集--屎山优化) | 同样 10 个模型各自优化第 5 集那份老代码（另有 Claude 3 位作参照） | 阶跃 Step 5 preview / 腾讯混元 Hy4 preview（并列） | [`results/ep7/`](warehouse/results/ep7/README.md) | — |
 | 8 | 2v2 简化足球 | [`soccer/`](soccer/) | 12 个模型两两组队、一人写一名球员；下半场加个人队，8280 局 | 团队：GPT-6 Astra + GPT-6.1 Terra；个人：GPT-6 Astra | [`tournament/`](soccer/tournament/README.md) | [ep8](https://arena.meowllm.top/ep8/) |
 | 9 | 造桥 | [`bridge/`](bridge/) | 不写 bot：9 个模型在 90 分钟里设计桥梁，6 关闯关 + 1 关桥和捣蛋车攻防 | GPT-6.2 Sol | [`tournament/`](bridge/tournament/README.md) | [ep9](https://arena.meowllm.top/ep9/) |
+| 10 | 纸上谈兵 | [`battle/`](battle/) | 9 个模型在 90 分钟里买兵布阵、写指挥程序，刚体物理里开打：5 关闯关比谁花得少 + 1v1 和四人混战盲摆对打，945 局 | GPT-6.2 Sol | [`tournament/`](battle/tournament/README.md) | — |
 
 第 7 集两场合计的“区王”是阶跃 Step 5 preview（两场各按名次给 10～1 分相加，见 [`tron/README.md`](tron/README.md) 文末）。
 
@@ -34,12 +35,13 @@
 | [`community/`](community/README.md) | 观众投稿和[社区榜](community/LEADERBOARD.md)，见下面的“来投稿”；`community/contests/` 是社区自建的比赛 |
 | [`arena/`](arena/README.md) | 通用对战平台：单局、赛程、Bradley–Terry 评分。只有第 3 集夺旗的正式赛用它办，其余各集在自己的 `tournament/` 里自带赛事脚本 |
 | [`docs/`](docs/) | [评分方法](docs/scoring.md)、[版本演化实验](docs/version-evolution.md)、[开源范围](docs/open-source-scope.md) |
-| [`LICENSES/`](LICENSES/) | CC BY-NC 4.0、CC BY-NC-SA 4.0 的正式文本，见文末“许可” |
+| [`art/`](art/README.md) | 从第 10 集起的角色立绘、表情差分、生图提示词和脚本 |
+| [`characters/`](characters/README.md) | 各家 AI 的体素小人（模型、方块数据、预览图） |
 | `start.cmd`、`start.sh`、`start.py` | 一键菜单：看回放、用你的 bot 挑战 AI、投稿、检查环境（目前收录第 1～7 集） |
 
 ## 30 秒上手
 
-**只想看比赛**：不需要装任何东西。用浏览器打开任意一集 `replays/` 文件夹里的 `.html` 文件，就能逐回合播放。第 1 集打开 `land/replays/index.html`；第 4 集的回放带着全部私信，打开 `diplomacy/replays/game3.html` 看最后一局。第 5 集没有回放，成绩在 `warehouse/results/最终成绩.md`。第 6 集打开 `tank/replays/final-astra-vs-soluf.html` 看冠亚军。第 7 集光轮对战的回放是随机抽的 30 局，在 `tron/replays/`（清单见那里的 `README.md`）；屎山优化没有回放，成绩在 `warehouse/README.md` 的第 7 集一节。第 8 集打开 `soccer/workspace/viewer.html`，把 `soccer/replays/` 里的 `.txt` 拖进去。第 9 集打开 `bridge/replays/` 里的 `.html`。也可以直接上[网页版](https://arena.meowllm.top/)。
+**只想看比赛**：不需要装任何东西。用浏览器打开任意一集 `replays/` 文件夹里的 `.html` 文件，就能逐回合播放。第 1 集打开 `land/replays/index.html`；第 4 集的回放带着全部私信，打开 `diplomacy/replays/game3.html` 看最后一局。第 5 集没有回放，成绩在 `warehouse/results/最终成绩.md`。第 6 集打开 `tank/replays/final-astra-vs-soluf.html` 看冠亚军。第 7 集光轮对战的回放是随机抽的 30 局，在 `tron/replays/`（清单见那里的 `README.md`）；屎山优化没有回放，成绩在 `warehouse/README.md` 的第 7 集一节。第 8 集打开 `soccer/workspace/viewer.html`，把 `soccer/replays/` 里的 `.txt` 拖进去。第 9 集打开 `bridge/replays/` 里的 `.html`。第 10 集的回放用 `python battle/replays/unpack.py` 解压后，在 `battle/workspace/` 下用 `python play.py replay` 在终端里看（只要 Python），或用 `battle/renderer/` 渲染成视频，见 [`battle/replays/`](battle/replays/README.md)。也可以直接上[网页版](https://arena.meowllm.top/)。
 
 **想用自己的 bot 挑战 AI**：
 
@@ -109,25 +111,19 @@ python challenge.py 你的bot.cpp
 
 第 9 集造桥（`bridge/`）的结构不同：没有 bot 和挑战脚本，`designs/` 是每人 8 份设计 JSON（第 1～6 关、决赛桥、捣蛋车），`reference/` 是参考答案，`engine/` 是物理内核源码（用 `bridge/build_engine.py` 编译），`tournament/score.py` 重算并核对全部成绩，见 [`bridge/README.md`](bridge/README.md)。
 
+第 10 集纸上谈兵（`battle/`）的选手作品是布阵 JSON 加一个 C++ 指挥程序，放在 `bots/`；`engine/` 是模拟器源码（用 `battle/build_engine.py` 编译），`tournament/score.py` 用比赛时的计分脚本重算并核对全部成绩，`--rerun` 从选手作品重打全部 945 局；`renderer/` 是把回放渲染成视频的渲染器。这一集起，角色立绘、表情差分和体素小人放在仓库顶层的 [`art/`](art/README.md) 和 [`characters/`](characters/README.md)。见 [`battle/README.md`](battle/README.md)。
+
 ## 关于公平性
 
 - 每个模型只测一次，单次结果有偶然性。工具（agent harness）、思考档、接入渠道都会影响成绩，各集的具体条件都写在 `CONDITIONS.md` 里。第 3 集的附加实验显示，同一个模型只换工具，实力值能差 120 分以上。
-- 评分口径：第 1 集是 0–100 归一化；第 2、3 集是"基准 = 0、不封顶"的 Bradley–Terry 实力值；第 4 集是《外交》的局分（单独获胜 100，和局按中心数平方分配），只有三局；第 5 集是 7 个分项按权重加总的团队分（0–100），每个模型每轮只跑一次，另有主程和测试手两张个人榜；第 6 集是 1 对 1 的 Bradley–Terry 实力值（基准 = 0），每个模型每个半场只跑一次，有三位选手在另一台更快的电脑上由外部操作员运行；第 7 集光轮对战是三个局型各一个 Bradley–Terry 实力值按 50/30/20 加权（豆包 = 0，锚点是赛后定的），屎山优化是 8 组隐藏负载的几何平均加速比，两场都每个模型只跑一次；第 8 集按积分得分率排名（胜 3、平 1），Bradley–Terry 实力值只作参考；第 9 集的总分是 7 关的平均，第 1～6 关按造价给分（和参考答案一样便宜得 100），第 7 关是攻防分。**不同集的分数不能直接比较。**
+- 评分口径：第 1 集是 0–100 归一化；第 2、3 集是"基准 = 0、不封顶"的 Bradley–Terry 实力值；第 4 集是《外交》的局分（单独获胜 100，和局按中心数平方分配），只有三局；第 5 集是 7 个分项按权重加总的团队分（0–100），每个模型每轮只跑一次，另有主程和测试手两张个人榜；第 6 集是 1 对 1 的 Bradley–Terry 实力值（基准 = 0），每个模型每个半场只跑一次，有三位选手在另一台更快的电脑上由外部操作员运行；第 7 集光轮对战是三个局型各一个 Bradley–Terry 实力值按 50/30/20 加权（豆包 = 0，锚点是赛后定的），屎山优化是 8 组隐藏负载的几何平均加速比，两场都每个模型只跑一次；第 8 集按积分得分率排名（胜 3、平 1），Bradley–Terry 实力值只作参考；第 9 集的总分是 7 关的平均，第 1～6 关按造价给分（和参考答案一样便宜得 100），第 7 关是攻防分；第 10 集是闯关 60% + 对抗 40%，关卡分以全场最省的过关者为 100，对抗是 1v1 胜率和四人混战得分按 60/40 加权。**不同集的分数不能直接比较。**
 - 选手代码均为模型生成，主办方未做修改。题目、规则和裁判由主办方编写。第 4 集里的私信、命令和笔记都是模型自己写的，原样保存。第 5 集里各轮提交的代码、交接文档、反例和说明、盲评评分、复盘也都是模型写的，原样保存；把反例归成缺陷点是主办方做的。第 5 集附录里人工队的代码是两位人类选手写的（其中一份是带着 Gemini 写的）。第 6 集的出题方参照（`tank/tournament/sparring.cpp`）是主办方写的，只作参照、不排名。第 7 集光轮对战的两个陪练（`tron/sparring/`）是主办方的子代理写的，强档陪练只作参考线、不占名次；附加实验里用到的 2010 年人类选手 bot 大多没有开源许可，都不放进本仓库，只在 `tron/README.md` 列了出处和致谢。
 
 ## 许可
 
-许可以目录为界，分三类：
+整个仓库使用 [MIT 许可](LICENSE)：游戏本体（引擎、规则、地图和关卡）、选手包、选手作品、裁判和计分脚本、成绩和回放、文档、社区投稿，以及从第 10 集起随视频公开的渲染器、美术素材、角色立绘和表情差分、体素小人、生图提示词，都是 MIT。可以自由使用、修改、再发布，包括商业用途，保留版权和许可声明即可；用渲染器、立绘、体素小人做出来的画面和视频也一样。欢迎拿去复现、改编、出新题。什么公开、什么不公开、以后每集的目录怎么放，见 [开源范围](docs/open-source-scope.md)。
 
-| 内容 | 许可 |
-|---|---|
-| 游戏本体（引擎、规则、地图和关卡）、选手包、选手作品、裁判和计分脚本、成绩和回放、文档、社区投稿。除下面两行和"例外"列出的以外，都是这一类 | [MIT](LICENSE)。欢迎拿去复现、改编、出新题 |
-| 渲染器和通用美术素材：各集的 `renderer/` 目录（回放转视频的代码、场景主题、兵种和道具模型、出片脚本） | [CC BY-NC 4.0](LICENSES/CC-BY-NC-4.0.txt)：署名、非商业性使用 |
-| 各家 AI 的体素小人：顶层的 `characters/` 目录 | [CC BY-NC-SA 4.0](LICENSES/CC-BY-NC-SA-4.0.txt)：署名、非商业性使用、相同方式共享 |
-
-渲染器和体素小人从第 9 集之后新播出的一集起随视频公开，第 1～9 集不补，所以现在仓库里还没有这两个目录。公开时，目录里会附一份 `LICENSE.md` 说明适用的许可。用它们做出来的画面和视频同样只能非商业使用，并且要署名。什么公开、什么不公开、以后每集的目录怎么放，见 [开源范围](docs/open-source-scope.md)。
-
-例外：
+例外（这些目录自带许可，沿用不变）：
 
 - 第 4 集的裁判依赖 [`diplomacy`](https://github.com/diplomacy/diplomacy) 包（AGPL-3.0 或更高版本，本仓库不包含）。回放网页里的地图图形来自 jDip（GPL），经这个包渲染，所以回放网页整体不适用 MIT 许可，见 [`diplomacy/README.md`](diplomacy/README.md#许可说明)。
 - 社区比赛 [`community/contests/rmuc2026/`](community/contests/rmuc2026/) 基于 Arena-1，沿用它自己目录里的非商业学习许可，不适用 MIT。
@@ -135,13 +131,15 @@ python challenge.py 你的bot.cpp
 
 ## 署名与致谢
 
-视频里的角色形象大多来自 B 站博主 **ZipZipPipe**（[主页](https://space.bilibili.com/4168597)），特此致谢。按其主页公告，鲸鱼娘形象是基于上善无形原创角色的二创（原作来源 [b23.tv/3dNz55h](https://b23.tv/3dNz55h)），以 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans)（署名、非商业性使用、相同方式共享）授权。
+**从第 10 集起，视频里的角色形象换成了新的一套**，立绘、表情差分、体素小人和生图提示词都随仓库以 MIT 公开（见 [`art/`](art/README.md)、[`characters/`](characters/README.md)）：
 
-视频里的立绘、配音和剪辑都不在本仓库内，也不适用本仓库的任何许可；如需使用立绘，请遵守原作者的协议。
+- **角色形象设计：小叶子XIYZ（B 站）**。新形象参考自他的设计，由节目组制作。
+- **美术和制作：喵了个猫了个咪了个猫**。
 
-各家 AI 的体素小人是本项目照这些角色形象制作的衍生作品。使用或改编体素小人时，请同时署名两方：
+使用这些形象时，请写上"角色形象设计：小叶子XIYZ；美术和制作：喵了个猫了个咪了个猫"，并附本仓库链接。
 
-- 体素小人：meow-ai-arena（AI 算法对抗大赛）制作，CC BY-NC-SA 4.0；
-- 原形象：所依据角色的原作者。`characters/CREDITS.md` 逐个角色列出原形象出处；鲸鱼娘的原形象写作"ZipZipPipe，基于上善无形原创角色（[b23.tv/3dNz55h](https://b23.tv/3dNz55h)）"。
+第 1～9 集视频里的角色形象大多来自 B 站博主 **ZipZipPipe**（[主页](https://space.bilibili.com/4168597)），特此致谢。按其主页公告，鲸鱼娘形象是基于上善无形原创角色的二创（原作来源 [b23.tv/3dNz55h](https://b23.tv/3dNz55h)）。这些旧立绘不在本仓库内，也不适用本仓库的许可；如需使用，请遵守原作者的协议。往期目录里的旧图和旧说明保持原样。
+
+视频的配音、音乐和剪辑不在本仓库内。
 
 角色名里的模型名和公司名属于各自的权利人，只用来说明角色对应哪个模型，不表示这些公司认可或参与本项目。

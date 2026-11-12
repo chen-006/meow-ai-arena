@@ -2,7 +2,7 @@
 
 # meow-ai-arena · AI Coding Arena
 
-Several AI models receive **the exact same prompt**, each writes a game bot in about 60 minutes, and the bots then play thousands of matches against each other. A few episodes change the format: the models play Diplomacy themselves, relay-optimize legacy code, or design bridges. This repository contains the materials from the video series: game rules, referees, every model's submitted code (unmodified), per-game results, rating scripts, and one-click scripts to challenge the AIs with your own bot.
+Several AI models receive **the exact same prompt**, each writes a game bot in about 60 minutes, and the bots then play thousands of matches against each other. A few episodes change the format: the models play Diplomacy themselves, relay-optimize legacy code, design bridges, or deploy armies. This repository contains the materials from the video series: game rules, referees, every model's submitted code (unmodified), per-game results, rating scripts, and one-click scripts to challenge the AIs with your own bot.
 
 ## Episodes
 
@@ -18,6 +18,7 @@ Several AI models receive **the exact same prompt**, each writes a game bot in a
 | 7, round 2 | Legacy-code optimization | [`warehouse/`](warehouse/README_en.md#episode-7--legacy-code-optimization-round) | The same 10 models each optimize the episode 5 legacy code on their own (+3 Claude reference runs) | StepFun Step 5 preview / Tencent Hunyuan Hy4 preview (tie) | [`results/ep7/`](warehouse/results/ep7/README_en.md) | — |
 | 8 | 2v2 simplified soccer | [`soccer/`](soccer/README_en.md) | 12 models in 6 teams, one player program each; individual teams added in the second half; 8,280 games | Team: GPT-6 Astra + GPT-6.1 Terra; individual: GPT-6 Astra | [`tournament/`](soccer/tournament/README_en.md) | [ep8](https://arena.meowllm.top/ep8/) (Chinese) |
 | 9 | Bridge building | [`bridge/`](bridge/README_en.md) | No bots: 9 models design bridges in 90 minutes, 6 challenge levels + 1 bridge-vs-saboteur level | GPT-6.2 Sol | [`tournament/`](bridge/tournament/README_en.md) | [ep9](https://arena.meowllm.top/ep9/) (Chinese) |
+| 10 | Armchair Generals (troop deployment) | [`battle/`](battle/README_en.md) | 9 models buy and deploy armies and write a commander program in 90 minutes, fought out in rigid-body physics: 5 challenge levels where cheaper passes score higher + blind 1v1 and four-player free-for-all; 945 battles | GPT-6.2 Sol | [`tournament/`](battle/tournament/README_en.md) | — |
 
 Every episode README opens with what the episode is, what is in the folder, and how to reproduce its leaderboard.
 
@@ -28,12 +29,13 @@ Other top-level folders:
 | [`community/`](community/README_en.md) | Community submissions and the [community leaderboard](community/LEADERBOARD.md) (see "Submit your own" below); `community/contests/` holds community-built contests |
 | [`arena/`](arena/README_en.md) | General-purpose tournament platform: single games, schedules, Bradley–Terry ratings. Only the episode 3 official tournament ran on it; the other episodes ship their own tournament scripts under their `tournament/` |
 | [`docs/`](docs/) | [Scoring methods](docs/scoring_en.md), [version-evolution experiment](docs/version-evolution_en.md), [open-source scope](docs/open-source-scope_en.md) |
-| [`LICENSES/`](LICENSES/) | Full texts of CC BY-NC 4.0 and CC BY-NC-SA 4.0; see "License" below |
+| [`art/`](art/README_en.md) | Character illustrations, expression sheets, image-generation prompts and scripts, from episode 10 on |
+| [`characters/`](characters/README_en.md) | Voxel characters for each AI (models, voxel data, previews) |
 | `start.cmd`, `start.sh`, `start.py` | One-click menu (Chinese): watch replays, challenge the AIs with your bot, submit, check your setup (episodes 1–7 for now) |
 
 ## Watch and play
 
-**Watch**: no installation needed. Open any `.html` file under `*/replays/` in a browser (episode 1: `land/replays/index.html`). Episode 5 has no replays; its results are in `warehouse/results/最终成绩.md`. For episode 8, open `soccer/workspace/viewer.html` and drop in a `.txt` from `soccer/replays/`. Or use the [website](https://arena.meowllm.top/en/), which also lets you play against the AI-written bots.
+**Watch**: no installation needed. Open any `.html` file under `*/replays/` in a browser (episode 1: `land/replays/index.html`). Episode 5 has no replays; its results are in `warehouse/results/最终成绩.md`. For episode 8, open `soccer/workspace/viewer.html` and drop in a `.txt` from `soccer/replays/`. Episode 10 replays are unpacked with `python battle/replays/unpack.py` and watched in the terminal with `python play.py replay` from `battle/workspace/` (Python only), or rendered to video with `battle/renderer/`; see [`battle/replays/`](battle/replays/README_en.md). Or use the [website](https://arena.meowllm.top/en/), which also lets you play against the AI-written bots.
 
 **Challenge the AIs**: install Python 3.10+ and g++, then run `start.cmd` (Windows) or `sh start.sh`, or directly `python ctf/challenge.py your_bot.cpp` (episode 6: `python tank/challenge.py your_bot.cpp`; episode 7: `python tron/challenge.py your_bot.cpp`, Windows only). Rules and the I/O protocol are in each episode’s `workspace/RULES.md`; English reference translations are available as `workspace/RULES_en.md`.
 
@@ -52,6 +54,8 @@ Episode 6 returns to bot battles with two halves. Fourteen models write a first 
 Episode 7, "District King Championship", has two rounds with the same ten models. Round 1 is Tron light cycles: each model writes one C++ bot that plays 1-vs-1, 4-player and 12-player games; ratings are Bradley–Terry per game type weighted 50/30/20, anchored at Doubao = 0 (the anchor was chosen after the race). GPT-6 Astra and DeepSeek V4.1 Flash ran as reference contestants and, with an organizer-written strong sparring bot, appear only on a separate strong-opponent board. `tron/` contains the task package, all sealed bots, both leaderboards, per-game results, 30 randomly sampled replays and a challenge script; it also lists, with links and thanks, the 2010 Google AI Challenge human bots used in a side experiment (their code is not included, as most have no license). There was no trash talk and no post-match review this time. Round 2 reuses the episode 5 warehouse task as a solo legacy-code optimization round (`warehouse/`, section "Episode 7"). Each round awards 10…1 points by place; the overall "District King" is StepFun Step 5 preview (see the end of `tron/README_en.md`).
 
 Episode 9, "Bridge Building", has no bots: nine models design bridges within 90 minutes, with all 7 levels handed out at the start. In levels 1–6 the given vehicles must cross in time and intact, and cheaper passing designs score higher; in level 7 everyone submits a final bridge and a saboteur vehicle, and they play each other. `bridge/` contains the contestant package, the physics core source (`bridge/build_engine.py`), every contestant's designs, the reference solutions, results, replays and `tournament/score.py`, which recomputes and checks all results; see [bridge/README_en.md](bridge/README_en.md).
+
+Episode 10, "Armchair Generals" (`battle/`), is about troop deployment: nine models each buy and place armies and write one C++ commander program within 90 minutes, and the battles play out in deterministic rigid-body physics. Five challenge levels reward the cheapest passing army; then everyone meets blind in 1v1 and four-player free-for-alls. `battle/` contains the contestant package, the simulator source (`battle/build_engine.py` rebuilds the contest exe byte for byte), every contestant's deployments and program, results, replays, `tournament/score.py` (recomputes and checks all standings with the contest's own scoring script; `--rerun` replays all 945 battles) and the renderer that turns replays into video. From this episode on, the character illustrations, expressions and voxel characters live in the top-level [`art/`](art/README_en.md) and [`characters/`](characters/README_en.md); see [battle/README_en.md](battle/README_en.md).
 
 Episode 8, "2v2 Simplified Soccer", pairs twelve models into six teams; each model writes the program for one player, after a 5-minute tactics meeting, and the two programs play as a team. At half time the teams get their standings and replays and keep developing; in the second half each model also fields an individual team made of its own two programs, ranked on a separate board. `soccer/` contains the contestant package, every organizer message, both halves' programs, both boards with per-game results, replays, and scripts that rescore or replay any game; see [soccer/README_en.md](soccer/README_en.md).
 
@@ -85,17 +89,9 @@ Each episode's `CONDITIONS.md` (with an English `CONDITIONS_en.md`) documents to
 
 ## License
 
-Licensing follows directory boundaries:
+The whole repository is under the [MIT license](LICENSE): the games themselves (engines, rules, maps and levels), contestant packages, contestant submissions, referees and scoring scripts, results and replays, documentation, community submissions, and, from episode 10 on, the renderer, art assets, character illustrations and expression sheets, voxel characters and image-generation prompts published with each video. Use, modify and redistribute them freely, including commercially, as long as the copyright and license notice is kept; the same goes for images and videos you make with the renderer, the illustrations or the voxel characters. Reproduce it, adapt it, build new contests on it. For what is and isn't published, and how each episode's folder is laid out, see [Open-source scope](docs/open-source-scope_en.md).
 
-| What | License |
-|---|---|
-| The games themselves (engines, rules, maps and levels), contestant packages, contestant submissions, referees and scoring scripts, results and replays, documentation, community submissions: everything not covered by the next two rows or the exceptions below | [MIT](LICENSE). Reproduce it, adapt it, build new contests on it |
-| The renderer and shared art assets: each episode's `renderer/` directory (replay-to-video code, scene themes, unit and item models, render scripts) | [CC BY-NC 4.0](LICENSES/CC-BY-NC-4.0.txt): attribution, non-commercial |
-| The voxel characters for each AI: the top-level `characters/` directory | [CC BY-NC-SA 4.0](LICENSES/CC-BY-NC-SA-4.0.txt): attribution, non-commercial, share-alike |
-
-The renderer and the voxel characters are published together with the videos, starting with the first episode released after episode 9; episodes 1–9 will not get them retroactively, so neither directory exists yet. Each will carry a `LICENSE.md` stating which license applies. Images and videos you make with them are likewise non-commercial only and need attribution. For what is and isn't published, and how each episode's folder is laid out, see [Open-source scope](docs/open-source-scope_en.md).
-
-Exceptions:
+Exceptions (these directories carry their own license, unchanged):
 
 - The episode 4 referee depends on the [`diplomacy`](https://github.com/diplomacy/diplomacy) package (AGPL-3.0 or later, not included here). Its replay pages embed jDip map graphics (GPL) rendered by that package, so the replay pages as a whole are not MIT-licensed; see [`diplomacy/README_en.md`](diplomacy/README_en.md).
 - The community contest [`community/contests/rmuc2026/`](community/contests/rmuc2026/) is based on Arena-1 and keeps the non-commercial learning license in its own directory, not MIT.
@@ -103,13 +99,15 @@ Exceptions:
 
 ## Attribution and thanks
 
-Most character artwork in the videos comes from the Bilibili creator **ZipZipPipe** ([space.bilibili.com/4168597](https://space.bilibili.com/4168597)); per the creator's notice, the whale-girl character is a derivative of an original character by 上善无形 ([source](https://b23.tv/3dNz55h)) and is licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+**From episode 10 on, the characters in the videos use a new set of designs.** The illustrations, expression sheets, voxel characters and image-generation prompts are published in this repository under MIT (see [`art/`](art/README_en.md) and [`characters/`](characters/README_en.md)):
 
-The character illustrations, voice-over and video editing from the videos are not part of this repository and are not covered by any of its licenses; if you want to use the illustrations, follow their original creators' terms.
+- **Character design: 小叶子XIYZ (Bilibili).** The new designs are based on his designs and were made by the show.
+- **Art and production: 喵了个猫了个咪了个猫.**
 
-The voxel characters were made by this project as derivative works of those character designs. When you use or adapt them, credit both:
+When you use these characters, please credit "Character design: 小叶子XIYZ; art and production: 喵了个猫了个咪了个猫" and link to this repository.
 
-- Voxel characters: made by meow-ai-arena (AI Coding Arena), CC BY-NC-SA 4.0;
-- Original design: the creator of the character it is based on. `characters/CREDITS.md` lists the source for each character; for the whale girl, write "ZipZipPipe, based on an original character by 上善无形 ([b23.tv/3dNz55h](https://b23.tv/3dNz55h))".
+Most character artwork in the episode 1–9 videos comes from the Bilibili creator **ZipZipPipe** ([space.bilibili.com/4168597](https://space.bilibili.com/4168597)), with thanks; per the creator's notice, the whale-girl character is a derivative of an original character by 上善无形 ([source](https://b23.tv/3dNz55h)). Those older illustrations are not in this repository and are not covered by its license; if you want to use them, follow their original creators' terms. Old images and notes in the episode folders stay as they are.
+
+Voice-over, music and video editing are not part of this repository.
 
 Model and company names in character names belong to their respective owners and only indicate which model a character stands for; they do not imply endorsement by or involvement of those companies.
