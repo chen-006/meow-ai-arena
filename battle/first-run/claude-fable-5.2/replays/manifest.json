@@ -1,0 +1,47 @@
+{
+ "L1_fable.wrp": {
+  "sha256": "eec3074755cd4a8d3d69e0a52a6729a0a44860d443387f8f8f7c400a9a70a358",
+  "size": 2251441,
+  "xz": 636916,
+  "passed": true,
+  "secs": 52.57,
+  "reason": "win:eliminate",
+  "digest": "01932dd3cd1102d7"
+ },
+ "L2_fable.wrp": {
+  "sha256": "d7782d94fcc3684d2e0d15ec050f7541ccdc535b568245e965be0075db50b7f1",
+  "size": 2455840,
+  "xz": 698096,
+  "passed": true,
+  "secs": 52.93,
+  "reason": "win:eliminate",
+  "digest": "fa6d9bf478966345"
+ },
+ "L3_fable.wrp": {
+  "sha256": "fa8272131a116bf14511f522707ae7015b3b5376182714e8a7e264eae76951fb",
+  "size": 1415503,
+  "xz": 105688,
+  "passed": false,
+  "secs": 30.6,
+  "reason": "eliminated",
+  "digest": "5fbb081d0b579a32"
+ },
+ "L4_fable.wrp": {
+  "sha256": "6f13a5b06dce2b1ab2cd3f44b63a44e4cd992c25b69032a74a7c24081e66bc5a",
+  "size": 6653235,
+  "xz": 1299372,
+  "passed": true,
+  "secs": 115.1,
+  "reason": "win:eliminate",
+  "digest": "c58b65ccdccde27a"
+ },
+ "L5_fable.wrp": {
+  "sha256": "79f944c5cd56eec12cfb0d517ccf11d389093c6f7078ac491c94b1a72c520578",
+  "size": 159919,
+  "xz": 27432,
+  "passed": false,
+  "secs": 4.43,
+  "reason": "eliminated",
+  "digest": "bb7df2c1c483ea02"
+ }
+}
