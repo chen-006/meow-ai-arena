@@ -37,6 +37,8 @@ diplomacy/games/*/承诺核对.json
 
 # 第 5 集仓储调度：选手包和各轮包里的 tools/ 是比赛材料，不是上面那个放编译器的 tools/
 !warehouse/**/tools/
+# 顶层 art/ 的出图脚本也不是放编译器的 tools/
+!art/tools/
 
 # 社区投稿自测的产物（community/check.py）
 community/.runs/
@@ -66,3 +68,8 @@ bridge/archive/
 *.blend1
 */renderer/cache/
 */renderer/renders/
+
+# 第 10 集纸上谈兵：Jolt 源码（build_engine.py 下载）、复现目录、解压出来的回放
+battle/engine/third_party/
+battle/rerun/
+battle/replays/*.wrp
