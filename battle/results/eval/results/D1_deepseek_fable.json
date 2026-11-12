@@ -1,0 +1,110 @@
+{
+ "id": 92,
+ "mode": "duel",
+ "map": "河心洲",
+ "map_file": "kit/maps/河心洲.json",
+ "steps": 5400,
+ "secs": 90.0,
+ "winner": 1,
+ "reason": "timeout_zone",
+ "digest": "cc93348267138ca5",
+ "teams": [
+  {
+   "team": 0,
+   "start_units": 12,
+   "start_cost": 975,
+   "alive_units": 1,
+   "alive_cost": 350,
+   "zone_cost": 0,
+   "kill_cost": 125,
+   "lost_cost": 625,
+   "eliminated_step": -1
+  },
+  {
+   "team": 1,
+   "start_units": 13,
+   "start_cost": 1000,
+   "alive_units": 6,
+   "alive_cost": 820,
+   "zone_cost": 820,
+   "kill_cost": 600,
+   "lost_cost": 180,
+   "eliminated_step": -1
+  }
+ ],
+ "seats": [
+  {
+   "seat": 0,
+   "name": "deepseek",
+   "deploy": "sealed/deepseek/submission/duel.json",
+   "deploy_cost": 975,
+   "deploy_ok": true,
+   "orders": 538,
+   "ignored_orders": 0,
+   "deploy_errors": [],
+   "faults": [],
+   "faults_total": 0
+  },
+  {
+   "seat": 1,
+   "name": "fable",
+   "deploy": "sealed/fable/submission/duel.json",
+   "deploy_cost": 1000,
+   "deploy_ok": true,
+   "orders": 115,
+   "ignored_orders": 0,
+   "deploy_errors": [],
+   "faults": [],
+   "faults_total": 0
+  }
+ ],
+ "commanders": [
+  {
+   "seat": 0,
+   "used": true,
+   "status": "ok",
+   "dead_step": -1,
+   "timeouts": 0,
+   "invalid": 0,
+   "first_ms": 5.18,
+   "avg_ms": 0.035,
+   "max_ms": 0.13,
+   "cpu_total_ms": 51.1
+  },
+  {
+   "seat": 1,
+   "used": true,
+   "status": "ok",
+   "dead_step": -1,
+   "timeouts": 0,
+   "invalid": 0,
+   "first_ms": 4.71,
+   "avg_ms": 0.037,
+   "max_ms": 0.13,
+   "cpu_total_ms": 52.3
+  }
+ ],
+ "stats": {
+  "kills": 18,
+  "knocks": 7,
+  "topples": 0,
+  "spont_topples": 0,
+  "getups": 6,
+  "fell": 0,
+  "drown": 4,
+  "hits": 264,
+  "blocks": 10,
+  "friendly_fire": 9,
+  "braces": 0,
+  "charges": 0,
+  "explosions": 0,
+  "arrows": 214,
+  "stones": 0,
+  "climbs": 0,
+  "tunnel_unit_steps": 0,
+  "explode_steps": 0,
+  "max_speed": 13.09,
+  "t_phys": 0.318,
+  "t_logic": 1.058
+ }
+}

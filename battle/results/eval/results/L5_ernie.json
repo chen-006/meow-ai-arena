@@ -1,0 +1,112 @@
+{
+ "id": 44,
+ "mode": "level",
+ "map": "第5关_镇山兽",
+ "map_file": "kit/levels/第5关_镇山兽.json",
+ "steps": 4296,
+ "secs": 71.6,
+ "winner": -1,
+ "reason": "eliminated",
+ "passed": false,
+ "digest": "c7076024d4289d5b",
+ "teams": [
+  {
+   "team": 0,
+   "start_units": 4,
+   "start_cost": 490,
+   "alive_units": 0,
+   "alive_cost": 0,
+   "zone_cost": 0,
+   "kill_cost": 425,
+   "lost_cost": 490,
+   "eliminated_step": 4296
+  },
+  {
+   "team": 1,
+   "start_units": 19,
+   "start_cost": 800,
+   "alive_units": 12,
+   "alive_cost": 295,
+   "zone_cost": 0,
+   "kill_cost": 490,
+   "lost_cost": 505,
+   "eliminated_step": -1
+  }
+ ],
+ "seats": [
+  {
+   "seat": 0,
+   "name": "ernie",
+   "deploy": "sealed/ernie/submission/level5.json",
+   "deploy_cost": 490,
+   "deploy_ok": true,
+   "orders": 0,
+   "ignored_orders": 0,
+   "deploy_errors": [],
+   "faults": [],
+   "faults_total": 0
+  }
+ ],
+ "level_info": {
+  "flags": [],
+  "tags": {
+   "镇山兽": {
+    "alive": 1,
+    "total": 1
+   },
+   "护卫": {
+    "alive": 11,
+    "total": 12
+   },
+   "游骑": {
+    "alive": 0,
+    "total": 6
+   },
+   "立石": {
+    "alive": 6,
+    "total": 6
+   }
+  },
+  "boss_hp": 3210.0,
+  "boss_alive": true,
+  "boss_cause": "",
+  "terrain_removed": 0
+ },
+ "commanders": [
+  {
+   "seat": 0,
+   "used": true,
+   "status": "ok",
+   "dead_step": -1,
+   "timeouts": 0,
+   "invalid": 0,
+   "first_ms": 4.31,
+   "avg_ms": 0.034,
+   "max_ms": 0.09,
+   "cpu_total_ms": 41.1
+  }
+ ],
+ "stats": {
+  "kills": 11,
+  "knocks": 2,
+  "topples": 0,
+  "spont_topples": 0,
+  "getups": 1,
+  "fell": 0,
+  "drown": 0,
+  "hits": 165,
+  "blocks": 0,
+  "friendly_fire": 28,
+  "braces": 0,
+  "charges": 7,
+  "explosions": 0,
+  "arrows": 120,
+  "stones": 1,
+  "climbs": 0,
+  "tunnel_unit_steps": 0,
+  "explode_steps": 0,
+  "max_speed": 14.29,
+  "t_phys": 0.209,
+  "t_logic": 0.061
+ }
+}

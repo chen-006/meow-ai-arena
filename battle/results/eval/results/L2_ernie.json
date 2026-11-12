@@ -1,0 +1,107 @@
+{
+ "id": 17,
+ "mode": "level",
+ "map": "第2关_断龙桥",
+ "map_file": "kit/levels/第2关_断龙桥.json",
+ "steps": 8537,
+ "secs": 142.28,
+ "winner": 0,
+ "reason": "win:eliminate",
+ "passed": true,
+ "digest": "81bd38b7fd17a711",
+ "teams": [
+  {
+   "team": 0,
+   "start_units": 10,
+   "start_cost": 275,
+   "alive_units": 10,
+   "alive_cost": 275,
+   "zone_cost": 0,
+   "kill_cost": 790,
+   "lost_cost": 0,
+   "eliminated_step": -1
+  },
+  {
+   "team": 1,
+   "start_units": 89,
+   "start_cost": 1445,
+   "alive_units": 0,
+   "alive_cost": 0,
+   "zone_cost": 0,
+   "kill_cost": 0,
+   "lost_cost": 1445,
+   "eliminated_step": 8537
+  }
+ ],
+ "seats": [
+  {
+   "seat": 0,
+   "name": "ernie",
+   "deploy": "sealed/ernie/submission/level2.json",
+   "deploy_cost": 275,
+   "deploy_ok": true,
+   "orders": 0,
+   "ignored_orders": 0,
+   "deploy_errors": [],
+   "faults": [],
+   "faults_total": 0
+  }
+ ],
+ "level_info": {
+  "flags": [
+   {
+    "id": 1,
+    "hp": 300.0,
+    "tag": "军旗"
+   }
+  ],
+  "tags": {
+   "军旗": {
+    "alive": 1,
+    "total": 1
+   },
+   "桥下火药桶": {
+    "alive": 3,
+    "total": 3
+   }
+  },
+  "terrain_removed": 0
+ },
+ "commanders": [
+  {
+   "seat": 0,
+   "used": true,
+   "status": "ok",
+   "dead_step": -1,
+   "timeouts": 0,
+   "invalid": 0,
+   "first_ms": 5.06,
+   "avg_ms": 0.042,
+   "max_ms": 0.15,
+   "cpu_total_ms": 79.8
+  }
+ ],
+ "stats": {
+  "kills": 89,
+  "knocks": 42,
+  "topples": 1,
+  "spont_topples": 1,
+  "getups": 13,
+  "fell": 4,
+  "drown": 0,
+  "hits": 371,
+  "blocks": 98,
+  "friendly_fire": 101,
+  "braces": 0,
+  "charges": 0,
+  "explosions": 3,
+  "arrows": 289,
+  "stones": 0,
+  "climbs": 0,
+  "tunnel_unit_steps": 0,
+  "explode_steps": 0,
+  "max_speed": 23.74,
+  "t_phys": 1.101,
+  "t_logic": 0.36
+ }
+}

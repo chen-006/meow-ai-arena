@@ -1,0 +1,629 @@
+{
+ "name": "A12 纸上谈兵 正式赛",
+ "level_score": {
+  "per_double": 25.0,
+  "floor": 20.0
+ },
+ "weights": {
+  "闯关": 0.6,
+  "对抗": 0.4,
+  "1v1": 0.6,
+  "混战": 0.4
+ },
+ "generated": "2026-11-12T11:51:48-08:00",
+ "rule": "这一关全场最省的人 100 分；比他每贵一倍扣 25 分；过关最少 20 分；没过 0 分。闯关分 = 五关平均；同分比过关数。",
+ "levels": [
+  {
+   "level": 1,
+   "name": "草甸迎击",
+   "reference_cost": 335,
+   "best_cost": 200,
+   "best_players": [
+    "fable"
+   ],
+   "passed": 9,
+   "cheaper_than_reference": [
+    "sol",
+    "fable",
+    "gemini_carbon",
+    "gemini_hydrogen",
+    "deepseek"
+   ]
+  },
+  {
+   "level": 2,
+   "name": "断龙桥",
+   "reference_cost": 280,
+   "best_cost": 60,
+   "best_players": [
+    "sol"
+   ],
+   "passed": 8,
+   "cheaper_than_reference": [
+    "sol",
+    "fable",
+    "gemini_carbon",
+    "qwen",
+    "deepseek",
+    "ernie"
+   ]
+  },
+  {
+   "level": 3,
+   "name": "拔炮台",
+   "reference_cost": 410,
+   "best_cost": 260,
+   "best_players": [
+    "fable"
+   ],
+   "passed": 5,
+   "cheaper_than_reference": [
+    "sol",
+    "fable",
+    "gemini_carbon"
+   ]
+  },
+  {
+   "level": 4,
+   "name": "一线天",
+   "reference_cost": 370,
+   "best_cost": 295,
+   "best_players": [
+    "sol"
+   ],
+   "passed": 7,
+   "cheaper_than_reference": [
+    "sol",
+    "gemini_carbon",
+    "gemini_hydrogen",
+    "kimi"
+   ]
+  },
+  {
+   "level": 5,
+   "name": "镇山兽",
+   "reference_cost": 400,
+   "best_cost": 245,
+   "best_players": [
+    "fable"
+   ],
+   "passed": 4,
+   "cheaper_than_reference": [
+    "sol",
+    "fable",
+    "gemini_carbon"
+   ]
+  }
+ ],
+ "rows": [
+  {
+   "player": "sol",
+   "display": "GPT-6.2 Sol",
+   "闯关分": 95.41289368449655,
+   "过关数": 5,
+   "过关造价和": 1240,
+   "levels": {
+    "1": {
+     "state": "过关",
+     "cost": 250,
+     "reason": "win:eliminate",
+     "secs": 53.68,
+     "replay": "eval/replays/L1_sol.wrp",
+     "result": "L1_sol",
+     "score": 91.95179762781594,
+     "vs_best": 1.25
+    },
+    "2": {
+     "state": "过关",
+     "cost": 60,
+     "reason": "win:eliminate",
+     "secs": 144.45,
+     "replay": "eval/replays/L2_sol.wrp",
+     "result": "L2_sol",
+     "score": 100.0,
+     "vs_best": 1.0
+    },
+    "3": {
+     "state": "过关",
+     "cost": 385,
+     "reason": "win:eliminate",
+     "secs": 142.1,
+     "replay": "eval/replays/L3_sol.wrp",
+     "result": "L3_sol",
+     "score": 85.84132943615477,
+     "vs_best": 1.4807692307692308
+    },
+    "4": {
+     "state": "过关",
+     "cost": 295,
+     "reason": "win:eliminate",
+     "secs": 119.57,
+     "replay": "eval/replays/L4_sol.wrp",
+     "result": "L4_sol",
+     "score": 100.0,
+     "vs_best": 1.0
+    },
+    "5": {
+     "state": "过关",
+     "cost": 250,
+     "reason": "win:destroy:镇山兽",
+     "secs": 91.13,
+     "replay": "eval/replays/L5_sol.wrp",
+     "result": "L5_sol",
+     "score": 99.27134135851209,
+     "vs_best": 1.0204081632653061
+    }
+   },
+   "名次": 1
+  },
+  {
+   "player": "fable",
+   "display": "Claude Fable 5.2",
+   "闯关分": 91.19393429793558,
+   "过关数": 5,
+   "过关造价和": 1255,
+   "levels": {
+    "1": {
+     "state": "过关",
+     "cost": 200,
+     "reason": "win:eliminate",
+     "secs": 55.1,
+     "replay": "eval/replays/L1_fable.wrp",
+     "result": "L1_fable",
+     "score": 100.0,
+     "vs_best": 1.0
+    },
+    "2": {
+     "state": "过关",
+     "cost": 150,
+     "reason": "win:eliminate",
+     "secs": 73.83,
+     "replay": "eval/replays/L2_fable.wrp",
+     "result": "L2_fable",
+     "score": 66.95179762781595,
+     "vs_best": 2.5
+    },
+    "3": {
+     "state": "过关",
+     "cost": 260,
+     "reason": "win:eliminate",
+     "secs": 136.23,
+     "replay": "eval/replays/L3_fable.wrp",
+     "result": "L3_fable",
+     "score": 100.0,
+     "vs_best": 1.0
+    },
+    "4": {
+     "state": "过关",
+     "cost": 400,
+     "reason": "win:eliminate",
+     "secs": 110.5,
+     "replay": "eval/replays/L4_fable.wrp",
+     "result": "L4_fable",
+     "score": 89.01787386186197,
+     "vs_best": 1.3559322033898304
+    },
+    "5": {
+     "state": "过关",
+     "cost": 245,
+     "reason": "win:destroy:镇山兽",
+     "secs": 103.63,
+     "replay": "eval/replays/L5_fable.wrp",
+     "result": "L5_fable",
+     "score": 100.0,
+     "vs_best": 1.0
+    }
+   },
+   "名次": 2
+  },
+  {
+   "player": "gemini_carbon",
+   "display": "Gemini 4 Carbon",
+   "闯关分": 84.74787349999607,
+   "过关数": 5,
+   "过关造价和": 1450,
+   "levels": {
+    "1": {
+     "state": "过关",
+     "cost": 220,
+     "reason": "win:eliminate",
+     "secs": 51.08,
+     "replay": "eval/replays/L1_gemini_carbon.wrp",
+     "result": "L1_gemini_carbon",
+     "score": 96.56241190625163,
+     "vs_best": 1.1
+    },
+    "2": {
+     "state": "过关",
+     "cost": 230,
+     "reason": "win:eliminate",
+     "secs": 20.47,
+     "replay": "eval/replays/L2_gemini_carbon.wrp",
+     "result": "L2_gemini_carbon",
+     "score": 51.53501361660358,
+     "vs_best": 3.8333333333333335
+    },
+    "3": {
+     "state": "过关",
+     "cost": 320,
+     "reason": "win:eliminate",
+     "secs": 120.43,
+     "replay": "eval/replays/L3_gemini_carbon.wrp",
+     "result": "L3_gemini_carbon",
+     "score": 92.5109929535273,
+     "vs_best": 1.2307692307692308
+    },
+    "4": {
+     "state": "过关",
+     "cost": 355,
+     "reason": "win:eliminate",
+     "secs": 64.28,
+     "replay": "eval/replays/L4_gemini_carbon.wrp",
+     "result": "L4_gemini_carbon",
+     "score": 93.32239824642897,
+     "vs_best": 1.2033898305084745
+    },
+    "5": {
+     "state": "过关",
+     "cost": 325,
+     "reason": "win:destroy:镇山兽",
+     "secs": 62.05,
+     "replay": "eval/replays/L5_gemini_carbon.wrp",
+     "result": "L5_gemini_carbon",
+     "score": 89.80855077716885,
+     "vs_best": 1.3265306122448979
+    }
+   },
+   "名次": 3
+  },
+  {
+   "player": "gemini_hydrogen",
+   "display": "Gemini 4 Hydrogen",
+   "闯关分": 77.6636253892377,
+   "过关数": 5,
+   "过关造价和": 1790,
+   "levels": {
+    "1": {
+     "state": "过关",
+     "cost": 250,
+     "reason": "win:eliminate",
+     "secs": 46.6,
+     "replay": "eval/replays/L1_gemini_hydrogen.wrp",
+     "result": "L1_gemini_hydrogen",
+     "score": 91.95179762781594,
+     "vs_best": 1.25
+    },
+    "2": {
+     "state": "过关",
+     "cost": 290,
+     "reason": "win:eliminate",
+     "secs": 61.75,
+     "replay": "eval/replays/L2_gemini_hydrogen.wrp",
+     "result": "L2_gemini_hydrogen",
+     "score": 43.174537639839606,
+     "vs_best": 4.833333333333333
+    },
+    "3": {
+     "state": "过关",
+     "cost": 430,
+     "reason": "win:eliminate",
+     "secs": 132.75,
+     "replay": "eval/replays/L3_gemini_hydrogen.wrp",
+     "result": "L3_gemini_hydrogen",
+     "score": 81.85437408597485,
+     "vs_best": 1.6538461538461537
+    },
+    "4": {
+     "state": "过关",
+     "cost": 320,
+     "reason": "win:eliminate",
+     "secs": 68.05,
+     "replay": "eval/replays/L4_gemini_hydrogen.wrp",
+     "result": "L4_gemini_hydrogen",
+     "score": 97.06607623404604,
+     "vs_best": 1.0847457627118644
+    },
+    "5": {
+     "state": "过关",
+     "cost": 500,
+     "reason": "win:destroy:镇山兽",
+     "secs": 68.97,
+     "replay": "eval/replays/L5_gemini_hydrogen.wrp",
+     "result": "L5_gemini_hydrogen",
+     "score": 74.27134135851209,
+     "vs_best": 2.0408163265306123
+    }
+   },
+   "名次": 4
+  },
+  {
+   "player": "qwen",
+   "display": "Qwen4-Max-Preview",
+   "闯关分": 52.4516281329154,
+   "过关数": 3,
+   "过关造价和": 830,
+   "levels": {
+    "1": {
+     "state": "过关",
+     "cost": 360,
+     "reason": "win:eliminate",
+     "secs": 53.48,
+     "replay": "eval/replays/L1_qwen.wrp",
+     "result": "L1_qwen",
+     "score": 78.80007733612625,
+     "vs_best": 1.8
+    },
+    "2": {
+     "state": "过关",
+     "cost": 70,
+     "reason": "win:eliminate",
+     "secs": 53.9,
+     "replay": "eval/replays/L2_qwen.wrp",
+     "result": "L2_qwen",
+     "score": 94.4401894665888,
+     "vs_best": 1.1666666666666667
+    },
+    "3": {
+     "state": "没过",
+     "cost": 430,
+     "reason": "eliminated",
+     "secs": 90.32,
+     "replay": "eval/replays/L3_qwen.wrp",
+     "result": "L3_qwen",
+     "score": 0.0
+    },
+    "4": {
+     "state": "过关",
+     "cost": 400,
+     "reason": "win:eliminate",
+     "secs": 32.05,
+     "replay": "eval/replays/L4_qwen.wrp",
+     "result": "L4_qwen",
+     "score": 89.01787386186197,
+     "vs_best": 1.3559322033898304
+    },
+    "5": {
+     "state": "没过",
+     "cost": 500,
+     "reason": "eliminated",
+     "secs": 29.17,
+     "replay": "eval/replays/L5_qwen.wrp",
+     "result": "L5_qwen",
+     "score": 0.0
+    }
+   },
+   "名次": 5
+  },
+  {
+   "player": "deepseek",
+   "display": "DeepSeek-V4.1-Flash",
+   "闯关分": 50.79917759096147,
+   "过关数": 3,
+   "过关造价和": 815,
+   "levels": {
+    "1": {
+     "state": "过关",
+     "cost": 325,
+     "reason": "win:eliminate",
+     "secs": 50.02,
+     "replay": "eval/replays/L1_deepseek.wrp",
+     "result": "L1_deepseek",
+     "score": 82.4890070464727,
+     "vs_best": 1.625
+    },
+    "2": {
+     "state": "过关",
+     "cost": 100,
+     "reason": "win:eliminate",
+     "secs": 102.17,
+     "replay": "eval/replays/L2_deepseek.wrp",
+     "result": "L2_deepseek",
+     "score": 81.57586014584484,
+     "vs_best": 1.6666666666666667
+    },
+    "3": {
+     "state": "没过",
+     "cost": 425,
+     "reason": "timeout_lose",
+     "secs": 150.0,
+     "replay": "eval/replays/L3_deepseek.wrp",
+     "result": "L3_deepseek",
+     "score": 0.0
+    },
+    "4": {
+     "state": "过关",
+     "cost": 390,
+     "reason": "win:eliminate",
+     "secs": 36.4,
+     "replay": "eval/replays/L4_deepseek.wrp",
+     "result": "L4_deepseek",
+     "score": 89.93102076248982,
+     "vs_best": 1.3220338983050848
+    },
+    "5": {
+     "state": "没过",
+     "cost": 475,
+     "reason": "eliminated",
+     "secs": 41.73,
+     "replay": "eval/replays/L5_deepseek.wrp",
+     "result": "L5_deepseek",
+     "score": 0.0
+    }
+   },
+   "名次": 6
+  },
+  {
+   "player": "ernie",
+   "display": "文心 ERNIE 5.5 Flash Preview",
+   "闯关分": 40.473257845999434,
+   "过关数": 3,
+   "过关造价和": 1100,
+   "levels": {
+    "1": {
+     "state": "过关",
+     "cost": 400,
+     "reason": "win:eliminate",
+     "secs": 51.88,
+     "replay": "eval/replays/L1_ernie.wrp",
+     "result": "L1_ernie",
+     "score": 75.0,
+     "vs_best": 2.0
+    },
+    "2": {
+     "state": "过关",
+     "cost": 275,
+     "reason": "win:eliminate",
+     "secs": 142.28,
+     "replay": "eval/replays/L2_ernie.wrp",
+     "result": "L2_ernie",
+     "score": 45.09006967991242,
+     "vs_best": 4.583333333333333
+    },
+    "3": {
+     "state": "过关",
+     "cost": 425,
+     "reason": "win:eliminate",
+     "secs": 71.88,
+     "replay": "eval/replays/L3_ernie.wrp",
+     "result": "L3_ernie",
+     "score": 82.27621955008476,
+     "vs_best": 1.6346153846153846
+    },
+    "4": {
+     "state": "没过",
+     "cost": 395,
+     "reason": "lose:dead:主帅",
+     "secs": 46.32,
+     "replay": "eval/replays/L4_ernie.wrp",
+     "result": "L4_ernie",
+     "score": 0.0
+    },
+    "5": {
+     "state": "没过",
+     "cost": 490,
+     "reason": "eliminated",
+     "secs": 71.6,
+     "replay": "eval/replays/L5_ernie.wrp",
+     "result": "L5_ernie",
+     "score": 0.0
+    }
+   },
+   "名次": 7
+  },
+  {
+   "player": "kimi",
+   "display": "Kimi K3.1 Pro",
+   "闯关分": 38.67422272442013,
+   "过关数": 3,
+   "过关造价和": 1245,
+   "levels": {
+    "1": {
+     "state": "过关",
+     "cost": 385,
+     "reason": "win:eliminate",
+     "secs": 52.23,
+     "replay": "eval/replays/L1_kimi.wrp",
+     "result": "L1_kimi",
+     "score": 76.37853885481152,
+     "vs_best": 1.925
+    },
+    "2": {
+     "state": "过关",
+     "cost": 520,
+     "reason": "win:eliminate",
+     "secs": 71.72,
+     "replay": "eval/replays/L2_kimi.wrp",
+     "result": "L2_kimi",
+     "score": 22.113069564501615,
+     "vs_best": 8.666666666666666
+    },
+    "3": {
+     "state": "没过",
+     "cost": 450,
+     "reason": "timeout_lose",
+     "secs": 150.0,
+     "replay": "eval/replays/L3_kimi.wrp",
+     "result": "L3_kimi",
+     "score": 0.0
+    },
+    "4": {
+     "state": "过关",
+     "cost": 340,
+     "reason": "win:eliminate",
+     "secs": 58.48,
+     "replay": "eval/replays/L4_kimi.wrp",
+     "result": "L4_kimi",
+     "score": 94.87950520278754,
+     "vs_best": 1.152542372881356
+    },
+    "5": {
+     "state": "没过",
+     "cost": 500,
+     "reason": "eliminated",
+     "secs": 62.32,
+     "replay": "eval/replays/L5_kimi.wrp",
+     "result": "L5_kimi",
+     "score": 0.0
+    }
+   },
+   "名次": 8
+  },
+  {
+   "player": "doubao",
+   "display": "Doubao Seed-Evolving",
+   "闯关分": 15.562373646292063,
+   "过关数": 1,
+   "过关造价和": 370,
+   "levels": {
+    "1": {
+     "state": "过关",
+     "cost": 370,
+     "reason": "win:eliminate",
+     "secs": 53.92,
+     "replay": "eval/replays/L1_doubao.wrp",
+     "result": "L1_doubao",
+     "score": 77.81186823146031,
+     "vs_best": 1.85
+    },
+    "2": {
+     "state": "没过",
+     "cost": 600,
+     "reason": "lose:destroy:军旗",
+     "secs": 24.05,
+     "replay": "eval/replays/L2_doubao.wrp",
+     "result": "L2_doubao",
+     "score": 0.0
+    },
+    "3": {
+     "state": "没过",
+     "cost": 450,
+     "reason": "timeout_lose",
+     "secs": 150.0,
+     "replay": "eval/replays/L3_doubao.wrp",
+     "result": "L3_doubao",
+     "score": 0.0
+    },
+    "4": {
+     "state": "没过",
+     "cost": 400,
+     "reason": "timeout_lose",
+     "secs": 150.0,
+     "replay": "eval/replays/L4_doubao.wrp",
+     "result": "L4_doubao",
+     "score": 0.0
+    },
+    "5": {
+     "state": "没过",
+     "cost": 500,
+     "reason": "eliminated",
+     "secs": 28.38,
+     "replay": "eval/replays/L5_doubao.wrp",
+     "result": "L5_doubao",
+     "score": 0.0
+    }
+   },
+   "名次": 9
+  }
+ ],
+ "engine_errors": []
+}

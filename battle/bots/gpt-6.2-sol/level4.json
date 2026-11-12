@@ -1,0 +1,77 @@
+{
+  "units": [
+    {
+      "type": "hammer",
+      "x": -10,
+      "z": 20,
+      "tag": "q-3.5,-0.5,4,6.5,0,6033",
+      "stance": "原地守"
+    },
+    {
+      "type": "militia",
+      "x": 7.5,
+      "z": 13,
+      "tag": "p0,2,0,1,35",
+      "stance": "原地守"
+    },
+    {
+      "type": "shield",
+      "x": -2.5,
+      "z": 9,
+      "stance": "原地守",
+      "tag": "l47,12,2,0"
+    },
+    {
+      "type": "shield",
+      "x": -2.0,
+      "z": 9,
+      "stance": "原地守"
+    },
+    {
+      "type": "shield",
+      "x": -0.5,
+      "z": 9,
+      "stance": "原地守"
+    },
+    {
+      "type": "shield",
+      "x": 0.5,
+      "z": 9,
+      "stance": "原地守"
+    },
+    {
+      "type": "shield",
+      "x": 2.5,
+      "z": 9,
+      "stance": "原地守"
+    },
+    {
+      "type": "archer",
+      "x": 10,
+      "z": 24,
+      "tag": "a31,0.2,1",
+      "stance": "原地守"
+    },
+    {
+      "type": "archer",
+      "x": -9.5,
+      "z": 24,
+      "tag": "guard",
+      "stance": "原地守"
+    },
+    {
+      "type": "archer",
+      "x": 7.5,
+      "z": 17,
+      "tag": "guard",
+      "stance": "原地守"
+    },
+    {
+      "type": "archer",
+      "x": -9.5,
+      "z": 14,
+      "tag": "guard",
+      "stance": "原地守"
+    }
+  ]
+}

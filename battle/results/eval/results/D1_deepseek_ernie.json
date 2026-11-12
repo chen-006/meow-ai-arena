@@ -1,0 +1,110 @@
+{
+ "id": 175,
+ "mode": "duel",
+ "map": "河心洲",
+ "map_file": "kit/maps/河心洲.json",
+ "steps": 3139,
+ "secs": 52.32,
+ "winner": 0,
+ "reason": "annihilation",
+ "digest": "3af263f4f01e1716",
+ "teams": [
+  {
+   "team": 0,
+   "start_units": 12,
+   "start_cost": 975,
+   "alive_units": 3,
+   "alive_cost": 730,
+   "zone_cost": 0,
+   "kill_cost": 1000,
+   "lost_cost": 245,
+   "eliminated_step": -1
+  },
+  {
+   "team": 1,
+   "start_units": 36,
+   "start_cost": 1000,
+   "alive_units": 0,
+   "alive_cost": 0,
+   "zone_cost": 0,
+   "kill_cost": 130,
+   "lost_cost": 1000,
+   "eliminated_step": 3139
+  }
+ ],
+ "seats": [
+  {
+   "seat": 0,
+   "name": "deepseek",
+   "deploy": "sealed/deepseek/submission/duel.json",
+   "deploy_cost": 975,
+   "deploy_ok": true,
+   "orders": 132,
+   "ignored_orders": 0,
+   "deploy_errors": [],
+   "faults": [],
+   "faults_total": 0
+  },
+  {
+   "seat": 1,
+   "name": "ernie",
+   "deploy": "sealed/ernie/submission/duel.json",
+   "deploy_cost": 1000,
+   "deploy_ok": true,
+   "orders": 137,
+   "ignored_orders": 0,
+   "deploy_errors": [],
+   "faults": [],
+   "faults_total": 0
+  }
+ ],
+ "commanders": [
+  {
+   "seat": 0,
+   "used": true,
+   "status": "ok",
+   "dead_step": -1,
+   "timeouts": 0,
+   "invalid": 0,
+   "first_ms": 5.3,
+   "avg_ms": 0.054,
+   "max_ms": 0.17,
+   "cpu_total_ms": 49.0
+  },
+  {
+   "seat": 1,
+   "used": true,
+   "status": "ok",
+   "dead_step": -1,
+   "timeouts": 0,
+   "invalid": 0,
+   "first_ms": 5.16,
+   "avg_ms": 0.048,
+   "max_ms": 0.13,
+   "cpu_total_ms": 45.6
+  }
+ ],
+ "stats": {
+  "kills": 45,
+  "knocks": 40,
+  "topples": 1,
+  "spont_topples": 1,
+  "getups": 38,
+  "fell": 0,
+  "drown": 5,
+  "hits": 251,
+  "blocks": 10,
+  "friendly_fire": 21,
+  "braces": 0,
+  "charges": 0,
+  "explosions": 0,
+  "arrows": 251,
+  "stones": 0,
+  "climbs": 0,
+  "tunnel_unit_steps": 0,
+  "explode_steps": 0,
+  "max_speed": 14.4,
+  "t_phys": 0.237,
+  "t_logic": 0.098
+ }
+}

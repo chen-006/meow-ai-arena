@@ -1,0 +1,551 @@
+{
+ "sol": {
+  "deploys": {
+   "level1": {
+    "state": "合法",
+    "file": "sealed/sol/submission/level1.json",
+    "cost": 250,
+    "errors": []
+   },
+   "level2": {
+    "state": "合法",
+    "file": "sealed/sol/submission/level2.json",
+    "cost": 60,
+    "errors": []
+   },
+   "level3": {
+    "state": "合法",
+    "file": "sealed/sol/submission/level3.json",
+    "cost": 385,
+    "errors": []
+   },
+   "level4": {
+    "state": "合法",
+    "file": "sealed/sol/submission/level4.json",
+    "cost": 295,
+    "errors": []
+   },
+   "level5": {
+    "state": "合法",
+    "file": "sealed/sol/submission/level5.json",
+    "cost": 250,
+    "errors": []
+   },
+   "duel": {
+    "state": "合法",
+    "file": "sealed/sol/submission/duel.json",
+    "cost": 1000,
+    "errors": []
+   },
+   "melee": {
+    "state": "合法",
+    "file": "sealed/sol/submission/melee.json",
+    "cost": 600,
+    "errors": []
+   }
+  },
+  "commander": {
+   "state": "编译通过",
+   "exe": "eval/build/sol/commander.exe",
+   "cmd": [
+    "g++",
+    "-O2",
+    "-std=c++17",
+    "-static",
+    "-I",
+    "kit/commander",
+    "eval/build/sol/commander.cpp",
+    "-o",
+    "eval/build/sol/commander.tmp.exe"
+   ]
+  }
+ },
+ "fable": {
+  "deploys": {
+   "level1": {
+    "state": "合法",
+    "file": "sealed/fable/submission/level1.json",
+    "cost": 200,
+    "errors": []
+   },
+   "level2": {
+    "state": "合法",
+    "file": "sealed/fable/submission/level2.json",
+    "cost": 150,
+    "errors": []
+   },
+   "level3": {
+    "state": "合法",
+    "file": "sealed/fable/submission/level3.json",
+    "cost": 260,
+    "errors": []
+   },
+   "level4": {
+    "state": "合法",
+    "file": "sealed/fable/submission/level4.json",
+    "cost": 400,
+    "errors": []
+   },
+   "level5": {
+    "state": "合法",
+    "file": "sealed/fable/submission/level5.json",
+    "cost": 245,
+    "errors": []
+   },
+   "duel": {
+    "state": "合法",
+    "file": "sealed/fable/submission/duel.json",
+    "cost": 1000,
+    "errors": []
+   },
+   "melee": {
+    "state": "合法",
+    "file": "sealed/fable/submission/melee.json",
+    "cost": 600,
+    "errors": []
+   }
+  },
+  "commander": {
+   "state": "编译通过",
+   "exe": "eval/build/fable/commander.exe",
+   "cmd": [
+    "g++",
+    "-O2",
+    "-std=c++17",
+    "-static",
+    "-I",
+    "kit/commander",
+    "eval/build/fable/commander.cpp",
+    "-o",
+    "eval/build/fable/commander.tmp.exe"
+   ]
+  }
+ },
+ "gemini_carbon": {
+  "deploys": {
+   "level1": {
+    "state": "合法",
+    "file": "sealed/gemini_carbon/submission/level1.json",
+    "cost": 220,
+    "errors": []
+   },
+   "level2": {
+    "state": "合法",
+    "file": "sealed/gemini_carbon/submission/level2.json",
+    "cost": 230,
+    "errors": []
+   },
+   "level3": {
+    "state": "合法",
+    "file": "sealed/gemini_carbon/submission/level3.json",
+    "cost": 320,
+    "errors": []
+   },
+   "level4": {
+    "state": "合法",
+    "file": "sealed/gemini_carbon/submission/level4.json",
+    "cost": 355,
+    "errors": []
+   },
+   "level5": {
+    "state": "合法",
+    "file": "sealed/gemini_carbon/submission/level5.json",
+    "cost": 325,
+    "errors": []
+   },
+   "duel": {
+    "state": "合法",
+    "file": "sealed/gemini_carbon/submission/duel.json",
+    "cost": 1000,
+    "errors": []
+   },
+   "melee": {
+    "state": "合法",
+    "file": "sealed/gemini_carbon/submission/melee.json",
+    "cost": 600,
+    "errors": []
+   }
+  },
+  "commander": {
+   "state": "编译通过",
+   "exe": "eval/build/gemini_carbon/commander.exe",
+   "cmd": [
+    "g++",
+    "-O2",
+    "-std=c++17",
+    "-static",
+    "-I",
+    "kit/commander",
+    "eval/build/gemini_carbon/commander.cpp",
+    "-o",
+    "eval/build/gemini_carbon/commander.tmp.exe"
+   ]
+  }
+ },
+ "gemini_hydrogen": {
+  "deploys": {
+   "level1": {
+    "state": "合法",
+    "file": "sealed/gemini_hydrogen/submission/level1.json",
+    "cost": 250,
+    "errors": []
+   },
+   "level2": {
+    "state": "合法",
+    "file": "sealed/gemini_hydrogen/submission/level2.json",
+    "cost": 290,
+    "errors": []
+   },
+   "level3": {
+    "state": "合法",
+    "file": "sealed/gemini_hydrogen/submission/level3.json",
+    "cost": 430,
+    "errors": []
+   },
+   "level4": {
+    "state": "合法",
+    "file": "sealed/gemini_hydrogen/submission/level4.json",
+    "cost": 320,
+    "errors": []
+   },
+   "level5": {
+    "state": "合法",
+    "file": "sealed/gemini_hydrogen/submission/level5.json",
+    "cost": 500,
+    "errors": []
+   },
+   "duel": {
+    "state": "合法",
+    "file": "sealed/gemini_hydrogen/submission/duel.json",
+    "cost": 990,
+    "errors": []
+   },
+   "melee": {
+    "state": "合法",
+    "file": "sealed/gemini_hydrogen/submission/melee.json",
+    "cost": 600,
+    "errors": []
+   }
+  },
+  "commander": {
+   "state": "编译通过",
+   "exe": "eval/build/gemini_hydrogen/commander.exe",
+   "cmd": [
+    "g++",
+    "-O2",
+    "-std=c++17",
+    "-static",
+    "-I",
+    "kit/commander",
+    "eval/build/gemini_hydrogen/commander.cpp",
+    "-o",
+    "eval/build/gemini_hydrogen/commander.tmp.exe"
+   ]
+  }
+ },
+ "qwen": {
+  "deploys": {
+   "level1": {
+    "state": "合法",
+    "file": "sealed/qwen/submission/level1.json",
+    "cost": 360,
+    "errors": []
+   },
+   "level2": {
+    "state": "合法",
+    "file": "sealed/qwen/submission/level2.json",
+    "cost": 70,
+    "errors": []
+   },
+   "level3": {
+    "state": "合法",
+    "file": "sealed/qwen/submission/level3.json",
+    "cost": 430,
+    "errors": []
+   },
+   "level4": {
+    "state": "合法",
+    "file": "sealed/qwen/submission/level4.json",
+    "cost": 400,
+    "errors": []
+   },
+   "level5": {
+    "state": "合法",
+    "file": "sealed/qwen/submission/level5.json",
+    "cost": 500,
+    "errors": []
+   },
+   "duel": {
+    "state": "合法",
+    "file": "sealed/qwen/submission/duel.json",
+    "cost": 1000,
+    "errors": []
+   },
+   "melee": {
+    "state": "合法",
+    "file": "sealed/qwen/submission/melee.json",
+    "cost": 570,
+    "errors": []
+   }
+  },
+  "commander": {
+   "state": "编译通过",
+   "exe": "eval/build/qwen/commander.exe",
+   "cmd": [
+    "g++",
+    "-O2",
+    "-std=c++17",
+    "-static",
+    "-I",
+    "kit/commander",
+    "eval/build/qwen/commander.cpp",
+    "-o",
+    "eval/build/qwen/commander.tmp.exe"
+   ]
+  }
+ },
+ "deepseek": {
+  "deploys": {
+   "level1": {
+    "state": "合法",
+    "file": "sealed/deepseek/submission/level1.json",
+    "cost": 325,
+    "errors": []
+   },
+   "level2": {
+    "state": "合法",
+    "file": "sealed/deepseek/submission/level2.json",
+    "cost": 100,
+    "errors": []
+   },
+   "level3": {
+    "state": "合法",
+    "file": "sealed/deepseek/submission/level3.json",
+    "cost": 425,
+    "errors": []
+   },
+   "level4": {
+    "state": "合法",
+    "file": "sealed/deepseek/submission/level4.json",
+    "cost": 390,
+    "errors": []
+   },
+   "level5": {
+    "state": "合法",
+    "file": "sealed/deepseek/submission/level5.json",
+    "cost": 475,
+    "errors": []
+   },
+   "duel": {
+    "state": "合法",
+    "file": "sealed/deepseek/submission/duel.json",
+    "cost": 975,
+    "errors": []
+   },
+   "melee": {
+    "state": "合法",
+    "file": "sealed/deepseek/submission/melee.json",
+    "cost": 600,
+    "errors": []
+   }
+  },
+  "commander": {
+   "state": "编译通过",
+   "exe": "eval/build/deepseek/commander.exe",
+   "cmd": [
+    "g++",
+    "-O2",
+    "-std=c++17",
+    "-static",
+    "-I",
+    "kit/commander",
+    "eval/build/deepseek/commander.cpp",
+    "-o",
+    "eval/build/deepseek/commander.tmp.exe"
+   ]
+  }
+ },
+ "kimi": {
+  "deploys": {
+   "level1": {
+    "state": "合法",
+    "file": "sealed/kimi/submission/level1.json",
+    "cost": 385,
+    "errors": []
+   },
+   "level2": {
+    "state": "合法",
+    "file": "sealed/kimi/submission/level2.json",
+    "cost": 520,
+    "errors": []
+   },
+   "level3": {
+    "state": "合法",
+    "file": "sealed/kimi/submission/level3.json",
+    "cost": 450,
+    "errors": []
+   },
+   "level4": {
+    "state": "合法",
+    "file": "sealed/kimi/submission/level4.json",
+    "cost": 340,
+    "errors": []
+   },
+   "level5": {
+    "state": "合法",
+    "file": "sealed/kimi/submission/level5.json",
+    "cost": 500,
+    "errors": []
+   },
+   "duel": {
+    "state": "合法",
+    "file": "sealed/kimi/submission/duel.json",
+    "cost": 1000,
+    "errors": []
+   },
+   "melee": {
+    "state": "合法",
+    "file": "sealed/kimi/submission/melee.json",
+    "cost": 570,
+    "errors": []
+   }
+  },
+  "commander": {
+   "state": "编译通过",
+   "exe": "eval/build/kimi/commander.exe",
+   "cmd": [
+    "g++",
+    "-O2",
+    "-std=c++17",
+    "-static",
+    "-I",
+    "kit/commander",
+    "eval/build/kimi/commander.cpp",
+    "-o",
+    "eval/build/kimi/commander.tmp.exe"
+   ]
+  }
+ },
+ "doubao": {
+  "deploys": {
+   "level1": {
+    "state": "合法",
+    "file": "sealed/doubao/submission/level1.json",
+    "cost": 370,
+    "errors": []
+   },
+   "level2": {
+    "state": "合法",
+    "file": "sealed/doubao/submission/level2.json",
+    "cost": 600,
+    "errors": []
+   },
+   "level3": {
+    "state": "合法",
+    "file": "sealed/doubao/submission/level3.json",
+    "cost": 450,
+    "errors": []
+   },
+   "level4": {
+    "state": "合法",
+    "file": "sealed/doubao/submission/level4.json",
+    "cost": 400,
+    "errors": []
+   },
+   "level5": {
+    "state": "合法",
+    "file": "sealed/doubao/submission/level5.json",
+    "cost": 500,
+    "errors": []
+   },
+   "duel": {
+    "state": "合法",
+    "file": "sealed/doubao/submission/duel.json",
+    "cost": 870,
+    "errors": []
+   },
+   "melee": {
+    "state": "合法",
+    "file": "sealed/doubao/submission/melee.json",
+    "cost": 600,
+    "errors": []
+   }
+  },
+  "commander": {
+   "state": "编译通过",
+   "exe": "eval/build/doubao/commander.exe",
+   "cmd": [
+    "g++",
+    "-O2",
+    "-std=c++17",
+    "-static",
+    "-I",
+    "kit/commander",
+    "eval/build/doubao/commander.cpp",
+    "-o",
+    "eval/build/doubao/commander.tmp.exe"
+   ]
+  }
+ },
+ "ernie": {
+  "deploys": {
+   "level1": {
+    "state": "合法",
+    "file": "sealed/ernie/submission/level1.json",
+    "cost": 400,
+    "errors": []
+   },
+   "level2": {
+    "state": "合法",
+    "file": "sealed/ernie/submission/level2.json",
+    "cost": 275,
+    "errors": []
+   },
+   "level3": {
+    "state": "合法",
+    "file": "sealed/ernie/submission/level3.json",
+    "cost": 425,
+    "errors": []
+   },
+   "level4": {
+    "state": "合法",
+    "file": "sealed/ernie/submission/level4.json",
+    "cost": 395,
+    "errors": []
+   },
+   "level5": {
+    "state": "合法",
+    "file": "sealed/ernie/submission/level5.json",
+    "cost": 490,
+    "errors": []
+   },
+   "duel": {
+    "state": "合法",
+    "file": "sealed/ernie/submission/duel.json",
+    "cost": 1000,
+    "errors": []
+   },
+   "melee": {
+    "state": "合法",
+    "file": "sealed/ernie/submission/melee.json",
+    "cost": 560,
+    "errors": []
+   }
+  },
+  "commander": {
+   "state": "编译通过",
+   "exe": "eval/build/ernie/commander.exe",
+   "cmd": [
+    "g++",
+    "-O2",
+    "-std=c++17",
+    "-static",
+    "-I",
+    "kit/commander",
+    "eval/build/ernie/commander.cpp",
+    "-o",
+    "eval/build/ernie/commander.tmp.exe"
+   ]
+  }
+ }
+}

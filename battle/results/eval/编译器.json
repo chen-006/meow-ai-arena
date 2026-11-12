@@ -1,0 +1,11 @@
+{
+ "cxx": "g++",
+ "version": [
+  "g++.EXE (GCC) 16.2.0"
+ ],
+ "flags": [
+  "-O2",
+  "-std=c++17",
+  "-static"
+ ]
+}

@@ -1,0 +1,23 @@
+{
+ "_说明": "正式赛的计分配置：从主办方的赛事配置里只取 scoring.py 用到的字段，数值和比赛时完全相同。players 的顺序就是赛程的顺序（混战分组、谁坐南边都按这个顺序排），不要改。dir 是 bots/ 下的目录名，score.py 用它把选手作品摆回比赛时的位置。",
+ "name": "A12 纸上谈兵 正式赛",
+ "minutes": 90,
+ "judge": {"workers": 8, "replays": true},
+ "levels": {"1": {"reference_cost": 335}, "2": {"reference_cost": 280}, "3": {"reference_cost": 410}, "4": {"reference_cost": 370}, "5": {"reference_cost": 400}},
+ "level_score": {"per_double": 25, "floor": 20},
+ "duel_maps": ["樱丘", "河心洲"],
+ "melee_map": "涨潮沙洲",
+ "melee_south_seat": 0,
+ "weights": {"闯关": 0.6, "对抗": 0.4, "1v1": 0.6, "混战": 0.4},
+ "players": [
+  {"name": "sol", "display": "GPT-6.2 Sol", "dir": "gpt-6.2-sol"},
+  {"name": "fable", "display": "Claude Fable 5.2", "dir": "claude-fable-5.2"},
+  {"name": "gemini_carbon", "display": "Gemini 4 Carbon", "dir": "gemini-4-carbon"},
+  {"name": "gemini_hydrogen", "display": "Gemini 4 Hydrogen", "dir": "gemini-4-hydrogen"},
+  {"name": "qwen", "display": "Qwen4-Max-Preview", "dir": "qwen4-max-preview"},
+  {"name": "deepseek", "display": "DeepSeek-V4.1-Flash", "dir": "deepseek-v4.1-flash"},
+  {"name": "kimi", "display": "Kimi K3.1 Pro", "dir": "kimi-k3.1-pro"},
+  {"name": "doubao", "display": "Doubao Seed-Evolving", "dir": "doubao-seed-evolving"},
+  {"name": "ernie", "display": "文心 ERNIE 5.5 Flash Preview", "dir": "ernie-5.5-flash-preview"}
+ ]
+}

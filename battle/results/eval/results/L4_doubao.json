@@ -1,0 +1,131 @@
+{
+ "id": 34,
+ "mode": "level",
+ "map": "第4关_一线天",
+ "map_file": "kit/levels/第4关_一线天.json",
+ "steps": 9000,
+ "secs": 150.0,
+ "winner": -1,
+ "reason": "timeout_lose",
+ "passed": false,
+ "digest": "a434c45935dfbd41",
+ "teams": [
+  {
+   "team": 0,
+   "start_units": 25,
+   "start_cost": 400,
+   "alive_units": 22,
+   "alive_cost": 325,
+   "zone_cost": 0,
+   "kill_cost": 420,
+   "lost_cost": 75,
+   "eliminated_step": -1
+  },
+  {
+   "team": 1,
+   "start_units": 56,
+   "start_cost": 1580,
+   "alive_units": 42,
+   "alive_cost": 1160,
+   "zone_cost": 0,
+   "kill_cost": 75,
+   "lost_cost": 420,
+   "eliminated_step": -1
+  }
+ ],
+ "seats": [
+  {
+   "seat": 0,
+   "name": "doubao",
+   "deploy": "sealed/doubao/submission/level4.json",
+   "deploy_cost": 400,
+   "deploy_ok": true,
+   "orders": 0,
+   "ignored_orders": 0,
+   "deploy_errors": [],
+   "faults": [],
+   "faults_total": 0
+  }
+ ],
+ "level_info": {
+  "flags": [],
+  "tags": {
+   "路障甲": {
+    "alive": 15,
+    "total": 15
+   },
+   "路障乙": {
+    "alive": 23,
+    "total": 23
+   },
+   "崖顶弓手": {
+    "alive": 6,
+    "total": 6
+   },
+   "北近": {
+    "alive": 1,
+    "total": 1
+   },
+   "北远": {
+    "alive": 1,
+    "total": 1
+   },
+   "南近": {
+    "alive": 1,
+    "total": 1
+   },
+   "南远": {
+    "alive": 1,
+    "total": 1
+   },
+   "路障甲火药桶": {
+    "alive": 2,
+    "total": 2
+   },
+   "路障乙火药桶": {
+    "alive": 3,
+    "total": 3
+   }
+  },
+  "lord_hp": 200.0,
+  "lord_alive": true,
+  "terrain_removed": 0
+ },
+ "commanders": [
+  {
+   "seat": 0,
+   "used": true,
+   "status": "ok",
+   "dead_step": -1,
+   "timeouts": 0,
+   "invalid": 0,
+   "first_ms": 4.61,
+   "avg_ms": 0.066,
+   "max_ms": 0.25,
+   "cpu_total_ms": 115.3
+  }
+ ],
+ "stats": {
+  "kills": 17,
+  "knocks": 7,
+  "topples": 0,
+  "spont_topples": 0,
+  "getups": 4,
+  "fell": 0,
+  "drown": 0,
+  "hits": 129,
+  "blocks": 49,
+  "friendly_fire": 1,
+  "braces": 0,
+  "charges": 8,
+  "explosions": 0,
+  "arrows": 13,
+  "stones": 0,
+  "climbs": 0,
+  "tunnel_unit_steps": 0,
+  "explode_steps": 0,
+  "max_speed": 10.8,
+  "t_phys": 1.272,
+  "t_logic": 0.577
+ }
+}

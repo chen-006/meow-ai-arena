@@ -1,0 +1,65 @@
+{
+ "sol": {
+  "matches": 373,
+  "timeouts": 0,
+  "timeout_matches": 0,
+  "crash_matches": 0,
+  "statuses": {}
+ },
+ "fable": {
+  "matches": 373,
+  "timeouts": 0,
+  "timeout_matches": 0,
+  "crash_matches": 0,
+  "statuses": {}
+ },
+ "gemini_carbon": {
+  "matches": 373,
+  "timeouts": 0,
+  "timeout_matches": 0,
+  "crash_matches": 0,
+  "statuses": {}
+ },
+ "gemini_hydrogen": {
+  "matches": 373,
+  "timeouts": 0,
+  "timeout_matches": 0,
+  "crash_matches": 0,
+  "statuses": {}
+ },
+ "qwen": {
+  "matches": 373,
+  "timeouts": 0,
+  "timeout_matches": 0,
+  "crash_matches": 0,
+  "statuses": {}
+ },
+ "deepseek": {
+  "matches": 373,
+  "timeouts": 0,
+  "timeout_matches": 0,
+  "crash_matches": 0,
+  "statuses": {}
+ },
+ "kimi": {
+  "matches": 373,
+  "timeouts": 0,
+  "timeout_matches": 0,
+  "crash_matches": 0,
+  "statuses": {}
+ },
+ "doubao": {
+  "matches": 373,
+  "timeouts": 0,
+  "timeout_matches": 0,
+  "crash_matches": 0,
+  "statuses": {}
+ },
+ "ernie": {
+  "matches": 373,
+  "timeouts": 0,
+  "timeout_matches": 0,
+  "crash_matches": 0,
+  "statuses": {}
+ }
+}

@@ -1,0 +1,105 @@
+{
+ "id": 24,
+ "mode": "level",
+ "map": "第3关_拔炮台",
+ "map_file": "kit/levels/第3关_拔炮台.json",
+ "steps": 9000,
+ "secs": 150.0,
+ "winner": -1,
+ "reason": "timeout_lose",
+ "passed": false,
+ "digest": "c89e4802577b7e33",
+ "teams": [
+  {
+   "team": 0,
+   "start_units": 5,
+   "start_cost": 450,
+   "alive_units": 1,
+   "alive_cost": 350,
+   "zone_cost": 0,
+   "kill_cost": 830,
+   "lost_cost": 100,
+   "eliminated_step": -1
+  },
+  {
+   "team": 1,
+   "start_units": 37,
+   "start_cost": 1260,
+   "alive_units": 16,
+   "alive_cost": 400,
+   "zone_cost": 0,
+   "kill_cost": 100,
+   "lost_cost": 860,
+   "eliminated_step": -1
+  }
+ ],
+ "seats": [
+  {
+   "seat": 0,
+   "name": "kimi",
+   "deploy": "sealed/kimi/submission/level3.json",
+   "deploy_cost": 450,
+   "deploy_ok": true,
+   "orders": 3191,
+   "ignored_orders": 0,
+   "deploy_errors": [],
+   "faults": [],
+   "faults_total": 0
+  }
+ ],
+ "level_info": {
+  "flags": [],
+  "tags": {
+   "炮台": {
+    "alive": 0,
+    "total": 3
+   },
+   "墙头": {
+    "alive": 0,
+    "total": 10
+   },
+   "小路": {
+    "alive": 0,
+    "total": 2
+   }
+  },
+  "terrain_removed": 0
+ },
+ "commanders": [
+  {
+   "seat": 0,
+   "used": true,
+   "status": "ok",
+   "dead_step": -1,
+   "timeouts": 0,
+   "invalid": 0,
+   "first_ms": 4.79,
+   "avg_ms": 0.047,
+   "max_ms": 0.15,
+   "cpu_total_ms": 87.7
+  }
+ ],
+ "stats": {
+  "kills": 25,
+  "knocks": 17,
+  "topples": 1,
+  "spont_topples": 1,
+  "getups": 17,
+  "fell": 0,
+  "drown": 0,
+  "hits": 182,
+  "blocks": 31,
+  "friendly_fire": 3,
+  "braces": 0,
+  "charges": 0,
+  "explosions": 0,
+  "arrows": 117,
+  "stones": 59,
+  "climbs": 119,
+  "tunnel_unit_steps": 0,
+  "explode_steps": 0,
+  "max_speed": 12.62,
+  "t_phys": 0.623,
+  "t_logic": 0.835
+ }
+}

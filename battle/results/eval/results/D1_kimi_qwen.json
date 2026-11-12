@@ -1,0 +1,110 @@
+{
+ "id": 156,
+ "mode": "duel",
+ "map": "河心洲",
+ "map_file": "kit/maps/河心洲.json",
+ "steps": 5400,
+ "secs": 90.0,
+ "winner": 1,
+ "reason": "timeout_zone",
+ "digest": "10f239bf774fadc9",
+ "teams": [
+  {
+   "team": 0,
+   "start_units": 26,
+   "start_cost": 1000,
+   "alive_units": 1,
+   "alive_cost": 350,
+   "zone_cost": 350,
+   "kill_cost": 590,
+   "lost_cost": 650,
+   "eliminated_step": -1
+  },
+  {
+   "team": 1,
+   "start_units": 12,
+   "start_cost": 1000,
+   "alive_units": 2,
+   "alive_cost": 380,
+   "zone_cost": 380,
+   "kill_cost": 575,
+   "lost_cost": 620,
+   "eliminated_step": -1
+  }
+ ],
+ "seats": [
+  {
+   "seat": 0,
+   "name": "kimi",
+   "deploy": "sealed/kimi/submission/duel.json",
+   "deploy_cost": 1000,
+   "deploy_ok": true,
+   "orders": 365,
+   "ignored_orders": 0,
+   "deploy_errors": [],
+   "faults": [],
+   "faults_total": 0
+  },
+  {
+   "seat": 1,
+   "name": "qwen",
+   "deploy": "sealed/qwen/submission/duel.json",
+   "deploy_cost": 1000,
+   "deploy_ok": true,
+   "orders": 1219,
+   "ignored_orders": 0,
+   "deploy_errors": [],
+   "faults": [],
+   "faults_total": 0
+  }
+ ],
+ "commanders": [
+  {
+   "seat": 0,
+   "used": true,
+   "status": "ok",
+   "dead_step": -1,
+   "timeouts": 0,
+   "invalid": 0,
+   "first_ms": 4.9,
+   "avg_ms": 0.034,
+   "max_ms": 0.13,
+   "cpu_total_ms": 49.6
+  },
+  {
+   "seat": 1,
+   "used": true,
+   "status": "ok",
+   "dead_step": -1,
+   "timeouts": 0,
+   "invalid": 0,
+   "first_ms": 4.45,
+   "avg_ms": 0.032,
+   "max_ms": 0.14,
+   "cpu_total_ms": 47.3
+  }
+ ],
+ "stats": {
+  "kills": 35,
+  "knocks": 25,
+  "topples": 4,
+  "spont_topples": 4,
+  "getups": 19,
+  "fell": 0,
+  "drown": 9,
+  "hits": 278,
+  "blocks": 0,
+  "friendly_fire": 60,
+  "braces": 0,
+  "charges": 0,
+  "explosions": 0,
+  "arrows": 165,
+  "stones": 0,
+  "climbs": 3,
+  "tunnel_unit_steps": 0,
+  "explode_steps": 0,
+  "max_speed": 14.26,
+  "t_phys": 0.339,
+  "t_logic": 0.101
+ }
+}

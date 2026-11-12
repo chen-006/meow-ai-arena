@@ -1,0 +1,110 @@
+{
+ "id": 181,
+ "mode": "duel",
+ "map": "樱丘",
+ "map_file": "kit/maps/樱丘.json",
+ "steps": 3541,
+ "secs": 59.02,
+ "winner": 0,
+ "reason": "annihilation",
+ "digest": "94406f2174199a87",
+ "teams": [
+  {
+   "team": 0,
+   "start_units": 26,
+   "start_cost": 1000,
+   "alive_units": 6,
+   "alive_cost": 500,
+   "zone_cost": 150,
+   "kill_cost": 1000,
+   "lost_cost": 500,
+   "eliminated_step": -1
+  },
+  {
+   "team": 1,
+   "start_units": 36,
+   "start_cost": 1000,
+   "alive_units": 0,
+   "alive_cost": 0,
+   "zone_cost": 0,
+   "kill_cost": 500,
+   "lost_cost": 1000,
+   "eliminated_step": 3541
+  }
+ ],
+ "seats": [
+  {
+   "seat": 0,
+   "name": "kimi",
+   "deploy": "sealed/kimi/submission/duel.json",
+   "deploy_cost": 1000,
+   "deploy_ok": true,
+   "orders": 314,
+   "ignored_orders": 0,
+   "deploy_errors": [],
+   "faults": [],
+   "faults_total": 0
+  },
+  {
+   "seat": 1,
+   "name": "ernie",
+   "deploy": "sealed/ernie/submission/duel.json",
+   "deploy_cost": 1000,
+   "deploy_ok": true,
+   "orders": 215,
+   "ignored_orders": 0,
+   "deploy_errors": [],
+   "faults": [],
+   "faults_total": 0
+  }
+ ],
+ "commanders": [
+  {
+   "seat": 0,
+   "used": true,
+   "status": "ok",
+   "dead_step": -1,
+   "timeouts": 0,
+   "invalid": 0,
+   "first_ms": 6.09,
+   "avg_ms": 0.062,
+   "max_ms": 0.16,
+   "cpu_total_ms": 57.1
+  },
+  {
+   "seat": 1,
+   "used": true,
+   "status": "ok",
+   "dead_step": -1,
+   "timeouts": 0,
+   "invalid": 0,
+   "first_ms": 5.56,
+   "avg_ms": 0.052,
+   "max_ms": 0.17,
+   "cpu_total_ms": 52.0
+  }
+ ],
+ "stats": {
+  "kills": 56,
+  "knocks": 32,
+  "topples": 0,
+  "spont_topples": 0,
+  "getups": 32,
+  "fell": 0,
+  "drown": 0,
+  "hits": 375,
+  "blocks": 105,
+  "friendly_fire": 8,
+  "braces": 0,
+  "charges": 0,
+  "explosions": 0,
+  "arrows": 317,
+  "stones": 0,
+  "climbs": 12,
+  "tunnel_unit_steps": 0,
+  "explode_steps": 0,
+  "max_speed": 24.87,
+  "t_phys": 0.448,
+  "t_logic": 0.102
+ }
+}

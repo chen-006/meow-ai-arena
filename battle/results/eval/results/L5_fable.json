@@ -1,0 +1,112 @@
+{
+ "id": 37,
+ "mode": "level",
+ "map": "第5关_镇山兽",
+ "map_file": "kit/levels/第5关_镇山兽.json",
+ "steps": 6218,
+ "secs": 103.63,
+ "winner": 0,
+ "reason": "win:destroy:镇山兽",
+ "passed": true,
+ "digest": "33f7fdaf5d4a29f9",
+ "teams": [
+  {
+   "team": 0,
+   "start_units": 11,
+   "start_cost": 245,
+   "alive_units": 5,
+   "alive_cost": 95,
+   "zone_cost": 0,
+   "kill_cost": 540,
+   "lost_cost": 150,
+   "eliminated_step": -1
+  },
+  {
+   "team": 1,
+   "start_units": 19,
+   "start_cost": 800,
+   "alive_units": 10,
+   "alive_cost": 260,
+   "zone_cost": 0,
+   "kill_cost": 150,
+   "lost_cost": 540,
+   "eliminated_step": -1
+  }
+ ],
+ "seats": [
+  {
+   "seat": 0,
+   "name": "fable",
+   "deploy": "sealed/fable/submission/level5.json",
+   "deploy_cost": 245,
+   "deploy_ok": true,
+   "orders": 516,
+   "ignored_orders": 0,
+   "deploy_errors": [],
+   "faults": [],
+   "faults_total": 0
+  }
+ ],
+ "level_info": {
+  "flags": [],
+  "tags": {
+   "镇山兽": {
+    "alive": 0,
+    "total": 1
+   },
+   "护卫": {
+    "alive": 10,
+    "total": 12
+   },
+   "游骑": {
+    "alive": 0,
+    "total": 6
+   },
+   "立石": {
+    "alive": 6,
+    "total": 6
+   }
+  },
+  "boss_hp": 0.0,
+  "boss_alive": false,
+  "boss_cause": "spear",
+  "terrain_removed": 0
+ },
+ "commanders": [
+  {
+   "seat": 0,
+   "used": true,
+   "status": "ok",
+   "dead_step": -1,
+   "timeouts": 0,
+   "invalid": 0,
+   "first_ms": 4.92,
+   "avg_ms": 0.051,
+   "max_ms": 0.26,
+   "cpu_total_ms": 71.2
+  }
+ ],
+ "stats": {
+  "kills": 15,
+  "knocks": 1,
+  "topples": 1,
+  "spont_topples": 1,
+  "getups": 1,
+  "fell": 0,
+  "drown": 0,
+  "hits": 215,
+  "blocks": 0,
+  "friendly_fire": 6,
+  "braces": 7,
+  "charges": 0,
+  "explosions": 0,
+  "arrows": 81,
+  "stones": 0,
+  "climbs": 0,
+  "tunnel_unit_steps": 0,
+  "explode_steps": 0,
+  "max_speed": 12.98,
+  "t_phys": 0.454,
+  "t_logic": 0.093
+ }
+}

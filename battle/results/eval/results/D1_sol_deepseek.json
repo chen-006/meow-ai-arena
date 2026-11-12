@@ -1,0 +1,110 @@
+{
+ "id": 63,
+ "mode": "duel",
+ "map": "河心洲",
+ "map_file": "kit/maps/河心洲.json",
+ "steps": 2989,
+ "secs": 49.82,
+ "winner": 0,
+ "reason": "annihilation",
+ "digest": "bd884c552317036f",
+ "teams": [
+  {
+   "team": 0,
+   "start_units": 35,
+   "start_cost": 1000,
+   "alive_units": 22,
+   "alive_cost": 660,
+   "zone_cost": 0,
+   "kill_cost": 975,
+   "lost_cost": 340,
+   "eliminated_step": -1
+  },
+  {
+   "team": 1,
+   "start_units": 12,
+   "start_cost": 975,
+   "alive_units": 0,
+   "alive_cost": 0,
+   "zone_cost": 0,
+   "kill_cost": 310,
+   "lost_cost": 975,
+   "eliminated_step": 2989
+  }
+ ],
+ "seats": [
+  {
+   "seat": 0,
+   "name": "sol",
+   "deploy": "sealed/sol/submission/duel.json",
+   "deploy_cost": 1000,
+   "deploy_ok": true,
+   "orders": 1854,
+   "ignored_orders": 0,
+   "deploy_errors": [],
+   "faults": [],
+   "faults_total": 0
+  },
+  {
+   "seat": 1,
+   "name": "deepseek",
+   "deploy": "sealed/deepseek/submission/duel.json",
+   "deploy_cost": 975,
+   "deploy_ok": true,
+   "orders": 258,
+   "ignored_orders": 0,
+   "deploy_errors": [],
+   "faults": [],
+   "faults_total": 0
+  }
+ ],
+ "commanders": [
+  {
+   "seat": 0,
+   "used": true,
+   "status": "ok",
+   "dead_step": -1,
+   "timeouts": 0,
+   "invalid": 0,
+   "first_ms": 5.26,
+   "avg_ms": 0.143,
+   "max_ms": 0.38,
+   "cpu_total_ms": 90.4
+  },
+  {
+   "seat": 1,
+   "used": true,
+   "status": "ok",
+   "dead_step": -1,
+   "timeouts": 0,
+   "invalid": 0,
+   "first_ms": 5.24,
+   "avg_ms": 0.053,
+   "max_ms": 0.13,
+   "cpu_total_ms": 45.7
+  }
+ ],
+ "stats": {
+  "kills": 25,
+  "knocks": 9,
+  "topples": 1,
+  "spont_topples": 1,
+  "getups": 9,
+  "fell": 0,
+  "drown": 2,
+  "hits": 323,
+  "blocks": 0,
+  "friendly_fire": 2,
+  "braces": 0,
+  "charges": 0,
+  "explosions": 0,
+  "arrows": 360,
+  "stones": 0,
+  "climbs": 0,
+  "tunnel_unit_steps": 0,
+  "explode_steps": 0,
+  "max_speed": 13.36,
+  "t_phys": 0.369,
+  "t_logic": 0.079
+ }
+}

@@ -1,0 +1,110 @@
+{
+ "id": 148,
+ "mode": "duel",
+ "map": "河心洲",
+ "map_file": "kit/maps/河心洲.json",
+ "steps": 5272,
+ "secs": 87.87,
+ "winner": 1,
+ "reason": "annihilation",
+ "digest": "e50525277943b113",
+ "teams": [
+  {
+   "team": 0,
+   "start_units": 36,
+   "start_cost": 1000,
+   "alive_units": 0,
+   "alive_cost": 0,
+   "zone_cost": 0,
+   "kill_cost": 305,
+   "lost_cost": 1000,
+   "eliminated_step": 5272
+  },
+  {
+   "team": 1,
+   "start_units": 23,
+   "start_cost": 990,
+   "alive_units": 11,
+   "alive_cost": 650,
+   "zone_cost": 350,
+   "kill_cost": 975,
+   "lost_cost": 340,
+   "eliminated_step": -1
+  }
+ ],
+ "seats": [
+  {
+   "seat": 0,
+   "name": "ernie",
+   "deploy": "sealed/ernie/submission/duel.json",
+   "deploy_cost": 1000,
+   "deploy_ok": true,
+   "orders": 317,
+   "ignored_orders": 0,
+   "deploy_errors": [],
+   "faults": [],
+   "faults_total": 0
+  },
+  {
+   "seat": 1,
+   "name": "gemini_hydrogen",
+   "deploy": "sealed/gemini_hydrogen/submission/duel.json",
+   "deploy_cost": 990,
+   "deploy_ok": true,
+   "orders": 10666,
+   "ignored_orders": 0,
+   "deploy_errors": [],
+   "faults": [],
+   "faults_total": 0
+  }
+ ],
+ "commanders": [
+  {
+   "seat": 0,
+   "used": true,
+   "status": "ok",
+   "dead_step": -1,
+   "timeouts": 0,
+   "invalid": 0,
+   "first_ms": 4.77,
+   "avg_ms": 0.05,
+   "max_ms": 0.15,
+   "cpu_total_ms": 63.0
+  },
+  {
+   "seat": 1,
+   "used": true,
+   "status": "ok",
+   "dead_step": -1,
+   "timeouts": 0,
+   "invalid": 0,
+   "first_ms": 5.39,
+   "avg_ms": 0.056,
+   "max_ms": 0.15,
+   "cpu_total_ms": 67.4
+  }
+ ],
+ "stats": {
+  "kills": 48,
+  "knocks": 55,
+  "topples": 8,
+  "spont_topples": 8,
+  "getups": 51,
+  "fell": 0,
+  "drown": 4,
+  "hits": 225,
+  "blocks": 28,
+  "friendly_fire": 19,
+  "braces": 0,
+  "charges": 0,
+  "explosions": 1,
+  "arrows": 324,
+  "stones": 0,
+  "climbs": 0,
+  "tunnel_unit_steps": 0,
+  "explode_steps": 0,
+  "max_speed": 13.93,
+  "t_phys": 0.565,
+  "t_logic": 0.258
+ }
+}

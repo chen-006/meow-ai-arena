@@ -1,0 +1,110 @@
+{
+ "id": 146,
+ "mode": "duel",
+ "map": "樱丘",
+ "map_file": "kit/maps/樱丘.json",
+ "steps": 2813,
+ "secs": 46.88,
+ "winner": 1,
+ "reason": "annihilation",
+ "digest": "c7a11d90581bcd77",
+ "teams": [
+  {
+   "team": 0,
+   "start_units": 36,
+   "start_cost": 1000,
+   "alive_units": 0,
+   "alive_cost": 0,
+   "zone_cost": 0,
+   "kill_cost": 315,
+   "lost_cost": 1000,
+   "eliminated_step": 2813
+  },
+  {
+   "team": 1,
+   "start_units": 23,
+   "start_cost": 990,
+   "alive_units": 11,
+   "alive_cost": 650,
+   "zone_cost": 60,
+   "kill_cost": 960,
+   "lost_cost": 340,
+   "eliminated_step": -1
+  }
+ ],
+ "seats": [
+  {
+   "seat": 0,
+   "name": "ernie",
+   "deploy": "sealed/ernie/submission/duel.json",
+   "deploy_cost": 1000,
+   "deploy_ok": true,
+   "orders": 191,
+   "ignored_orders": 0,
+   "deploy_errors": [],
+   "faults": [],
+   "faults_total": 0
+  },
+  {
+   "seat": 1,
+   "name": "gemini_hydrogen",
+   "deploy": "sealed/gemini_hydrogen/submission/duel.json",
+   "deploy_cost": 990,
+   "deploy_ok": true,
+   "orders": 3486,
+   "ignored_orders": 0,
+   "deploy_errors": [],
+   "faults": [],
+   "faults_total": 0
+  }
+ ],
+ "commanders": [
+  {
+   "seat": 0,
+   "used": true,
+   "status": "ok",
+   "dead_step": -1,
+   "timeouts": 0,
+   "invalid": 0,
+   "first_ms": 6.27,
+   "avg_ms": 0.057,
+   "max_ms": 0.14,
+   "cpu_total_ms": 48.5
+  },
+  {
+   "seat": 1,
+   "used": true,
+   "status": "ok",
+   "dead_step": -1,
+   "timeouts": 0,
+   "invalid": 0,
+   "first_ms": 5.28,
+   "avg_ms": 0.063,
+   "max_ms": 0.18,
+   "cpu_total_ms": 48.1
+  }
+ ],
+ "stats": {
+  "kills": 48,
+  "knocks": 38,
+  "topples": 1,
+  "spont_topples": 1,
+  "getups": 38,
+  "fell": 0,
+  "drown": 0,
+  "hits": 299,
+  "blocks": 113,
+  "friendly_fire": 28,
+  "braces": 2,
+  "charges": 0,
+  "explosions": 1,
+  "arrows": 238,
+  "stones": 0,
+  "climbs": 0,
+  "tunnel_unit_steps": 0,
+  "explode_steps": 0,
+  "max_speed": 13.04,
+  "t_phys": 0.334,
+  "t_logic": 0.084
+ }
+}

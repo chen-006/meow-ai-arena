@@ -1,0 +1,110 @@
+{
+ "id": 89,
+ "mode": "duel",
+ "map": "樱丘",
+ "map_file": "kit/maps/樱丘.json",
+ "steps": 5350,
+ "secs": 89.17,
+ "winner": 0,
+ "reason": "annihilation",
+ "digest": "7b84980376a98da9",
+ "teams": [
+  {
+   "team": 0,
+   "start_units": 13,
+   "start_cost": 1000,
+   "alive_units": 7,
+   "alive_cost": 850,
+   "zone_cost": 850,
+   "kill_cost": 975,
+   "lost_cost": 150,
+   "eliminated_step": -1
+  },
+  {
+   "team": 1,
+   "start_units": 12,
+   "start_cost": 975,
+   "alive_units": 0,
+   "alive_cost": 0,
+   "zone_cost": 0,
+   "kill_cost": 150,
+   "lost_cost": 975,
+   "eliminated_step": 5350
+  }
+ ],
+ "seats": [
+  {
+   "seat": 0,
+   "name": "fable",
+   "deploy": "sealed/fable/submission/duel.json",
+   "deploy_cost": 1000,
+   "deploy_ok": true,
+   "orders": 157,
+   "ignored_orders": 0,
+   "deploy_errors": [],
+   "faults": [],
+   "faults_total": 0
+  },
+  {
+   "seat": 1,
+   "name": "deepseek",
+   "deploy": "sealed/deepseek/submission/duel.json",
+   "deploy_cost": 975,
+   "deploy_ok": true,
+   "orders": 402,
+   "ignored_orders": 0,
+   "deploy_errors": [],
+   "faults": [],
+   "faults_total": 0
+  }
+ ],
+ "commanders": [
+  {
+   "seat": 0,
+   "used": true,
+   "status": "ok",
+   "dead_step": -1,
+   "timeouts": 0,
+   "invalid": 0,
+   "first_ms": 5.71,
+   "avg_ms": 0.037,
+   "max_ms": 0.11,
+   "cpu_total_ms": 51.4
+  },
+  {
+   "seat": 1,
+   "used": true,
+   "status": "ok",
+   "dead_step": -1,
+   "timeouts": 0,
+   "invalid": 0,
+   "first_ms": 5.73,
+   "avg_ms": 0.032,
+   "max_ms": 0.13,
+   "cpu_total_ms": 47.0
+  }
+ ],
+ "stats": {
+  "kills": 18,
+  "knocks": 8,
+  "topples": 0,
+  "spont_topples": 0,
+  "getups": 6,
+  "fell": 0,
+  "drown": 0,
+  "hits": 340,
+  "blocks": 14,
+  "friendly_fire": 29,
+  "braces": 0,
+  "charges": 0,
+  "explosions": 0,
+  "arrows": 247,
+  "stones": 0,
+  "climbs": 34,
+  "tunnel_unit_steps": 0,
+  "explode_steps": 0,
+  "max_speed": 16.64,
+  "t_phys": 0.536,
+  "t_logic": 0.067
+ }
+}

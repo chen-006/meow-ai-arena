@@ -1,0 +1,110 @@
+{
+ "id": 180,
+ "mode": "duel",
+ "map": "河心洲",
+ "map_file": "kit/maps/河心洲.json",
+ "steps": 4883,
+ "secs": 81.38,
+ "winner": 1,
+ "reason": "annihilation",
+ "digest": "ec402788a8290a7e",
+ "teams": [
+  {
+   "team": 0,
+   "start_units": 37,
+   "start_cost": 870,
+   "alive_units": 0,
+   "alive_cost": 0,
+   "zone_cost": 0,
+   "kill_cost": 625,
+   "lost_cost": 870,
+   "eliminated_step": 4883
+  },
+  {
+   "team": 1,
+   "start_units": 26,
+   "start_cost": 1000,
+   "alive_units": 2,
+   "alive_cost": 60,
+   "zone_cost": 30,
+   "kill_cost": 785,
+   "lost_cost": 940,
+   "eliminated_step": -1
+  }
+ ],
+ "seats": [
+  {
+   "seat": 0,
+   "name": "doubao",
+   "deploy": "sealed/doubao/submission/duel.json",
+   "deploy_cost": 870,
+   "deploy_ok": true,
+   "orders": 726,
+   "ignored_orders": 0,
+   "deploy_errors": [],
+   "faults": [],
+   "faults_total": 0
+  },
+  {
+   "seat": 1,
+   "name": "kimi",
+   "deploy": "sealed/kimi/submission/duel.json",
+   "deploy_cost": 1000,
+   "deploy_ok": true,
+   "orders": 596,
+   "ignored_orders": 0,
+   "deploy_errors": [],
+   "faults": [],
+   "faults_total": 0
+  }
+ ],
+ "commanders": [
+  {
+   "seat": 0,
+   "used": true,
+   "status": "ok",
+   "dead_step": -1,
+   "timeouts": 0,
+   "invalid": 0,
+   "first_ms": 5.32,
+   "avg_ms": 0.044,
+   "max_ms": 0.15,
+   "cpu_total_ms": 55.3
+  },
+  {
+   "seat": 1,
+   "used": true,
+   "status": "ok",
+   "dead_step": -1,
+   "timeouts": 0,
+   "invalid": 0,
+   "first_ms": 4.7,
+   "avg_ms": 0.047,
+   "max_ms": 0.22,
+   "cpu_total_ms": 56.0
+  }
+ ],
+ "stats": {
+  "kills": 61,
+  "knocks": 37,
+  "topples": 1,
+  "spont_topples": 1,
+  "getups": 28,
+  "fell": 0,
+  "drown": 27,
+  "hits": 271,
+  "blocks": 17,
+  "friendly_fire": 13,
+  "braces": 0,
+  "charges": 0,
+  "explosions": 0,
+  "arrows": 188,
+  "stones": 3,
+  "climbs": 5,
+  "tunnel_unit_steps": 0,
+  "explode_steps": 0,
+  "max_speed": 14.2,
+  "t_phys": 0.304,
+  "t_logic": 0.54
+ }
+}

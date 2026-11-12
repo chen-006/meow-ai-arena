@@ -1,0 +1,110 @@
+{
+ "id": 160,
+ "mode": "duel",
+ "map": "河心洲",
+ "map_file": "kit/maps/河心洲.json",
+ "steps": 5400,
+ "secs": 90.0,
+ "winner": 1,
+ "reason": "timeout_zone",
+ "digest": "a0aab4981a436c96",
+ "teams": [
+  {
+   "team": 0,
+   "start_units": 37,
+   "start_cost": 870,
+   "alive_units": 31,
+   "alive_cost": 690,
+   "zone_cost": 0,
+   "kill_cost": 300,
+   "lost_cost": 180,
+   "eliminated_step": -1
+  },
+  {
+   "team": 1,
+   "start_units": 12,
+   "start_cost": 1000,
+   "alive_units": 2,
+   "alive_cost": 700,
+   "zone_cost": 700,
+   "kill_cost": 180,
+   "lost_cost": 300,
+   "eliminated_step": -1
+  }
+ ],
+ "seats": [
+  {
+   "seat": 0,
+   "name": "doubao",
+   "deploy": "sealed/doubao/submission/duel.json",
+   "deploy_cost": 870,
+   "deploy_ok": true,
+   "orders": 942,
+   "ignored_orders": 0,
+   "deploy_errors": [],
+   "faults": [],
+   "faults_total": 0
+  },
+  {
+   "seat": 1,
+   "name": "qwen",
+   "deploy": "sealed/qwen/submission/duel.json",
+   "deploy_cost": 1000,
+   "deploy_ok": true,
+   "orders": 1780,
+   "ignored_orders": 0,
+   "deploy_errors": [],
+   "faults": [],
+   "faults_total": 0
+  }
+ ],
+ "commanders": [
+  {
+   "seat": 0,
+   "used": true,
+   "status": "ok",
+   "dead_step": -1,
+   "timeouts": 0,
+   "invalid": 0,
+   "first_ms": 4.94,
+   "avg_ms": 0.054,
+   "max_ms": 0.14,
+   "cpu_total_ms": 66.4
+  },
+  {
+   "seat": 1,
+   "used": true,
+   "status": "ok",
+   "dead_step": -1,
+   "timeouts": 0,
+   "invalid": 0,
+   "first_ms": 4.45,
+   "avg_ms": 0.05,
+   "max_ms": 0.12,
+   "cpu_total_ms": 62.3
+  }
+ ],
+ "stats": {
+  "kills": 16,
+  "knocks": 10,
+  "topples": 0,
+  "spont_topples": 0,
+  "getups": 9,
+  "fell": 0,
+  "drown": 1,
+  "hits": 78,
+  "blocks": 4,
+  "friendly_fire": 0,
+  "braces": 0,
+  "charges": 0,
+  "explosions": 0,
+  "arrows": 100,
+  "stones": 17,
+  "climbs": 0,
+  "tunnel_unit_steps": 0,
+  "explode_steps": 0,
+  "max_speed": 14.03,
+  "t_phys": 0.439,
+  "t_logic": 0.37
+ }
+}

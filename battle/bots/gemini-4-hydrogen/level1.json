@@ -1,0 +1,14 @@
+{
+ "units": [
+  { "type": "盾卫", "x": -22.0, "z": 1.5, "stance": "原地守", "tag": "l1_hold" },
+  { "type": "盾卫", "x": -21.5, "z": 1.5, "stance": "原地守", "tag": "l1_hold" },
+  { "type": "盾卫", "x": -21.0, "z": 1.5, "stance": "原地守", "tag": "l1_hold" },
+  { "type": "盾卫", "x": -22.0, "z": 2.0, "stance": "原地守", "tag": "l1_hold" },
+  { "type": "长枪兵", "x": -22.0, "z": 0.0, "stance": "原地守", "tag": "l1_hold" },
+  { "type": "长枪兵", "x": -21.5, "z": 0.0, "stance": "原地守", "tag": "l1_hold" },
+  { "type": "长枪兵", "x": -21.0, "z": 0.0, "stance": "原地守", "tag": "l1_hold" },
+  { "type": "长枪兵", "x": -22.0, "z": 0.5, "stance": "原地守", "tag": "l1_hold" },
+  { "type": "长枪兵", "x": -21.5, "z": 0.5, "stance": "原地守", "tag": "l1_hold" },
+  { "type": "长枪兵", "x": -21.0, "z": 0.5, "stance": "原地守", "tag": "l1_hold" }
+ ]
+}

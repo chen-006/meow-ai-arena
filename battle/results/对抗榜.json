@@ -1,0 +1,896 @@
+{
+ "name": "A12 纸上谈兵 正式赛",
+ "level_score": {
+  "per_double": 25.0,
+  "floor": 20.0
+ },
+ "weights": {
+  "闯关": 0.6,
+  "对抗": 0.4,
+  "1v1": 0.6,
+  "混战": 0.4
+ },
+ "generated": "2026-11-12T11:51:48-08:00",
+ "combined": [
+  {
+   "player": "sol",
+   "display": "GPT-6.2 Sol",
+   "对抗分": 81.65939682539683,
+   "1v1分": 100.0,
+   "混战分": 54.14849206349206,
+   "duel": {
+    "games": 32,
+    "win": 32,
+    "draw": 0,
+    "loss": 0
+   },
+   "melee": {
+    "games": 336,
+    "avg_score": 3.2489095238095236,
+    "avg_rank": 1.3125,
+    "avg_kill_pts": 0.7593261904761904,
+    "firsts": 241
+   },
+   "名次": 1
+  },
+  {
+   "player": "fable",
+   "display": "Claude Fable 5.2",
+   "对抗分": 71.82557936507936,
+   "1v1分": 85.9375,
+   "混战分": 50.65769841269841,
+   "duel": {
+    "games": 32,
+    "win": 27,
+    "draw": 1,
+    "loss": 4
+   },
+   "melee": {
+    "games": 336,
+    "avg_score": 3.0394619047619047,
+    "avg_rank": 1.2053571428571428,
+    "avg_kill_pts": 0.5067238095238095,
+    "firsts": 273
+   },
+   "名次": 2
+  },
+  {
+   "player": "gemini_hydrogen",
+   "display": "Gemini 4 Hydrogen",
+   "对抗分": 55.587452380952385,
+   "1v1分": 64.0625,
+   "混战分": 42.87488095238095,
+   "duel": {
+    "games": 32,
+    "win": 20,
+    "draw": 1,
+    "loss": 11
+   },
+   "melee": {
+    "games": 336,
+    "avg_score": 2.572492857142857,
+    "avg_rank": 1.6785714285714286,
+    "avg_kill_pts": 0.6305285714285714,
+    "firsts": 138
+   },
+   "名次": 3
+  },
+  {
+   "player": "gemini_carbon",
+   "display": "Gemini 4 Carbon",
+   "对抗分": 51.00495039682539,
+   "1v1分": 59.375,
+   "混战分": 38.44987599206349,
+   "duel": {
+    "games": 32,
+    "win": 19,
+    "draw": 0,
+    "loss": 13
+   },
+   "melee": {
+    "games": 336,
+    "avg_score": 2.3069925595238097,
+    "avg_rank": 1.7202380952380953,
+    "avg_kill_pts": 0.32187351190476193,
+    "firsts": 154
+   },
+   "名次": 4
+  },
+  {
+   "player": "deepseek",
+   "display": "DeepSeek-V4.1-Flash",
+   "对抗分": 42.71743452380952,
+   "1v1分": 50.0,
+   "混战分": 31.793586309523807,
+   "duel": {
+    "games": 32,
+    "win": 16,
+    "draw": 0,
+    "loss": 16
+   },
+   "melee": {
+    "games": 336,
+    "avg_score": 1.9076151785714286,
+    "avg_rank": 2.136904761904762,
+    "avg_kill_pts": 0.3823175595238095,
+    "firsts": 59
+   },
+   "名次": 5
+  },
+  {
+   "player": "qwen",
+   "display": "Qwen4-Max-Preview",
+   "对抗分": 34.962311507936505,
+   "1v1分": 35.9375,
+   "混战分": 33.49952876984127,
+   "duel": {
+    "games": 32,
+    "win": 11,
+    "draw": 1,
+    "loss": 20
+   },
+   "melee": {
+    "games": 336,
+    "avg_score": 2.0099717261904764,
+    "avg_rank": 2.0029761904761907,
+    "avg_kill_pts": 0.3388407738095238,
+    "firsts": 69
+   },
+   "名次": 6
+  },
+  {
+   "player": "kimi",
+   "display": "Kimi K3.1 Pro",
+   "对抗分": 22.377007936507937,
+   "1v1分": 29.6875,
+   "混战分": 11.41126984126984,
+   "duel": {
+    "games": 32,
+    "win": 9,
+    "draw": 1,
+    "loss": 22
+   },
+   "melee": {
+    "games": 336,
+    "avg_score": 0.6846761904761904,
+    "avg_rank": 3.2738095238095237,
+    "avg_kill_pts": 0.08795,
+    "firsts": 13
+   },
+   "名次": 7
+  },
+  {
+   "player": "ernie",
+   "display": "文心 ERNIE 5.5 Flash Preview",
+   "对抗分": 18.40510515873016,
+   "1v1分": 21.875,
+   "混战分": 13.200262896825398,
+   "duel": {
+    "games": 32,
+    "win": 7,
+    "draw": 0,
+    "loss": 25
+   },
+   "melee": {
+    "games": 336,
+    "avg_score": 0.7920157738095238,
+    "avg_rank": 3.6785714285714284,
+    "avg_kill_pts": 0.4720752976190476,
+    "firsts": 0
+   },
+   "名次": 8
+  },
+  {
+   "player": "doubao",
+   "display": "Doubao Seed-Evolving",
+   "对抗分": 6.710972222222223,
+   "1v1分": 3.125,
+   "混战分": 12.089930555555556,
+   "duel": {
+    "games": 32,
+    "win": 1,
+    "draw": 0,
+    "loss": 31
+   },
+   "melee": {
+    "games": 336,
+    "avg_score": 0.7253958333333334,
+    "avg_rank": 3.5625,
+    "avg_kill_pts": 0.28789583333333335,
+    "firsts": 0
+   },
+   "名次": 9
+  }
+ ],
+ "duel": [
+  {
+   "player": "sol",
+   "display": "GPT-6.2 Sol",
+   "对抗分": 81.65939682539683,
+   "1v1分": 100.0,
+   "混战分": 54.14849206349206,
+   "duel": {
+    "games": 32,
+    "win": 32,
+    "draw": 0,
+    "loss": 0
+   },
+   "melee": {
+    "games": 336,
+    "avg_score": 3.2489095238095236,
+    "avg_rank": 1.3125,
+    "avg_kill_pts": 0.7593261904761904,
+    "firsts": 241
+   },
+   "名次": 1
+  },
+  {
+   "player": "fable",
+   "display": "Claude Fable 5.2",
+   "对抗分": 71.82557936507936,
+   "1v1分": 85.9375,
+   "混战分": 50.65769841269841,
+   "duel": {
+    "games": 32,
+    "win": 27,
+    "draw": 1,
+    "loss": 4
+   },
+   "melee": {
+    "games": 336,
+    "avg_score": 3.0394619047619047,
+    "avg_rank": 1.2053571428571428,
+    "avg_kill_pts": 0.5067238095238095,
+    "firsts": 273
+   },
+   "名次": 2
+  },
+  {
+   "player": "gemini_hydrogen",
+   "display": "Gemini 4 Hydrogen",
+   "对抗分": 55.587452380952385,
+   "1v1分": 64.0625,
+   "混战分": 42.87488095238095,
+   "duel": {
+    "games": 32,
+    "win": 20,
+    "draw": 1,
+    "loss": 11
+   },
+   "melee": {
+    "games": 336,
+    "avg_score": 2.572492857142857,
+    "avg_rank": 1.6785714285714286,
+    "avg_kill_pts": 0.6305285714285714,
+    "firsts": 138
+   },
+   "名次": 3
+  },
+  {
+   "player": "gemini_carbon",
+   "display": "Gemini 4 Carbon",
+   "对抗分": 51.00495039682539,
+   "1v1分": 59.375,
+   "混战分": 38.44987599206349,
+   "duel": {
+    "games": 32,
+    "win": 19,
+    "draw": 0,
+    "loss": 13
+   },
+   "melee": {
+    "games": 336,
+    "avg_score": 2.3069925595238097,
+    "avg_rank": 1.7202380952380953,
+    "avg_kill_pts": 0.32187351190476193,
+    "firsts": 154
+   },
+   "名次": 4
+  },
+  {
+   "player": "deepseek",
+   "display": "DeepSeek-V4.1-Flash",
+   "对抗分": 42.71743452380952,
+   "1v1分": 50.0,
+   "混战分": 31.793586309523807,
+   "duel": {
+    "games": 32,
+    "win": 16,
+    "draw": 0,
+    "loss": 16
+   },
+   "melee": {
+    "games": 336,
+    "avg_score": 1.9076151785714286,
+    "avg_rank": 2.136904761904762,
+    "avg_kill_pts": 0.3823175595238095,
+    "firsts": 59
+   },
+   "名次": 5
+  },
+  {
+   "player": "qwen",
+   "display": "Qwen4-Max-Preview",
+   "对抗分": 34.962311507936505,
+   "1v1分": 35.9375,
+   "混战分": 33.49952876984127,
+   "duel": {
+    "games": 32,
+    "win": 11,
+    "draw": 1,
+    "loss": 20
+   },
+   "melee": {
+    "games": 336,
+    "avg_score": 2.0099717261904764,
+    "avg_rank": 2.0029761904761907,
+    "avg_kill_pts": 0.3388407738095238,
+    "firsts": 69
+   },
+   "名次": 6
+  },
+  {
+   "player": "kimi",
+   "display": "Kimi K3.1 Pro",
+   "对抗分": 22.377007936507937,
+   "1v1分": 29.6875,
+   "混战分": 11.41126984126984,
+   "duel": {
+    "games": 32,
+    "win": 9,
+    "draw": 1,
+    "loss": 22
+   },
+   "melee": {
+    "games": 336,
+    "avg_score": 0.6846761904761904,
+    "avg_rank": 3.2738095238095237,
+    "avg_kill_pts": 0.08795,
+    "firsts": 13
+   },
+   "名次": 7
+  },
+  {
+   "player": "ernie",
+   "display": "文心 ERNIE 5.5 Flash Preview",
+   "对抗分": 18.40510515873016,
+   "1v1分": 21.875,
+   "混战分": 13.200262896825398,
+   "duel": {
+    "games": 32,
+    "win": 7,
+    "draw": 0,
+    "loss": 25
+   },
+   "melee": {
+    "games": 336,
+    "avg_score": 0.7920157738095238,
+    "avg_rank": 3.6785714285714284,
+    "avg_kill_pts": 0.4720752976190476,
+    "firsts": 0
+   },
+   "名次": 8
+  },
+  {
+   "player": "doubao",
+   "display": "Doubao Seed-Evolving",
+   "对抗分": 6.710972222222223,
+   "1v1分": 3.125,
+   "混战分": 12.089930555555556,
+   "duel": {
+    "games": 32,
+    "win": 1,
+    "draw": 0,
+    "loss": 31
+   },
+   "melee": {
+    "games": 336,
+    "avg_score": 0.7253958333333334,
+    "avg_rank": 3.5625,
+    "avg_kill_pts": 0.28789583333333335,
+    "firsts": 0
+   },
+   "名次": 9
+  }
+ ],
+ "melee": [
+  {
+   "player": "sol",
+   "display": "GPT-6.2 Sol",
+   "对抗分": 81.65939682539683,
+   "1v1分": 100.0,
+   "混战分": 54.14849206349206,
+   "duel": {
+    "games": 32,
+    "win": 32,
+    "draw": 0,
+    "loss": 0
+   },
+   "melee": {
+    "games": 336,
+    "avg_score": 3.2489095238095236,
+    "avg_rank": 1.3125,
+    "avg_kill_pts": 0.7593261904761904,
+    "firsts": 241
+   },
+   "名次": 1
+  },
+  {
+   "player": "fable",
+   "display": "Claude Fable 5.2",
+   "对抗分": 71.82557936507936,
+   "1v1分": 85.9375,
+   "混战分": 50.65769841269841,
+   "duel": {
+    "games": 32,
+    "win": 27,
+    "draw": 1,
+    "loss": 4
+   },
+   "melee": {
+    "games": 336,
+    "avg_score": 3.0394619047619047,
+    "avg_rank": 1.2053571428571428,
+    "avg_kill_pts": 0.5067238095238095,
+    "firsts": 273
+   },
+   "名次": 2
+  },
+  {
+   "player": "gemini_hydrogen",
+   "display": "Gemini 4 Hydrogen",
+   "对抗分": 55.587452380952385,
+   "1v1分": 64.0625,
+   "混战分": 42.87488095238095,
+   "duel": {
+    "games": 32,
+    "win": 20,
+    "draw": 1,
+    "loss": 11
+   },
+   "melee": {
+    "games": 336,
+    "avg_score": 2.572492857142857,
+    "avg_rank": 1.6785714285714286,
+    "avg_kill_pts": 0.6305285714285714,
+    "firsts": 138
+   },
+   "名次": 3
+  },
+  {
+   "player": "gemini_carbon",
+   "display": "Gemini 4 Carbon",
+   "对抗分": 51.00495039682539,
+   "1v1分": 59.375,
+   "混战分": 38.44987599206349,
+   "duel": {
+    "games": 32,
+    "win": 19,
+    "draw": 0,
+    "loss": 13
+   },
+   "melee": {
+    "games": 336,
+    "avg_score": 2.3069925595238097,
+    "avg_rank": 1.7202380952380953,
+    "avg_kill_pts": 0.32187351190476193,
+    "firsts": 154
+   },
+   "名次": 4
+  },
+  {
+   "player": "qwen",
+   "display": "Qwen4-Max-Preview",
+   "对抗分": 34.962311507936505,
+   "1v1分": 35.9375,
+   "混战分": 33.49952876984127,
+   "duel": {
+    "games": 32,
+    "win": 11,
+    "draw": 1,
+    "loss": 20
+   },
+   "melee": {
+    "games": 336,
+    "avg_score": 2.0099717261904764,
+    "avg_rank": 2.0029761904761907,
+    "avg_kill_pts": 0.3388407738095238,
+    "firsts": 69
+   },
+   "名次": 5
+  },
+  {
+   "player": "deepseek",
+   "display": "DeepSeek-V4.1-Flash",
+   "对抗分": 42.71743452380952,
+   "1v1分": 50.0,
+   "混战分": 31.793586309523807,
+   "duel": {
+    "games": 32,
+    "win": 16,
+    "draw": 0,
+    "loss": 16
+   },
+   "melee": {
+    "games": 336,
+    "avg_score": 1.9076151785714286,
+    "avg_rank": 2.136904761904762,
+    "avg_kill_pts": 0.3823175595238095,
+    "firsts": 59
+   },
+   "名次": 6
+  },
+  {
+   "player": "ernie",
+   "display": "文心 ERNIE 5.5 Flash Preview",
+   "对抗分": 18.40510515873016,
+   "1v1分": 21.875,
+   "混战分": 13.200262896825398,
+   "duel": {
+    "games": 32,
+    "win": 7,
+    "draw": 0,
+    "loss": 25
+   },
+   "melee": {
+    "games": 336,
+    "avg_score": 0.7920157738095238,
+    "avg_rank": 3.6785714285714284,
+    "avg_kill_pts": 0.4720752976190476,
+    "firsts": 0
+   },
+   "名次": 7
+  },
+  {
+   "player": "doubao",
+   "display": "Doubao Seed-Evolving",
+   "对抗分": 6.710972222222223,
+   "1v1分": 3.125,
+   "混战分": 12.089930555555556,
+   "duel": {
+    "games": 32,
+    "win": 1,
+    "draw": 0,
+    "loss": 31
+   },
+   "melee": {
+    "games": 336,
+    "avg_score": 0.7253958333333334,
+    "avg_rank": 3.5625,
+    "avg_kill_pts": 0.28789583333333335,
+    "firsts": 0
+   },
+   "名次": 8
+  },
+  {
+   "player": "kimi",
+   "display": "Kimi K3.1 Pro",
+   "对抗分": 22.377007936507937,
+   "1v1分": 29.6875,
+   "混战分": 11.41126984126984,
+   "duel": {
+    "games": 32,
+    "win": 9,
+    "draw": 1,
+    "loss": 22
+   },
+   "melee": {
+    "games": 336,
+    "avg_score": 0.6846761904761904,
+    "avg_rank": 3.2738095238095237,
+    "avg_kill_pts": 0.08795,
+    "firsts": 13
+   },
+   "名次": 9
+  }
+ ],
+ "pairs": {
+  "sol": {
+   "fable": {
+    "points": 4.0,
+    "games": 4
+   },
+   "gemini_carbon": {
+    "points": 4.0,
+    "games": 4
+   },
+   "gemini_hydrogen": {
+    "points": 4.0,
+    "games": 4
+   },
+   "qwen": {
+    "points": 4.0,
+    "games": 4
+   },
+   "deepseek": {
+    "points": 4.0,
+    "games": 4
+   },
+   "kimi": {
+    "points": 4.0,
+    "games": 4
+   },
+   "doubao": {
+    "points": 4.0,
+    "games": 4
+   },
+   "ernie": {
+    "points": 4.0,
+    "games": 4
+   }
+  },
+  "fable": {
+   "sol": {
+    "points": 0.0,
+    "games": 4
+   },
+   "gemini_carbon": {
+    "points": 4.0,
+    "games": 4
+   },
+   "gemini_hydrogen": {
+    "points": 3.5,
+    "games": 4
+   },
+   "qwen": {
+    "points": 4.0,
+    "games": 4
+   },
+   "deepseek": {
+    "points": 4.0,
+    "games": 4
+   },
+   "kimi": {
+    "points": 4.0,
+    "games": 4
+   },
+   "doubao": {
+    "points": 4.0,
+    "games": 4
+   },
+   "ernie": {
+    "points": 4.0,
+    "games": 4
+   }
+  },
+  "gemini_carbon": {
+   "sol": {
+    "points": 0.0,
+    "games": 4
+   },
+   "fable": {
+    "points": 0.0,
+    "games": 4
+   },
+   "gemini_hydrogen": {
+    "points": 2.0,
+    "games": 4
+   },
+   "qwen": {
+    "points": 4.0,
+    "games": 4
+   },
+   "deepseek": {
+    "points": 2.0,
+    "games": 4
+   },
+   "kimi": {
+    "points": 4.0,
+    "games": 4
+   },
+   "doubao": {
+    "points": 4.0,
+    "games": 4
+   },
+   "ernie": {
+    "points": 3.0,
+    "games": 4
+   }
+  },
+  "gemini_hydrogen": {
+   "sol": {
+    "points": 0.0,
+    "games": 4
+   },
+   "fable": {
+    "points": 0.5,
+    "games": 4
+   },
+   "gemini_carbon": {
+    "points": 2.0,
+    "games": 4
+   },
+   "qwen": {
+    "points": 2.0,
+    "games": 4
+   },
+   "deepseek": {
+    "points": 4.0,
+    "games": 4
+   },
+   "kimi": {
+    "points": 4.0,
+    "games": 4
+   },
+   "doubao": {
+    "points": 4.0,
+    "games": 4
+   },
+   "ernie": {
+    "points": 4.0,
+    "games": 4
+   }
+  },
+  "qwen": {
+   "sol": {
+    "points": 0.0,
+    "games": 4
+   },
+   "fable": {
+    "points": 0.0,
+    "games": 4
+   },
+   "gemini_carbon": {
+    "points": 0.0,
+    "games": 4
+   },
+   "gemini_hydrogen": {
+    "points": 2.0,
+    "games": 4
+   },
+   "deepseek": {
+    "points": 0.0,
+    "games": 4
+   },
+   "kimi": {
+    "points": 1.5,
+    "games": 4
+   },
+   "doubao": {
+    "points": 4.0,
+    "games": 4
+   },
+   "ernie": {
+    "points": 4.0,
+    "games": 4
+   }
+  },
+  "deepseek": {
+   "sol": {
+    "points": 0.0,
+    "games": 4
+   },
+   "fable": {
+    "points": 0.0,
+    "games": 4
+   },
+   "gemini_carbon": {
+    "points": 2.0,
+    "games": 4
+   },
+   "gemini_hydrogen": {
+    "points": 0.0,
+    "games": 4
+   },
+   "qwen": {
+    "points": 4.0,
+    "games": 4
+   },
+   "kimi": {
+    "points": 2.0,
+    "games": 4
+   },
+   "doubao": {
+    "points": 4.0,
+    "games": 4
+   },
+   "ernie": {
+    "points": 4.0,
+    "games": 4
+   }
+  },
+  "kimi": {
+   "sol": {
+    "points": 0.0,
+    "games": 4
+   },
+   "fable": {
+    "points": 0.0,
+    "games": 4
+   },
+   "gemini_carbon": {
+    "points": 0.0,
+    "games": 4
+   },
+   "gemini_hydrogen": {
+    "points": 0.0,
+    "games": 4
+   },
+   "qwen": {
+    "points": 2.5,
+    "games": 4
+   },
+   "deepseek": {
+    "points": 2.0,
+    "games": 4
+   },
+   "doubao": {
+    "points": 3.0,
+    "games": 4
+   },
+   "ernie": {
+    "points": 2.0,
+    "games": 4
+   }
+  },
+  "doubao": {
+   "sol": {
+    "points": 0.0,
+    "games": 4
+   },
+   "fable": {
+    "points": 0.0,
+    "games": 4
+   },
+   "gemini_carbon": {
+    "points": 0.0,
+    "games": 4
+   },
+   "gemini_hydrogen": {
+    "points": 0.0,
+    "games": 4
+   },
+   "qwen": {
+    "points": 0.0,
+    "games": 4
+   },
+   "deepseek": {
+    "points": 0.0,
+    "games": 4
+   },
+   "kimi": {
+    "points": 1.0,
+    "games": 4
+   },
+   "ernie": {
+    "points": 0.0,
+    "games": 4
+   }
+  },
+  "ernie": {
+   "sol": {
+    "points": 0.0,
+    "games": 4
+   },
+   "fable": {
+    "points": 0.0,
+    "games": 4
+   },
+   "gemini_carbon": {
+    "points": 1.0,
+    "games": 4
+   },
+   "gemini_hydrogen": {
+    "points": 0.0,
+    "games": 4
+   },
+   "qwen": {
+    "points": 0.0,
+    "games": 4
+   },
+   "deepseek": {
+    "points": 0.0,
+    "games": 4
+   },
+   "kimi": {
+    "points": 2.0,
+    "games": 4
+   },
+   "doubao": {
+    "points": 4.0,
+    "games": 4
+   }
+  }
+ },
+ "engine_errors": []
+}

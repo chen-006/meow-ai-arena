@@ -1,0 +1,110 @@
+{
+ "id": 108,
+ "mode": "duel",
+ "map": "河心洲",
+ "map_file": "kit/maps/河心洲.json",
+ "steps": 5400,
+ "secs": 90.0,
+ "winner": 1,
+ "reason": "timeout_zone",
+ "digest": "e93c34cc44ee50ec",
+ "teams": [
+  {
+   "team": 0,
+   "start_units": 23,
+   "start_cost": 990,
+   "alive_units": 9,
+   "alive_cost": 270,
+   "zone_cost": 0,
+   "kill_cost": 300,
+   "lost_cost": 720,
+   "eliminated_step": -1
+  },
+  {
+   "team": 1,
+   "start_units": 13,
+   "start_cost": 1000,
+   "alive_units": 2,
+   "alive_cost": 700,
+   "zone_cost": 700,
+   "kill_cost": 685,
+   "lost_cost": 300,
+   "eliminated_step": -1
+  }
+ ],
+ "seats": [
+  {
+   "seat": 0,
+   "name": "gemini_hydrogen",
+   "deploy": "sealed/gemini_hydrogen/submission/duel.json",
+   "deploy_cost": 990,
+   "deploy_ok": true,
+   "orders": 4222,
+   "ignored_orders": 0,
+   "deploy_errors": [],
+   "faults": [],
+   "faults_total": 0
+  },
+  {
+   "seat": 1,
+   "name": "gemini_carbon",
+   "deploy": "sealed/gemini_carbon/submission/duel.json",
+   "deploy_cost": 1000,
+   "deploy_ok": true,
+   "orders": 1654,
+   "ignored_orders": 0,
+   "deploy_errors": [],
+   "faults": [],
+   "faults_total": 0
+  }
+ ],
+ "commanders": [
+  {
+   "seat": 0,
+   "used": true,
+   "status": "ok",
+   "dead_step": -1,
+   "timeouts": 0,
+   "invalid": 0,
+   "first_ms": 4.7,
+   "avg_ms": 0.038,
+   "max_ms": 0.13,
+   "cpu_total_ms": 52.6
+  },
+  {
+   "seat": 1,
+   "used": true,
+   "status": "ok",
+   "dead_step": -1,
+   "timeouts": 0,
+   "invalid": 0,
+   "first_ms": 4.9,
+   "avg_ms": 0.037,
+   "max_ms": 0.14,
+   "cpu_total_ms": 53.1
+  }
+ ],
+ "stats": {
+  "kills": 25,
+  "knocks": 25,
+  "topples": 0,
+  "spont_topples": 0,
+  "getups": 10,
+  "fell": 0,
+  "drown": 6,
+  "hits": 226,
+  "blocks": 0,
+  "friendly_fire": 54,
+  "braces": 0,
+  "charges": 0,
+  "explosions": 1,
+  "arrows": 334,
+  "stones": 0,
+  "climbs": 0,
+  "tunnel_unit_steps": 0,
+  "explode_steps": 0,
+  "max_speed": 12.62,
+  "t_phys": 0.498,
+  "t_logic": 0.156
+ }
+}

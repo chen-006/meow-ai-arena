@@ -1,0 +1,110 @@
+{
+ "id": 139,
+ "mode": "duel",
+ "map": "河心洲",
+ "map_file": "kit/maps/河心洲.json",
+ "steps": 4772,
+ "secs": 79.53,
+ "winner": 0,
+ "reason": "annihilation",
+ "digest": "c9bd4328ba6d929d",
+ "teams": [
+  {
+   "team": 0,
+   "start_units": 23,
+   "start_cost": 990,
+   "alive_units": 9,
+   "alive_cost": 270,
+   "zone_cost": 0,
+   "kill_cost": 925,
+   "lost_cost": 720,
+   "eliminated_step": -1
+  },
+  {
+   "team": 1,
+   "start_units": 26,
+   "start_cost": 1000,
+   "alive_units": 0,
+   "alive_cost": 0,
+   "zone_cost": 0,
+   "kill_cost": 720,
+   "lost_cost": 1000,
+   "eliminated_step": 4772
+  }
+ ],
+ "seats": [
+  {
+   "seat": 0,
+   "name": "gemini_hydrogen",
+   "deploy": "sealed/gemini_hydrogen/submission/duel.json",
+   "deploy_cost": 990,
+   "deploy_ok": true,
+   "orders": 4679,
+   "ignored_orders": 0,
+   "deploy_errors": [],
+   "faults": [],
+   "faults_total": 0
+  },
+  {
+   "seat": 1,
+   "name": "kimi",
+   "deploy": "sealed/kimi/submission/duel.json",
+   "deploy_cost": 1000,
+   "deploy_ok": true,
+   "orders": 849,
+   "ignored_orders": 0,
+   "deploy_errors": [],
+   "faults": [],
+   "faults_total": 0
+  }
+ ],
+ "commanders": [
+  {
+   "seat": 0,
+   "used": true,
+   "status": "ok",
+   "dead_step": -1,
+   "timeouts": 0,
+   "invalid": 0,
+   "first_ms": 4.92,
+   "avg_ms": 0.048,
+   "max_ms": 0.14,
+   "cpu_total_ms": 57.0
+  },
+  {
+   "seat": 1,
+   "used": true,
+   "status": "ok",
+   "dead_step": -1,
+   "timeouts": 0,
+   "invalid": 0,
+   "first_ms": 5.15,
+   "avg_ms": 0.048,
+   "max_ms": 0.17,
+   "cpu_total_ms": 57.8
+  }
+ ],
+ "stats": {
+  "kills": 40,
+  "knocks": 28,
+  "topples": 0,
+  "spont_topples": 0,
+  "getups": 20,
+  "fell": 0,
+  "drown": 8,
+  "hits": 332,
+  "blocks": 23,
+  "friendly_fire": 4,
+  "braces": 0,
+  "charges": 0,
+  "explosions": 1,
+  "arrows": 351,
+  "stones": 0,
+  "climbs": 2,
+  "tunnel_unit_steps": 0,
+  "explode_steps": 0,
+  "max_speed": 15.41,
+  "t_phys": 0.335,
+  "t_logic": 0.478
+ }
+}

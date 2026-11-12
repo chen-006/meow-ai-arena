@@ -1,0 +1,110 @@
+{
+ "id": 78,
+ "mode": "duel",
+ "map": "樱丘",
+ "map_file": "kit/maps/樱丘.json",
+ "steps": 4996,
+ "secs": 83.27,
+ "winner": 1,
+ "reason": "annihilation",
+ "digest": "92951bf161280a1c",
+ "teams": [
+  {
+   "team": 0,
+   "start_units": 13,
+   "start_cost": 1000,
+   "alive_units": 0,
+   "alive_cost": 0,
+   "zone_cost": 0,
+   "kill_cost": 440,
+   "lost_cost": 1000,
+   "eliminated_step": 4996
+  },
+  {
+   "team": 1,
+   "start_units": 13,
+   "start_cost": 1000,
+   "alive_units": 8,
+   "alive_cost": 560,
+   "zone_cost": 560,
+   "kill_cost": 1000,
+   "lost_cost": 440,
+   "eliminated_step": -1
+  }
+ ],
+ "seats": [
+  {
+   "seat": 0,
+   "name": "gemini_carbon",
+   "deploy": "sealed/gemini_carbon/submission/duel.json",
+   "deploy_cost": 1000,
+   "deploy_ok": true,
+   "orders": 1019,
+   "ignored_orders": 0,
+   "deploy_errors": [],
+   "faults": [],
+   "faults_total": 0
+  },
+  {
+   "seat": 1,
+   "name": "fable",
+   "deploy": "sealed/fable/submission/duel.json",
+   "deploy_cost": 1000,
+   "deploy_ok": true,
+   "orders": 279,
+   "ignored_orders": 0,
+   "deploy_errors": [],
+   "faults": [],
+   "faults_total": 0
+  }
+ ],
+ "commanders": [
+  {
+   "seat": 0,
+   "used": true,
+   "status": "ok",
+   "dead_step": -1,
+   "timeouts": 0,
+   "invalid": 0,
+   "first_ms": 4.95,
+   "avg_ms": 0.035,
+   "max_ms": 0.09,
+   "cpu_total_ms": 48.0
+  },
+  {
+   "seat": 1,
+   "used": true,
+   "status": "ok",
+   "dead_step": -1,
+   "timeouts": 0,
+   "invalid": 0,
+   "first_ms": 5.22,
+   "avg_ms": 0.041,
+   "max_ms": 0.16,
+   "cpu_total_ms": 53.1
+  }
+ ],
+ "stats": {
+  "kills": 18,
+  "knocks": 14,
+  "topples": 0,
+  "spont_topples": 0,
+  "getups": 12,
+  "fell": 0,
+  "drown": 0,
+  "hits": 347,
+  "blocks": 0,
+  "friendly_fire": 53,
+  "braces": 0,
+  "charges": 0,
+  "explosions": 0,
+  "arrows": 277,
+  "stones": 0,
+  "climbs": 56,
+  "tunnel_unit_steps": 0,
+  "explode_steps": 0,
+  "max_speed": 14.78,
+  "t_phys": 0.541,
+  "t_logic": 0.063
+ }
+}

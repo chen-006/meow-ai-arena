@@ -1,0 +1,105 @@
+{
+ "id": 26,
+ "mode": "level",
+ "map": "第3关_拔炮台",
+ "map_file": "kit/levels/第3关_拔炮台.json",
+ "steps": 4313,
+ "secs": 71.88,
+ "winner": 0,
+ "reason": "win:eliminate",
+ "passed": true,
+ "digest": "1e4ea42b80e6edbf",
+ "teams": [
+  {
+   "team": 0,
+   "start_units": 15,
+   "start_cost": 425,
+   "alive_units": 9,
+   "alive_cost": 275,
+   "zone_cost": 0,
+   "kill_cost": 1230,
+   "lost_cost": 150,
+   "eliminated_step": -1
+  },
+  {
+   "team": 1,
+   "start_units": 37,
+   "start_cost": 1260,
+   "alive_units": 0,
+   "alive_cost": 0,
+   "zone_cost": 0,
+   "kill_cost": 150,
+   "lost_cost": 1260,
+   "eliminated_step": 4313
+  }
+ ],
+ "seats": [
+  {
+   "seat": 0,
+   "name": "ernie",
+   "deploy": "sealed/ernie/submission/level3.json",
+   "deploy_cost": 425,
+   "deploy_ok": true,
+   "orders": 0,
+   "ignored_orders": 0,
+   "deploy_errors": [],
+   "faults": [],
+   "faults_total": 0
+  }
+ ],
+ "level_info": {
+  "flags": [],
+  "tags": {
+   "炮台": {
+    "alive": 0,
+    "total": 3
+   },
+   "墙头": {
+    "alive": 0,
+    "total": 10
+   },
+   "小路": {
+    "alive": 0,
+    "total": 2
+   }
+  },
+  "terrain_removed": 0
+ },
+ "commanders": [
+  {
+   "seat": 0,
+   "used": true,
+   "status": "ok",
+   "dead_step": -1,
+   "timeouts": 0,
+   "invalid": 0,
+   "first_ms": 4.85,
+   "avg_ms": 0.049,
+   "max_ms": 0.14,
+   "cpu_total_ms": 54.5
+  }
+ ],
+ "stats": {
+  "kills": 43,
+  "knocks": 41,
+  "topples": 2,
+  "spont_topples": 1,
+  "getups": 23,
+  "fell": 0,
+  "drown": 0,
+  "hits": 321,
+  "blocks": 121,
+  "friendly_fire": 25,
+  "braces": 0,
+  "charges": 0,
+  "explosions": 0,
+  "arrows": 118,
+  "stones": 27,
+  "climbs": 146,
+  "tunnel_unit_steps": 0,
+  "explode_steps": 0,
+  "max_speed": 13.32,
+  "t_phys": 0.447,
+  "t_logic": 0.484
+ }
+}

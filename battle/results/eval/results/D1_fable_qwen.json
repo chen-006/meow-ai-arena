@@ -1,0 +1,110 @@
+{
+ "id": 87,
+ "mode": "duel",
+ "map": "河心洲",
+ "map_file": "kit/maps/河心洲.json",
+ "steps": 5400,
+ "secs": 90.0,
+ "winner": 0,
+ "reason": "timeout_zone",
+ "digest": "862a34c325ebd3bf",
+ "teams": [
+  {
+   "team": 0,
+   "start_units": 13,
+   "start_cost": 1000,
+   "alive_units": 7,
+   "alive_cost": 530,
+   "zone_cost": 530,
+   "kill_cost": 620,
+   "lost_cost": 470,
+   "eliminated_step": -1
+  },
+  {
+   "team": 1,
+   "start_units": 12,
+   "start_cost": 1000,
+   "alive_units": 1,
+   "alive_cost": 350,
+   "zone_cost": 350,
+   "kill_cost": 470,
+   "lost_cost": 650,
+   "eliminated_step": -1
+  }
+ ],
+ "seats": [
+  {
+   "seat": 0,
+   "name": "fable",
+   "deploy": "sealed/fable/submission/duel.json",
+   "deploy_cost": 1000,
+   "deploy_ok": true,
+   "orders": 117,
+   "ignored_orders": 0,
+   "deploy_errors": [],
+   "faults": [],
+   "faults_total": 0
+  },
+  {
+   "seat": 1,
+   "name": "qwen",
+   "deploy": "sealed/qwen/submission/duel.json",
+   "deploy_cost": 1000,
+   "deploy_ok": true,
+   "orders": 1239,
+   "ignored_orders": 0,
+   "deploy_errors": [],
+   "faults": [],
+   "faults_total": 0
+  }
+ ],
+ "commanders": [
+  {
+   "seat": 0,
+   "used": true,
+   "status": "ok",
+   "dead_step": -1,
+   "timeouts": 0,
+   "invalid": 0,
+   "first_ms": 4.55,
+   "avg_ms": 0.036,
+   "max_ms": 0.13,
+   "cpu_total_ms": 50.2
+  },
+  {
+   "seat": 1,
+   "used": true,
+   "status": "ok",
+   "dead_step": -1,
+   "timeouts": 0,
+   "invalid": 0,
+   "first_ms": 4.32,
+   "avg_ms": 0.03,
+   "max_ms": 0.11,
+   "cpu_total_ms": 44.4
+  }
+ ],
+ "stats": {
+  "kills": 17,
+  "knocks": 13,
+  "topples": 0,
+  "spont_topples": 0,
+  "getups": 8,
+  "fell": 0,
+  "drown": 6,
+  "hits": 255,
+  "blocks": 0,
+  "friendly_fire": 12,
+  "braces": 0,
+  "charges": 0,
+  "explosions": 0,
+  "arrows": 243,
+  "stones": 0,
+  "climbs": 0,
+  "tunnel_unit_steps": 0,
+  "explode_steps": 0,
+  "max_speed": 12.9,
+  "t_phys": 0.479,
+  "t_logic": 0.106
+ }
+}

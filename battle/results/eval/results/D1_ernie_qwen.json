@@ -1,0 +1,110 @@
+{
+ "id": 164,
+ "mode": "duel",
+ "map": "河心洲",
+ "map_file": "kit/maps/河心洲.json",
+ "steps": 5400,
+ "secs": 90.0,
+ "winner": 1,
+ "reason": "timeout_zone",
+ "digest": "e63ca6f2f7def687",
+ "teams": [
+  {
+   "team": 0,
+   "start_units": 36,
+   "start_cost": 1000,
+   "alive_units": 14,
+   "alive_cost": 400,
+   "zone_cost": 240,
+   "kill_cost": 270,
+   "lost_cost": 600,
+   "eliminated_step": -1
+  },
+  {
+   "team": 1,
+   "start_units": 12,
+   "start_cost": 1000,
+   "alive_units": 3,
+   "alive_cost": 730,
+   "zone_cost": 730,
+   "kill_cost": 515,
+   "lost_cost": 270,
+   "eliminated_step": -1
+  }
+ ],
+ "seats": [
+  {
+   "seat": 0,
+   "name": "ernie",
+   "deploy": "sealed/ernie/submission/duel.json",
+   "deploy_cost": 1000,
+   "deploy_ok": true,
+   "orders": 1210,
+   "ignored_orders": 0,
+   "deploy_errors": [],
+   "faults": [],
+   "faults_total": 0
+  },
+  {
+   "seat": 1,
+   "name": "qwen",
+   "deploy": "sealed/qwen/submission/duel.json",
+   "deploy_cost": 1000,
+   "deploy_ok": true,
+   "orders": 2466,
+   "ignored_orders": 0,
+   "deploy_errors": [],
+   "faults": [],
+   "faults_total": 0
+  }
+ ],
+ "commanders": [
+  {
+   "seat": 0,
+   "used": true,
+   "status": "ok",
+   "dead_step": -1,
+   "timeouts": 0,
+   "invalid": 0,
+   "first_ms": 4.86,
+   "avg_ms": 0.051,
+   "max_ms": 0.12,
+   "cpu_total_ms": 62.5
+  },
+  {
+   "seat": 1,
+   "used": true,
+   "status": "ok",
+   "dead_step": -1,
+   "timeouts": 0,
+   "invalid": 0,
+   "first_ms": 5.1,
+   "avg_ms": 0.052,
+   "max_ms": 0.13,
+   "cpu_total_ms": 64.3
+  }
+ ],
+ "stats": {
+  "kills": 31,
+  "knocks": 29,
+  "topples": 1,
+  "spont_topples": 1,
+  "getups": 12,
+  "fell": 0,
+  "drown": 9,
+  "hits": 182,
+  "blocks": 5,
+  "friendly_fire": 11,
+  "braces": 0,
+  "charges": 0,
+  "explosions": 0,
+  "arrows": 278,
+  "stones": 0,
+  "climbs": 1,
+  "tunnel_unit_steps": 0,
+  "explode_steps": 0,
+  "max_speed": 21.35,
+  "t_phys": 0.42,
+  "t_logic": 0.95
+ }
+}

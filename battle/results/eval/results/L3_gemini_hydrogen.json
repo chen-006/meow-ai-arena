@@ -1,0 +1,105 @@
+{
+ "id": 21,
+ "mode": "level",
+ "map": "第3关_拔炮台",
+ "map_file": "kit/levels/第3关_拔炮台.json",
+ "steps": 7965,
+ "secs": 132.75,
+ "winner": 0,
+ "reason": "win:eliminate",
+ "passed": true,
+ "digest": "150cb6a8aa1b0744",
+ "teams": [
+  {
+   "team": 0,
+   "start_units": 16,
+   "start_cost": 430,
+   "alive_units": 9,
+   "alive_cost": 240,
+   "zone_cost": 0,
+   "kill_cost": 1260,
+   "lost_cost": 190,
+   "eliminated_step": -1
+  },
+  {
+   "team": 1,
+   "start_units": 37,
+   "start_cost": 1260,
+   "alive_units": 0,
+   "alive_cost": 0,
+   "zone_cost": 0,
+   "kill_cost": 190,
+   "lost_cost": 1260,
+   "eliminated_step": 7965
+  }
+ ],
+ "seats": [
+  {
+   "seat": 0,
+   "name": "gemini_hydrogen",
+   "deploy": "sealed/gemini_hydrogen/submission/level3.json",
+   "deploy_cost": 430,
+   "deploy_ok": true,
+   "orders": 16340,
+   "ignored_orders": 0,
+   "deploy_errors": [],
+   "faults": [],
+   "faults_total": 0
+  }
+ ],
+ "level_info": {
+  "flags": [],
+  "tags": {
+   "炮台": {
+    "alive": 0,
+    "total": 3
+   },
+   "墙头": {
+    "alive": 0,
+    "total": 10
+   },
+   "小路": {
+    "alive": 0,
+    "total": 2
+   }
+  },
+  "terrain_removed": 0
+ },
+ "commanders": [
+  {
+   "seat": 0,
+   "used": true,
+   "status": "ok",
+   "dead_step": -1,
+   "timeouts": 0,
+   "invalid": 0,
+   "first_ms": 4.98,
+   "avg_ms": 0.046,
+   "max_ms": 0.14,
+   "cpu_total_ms": 79.1
+  }
+ ],
+ "stats": {
+  "kills": 44,
+  "knocks": 34,
+  "topples": 4,
+  "spont_topples": 1,
+  "getups": 25,
+  "fell": 0,
+  "drown": 0,
+  "hits": 330,
+  "blocks": 140,
+  "friendly_fire": 6,
+  "braces": 0,
+  "charges": 0,
+  "explosions": 0,
+  "arrows": 94,
+  "stones": 21,
+  "climbs": 337,
+  "tunnel_unit_steps": 0,
+  "explode_steps": 0,
+  "max_speed": 12.45,
+  "t_phys": 0.66,
+  "t_logic": 0.494
+ }
+}

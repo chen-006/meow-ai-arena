@@ -1,0 +1,107 @@
+{
+ "id": 14,
+ "mode": "level",
+ "map": "第2关_断龙桥",
+ "map_file": "kit/levels/第2关_断龙桥.json",
+ "steps": 6130,
+ "secs": 102.17,
+ "winner": 0,
+ "reason": "win:eliminate",
+ "passed": true,
+ "digest": "e5379b878378494c",
+ "teams": [
+  {
+   "team": 0,
+   "start_units": 4,
+   "start_cost": 100,
+   "alive_units": 4,
+   "alive_cost": 100,
+   "zone_cost": 0,
+   "kill_cost": 350,
+   "lost_cost": 0,
+   "eliminated_step": -1
+  },
+  {
+   "team": 1,
+   "start_units": 89,
+   "start_cost": 1445,
+   "alive_units": 0,
+   "alive_cost": 0,
+   "zone_cost": 0,
+   "kill_cost": 0,
+   "lost_cost": 1445,
+   "eliminated_step": 6130
+  }
+ ],
+ "seats": [
+  {
+   "seat": 0,
+   "name": "deepseek",
+   "deploy": "sealed/deepseek/submission/level2.json",
+   "deploy_cost": 100,
+   "deploy_ok": true,
+   "orders": 40,
+   "ignored_orders": 0,
+   "deploy_errors": [],
+   "faults": [],
+   "faults_total": 0
+  }
+ ],
+ "level_info": {
+  "flags": [
+   {
+    "id": 1,
+    "hp": 300.0,
+    "tag": "军旗"
+   }
+  ],
+  "tags": {
+   "军旗": {
+    "alive": 1,
+    "total": 1
+   },
+   "桥下火药桶": {
+    "alive": 3,
+    "total": 3
+   }
+  },
+  "terrain_removed": 0
+ },
+ "commanders": [
+  {
+   "seat": 0,
+   "used": true,
+   "status": "ok",
+   "dead_step": -1,
+   "timeouts": 0,
+   "invalid": 0,
+   "first_ms": 4.74,
+   "avg_ms": 0.039,
+   "max_ms": 0.16,
+   "cpu_total_ms": 58.5
+  }
+ ],
+ "stats": {
+  "kills": 89,
+  "knocks": 49,
+  "topples": 0,
+  "spont_topples": 0,
+  "getups": 8,
+  "fell": 30,
+  "drown": 0,
+  "hits": 179,
+  "blocks": 43,
+  "friendly_fire": 84,
+  "braces": 1,
+  "charges": 0,
+  "explosions": 3,
+  "arrows": 0,
+  "stones": 0,
+  "climbs": 0,
+  "tunnel_unit_steps": 0,
+  "explode_steps": 0,
+  "max_speed": 24.8,
+  "t_phys": 0.613,
+  "t_logic": 0.187
+ }
+}

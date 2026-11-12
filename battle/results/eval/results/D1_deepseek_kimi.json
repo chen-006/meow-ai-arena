@@ -1,0 +1,110 @@
+{
+ "id": 167,
+ "mode": "duel",
+ "map": "河心洲",
+ "map_file": "kit/maps/河心洲.json",
+ "steps": 5400,
+ "secs": 90.0,
+ "winner": 1,
+ "reason": "timeout_zone",
+ "digest": "38da5f5823aff5a6",
+ "teams": [
+  {
+   "team": 0,
+   "start_units": 12,
+   "start_cost": 975,
+   "alive_units": 2,
+   "alive_cost": 700,
+   "zone_cost": 0,
+   "kill_cost": 405,
+   "lost_cost": 275,
+   "eliminated_step": -1
+  },
+  {
+   "team": 1,
+   "start_units": 26,
+   "start_cost": 1000,
+   "alive_units": 2,
+   "alive_cost": 380,
+   "zone_cost": 30,
+   "kill_cost": 220,
+   "lost_cost": 620,
+   "eliminated_step": -1
+  }
+ ],
+ "seats": [
+  {
+   "seat": 0,
+   "name": "deepseek",
+   "deploy": "sealed/deepseek/submission/duel.json",
+   "deploy_cost": 975,
+   "deploy_ok": true,
+   "orders": 1084,
+   "ignored_orders": 0,
+   "deploy_errors": [],
+   "faults": [],
+   "faults_total": 0
+  },
+  {
+   "seat": 1,
+   "name": "kimi",
+   "deploy": "sealed/kimi/submission/duel.json",
+   "deploy_cost": 1000,
+   "deploy_ok": true,
+   "orders": 736,
+   "ignored_orders": 0,
+   "deploy_errors": [],
+   "faults": [],
+   "faults_total": 0
+  }
+ ],
+ "commanders": [
+  {
+   "seat": 0,
+   "used": true,
+   "status": "ok",
+   "dead_step": -1,
+   "timeouts": 0,
+   "invalid": 0,
+   "first_ms": 4.67,
+   "avg_ms": 0.034,
+   "max_ms": 0.15,
+   "cpu_total_ms": 49.1
+  },
+  {
+   "seat": 1,
+   "used": true,
+   "status": "ok",
+   "dead_step": -1,
+   "timeouts": 0,
+   "invalid": 0,
+   "first_ms": 5.39,
+   "avg_ms": 0.036,
+   "max_ms": 0.15,
+   "cpu_total_ms": 51.1
+  }
+ ],
+ "stats": {
+  "kills": 34,
+  "knocks": 13,
+  "topples": 0,
+  "spont_topples": 0,
+  "getups": 11,
+  "fell": 0,
+  "drown": 14,
+  "hits": 137,
+  "blocks": 0,
+  "friendly_fire": 12,
+  "braces": 0,
+  "charges": 0,
+  "explosions": 0,
+  "arrows": 78,
+  "stones": 0,
+  "climbs": 1,
+  "tunnel_unit_steps": 0,
+  "explode_steps": 0,
+  "max_speed": 14.85,
+  "t_phys": 0.283,
+  "t_logic": 1.701
+ }
+}

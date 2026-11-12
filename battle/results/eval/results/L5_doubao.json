@@ -1,0 +1,112 @@
+{
+ "id": 43,
+ "mode": "level",
+ "map": "第5关_镇山兽",
+ "map_file": "kit/levels/第5关_镇山兽.json",
+ "steps": 1703,
+ "secs": 28.38,
+ "winner": -1,
+ "reason": "eliminated",
+ "passed": false,
+ "digest": "d0cb56d370789cf1",
+ "teams": [
+  {
+   "team": 0,
+   "start_units": 29,
+   "start_cost": 500,
+   "alive_units": 0,
+   "alive_cost": 0,
+   "zone_cost": 0,
+   "kill_cost": 365,
+   "lost_cost": 500,
+   "eliminated_step": 1703
+  },
+  {
+   "team": 1,
+   "start_units": 19,
+   "start_cost": 800,
+   "alive_units": 8,
+   "alive_cost": 350,
+   "zone_cost": 0,
+   "kill_cost": 500,
+   "lost_cost": 450,
+   "eliminated_step": -1
+  }
+ ],
+ "seats": [
+  {
+   "seat": 0,
+   "name": "doubao",
+   "deploy": "sealed/doubao/submission/level5.json",
+   "deploy_cost": 500,
+   "deploy_ok": true,
+   "orders": 0,
+   "ignored_orders": 0,
+   "deploy_errors": [],
+   "faults": [],
+   "faults_total": 0
+  }
+ ],
+ "level_info": {
+  "flags": [],
+  "tags": {
+   "镇山兽": {
+    "alive": 1,
+    "total": 1
+   },
+   "护卫": {
+    "alive": 4,
+    "total": 12
+   },
+   "游骑": {
+    "alive": 3,
+    "total": 6
+   },
+   "立石": {
+    "alive": 6,
+    "total": 6
+   }
+  },
+  "boss_hp": 3970.0,
+  "boss_alive": true,
+  "boss_cause": "",
+  "terrain_removed": 0
+ },
+ "commanders": [
+  {
+   "seat": 0,
+   "used": true,
+   "status": "ok",
+   "dead_step": -1,
+   "timeouts": 0,
+   "invalid": 0,
+   "first_ms": 4.28,
+   "avg_ms": 0.051,
+   "max_ms": 0.12,
+   "cpu_total_ms": 31.5
+  }
+ ],
+ "stats": {
+  "kills": 40,
+  "knocks": 19,
+  "topples": 2,
+  "spont_topples": 1,
+  "getups": 14,
+  "fell": 0,
+  "drown": 0,
+  "hits": 249,
+  "blocks": 62,
+  "friendly_fire": 11,
+  "braces": 3,
+  "charges": 10,
+  "explosions": 0,
+  "arrows": 27,
+  "stones": 0,
+  "climbs": 0,
+  "tunnel_unit_steps": 0,
+  "explode_steps": 0,
+  "max_speed": 23.12,
+  "t_phys": 0.246,
+  "t_logic": 0.078
+ }
+}

@@ -1,0 +1,110 @@
+{
+ "id": 57,
+ "mode": "duel",
+ "map": "樱丘",
+ "map_file": "kit/maps/樱丘.json",
+ "steps": 2651,
+ "secs": 44.18,
+ "winner": 0,
+ "reason": "annihilation",
+ "digest": "cbad678c062f9261",
+ "teams": [
+  {
+   "team": 0,
+   "start_units": 35,
+   "start_cost": 1000,
+   "alive_units": 25,
+   "alive_cost": 750,
+   "zone_cost": 750,
+   "kill_cost": 650,
+   "lost_cost": 250,
+   "eliminated_step": -1
+  },
+  {
+   "team": 1,
+   "start_units": 12,
+   "start_cost": 1000,
+   "alive_units": 0,
+   "alive_cost": 0,
+   "zone_cost": 0,
+   "kill_cost": 250,
+   "lost_cost": 1000,
+   "eliminated_step": 2651
+  }
+ ],
+ "seats": [
+  {
+   "seat": 0,
+   "name": "sol",
+   "deploy": "sealed/sol/submission/duel.json",
+   "deploy_cost": 1000,
+   "deploy_ok": true,
+   "orders": 573,
+   "ignored_orders": 0,
+   "deploy_errors": [],
+   "faults": [],
+   "faults_total": 0
+  },
+  {
+   "seat": 1,
+   "name": "qwen",
+   "deploy": "sealed/qwen/submission/duel.json",
+   "deploy_cost": 1000,
+   "deploy_ok": true,
+   "orders": 542,
+   "ignored_orders": 0,
+   "deploy_errors": [],
+   "faults": [],
+   "faults_total": 0
+  }
+ ],
+ "commanders": [
+  {
+   "seat": 0,
+   "used": true,
+   "status": "ok",
+   "dead_step": -1,
+   "timeouts": 0,
+   "invalid": 0,
+   "first_ms": 5.31,
+   "avg_ms": 0.083,
+   "max_ms": 0.21,
+   "cpu_total_ms": 55.3
+  },
+  {
+   "seat": 1,
+   "used": true,
+   "status": "ok",
+   "dead_step": -1,
+   "timeouts": 0,
+   "invalid": 0,
+   "first_ms": 5.1,
+   "avg_ms": 0.05,
+   "max_ms": 0.14,
+   "cpu_total_ms": 40.2
+  }
+ ],
+ "stats": {
+  "kills": 22,
+  "knocks": 7,
+  "topples": 0,
+  "spont_topples": 0,
+  "getups": 4,
+  "fell": 0,
+  "drown": 0,
+  "hits": 317,
+  "blocks": 0,
+  "friendly_fire": 17,
+  "braces": 0,
+  "charges": 0,
+  "explosions": 0,
+  "arrows": 469,
+  "stones": 0,
+  "climbs": 7,
+  "tunnel_unit_steps": 0,
+  "explode_steps": 0,
+  "max_speed": 16.38,
+  "t_phys": 0.262,
+  "t_logic": 0.059
+ }
+}

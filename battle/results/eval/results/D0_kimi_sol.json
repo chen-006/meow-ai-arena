@@ -1,0 +1,110 @@
+{
+ "id": 66,
+ "mode": "duel",
+ "map": "樱丘",
+ "map_file": "kit/maps/樱丘.json",
+ "steps": 5400,
+ "secs": 90.0,
+ "winner": 1,
+ "reason": "timeout_cost",
+ "digest": "d159b94024f96c19",
+ "teams": [
+  {
+   "team": 0,
+   "start_units": 26,
+   "start_cost": 1000,
+   "alive_units": 8,
+   "alive_cost": 200,
+   "zone_cost": 0,
+   "kill_cost": 220,
+   "lost_cost": 800,
+   "eliminated_step": -1
+  },
+  {
+   "team": 1,
+   "start_units": 35,
+   "start_cost": 1000,
+   "alive_units": 26,
+   "alive_cost": 780,
+   "zone_cost": 0,
+   "kill_cost": 800,
+   "lost_cost": 220,
+   "eliminated_step": -1
+  }
+ ],
+ "seats": [
+  {
+   "seat": 0,
+   "name": "kimi",
+   "deploy": "sealed/kimi/submission/duel.json",
+   "deploy_cost": 1000,
+   "deploy_ok": true,
+   "orders": 3791,
+   "ignored_orders": 0,
+   "deploy_errors": [],
+   "faults": [],
+   "faults_total": 0
+  },
+  {
+   "seat": 1,
+   "name": "sol",
+   "deploy": "sealed/sol/submission/duel.json",
+   "deploy_cost": 1000,
+   "deploy_ok": true,
+   "orders": 2763,
+   "ignored_orders": 0,
+   "deploy_errors": [],
+   "faults": [],
+   "faults_total": 0
+  }
+ ],
+ "commanders": [
+  {
+   "seat": 0,
+   "used": true,
+   "status": "ok",
+   "dead_step": -1,
+   "timeouts": 0,
+   "invalid": 0,
+   "first_ms": 5.59,
+   "avg_ms": 0.076,
+   "max_ms": 0.29,
+   "cpu_total_ms": 87.8
+  },
+  {
+   "seat": 1,
+   "used": true,
+   "status": "ok",
+   "dead_step": -1,
+   "timeouts": 0,
+   "invalid": 0,
+   "first_ms": 6.14,
+   "avg_ms": 0.129,
+   "max_ms": 0.41,
+   "cpu_total_ms": 137.6
+  }
+ ],
+ "stats": {
+  "kills": 27,
+  "knocks": 1,
+  "topples": 1,
+  "spont_topples": 0,
+  "getups": 0,
+  "fell": 0,
+  "drown": 0,
+  "hits": 255,
+  "blocks": 0,
+  "friendly_fire": 5,
+  "braces": 0,
+  "charges": 0,
+  "explosions": 0,
+  "arrows": 687,
+  "stones": 0,
+  "climbs": 11,
+  "tunnel_unit_steps": 0,
+  "explode_steps": 0,
+  "max_speed": 12.2,
+  "t_phys": 0.854,
+  "t_logic": 0.143
+ }
+}

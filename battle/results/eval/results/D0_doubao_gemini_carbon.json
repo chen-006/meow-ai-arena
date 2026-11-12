@@ -1,0 +1,110 @@
+{
+ "id": 122,
+ "mode": "duel",
+ "map": "樱丘",
+ "map_file": "kit/maps/樱丘.json",
+ "steps": 3143,
+ "secs": 52.38,
+ "winner": 1,
+ "reason": "annihilation",
+ "digest": "e5dce2098aa4d99f",
+ "teams": [
+  {
+   "team": 0,
+   "start_units": 37,
+   "start_cost": 870,
+   "alive_units": 0,
+   "alive_cost": 0,
+   "zone_cost": 0,
+   "kill_cost": 130,
+   "lost_cost": 870,
+   "eliminated_step": 3143
+  },
+  {
+   "team": 1,
+   "start_units": 13,
+   "start_cost": 1000,
+   "alive_units": 8,
+   "alive_cost": 870,
+   "zone_cost": 30,
+   "kill_cost": 870,
+   "lost_cost": 130,
+   "eliminated_step": -1
+  }
+ ],
+ "seats": [
+  {
+   "seat": 0,
+   "name": "doubao",
+   "deploy": "sealed/doubao/submission/duel.json",
+   "deploy_cost": 870,
+   "deploy_ok": true,
+   "orders": 430,
+   "ignored_orders": 0,
+   "deploy_errors": [],
+   "faults": [],
+   "faults_total": 0
+  },
+  {
+   "seat": 1,
+   "name": "gemini_carbon",
+   "deploy": "sealed/gemini_carbon/submission/duel.json",
+   "deploy_cost": 1000,
+   "deploy_ok": true,
+   "orders": 2192,
+   "ignored_orders": 0,
+   "deploy_errors": [],
+   "faults": [],
+   "faults_total": 0
+  }
+ ],
+ "commanders": [
+  {
+   "seat": 0,
+   "used": true,
+   "status": "ok",
+   "dead_step": -1,
+   "timeouts": 0,
+   "invalid": 0,
+   "first_ms": 5.8,
+   "avg_ms": 0.052,
+   "max_ms": 0.16,
+   "cpu_total_ms": 45.4
+  },
+  {
+   "seat": 1,
+   "used": true,
+   "status": "ok",
+   "dead_step": -1,
+   "timeouts": 0,
+   "invalid": 0,
+   "first_ms": 5.0,
+   "avg_ms": 0.054,
+   "max_ms": 0.15,
+   "cpu_total_ms": 46.9
+  }
+ ],
+ "stats": {
+  "kills": 42,
+  "knocks": 39,
+  "topples": 1,
+  "spont_topples": 1,
+  "getups": 25,
+  "fell": 1,
+  "drown": 0,
+  "hits": 217,
+  "blocks": 13,
+  "friendly_fire": 5,
+  "braces": 0,
+  "charges": 0,
+  "explosions": 0,
+  "arrows": 107,
+  "stones": 3,
+  "climbs": 6,
+  "tunnel_unit_steps": 0,
+  "explode_steps": 0,
+  "max_speed": 26.58,
+  "t_phys": 0.453,
+  "t_logic": 0.09
+ }
+}

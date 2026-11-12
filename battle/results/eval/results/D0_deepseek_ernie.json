@@ -1,0 +1,110 @@
+{
+ "id": 173,
+ "mode": "duel",
+ "map": "樱丘",
+ "map_file": "kit/maps/樱丘.json",
+ "steps": 3116,
+ "secs": 51.93,
+ "winner": 0,
+ "reason": "annihilation",
+ "digest": "c4fe8f18f578342e",
+ "teams": [
+  {
+   "team": 0,
+   "start_units": 12,
+   "start_cost": 975,
+   "alive_units": 7,
+   "alive_cost": 850,
+   "zone_cost": 120,
+   "kill_cost": 1000,
+   "lost_cost": 125,
+   "eliminated_step": -1
+  },
+  {
+   "team": 1,
+   "start_units": 36,
+   "start_cost": 1000,
+   "alive_units": 0,
+   "alive_cost": 0,
+   "zone_cost": 0,
+   "kill_cost": 125,
+   "lost_cost": 1000,
+   "eliminated_step": 3116
+  }
+ ],
+ "seats": [
+  {
+   "seat": 0,
+   "name": "deepseek",
+   "deploy": "sealed/deepseek/submission/duel.json",
+   "deploy_cost": 975,
+   "deploy_ok": true,
+   "orders": 119,
+   "ignored_orders": 0,
+   "deploy_errors": [],
+   "faults": [],
+   "faults_total": 0
+  },
+  {
+   "seat": 1,
+   "name": "ernie",
+   "deploy": "sealed/ernie/submission/duel.json",
+   "deploy_cost": 1000,
+   "deploy_ok": true,
+   "orders": 111,
+   "ignored_orders": 0,
+   "deploy_errors": [],
+   "faults": [],
+   "faults_total": 0
+  }
+ ],
+ "commanders": [
+  {
+   "seat": 0,
+   "used": true,
+   "status": "ok",
+   "dead_step": -1,
+   "timeouts": 0,
+   "invalid": 0,
+   "first_ms": 4.8,
+   "avg_ms": 0.053,
+   "max_ms": 0.12,
+   "cpu_total_ms": 45.9
+  },
+  {
+   "seat": 1,
+   "used": true,
+   "status": "ok",
+   "dead_step": -1,
+   "timeouts": 0,
+   "invalid": 0,
+   "first_ms": 4.8,
+   "avg_ms": 0.05,
+   "max_ms": 0.12,
+   "cpu_total_ms": 45.4
+  }
+ ],
+ "stats": {
+  "kills": 41,
+  "knocks": 38,
+  "topples": 1,
+  "spont_topples": 1,
+  "getups": 24,
+  "fell": 1,
+  "drown": 0,
+  "hits": 288,
+  "blocks": 5,
+  "friendly_fire": 8,
+  "braces": 0,
+  "charges": 0,
+  "explosions": 0,
+  "arrows": 283,
+  "stones": 0,
+  "climbs": 0,
+  "tunnel_unit_steps": 0,
+  "explode_steps": 0,
+  "max_speed": 25.88,
+  "t_phys": 0.27,
+  "t_logic": 0.064
+ }
+}

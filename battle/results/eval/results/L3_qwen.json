@@ -1,0 +1,105 @@
+{
+ "id": 22,
+ "mode": "level",
+ "map": "第3关_拔炮台",
+ "map_file": "kit/levels/第3关_拔炮台.json",
+ "steps": 5419,
+ "secs": 90.32,
+ "winner": -1,
+ "reason": "eliminated",
+ "passed": false,
+ "digest": "66eae46573fd68c1",
+ "teams": [
+  {
+   "team": 0,
+   "start_units": 16,
+   "start_cost": 430,
+   "alive_units": 0,
+   "alive_cost": 0,
+   "zone_cost": 0,
+   "kill_cost": 910,
+   "lost_cost": 430,
+   "eliminated_step": 5419
+  },
+  {
+   "team": 1,
+   "start_units": 37,
+   "start_cost": 1260,
+   "alive_units": 13,
+   "alive_cost": 325,
+   "zone_cost": 0,
+   "kill_cost": 430,
+   "lost_cost": 935,
+   "eliminated_step": -1
+  }
+ ],
+ "seats": [
+  {
+   "seat": 0,
+   "name": "qwen",
+   "deploy": "sealed/qwen/submission/level3.json",
+   "deploy_cost": 430,
+   "deploy_ok": true,
+   "orders": 2847,
+   "ignored_orders": 0,
+   "deploy_errors": [],
+   "faults": [],
+   "faults_total": 0
+  }
+ ],
+ "level_info": {
+  "flags": [],
+  "tags": {
+   "炮台": {
+    "alive": 0,
+    "total": 3
+   },
+   "墙头": {
+    "alive": 0,
+    "total": 10
+   },
+   "小路": {
+    "alive": 0,
+    "total": 2
+   }
+  },
+  "terrain_removed": 0
+ },
+ "commanders": [
+  {
+   "seat": 0,
+   "used": true,
+   "status": "ok",
+   "dead_step": -1,
+   "timeouts": 0,
+   "invalid": 0,
+   "first_ms": 4.87,
+   "avg_ms": 0.054,
+   "max_ms": 0.17,
+   "cpu_total_ms": 67.4
+  }
+ ],
+ "stats": {
+  "kills": 40,
+  "knocks": 15,
+  "topples": 1,
+  "spont_topples": 0,
+  "getups": 13,
+  "fell": 0,
+  "drown": 0,
+  "hits": 284,
+  "blocks": 103,
+  "friendly_fire": 15,
+  "braces": 0,
+  "charges": 0,
+  "explosions": 0,
+  "arrows": 191,
+  "stones": 22,
+  "climbs": 306,
+  "tunnel_unit_steps": 0,
+  "explode_steps": 0,
+  "max_speed": 14.65,
+  "t_phys": 0.533,
+  "t_logic": 0.478
+ }
+}

@@ -1,0 +1,107 @@
+{
+ "id": 12,
+ "mode": "level",
+ "map": "第2关_断龙桥",
+ "map_file": "kit/levels/第2关_断龙桥.json",
+ "steps": 3705,
+ "secs": 61.75,
+ "winner": 0,
+ "reason": "win:eliminate",
+ "passed": true,
+ "digest": "ec96a0b057e93080",
+ "teams": [
+  {
+   "team": 0,
+   "start_units": 10,
+   "start_cost": 290,
+   "alive_units": 3,
+   "alive_cost": 95,
+   "zone_cost": 0,
+   "kill_cost": 695,
+   "lost_cost": 195,
+   "eliminated_step": -1
+  },
+  {
+   "team": 1,
+   "start_units": 89,
+   "start_cost": 1445,
+   "alive_units": 0,
+   "alive_cost": 0,
+   "zone_cost": 0,
+   "kill_cost": 125,
+   "lost_cost": 1445,
+   "eliminated_step": 3705
+  }
+ ],
+ "seats": [
+  {
+   "seat": 0,
+   "name": "gemini_hydrogen",
+   "deploy": "sealed/gemini_hydrogen/submission/level2.json",
+   "deploy_cost": 290,
+   "deploy_ok": true,
+   "orders": 3702,
+   "ignored_orders": 0,
+   "deploy_errors": [],
+   "faults": [],
+   "faults_total": 0
+  }
+ ],
+ "level_info": {
+  "flags": [
+   {
+    "id": 1,
+    "hp": 300.0,
+    "tag": "军旗"
+   }
+  ],
+  "tags": {
+   "军旗": {
+    "alive": 1,
+    "total": 1
+   },
+   "桥下火药桶": {
+    "alive": 0,
+    "total": 3
+   }
+  },
+  "terrain_removed": 1
+ },
+ "commanders": [
+  {
+   "seat": 0,
+   "used": true,
+   "status": "ok",
+   "dead_step": -1,
+   "timeouts": 0,
+   "invalid": 0,
+   "first_ms": 5.56,
+   "avg_ms": 0.048,
+   "max_ms": 0.17,
+   "cpu_total_ms": 48.7
+  }
+ ],
+ "stats": {
+  "kills": 96,
+  "knocks": 63,
+  "topples": 2,
+  "spont_topples": 1,
+  "getups": 20,
+  "fell": 48,
+  "drown": 0,
+  "hits": 228,
+  "blocks": 74,
+  "friendly_fire": 43,
+  "braces": 0,
+  "charges": 0,
+  "explosions": 6,
+  "arrows": 24,
+  "stones": 0,
+  "climbs": 18,
+  "tunnel_unit_steps": 0,
+  "explode_steps": 0,
+  "max_speed": 22.39,
+  "t_phys": 0.383,
+  "t_logic": 0.197
+ }
+}

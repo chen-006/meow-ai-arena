@@ -1,0 +1,110 @@
+{
+ "id": 56,
+ "mode": "duel",
+ "map": "河心洲",
+ "map_file": "kit/maps/河心洲.json",
+ "steps": 4265,
+ "secs": 71.08,
+ "winner": 1,
+ "reason": "annihilation",
+ "digest": "f0a49dd10cf2927f",
+ "teams": [
+  {
+   "team": 0,
+   "start_units": 23,
+   "start_cost": 990,
+   "alive_units": 0,
+   "alive_cost": 0,
+   "zone_cost": 0,
+   "kill_cost": 330,
+   "lost_cost": 990,
+   "eliminated_step": 4265
+  },
+  {
+   "team": 1,
+   "start_units": 35,
+   "start_cost": 1000,
+   "alive_units": 19,
+   "alive_cost": 570,
+   "zone_cost": 30,
+   "kill_cost": 990,
+   "lost_cost": 430,
+   "eliminated_step": -1
+  }
+ ],
+ "seats": [
+  {
+   "seat": 0,
+   "name": "gemini_hydrogen",
+   "deploy": "sealed/gemini_hydrogen/submission/duel.json",
+   "deploy_cost": 990,
+   "deploy_ok": true,
+   "orders": 5736,
+   "ignored_orders": 0,
+   "deploy_errors": [],
+   "faults": [],
+   "faults_total": 0
+  },
+  {
+   "seat": 1,
+   "name": "sol",
+   "deploy": "sealed/sol/submission/duel.json",
+   "deploy_cost": 1000,
+   "deploy_ok": true,
+   "orders": 2519,
+   "ignored_orders": 0,
+   "deploy_errors": [],
+   "faults": [],
+   "faults_total": 0
+  }
+ ],
+ "commanders": [
+  {
+   "seat": 0,
+   "used": true,
+   "status": "ok",
+   "dead_step": -1,
+   "timeouts": 0,
+   "invalid": 0,
+   "first_ms": 5.44,
+   "avg_ms": 0.058,
+   "max_ms": 0.21,
+   "cpu_total_ms": 59.1
+  },
+  {
+   "seat": 1,
+   "used": true,
+   "status": "ok",
+   "dead_step": -1,
+   "timeouts": 0,
+   "invalid": 0,
+   "first_ms": 5.15,
+   "avg_ms": 0.118,
+   "max_ms": 0.42,
+   "cpu_total_ms": 102.4
+  }
+ ],
+ "stats": {
+  "kills": 39,
+  "knocks": 4,
+  "topples": 0,
+  "spont_topples": 0,
+  "getups": 2,
+  "fell": 0,
+  "drown": 5,
+  "hits": 296,
+  "blocks": 17,
+  "friendly_fire": 1,
+  "braces": 1,
+  "charges": 0,
+  "explosions": 1,
+  "arrows": 512,
+  "stones": 0,
+  "climbs": 0,
+  "tunnel_unit_steps": 0,
+  "explode_steps": 0,
+  "max_speed": 14.15,
+  "t_phys": 0.53,
+  "t_logic": 0.135
+ }
+}

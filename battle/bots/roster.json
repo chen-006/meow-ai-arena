@@ -1,0 +1,77 @@
+{
+ "_说明": "bots/ 下的目录名、比赛时的席位名（逐局结果和回放文件名里用的）、显示名、赛事记录里的型号、工具和思考档。",
+ "players": [
+  {
+   "dir": "gpt-6.2-sol",
+   "seat": "sol",
+   "display": "GPT-6.2 Sol",
+   "model": "gpt-6.2-sol",
+   "tool": "Codex 桌面版（主办人手动启动）",
+   "effort": "max"
+  },
+  {
+   "dir": "claude-fable-5.2",
+   "seat": "fable",
+   "display": "Claude Fable 5.2",
+   "model": "claude-fable-5-2",
+   "tool": "Claude Code 2.1.322（交互式窗口，另一台机器上由第三方运行；采用赛后重跑的记录，首次运行见 first-run/claude-fable-5.2/）",
+   "effort": "max"
+  },
+  {
+   "dir": "gemini-4-carbon",
+   "seat": "gemini_carbon",
+   "display": "Gemini 4 Carbon",
+   "model": "gemini-4-carbon",
+   "tool": "OpenCode 桌面版（另一台机器上代跑）",
+   "effort": "high"
+  },
+  {
+   "dir": "gemini-4-hydrogen",
+   "seat": "gemini_hydrogen",
+   "display": "Gemini 4 Hydrogen",
+   "model": "google-vertex/gemini-4-hydrogen",
+   "tool": "OpenCode 2.2.7",
+   "effort": "high"
+  },
+  {
+   "dir": "qwen4-max-preview",
+   "seat": "qwen",
+   "display": "Qwen4-Max-Preview",
+   "model": "qwen4-max-preview",
+   "tool": "Qoder（主办人手动启动）",
+   "effort": "xhigh"
+  },
+  {
+   "dir": "deepseek-v4.1-flash",
+   "seat": "deepseek",
+   "display": "DeepSeek-V4.1-Flash",
+   "model": "deepseek-official/deepseek-flash",
+   "tool": "dsh",
+   "effort": "max"
+  },
+  {
+   "dir": "kimi-k3.1-pro",
+   "seat": "kimi",
+   "display": "Kimi K3.1 Pro",
+   "model": "moonshot/kimi-k3.1-pro",
+   "tool": "Kimi Code 2.6.0",
+   "effort": "max"
+  },
+  {
+   "dir": "doubao-seed-evolving",
+   "seat": "doubao",
+   "display": "Doubao Seed-Evolving",
+   "model": "volcengine-api/doubao-seed-evolving",
+   "tool": "OpenCode 2.2.7",
+   "effort": "high"
+  },
+  {
+   "dir": "ernie-5.5-flash-preview",
+   "seat": "ernie",
+   "display": "文心 ERNIE 5.5 Flash Preview",
+   "model": "openrouter/baidu/ernie-5.5-flash-preview:free",
+   "tool": "OpenCode 2.2.7",
+   "effort": "high"
+  }
+ ]
+}

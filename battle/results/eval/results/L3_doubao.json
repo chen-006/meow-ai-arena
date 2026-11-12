@@ -1,0 +1,105 @@
+{
+ "id": 25,
+ "mode": "level",
+ "map": "第3关_拔炮台",
+ "map_file": "kit/levels/第3关_拔炮台.json",
+ "steps": 9000,
+ "secs": 150.0,
+ "winner": -1,
+ "reason": "timeout_lose",
+ "passed": false,
+ "digest": "c5874c8af7e794c2",
+ "teams": [
+  {
+   "team": 0,
+   "start_units": 32,
+   "start_cost": 450,
+   "alive_units": 30,
+   "alive_cost": 400,
+   "zone_cost": 0,
+   "kill_cost": 0,
+   "lost_cost": 50,
+   "eliminated_step": -1
+  },
+  {
+   "team": 1,
+   "start_units": 37,
+   "start_cost": 1260,
+   "alive_units": 37,
+   "alive_cost": 1260,
+   "zone_cost": 0,
+   "kill_cost": 50,
+   "lost_cost": 0,
+   "eliminated_step": -1
+  }
+ ],
+ "seats": [
+  {
+   "seat": 0,
+   "name": "doubao",
+   "deploy": "sealed/doubao/submission/level3.json",
+   "deploy_cost": 450,
+   "deploy_ok": true,
+   "orders": 0,
+   "ignored_orders": 0,
+   "deploy_errors": [],
+   "faults": [],
+   "faults_total": 0
+  }
+ ],
+ "level_info": {
+  "flags": [],
+  "tags": {
+   "炮台": {
+    "alive": 3,
+    "total": 3
+   },
+   "墙头": {
+    "alive": 10,
+    "total": 10
+   },
+   "小路": {
+    "alive": 2,
+    "total": 2
+   }
+  },
+  "terrain_removed": 0
+ },
+ "commanders": [
+  {
+   "seat": 0,
+   "used": true,
+   "status": "ok",
+   "dead_step": -1,
+   "timeouts": 0,
+   "invalid": 0,
+   "first_ms": 5.56,
+   "avg_ms": 0.053,
+   "max_ms": 0.17,
+   "cpu_total_ms": 99.7
+  }
+ ],
+ "stats": {
+  "kills": 2,
+  "knocks": 0,
+  "topples": 0,
+  "spont_topples": 0,
+  "getups": 0,
+  "fell": 0,
+  "drown": 0,
+  "hits": 51,
+  "blocks": 46,
+  "friendly_fire": 0,
+  "braces": 0,
+  "charges": 0,
+  "explosions": 0,
+  "arrows": 56,
+  "stones": 0,
+  "climbs": 0,
+  "tunnel_unit_steps": 0,
+  "explode_steps": 0,
+  "max_speed": 0.51,
+  "t_phys": 0.675,
+  "t_logic": 0.62
+ }
+}
