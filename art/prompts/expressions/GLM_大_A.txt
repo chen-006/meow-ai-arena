@@ -1,0 +1,25 @@
+EXPRESSION SHEET of one existing character: GLM (Zhipu / Z.ai), the adult elder-sister version, from an anime-style AI character series.
+
+REFERENCE IMAGES (both show this exact character, the official approved illustration):
+- Image 1: her head and upper body, close-up. Image 2: her full figure.
+Reproduce her identity exactly in every panel: the same face, eye color, hair color, hairstyle and bangs, the same large brand-logo hair ornament on the same side of the head with its satin bow (same shape, colors and size relative to the head), and the same outfit collar, ribbons and sleeves. Only the facial expression and a small amount of upper-body gesture (hands, head tilt) change.
+
+Design details (for reference):
+- Hair: very long wavy black hair, slightly messy as if just woken up, one big ahoge.
+- On her head: a white frilly sleep mask with closed-eye lashes drawn on it, pushed up onto her forehead; and on one side the logo as a large BLACK rounded-square hair clip with the white Z mark and a thin white outline (clearly readable), with a small black ribbon.
+- Outfit: cozy academy style in black and white, not a long dress: a white collared shirt with a loose black ribbon tie; a very oversized long black knit cardigan with white stripes on the cuffs and hem, slipping off one shoulder, sleeves covering her hands; a short white pleated skirt with one black stripe, just visible below the cardigan; black tights and black loafers. One small royal-blue enamel pin on the cardigan as the only color accent.
+
+LAYOUT (strict):
+A clean 3 columns x 2 rows grid of six separate bust portraits (head and shoulders down to mid-chest) of this same character on a fully transparent background. All six busts are the same size and the same scale, each centered in its own equal cell, the head at the same height in every cell, facing the viewer. Each bust ends at mid-chest with a clean straight horizontal cut. Leave clear empty transparent space between neighboring busts; nothing overlaps or crosses into another cell, hair and hands stay inside their own cell. No grid lines, no panel borders, no frames, no background color, no text, no labels, no speech bubbles, no floating symbols or effects (tears and sweat drops stay on the skin), no extra props.
+
+THE SIX PANELS, left to right, top row then bottom row:
+1. (top row, left) NEUTRAL: her calm default expression, relaxed face, faint gentle smile, looking at the viewer.
+2. (top row, middle) HAPPY: a bright, open-mouthed joyful smile, eyes curved happily, head tilted slightly.
+3. (top row, right) SMUG / PROUD: a confident smug grin, eyes half-closed, chin raised, one hand lightly on her hip or chest.
+4. (bottom row, left) ANGRY: furrowed eyebrows, glaring, cheeks puffed or teeth clenched, clearly annoyed but still cute.
+5. (bottom row, middle) SAD: teary eyes, a few tears on her cheeks, trembling down-turned mouth, inner eyebrows raised.
+6. (bottom row, right) SHOCKED: eyes wide open with small pupils, mouth wide open, leaning back slightly, both hands raised near her face.
+
+[ART STYLE] Exactly the same rendering as the reference illustration: polished Japanese anime gacha-game official art, fine clean crisp lineart tinted darker than each local color (never heavy black outlines), soft cel shading with two to three tone steps, hair in clearly separated strands with long thin highlights, large expressive eyes with luminous lower iris and white catchlights, soft light from the upper left, bright airy clean palette with medium-high saturation. Expressions are clear and readable like anime reaction faces, but the face stays on-model (not chibi, not super-deformed). Not painterly, not realistic, not 3D.
+
+[MODESTY] Wholesome and age-appropriate, modest high neckline as in the reference, hands anatomically correct with five fingers.

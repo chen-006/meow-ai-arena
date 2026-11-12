@@ -1,0 +1,24 @@
+Character: "GLM" (Zhipu), little-sister version, a very sleepy little genius of about 10. Eyes half closed, tiny yawn.
+
+REFERENCE IMAGES:
+- Image 1 is the approved NEW illustration of this character's adult elder-sister version. The little sister is the SAME character as a child: same hair color, same eye color, same brand-logo accessory, and a child-sized variant of the SAME outfit concept, as described below.
+- Image 2 is the previous little-sister illustration of this character: use it ONLY for her face, age, hairstyle and child body proportions. Do NOT reuse its old white tiered dress.
+- Image 3 is a finished little-sister character from the same series (a different character): match its rendering and child proportions (about 4.7 heads tall). Image 4 is an additional style reference. Do NOT copy their hair, colors or outfits.
+
+Design:
+- Hair: black, wavy and a little messy, same hairstyle as image 2, one big ahoge.
+- On her head: a white frilly sleep mask pushed up on her forehead, and on one side the logo as a large BLACK rounded-square hair clip with the white Z mark and thin white outline (clearly readable).
+- Outfit: a white collared shirt with a loose black ribbon tie; a hugely oversized black knit cardigan with white stripes on cuffs and hem that reaches her knees, sleeves completely covering her hands; a short white pleated skirt barely visible; black tights and black loafers; one small royal-blue enamel pin.
+- Pose: rubbing one eye with a covered sleeve, the other arm hugging a small white pillow (the single allowed item).
+
+[ART STYLE - identical for every character in this series]
+Polished Japanese anime gacha-game official character illustration (tachie), same artist and same batch as the reference series. Fine, clean, crisp lineart with gentle line-weight variation; lines tinted a darker shade of each local color (warm brown on skin, deeper hair color on hair), never heavy black outlines. Soft cel shading with two to three tone steps per color, crisp shadow shapes with a narrow soft gradient at the edge. Hair drawn in clearly separated strands with long thin streak highlights. Large expressive eyes: iris darker at top, lighter and luminous at bottom, two or three white catchlights, thicker upper lash line, light lower lashes. Light comes softly from the upper left; overall bright, airy and clean, no strong backlight, no rim light, no dramatic shadows. Medium-high saturation with clear, confident contrast between lit and shadow tones; crisp, well-defined lineart; clean bright palette, never washed-out, never muddy or gray. Costume details (frills, lace trim, pleats, ribbons, buttons, stitching) rendered clearly and neatly while large color areas stay readable. Not painterly, not realistic, not 3D, not chibi, no watercolor bleed.
+
+[SERIES DESIGN LANGUAGE]
+Hair in the brand color. The company's brand logo appears as ONE clearly readable accessory worn on the head or hair (as described for this character). Every character in this series has her OWN distinct outfit type, skirt length and silhouette, exactly as described above: do NOT default to a long white tiered frilly dress, and do not add extra bows and ruffles that are not described.
+
+[OUTPUT AND FRAMING]
+Exactly one character. Full-body standing pose, facing the viewer or turned slightly (under 30 degrees), face toward the viewer, both feet flat on the ground. The entire figure from the top of the hair and hair ornament down to the soles of the shoes is fully inside the frame, horizontally centered, figure height about 88% of the image height, with clear empty margins on all four sides; nothing touches the image edges. Plain empty background: nothing else in the picture - no floor, no cast shadow, no scenery, no props other than the single small item explicitly listed in the character description, no floating particles, sparkles, petals or light effects, no text, no logo text, no signature, no watermark. Clean, well-defined silhouette edges suitable for a cut-out character asset.
+
+[MODESTY]
+Wholesome, elegant and age-appropriate. High or modest neckline, no cleavage, no slits, nothing revealing, relaxed natural pose. Hands relaxed and anatomically correct with five fingers each. No weapons.

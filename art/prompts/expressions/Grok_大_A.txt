@@ -1,0 +1,25 @@
+EXPRESSION SHEET of one existing character: Grok (xAI), the adult elder-sister version, from an anime-style AI character series.
+
+REFERENCE IMAGES (both show this exact character, the official approved illustration):
+- Image 1: her head and upper body, close-up. Image 2: her full figure.
+Reproduce her identity exactly in every panel: the same face, eye color, hair color, hairstyle and bangs, the same large brand-logo hair ornament on the same side of the head with its satin bow (same shape, colors and size relative to the head), and the same outfit collar, ribbons and sleeves. Only the facial expression and a small amount of upper-body gesture (hands, head tilt) change.
+
+Design details (for reference):
+- Hair: golden blond hair in two high twin tails with big loose drill curls reaching her waist, tied with black ribbons; sharp side-swept bangs.
+- Hair ornament: the Grok logo (black circle with a white slash-through-ring mark) as a large glossy hair clip on one side, clearly readable.
+- Outfit: BLACK-dominant gothic-punk, not a white dress: a black short-sleeved high-collar dress with a white frilled jabot and a thin black ribbon at the neck, fitted waist with a black corset belt with silver buckles, and a short flared skirt ending above the knee with two layers of white lace petticoat showing at the hem; a cropped black leather-look jacket worn open with silver studs on the collar; a black choker; one black-and-white striped thigh-high sock and one solid black thigh-high sock; chunky black platform boots with silver buckles; black fingerless gloves.
+
+LAYOUT (strict):
+A clean 3 columns x 2 rows grid of six separate bust portraits (head and shoulders down to mid-chest) of this same character on a fully transparent background. All six busts are the same size and the same scale, each centered in its own equal cell, the head at the same height in every cell, facing the viewer. Each bust ends at mid-chest with a clean straight horizontal cut. Leave clear empty transparent space between neighboring busts; nothing overlaps or crosses into another cell, hair and hands stay inside their own cell. No grid lines, no panel borders, no frames, no background color, no text, no labels, no speech bubbles, no floating symbols or effects (tears and sweat drops stay on the skin), no extra props.
+
+THE SIX PANELS, left to right, top row then bottom row:
+1. (top row, left) NEUTRAL: her calm default expression, relaxed face, faint gentle smile, looking at the viewer.
+2. (top row, middle) HAPPY: a bright, open-mouthed joyful smile, eyes curved happily, head tilted slightly.
+3. (top row, right) SMUG / PROUD: a confident smug grin, eyes half-closed, chin raised, one hand lightly on her hip or chest.
+4. (bottom row, left) ANGRY: furrowed eyebrows, glaring, cheeks puffed or teeth clenched, clearly annoyed but still cute.
+5. (bottom row, middle) SAD: teary eyes, a few tears on her cheeks, trembling down-turned mouth, inner eyebrows raised.
+6. (bottom row, right) SHOCKED: eyes wide open with small pupils, mouth wide open, leaning back slightly, both hands raised near her face.
+
+[ART STYLE] Exactly the same rendering as the reference illustration: polished Japanese anime gacha-game official art, fine clean crisp lineart tinted darker than each local color (never heavy black outlines), soft cel shading with two to three tone steps, hair in clearly separated strands with long thin highlights, large expressive eyes with luminous lower iris and white catchlights, soft light from the upper left, bright airy clean palette with medium-high saturation. Expressions are clear and readable like anime reaction faces, but the face stays on-model (not chibi, not super-deformed). Not painterly, not realistic, not 3D.
+
+[MODESTY] Wholesome and age-appropriate, modest high neckline as in the reference, hands anatomically correct with five fingers.

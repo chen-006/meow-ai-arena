@@ -1,0 +1,25 @@
+Character: "MiMo" (Xiaomi), adult elder-sister version, about 20, energetic, bright and tech-savvy, a gadget-loving girl. Big grin, winking.
+
+REFERENCE IMAGES:
+- Image 1 is the current approved illustration of this character. Keep her IDENTITY: same face, same eye color, same hair color, same skin tone, same apparent age and body proportions, and exactly the same art style and rendering quality. REDESIGN her hairstyle details, outfit and pose as described below. Do NOT reuse the old long white tiered dress.
+- The remaining images are style references from the same series (other characters, plus a logo image where noted): match their line weight, coloring and level of detail; do NOT copy their hair, colors or outfits.
+
+- One of the other images is the Xiaomi logo: shape reference for the logo hair clip.
+
+Design:
+- Hair: short fluffy chestnut-brown bob with flipped-out ends and messy bangs.
+- Hair ornament: the Xiaomi logo (orange rounded square with the white mark) as a large glossy hair clip on one side, clearly readable.
+- Outfit: sporty tech streetwear, not a dress: an oversized white zip-up hoodie jacket with orange panels on the sleeves and an orange lining, its hood (worn down on her back) has two long floppy white BUNNY EARS with orange inner sides hanging from it; under it a simple orange T-shirt tucked into high-waisted white shorts with an orange belt; white-and-orange over-knee socks with two stripes; chunky white-and-orange sneakers; a pair of white wireless headphones resting around her neck; a slim orange smart band on one wrist.
+- Pose: making a peace sign beside her eye with one hand, the other hand in her hoodie pocket, one foot kicked back slightly.
+
+[ART STYLE - identical for every character in this series]
+Polished Japanese anime gacha-game official character illustration (tachie), same artist and same batch as the reference series. Fine, clean, crisp lineart with gentle line-weight variation; lines tinted a darker shade of each local color (warm brown on skin, deeper hair color on hair), never heavy black outlines. Soft cel shading with two to three tone steps per color, crisp shadow shapes with a narrow soft gradient at the edge. Hair drawn in clearly separated strands with long thin streak highlights. Large expressive eyes: iris darker at top, lighter and luminous at bottom, two or three white catchlights, thicker upper lash line, light lower lashes. Light comes softly from the upper left; overall bright, airy and clean, no strong backlight, no rim light, no dramatic shadows. Medium-high saturation with clear, confident contrast between lit and shadow tones; crisp, well-defined lineart; clean bright palette, never washed-out, never muddy or gray. Costume details (frills, lace trim, pleats, ribbons, buttons, stitching) rendered clearly and neatly while large color areas stay readable. Not painterly, not realistic, not 3D, not chibi, no watercolor bleed.
+
+[SERIES DESIGN LANGUAGE]
+Hair in the brand color. The company's brand logo appears as ONE clearly readable accessory worn on the head or hair (as described for this character). Every character in this series has her OWN distinct outfit type, skirt length and silhouette, exactly as described above: do NOT default to a long white tiered frilly dress, and do not add extra bows and ruffles that are not described.
+
+[OUTPUT AND FRAMING]
+Exactly one character. Full-body standing pose, facing the viewer or turned slightly (under 30 degrees), face toward the viewer, both feet flat on the ground. The entire figure from the top of the hair and hair ornament down to the soles of the shoes is fully inside the frame, horizontally centered, figure height about 88% of the image height, with clear empty margins on all four sides; nothing touches the image edges. Plain empty background: nothing else in the picture - no floor, no cast shadow, no scenery, no props other than the single small item explicitly listed in the character description, no floating particles, sparkles, petals or light effects, no text, no logo text, no signature, no watermark. Clean, well-defined silhouette edges suitable for a cut-out character asset.
+
+[MODESTY]
+Wholesome, elegant and age-appropriate. High or modest neckline, no cleavage, no slits, nothing revealing, relaxed natural pose. Hands relaxed and anatomically correct with five fingers each. No weapons.

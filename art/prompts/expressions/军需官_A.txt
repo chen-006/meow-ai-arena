@@ -1,0 +1,25 @@
+EXPRESSION SHEET of one existing character: "the Quartermaster", the show's own host mascot (a cheeky, smug little supply officer of about 12 in an oversized olive military coat), from an anime-style character series.
+
+REFERENCE IMAGES (both show this exact character, the official approved illustration):
+- Image 1: her head and upper body, close-up. Image 2: her full figure.
+Reproduce her identity exactly in every panel: the same face, emerald-green eyes, golden-blonde hair with long wavy twin tails and blunt bangs, the two round gold coin-with-a-square-hole hair ties, the same oversized olive peaked cap with a dark-red band and a gold coin badge (same shape, colors and size relative to the head, always worn), and the same outfit: olive greatcoat draped over the shoulders, olive jacket with gold buttons, white collar, dark-red necktie, brown cross strap. She keeps one small fang visible whenever her mouth is open. Only the facial expression and a small amount of upper-body gesture (hands, head tilt) change.
+
+Design details (for reference):
+- Hair: bright golden-blonde long twin tails, slightly wavy, straight blunt bangs with one small ahoge; each twin tail tied with a gold coin-shaped hair tie (round with a square hole).
+- Eyes: vivid emerald green.
+- Outfit: oversized olive-drab greatcoat with gold piping draped over her shoulders like a cape; fitted olive high-collared jacket with gold buttons, white shirt collar, dark-red necktie, brown leather cross strap; an olive peaked officer cap one size too big, dark-red band, single gold coin-with-a-square-hole badge. No real-world insignia.
+
+LAYOUT (strict):
+A clean 3 columns x 2 rows grid of six separate bust portraits (head and shoulders down to mid-chest) of this same character on a fully transparent background. All six busts are the same size and the same scale, each centered in its own equal cell, the head at the same height in every cell, facing the viewer. Each bust ends at mid-chest with a clean straight horizontal cut. Leave clear empty transparent space between neighboring busts; nothing overlaps or crosses into another cell, hair and hands stay inside their own cell. No grid lines, no panel borders, no frames, no background color, no text, no labels, no speech bubbles, no floating symbols or effects (tears and sweat drops stay on the skin), no extra props other than the wooden abacus with gold beads where a panel explicitly mentions it.
+
+THE SIX PANELS, left to right, top row then bottom row:
+1. (top row, left) DEFAULT SMIRK: her usual cheeky half-smile, one eyebrow slightly raised, looking at the viewer as if sizing up their wallet.
+2. (top row, middle) MOCKING GIGGLE: one hand raised in front of her mouth, laughing at someone, eyes narrowed into teasing crescents, a small fang showing, shoulders shaking.
+3. (top row, right) SMUG / TRIUMPHANT: chin lifted high, eyes closed in satisfaction, a wide proud grin with a fang, one hand on her chest.
+4. (bottom row, left) ANGRY: stomping-mad, eyebrows sharply furrowed, cheeks puffed and flushed, mouth open shouting with a fang, cap slightly askew.
+5. (bottom row, middle) SHOCKED / LOST HER COMPOSURE: eyes wide open with tiny pupils, jaw dropped, face pale, both hands grabbing the brim of her cap, cap knocked crooked.
+6. (bottom row, right) TEARY SULK: big watery eyes with tears gathering, lower lip pushed out in a pout, cheeks red, looking up from under the cap brim, clearly a sore loser.
+
+[ART STYLE] Exactly the same rendering as the reference illustration: polished Japanese anime gacha-game official art, fine clean crisp lineart tinted darker than each local color (never heavy black outlines), soft cel shading with two to three tone steps, hair in clearly separated strands with long thin highlights, large expressive eyes with luminous lower iris and white catchlights, soft light from the upper left, bright airy clean palette with medium-high saturation. Expressions are clear and readable like anime reaction faces, but the face stays on-model (not chibi, not super-deformed). Not painterly, not realistic, not 3D.
+
+[MODESTY] Wholesome and age-appropriate, modest high neckline as in the reference, hands anatomically correct with five fingers.

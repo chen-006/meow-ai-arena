@@ -1,0 +1,25 @@
+Character: "Gemini", adult elder-sister version.
+
+REFERENCE IMAGES:
+- Image 1 is the APPROVED final illustration of this exact character. Redraw the SAME character: same face, same hair color and hairstyle, same outfit, same colors, same pose, same proportions, same rendering style, full body, same framing. Change ONLY what is listed under 'Design changes' below.
+- The remaining images are style references from the same series (other characters): match their line weight, coloring and level of detail; do NOT copy their hair, colors or outfits.
+
+Design changes:
+- She is now a CAT GIRL: a pair of large fluffy cat ears on top of her head, the fur matching the hair color at the top of her head (coral red to orange) with soft white inner fur; the ears are clearly cat ears, perky and expressive.
+- A long fluffy cat tail visible behind her, curling upward to one side, colored with the same rainbow gradient as her hair (orange near the base to sky blue at the tip).
+- One small cute fang visible in her teasing smile.
+- A small golden bell hanging from the yellow ribbon bow at her collar.
+- Keep the four-pointed Gemini sparkle star hair ornament on the side of her head, placed below the cat ear so the two do not overlap; it may be slightly smaller than before.
+- No human ears visible (hair covers the sides of the head).
+
+[ART STYLE - identical for every character in this series]
+Polished Japanese anime gacha-game official character illustration (tachie), same artist and same batch as the reference series. Fine, clean, crisp lineart with gentle line-weight variation; lines tinted a darker shade of each local color (warm brown on skin, deeper hair color on hair), never heavy black outlines. Soft cel shading with two to three tone steps per color, crisp shadow shapes with a narrow soft gradient at the edge. Hair drawn in clearly separated strands with long thin streak highlights. Large expressive eyes: iris darker at top, lighter and luminous at bottom, two or three white catchlights, thicker upper lash line, light lower lashes. Light comes softly from the upper left; overall bright, airy and clean, no strong backlight, no rim light, no dramatic shadows. Medium-high saturation with clear, confident contrast between lit and shadow tones; crisp, well-defined lineart; clean bright palette, never washed-out, never muddy or gray. Costume details (frills, lace trim, pleats, ribbons, buttons, stitching) rendered clearly and neatly while large color areas stay readable. Not painterly, not realistic, not 3D, not chibi, no watercolor bleed.
+
+[SERIES DESIGN LANGUAGE]
+Hair in the brand color. On ONE side of the head, a large, clearly readable hair ornament shaped exactly like the company's brand logo, with a satin bow attached to it. Outfit is predominantly white, accented with brand-color satin ribbons, sashes and ruffled / frilled trim.
+
+[OUTPUT AND FRAMING]
+Exactly one character. Full-body standing pose, facing the viewer or turned slightly (under 30 degrees), face toward the viewer, both feet flat on the ground. The entire figure from the top of the hair and hair ornament down to the soles of the shoes is fully inside the frame, horizontally centered, figure height about 88% of the image height, with clear empty margins on all four sides; nothing touches the image edges. Plain empty background: nothing else in the picture - no floor, no cast shadow, no scenery, no props, no floating particles, sparkles, petals or light effects, no text, no logo text, no signature, no watermark. Clean, well-defined silhouette edges suitable for a cut-out character asset.
+
+[MODESTY]
+Wholesome, elegant and age-appropriate. High or modest neckline, no cleavage, no slits, nothing revealing, relaxed natural pose. Hands relaxed and anatomically correct with five fingers each. No weapons.

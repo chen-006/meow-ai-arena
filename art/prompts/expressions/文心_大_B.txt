@@ -1,0 +1,26 @@
+EXPRESSION SHEET of one existing character: ERNIE (Baidu Wenxin Yiyan), the adult elder-sister version, from an anime-style AI character series.
+
+REFERENCE IMAGES (both show this exact character, the official approved illustration):
+- Image 1: her head and upper body, close-up. Image 2: her full figure.
+Reproduce her identity exactly in every panel: the same face, eye color, hair color, hairstyle and bangs, the same large brand-logo hair ornament on the same side of the head with its satin bow (same shape, colors and size relative to the head), and the same outfit collar, ribbons and sleeves. Only the facial expression and a small amount of upper-body gesture (hands, head tilt) change.
+
+Design details (for reference):
+- Hair: vivid azure-blue hair fading to deeper royal blue at the tips, shoulder-length straight bob with neat blunt bangs; on top of her head two small round hair buns placed like round bear ears (they are hair buns, not animal ears), each tied with a thin white ribbon.
+- Hair ornament: the ERNIE logo as a large glossy hair clip on one side of her head: an azure-blue hexagon with the white open-cube shape and dark-blue center dot, clearly readable.
+- Eyes: bright golden amber.
+- Outfit: a smart young-detective look in azure blue, white and navy, not a long dress: a crisp white shirt with a navy ribbon tie held by a small hexagon pin; a short shoulder cape (Inverness-style capelet) in azure-and-white houndstooth check with navy trim, fastened with two gold buttons; a navy high-waisted pleated culotte skirt ending above the knee with thin white suspenders; white knee socks with a single azure stripe and brown leather loafers; a small brown leather satchel worn across the body.
+
+LAYOUT (strict):
+A clean 3 columns x 2 rows grid of six separate bust portraits (head and shoulders down to mid-chest) of this same character on a fully transparent background. All six busts are the same size and the same scale, each centered in its own equal cell, the head at the same height in every cell, facing the viewer. Each bust ends at mid-chest with a clean straight horizontal cut. Leave clear empty transparent space between neighboring busts; nothing overlaps or crosses into another cell, hair and hands stay inside their own cell. No grid lines, no panel borders, no frames, no background color, no text, no labels, no speech bubbles, no floating symbols or effects (tears and sweat drops stay on the skin), no extra props.
+
+THE SIX PANELS, left to right, top row then bottom row:
+1. (top row, left) SPEECHLESS / UNIMPRESSED: flat deadpan half-lidded stare, small straight-line mouth, completely unimpressed.
+2. (top row, middle) THINKING: one hand on her chin, eyes looking up and to the side, slight frown of concentration.
+3. (top row, right) DROOLING: dreamy blissful face as if imagining something delicious, mouth slightly open, a small drop of drool at the corner of her mouth.
+4. (bottom row, left) HIT BY A BASIN: a shiny silver stainless-steel mixing bowl sits upside-down on top of her head like a helmet, slightly askew; she looks dazed and aggrieved, teary-eyed, as if it just fell on her head. The bowl is the only prop.
+5. (bottom row, middle) AWKWARD LAUGH: a forced, embarrassed smile, eyebrows slanted, one hand scratching her cheek or the back of her head, a single sweat drop on her temple.
+6. (bottom row, right) SLEEPY: drowsy half-closed eyes, yawning with one hand covering her mouth, head tilted to one side.
+
+[ART STYLE] Exactly the same rendering as the reference illustration: polished Japanese anime gacha-game official art, fine clean crisp lineart tinted darker than each local color (never heavy black outlines), soft cel shading with two to three tone steps, hair in clearly separated strands with long thin highlights, large expressive eyes with luminous lower iris and white catchlights, soft light from the upper left, bright airy clean palette with medium-high saturation. Expressions are clear and readable like anime reaction faces, but the face stays on-model (not chibi, not super-deformed). Not painterly, not realistic, not 3D.
+
+[MODESTY] Wholesome and age-appropriate, modest high neckline as in the reference, hands anatomically correct with five fingers.
