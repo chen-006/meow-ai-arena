@@ -95,7 +95,7 @@ GPT-6.2 Sol won all 32 of its duels. Free-for-all results (336 battles each: mea
 
 ## Watch / play
 
-**Run locally** (Windows; Python 3.9+, g++; no third-party Python packages):
+**Run locally** (Windows; Python 3.9+, g++; building the simulator also needs cmake 3.20+, ninja and git, and w64devkit ships cmake and ninja; no third-party Python packages):
 
 ```text
 python build_engine.py                 build the simulator into workspace/war.exe (downloads Jolt Physics the first time)

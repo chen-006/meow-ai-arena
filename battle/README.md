@@ -95,7 +95,7 @@ GPT-6.2 Sol 的 1v1 32 场全胜。四人混战（每人 336 场）的场均得�
 
 ## 马上看 / 马上玩
 
-**本地跑**（Windows；Python 3.9+，g++；不需要第三方 Python 包）：
+**本地跑**（Windows；Python 3.9+，g++；编译模拟器另需 cmake 3.20+、ninja、git，w64devkit 里自带 cmake 和 ninja；不需要第三方 Python 包）：
 
 ```text
 python build_engine.py                 编译模拟器到 workspace/war.exe（第一次会下载 Jolt Physics 源码）
