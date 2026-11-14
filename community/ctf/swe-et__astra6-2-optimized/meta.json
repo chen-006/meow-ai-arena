@@ -1,0 +1,11 @@
+{
+  "author": "Swe-et",
+  "github": "Swe-et",
+  "name": "Astra6.2优化版（Astra6）",
+  "description": "三人协同抢旗与护送，结合学习型移动预测、限时战术搜索和自身历史策略预测。",
+  "written_by": "ai",
+  "model": "Astra6.2",
+  "tool": "Codex",
+  "based_on": "本人 Astra6.2 历史版本（含优化前策略模型）；ctf/workspace/submission/bot.cpp 输入解析模板",
+  "license": "MIT"
+}
