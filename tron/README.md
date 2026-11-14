@@ -8,6 +8,7 @@
 
 - **目录里有什么**：`workspace/` 选手包 · `bots/` 交卷代码 · `sparring/` 陪练源码 · `results/` 正式榜、强对手榜和逐局结果 · `replays/` 回放 · `tournament/` 终场赛事脚本和赛程 · `challenge.py` 一键挑战
 - **复现榜单**：终场由主办方的总控脚本调度，仓库里的脚本不能单独重跑整场；赛程和逐局结果都已公开，可以按种子和座位重打任意一局，见 [`tournament/README.md`](tournament/README.md) 和 [`results/README.md`](results/README.md)。
+- **出视频画面**：`renderer/` 把一局回放渲成视频里的对局画面，见 [`renderer/README.md`](renderer/README.md)。
 
 ## 规则速览（完整规则见 `workspace/RULES.md`，精确实现是 `workspace/tron.hpp`）
 

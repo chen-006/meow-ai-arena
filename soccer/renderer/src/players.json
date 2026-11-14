@@ -1,0 +1,33 @@
+{
+  "说明": "第 8 集足球渲染器配置。players：回放 PLAYER 行里的名字 -> 画面上的短名、头像（renderer/assets/avatars/ 下的文件名）、所属队。teams：队名与队色（color 主色；alt 撞色时右边那队改用的备用色）。个人赛回放里的 <名字>·搭档 自动沿用 <名字> 这一行。",
+  "players": {
+    "Grok_4.7":                   {"label": "Grok",     "avatar": "Grok.png",       "team": "team1"},
+    "腾讯混元_Hy4":                {"label": "混元",     "avatar": "混元.png",       "team": "team1"},
+    "Kimi_K3.1_Pro":              {"label": "Kimi",     "avatar": "Kimi.png",       "team": "team2"},
+    "阶跃_Step_5":                {"label": "阶跃",     "avatar": "阶跃.png",       "team": "team2"},
+    "Gemini_4_Argon":             {"label": "Gemini",   "avatar": "Gemini.png",     "team": "team3"},
+    "豆包_Doubao-Seed-Evolving":   {"label": "豆包",     "avatar": "豆包.png",       "team": "team3"},
+    "GPT-6_Astra":                {"label": "Astra",    "avatar": "Astra.png",      "team": "team4"},
+    "GPT-6.1_Terra":              {"label": "Terra",    "avatar": "Terra.png", "team": "team4"},
+    "Claude_Opus_5.5":            {"label": "Opus",     "avatar": "Opus.png",       "team": "team5"},
+    "GLM_5.3":                    {"label": "GLM",      "avatar": "GLM.png",        "team": "team5"},
+    "DeepSeek_V4.1_Flash_1017":   {"label": "DeepSeek", "avatar": "DeepSeek.png",   "team": "team6"},
+    "Claude_Haiku_5.5":           {"label": "Haiku",    "avatar": "Haiku.png",      "team": "team6"},
+    "基准":                        {"label": "基准",     "avatar": "基准.png",       "team": "ref-baseline"},
+    "中档陪练":                    {"label": "中档陪练", "avatar": "基准.png",   "team": "ref-midfield"},
+    "陪练":                        {"label": "陪练",     "avatar": "基准.png",       "team": "ref-sparring"}
+  },
+  "teams": {
+    "team1":        {"name": "Grok × 混元",     "color": "#a855f7", "alt": "#f1f5f9"},
+    "team2":        {"name": "Kimi × 阶跃",     "color": "#22d3ee", "alt": "#f1f5f9"},
+    "team3":        {"name": "Gemini × 豆包",   "color": "#fb923c", "alt": "#f1f5f9"},
+    "team4":        {"name": "Astra × Terra",   "color": "#ef4444", "alt": "#f1f5f9"},
+    "team5":        {"name": "Opus × GLM",      "color": "#facc15", "alt": "#f1f5f9"},
+    "team6":        {"name": "DeepSeek × Haiku","color": "#3b82f6", "alt": "#f1f5f9"},
+    "ref-baseline": {"name": "基准队",          "color": "#94a3b8", "alt": "#f1f5f9"},
+    "ref-midfield": {"name": "中档陪练队",      "color": "#94a3b8", "alt": "#f1f5f9"},
+    "ref-sparring": {"name": "陪练队",          "color": "#94a3b8", "alt": "#f1f5f9"}
+  },
+  "stage_label": "终场赛",
+  "brand": "AI 算法对抗大赛 · 第 8 集"
+}

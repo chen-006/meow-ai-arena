@@ -79,13 +79,13 @@ The whole repository uses a single license: [MIT](../LICENSE). Every category ab
 
 - Code, rules and data: keep the MIT copyright and license notice.
 - Character designs from episode 10 on (illustrations, expression sheets, voxel characters): `Character design: 小叶子XIYZ (Bilibili); art and production: 喵了个猫了个咪了个猫`, with a link to `https://github.com/chen-006/meow-ai-arena`. The new designs are based on 小叶子XIYZ's designs and were made by the show. Per-character notes are in `art/README_en.md` and `characters/CREDITS.md`.
-- The older character designs in the episode 1–9 videos mostly come from the Bilibili creator ZipZipPipe ([profile](https://space.bilibili.com/4168597)); they are not in this repository and are not covered by its license.
+- The older character designs in the episode 1–9 videos mostly come from the Bilibili creator ZipZipPipe ([profile](https://space.bilibili.com/4168597)). The only copies in this repository are the avatars that ship with the earlier episodes' renderers (each `renderer/assets/avatars/`, so the original look can be reproduced); they are not covered by the MIT license, and their credits and restrictions are in the `NOTICE.md` next to them.
 - Model and company names in character names belong to their owners and only indicate which model a character stands for; they do not imply endorsement by or involvement of those companies.
 
 ## Which episodes this applies to
 
 - The full scope applies from episode 10 (*Armchair Generals*, 纸上谈兵) on; the renderer, voxel characters, the new illustrations and expression sheets and the image-generation prompts are published from that episode on, together with its video.
-- Episodes 1–9 will not get a renderer, voxel characters or illustrations retroactively. Their other materials were already published to roughly the same scope; where an episode falls short (for example, a final tournament that can only be re-run in full with the organizer's control script), its README says so in its section on differences from the contest or in its reproduction notes. Old images and notes in those folders stay as they are.
+- The episodes among 1–9 that had a standalone renderer got it added in November 2026: episode 3 (capture the flag), 6 (tanks), 7 (light cycles), 8 (soccer) and 9 (bridges), each under its `renderer/`. Voxel characters and illustrations are not added retroactively. Their other materials were already published to roughly the same scope; where an episode falls short (for example, a final tournament that can only be re-run in full with the organizer's control script), its README says so in its section on differences from the contest or in its reproduction notes. Old images and notes in those folders stay as they are.
 - Voxel characters, illustrations, expression sheets and image-generation prompts are shared across episodes, so they live in the top-level `characters/` and `art/`, and new characters are added there.
 
 ## Folder layout for each episode

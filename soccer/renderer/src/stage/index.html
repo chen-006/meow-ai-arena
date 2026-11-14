@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>足球转播渲染</title>
+<script type="importmap">
+{ "imports": { "three": "/three/build/three.module.js", "three/addons/": "/three/examples/jsm/" } }
+</script>
+<style>
+@font-face { font-family: 'NSC'; src: url('/font/main'), local('Noto Sans SC'), local('Microsoft YaHei'), local('PingFang SC'); font-weight: 100 900; }
+html, body { margin: 0; padding: 0; background: #000; overflow: hidden; }
+body { width: 1920px; height: 1080px; position: relative; font-family: 'NSC', sans-serif; color: #eef2f8; }
+#gl { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; }
+.abs { position: absolute; }
+/* ---------- 比分条 ---------- */
+#bug { left: 56px; top: 44px; height: 64px; display: flex; align-items: stretch; filter: drop-shadow(0 6px 18px rgba(0,0,0,.55)); transform-origin: left center; }
+#bug .side { display: flex; align-items: center; background: linear-gradient(180deg, rgba(22,28,44,.94), rgba(10,13,22,.94)); padding: 0 18px 0 0; position: relative; }
+#bug .side.R { padding: 0 0 0 18px; flex-direction: row-reverse; }
+#bug .chip { width: 10px; align-self: stretch; }
+#bug .avs { display: flex; margin: 0 10px 0 14px; }
+#bug .side.R .avs { margin: 0 14px 0 10px; }
+#bug .av { width: 46px; height: 46px; border-radius: 50%; background-size: cover; background-position: center; border: 3px solid; box-sizing: border-box; margin-left: -8px; background-color: #121a30; }
+#bug .av:first-child { margin-left: 0; }
+#bug .tname { font-size: 28px; font-weight: 800; letter-spacing: .5px; white-space: nowrap; }
+#bug .score { display: flex; align-items: center; justify-content: center; background: #f4f6fa; color: #0b1020; font-weight: 900; font-size: 40px; padding: 0 20px; min-width: 120px; font-variant-numeric: tabular-nums; }
+#bug .score .sep { margin: 0 12px; color: #8a93a8; font-weight: 500; font-size: 30px; }
+#bug .score .n { display: inline-block; min-width: 28px; text-align: center; }
+#bug .clock { display: flex; flex-direction: column; justify-content: center; background: rgba(10,13,22,.94); padding: 0 18px; min-width: 170px; border-left: 1px solid rgba(255,255,255,.08); }
+#bug .clock .t { font-size: 26px; font-weight: 800; font-variant-numeric: tabular-nums; white-space: nowrap; }
+#bug .clock .t small { font-size: 18px; color: #9aa4ba; font-weight: 500; margin-left: 6px; }
+#bug .clock .bar { height: 4px; background: rgba(255,255,255,.14); margin-top: 6px; border-radius: 2px; overflow: hidden; }
+#bug .clock .bar i { display: block; height: 100%; background: #ffce54; }
+#stage { left: 56px; top: 112px; font-size: 19px; color: #c3cad8; background: rgba(10,13,22,.80); padding: 5px 14px; font-weight: 600; letter-spacing: 1px; }
+#live { right: 56px; top: 44px; height: 44px; display: flex; align-items: center; gap: 10px; background: rgba(10,13,22,.86); padding: 0 18px; font-size: 22px; font-weight: 800; letter-spacing: 2px; }
+#live .dot { width: 12px; height: 12px; border-radius: 50%; background: #ff4d4d; box-shadow: 0 0 10px #ff4d4d; }
+#replay { right: 56px; top: 44px; height: 64px; display: flex; align-items: center; gap: 14px; background: linear-gradient(90deg, #ffce54, #ffb020); color: #121212; padding: 0 26px; font-size: 32px; font-weight: 900; letter-spacing: 3px; }
+#replay small { font-size: 20px; font-weight: 700; letter-spacing: 1px; opacity: .8; }
+#replay .rw { font-size: 26px; }
+/* ---------- 进球字幕 ---------- */
+#goal { left: 0; top: 0; width: 1920px; height: 1080px; pointer-events: none; }
+#goal .slab { position: absolute; left: 0; bottom: 120px; height: 210px; width: 1200px; transform-origin: left center; }
+#goal .slab .bg { position: absolute; inset: 0; clip-path: polygon(0 0, 100% 0, calc(100% - 70px) 100%, 0 100%); }
+#goal .slab .bg2 { position: absolute; left: 0; top: 0; bottom: 0; clip-path: polygon(0 0, 100% 0, calc(100% - 70px) 100%, 0 100%); background: rgba(8,10,18,.92); }
+#goal .big { position: absolute; left: 330px; top: 8px; font-size: 118px; font-weight: 900; letter-spacing: 10px; color: #fff; text-shadow: 0 6px 24px rgba(0,0,0,.45); white-space: nowrap; }
+#goal .who { position: absolute; left: 336px; top: 146px; font-size: 38px; font-weight: 800; white-space: nowrap; }
+#goal .who small { font-size: 28px; font-weight: 600; color: #c9d1e2; margin-left: 14px; }
+#goal .gav { position: absolute; left: 90px; bottom: 132px; width: 230px; height: 230px; border-radius: 50%; background-size: cover; background-position: center; border: 8px solid #fff; box-sizing: border-box; background-color: #121a30; box-shadow: 0 10px 30px rgba(0,0,0,.6); }
+#goal .gsc { position: absolute; right: 96px; bottom: 160px; height: 130px; display: flex; align-items: center; padding: 0 96px 0 100px; background: #f4f6fa; color: #0b1020; font-size: 92px; font-weight: 900; clip-path: polygon(60px 0, 100% 0, calc(100% - 60px) 100%, 0 100%); font-variant-numeric: tabular-nums; box-shadow: 0 10px 30px rgba(0,0,0,.5); }
+#goal .gsc .sep { margin: 0 26px; color: #8a93a8; font-weight: 500; font-size: 70px; }
+/* ---------- 转场 ---------- */
+#sting { left: 0; top: 0; width: 1920px; height: 1080px; overflow: hidden; pointer-events: none; }
+#sting .b { position: absolute; top: -200px; height: 1480px; width: 1400px; transform-origin: center; }
+#sting .logo { position: absolute; z-index: 5; left: 50%; top: 50%; transform: translate(-50%, -50%); white-space: nowrap; font-size: 96px; font-weight: 900; letter-spacing: 12px; color: #fff; text-shadow: 0 6px 24px rgba(0,0,0,.45); }
+#fade { left: 0; top: 0; width: 1920px; height: 1080px; background: #000; pointer-events: none; }
+.letterbox { left: 0; width: 1920px; height: 0; background: #000; }
+</style>
+</head>
+<body>
+<canvas id="gl" width="1920" height="1080"></canvas>
+<div id="lbT" class="abs letterbox" style="top:0"></div>
+<div id="lbB" class="abs letterbox" style="bottom:0"></div>
+<div id="bug" class="abs">
+  <div class="side L"><div class="chip"></div><div class="avs"></div><div class="tname"></div></div>
+  <div class="score"><span class="n" id="sL">0</span><span class="sep">-</span><span class="n" id="sR">0</span></div>
+  <div class="side R"><div class="chip"></div><div class="avs"></div><div class="tname"></div></div>
+  <div class="clock"><div class="t" id="clk"></div><div class="bar"><i id="clkbar"></i></div></div>
+</div>
+<div id="stage" class="abs"></div>
+<div id="live" class="abs"><div class="dot"></div><span>LIVE</span></div>
+<div id="replay" class="abs"><span class="rw">◀◀</span><span>回放</span><small id="rpspd">慢动作</small></div>
+<div id="goal" class="abs">
+  <div class="slab"><div class="bg"></div><div class="bg2"></div><div class="big">进球！</div><div class="who"></div></div>
+  <div class="gav"></div>
+  <div class="gsc"><span id="gL">0</span><span class="sep">:</span><span id="gR">0</span></div>
+</div>
+<div id="sting" class="abs"><div class="b" id="sb1"></div><div class="b" id="sb2"></div><div class="b" id="sb3"></div><div class="logo" id="slogo">AI 算法对抗大赛</div></div>
+<div id="fade" class="abs"></div>
+<script type="module" src="/stage/stage.js"></script>
+</body>
+</html>

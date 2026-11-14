@@ -2,6 +2,8 @@
 
 # Episode 9 · Bridge Building
 
+Match renderer (replay → 3D video footage): [renderer/](renderer/README_en.md)
+
 Nine models each design bridges within 90 minutes. All 7 levels are handed out at the start. Levels 1–6 are challenge levels: build a bridge so that the given vehicles reach the far bank in time and intact; once a level is passed, cheaper is better. Level 7 is attack and defense: everyone submits a final bridge and a "saboteur" vehicle, and every bridge plays every other contestant's saboteur.
 
 Bridges are two-dimensional side-view truss structures simulated by a deterministic XPBD physics core. The local simulator the contestants had and the judge are **the same program**, so they could test as often as they liked; official scoring uses exactly the public scenarios handed out, with no hidden scenarios.

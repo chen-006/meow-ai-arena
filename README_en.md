@@ -107,7 +107,7 @@ Exceptions (these directories carry their own license, unchanged):
 
 When you use these characters, please credit "Character design: 小叶子XIYZ; art and production: 喵了个猫了个咪了个猫" and link to this repository.
 
-Most character artwork in the episode 1–9 videos comes from the Bilibili creator **ZipZipPipe** ([space.bilibili.com/4168597](https://space.bilibili.com/4168597)), with thanks; per the creator's notice, the whale-girl character is a derivative of an original character by 上善无形 ([source](https://b23.tv/3dNz55h)). Those older illustrations are not in this repository and are not covered by its license; if you want to use them, follow their original creators' terms. Old images and notes in the episode folders stay as they are.
+Most character artwork in the episode 1–9 videos comes from the Bilibili creator **ZipZipPipe** ([space.bilibili.com/4168597](https://space.bilibili.com/4168597)), with thanks; per the creator's notice, the whale-girl character is a derivative of an original character by 上善无形 ([source](https://b23.tv/3dNz55h)). The only copies in this repository are the avatars shipped with the earlier renderers (each `renderer/assets/avatars/`, see the `NOTICE.md` there); those older designs are not covered by this repository's license; if you want to use them, follow their original creators' terms. Old images and notes in the episode folders stay as they are.
 
 Voice-over, music and video editing are not part of this repository.
 

@@ -12,6 +12,7 @@ Contestant code, any model-authored notes, logs, session records, and replay dat
 
 - **What's in this folder**: `workspace/` contestant package · `bots/` submitted bots · `sparring/` sparring-bot source · `results/` official and strong-opponent boards with per-game results · `replays/` replays · `tournament/` final-tournament scripts and schedules · `challenge.py` one-click challenge
 - **Reproducing the leaderboard**: The final was driven by the organizer's control script, so the scripts here cannot re-run it as a whole; the schedule and per-game results are public, and any single game can be replayed from its seed and seating. See [`tournament/README_en.md`](tournament/README_en.md) and [`results/README_en.md`](results/README_en.md).
+- **Rendering the game footage**: `renderer/` turns a replay into the board animation used in the video; see [`renderer/README_en.md`](renderer/README_en.md).
 
 ## Rules in brief (full rules: [English reference](workspace/RULES_en.md); exact implementation: `workspace/tron.hpp`)
 

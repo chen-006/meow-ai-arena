@@ -6,6 +6,7 @@
 
 - **目录里有什么**：`workspace/` 选手包 · `bots/half1/`、`bots/half2/` 上下半场代码 · `results/` 中场赛、终场赛、进步赛的成绩和逐局结果 · `replays/` 回放 · `tournament/` 对战平台和三场比赛的配置 · `notes/` 赛前狠话和复盘 · `challenge.py` 一键挑战
 - **复现榜单**：在 `tournament/` 下运行 `python tournament.py plan final.json`、`run run-final`、`rate run-final`，终场约 70 分钟，见 [`tournament/README.md`](tournament/README.md)。
+- **出视频画面**：`renderer/` 把一局回放渲成视频里的对局画面，见 [`renderer/README.md`](renderer/README.md)。
 
 ## 规则速览（完整规则见 `workspace/RULES.md`，精确实现是 `workspace/tank.hpp`）
 

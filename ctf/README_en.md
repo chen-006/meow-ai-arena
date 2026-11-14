@@ -6,6 +6,7 @@
 
 - **What's in this folder**: `workspace/` contestant package · `bots/` the 11 submitted bots · `results/` standings, pairwise win rates and per-game results · `replays/` replays · `tournament/` tournament configs · `challenge.py` one-click challenge · `appendix/` side experiments
 - **Reproducing the leaderboard**: From `tournament/`, five `arena/tournament.py` commands (plan, run, rate) rebuild the schedule, replay it and rate it, in about 2 hours; see [`tournament/README_en.md`](tournament/README_en.md).
+- **Rendering the game footage**: `renderer/` turns a replay into the board animation used in the video; see [`renderer/README_en.md`](renderer/README_en.md).
 
 ## Rules in brief
 

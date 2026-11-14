@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>造桥小剧场 3D</title>
+<style>
+html,body{margin:0;width:1920px;height:1080px;background:#000;overflow:hidden;font-family:"A12Font","Noto Sans SC","Microsoft YaHei",sans-serif}
+@font-face{font-family:"A12Font";src:url("/font/main")}
+#stage{position:absolute;left:0;top:0;width:1920px;height:1080px}
+#gl,#ov{position:absolute;left:0;top:0;width:1920px;height:1080px}
+</style>
+<script type="importmap">
+{ "imports": { "three": "/three/build/three.module.js", "three/addons/": "/three/examples/jsm/" } }
+</script>
+</head>
+<body>
+<div id="stage"><canvas id="gl"></canvas><canvas id="ov" width="1920" height="1080"></canvas></div>
+<script type="module" src="./theater3d.js"></script>
+</body>
+</html>

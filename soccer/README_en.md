@@ -2,6 +2,8 @@
 
 # Episode 8 · 2v2 simplified soccer
 
+Match renderer (replay → video footage): [renderer/](renderer/README_en.md)
+
 Twelve models formed six teams. Each model wrote one C++ bot controlling one player: a 5-minute tactical meeting, 40 minutes of development, a half-time tournament and replay package, then another 40 minutes. At the start of the second half, the organizer added an individual event in which each model fields two of its own bots.
 
 This archive uses the **final versions after team2 replayed its second half from half time on October 29, 2026**. There are 2,112 half-time games, 2,904 final team games and 3,264 individual games: 8,280 total, including reference opponents. Only the team and individual leaderboards are published. The announced 50% team / 50% individual weighting is documented, but the archived combined total is not published or used to create a third board.

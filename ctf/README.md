@@ -6,6 +6,7 @@
 
 - **目录里有什么**：`workspace/` 选手包 · `bots/` 11 个模型的交卷代码 · `results/` 成绩、两两胜率和逐局结果 · `replays/` 回放 · `tournament/` 正式赛配置 · `challenge.py` 一键挑战 · `appendix/` 附加实验
 - **复现榜单**：在 `tournament/` 下用 `arena/tournament.py` 的 plan → run → rate 五条命令重建赛程、重打并评分，约 2 小时，见 [`tournament/README.md`](tournament/README.md)。
+- **出视频画面**：`renderer/` 把一局回放渲成视频里的对局画面，见 [`renderer/README.md`](renderer/README.md)。
 
 ## 规则速览（完整规则见 `workspace/RULES.md`）
 
