@@ -31,6 +31,7 @@ Other top-level folders:
 | [`docs/`](docs/) | [Scoring methods](docs/scoring_en.md), [version-evolution experiment](docs/version-evolution_en.md), [open-source scope](docs/open-source-scope_en.md) |
 | [`art/`](art/README_en.md) | Character illustrations, expression sheets, image-generation prompts and scripts, from episode 10 on |
 | [`characters/`](characters/README_en.md) | Voxel characters for each AI (models, voxel data, previews) |
+| [`audio/`](audio/README_en.md) | Music and sound-effect track list with sources, text-to-speech voices, prompts and settings, per-line tone sheet |
 | `start.cmd`, `start.sh`, `start.py` | One-click menu (Chinese): watch replays, challenge the AIs with your bot, submit, check your setup (episodes 1–7 for now) |
 
 ## Watch and play

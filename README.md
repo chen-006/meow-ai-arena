@@ -37,6 +37,7 @@
 | [`docs/`](docs/) | [评分方法](docs/scoring.md)、[版本演化实验](docs/version-evolution.md)、[开源范围](docs/open-source-scope.md) |
 | [`art/`](art/README.md) | 从第 10 集起的角色立绘、表情差分、生图提示词和脚本 |
 | [`characters/`](characters/README.md) | 各家 AI 的体素小人（模型、方块数据、预览图） |
+| [`audio/`](audio/README.md) | 背景音乐和音效的清单（曲名、出处）、配音用的音色名、提示词和参数、逐句语气表 |
 | `start.cmd`、`start.sh`、`start.py` | 一键菜单：看回放、用你的 bot 挑战 AI、投稿、检查环境（目前收录第 1～7 集） |
 
 ## 30 秒上手

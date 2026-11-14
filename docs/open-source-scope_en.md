@@ -49,9 +49,15 @@ The goal is simple: anyone who clones this repository should be able to understa
 - The prompts actually used for the final images, verbatim (including the shared style block), the model name, size, quality, background and other parameters, and the scripts that generate, tidy and slice the images. The scripts read the API key from an environment variable; no key is stored in the repository.
 - Reference images used during generation are not bundled. Third-party ones (vendor logos, other people's design sheets) are only described; the show's own reference images (early drafts, downscaled or cropped masters) are not added separately either, and the README says what each one was.
 
+**Track lists and voice settings**
+
+- The list of background music and sound effects: title, composer, source and ID, and which episode used it.
+- Text-to-speech settings: service and model, the voice used for each character, the prompts verbatim, post-processing parameters, and the per-line tone sheet.
+- All of it lives in the top-level [`audio/`](../audio/README_en.md).
+
 ## What is not published
 
-- Voice-over, music, narration scripts, final cuts and editing projects.
+- Voice-over recordings and the music and sound-effect files (third-party assets or output of third-party services that may not be redistributed; the track list and voice settings are in `audio/`), narration scripts, final cuts and editing projects.
 - Contestants' raw session logs: conversations, reasoning, tool-call logs.
 - The organizer's operations scripts, i.e. programs that exist only to run the contest: driving each vendor's command-line tool, timing and collecting submissions, checking account balances.
 - Keys, tokens, account details, internal notes and one-off scripts.

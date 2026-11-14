@@ -1,0 +1,118 @@
+{
+ "_说明": "角色 → Breeze TTS 2 音色库里的音色。voice_id 是音色库编号，name 是音色名，persona 是拼进每句指令里的一句人设。第 10 集实际用的音色和人设见 ../tts.md（有几位换过音色）。",
+ "Opus": {
+  "voice_id": "voc_4fcdc882gyps",
+  "name": "冷面铁捕",
+  "persona": "从容自信的年轻御姐"
+ },
+ "Sonnet": {
+  "voice_id": "voc_47j4uzfyuxqc",
+  "name": "星际邮差",
+  "persona": "活泼俏皮的少女，声音明亮轻盈"
+ },
+ "Astra": {
+  "voice_id": "voc_jgkfvjryu84b",
+  "name": "清雅引路人",
+  "persona": "优雅沉稳的年轻女工程师"
+ },
+ "Sol": {
+  "voice_id": "voc_6t8vrjmcq4cy",
+  "name": "迷糊小魔女",
+  "persona": "开朗又有点冒失的可爱小女孩，声音甜、细、高"
+ },
+ "DeepSeek": {
+  "voice_id": "voc_87up836fmx6e",
+  "name": "田园小妹",
+  "persona": "开朗的吃货少女，声音甜美有活力"
+ },
+ "Kimi": {
+  "voice_id": "voc_5zgtpv8f7uma",
+  "name": "律政明辨",
+  "persona": "认真勤奋的学霸少女，咬字清楚精准，较真但不冷"
+ },
+ "GLM": {
+  "voice_id": "voc_a9qfvny3tuky",
+  "name": "韧性逐风者",
+  "persona": "年轻女性AI助手，清亮有精神，语速自然利落，自信友善，不刻意卖萌，不夸张"
+ },
+ "MiMo": {
+  "voice_id": "voc_kwje43kewnst",
+  "name": "傲气学姐",
+  "persona": "自信、有点皮的明亮少女，礼貌但有野心"
+ },
+ "千问": {
+  "voice_id": "voc_rzke52bs2ej8",
+  "name": "幽香调香师",
+  "persona": "温柔知性的年轻女性，中高音，轻声细语，优雅温暖"
+ },
+ "Grok": {
+  "voice_id": "voc_e7c696x3ztvr",
+  "name": "迷雾恋人",
+  "persona": "嚣张的少女，声线偏低偏冷，慵懒坏笑、满不在乎"
+ },
+ "Haiku": {
+  "voice_id": "voc_47j4uzfyuxqc",
+  "name": "星际邮差",
+  "persona": "活泼俏皮的少女，声音明亮轻盈"
+ },
+ "Muse": {
+  "voice_id": "voc_aa7uskxy3qjb",
+  "name": "清晨诵诗人",
+  "persona": "二十岁左右的女生，空灵神秘的外来缪斯，说话带诗意、天马行空"
+ },
+ "SolUF": {
+  "voice_id": "voc_6t8vrjmcq4cy",
+  "name": "迷糊小魔女",
+  "persona": "开朗又有点冒失的可爱小女孩，声音甜、细、高"
+ },
+ "Gemini": {
+  "voice_id": "voc_tzneby749yja",
+  "name": "灵动汐语",
+  "persona": "可爱又有活力的少女，声音甜润明亮，有一点小猫似的俏皮"
+ },
+ "Mistral": {
+  "voice_id": "voc_3a6wkq787gem",
+  "name": "知性主理人",
+  "persona": "二十岁左右的年轻女生，干脆、自信，带一点法式的随性和幽默，不张扬也不冷"
+ },
+ "龙猫": {
+  "voice_id": "voc_2g2xfx23838q",
+  "name": "傲娇云朵精灵",
+  "persona": "十七岁左右的少女，圆乎乎、胆子大、乐天，试砸了拍拍灰马上再来，软乎乎的"
+ },
+ "阶跃": {
+  "voice_id": "voc_qtzjr6fsztb5",
+  "name": "灵犀助手",
+  "persona": "十六岁左右的少女，行动派，话短而利落，冷静、专注"
+ },
+ "盘古": {
+  "voice_id": "voc_ctwqkkqm9km7",
+  "name": "星轨导师",
+  "persona": "二十二岁左右的女生，沉稳、务实、话不多，可靠的大姐姐，不霸道、不凶"
+ },
+ "混元": {
+  "voice_id": "voc_rmuyhu56stgm",
+  "name": "山野清茗",
+  "persona": "十九岁左右的女生，气定神闲、温和、慢条斯理，偶尔有点天然呆"
+ },
+ "文心": {
+  "voice_id": "voc_5cemd59kz4cz",
+  "name": "冰下弦音",
+  "persona": "十八岁左右的女生，安静、书卷气、做事利落，说话温和但简短"
+ },
+ "dots": {
+  "voice_id": "voc_kwdvjwzaez5v",
+  "name": "霓虹甜心",
+  "persona": "十六岁左右的女生，细心、爱记录，温柔、有点害羞"
+ },
+ "Mercury": {
+  "voice_id": "voc_spe4jsq3tc3a",
+  "name": "灵动晨曦",
+  "persona": "十八岁左右的女生，轻快、利落、有点神出鬼没，说话干脆，对人友善"
+ },
+ "Terra": {
+  "voice_id": "voc_6t8vrjmcq4cy",
+  "name": "迷糊小魔女",
+  "persona": "开朗又有点冒失的可爱小女孩，声音甜、细、高"
+ }
+}
