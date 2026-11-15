@@ -48,6 +48,7 @@ const int chaserHazardMul = 4; // chasers get this multiple of the hazard price
 const int chaserMaxT = 26; // loop length cap while a chaser is on us
 const int bailWin = 10;   // bail only when a chaser is this close to our trail
 const int meleeMaxT = 40; // melee loop cap (0 = none)
+const int meleeSlack = 6; // melee: veto unless loop closes this far before any arrival (0 = off)
 const int killBase = 120;// tempo value of cutting a victim mid-loop, plus
 const int killPer = 8;   // this much per trail cell it loses (capped below)
 const int killCap = 320;
@@ -274,11 +275,11 @@ static int earliestChaserHit() {
     return best;
 }
 
-// Hard veto: none. Passive opponents almost never convert "possible" beelines
-// into cuts, and vetoing speculation starves the whole game (measured: tiny
-// loops + standing still 7% of turns). Threats are handled reactively - the
-// planner's hazard pricing biases loops away from enemies, and once a trail
-// is actually laid, bailNear triggers bail-or-ride.
+// No hard veto on candidate loops. Passive opponents almost never convert
+// "possible" beelines into cuts, and vetoing speculation starves the whole
+// game (measured: tiny loops + standing still 7% of turns). Threats are
+// handled reactively - the planner's hazard pricing biases loops away from
+// enemies, and plan-following bails or rides once a pursuer is imminent.
 
 // ---------------- BFS helpers ----------------
 // Shortest path from (fx,fy) to a cell satisfying goal(), never stepping on
@@ -540,6 +541,26 @@ static int decide() {
         // while hunted, keep the exposure window short instead of farming
         if (kind == 1 && anyChaser() && ev.R > cfg::chaserMaxT) return;
         if (kind == 1 && N > 2 && cfg::meleeMaxT > 0 && ev.R > cfg::meleeMaxT) return;
+        // melee: with three opponents someone converts a possible cut, so
+        // require the loop to close before any of them could arrive
+        if (N > 2 && kind == 1 && cfg::meleeSlack > 0) {
+            int x = st.px[ME], y = st.py[ME], arrival = 0;
+            for (int d : dirs) {
+                arrival++;
+                x += DX[d]; y += DY[d];
+                if (arrival > ev.R) break;
+                if (st.owner[idx(x, y)] != ME)
+                    for (int e = 0; e < N; e++) {
+                        if (e == ME || !threat[e]) continue;
+                        if (man(st.px[e], st.py[e], x, y) <= ev.R - cfg::meleeSlack) return;
+                    }
+            }
+            for (int c : myTrailCells)
+                for (int e = 0; e < N; e++) {
+                    if (e == ME || !threat[e]) continue;
+                    if (man(st.px[e], st.py[e], c % W, c / W) <= ev.R - cfg::meleeSlack) return;
+                }
+        }
         if (boundCells >= 0) {
             double boundScore = (double)(10.0 * boundCells + 12.0 * boundCells + bonus) / (ev.T + cfg::timePref);
             if (boundScore <= bestScore) return;

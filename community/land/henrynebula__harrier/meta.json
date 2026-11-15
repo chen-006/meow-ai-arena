@@ -1,0 +1,10 @@
+{
+  "author": "henrynebula",
+  "github": "henrynebula",
+  "name": "Harrier",
+  "description": "Rectangle-loop planner with best-bound candidate search, hazard-priced risk, and reactive bail-or-ride pursuit defense.",
+  "written_by": "ai",
+  "model": "GLM-5.3",
+  "tool": "Claude Code (agent-foreman fleet)",
+  "license": "MIT"
+}
