@@ -26,7 +26,9 @@ bool read_turn(Game&g){string w;while(cin>>w){if(w=="INIT")cin>>g.teams>>g.me>>g
 struct Brain{
  static constexpr int MAXC=2500,MAXU=45;
  int N,C,teams,me,t;bool init=false;chrono::steady_clock::time_point turnstart;
- bool overbudget(){return chrono::duration<double,milli>(chrono::steady_clock::now()-turnstart).count()>(t==1?1500:35.0);}
+ double elapsed()const{return chrono::duration<double,milli>(chrono::steady_clock::now()-turnstart).count();}
+ double budget()const{return t==1?1500.0:28.0;}
+ bool overbudget(){return elapsed()>budget();}
  vector<array<int,5>> adj;vector<vector<unsigned short>> ds;vector<array<int,9>> spawn;
  vector<vector<unsigned char>> shot;
  vector<int> base,spot,walk,occ,uc,prev;
@@ -283,14 +285,14 @@ struct Brain{
   if(!gathering)update(gg);predict();strategic();choicepool.clear();
   for(int k=0;k<3;k++){int id=3*me+k;if(!live(id))continue;double sm=0;for(int z=0;z<5;z++){int p=adj[uc[id]][z];ep[id][z]=exp(max(-25.0,min(15.0,(pot[k][uc[id]]-pot[k][p])*roleweight[k]*1.5)));if(z&&p==uc[id])ep[id][z]=0;sm+=ep[id][z];}for(double&p:ep[id])p/=sm;}
   tactical_prediction();
-  constexpr int NS=24;
+  constexpr int NS=24;const int ns=teams>=10?12:teams>=6?16:NS;
   vector<int>ids,enemy;for(auto&u:gg.units)if(live(u.id)){ids.push_back(u.id);if(u.team!=me)enemy.push_back(u.id);}
-  array<Scenario,NS>scenes;
+  array<Scenario,NS>scenes;// only the first ns entries are used
   vector<int> modal(teams*3,-1);for(int id:ids){int zz=max_element(ep[id].begin(),ep[id].end())-ep[id].begin();modal[id]=adj[uc[id]][zz];}
   // Stratification reduces tactical noise while preserving uncertainty about simultaneous movement.
-  for(int id:ids){int offset=rnd()%NS;int stride=5;if((rnd()&1))stride=7;
-   for(int s=0;s<NS;s++){double p=((s*stride+offset)%NS+.5)/NS;int z=0;while(z<4&&p>ep[id][z]){p-=ep[id][z];z++;}scenes[s].want[id]=adj[uc[id]][z];}}
-  for(int s=0;s<NS;s++)for(int id:enemy){auto&u=gg.units[id];scenes[s].atk[id]=-1;if(u.flag>=0||immune(id))continue;int p=scenes[s].want[id];bool pk=false;for(auto&f:gg.flags)if(f.x>=0&&xy(f.x,f.y)==p&&!(f.return_at>=0&&f.return_at<=t))pk=true;if(pk)continue;
+  for(int id:ids){int offset=rnd()%ns;int stride=5;if((rnd()&1))stride=7;
+   for(int s=0;s<ns;s++){double p=((s*stride+offset)%ns+.5)/ns;int z=0;while(z<4&&p>ep[id][z]){p-=ep[id][z];z++;}scenes[s].want[id]=adj[uc[id]][z];}}
+  for(int s=0;s<ns;s++)for(int id:enemy){auto&u=gg.units[id];scenes[s].atk[id]=-1;if(u.flag>=0||immune(id))continue;int p=scenes[s].want[id];bool pk=false;for(auto&f:gg.flags)if(f.x>=0&&xy(f.x,f.y)==p&&!(f.return_at>=0&&f.return_at<=t))pk=true;if(pk)continue;
    vector<pair<double,int>> cand;for(int j:ids)if(gg.units[j].team!=u.team&&!immune(j)&&md(uc[id],uc[j])<=7){double pr=0;for(int z=0;z<5;z++)if(fire(p,adj[uc[j]][z]))pr+=ep[j][z];auto&v=gg.units[j];double w=v.flag>=0?2.1:v.hp<=34?1.65:v.hp<=68?1.15:1.0;
     double focus=0;for(int widx:ids)if(widx!=id&&gg.units[widx].team==u.team&&gg.units[widx].flag<0&&d(uc[widx],uc[j])<=4)focus+=.17;w+=focus;
     double val=pr*w;if(s%5==0)val=(fire(p,uc[j])?.65:0)+pr*.35;else if(s%7==0)val=pr*(v.flag>=0?3.3:1.0);
@@ -300,13 +302,15 @@ struct Brain{
   array<vector<int>,3>options;for(int k=0;k<3;k++){int id=me*3+k;for(int z=0;z<5;z++)if(z==0||(live(id)&&adj[uc[id]][z]!=uc[id]))options[k].push_back(z);}
   TacticalChoice best;best.val=-1e50;
   for(int z0:options[0])for(int z1:options[1])for(int z2:options[2]){
+   // Stop the joint search once a fallback exists and the turn budget share is used.
+   if(best.val>-1e49&&elapsed()>budget()*(gathering?0.7:0.45))goto done;
    array<int,3>zz={z0,z1,z2};array<int,3>desired={-1,-1,-1};bool valid=true;
    for(int k=0;k<3;k++)if(live(me*3+k))desired[k]=adj[uc[me*3+k]][zz[k]];
    for(int k=0;k<3;k++)for(int j=k+1;j<3;j++)if(desired[k]>=0&&desired[k]==desired[j])valid=false;if(!valid)continue;
    double val=0;array<double,3>pv={0,0,0};array<array<uint32_t,45>,3>hit{};
    array<array<uint32_t,4>,45>needmask{};
    array<int,45>endp,want,extdamage;array<int,MAXC> counts{};
-   for(int s=0;s<NS;s++){
+   for(int s=0;s<ns;s++){
     want=scenes[s].want;for(int k=0;k<3;k++)if(desired[k]>=0)want[3*me+k]=desired[k];
     array<bool,45>blocked{};
     for(int id:ids)counts[want[id]]=0;for(int id:ids)counts[want[id]]++;
@@ -317,20 +321,20 @@ struct Brain{
     uint32_t bit=1u<<s;
     for(int id:enemy){int need=(gg.units[id].hp+33)/34-extdamage[id];if(need>0)needmask[id][min(3,need)]|=bit;}
     for(int k=0;k<3;k++){int id=3*me+k;if(!live(id))continue;auto&u=gg.units[id];int p=endp[id],hits=extdamage[id],hp=immune(id)?100:u.hp;bool alive=hits*34<hp;
-     val+=(pot[k][uc[id]]-pot[k][p])*roleweight[k]/NS;
-     if(p==uc[id]&&pot[k][p]>0)val-=.08/NS;
-     double healthvalue=u.flag>=0?4.8:2.3;val-=min(hits,(u.hp+33)/34)*healthvalue/NS;
-     if(!alive)val-=(u.flag>=0?27.0:7.5)/NS;
-     if(alive&&u.flag>=0&&bd[me][p]==0)val+=40.0/NS;
-     if(alive&&u.flag<0){for(auto&f:gg.flags)if(f.x>=0&&xy(f.x,f.y)==p&&!(f.return_at>=0&&f.return_at<=t))pv[k]+=pickupvalue(me,p,hp)/NS;}
+     val+=(pot[k][uc[id]]-pot[k][p])*roleweight[k]/ns;
+     if(p==uc[id]&&pot[k][p]>0)val-=.08/ns;
+     double healthvalue=u.flag>=0?4.8:2.3;val-=min(hits,(u.hp+33)/34)*healthvalue/ns;
+     if(!alive)val-=(u.flag>=0?27.0:7.5)/ns;
+     if(alive&&u.flag>=0&&bd[me][p]==0)val+=40.0/ns;
+     if(alive&&u.flag<0){for(auto&f:gg.flags)if(f.x>=0&&xy(f.x,f.y)==p&&!(f.return_at>=0&&f.return_at<=t))pv[k]+=pickupvalue(me,p,hp)/ns;}
      if(u.flag<0&&!immune(id))for(int e:enemy)if(!immune(e)&&fire(p,endp[e]))hit[k][e]|=bit;
      if(u.flag>=0){double danger2=0;for(int e:enemy)if(gg.units[e].flag<0&&!immune(e)){int dd=d(p,endp[e]);if(dd<=4){double allies=0;for(int j=0;j<3;j++)if(j!=k&&live(3*me+j)&&gg.units[3*me+j].flag<0&&d(endp[3*me+j],endp[e])<=3)allies+=.5;danger2+=(dd<=2?1.0:dd==3?.6:.15)/(1+allies);}}
-      val-=danger2*(u.hp<=34?3.6:u.hp<=68?1.7:.85)/NS;
+      val-=danger2*(u.hp<=34?3.6:u.hp<=68?1.7:.85)/ns;
      }
     }
    }
    array<vector<int>,3>ac;for(int k=0;k<3;k++){ac[k].push_back(pv[k]>0?-2:-1);int id=3*me+k;if(!live(id)||gg.units[id].flag>=0||immune(id))continue;
-    vector<pair<double,int>>top;for(int e:enemy)if(hit[k][e]){auto&u=gg.units[e];double h=(double)__builtin_popcount(hit[k][e])/NS;top.push_back({h*(u.flag>=0?2.0:1.0)*(u.hp<=34?1.8:1),e});}sort(top.rbegin(),top.rend());for(int j=0;j<min(5,(int)top.size());j++)ac[k].push_back(top[j].second);
+    vector<pair<double,int>>top;for(int e:enemy)if(hit[k][e]){auto&u=gg.units[e];double h=(double)__builtin_popcount(hit[k][e])/ns;top.push_back({h*(u.flag>=0?2.0:1.0)*(u.hp<=34?1.8:1),e});}sort(top.rbegin(),top.rend());for(int j=0;j<min(5,(int)top.size());j++)ac[k].push_back(top[j].second);
    }
    double av=-1e30,av2=-1e30;array<int,3>ba={-1,-1,-1},ba2={-1,-1,-1};
    for(int a:ac[0])for(int b:ac[1])for(int c:ac[2]){array<int,3>aa={a,b,c};double v=0;for(int k=0;k<3;k++)if(aa[k]==-2)v+=pv[k];
@@ -338,8 +342,8 @@ struct Brain{
      uint32_t m0=aa[0]==e?hit[0][e]:0,m1=aa[1]==e?hit[1][e]:0,m2=aa[2]==e?hit[2][e]:0;
      uint32_t one=m0|m1|m2,two=(m0&m1)|(m0&m2)|(m1&m2),three=m0&m1&m2;
      uint32_t all=needmask[e][1]|needmask[e][2]|needmask[e][3];
-     double effective=(__builtin_popcount(one&all)+__builtin_popcount(two&(needmask[e][2]|needmask[e][3]))+__builtin_popcount(three&needmask[e][3]))/(double)NS;
-     double kill=__builtin_popcount((one&needmask[e][1])|(two&needmask[e][2])|(three&needmask[e][3]))/(double)NS;
+     double effective=(__builtin_popcount(one&all)+__builtin_popcount(two&(needmask[e][2]|needmask[e][3]))+__builtin_popcount(three&needmask[e][3]))/(double)ns;
+     double kill=__builtin_popcount((one&needmask[e][1])|(two&needmask[e][2])|(three&needmask[e][3]))/(double)ns;
      auto&eu=gg.units[e];double loot=eu.flag>=0?max(.4,1.8-.07*bd[me][uc[e]]):0;
      v+=effective*(eu.flag>=0?3.4+loot:2.5)+kill*(eu.flag>=0?8+4*loot:7);
      if(kill>0)for(int j=0;j<3;j++)if(live(3*me+j)&&gg.units[3*me+j].flag>=0&&d(desired[j],uc[e])<=4)v+=kill*3;
@@ -350,6 +354,7 @@ struct Brain{
    choicepool.push_back({zz,ba,val});if(av2>-1e20)choicepool.push_back({zz,ba2,val-av+av2});
    if(val>best.val){best={zz,ba,val};}
   }
+  done:
   string out=to_string(t);for(int k=0;k<3;k++){string a="-";if(best.a[k]==-2)a="P";else if(best.a[k]>=0)a=to_string(best.a[k]);else if(live(3*me+k)&&gg.units[3*me+k].flag<0)a="P";out+=" "+string(1,moves[best.z[k]])+" "+a;}
   prev=uc;return out;
  }
@@ -381,10 +386,11 @@ struct Brain{
   me=gg.me;gathering=false;string normal=decide_scenarios(gg);
   if(teams!=2)return normal;
   bool contact=false;for(int i=0;i<3;i++)for(int j=0;j<3;j++)if(live(3*me+i)&&live(3*(1-me)+j)&&d(uc[3*me+i],uc[3*(1-me)+j])<=6)contact=true;
-  if(!contact)return normal;
+  if(!contact||elapsed()>budget()*0.45)return normal;
   auto ours=shortlist();auto mypot=pot;auto myweight=roleweight;auto mygoal=goal;auto myprevgoal=prevgoal;auto mytasks=tasks;auto mytaskidx=taskidx;
   me=1-gg.me;gathering=true;decide_scenarios(gg);auto theirs=shortlist();auto theirpot=pot;auto theirweight=roleweight;
   me=gg.me;gathering=false;pot=mypot;roleweight=myweight;goal=mygoal;prevgoal=myprevgoal;tasks=mytasks;taskidx=mytaskidx;
+  if(elapsed()>budget()*0.75)return normal;
   int A=ours.size(),B=theirs.size();vector<vector<double>>mat(A,vector<double>(B));
   vector<int>ids;for(auto&u:gg.units)if(live(u.id))ids.push_back(u.id);
   for(int a=0;a<A;a++){if(a>0&&overbudget()){A=a;ours.resize(A);break;}for(int b=0;b<B;b++){
@@ -435,11 +441,12 @@ struct Brain{
   if(gg.teams==2)return decide_nash(gg);
   me=gg.me;gathering=false;string normal=decide_scenarios(gg);int foe=-1;double threat=0;
   for(int q=0;q<teams;q++)if(q!=me){double v=0;for(int k=0;k<3;k++)if(live(3*me+k))for(int j=0;j<3;j++)if(live(3*q+j)){int dd=d(uc[3*me+k],uc[3*q+j]);v+=max(0,6-dd)*(gg.units[3*me+k].flag>=0?1.7:1.0)*(gg.units[3*q+j].flag>=0?.8:1.0);}if(v>threat){threat=v;foe=q;}}
-  if(foe<0)return normal;
+  if(foe<0||elapsed()>budget()*0.45)return normal;
   int poollimit=teams>=11?22:teams>=6?26:32;
   auto ours=shortlist();if(ours.size()>poollimit)ours.resize(poollimit);auto mypot=pot;auto myweight=roleweight;auto mygoal=goal;auto myprevgoal=prevgoal;auto mytasks=tasks;auto mytaskidx=taskidx;auto myep=ep;
   me=foe;gathering=true;decide_scenarios(gg);auto theirs=shortlist();if(theirs.size()>poollimit)theirs.resize(poollimit);auto theirpot=pot;auto theirweight=roleweight;
   me=gg.me;gathering=false;pot=mypot;roleweight=myweight;goal=mygoal;prevgoal=myprevgoal;tasks=mytasks;taskidx=mytaskidx;ep=myep;
+  if(elapsed()>budget()*0.75)return normal;
   constexpr int S=4;array<Scenario,S>rest;vector<int>ids;for(auto&u:gg.units)if(live(u.id))ids.push_back(u.id);
   for(int s=0;s<S;s++)for(int id:ids){int z=0;if(s==0)z=max_element(myep[id].begin(),myep[id].end())-myep[id].begin();else{double p=(rnd()+.5)/4294967296.0;while(z<4&&p>myep[id][z]){p-=myep[id][z];z++;}}rest[s].want[id]=adj[uc[id]][z];rest[s].atk[id]=-1;
    auto&u=gg.units[id];if(u.team==me||u.team==foe||u.flag>=0||immune(id))continue;int p=rest[s].want[id];bool pickup=false;for(auto&f:gg.flags)if(f.x>=0&&xy(f.x,f.y)==p&&!(f.return_at>=0&&f.return_at<=t))pickup=true;if(pickup)continue;
