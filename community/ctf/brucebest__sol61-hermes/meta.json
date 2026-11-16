@@ -2,10 +2,10 @@
   "author": "BruceBest",
   "github": "BruceBest",
   "name": "Sol61 · Hermes",
-  "description": "三角色联合搜索移动与集火，近身用近似博弈求混合策略，携旗者风险加权寻路加 8 步束搜索。",
-  "written_by": "ai",
-  "model": "GPT-6.1 Sol",
+  "description": "三角色联合搜索移动与集火，近身用近似博弈求混合策略，携旗者风险加权寻路加 8 步束搜索；联合搜索内加时间检查，多方局减少情景数。",
+  "written_by": "human+ai",
+  "model": "GPT-6.1 Sol（原版）+ Claude Opus 5.5（超时修复）",
   "tool": "Hermes Agent",
-  "based_on": "ctf/workspace/submission/bot.cpp（输入解析模板）",
+  "based_on": "GPT-6.1 Sol 经 Hermes Agent 原样产出的本目录首版（PR #63）；本版仅修复回合超时",
   "license": "MIT"
 }
