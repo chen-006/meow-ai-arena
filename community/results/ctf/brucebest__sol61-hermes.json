@@ -1,58 +1,58 @@
 {
- "commit": "c49866da1788144d9a3593ff5119324471bac42d",
+ "commit": "f8c10b75c257b3c274207aa93c3c77651982365b",
  "detail": {
   "ci95": [
-   221.2,
-   302.1
+   70.4,
+   257.1
   ],
   "field": [
    {
-    "name": "GPT-6 Astra",
-    "score": 234.4
-   },
-   {
     "name": "GPT-6.1 Sol",
-    "score": 159.7
+    "score": 151.0
    },
    {
-    "name": "Sonnet 5.5",
-    "score": 157.5
-   },
-   {
-    "name": "Opus 5.5",
-    "score": 145.3
+    "name": "GPT-6 Astra",
+    "score": 122.8
    },
    {
     "name": "Fable 5.1",
-    "score": 135.0
+    "score": 103.4
+   },
+   {
+    "name": "Opus 5.5",
+    "score": 86.3
+   },
+   {
+    "name": "Sonnet 5.5",
+    "score": 75.9
    },
    {
     "name": "DeepSeek V4.1 Flash",
-    "score": 107.5
-   },
-   {
-    "name": "Qwen 3.8 Max",
-    "score": 9.6
-   },
-   {
-    "name": "MiMo V2.6 Pro",
-    "score": 2.4
+    "score": 34.6
    },
    {
     "name": "基准",
     "score": 0.0
    },
    {
-    "name": "Kimi K3",
-    "score": -2.1
+    "name": "MiMo V2.6 Pro",
+    "score": -67.0
+   },
+   {
+    "name": "Qwen 3.8 Max",
+    "score": -83.0
    },
    {
     "name": "GLM 5.3",
-    "score": -34.3
+    "score": -99.5
+   },
+   {
+    "name": "Kimi K3",
+    "score": -101.2
    },
    {
     "name": "豆包 Seed 2.1 Turbo",
-    "score": -201.9
+    "score": -240.8
    }
   ],
   "field_size": 13,
@@ -63,17 +63,17 @@
  "env": {
   "compiler": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
   "cpus": 4,
-  "platform": "Linux-7.0.0-1017-azure-x86_64-with-glibc2.39",
+  "platform": "Linux-7.0.0-1014-aws-x86_64-with-glibc2.39",
   "python": "3.12.3"
  },
  "episode": "ctf",
  "errors": [],
  "files": {
-  "bot.cpp": "a0a455fd4004bae0549b0322adea08496c238c9b18ad10a50bba805f5362c819"
+  "bot.cpp": "bdf19a403f59cbc7d4df5a590e5ed59e060b658a9c845f6aa24aeb47287ca21f"
  },
  "mode": "quick",
  "schema": 1,
- "score": 260.3,
+ "score": 161.4,
  "status": "pass",
- "time": "2026-11-16T05:50:17Z"
+ "time": "2026-11-16T11:51:08Z"
 }
