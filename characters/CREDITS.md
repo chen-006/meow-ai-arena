@@ -1,9 +1,9 @@
 # 署名 / Credits
 
-**角色形象设计：小叶子XIYZ（B 站）；美术和制作：喵了个猫了个咪了个猫。**
+**角色形象设计参考：小叶子XIYZ（B 站）；美术和制作：喵了个猫了个咪了个猫。**
 从第 10 集起的新形象参考自小叶子XIYZ 的设计，由节目组制作；体素小人是节目组照这些新立绘（[art/](../art/README.md)）做的。以 [MIT 许可](../LICENSE) 发布，使用时请写上上面这一行并附仓库链接 `https://github.com/chen-006/meow-ai-arena`。
 
-**Character design: 小叶子XIYZ (Bilibili); art and production: 喵了个猫了个咪了个猫.**
+**Character design reference: 小叶子XIYZ (Bilibili); art and production: 喵了个猫了个咪了个猫.**
 The new designs used from episode 10 on are based on 小叶子XIYZ's designs and were made by the show; the voxel characters were made by the show from these new illustrations ([art/](../art/README_en.md)). Released under the [MIT license](../LICENSE); please include the line above and a link to `https://github.com/chen-006/meow-ai-arena` when you use them.
 
 | 体素小人 / Voxel character | 照哪张立绘 / Based on | 形象参考 / Design basis |

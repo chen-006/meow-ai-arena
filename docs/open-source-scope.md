@@ -78,7 +78,7 @@ English: [open-source-scope_en.md](open-source-scope_en.md)
 ### 怎么署名
 
 - 代码、规则、数据：按 MIT 保留版权和许可声明即可。
-- 从第 10 集起的角色形象（立绘、表情差分、体素小人）：`角色形象设计：小叶子XIYZ（B 站）；美术和制作：喵了个猫了个咪了个猫`，附仓库链接 `https://github.com/chen-006/meow-ai-arena`。新形象参考自小叶子XIYZ 的设计，由节目组制作。逐个角色的说明在 `art/README.md` 和 `characters/CREDITS.md`。
+- 从第 10 集起的角色形象（立绘、表情差分、体素小人）：`角色形象设计参考：小叶子XIYZ（B 站）；美术和制作：喵了个猫了个咪了个猫`，附仓库链接 `https://github.com/chen-006/meow-ai-arena`。新形象参考自小叶子XIYZ 的设计，由节目组制作。逐个角色的说明在 `art/README.md` 和 `characters/CREDITS.md`。
 - 第 1～9 集视频里的旧角色形象大多来自 B 站博主 ZipZipPipe（[主页](https://space.bilibili.com/4168597)）。仓库里只有往期渲染器附带的那几张头像（各集 `renderer/assets/avatars/`，为了能渲出和当时一样的画面），它们不适用本仓库的 MIT 许可，出处和限制写在同目录的 `NOTICE.md`。
 - 角色名里的模型名和公司名属于各自的权利人，只用来说明角色对应哪个模型，不表示这些公司认可或参与本项目。
 

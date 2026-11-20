@@ -78,7 +78,7 @@ The whole repository uses a single license: [MIT](../LICENSE). Every category ab
 ### How to give credit
 
 - Code, rules and data: keep the MIT copyright and license notice.
-- Character designs from episode 10 on (illustrations, expression sheets, voxel characters): `Character design: 小叶子XIYZ (Bilibili); art and production: 喵了个猫了个咪了个猫`, with a link to `https://github.com/chen-006/meow-ai-arena`. The new designs are based on 小叶子XIYZ's designs and were made by the show. Per-character notes are in `art/README_en.md` and `characters/CREDITS.md`.
+- Character designs from episode 10 on (illustrations, expression sheets, voxel characters): `Character design reference: 小叶子XIYZ (Bilibili); art and production: 喵了个猫了个咪了个猫`, with a link to `https://github.com/chen-006/meow-ai-arena`. The new designs are based on 小叶子XIYZ's designs and were made by the show. Per-character notes are in `art/README_en.md` and `characters/CREDITS.md`.
 - The older character designs in the episode 1–9 videos mostly come from the Bilibili creator ZipZipPipe ([profile](https://space.bilibili.com/4168597)). The only copies in this repository are the avatars that ship with the earlier episodes' renderers (each `renderer/assets/avatars/`, so the original look can be reproduced); they are not covered by the MIT license, and their credits and restrictions are in the `NOTICE.md` next to them.
 - Model and company names in character names belong to their owners and only indicate which model a character stands for; they do not imply endorsement by or involvement of those companies.
 

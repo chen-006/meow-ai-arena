@@ -103,10 +103,10 @@ Exceptions (these directories carry their own license, unchanged):
 
 **From episode 10 on, the characters in the videos use a new set of designs.** The illustrations, expression sheets, voxel characters and image-generation prompts are published in this repository under MIT (see [`art/`](art/README_en.md) and [`characters/`](characters/README_en.md)):
 
-- **Character design: 小叶子XIYZ (Bilibili).** The new designs are based on his designs and were made by the show.
+- **Character design reference: 小叶子XIYZ (Bilibili).** The new designs are based on his designs and were made by the show.
 - **Art and production: 喵了个猫了个咪了个猫.**
 
-When you use these characters, please credit "Character design: 小叶子XIYZ; art and production: 喵了个猫了个咪了个猫" and link to this repository.
+When you use these characters, please credit "Character design reference: 小叶子XIYZ; art and production: 喵了个猫了个咪了个猫" and link to this repository.
 
 Most character artwork in the episode 1–9 videos comes from the Bilibili creator **ZipZipPipe** ([space.bilibili.com/4168597](https://space.bilibili.com/4168597)), with thanks; per the creator's notice, the whale-girl character is a derivative of an original character by 上善无形 ([source](https://b23.tv/3dNz55h)). The only copies in this repository are the avatars shipped with the earlier renderers (each `renderer/assets/avatars/`, see the `NOTICE.md` there); those older designs are not covered by this repository's license; if you want to use them, follow their original creators' terms. Old images and notes in the episode folders stay as they are.
 

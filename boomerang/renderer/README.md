@@ -93,7 +93,7 @@ blender -b --factory-startup -P renderer/src/export_voxchars.py -- <输出目录
 
 - 地形、石头、草、花、树、云、瀑布、体素小人、镖、特效全部由脚本程序化生成，没有用外部模型、贴图或素材包；体素小人不用各家公司的商标图形。
 - 依赖见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)，都不打包。
-- 代码和体素小人沿用仓库 [MIT 许可](../../LICENSE)。角色形象设计：小叶子XIYZ（B 站）；美术和制作：喵了个猫了个咪了个猫。
+- 代码和体素小人沿用仓库 [MIT 许可](../../LICENSE)。角色形象设计参考：小叶子XIYZ（B 站）；美术和制作：喵了个猫了个咪了个猫。
 
 ## 和制作时的差别
 
