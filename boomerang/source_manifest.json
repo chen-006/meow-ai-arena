@@ -1,0 +1,2764 @@
+{
+ "_说明": "收录文件的 SHA-256 和比赛时原件的 SHA-256。source：player_pack 赛时选手包（exe 不入库）；sparring_source 三档陪练源码；hidden_map 赛时保密地图；submission 正式选手收卷；appendix_submission 灰度版、对照组、换工具前的收卷；early_snapshot 60 分钟前停下或被中断时留存的版本；official_result / appendix_result 比赛时的成绩和逐局数据；replay_rerun 重打的回放；auction / auction_rules / captain_notes 拍卖材料；renderer 渲染器。modified=true 的文件 note 里写了改了什么。",
+ "player_pack_zip_sha256": "74dfde0d44142ff013d34076dcc0dfd1fbb7f6edbafc5ca524ab6dcb5d3c1dc3",
+ "files": {
+  "appendix/bots/claude-haiku-5.5/notes.md": {
+   "source": "appendix_submission",
+   "original_sha256": "59bff2b90c009e4409979dc9800d525d5dfaaccc781dae0b67c34397c4a530fc",
+   "sha256": "59bff2b90c009e4409979dc9800d525d5dfaaccc781dae0b67c34397c4a530fc",
+   "modified": false
+  },
+  "appendix/bots/claude-haiku-5.5/player.cpp": {
+   "source": "appendix_submission",
+   "original_sha256": "744af9f7ca5273f56000923bf607d0867fedaeef2dc38b4390b1a3b93c874975",
+   "sha256": "744af9f7ca5273f56000923bf607d0867fedaeef2dc38b4390b1a3b93c874975",
+   "modified": false
+  },
+  "appendix/bots/claude-haiku-5.5/收卷记录.json": {
+   "source": "appendix_submission",
+   "original_sha256": "4842db6256f0d8b8042bb791f4cc749961a80d83f2a1fa17d62505a6ff691e2b",
+   "sha256": "4842db6256f0d8b8042bb791f4cc749961a80d83f2a1fa17d62505a6ff691e2b",
+   "modified": false
+  },
+  "appendix/bots/claude-sonnet-5.5/notes.md": {
+   "source": "appendix_submission",
+   "original_sha256": "53eb5ac7924f430bc74f2c92dc79670b8e90b55a4959db859ae1c395969510b5",
+   "sha256": "53eb5ac7924f430bc74f2c92dc79670b8e90b55a4959db859ae1c395969510b5",
+   "modified": false
+  },
+  "appendix/bots/claude-sonnet-5.5/player.cpp": {
+   "source": "appendix_submission",
+   "original_sha256": "3f4d1bd76123ce3fa28b46b5418833bb2c68cacd14df2c307c004cf3b9847875",
+   "sha256": "3f4d1bd76123ce3fa28b46b5418833bb2c68cacd14df2c307c004cf3b9847875",
+   "modified": false
+  },
+  "appendix/bots/claude-sonnet-5.5/收卷记录.json": {
+   "source": "appendix_submission",
+   "original_sha256": "fcf83f1ef2a68726be13c6dfbada960e3a92856a397ec89304ebff3aac87d7e0",
+   "sha256": "fcf83f1ef2a68726be13c6dfbada960e3a92856a397ec89304ebff3aac87d7e0",
+   "modified": false
+  },
+  "appendix/bots/deepseek-v4.1-flash-opencode/notes.md": {
+   "source": "appendix_submission",
+   "original_sha256": "f7a03f414e760ca65a451d730ed4b056c0b8554df10345de58429608a9603fde",
+   "sha256": "f7a03f414e760ca65a451d730ed4b056c0b8554df10345de58429608a9603fde",
+   "modified": false
+  },
+  "appendix/bots/deepseek-v4.1-flash-opencode/player.cpp": {
+   "source": "appendix_submission",
+   "original_sha256": "2ae9903d9f1edbcf38f71e9bc0706c40104869418fb8d7846d41a83a66829251",
+   "sha256": "2ae9903d9f1edbcf38f71e9bc0706c40104869418fb8d7846d41a83a66829251",
+   "modified": false
+  },
+  "appendix/bots/deepseek-v4.1-flash-opencode/收卷记录.json": {
+   "source": "appendix_submission",
+   "original_sha256": "f96348eb57270c3f2c3760278ff7102fc7badbd1d3ba1f178729d85d68f1d65a",
+   "sha256": "f96348eb57270c3f2c3760278ff7102fc7badbd1d3ba1f178729d85d68f1d65a",
+   "modified": false
+  },
+  "appendix/bots/gpt-6-astra/notes.md": {
+   "source": "appendix_submission",
+   "original_sha256": "5ca45f830547df000600425637effa7549ffd145382a5cb69a5fa7ce5dcc49f5",
+   "sha256": "5ca45f830547df000600425637effa7549ffd145382a5cb69a5fa7ce5dcc49f5",
+   "modified": false
+  },
+  "appendix/bots/gpt-6-astra/player.cpp": {
+   "source": "appendix_submission",
+   "original_sha256": "7a3ef27166a3a7b1f4f1f6e58b123b823962e57333ff324c57474b2b0e2ed3f1",
+   "sha256": "7a3ef27166a3a7b1f4f1f6e58b123b823962e57333ff324c57474b2b0e2ed3f1",
+   "modified": false
+  },
+  "appendix/bots/gpt-6-astra/收卷记录.json": {
+   "source": "appendix_submission",
+   "original_sha256": "5080755f6bcf0f88b3b0a72462f5dec9d04cc069e26054469c03f3b9df4a4a6c",
+   "sha256": "5080755f6bcf0f88b3b0a72462f5dec9d04cc069e26054469c03f3b9df4a4a6c",
+   "modified": false
+  },
+  "appendix/bots/gpt-6-luna/notes.md": {
+   "source": "appendix_submission",
+   "original_sha256": "655e7af732d73e7e4b3a989389b3477bc54c359f75d97316058303f95c0a34f8",
+   "sha256": "655e7af732d73e7e4b3a989389b3477bc54c359f75d97316058303f95c0a34f8",
+   "modified": false
+  },
+  "appendix/bots/gpt-6-luna/player.cpp": {
+   "source": "appendix_submission",
+   "original_sha256": "662f70d20b112a46d7ae85b1f66c707976a0348c77176646e101f84e97a2757c",
+   "sha256": "662f70d20b112a46d7ae85b1f66c707976a0348c77176646e101f84e97a2757c",
+   "modified": false
+  },
+  "appendix/bots/gpt-6-luna/收卷记录.json": {
+   "source": "appendix_submission",
+   "original_sha256": "2f4a22e136083c2814d478514af896900f224a1c35cb8b9febdeb6ad79109798",
+   "sha256": "2f4a22e136083c2814d478514af896900f224a1c35cb8b9febdeb6ad79109798",
+   "modified": false
+  },
+  "appendix/bots/gpt-6.1-sol/notes.md": {
+   "source": "appendix_submission",
+   "original_sha256": "74d939ae944cb54d169a61ef40c244106eb825522cf8d9c87460925b1800c236",
+   "sha256": "74d939ae944cb54d169a61ef40c244106eb825522cf8d9c87460925b1800c236",
+   "modified": false
+  },
+  "appendix/bots/gpt-6.1-sol/player.cpp": {
+   "source": "appendix_submission",
+   "original_sha256": "f464cbb9dd558a8f0e2aa1382a2422662c89c70c3a4892f97bc719a4a015ea2f",
+   "sha256": "f464cbb9dd558a8f0e2aa1382a2422662c89c70c3a4892f97bc719a4a015ea2f",
+   "modified": false
+  },
+  "appendix/bots/gpt-6.1-sol/收卷记录.json": {
+   "source": "appendix_submission",
+   "original_sha256": "843c1b5d9d10b0afd819cd08e04b5bc34c822b2d4ea843cf17907fa6c9ced21d",
+   "sha256": "843c1b5d9d10b0afd819cd08e04b5bc34c822b2d4ea843cf17907fa6c9ced21d",
+   "modified": false
+  },
+  "appendix/bots/gpt-6.1-terra/notes.md": {
+   "source": "appendix_submission",
+   "original_sha256": "b5cbc95f6bb9a06b4b6dcc0c421be232448f0618462e71d29bbb6fa25a94dc69",
+   "sha256": "b5cbc95f6bb9a06b4b6dcc0c421be232448f0618462e71d29bbb6fa25a94dc69",
+   "modified": false
+  },
+  "appendix/bots/gpt-6.1-terra/player.cpp": {
+   "source": "appendix_submission",
+   "original_sha256": "89bd8633f8aa1e949a540e8f86eb4823c65fc1b8d1e3836429759ad31ec513b6",
+   "sha256": "89bd8633f8aa1e949a540e8f86eb4823c65fc1b8d1e3836429759ad31ec513b6",
+   "modified": false
+  },
+  "appendix/bots/gpt-6.1-terra/收卷记录.json": {
+   "source": "appendix_submission",
+   "original_sha256": "3c0ae0e04362880cc509fa9fe9b4e4666e6ed2cb7d95110b6182f2cd02c6ce82",
+   "sha256": "3c0ae0e04362880cc509fa9fe9b4e4666e6ed2cb7d95110b6182f2cd02c6ce82",
+   "modified": false
+  },
+  "appendix/bots/gpt-6.2-astra-grey/notes.md": {
+   "source": "appendix_submission",
+   "original_sha256": "867b32f45c32400d9bc8cd66f9487844677d6acbae271b348c00164569b8b98d",
+   "sha256": "867b32f45c32400d9bc8cd66f9487844677d6acbae271b348c00164569b8b98d",
+   "modified": false
+  },
+  "appendix/bots/gpt-6.2-astra-grey/player.cpp": {
+   "source": "appendix_submission",
+   "original_sha256": "3b29cf48fccf75abd13cb14b65e40ce63614f378c2ac371af377627b6838097f",
+   "sha256": "3b29cf48fccf75abd13cb14b65e40ce63614f378c2ac371af377627b6838097f",
+   "modified": false
+  },
+  "appendix/bots/gpt-6.2-astra-grey/收卷记录.json": {
+   "source": "appendix_submission",
+   "original_sha256": "dde2e58af347d671ffedbba52945abdf8b14fbdfc8e21ab934572c65029d8730",
+   "sha256": "dde2e58af347d671ffedbba52945abdf8b14fbdfc8e21ab934572c65029d8730",
+   "modified": false
+  },
+  "appendix/bots/gpt-sol-grey-desktop/notes.md": {
+   "source": "appendix_submission",
+   "original_sha256": "008b7e3a18a201281f2a4a27fc286b09048ed5f543c990198ba9b02b8e0f273e",
+   "sha256": "008b7e3a18a201281f2a4a27fc286b09048ed5f543c990198ba9b02b8e0f273e",
+   "modified": false
+  },
+  "appendix/bots/gpt-sol-grey-desktop/player.cpp": {
+   "source": "appendix_submission",
+   "original_sha256": "c240650623bbae102e182573d701a144500285ed73fd919c08daeac1e910e24a",
+   "sha256": "c240650623bbae102e182573d701a144500285ed73fd919c08daeac1e910e24a",
+   "modified": false
+  },
+  "appendix/bots/gpt-sol-grey-desktop/收卷记录.json": {
+   "source": "appendix_submission",
+   "original_sha256": "1a7bb4dd97b5dec88ed18fd560c04d2a064eb2c7fbcfdba38a1ac09060795cd8",
+   "sha256": "1a7bb4dd97b5dec88ed18fd560c04d2a064eb2c7fbcfdba38a1ac09060795cd8",
+   "modified": false
+  },
+  "appendix/bots/kimi-k3.1-pro-opencode/notes.md": {
+   "source": "appendix_submission",
+   "original_sha256": "9b8eb2f735511d2668afcd9f504444afc9d0ae3fbad9a04b6ca5fcaa625c1e49",
+   "sha256": "9b8eb2f735511d2668afcd9f504444afc9d0ae3fbad9a04b6ca5fcaa625c1e49",
+   "modified": false
+  },
+  "appendix/bots/kimi-k3.1-pro-opencode/player.cpp": {
+   "source": "appendix_submission",
+   "original_sha256": "7b8172f184e85fada7598602e3dd48b7cd05467a7c45adb2eb66998c9fc756ef",
+   "sha256": "7b8172f184e85fada7598602e3dd48b7cd05467a7c45adb2eb66998c9fc756ef",
+   "modified": false
+  },
+  "appendix/bots/kimi-k3.1-pro-opencode/收卷记录.json": {
+   "source": "appendix_submission",
+   "original_sha256": "4038069486684349884cf751503b79da1ac621513ce2958e5f8bb85f6f17a9a7",
+   "sha256": "4038069486684349884cf751503b79da1ac621513ce2958e5f8bb85f6f17a9a7",
+   "modified": false
+  },
+  "appendix/early/deepseek_dsh_中断时_48分钟/notes.md": {
+   "source": "early_snapshot",
+   "original_sha256": "22d262e627c128ecbf3f1fdbf77aa9b32a62991fa14d8f7a23cdbe4563eec207",
+   "sha256": "22d262e627c128ecbf3f1fdbf77aa9b32a62991fa14d8f7a23cdbe4563eec207",
+   "modified": false
+  },
+  "appendix/early/deepseek_dsh_中断时_48分钟/player.cpp": {
+   "source": "early_snapshot",
+   "original_sha256": "582c39848ffa08da644cb61c769b6669800854fd8e399fe37cab10678f7684a1",
+   "sha256": "582c39848ffa08da644cb61c769b6669800854fd8e399fe37cab10678f7684a1",
+   "modified": false
+  },
+  "appendix/early/deepseek_dsh_中断时_48分钟/收卷记录.json": {
+   "source": "early_snapshot",
+   "original_sha256": "2e30bf56a363f69474ae7223626b2174f4b9cb2d532e2ecf6b221202909f91f6",
+   "sha256": "2e30bf56a363f69474ae7223626b2174f4b9cb2d532e2ecf6b221202909f91f6",
+   "modified": false
+  },
+  "appendix/early/deepseek_dsh_中断时_49分钟/notes.md": {
+   "source": "early_snapshot",
+   "original_sha256": "22d262e627c128ecbf3f1fdbf77aa9b32a62991fa14d8f7a23cdbe4563eec207",
+   "sha256": "22d262e627c128ecbf3f1fdbf77aa9b32a62991fa14d8f7a23cdbe4563eec207",
+   "modified": false
+  },
+  "appendix/early/deepseek_dsh_中断时_49分钟/player.cpp": {
+   "source": "early_snapshot",
+   "original_sha256": "582c39848ffa08da644cb61c769b6669800854fd8e399fe37cab10678f7684a1",
+   "sha256": "582c39848ffa08da644cb61c769b6669800854fd8e399fe37cab10678f7684a1",
+   "modified": false
+  },
+  "appendix/early/deepseek_dsh_中断时_49分钟/收卷记录.json": {
+   "source": "early_snapshot",
+   "original_sha256": "9b2c22d277f4e7220c870e46cd44f4e15e1f8fcb27df409061e2d29e78998348",
+   "sha256": "9b2c22d277f4e7220c870e46cd44f4e15e1f8fcb27df409061e2d29e78998348",
+   "modified": false
+  },
+  "appendix/early/deepseek_dsh_中断时_51分钟/notes.md": {
+   "source": "early_snapshot",
+   "original_sha256": "22d262e627c128ecbf3f1fdbf77aa9b32a62991fa14d8f7a23cdbe4563eec207",
+   "sha256": "22d262e627c128ecbf3f1fdbf77aa9b32a62991fa14d8f7a23cdbe4563eec207",
+   "modified": false
+  },
+  "appendix/early/deepseek_dsh_中断时_51分钟/player.cpp": {
+   "source": "early_snapshot",
+   "original_sha256": "582c39848ffa08da644cb61c769b6669800854fd8e399fe37cab10678f7684a1",
+   "sha256": "582c39848ffa08da644cb61c769b6669800854fd8e399fe37cab10678f7684a1",
+   "modified": false
+  },
+  "appendix/early/deepseek_dsh_中断时_51分钟/收卷记录.json": {
+   "source": "early_snapshot",
+   "original_sha256": "4a53b31a467e8496fd2fd7c81edd7e3fcce7cb7f3469df4bf7d1ce2e3689bdf9",
+   "sha256": "4a53b31a467e8496fd2fd7c81edd7e3fcce7cb7f3469df4bf7d1ce2e3689bdf9",
+   "modified": false
+  },
+  "appendix/early/deepseek_dsh_第一次交卷_35分钟/notes.md": {
+   "source": "early_snapshot",
+   "original_sha256": "7975878472beae998e30049308e0f222f8f923497f747e203040670f06aeac92",
+   "sha256": "7975878472beae998e30049308e0f222f8f923497f747e203040670f06aeac92",
+   "modified": false
+  },
+  "appendix/early/deepseek_dsh_第一次交卷_35分钟/player.cpp": {
+   "source": "early_snapshot",
+   "original_sha256": "1a061a57f1ed6780d97e02c436def104be1124d3f33d4a06feb6838f3a083764",
+   "sha256": "1a061a57f1ed6780d97e02c436def104be1124d3f33d4a06feb6838f3a083764",
+   "modified": false
+  },
+  "appendix/early/deepseek_dsh_第一次交卷_35分钟/收卷记录.json": {
+   "source": "early_snapshot",
+   "original_sha256": "fe8b949e437d2ba9510d89d424055725f8a367a5a81c8c21d4ea8b6de968af5d",
+   "sha256": "fe8b949e437d2ba9510d89d424055725f8a367a5a81c8c21d4ea8b6de968af5d",
+   "modified": false
+  },
+  "appendix/early/deepseek_第一次交卷_42分钟/notes.md": {
+   "source": "early_snapshot",
+   "original_sha256": "cfb0fd1e144898b5ba93c65306c91fccc77bdb6cf7fd7d574f5aa43285c360ba",
+   "sha256": "cfb0fd1e144898b5ba93c65306c91fccc77bdb6cf7fd7d574f5aa43285c360ba",
+   "modified": false
+  },
+  "appendix/early/deepseek_第一次交卷_42分钟/player.cpp": {
+   "source": "early_snapshot",
+   "original_sha256": "1a86b4666df9e1f72d5122c8eaf71551bd1796a8d12d123e1224101ffc992d4b",
+   "sha256": "1a86b4666df9e1f72d5122c8eaf71551bd1796a8d12d123e1224101ffc992d4b",
+   "modified": false
+  },
+  "appendix/early/deepseek_第一次交卷_42分钟/收卷记录.json": {
+   "source": "early_snapshot",
+   "original_sha256": "1c0acc32e278dd013274a185f1792cc1b204bc33da51197a0ed7a47f20751d46",
+   "sha256": "1c0acc32e278dd013274a185f1792cc1b204bc33da51197a0ed7a47f20751d46",
+   "modified": false
+  },
+  "appendix/early/doubao_中断时_48分钟/player.cpp": {
+   "source": "early_snapshot",
+   "original_sha256": "26014edfb72e9d71c4bccd6b63dfda269f1648af0d0106b6853d81d6a7462a25",
+   "sha256": "26014edfb72e9d71c4bccd6b63dfda269f1648af0d0106b6853d81d6a7462a25",
+   "modified": false
+  },
+  "appendix/early/doubao_中断时_48分钟/收卷记录.json": {
+   "source": "early_snapshot",
+   "original_sha256": "680b7d1142caecd4a25747a3ac69785457660f6a747bde7a0a0a7988de476929",
+   "sha256": "680b7d1142caecd4a25747a3ac69785457660f6a747bde7a0a0a7988de476929",
+   "modified": false
+  },
+  "appendix/early/glm_中断时_15分钟/player.cpp": {
+   "source": "early_snapshot",
+   "original_sha256": "edb539c8f7f204e023a700cab1a8a9e7abf01b2f6ca1650b2fa202268371bdad",
+   "sha256": "edb539c8f7f204e023a700cab1a8a9e7abf01b2f6ca1650b2fa202268371bdad",
+   "modified": false
+  },
+  "appendix/early/glm_中断时_15分钟/收卷记录.json": {
+   "source": "early_snapshot",
+   "original_sha256": "ee2e5f83b38764cb2f2ab7f6c55c19eb339c9ef487c91a361fd8aba0ad226092",
+   "sha256": "ee2e5f83b38764cb2f2ab7f6c55c19eb339c9ef487c91a361fd8aba0ad226092",
+   "modified": false
+  },
+  "appendix/early/glm_中断时_46分钟/notes.md": {
+   "source": "early_snapshot",
+   "original_sha256": "8184404006ef3912c2fd1d75e612e1c004f5ca54132e7f111e899305f3ebe158",
+   "sha256": "8184404006ef3912c2fd1d75e612e1c004f5ca54132e7f111e899305f3ebe158",
+   "modified": false
+  },
+  "appendix/early/glm_中断时_46分钟/player.cpp": {
+   "source": "early_snapshot",
+   "original_sha256": "77a65bce76877a8258aa7d61a99d95c6f6df350305189845ec47c33bd2983cec",
+   "sha256": "77a65bce76877a8258aa7d61a99d95c6f6df350305189845ec47c33bd2983cec",
+   "modified": false
+  },
+  "appendix/early/glm_中断时_46分钟/收卷记录.json": {
+   "source": "early_snapshot",
+   "original_sha256": "e031ea8af95b40fac2704e1dac8df56ac725e0677e95c7097c993eba171192c2",
+   "sha256": "e031ea8af95b40fac2704e1dac8df56ac725e0677e95c7097c993eba171192c2",
+   "modified": false
+  },
+  "appendix/early/haiku_第一次交卷_34分钟/收卷记录.json": {
+   "source": "early_snapshot",
+   "original_sha256": "073604b0afa6b91ed5f0a8a897439358fece31812a30c5b28dca6230c5eb891c",
+   "sha256": "073604b0afa6b91ed5f0a8a897439358fece31812a30c5b28dca6230c5eb891c",
+   "modified": false
+  },
+  "appendix/early/kimi2_中断时_55分钟/notes.md": {
+   "source": "early_snapshot",
+   "original_sha256": "2cd3702a9cef7701a18f5a90567fa3e9d6d75be22dac68910f70cfa06c120e9a",
+   "sha256": "2cd3702a9cef7701a18f5a90567fa3e9d6d75be22dac68910f70cfa06c120e9a",
+   "modified": false
+  },
+  "appendix/early/kimi2_中断时_55分钟/player.cpp": {
+   "source": "early_snapshot",
+   "original_sha256": "ede2eef0544504edc27569022572a0b91a00f831de010f2c18d962071d1c9f48",
+   "sha256": "ede2eef0544504edc27569022572a0b91a00f831de010f2c18d962071d1c9f48",
+   "modified": false
+  },
+  "appendix/early/kimi2_中断时_55分钟/收卷记录.json": {
+   "source": "early_snapshot",
+   "original_sha256": "a5d02f6eb5fc69957664200209d115fe393a879dd7bb1946185f1fd7de7b8a59",
+   "sha256": "a5d02f6eb5fc69957664200209d115fe393a879dd7bb1946185f1fd7de7b8a59",
+   "modified": false
+  },
+  "appendix/early/kimi_中断时_54分钟/player.cpp": {
+   "source": "early_snapshot",
+   "original_sha256": "5c4acbe06bff1fd47183a540204bf938bfab2568bb8f2f1f3850ffbbe3d20687",
+   "sha256": "5c4acbe06bff1fd47183a540204bf938bfab2568bb8f2f1f3850ffbbe3d20687",
+   "modified": false
+  },
+  "appendix/early/kimi_中断时_54分钟/收卷记录.json": {
+   "source": "early_snapshot",
+   "original_sha256": "9fec01562f85e8e9dce1919faefc74fd45b545e3a9b323e7a096f2f93d1751b9",
+   "sha256": "9fec01562f85e8e9dce1919faefc74fd45b545e3a9b323e7a096f2f93d1751b9",
+   "modified": false
+  },
+  "appendix/early/mimo_第一次交卷_51分钟/notes.md": {
+   "source": "early_snapshot",
+   "original_sha256": "8b25a021942e55ed793996e189dc0748696100ae1d053d31e50b895478f2d700",
+   "sha256": "8b25a021942e55ed793996e189dc0748696100ae1d053d31e50b895478f2d700",
+   "modified": false
+  },
+  "appendix/early/mimo_第一次交卷_51分钟/player.cpp": {
+   "source": "early_snapshot",
+   "original_sha256": "5d95554cb0a30ac1fc7f82bffe32dd833d36a12c626702cce8778a866e96e3de",
+   "sha256": "5d95554cb0a30ac1fc7f82bffe32dd833d36a12c626702cce8778a866e96e3de",
+   "modified": false
+  },
+  "appendix/early/mimo_第一次交卷_51分钟/收卷记录.json": {
+   "source": "early_snapshot",
+   "original_sha256": "4a8b221f960595037b600f9496d8680bca22645afc04729d365b2f759e5afa05",
+   "sha256": "4a8b221f960595037b600f9496d8680bca22645afc04729d365b2f759e5afa05",
+   "modified": false
+  },
+  "appendix/results/全员大混战/obs_补打.json.gz": {
+   "source": "appendix_result",
+   "original_sha256": "e1d1e2b2c61674bb1b1f23a8fe571536c01fd0481a82ef5659fe1aceb6ae04ee",
+   "sha256": "01d1cec7c3bff5b8b64b0b9d7fa603de475a8f5290987ab8f25fa0de8bb1d49c",
+   "modified": true,
+   "note": "原文件 gzip 压缩，内容不变"
+  },
+  "appendix/results/全员大混战/全员榜.json": {
+   "source": "appendix_result",
+   "original_sha256": "45580a853a0aa839808b9c3cedeb9176ec451e329319f027e4b261237119eed5",
+   "sha256": "45580a853a0aa839808b9c3cedeb9176ec451e329319f027e4b261237119eed5",
+   "modified": false
+  },
+  "appendix/results/全员大混战/全员榜.md": {
+   "source": "appendix_result",
+   "original_sha256": "7594b15037efa79d17c79702491cb471ba2eb3e4ecdda5163a47683573d38407",
+   "sha256": "7594b15037efa79d17c79702491cb471ba2eb3e4ecdda5163a47683573d38407",
+   "modified": false
+  },
+  "appendix/results/全员大混战/胜率表.json": {
+   "source": "appendix_result",
+   "original_sha256": "bd459a715d63f0cfc39f2c80790ddcc671f4826a6feec4abcea2bd234d88d155",
+   "sha256": "bd459a715d63f0cfc39f2c80790ddcc671f4826a6feec4abcea2bd234d88d155",
+   "modified": false
+  },
+  "appendix/results/全员大混战/胜率表_一对一.md": {
+   "source": "appendix_result",
+   "original_sha256": "9e72388878f1b32dcd1d30dd2b9746e926357cdc144acd71a91c619673af7858",
+   "sha256": "9e72388878f1b32dcd1d30dd2b9746e926357cdc144acd71a91c619673af7858",
+   "modified": false
+  },
+  "appendix/results/全员大混战/胜率表_四人局.md": {
+   "source": "appendix_result",
+   "original_sha256": "80ad8d70c0efd0d6e6ec4747beb7e36b6d57039d9614f5bd515147887fbd9d27",
+   "sha256": "80ad8d70c0efd0d6e6ec4747beb7e36b6d57039d9614f5bd515147887fbd9d27",
+   "modified": false
+  },
+  "appendix/results/对照赛/obs_新打的.json.gz": {
+   "source": "appendix_result",
+   "original_sha256": "711bc004a42a428571c4c62cd7f96cf80e80657f16d9fd2a4974e627981b2aef",
+   "sha256": "4e4a2e3669d37a5952c6c2c07383b7a4cd9b1413373828479b54190b0b2bae21",
+   "modified": true,
+   "note": "原文件 gzip 压缩，内容不变"
+  },
+  "appendix/results/对照赛/对照赛成绩.json": {
+   "source": "appendix_result",
+   "original_sha256": "2ef8548b83c89aca94d9e666838da3fd2487b0fdf645b39428711005d52b242e",
+   "sha256": "2ef8548b83c89aca94d9e666838da3fd2487b0fdf645b39428711005d52b242e",
+   "modified": false
+  },
+  "appendix/results/灰度版海选/obs.json.gz": {
+   "source": "appendix_result",
+   "original_sha256": "139b1ba5be32044b98374d55726a9e2b913d54c0da97ba10e70761c77c396a9e",
+   "sha256": "ad890e7510ce7eb7c707e158b12616ada88c3982f84796a6275e6c2e627de3c9",
+   "modified": true,
+   "note": "原文件 gzip 压缩，内容不变"
+  },
+  "appendix/results/灰度版海选/海选成绩.json": {
+   "source": "appendix_result",
+   "original_sha256": "eb5ab764c23b4c63b25507da7f3ff40fb9c49d0aa566435a4797d08e319a9e75",
+   "sha256": "eb5ab764c23b4c63b25507da7f3ff40fb9c49d0aa566435a4797d08e319a9e75",
+   "modified": false
+  },
+  "auction/auction.py": {
+   "source": "auction_rules",
+   "original_sha256": "520f682e88ea0d098a7792ae04b839c6e4dd88e84915d43d46ab45b6d38f5b41",
+   "sha256": "520f682e88ea0d098a7792ae04b839c6e4dd88e84915d43d46ab45b6d38f5b41",
+   "modified": false
+  },
+  "auction/尽调材料/海选成绩.md": {
+   "source": "auction",
+   "original_sha256": "873e8643522f3d5117deff21ee926cc9001a1e9dfdc37c68bd524f3ae61fe8d4",
+   "sha256": "873e8643522f3d5117deff21ee926cc9001a1e9dfdc37c68bd524f3ae61fe8d4",
+   "modified": false
+  },
+  "auction/尽调材料/演习出价记录.md": {
+   "source": "auction",
+   "original_sha256": "bdf7446caaae817101caac6402d0bcfb7428662c236133f853a5909d971b2a27",
+   "sha256": "bdf7446caaae817101caac6402d0bcfb7428662c236133f853a5909d971b2a27",
+   "modified": false
+  },
+  "auction/尽调结果.json": {
+   "source": "auction",
+   "original_sha256": "882a9b2ef0c7b4f428970a144036c984e3c35e49ff9850a748c6cc1bf4aaaf0f",
+   "sha256": "882a9b2ef0c7b4f428970a144036c984e3c35e49ff9850a748c6cc1bf4aaaf0f",
+   "modified": false
+  },
+  "auction/拍卖结果.json": {
+   "source": "auction",
+   "original_sha256": "b9d3382b1ea17066abf7514067ea6b223fdd1c426f6408a89befda14cf3e0cb4",
+   "sha256": "b9d3382b1ea17066abf7514067ea6b223fdd1c426f6408a89befda14cf3e0cb4",
+   "modified": false
+  },
+  "auction/拍卖结果.md": {
+   "source": "auction",
+   "original_sha256": "dbb3501dc58f7b6cf7c46cc7cd8c80aa3e175ad0f2a32c45f540cd7f913694a0",
+   "sha256": "dbb3501dc58f7b6cf7c46cc7cd8c80aa3e175ad0f2a32c45f540cd7f913694a0",
+   "modified": false
+  },
+  "auction/演习_1414/尽调结果.json": {
+   "source": "auction",
+   "original_sha256": "a49261f0a55bd5f8be8d7b2a4a1d04a3f08740e4559875b073c716227d6f6309",
+   "sha256": "a49261f0a55bd5f8be8d7b2a4a1d04a3f08740e4559875b073c716227d6f6309",
+   "modified": false
+  },
+  "auction/演习_1414/拍卖结果.json": {
+   "source": "auction",
+   "original_sha256": "2a3c24cfc34ce7897d8006aceb4ceae5e2e557b45817332613666559432ee459",
+   "sha256": "2a3c24cfc34ce7897d8006aceb4ceae5e2e557b45817332613666559432ee459",
+   "modified": false
+  },
+  "auction/演习_1414/拍卖结果.md": {
+   "source": "auction",
+   "original_sha256": "b93eb2ce276610f5de96d19b9a7c31e662ace58e775314cd38fa85aeb7a5af34",
+   "sha256": "b93eb2ce276610f5de96d19b9a7c31e662ace58e775314cd38fa85aeb7a5af34",
+   "modified": false
+  },
+  "auction/演习_1414/记录/00尽调_astra_答.txt": {
+   "source": "auction",
+   "original_sha256": "85955afe446aef624f726a7c3735d5dee81bd0286df46e355a68a39cde0cf152",
+   "sha256": "85955afe446aef624f726a7c3735d5dee81bd0286df46e355a68a39cde0cf152",
+   "modified": false
+  },
+  "auction/演习_1414/记录/00尽调_astra_问.txt": {
+   "source": "auction",
+   "original_sha256": "9e93aae05a3d4e1cf2a603cda13c76918d7e2dcca4277d8e317aa20620400dd0",
+   "sha256": "9e93aae05a3d4e1cf2a603cda13c76918d7e2dcca4277d8e317aa20620400dd0",
+   "modified": false
+  },
+  "auction/演习_1414/记录/00尽调_fable_答.txt": {
+   "source": "auction",
+   "original_sha256": "e205d6a4bd0ce4c66cf3641699c413d07e9f626e67e96b81b8cec8e060a64de7",
+   "sha256": "e205d6a4bd0ce4c66cf3641699c413d07e9f626e67e96b81b8cec8e060a64de7",
+   "modified": false
+  },
+  "auction/演习_1414/记录/00尽调_fable_问.txt": {
+   "source": "auction",
+   "original_sha256": "3ee3903909545c6a8ae0c7eaec385d951441057900b914b5be3f858dba83cdfd",
+   "sha256": "3ee3903909545c6a8ae0c7eaec385d951441057900b914b5be3f858dba83cdfd",
+   "modified": false
+  },
+  "auction/演习_1414/记录/01_carbon_astra_答.txt": {
+   "source": "auction",
+   "original_sha256": "18bed12fef6deb2b4a33c4072ef515c9745236e8d9b1368f9e7602bf69b70462",
+   "sha256": "18bed12fef6deb2b4a33c4072ef515c9745236e8d9b1368f9e7602bf69b70462",
+   "modified": false
+  },
+  "auction/演习_1414/记录/01_carbon_astra_问.txt": {
+   "source": "auction",
+   "original_sha256": "ddbbf45464626e31d971464ae8e8017b3914212c61139087b9aacb1307a7b04e",
+   "sha256": "ddbbf45464626e31d971464ae8e8017b3914212c61139087b9aacb1307a7b04e",
+   "modified": false
+  },
+  "auction/演习_1414/记录/02_carbon_fable_答.txt": {
+   "source": "auction",
+   "original_sha256": "376ed14af95f23b762057aa92b07b683cd4058c61764c9254d35d72591935428",
+   "sha256": "376ed14af95f23b762057aa92b07b683cd4058c61764c9254d35d72591935428",
+   "modified": false
+  },
+  "auction/演习_1414/记录/02_carbon_fable_问.txt": {
+   "source": "auction",
+   "original_sha256": "a8a95142ba314a9b833bb861a896da2fcc795ed4f727934aed52e15dd794cff9",
+   "sha256": "a8a95142ba314a9b833bb861a896da2fcc795ed4f727934aed52e15dd794cff9",
+   "modified": false
+  },
+  "auction/演习_1414/记录/03_hydrogen_astra_答.txt": {
+   "source": "auction",
+   "original_sha256": "4a6b13ab52bd0db7f42575bb1c1d82206afd0f02692447216cbbe408ce757be0",
+   "sha256": "4a6b13ab52bd0db7f42575bb1c1d82206afd0f02692447216cbbe408ce757be0",
+   "modified": false
+  },
+  "auction/演习_1414/记录/03_hydrogen_astra_问.txt": {
+   "source": "auction",
+   "original_sha256": "bd127f068e77d172ba6512e95f71cdee73a999fbb44ba959b332a4fd6808babc",
+   "sha256": "bd127f068e77d172ba6512e95f71cdee73a999fbb44ba959b332a4fd6808babc",
+   "modified": false
+  },
+  "auction/演习_1414/记录/04_hydrogen_fable_答.txt": {
+   "source": "auction",
+   "original_sha256": "adfb74d96c26f4aa2ce5257de5b7443f06d1b7dd814bceff80d9a05b77449cb7",
+   "sha256": "adfb74d96c26f4aa2ce5257de5b7443f06d1b7dd814bceff80d9a05b77449cb7",
+   "modified": false
+  },
+  "auction/演习_1414/记录/04_hydrogen_fable_问.txt": {
+   "source": "auction",
+   "original_sha256": "6e0bccd30cdc4a327f1b17e39071b658d0447b64b1e8bcb160cb88ff03362aef",
+   "sha256": "6e0bccd30cdc4a327f1b17e39071b658d0447b64b1e8bcb160cb88ff03362aef",
+   "modified": false
+  },
+  "auction/演习_1414/记录/05_hydrogen_astra_答.txt": {
+   "source": "auction",
+   "original_sha256": "8e057c370d8ba0e69cbd2815337f6926f2afe5ccf4843c609b4614bb93e5b438",
+   "sha256": "8e057c370d8ba0e69cbd2815337f6926f2afe5ccf4843c609b4614bb93e5b438",
+   "modified": false
+  },
+  "auction/演习_1414/记录/05_hydrogen_astra_问.txt": {
+   "source": "auction",
+   "original_sha256": "852177aeb8ba7dd8f648d7dab946746e6beef1cf0a2daa64b392af195363e6a2",
+   "sha256": "852177aeb8ba7dd8f648d7dab946746e6beef1cf0a2daa64b392af195363e6a2",
+   "modified": false
+  },
+  "auction/演习_1414/记录/06_hydrogen_fable_答.txt": {
+   "source": "auction",
+   "original_sha256": "3c35c156e1accfafa379314267321f1921f3483e61a70f0cd62da21b0dfda022",
+   "sha256": "3c35c156e1accfafa379314267321f1921f3483e61a70f0cd62da21b0dfda022",
+   "modified": false
+  },
+  "auction/演习_1414/记录/06_hydrogen_fable_问.txt": {
+   "source": "auction",
+   "original_sha256": "43ead3ad6787ad0bb96693dde3ccedb93930e79d1d4b2502f064a404058ceb77",
+   "sha256": "43ead3ad6787ad0bb96693dde3ccedb93930e79d1d4b2502f064a404058ceb77",
+   "modified": false
+  },
+  "auction/演习_1414/记录/07_grok_astra_答.txt": {
+   "source": "auction",
+   "original_sha256": "b6523d114b714d2f4c6ce5aa54ad4311e2c45886796c7ca8372b61ec68ac8aec",
+   "sha256": "b6523d114b714d2f4c6ce5aa54ad4311e2c45886796c7ca8372b61ec68ac8aec",
+   "modified": false
+  },
+  "auction/演习_1414/记录/07_grok_astra_问.txt": {
+   "source": "auction",
+   "original_sha256": "11487a5eeba183fac00cced29f8591bb5041506f61caefa1ca59e41b603cdb30",
+   "sha256": "11487a5eeba183fac00cced29f8591bb5041506f61caefa1ca59e41b603cdb30",
+   "modified": false
+  },
+  "auction/演习_1414/记录/08_grok_fable_答.txt": {
+   "source": "auction",
+   "original_sha256": "f19e14aca303ff7b63755a58a9b2bf255a15bbc3be712d6aaae6b47ed154b761",
+   "sha256": "f19e14aca303ff7b63755a58a9b2bf255a15bbc3be712d6aaae6b47ed154b761",
+   "modified": false
+  },
+  "auction/演习_1414/记录/08_grok_fable_问.txt": {
+   "source": "auction",
+   "original_sha256": "87f1a5ca764330ad8692756ea6d38f00a2d9674fc91f54f323b11ebc63b13040",
+   "sha256": "87f1a5ca764330ad8692756ea6d38f00a2d9674fc91f54f323b11ebc63b13040",
+   "modified": false
+  },
+  "auction/演习_1414/记录/09_glm_astra_答.txt": {
+   "source": "auction",
+   "original_sha256": "7ab4fb1ca2a9224e788cb77f3189205714e7489e86460422631229fe99dee4a9",
+   "sha256": "7ab4fb1ca2a9224e788cb77f3189205714e7489e86460422631229fe99dee4a9",
+   "modified": false
+  },
+  "auction/演习_1414/记录/09_glm_astra_问.txt": {
+   "source": "auction",
+   "original_sha256": "1d29c33bbd0cde80d47ba6bf6b94d75cc41372ed00ff50e4be61d2c6ff980a91",
+   "sha256": "1d29c33bbd0cde80d47ba6bf6b94d75cc41372ed00ff50e4be61d2c6ff980a91",
+   "modified": false
+  },
+  "auction/演习_1414/记录/10_glm_fable_答.txt": {
+   "source": "auction",
+   "original_sha256": "6dfae5049556997ba9ef33ffe8f8585127ebd6aa45040b83cc56a5813bf24787",
+   "sha256": "6dfae5049556997ba9ef33ffe8f8585127ebd6aa45040b83cc56a5813bf24787",
+   "modified": false
+  },
+  "auction/演习_1414/记录/10_glm_fable_问.txt": {
+   "source": "auction",
+   "original_sha256": "7aec448633031efb7275834029123a79ec68891e9eb2b778ef23c32a864deccd",
+   "sha256": "7aec448633031efb7275834029123a79ec68891e9eb2b778ef23c32a864deccd",
+   "modified": false
+  },
+  "auction/演习_1414/记录/11_glm_astra_答.txt": {
+   "source": "auction",
+   "original_sha256": "27d98df448aa91fc776fde95766f9899cacff4ca37a25b714cdb786ef361a2fc",
+   "sha256": "27d98df448aa91fc776fde95766f9899cacff4ca37a25b714cdb786ef361a2fc",
+   "modified": false
+  },
+  "auction/演习_1414/记录/11_glm_astra_问.txt": {
+   "source": "auction",
+   "original_sha256": "c69be81491c92d49ad91282e13efc796787d6deab81930e41c43420c7e5df26d",
+   "sha256": "c69be81491c92d49ad91282e13efc796787d6deab81930e41c43420c7e5df26d",
+   "modified": false
+  },
+  "auction/演习_1414/记录/12_glm_fable_答.txt": {
+   "source": "auction",
+   "original_sha256": "f0a4b57495c1ffa1c42384a9b6ddce7c00a004fcaedfb688720f95517b326d3d",
+   "sha256": "f0a4b57495c1ffa1c42384a9b6ddce7c00a004fcaedfb688720f95517b326d3d",
+   "modified": false
+  },
+  "auction/演习_1414/记录/12_glm_fable_问.txt": {
+   "source": "auction",
+   "original_sha256": "6e17e47a47a5333aebb6dcdd02d7a0bf5f990de9f49ac6f2e388fb66025a4070",
+   "sha256": "6e17e47a47a5333aebb6dcdd02d7a0bf5f990de9f49ac6f2e388fb66025a4070",
+   "modified": false
+  },
+  "auction/演习_1414/记录/13_glm_astra_答.txt": {
+   "source": "auction",
+   "original_sha256": "d78608645665f693a6d6a581afed5012c31392eb2c70efb80f69cd281bd5eddd",
+   "sha256": "d78608645665f693a6d6a581afed5012c31392eb2c70efb80f69cd281bd5eddd",
+   "modified": false
+  },
+  "auction/演习_1414/记录/13_glm_astra_问.txt": {
+   "source": "auction",
+   "original_sha256": "30838a903ac0016f78cf106587675a7d1e2d38119c45cff498549e799564bbb9",
+   "sha256": "30838a903ac0016f78cf106587675a7d1e2d38119c45cff498549e799564bbb9",
+   "modified": false
+  },
+  "auction/演习_1414/记录/14_glm_fable_答.txt": {
+   "source": "auction",
+   "original_sha256": "beda0a5c484bfd47886257f64ff94be3bd261bd1bbb4168632b60b4fe8378466",
+   "sha256": "beda0a5c484bfd47886257f64ff94be3bd261bd1bbb4168632b60b4fe8378466",
+   "modified": false
+  },
+  "auction/演习_1414/记录/14_glm_fable_问.txt": {
+   "source": "auction",
+   "original_sha256": "2fcbf7fefc0b29223aae5f674986ecdd0c3d0e8fd65cdd62cf78bc7714453887",
+   "sha256": "2fcbf7fefc0b29223aae5f674986ecdd0c3d0e8fd65cdd62cf78bc7714453887",
+   "modified": false
+  },
+  "auction/演习_1414/记录/15_glm_astra_答.txt": {
+   "source": "auction",
+   "original_sha256": "e0b46763c25de1c6a726ebffdde26bd8489eb612c18ae7bd555b6697145f04ba",
+   "sha256": "e0b46763c25de1c6a726ebffdde26bd8489eb612c18ae7bd555b6697145f04ba",
+   "modified": false
+  },
+  "auction/演习_1414/记录/15_glm_astra_问.txt": {
+   "source": "auction",
+   "original_sha256": "7d6946bf939632031da908a965dcb17090007d8a964eeb9ab74008461c8d7d9b",
+   "sha256": "7d6946bf939632031da908a965dcb17090007d8a964eeb9ab74008461c8d7d9b",
+   "modified": false
+  },
+  "auction/演习_1414/记录/16_glm_fable_答.txt": {
+   "source": "auction",
+   "original_sha256": "f39b24c79081a31b5512b01ba15c164a428174b43088f7ccb05e0a78d6652979",
+   "sha256": "f39b24c79081a31b5512b01ba15c164a428174b43088f7ccb05e0a78d6652979",
+   "modified": false
+  },
+  "auction/演习_1414/记录/16_glm_fable_问.txt": {
+   "source": "auction",
+   "original_sha256": "e80b527f0afdbc695ceb59d55eff0b9e78786cee90173262249d408d1b326eff",
+   "sha256": "e80b527f0afdbc695ceb59d55eff0b9e78786cee90173262249d408d1b326eff",
+   "modified": false
+  },
+  "auction/演习_1414/记录/17_deepseek_astra_答.txt": {
+   "source": "auction",
+   "original_sha256": "bcaead8d7940a2ed49857fcacf0208a053e93a6f5001f1a22a6fbed07bd5d4be",
+   "sha256": "bcaead8d7940a2ed49857fcacf0208a053e93a6f5001f1a22a6fbed07bd5d4be",
+   "modified": false
+  },
+  "auction/演习_1414/记录/17_deepseek_astra_问.txt": {
+   "source": "auction",
+   "original_sha256": "48e06eaf936e3a56cb8bdd210a99639ce961cf79465935ed9f6c81b6014108b5",
+   "sha256": "48e06eaf936e3a56cb8bdd210a99639ce961cf79465935ed9f6c81b6014108b5",
+   "modified": false
+  },
+  "auction/演习_1414/记录/18_deepseek_fable_答.txt": {
+   "source": "auction",
+   "original_sha256": "d9ad0617cde39e169b48aca83850a63702544b4eeafe52155cb6c88fbe01b714",
+   "sha256": "d9ad0617cde39e169b48aca83850a63702544b4eeafe52155cb6c88fbe01b714",
+   "modified": false
+  },
+  "auction/演习_1414/记录/18_deepseek_fable_问.txt": {
+   "source": "auction",
+   "original_sha256": "f31ca5ca53f3ab6c543aed101586bd1e0b367866f83bfdf25e6df54c35556383",
+   "sha256": "f31ca5ca53f3ab6c543aed101586bd1e0b367866f83bfdf25e6df54c35556383",
+   "modified": false
+  },
+  "auction/演习_1414/记录/19_kimi_astra_答.txt": {
+   "source": "auction",
+   "original_sha256": "e72b8a9dfb8ca964aef4c75e5cafe6bddaed7ca77ceab042c0eb036b5bcd8c02",
+   "sha256": "e72b8a9dfb8ca964aef4c75e5cafe6bddaed7ca77ceab042c0eb036b5bcd8c02",
+   "modified": false
+  },
+  "auction/演习_1414/记录/19_kimi_astra_问.txt": {
+   "source": "auction",
+   "original_sha256": "8960257ecd9e821158d274776512fd6af6374012e7d63477aa133d1395e72b82",
+   "sha256": "8960257ecd9e821158d274776512fd6af6374012e7d63477aa133d1395e72b82",
+   "modified": false
+  },
+  "auction/演习_1414/记录/20_kimi_fable_答.txt": {
+   "source": "auction",
+   "original_sha256": "2461ab0700496f51f236c2fe134b89f467fb4e9fe38f432c6c8967e5a63cd72a",
+   "sha256": "2461ab0700496f51f236c2fe134b89f467fb4e9fe38f432c6c8967e5a63cd72a",
+   "modified": false
+  },
+  "auction/演习_1414/记录/20_kimi_fable_问.txt": {
+   "source": "auction",
+   "original_sha256": "8920eb39a73177d0aa11bcbbee4ec69f8a716c9a6a06dad8f9fe1ea092e8d7e1",
+   "sha256": "8920eb39a73177d0aa11bcbbee4ec69f8a716c9a6a06dad8f9fe1ea092e8d7e1",
+   "modified": false
+  },
+  "auction/演习_1414/记录/21_qwen_astra_答.txt": {
+   "source": "auction",
+   "original_sha256": "a59c083ebb9a18c29cb5d9c9e0df8555f923c2410bc40eae460b3e78ec5d1619",
+   "sha256": "a59c083ebb9a18c29cb5d9c9e0df8555f923c2410bc40eae460b3e78ec5d1619",
+   "modified": false
+  },
+  "auction/演习_1414/记录/21_qwen_astra_问.txt": {
+   "source": "auction",
+   "original_sha256": "ce5ae8b2dadebf14ec380c4589cdf3d67355e73f957aec72a82ca2d1b4d9a139",
+   "sha256": "ce5ae8b2dadebf14ec380c4589cdf3d67355e73f957aec72a82ca2d1b4d9a139",
+   "modified": false
+  },
+  "auction/演习_1414/队长笔记/gpt-6.2-astra-grey_auction_notes.md": {
+   "source": "captain_notes",
+   "original_sha256": "ecac9179a36c2a5d0d8bb844e72174df095eb800c83bdf0d37b2e3b67c1453e2",
+   "sha256": "ecac9179a36c2a5d0d8bb844e72174df095eb800c83bdf0d37b2e3b67c1453e2",
+   "modified": false
+  },
+  "auction/记录/00开拍前通知_astra_答.txt": {
+   "source": "auction",
+   "original_sha256": "7395413568adeb7920df22c4cad549ad4ce379e6cf75a0f589ada10cf0b2848b",
+   "sha256": "7395413568adeb7920df22c4cad549ad4ce379e6cf75a0f589ada10cf0b2848b",
+   "modified": false
+  },
+  "auction/记录/00开拍前通知_astra_问.txt": {
+   "source": "auction",
+   "original_sha256": "bb3e821350dfcd3c6c7ff5885f108c3871387cc6124c1cf53dfa82ff74c4cbdc",
+   "sha256": "bb3e821350dfcd3c6c7ff5885f108c3871387cc6124c1cf53dfa82ff74c4cbdc",
+   "modified": false
+  },
+  "auction/记录/00开拍前通知_fable_答.txt": {
+   "source": "auction",
+   "original_sha256": "81e7c6116a72b0094aae16f8bbd49e950fd5e83face5377f68c909e7a1598ed9",
+   "sha256": "81e7c6116a72b0094aae16f8bbd49e950fd5e83face5377f68c909e7a1598ed9",
+   "modified": false
+  },
+  "auction/记录/00开拍前通知_fable_问.txt": {
+   "source": "auction",
+   "original_sha256": "e0c83fadacb1812c9f71d443b6ed9d9fd1fa0ff2bbff46d560aaf6231ebc7c69",
+   "sha256": "e0c83fadacb1812c9f71d443b6ed9d9fd1fa0ff2bbff46d560aaf6231ebc7c69",
+   "modified": false
+  },
+  "auction/记录/01_carbon_astra_答.txt": {
+   "source": "auction",
+   "original_sha256": "f508865d43edeab4eb4579ae7a4a213a9fb0580f76450936ce40a980bab36408",
+   "sha256": "f508865d43edeab4eb4579ae7a4a213a9fb0580f76450936ce40a980bab36408",
+   "modified": false
+  },
+  "auction/记录/01_carbon_astra_问.txt": {
+   "source": "auction",
+   "original_sha256": "04fb05eb7d29ee7a51cd43bd79b3fa4e1308dfb820a65dd203a14f107bf2a151",
+   "sha256": "04fb05eb7d29ee7a51cd43bd79b3fa4e1308dfb820a65dd203a14f107bf2a151",
+   "modified": false
+  },
+  "auction/记录/02_carbon_fable_答.txt": {
+   "source": "auction",
+   "original_sha256": "fee4389141d291dc07abf6205cf09118dd08360b3b45b1f2a1f330445fe4939b",
+   "sha256": "fee4389141d291dc07abf6205cf09118dd08360b3b45b1f2a1f330445fe4939b",
+   "modified": false
+  },
+  "auction/记录/02_carbon_fable_问.txt": {
+   "source": "auction",
+   "original_sha256": "415e6d88f48c6f4f66a5ad7971a7f1e37fc1165c433210d46be79f590e7e5999",
+   "sha256": "415e6d88f48c6f4f66a5ad7971a7f1e37fc1165c433210d46be79f590e7e5999",
+   "modified": false
+  },
+  "auction/记录/03_hydrogen_astra_答.txt": {
+   "source": "auction",
+   "original_sha256": "100d32dccfb111956693245420ce09599f8ac95b740de93e784f91968afee481",
+   "sha256": "100d32dccfb111956693245420ce09599f8ac95b740de93e784f91968afee481",
+   "modified": false
+  },
+  "auction/记录/03_hydrogen_astra_问.txt": {
+   "source": "auction",
+   "original_sha256": "23aecb20fbadb6e6ccdb1507f3c5c251ddd498c5b84225438c8d55dc56a32f9e",
+   "sha256": "23aecb20fbadb6e6ccdb1507f3c5c251ddd498c5b84225438c8d55dc56a32f9e",
+   "modified": false
+  },
+  "auction/记录/04_hydrogen_fable_答.txt": {
+   "source": "auction",
+   "original_sha256": "8d647fa558fc1716ead755859c81d23b25a0b81fd520d888b72033899a65abaf",
+   "sha256": "8d647fa558fc1716ead755859c81d23b25a0b81fd520d888b72033899a65abaf",
+   "modified": false
+  },
+  "auction/记录/04_hydrogen_fable_问.txt": {
+   "source": "auction",
+   "original_sha256": "4e03c02d9985b38bcd927fba2ebd80feb8fd31093ce91339adfad7b85f11e6ad",
+   "sha256": "4e03c02d9985b38bcd927fba2ebd80feb8fd31093ce91339adfad7b85f11e6ad",
+   "modified": false
+  },
+  "auction/记录/05_hydrogen_astra_答.txt": {
+   "source": "auction",
+   "original_sha256": "183546aa631e3b8c6586be0ae7739eb41293591a8cca2371083b3bcdb9f70148",
+   "sha256": "183546aa631e3b8c6586be0ae7739eb41293591a8cca2371083b3bcdb9f70148",
+   "modified": false
+  },
+  "auction/记录/05_hydrogen_astra_问.txt": {
+   "source": "auction",
+   "original_sha256": "1acd4522a32d0f0b602c35abecc4121a400a9dbc1c2d5aa08a012ddbeec24f1f",
+   "sha256": "1acd4522a32d0f0b602c35abecc4121a400a9dbc1c2d5aa08a012ddbeec24f1f",
+   "modified": false
+  },
+  "auction/记录/06_hydrogen_fable_答.txt": {
+   "source": "auction",
+   "original_sha256": "0dc6c850acaf175a1f7ed1c7dda09aa74af2189c50e21d72641459a90d1abd8f",
+   "sha256": "0dc6c850acaf175a1f7ed1c7dda09aa74af2189c50e21d72641459a90d1abd8f",
+   "modified": false
+  },
+  "auction/记录/06_hydrogen_fable_问.txt": {
+   "source": "auction",
+   "original_sha256": "57f16d8c81c6a103407ad6babbe517752a20be87017dc95805d3d9637e5095d5",
+   "sha256": "57f16d8c81c6a103407ad6babbe517752a20be87017dc95805d3d9637e5095d5",
+   "modified": false
+  },
+  "auction/记录/07_hydrogen_astra_答.txt": {
+   "source": "auction",
+   "original_sha256": "6ec9e6de57c4523d3a84caa13293077a4aba1ce013f6fe2ba298ef5a2a140664",
+   "sha256": "6ec9e6de57c4523d3a84caa13293077a4aba1ce013f6fe2ba298ef5a2a140664",
+   "modified": false
+  },
+  "auction/记录/07_hydrogen_astra_问.txt": {
+   "source": "auction",
+   "original_sha256": "36a0e943b705e6f55363fba011273b028f07e1b037aa8e1effbcc3823918bd19",
+   "sha256": "36a0e943b705e6f55363fba011273b028f07e1b037aa8e1effbcc3823918bd19",
+   "modified": false
+  },
+  "auction/记录/08_hydrogen_fable_答.txt": {
+   "source": "auction",
+   "original_sha256": "ef46a2d5121bad8907b835bc7a22cd742d419801e9b2ca89411504a0f336239a",
+   "sha256": "ef46a2d5121bad8907b835bc7a22cd742d419801e9b2ca89411504a0f336239a",
+   "modified": false
+  },
+  "auction/记录/08_hydrogen_fable_问.txt": {
+   "source": "auction",
+   "original_sha256": "3bc4f1175e36a52537e712c633bd3281db10def6d0555b11c1dc0d73bdba2a15",
+   "sha256": "3bc4f1175e36a52537e712c633bd3281db10def6d0555b11c1dc0d73bdba2a15",
+   "modified": false
+  },
+  "auction/记录/09_hydrogen_astra_答.txt": {
+   "source": "auction",
+   "original_sha256": "4b24960da7a0577314af6fb3ab1a50dbff3a56714afa222050a4f111882fe96b",
+   "sha256": "4b24960da7a0577314af6fb3ab1a50dbff3a56714afa222050a4f111882fe96b",
+   "modified": false
+  },
+  "auction/记录/09_hydrogen_astra_问.txt": {
+   "source": "auction",
+   "original_sha256": "4427b3a4613258f90c0b89ab135a589f43b08cc8e2ab342cbc985a83567763f5",
+   "sha256": "4427b3a4613258f90c0b89ab135a589f43b08cc8e2ab342cbc985a83567763f5",
+   "modified": false
+  },
+  "auction/记录/10_hydrogen_fable_答.txt": {
+   "source": "auction",
+   "original_sha256": "3a58e3904d3c559e144495681c2d18e0d23980b0e401de31f1311dce0101ebe4",
+   "sha256": "3a58e3904d3c559e144495681c2d18e0d23980b0e401de31f1311dce0101ebe4",
+   "modified": false
+  },
+  "auction/记录/10_hydrogen_fable_问.txt": {
+   "source": "auction",
+   "original_sha256": "f3b98c946268ed547c327fc7d4e168f463e481970081dd73f2486c705022e330",
+   "sha256": "f3b98c946268ed547c327fc7d4e168f463e481970081dd73f2486c705022e330",
+   "modified": false
+  },
+  "auction/记录/11_grok_astra_答.txt": {
+   "source": "auction",
+   "original_sha256": "2a16f876150023a8bb78960515ad5c303861f1f8f85435a2dcffa3072b06c5c7",
+   "sha256": "2a16f876150023a8bb78960515ad5c303861f1f8f85435a2dcffa3072b06c5c7",
+   "modified": false
+  },
+  "auction/记录/11_grok_astra_问.txt": {
+   "source": "auction",
+   "original_sha256": "a5987e477e20b4b077ded4b287227acf4aa989c2b3960a85cbd74f7f693b5c51",
+   "sha256": "a5987e477e20b4b077ded4b287227acf4aa989c2b3960a85cbd74f7f693b5c51",
+   "modified": false
+  },
+  "auction/记录/12_grok_fable_答.txt": {
+   "source": "auction",
+   "original_sha256": "5fa2f612221f87675cc6363d3888adbdb4e147788e3b42adb9f06aa332e00719",
+   "sha256": "5fa2f612221f87675cc6363d3888adbdb4e147788e3b42adb9f06aa332e00719",
+   "modified": false
+  },
+  "auction/记录/12_grok_fable_问.txt": {
+   "source": "auction",
+   "original_sha256": "1507e6c122cfe24144391c387658e4d46fe7f612e6e1177943410c86fb69c029",
+   "sha256": "1507e6c122cfe24144391c387658e4d46fe7f612e6e1177943410c86fb69c029",
+   "modified": false
+  },
+  "auction/记录/13_grok_astra_答.txt": {
+   "source": "auction",
+   "original_sha256": "7d711e4a9175c5c6cf533e3a9ae4bb812d6d654dc5f9a84d1aface6dbdc390b2",
+   "sha256": "7d711e4a9175c5c6cf533e3a9ae4bb812d6d654dc5f9a84d1aface6dbdc390b2",
+   "modified": false
+  },
+  "auction/记录/13_grok_astra_问.txt": {
+   "source": "auction",
+   "original_sha256": "5ab11c111a3ab12cf2dfe6ad5760a8429bec8221e3316eceb7ae1a2ba1264887",
+   "sha256": "5ab11c111a3ab12cf2dfe6ad5760a8429bec8221e3316eceb7ae1a2ba1264887",
+   "modified": false
+  },
+  "auction/记录/14_grok_fable_答.txt": {
+   "source": "auction",
+   "original_sha256": "f04c9f6e1ae6eb0e29808301b4beb5a719beafad32bf0a2bd0dc6891a1b0424b",
+   "sha256": "f04c9f6e1ae6eb0e29808301b4beb5a719beafad32bf0a2bd0dc6891a1b0424b",
+   "modified": false
+  },
+  "auction/记录/14_grok_fable_问.txt": {
+   "source": "auction",
+   "original_sha256": "af6b88180854920c95cef30cf5d711e9bf418c2aefd8200425bedeb32b6a4843",
+   "sha256": "af6b88180854920c95cef30cf5d711e9bf418c2aefd8200425bedeb32b6a4843",
+   "modified": false
+  },
+  "auction/记录/15_grok_astra_答.txt": {
+   "source": "auction",
+   "original_sha256": "71536a85986b19ed27d252fc8e7bec5f0cb58b95beac21ff4e4f8bc5b3145186",
+   "sha256": "71536a85986b19ed27d252fc8e7bec5f0cb58b95beac21ff4e4f8bc5b3145186",
+   "modified": false
+  },
+  "auction/记录/15_grok_astra_问.txt": {
+   "source": "auction",
+   "original_sha256": "7e1c18571547f1612c3032660568743ee40620e6cfaa58141de9633a677aca2f",
+   "sha256": "7e1c18571547f1612c3032660568743ee40620e6cfaa58141de9633a677aca2f",
+   "modified": false
+  },
+  "auction/记录/16_grok_fable_答.txt": {
+   "source": "auction",
+   "original_sha256": "b56e5b510d84e00e93d6d0c940af5bc8a270afde2ba689d8f2c89aeeb6de9b81",
+   "sha256": "b56e5b510d84e00e93d6d0c940af5bc8a270afde2ba689d8f2c89aeeb6de9b81",
+   "modified": false
+  },
+  "auction/记录/16_grok_fable_问.txt": {
+   "source": "auction",
+   "original_sha256": "1356d269b253e68e54aada98957a0a34bca158eeebc2e6db9e751544a206428b",
+   "sha256": "1356d269b253e68e54aada98957a0a34bca158eeebc2e6db9e751544a206428b",
+   "modified": false
+  },
+  "auction/记录/17_grok_astra_答.txt": {
+   "source": "auction",
+   "original_sha256": "09e210aeeb6345f323ddb37ef0453277e1c4241644cc84f6eb5c499e3ef63ab8",
+   "sha256": "09e210aeeb6345f323ddb37ef0453277e1c4241644cc84f6eb5c499e3ef63ab8",
+   "modified": false
+  },
+  "auction/记录/17_grok_astra_问.txt": {
+   "source": "auction",
+   "original_sha256": "f7f9745ea89e985ec19d4c678a1f43f93fb2c7b8ca0aca6696d96c4fe8752d4d",
+   "sha256": "f7f9745ea89e985ec19d4c678a1f43f93fb2c7b8ca0aca6696d96c4fe8752d4d",
+   "modified": false
+  },
+  "auction/记录/18_grok_fable_答.txt": {
+   "source": "auction",
+   "original_sha256": "3b49f259ecf406c99184095fb9da93d174fe254e9edecdc1819d315d50cf6167",
+   "sha256": "3b49f259ecf406c99184095fb9da93d174fe254e9edecdc1819d315d50cf6167",
+   "modified": false
+  },
+  "auction/记录/18_grok_fable_问.txt": {
+   "source": "auction",
+   "original_sha256": "fac668aa5e80e6d612d5f98bd91e0cbf99f7e250d5f48f4f1a53cc0a9cd3df1e",
+   "sha256": "fac668aa5e80e6d612d5f98bd91e0cbf99f7e250d5f48f4f1a53cc0a9cd3df1e",
+   "modified": false
+  },
+  "auction/记录/19_glm_astra_答.txt": {
+   "source": "auction",
+   "original_sha256": "93c67ddac96d57d835ba0adec67606d91a7a599aa13e53baf21c3d3140925306",
+   "sha256": "93c67ddac96d57d835ba0adec67606d91a7a599aa13e53baf21c3d3140925306",
+   "modified": false
+  },
+  "auction/记录/19_glm_astra_问.txt": {
+   "source": "auction",
+   "original_sha256": "19446905a13db26e66e5231b9315a50a699bd8344fb82a5308f39379f7c9fa44",
+   "sha256": "19446905a13db26e66e5231b9315a50a699bd8344fb82a5308f39379f7c9fa44",
+   "modified": false
+  },
+  "auction/记录/20_glm_fable_答.txt": {
+   "source": "auction",
+   "original_sha256": "a0543e488f7a20cb5c0c4f599088edd082a6715069cc296effd3f68d87c41e11",
+   "sha256": "a0543e488f7a20cb5c0c4f599088edd082a6715069cc296effd3f68d87c41e11",
+   "modified": false
+  },
+  "auction/记录/20_glm_fable_问.txt": {
+   "source": "auction",
+   "original_sha256": "bb2b642d895125039976cee960e8ae397be0fc8a6ce6fcd89d70e3a363671c4d",
+   "sha256": "bb2b642d895125039976cee960e8ae397be0fc8a6ce6fcd89d70e3a363671c4d",
+   "modified": false
+  },
+  "auction/记录/21_glm_astra_答.txt": {
+   "source": "auction",
+   "original_sha256": "399d800be9c4bb84c7183e42bef31ddcf09c1116310bc1a298bf295704cbb5ad",
+   "sha256": "399d800be9c4bb84c7183e42bef31ddcf09c1116310bc1a298bf295704cbb5ad",
+   "modified": false
+  },
+  "auction/记录/21_glm_astra_问.txt": {
+   "source": "auction",
+   "original_sha256": "fb05b744492850466756f233ccc0403aec33a046fcca21323e723f92a9ce904c",
+   "sha256": "fb05b744492850466756f233ccc0403aec33a046fcca21323e723f92a9ce904c",
+   "modified": false
+  },
+  "auction/记录/22_glm_fable_答.txt": {
+   "source": "auction",
+   "original_sha256": "985ab5456eeda0f447c2089ef0a5e3e4aec1c804bc44309321d3bac538251c07",
+   "sha256": "985ab5456eeda0f447c2089ef0a5e3e4aec1c804bc44309321d3bac538251c07",
+   "modified": false
+  },
+  "auction/记录/22_glm_fable_问.txt": {
+   "source": "auction",
+   "original_sha256": "964942d61ffd00aa87c977eeb02f6a720fc3f7f956303be9563f060f6b0706bf",
+   "sha256": "964942d61ffd00aa87c977eeb02f6a720fc3f7f956303be9563f060f6b0706bf",
+   "modified": false
+  },
+  "auction/记录/23_glm_astra_答.txt": {
+   "source": "auction",
+   "original_sha256": "df18d029726edfd076c15ea0b2a7ad3844390db59f02451b88a9fccf582f4495",
+   "sha256": "df18d029726edfd076c15ea0b2a7ad3844390db59f02451b88a9fccf582f4495",
+   "modified": false
+  },
+  "auction/记录/23_glm_astra_问.txt": {
+   "source": "auction",
+   "original_sha256": "342b2a3cf8905d4b978747c1ff470e52afa06d0593a31b34233d4098c6a2e4df",
+   "sha256": "342b2a3cf8905d4b978747c1ff470e52afa06d0593a31b34233d4098c6a2e4df",
+   "modified": false
+  },
+  "auction/记录/24_glm_fable_答.txt": {
+   "source": "auction",
+   "original_sha256": "2a4be4c229f873405ba9ba1c9029b02edb4912cf7a1fa410cf1ee0797ae51b87",
+   "sha256": "2a4be4c229f873405ba9ba1c9029b02edb4912cf7a1fa410cf1ee0797ae51b87",
+   "modified": false
+  },
+  "auction/记录/24_glm_fable_问.txt": {
+   "source": "auction",
+   "original_sha256": "e43ef035ed45382ecc5072ccd103c954525d462090de98ae7c18f1aa06cd6aac",
+   "sha256": "e43ef035ed45382ecc5072ccd103c954525d462090de98ae7c18f1aa06cd6aac",
+   "modified": false
+  },
+  "auction/记录/25_glm_astra_答.txt": {
+   "source": "auction",
+   "original_sha256": "a53914cfac996c35c1a6ca91f4dc6b8fd290fe796f93680b433daf6cf5b75bd6",
+   "sha256": "a53914cfac996c35c1a6ca91f4dc6b8fd290fe796f93680b433daf6cf5b75bd6",
+   "modified": false
+  },
+  "auction/记录/25_glm_astra_问.txt": {
+   "source": "auction",
+   "original_sha256": "1f72d58c4e6ccc10e23115b3fc2736dc8ac683112299da0bdf7827b84fe211da",
+   "sha256": "1f72d58c4e6ccc10e23115b3fc2736dc8ac683112299da0bdf7827b84fe211da",
+   "modified": false
+  },
+  "auction/记录/26_glm_fable_答.txt": {
+   "source": "auction",
+   "original_sha256": "08f340dd90341f5cd4683808f5d5a770c27136117af83eea9e3a72b1022919e2",
+   "sha256": "08f340dd90341f5cd4683808f5d5a770c27136117af83eea9e3a72b1022919e2",
+   "modified": false
+  },
+  "auction/记录/26_glm_fable_问.txt": {
+   "source": "auction",
+   "original_sha256": "acdfbda3882a2fea1fb3eb560f9071e0752c7590dfa2845f91e80bdd809bbc6e",
+   "sha256": "acdfbda3882a2fea1fb3eb560f9071e0752c7590dfa2845f91e80bdd809bbc6e",
+   "modified": false
+  },
+  "auction/记录/27_deepseek_astra_答.txt": {
+   "source": "auction",
+   "original_sha256": "f386d935dd0b7e122e346cec098811f82213932ee24d8a38a5a704f4086a6830",
+   "sha256": "f386d935dd0b7e122e346cec098811f82213932ee24d8a38a5a704f4086a6830",
+   "modified": false
+  },
+  "auction/记录/27_deepseek_astra_问.txt": {
+   "source": "auction",
+   "original_sha256": "1dbdf84ceeb1da676a14e5577bd01b9c3169874c783e1fa419e89c6693624ff0",
+   "sha256": "1dbdf84ceeb1da676a14e5577bd01b9c3169874c783e1fa419e89c6693624ff0",
+   "modified": false
+  },
+  "auction/记录/28_deepseek_fable_答.txt": {
+   "source": "auction",
+   "original_sha256": "88ae336a600d73e6e0068b14240f813ac6816651033670ed266c34d70951fbae",
+   "sha256": "88ae336a600d73e6e0068b14240f813ac6816651033670ed266c34d70951fbae",
+   "modified": false
+  },
+  "auction/记录/28_deepseek_fable_问.txt": {
+   "source": "auction",
+   "original_sha256": "ae8857bccf14afaf5936dad656bd11129772fdc491e981d8034ef7d631dbf0c6",
+   "sha256": "ae8857bccf14afaf5936dad656bd11129772fdc491e981d8034ef7d631dbf0c6",
+   "modified": false
+  },
+  "auction/记录/29_kimi_astra_答.txt": {
+   "source": "auction",
+   "original_sha256": "e30a3d1929c349ae8ccc533e6e2d1926c0221bec074de1686940750e58ed5fb4",
+   "sha256": "e30a3d1929c349ae8ccc533e6e2d1926c0221bec074de1686940750e58ed5fb4",
+   "modified": false
+  },
+  "auction/记录/29_kimi_astra_问.txt": {
+   "source": "auction",
+   "original_sha256": "ef4514f35b8578b3cdd68d880ea81da64a9c65ed6752c67bd6d664a5ced27909",
+   "sha256": "ef4514f35b8578b3cdd68d880ea81da64a9c65ed6752c67bd6d664a5ced27909",
+   "modified": false
+  },
+  "auction/重拍通知_1116/尽调结果.json": {
+   "source": "auction",
+   "original_sha256": "743d6c46282ec061201154463b4116839ecd0a27fdff4723196a60375b8e7431",
+   "sha256": "743d6c46282ec061201154463b4116839ecd0a27fdff4723196a60375b8e7431",
+   "modified": false
+  },
+  "auction/重拍通知_1116/记录/00重拍通知_astra_答.txt": {
+   "source": "auction",
+   "original_sha256": "a7322b67ce85e800976ca608b8a020e7d75e75f3268b5312f82708febbe47ce8",
+   "sha256": "a7322b67ce85e800976ca608b8a020e7d75e75f3268b5312f82708febbe47ce8",
+   "modified": false
+  },
+  "auction/重拍通知_1116/记录/00重拍通知_astra_问.txt": {
+   "source": "auction",
+   "original_sha256": "cb9441b681f8d2ab371383436a64b552cea57c136ef0bef3115501129abca6de",
+   "sha256": "cb9441b681f8d2ab371383436a64b552cea57c136ef0bef3115501129abca6de",
+   "modified": false
+  },
+  "auction/重拍通知_1116/记录/00重拍通知_fable_答.txt": {
+   "source": "auction",
+   "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "modified": false
+  },
+  "auction/重拍通知_1116/记录/00重拍通知_fable_问.txt": {
+   "source": "auction",
+   "original_sha256": "12f73fda7053b6228e61c8a4b4ce597c80eca8c0e196c04bfd5f29cc88a801cc",
+   "sha256": "12f73fda7053b6228e61c8a4b4ce597c80eca8c0e196c04bfd5f29cc88a801cc",
+   "modified": false
+  },
+  "auction/队长笔记/claude-fable-5.2_auction_notes.md": {
+   "source": "captain_notes",
+   "original_sha256": "599816574b6e48847cb8fae656ba90bc54eb6ca002cf0c94f264c6e491db4071",
+   "sha256": "599816574b6e48847cb8fae656ba90bc54eb6ca002cf0c94f264c6e491db4071",
+   "modified": false
+  },
+  "auction/队长笔记/gpt-6.2-astra_队长尽调.md": {
+   "source": "captain_notes",
+   "original_sha256": "963eebbf4322e3363f672874e398b82ee8ab4f05ec5939fc425382de7495fd56",
+   "sha256": "963eebbf4322e3363f672874e398b82ee8ab4f05ec5939fc425382de7495fd56",
+   "modified": false
+  },
+  "bots/claude-fable-5.2/notes.md": {
+   "source": "submission",
+   "original_sha256": "028c0ad4ec6a51df2500bb8c7a3c7e5550068da7a58ee9a4558ec5f140e91866",
+   "sha256": "028c0ad4ec6a51df2500bb8c7a3c7e5550068da7a58ee9a4558ec5f140e91866",
+   "modified": false
+  },
+  "bots/claude-fable-5.2/player.cpp": {
+   "source": "submission",
+   "original_sha256": "b82ee3d1b2e11488736874a5895e1046024d5e20f3713b39fed1d4570069372f",
+   "sha256": "b82ee3d1b2e11488736874a5895e1046024d5e20f3713b39fed1d4570069372f",
+   "modified": false
+  },
+  "bots/claude-fable-5.2/收卷记录.json": {
+   "source": "submission",
+   "original_sha256": "9318e11f661c7c067d504e295e3e93c4af2478611881bb161bf2c126dac23d49",
+   "sha256": "9318e11f661c7c067d504e295e3e93c4af2478611881bb161bf2c126dac23d49",
+   "modified": false
+  },
+  "bots/claude-opus-5.5/notes.md": {
+   "source": "submission",
+   "original_sha256": "7104ba5924fa42ac0a608ed58d1b4c6acc245695a3d52fd386fba1c942cc1d02",
+   "sha256": "7104ba5924fa42ac0a608ed58d1b4c6acc245695a3d52fd386fba1c942cc1d02",
+   "modified": false
+  },
+  "bots/claude-opus-5.5/player.cpp": {
+   "source": "submission",
+   "original_sha256": "f5c965f9f6aff0359a18a1d4ce3edf5e713ca74d57c425dc80a96a5ab332878f",
+   "sha256": "f5c965f9f6aff0359a18a1d4ce3edf5e713ca74d57c425dc80a96a5ab332878f",
+   "modified": false
+  },
+  "bots/claude-opus-5.5/收卷记录.json": {
+   "source": "submission",
+   "original_sha256": "6cd2c8ab6c9b8ff6a19b413157a3f9fb75e4edf44856cb0f2885982b831a4d89",
+   "sha256": "6cd2c8ab6c9b8ff6a19b413157a3f9fb75e4edf44856cb0f2885982b831a4d89",
+   "modified": false
+  },
+  "bots/deepseek-v4.1-flash/notes.md": {
+   "source": "submission",
+   "original_sha256": "a323dbf77f7e083f48065c9514655df9765426a60096712bf8b61d4771514df8",
+   "sha256": "a323dbf77f7e083f48065c9514655df9765426a60096712bf8b61d4771514df8",
+   "modified": false
+  },
+  "bots/deepseek-v4.1-flash/player.cpp": {
+   "source": "submission",
+   "original_sha256": "dc7f92b428f3ca51b6884284d295d90b001a04d75adc83bbd4b9e3e326a32d3b",
+   "sha256": "dc7f92b428f3ca51b6884284d295d90b001a04d75adc83bbd4b9e3e326a32d3b",
+   "modified": false
+  },
+  "bots/deepseek-v4.1-flash/收卷记录.json": {
+   "source": "submission",
+   "original_sha256": "36e776899aa70b43a6d40b4bdbf7fd797b01a0e0f5c0cea88c20a3ca8ab7c4e2",
+   "sha256": "36e776899aa70b43a6d40b4bdbf7fd797b01a0e0f5c0cea88c20a3ca8ab7c4e2",
+   "modified": false
+  },
+  "bots/doubao-seed-evolving/notes.md": {
+   "source": "submission",
+   "original_sha256": "ae461cdcdd05e6fdf25ba5c44a9565e330f7145432f9bd21bff8e05b725b74a6",
+   "sha256": "ae461cdcdd05e6fdf25ba5c44a9565e330f7145432f9bd21bff8e05b725b74a6",
+   "modified": false
+  },
+  "bots/doubao-seed-evolving/player.cpp": {
+   "source": "submission",
+   "original_sha256": "c818cccccffce6755ed3481614ee2119ca7a0da57e5c7facff64d8ac451a4b50",
+   "sha256": "c818cccccffce6755ed3481614ee2119ca7a0da57e5c7facff64d8ac451a4b50",
+   "modified": false
+  },
+  "bots/doubao-seed-evolving/收卷记录.json": {
+   "source": "submission",
+   "original_sha256": "7da0fdbd6f952624d27f6ca2948b9f90ed473309df04cc3f68528022dff036b7",
+   "sha256": "7da0fdbd6f952624d27f6ca2948b9f90ed473309df04cc3f68528022dff036b7",
+   "modified": false
+  },
+  "bots/gemini-4-carbon/notes.md": {
+   "source": "submission",
+   "original_sha256": "d7c0b9e12987015b428673c951a042e6f5a1a21a0115a23bd407a1a60197916f",
+   "sha256": "d7c0b9e12987015b428673c951a042e6f5a1a21a0115a23bd407a1a60197916f",
+   "modified": false
+  },
+  "bots/gemini-4-carbon/player.cpp": {
+   "source": "submission",
+   "original_sha256": "8e7c344a9a35af5fd0d8a138bf68207b60cd428824b514fd443e8bccfd146b18",
+   "sha256": "8e7c344a9a35af5fd0d8a138bf68207b60cd428824b514fd443e8bccfd146b18",
+   "modified": false
+  },
+  "bots/gemini-4-carbon/收卷记录.json": {
+   "source": "submission",
+   "original_sha256": "4e05335694ebb65b1e9eb970bd2102d5e1e131406a47449979cb415e818beef5",
+   "sha256": "4e05335694ebb65b1e9eb970bd2102d5e1e131406a47449979cb415e818beef5",
+   "modified": false
+  },
+  "bots/gemini-4-hydrogen/notes.md": {
+   "source": "submission",
+   "original_sha256": "8382f9b8da9cbc4a08d1f0b3f72e66e2041fae3b9eb01b9f6da0a706cf5d3724",
+   "sha256": "8382f9b8da9cbc4a08d1f0b3f72e66e2041fae3b9eb01b9f6da0a706cf5d3724",
+   "modified": false
+  },
+  "bots/gemini-4-hydrogen/player.cpp": {
+   "source": "submission",
+   "original_sha256": "a751de0953b326ff97798a6ca6a7730058618a45c7054bf7197f0dd103d3adb7",
+   "sha256": "a751de0953b326ff97798a6ca6a7730058618a45c7054bf7197f0dd103d3adb7",
+   "modified": false
+  },
+  "bots/gemini-4-hydrogen/收卷记录.json": {
+   "source": "submission",
+   "original_sha256": "52733b0763c7105769b60efdbdd31601d5038d936a73da12305145744e91deb6",
+   "sha256": "52733b0763c7105769b60efdbdd31601d5038d936a73da12305145744e91deb6",
+   "modified": false
+  },
+  "bots/glm-5.3/notes.md": {
+   "source": "submission",
+   "original_sha256": "968975380abb984fca7e90a5bb2dc16d956a27688deaa2cd07917bdc7e2e1ae6",
+   "sha256": "968975380abb984fca7e90a5bb2dc16d956a27688deaa2cd07917bdc7e2e1ae6",
+   "modified": false
+  },
+  "bots/glm-5.3/player.cpp": {
+   "source": "submission",
+   "original_sha256": "765f8372f9d0c2cee667a3fb7402d1623911e6eefb6a275f9ad6640271cef44c",
+   "sha256": "765f8372f9d0c2cee667a3fb7402d1623911e6eefb6a275f9ad6640271cef44c",
+   "modified": false
+  },
+  "bots/glm-5.3/收卷记录.json": {
+   "source": "submission",
+   "original_sha256": "eb33a9cb514ae5e46928d3d81759df628663df77d6548112c09f6053a6939559",
+   "sha256": "eb33a9cb514ae5e46928d3d81759df628663df77d6548112c09f6053a6939559",
+   "modified": false
+  },
+  "bots/gpt-6.2-astra/notes.md": {
+   "source": "submission",
+   "original_sha256": "2ca475ef051c804be62acc1d9cc7441965f8bf5fe5de90a1d38358a333c3ea2b",
+   "sha256": "2ca475ef051c804be62acc1d9cc7441965f8bf5fe5de90a1d38358a333c3ea2b",
+   "modified": false
+  },
+  "bots/gpt-6.2-astra/player.cpp": {
+   "source": "submission",
+   "original_sha256": "3c45aebb010d6adc49175af869729411320be657bdf1ffc8b9a1da1b85371920",
+   "sha256": "3c45aebb010d6adc49175af869729411320be657bdf1ffc8b9a1da1b85371920",
+   "modified": false
+  },
+  "bots/gpt-6.2-astra/收卷记录.json": {
+   "source": "submission",
+   "original_sha256": "e33339f01a3d7399a2bf8b14fb7253058a15ccd36192b6bea87d8eddd936f3e6",
+   "sha256": "e33339f01a3d7399a2bf8b14fb7253058a15ccd36192b6bea87d8eddd936f3e6",
+   "modified": false
+  },
+  "bots/gpt-6.2-sol/notes.md": {
+   "source": "submission",
+   "original_sha256": "92ad9a728155eb392966b9a880a8c46537e7c9ea310b5ed743918284aed88a7e",
+   "sha256": "92ad9a728155eb392966b9a880a8c46537e7c9ea310b5ed743918284aed88a7e",
+   "modified": false
+  },
+  "bots/gpt-6.2-sol/player.cpp": {
+   "source": "submission",
+   "original_sha256": "3441c066cc019daa66b81235a423bb2fc84728fa6e732c21c612c4e44c3c2ec9",
+   "sha256": "3441c066cc019daa66b81235a423bb2fc84728fa6e732c21c612c4e44c3c2ec9",
+   "modified": false
+  },
+  "bots/gpt-6.2-sol/收卷记录.json": {
+   "source": "submission",
+   "original_sha256": "e1dbf29b0c96a5750159add29f275e625457283d4a5c61712c40d6f5c22efb41",
+   "sha256": "e1dbf29b0c96a5750159add29f275e625457283d4a5c61712c40d6f5c22efb41",
+   "modified": false
+  },
+  "bots/grok-4.7/notes.md": {
+   "source": "submission",
+   "original_sha256": "3051db6575b09834f911c0595016592e9448e10cd36d40e133e5a23b89728c41",
+   "sha256": "3051db6575b09834f911c0595016592e9448e10cd36d40e133e5a23b89728c41",
+   "modified": false
+  },
+  "bots/grok-4.7/player.cpp": {
+   "source": "submission",
+   "original_sha256": "429711b6e56bd974c19f8591cf24782da2b59a9e7bd01eb0ad2cd7eef8921ebe",
+   "sha256": "429711b6e56bd974c19f8591cf24782da2b59a9e7bd01eb0ad2cd7eef8921ebe",
+   "modified": false
+  },
+  "bots/grok-4.7/收卷记录.json": {
+   "source": "submission",
+   "original_sha256": "5de3e2bae9c1ed3ff6182d138f1d7d743c321710cd5a0707febb1b97121aa05b",
+   "sha256": "5de3e2bae9c1ed3ff6182d138f1d7d743c321710cd5a0707febb1b97121aa05b",
+   "modified": false
+  },
+  "bots/kimi-k3.1-pro/notes.md": {
+   "source": "submission",
+   "original_sha256": "f4011c93234384757c4afe258610f3dfa57c4566e04769b0727caa7b7fc1bbf0",
+   "sha256": "f4011c93234384757c4afe258610f3dfa57c4566e04769b0727caa7b7fc1bbf0",
+   "modified": false
+  },
+  "bots/kimi-k3.1-pro/player.cpp": {
+   "source": "submission",
+   "original_sha256": "63785c33322aad70e658cc6a809658671d2a18d7de2c882d5f32926c1a8dc78d",
+   "sha256": "63785c33322aad70e658cc6a809658671d2a18d7de2c882d5f32926c1a8dc78d",
+   "modified": false
+  },
+  "bots/kimi-k3.1-pro/收卷记录.json": {
+   "source": "submission",
+   "original_sha256": "825f6de871c81b8e508fc84ca864aafe6093d9c5f25666b9e3e49a3d222db81b",
+   "sha256": "825f6de871c81b8e508fc84ca864aafe6093d9c5f25666b9e3e49a3d222db81b",
+   "modified": false
+  },
+  "bots/mimo-v2.6-pro/notes.md": {
+   "source": "submission",
+   "original_sha256": "876c92d2f2a57f1686e61a94c59890938ae03f2db4bfd3a1db85bf4eb8e33fd3",
+   "sha256": "876c92d2f2a57f1686e61a94c59890938ae03f2db4bfd3a1db85bf4eb8e33fd3",
+   "modified": false
+  },
+  "bots/mimo-v2.6-pro/player.cpp": {
+   "source": "submission",
+   "original_sha256": "81366ffec44cf58981fab9667d1bf75c78df885391adb65b5e2f5a15e6130b6a",
+   "sha256": "81366ffec44cf58981fab9667d1bf75c78df885391adb65b5e2f5a15e6130b6a",
+   "modified": false
+  },
+  "bots/mimo-v2.6-pro/收卷记录.json": {
+   "source": "submission",
+   "original_sha256": "28beb598982c36cdbeece0ddccf4ba84cc25f9700cb59a651c2690858ddfd133",
+   "sha256": "28beb598982c36cdbeece0ddccf4ba84cc25f9700cb59a651c2690858ddfd133",
+   "modified": false
+  },
+  "bots/qwen4-max/notes.md": {
+   "source": "submission",
+   "original_sha256": "6011045ee899c6c1ffb8e121f31864a5def19b883de0d58adc20d72997d792c7",
+   "sha256": "6011045ee899c6c1ffb8e121f31864a5def19b883de0d58adc20d72997d792c7",
+   "modified": false
+  },
+  "bots/qwen4-max/player.cpp": {
+   "source": "submission",
+   "original_sha256": "c6ff66a4dc24e23d1a61dd164ab9b5ff08bde6e19cda5bde178d34c600867882",
+   "sha256": "c6ff66a4dc24e23d1a61dd164ab9b5ff08bde6e19cda5bde178d34c600867882",
+   "modified": false
+  },
+  "bots/qwen4-max/收卷记录.json": {
+   "source": "submission",
+   "original_sha256": "91f0a3ad8b43c702f980ebb0bfce6c756ab3d38927fb881d51dc264cbe8a6ff1",
+   "sha256": "91f0a3ad8b43c702f980ebb0bfce6c756ab3d38927fb881d51dc264cbe8a6ff1",
+   "modified": false
+  },
+  "engine/sparring/mid.cpp": {
+   "source": "sparring_source",
+   "original_sha256": "0883b6d089fb0e3a741ddeed91a087d2345b4130ad2294d351e958e272e3fb89",
+   "sha256": "0883b6d089fb0e3a741ddeed91a087d2345b4130ad2294d351e958e272e3fb89",
+   "modified": false
+  },
+  "engine/sparring/strong.cpp": {
+   "source": "sparring_source",
+   "original_sha256": "04a99d59e041065913e0cdfc00451af7c3340aff83a2ba88400ea0a79f19e6e6",
+   "sha256": "04a99d59e041065913e0cdfc00451af7c3340aff83a2ba88400ea0a79f19e6e6",
+   "modified": false
+  },
+  "engine/sparring/weak.cpp": {
+   "source": "sparring_source",
+   "original_sha256": "38a75eb83322449421f4c61e5ffe30c6226073a98258603ba794bf950d8fd614",
+   "sha256": "38a75eb83322449421f4c61e5ffe30c6226073a98258603ba794bf950d8fd614",
+   "modified": false
+  },
+  "engine/sparring/说明.md": {
+   "source": "sparring_source",
+   "original_sha256": "5200670a318fe9164b57e1fe2ca2741d17ca4d0ccd90d4b8f3ba7fd73eb6f047",
+   "sha256": "5200670a318fe9164b57e1fe2ca2741d17ca4d0ccd90d4b8f3ba7fd73eb6f047",
+   "modified": false
+  },
+  "engine/sparring/说明_踢飞新规则.md": {
+   "source": "sparring_source",
+   "original_sha256": "fdd95ce09b06a57cac7d117a27a1c0c75a4eb7820ae48aedcf4624b700c54f67",
+   "sha256": "fdd95ce09b06a57cac7d117a27a1c0c75a4eb7820ae48aedcf4624b700c54f67",
+   "modified": false
+  },
+  "replays/g10142.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "c59591e9cbef0e1dfcff530b2f956268b2455705089a41889c37629c934272bf",
+   "sha256": "c59591e9cbef0e1dfcff530b2f956268b2455705089a41889c37629c934272bf",
+   "modified": false
+  },
+  "replays/g10389.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "64470439f705a18cb4e9ce33f3b4686dc2d1866d8647f350bdb703cd8922ed1c",
+   "sha256": "64470439f705a18cb4e9ce33f3b4686dc2d1866d8647f350bdb703cd8922ed1c",
+   "modified": false
+  },
+  "replays/g1050.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "f231b663643022cdc186ce7e01507d99a4d7e1fdcad6de524858bb26fb9b3c87",
+   "sha256": "f231b663643022cdc186ce7e01507d99a4d7e1fdcad6de524858bb26fb9b3c87",
+   "modified": false
+  },
+  "replays/g10522.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "848a11b531bcdde0c59f390c0ad62f6c5e0dac0455cfb87304dbe5ffdbc36839",
+   "sha256": "848a11b531bcdde0c59f390c0ad62f6c5e0dac0455cfb87304dbe5ffdbc36839",
+   "modified": false
+  },
+  "replays/g10746.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "985ba36f3cf7509214a2f7b7d0d0728fe654cf2f22ac82923bb655577b737668",
+   "sha256": "985ba36f3cf7509214a2f7b7d0d0728fe654cf2f22ac82923bb655577b737668",
+   "modified": false
+  },
+  "replays/g10999.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "08178c70bf6288ab5d397a524de2ff4067ab830be1130735da8126ff1bf158ea",
+   "sha256": "08178c70bf6288ab5d397a524de2ff4067ab830be1130735da8126ff1bf158ea",
+   "modified": false
+  },
+  "replays/g11330.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "2395df2a661f4e542cf8a6af479333083a24430a5c5b5b07cfe6e79b1aaf5340",
+   "sha256": "2395df2a661f4e542cf8a6af479333083a24430a5c5b5b07cfe6e79b1aaf5340",
+   "modified": false
+  },
+  "replays/g11579.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "4d00f6ba3fec24465c4952d8236fe37227f2c035b923e2d72d6a8b1e31bbd4f9",
+   "sha256": "4d00f6ba3fec24465c4952d8236fe37227f2c035b923e2d72d6a8b1e31bbd4f9",
+   "modified": false
+  },
+  "replays/g11685.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "401cc3a9d2124734ff028b46d0269973f21e2b501562e79a2002b759748e1246",
+   "sha256": "401cc3a9d2124734ff028b46d0269973f21e2b501562e79a2002b759748e1246",
+   "modified": false
+  },
+  "replays/g11873.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "c07b304a5d131c094bad68acf81354cba81231b5cd461d5ba5639b632ff2f0e0",
+   "sha256": "c07b304a5d131c094bad68acf81354cba81231b5cd461d5ba5639b632ff2f0e0",
+   "modified": false
+  },
+  "replays/g12292.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "c5aafb0ef0240d6ccd0d26e56f8da2a51da6bf47f3d58875e405be56d1d55bfb",
+   "sha256": "c5aafb0ef0240d6ccd0d26e56f8da2a51da6bf47f3d58875e405be56d1d55bfb",
+   "modified": false
+  },
+  "replays/g12351.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "314d73d1f78d17692174b1e9c018880db22e175cba124d30c08c4756fe235064",
+   "sha256": "314d73d1f78d17692174b1e9c018880db22e175cba124d30c08c4756fe235064",
+   "modified": false
+  },
+  "replays/g12562.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "d7714537201a15fe4fed6e110c8f7f5ee64c03c9afeac8dcb3011128785bef67",
+   "sha256": "d7714537201a15fe4fed6e110c8f7f5ee64c03c9afeac8dcb3011128785bef67",
+   "modified": false
+  },
+  "replays/g12809.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "3794eed96a93ae4e9ce0844557ceb6459d96358fa55cd2ac3911e2ea49fd8b5b",
+   "sha256": "3794eed96a93ae4e9ce0844557ceb6459d96358fa55cd2ac3911e2ea49fd8b5b",
+   "modified": false
+  },
+  "replays/g129.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "6eb172663bbdc4ecd3c4c17c810efbdd2410b21c3298f58017d5c7617f1ba0c0",
+   "sha256": "6eb172663bbdc4ecd3c4c17c810efbdd2410b21c3298f58017d5c7617f1ba0c0",
+   "modified": false
+  },
+  "replays/g1295.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "11aff16b53355f1c24f727c05872a7d96a030c98a72d6d0aed2810030bdbda51",
+   "sha256": "11aff16b53355f1c24f727c05872a7d96a030c98a72d6d0aed2810030bdbda51",
+   "modified": false
+  },
+  "replays/g13092.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "f25dadb731439e24abb7b1e7ec754ef5fd1fce7dd900ea066249b33e063baf5e",
+   "sha256": "f25dadb731439e24abb7b1e7ec754ef5fd1fce7dd900ea066249b33e063baf5e",
+   "modified": false
+  },
+  "replays/g13439.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "0d49a347d5d49f1a3d20e0aa6e2c375d18824a048f011dbad6c7221f1ac2be87",
+   "sha256": "0d49a347d5d49f1a3d20e0aa6e2c375d18824a048f011dbad6c7221f1ac2be87",
+   "modified": false
+  },
+  "replays/g13457.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "b7ccfdb1cdee2c1f145b29be0b86f56f9042776244391efba2e5c5fc7c7a9676",
+   "sha256": "b7ccfdb1cdee2c1f145b29be0b86f56f9042776244391efba2e5c5fc7c7a9676",
+   "modified": false
+  },
+  "replays/g13772.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "abb24fc3226f4be8553cef4c64bd61e05286afec8287135919371045c7866eba",
+   "sha256": "abb24fc3226f4be8553cef4c64bd61e05286afec8287135919371045c7866eba",
+   "modified": false
+  },
+  "replays/g13975.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "a7673f07f33e33ca4e983f2bfd9e2e713b5820dc195a519f380ced523a62da7d",
+   "sha256": "a7673f07f33e33ca4e983f2bfd9e2e713b5820dc195a519f380ced523a62da7d",
+   "modified": false
+  },
+  "replays/g14140.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "ddf8db90d7cc8e118be0e09fc11bd4f399aaf6c2e241ea9d5c1cef9e3a4ff95c",
+   "sha256": "ddf8db90d7cc8e118be0e09fc11bd4f399aaf6c2e241ea9d5c1cef9e3a4ff95c",
+   "modified": false
+  },
+  "replays/g14572.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "81808357f39f5c3bcb90275d00ca9073f2ecef7c508fee1f87ba53fcdaeef801",
+   "sha256": "81808357f39f5c3bcb90275d00ca9073f2ecef7c508fee1f87ba53fcdaeef801",
+   "modified": false
+  },
+  "replays/g14640.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "7ada2413ac52496bae92a38cc8626ae18195e7b099e4c154b784aaa899a6a7f5",
+   "sha256": "7ada2413ac52496bae92a38cc8626ae18195e7b099e4c154b784aaa899a6a7f5",
+   "modified": false
+  },
+  "replays/g14828.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "c4a0f8952f11790a9651530befb8b5a761144dab566dd752c605fcb8e742e647",
+   "sha256": "c4a0f8952f11790a9651530befb8b5a761144dab566dd752c605fcb8e742e647",
+   "modified": false
+  },
+  "replays/g15247.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "39769615a908487e448190544ba62161248aa7594284fbe39540ebb3bea333d2",
+   "sha256": "39769615a908487e448190544ba62161248aa7594284fbe39540ebb3bea333d2",
+   "modified": false
+  },
+  "replays/g15369.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "d15763f6c9a56dd9b6d19a8d2a4714988ba1fee853e06c5830ae638b1c95eabf",
+   "sha256": "d15763f6c9a56dd9b6d19a8d2a4714988ba1fee853e06c5830ae638b1c95eabf",
+   "modified": false
+  },
+  "replays/g15635.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "5de929e887906787b418d8ccc6f1db161645fcab6b95bb4fa19648b17ed96783",
+   "sha256": "5de929e887906787b418d8ccc6f1db161645fcab6b95bb4fa19648b17ed96783",
+   "modified": false
+  },
+  "replays/g15748.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "f82303376485beb5a037ee822f005c0a77ae62715a16e8df7f5967139b04e7aa",
+   "sha256": "f82303376485beb5a037ee822f005c0a77ae62715a16e8df7f5967139b04e7aa",
+   "modified": false
+  },
+  "replays/g1592.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "85b0091708ac853a5fa5dad70936a0f86b4a61a402f8f2273f88292ebf7abaa8",
+   "sha256": "85b0091708ac853a5fa5dad70936a0f86b4a61a402f8f2273f88292ebf7abaa8",
+   "modified": false
+  },
+  "replays/g15997.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "cdee630fe7242902d5e39ea32525714f8a3395ddc06682ab443c301484f02cbb",
+   "sha256": "cdee630fe7242902d5e39ea32525714f8a3395ddc06682ab443c301484f02cbb",
+   "modified": false
+  },
+  "replays/g16283.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "9826cf2867a70f9b2d2a37dda3be2daf37b9888336ff3a024917ae5d76a335fe",
+   "sha256": "9826cf2867a70f9b2d2a37dda3be2daf37b9888336ff3a024917ae5d76a335fe",
+   "modified": false
+  },
+  "replays/g16601.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "b6e45f0fcc1efdefd42da93ae434771652c0dcbe919e1a7c550a5426ba723edb",
+   "sha256": "b6e45f0fcc1efdefd42da93ae434771652c0dcbe919e1a7c550a5426ba723edb",
+   "modified": false
+  },
+  "replays/g16790.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "e4a40229b24ae97d2e20560f80cb6378e74464c5655490d2fa3d0c1f9d9a4acf",
+   "sha256": "e4a40229b24ae97d2e20560f80cb6378e74464c5655490d2fa3d0c1f9d9a4acf",
+   "modified": false
+  },
+  "replays/g1694.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "dace1268db6af6b73ed43dafc83781bd164c40e48ad5734f90505da2087fe94d",
+   "sha256": "dace1268db6af6b73ed43dafc83781bd164c40e48ad5734f90505da2087fe94d",
+   "modified": false
+  },
+  "replays/g17097.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "53161099842c03b226a27da9a18e2f0389c4a899016624d43bb655279f671beb",
+   "sha256": "53161099842c03b226a27da9a18e2f0389c4a899016624d43bb655279f671beb",
+   "modified": false
+  },
+  "replays/g17237.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "065428aec767317b41fc99e3388bb8f677f7aff5114947f21782649547696bfe",
+   "sha256": "065428aec767317b41fc99e3388bb8f677f7aff5114947f21782649547696bfe",
+   "modified": false
+  },
+  "replays/g17331.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "788d19d1318b4ab4e39307ef3c448d436d2c80d4d5dd101f6925a6a2ccf477ec",
+   "sha256": "788d19d1318b4ab4e39307ef3c448d436d2c80d4d5dd101f6925a6a2ccf477ec",
+   "modified": false
+  },
+  "replays/g17705.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "fdfa978d60beb7f506ef0fd6e2448fa6c6a696c3ef940b056a48ee5a140bd43c",
+   "sha256": "fdfa978d60beb7f506ef0fd6e2448fa6c6a696c3ef940b056a48ee5a140bd43c",
+   "modified": false
+  },
+  "replays/g18246.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "f2657fbe4a47a0dc3cbf1cfc8bf1303b2f5bad0603f3e2173e86ca01345006ea",
+   "sha256": "f2657fbe4a47a0dc3cbf1cfc8bf1303b2f5bad0603f3e2173e86ca01345006ea",
+   "modified": false
+  },
+  "replays/g18445.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "7a31e47187a9cbdc9e14c4ce39759c3d916bdfb8dc4d82f97d2a562bcb13229b",
+   "sha256": "7a31e47187a9cbdc9e14c4ce39759c3d916bdfb8dc4d82f97d2a562bcb13229b",
+   "modified": false
+  },
+  "replays/g18722.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "3671d3bc6a3808c694e38832f045460d6837ba5ac5090b7a9bae4b1214719e28",
+   "sha256": "3671d3bc6a3808c694e38832f045460d6837ba5ac5090b7a9bae4b1214719e28",
+   "modified": false
+  },
+  "replays/g19067.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "98b30c6e02425f74829f1e9a7111fc386397ed4727613307f82810ed3d0835bf",
+   "sha256": "98b30c6e02425f74829f1e9a7111fc386397ed4727613307f82810ed3d0835bf",
+   "modified": false
+  },
+  "replays/g1916.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "65f7deff3e8d64f265ad583b4dc3f8609580a04b5ae8adaa193ddbcf1649d4ea",
+   "sha256": "65f7deff3e8d64f265ad583b4dc3f8609580a04b5ae8adaa193ddbcf1649d4ea",
+   "modified": false
+  },
+  "replays/g19336.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "0319a267b683a5f3031292f5f90ace4592f0f8d36cc7fb1a9cfb0bd5ae8e223b",
+   "sha256": "0319a267b683a5f3031292f5f90ace4592f0f8d36cc7fb1a9cfb0bd5ae8e223b",
+   "modified": false
+  },
+  "replays/g19360.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "2c972ae3bd8183442c909d109f6a5daa57b8116b2c7ed980687ec3f360821c01",
+   "sha256": "2c972ae3bd8183442c909d109f6a5daa57b8116b2c7ed980687ec3f360821c01",
+   "modified": false
+  },
+  "replays/g19436.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "097602fe30d54dd7530d5e1a1ca49102cf7acedf471670244fd7d22acbf9d280",
+   "sha256": "097602fe30d54dd7530d5e1a1ca49102cf7acedf471670244fd7d22acbf9d280",
+   "modified": false
+  },
+  "replays/g19794.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "32b50bbf130124eb8b23cb507fa94973e16d8d99a5b97249000783f2601eae4e",
+   "sha256": "32b50bbf130124eb8b23cb507fa94973e16d8d99a5b97249000783f2601eae4e",
+   "modified": false
+  },
+  "replays/g20578.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "fec31521ef68d46e0e5105901546888035d03c85c7b1d3bade7327e1520c475a",
+   "sha256": "fec31521ef68d46e0e5105901546888035d03c85c7b1d3bade7327e1520c475a",
+   "modified": false
+  },
+  "replays/g20750.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "9fc352f34273a1469392bbb3e26bc9e975855d9fc35c18d610792cba233a9da5",
+   "sha256": "9fc352f34273a1469392bbb3e26bc9e975855d9fc35c18d610792cba233a9da5",
+   "modified": false
+  },
+  "replays/g20873.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "008193f66442422b80abdd4cb95c6730dc7a7aeee1c3e72255f6b91ba9d10040",
+   "sha256": "008193f66442422b80abdd4cb95c6730dc7a7aeee1c3e72255f6b91ba9d10040",
+   "modified": false
+  },
+  "replays/g21124.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "73e1aa529222ade58a634d3d2afef597d20cabc11d18a3fe810ae0cdfce8890d",
+   "sha256": "73e1aa529222ade58a634d3d2afef597d20cabc11d18a3fe810ae0cdfce8890d",
+   "modified": false
+  },
+  "replays/g21504.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "9d6717159c7a39c7cfd3ea8008e5bb90d37e842960977306641e583555f11770",
+   "sha256": "9d6717159c7a39c7cfd3ea8008e5bb90d37e842960977306641e583555f11770",
+   "modified": false
+  },
+  "replays/g2202.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "a76fc2d26aea25fadebbf217739ccce582683a8b6516e614dfb9607be30e8a24",
+   "sha256": "a76fc2d26aea25fadebbf217739ccce582683a8b6516e614dfb9607be30e8a24",
+   "modified": false
+  },
+  "replays/g22373.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "c430f22ca15b2ef3d95ac63d89b2c123f70eed6d43b450a4420b7e92d611509a",
+   "sha256": "c430f22ca15b2ef3d95ac63d89b2c123f70eed6d43b450a4420b7e92d611509a",
+   "modified": false
+  },
+  "replays/g22845.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "b9e21f8a47e46d64c513c9239cbb271a45000be07d2f8363fed083353e688223",
+   "sha256": "b9e21f8a47e46d64c513c9239cbb271a45000be07d2f8363fed083353e688223",
+   "modified": false
+  },
+  "replays/g23123.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "18855ca9ea4a3d57f2f18eb383549c2cd24f9a67a5f70bcc4977855b90507edb",
+   "sha256": "18855ca9ea4a3d57f2f18eb383549c2cd24f9a67a5f70bcc4977855b90507edb",
+   "modified": false
+  },
+  "replays/g23370.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "46df3e48a92dee534dafdce11d6a78eb38471ef5b516e22a872cd136b6d65086",
+   "sha256": "46df3e48a92dee534dafdce11d6a78eb38471ef5b516e22a872cd136b6d65086",
+   "modified": false
+  },
+  "replays/g23457.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "2a00e8cd44d4c28cd3c4381d4d68016109e4ad55f787e8ef3e2b1bc33b8509ff",
+   "sha256": "2a00e8cd44d4c28cd3c4381d4d68016109e4ad55f787e8ef3e2b1bc33b8509ff",
+   "modified": false
+  },
+  "replays/g23514.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "47176f75a542ed8db84c32aee7edb0c1aa0abcf33aa2b8be8c8d57b108a48ee5",
+   "sha256": "47176f75a542ed8db84c32aee7edb0c1aa0abcf33aa2b8be8c8d57b108a48ee5",
+   "modified": false
+  },
+  "replays/g23756.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "df844d03836b8c7d5f189507c9123f20c838897f3dae8924de857607024bbf1b",
+   "sha256": "df844d03836b8c7d5f189507c9123f20c838897f3dae8924de857607024bbf1b",
+   "modified": false
+  },
+  "replays/g23963.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "4f36c07c10af0ec94cf03bddcedfbcebf9bfe47386394ba32592ba387f8a17df",
+   "sha256": "4f36c07c10af0ec94cf03bddcedfbcebf9bfe47386394ba32592ba387f8a17df",
+   "modified": false
+  },
+  "replays/g24206.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "0f9253fa7b6cb22b7452bc8ef7c8ee854f8a86ff15be134d168387a0814e8499",
+   "sha256": "0f9253fa7b6cb22b7452bc8ef7c8ee854f8a86ff15be134d168387a0814e8499",
+   "modified": false
+  },
+  "replays/g24268.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "fb78b83385c460044d12cb4a1066d6b1ea96e2a893e17332bc724ebb101bc4e9",
+   "sha256": "fb78b83385c460044d12cb4a1066d6b1ea96e2a893e17332bc724ebb101bc4e9",
+   "modified": false
+  },
+  "replays/g2456.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "1717d465b21601a001b16c6d5ec48560b97bd0a79b862f934b13f2eaa8f04224",
+   "sha256": "1717d465b21601a001b16c6d5ec48560b97bd0a79b862f934b13f2eaa8f04224",
+   "modified": false
+  },
+  "replays/g24614.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "11dab40c6225b3a83784dc4aa614808d38504b710f295e9b4a00806141dda82f",
+   "sha256": "11dab40c6225b3a83784dc4aa614808d38504b710f295e9b4a00806141dda82f",
+   "modified": false
+  },
+  "replays/g26075.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "a5dfb90373d236653feb008bae5817dd6e805bffe7d382413abe76ea2f3f6dea",
+   "sha256": "a5dfb90373d236653feb008bae5817dd6e805bffe7d382413abe76ea2f3f6dea",
+   "modified": false
+  },
+  "replays/g26169.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "799dbe42b986cf9a4b23179e5e36b31caf9d4e65544b36fb08ae2ab68beaa451",
+   "sha256": "799dbe42b986cf9a4b23179e5e36b31caf9d4e65544b36fb08ae2ab68beaa451",
+   "modified": false
+  },
+  "replays/g26196.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "28b4b26f8ad5c9bd3cc26e7e43ee238f388f4b5e1f6b24ebe5ff7c6a8ace45e2",
+   "sha256": "28b4b26f8ad5c9bd3cc26e7e43ee238f388f4b5e1f6b24ebe5ff7c6a8ace45e2",
+   "modified": false
+  },
+  "replays/g2667.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "15132ae6b80a8b66e7b82fa8e78d52e9cf9b5f53b9269f17645138329a046be6",
+   "sha256": "15132ae6b80a8b66e7b82fa8e78d52e9cf9b5f53b9269f17645138329a046be6",
+   "modified": false
+  },
+  "replays/g27172.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "100f0a24ac4abf8030ef0228cc78ac8a37d4d196e37164faaa2ab91b52fe0645",
+   "sha256": "100f0a24ac4abf8030ef0228cc78ac8a37d4d196e37164faaa2ab91b52fe0645",
+   "modified": false
+  },
+  "replays/g27180.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "3d4447b48ced6516b2eb32045790238451df2dc26860217184566fa677dad758",
+   "sha256": "3d4447b48ced6516b2eb32045790238451df2dc26860217184566fa677dad758",
+   "modified": false
+  },
+  "replays/g27296.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "c37191e3b66e904ddb10684454422c772734c3619d44e9fd385baaa85e84b332",
+   "sha256": "c37191e3b66e904ddb10684454422c772734c3619d44e9fd385baaa85e84b332",
+   "modified": false
+  },
+  "replays/g27297.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "ae643d39ac6abdf618ff20948e71b901608a0ae25df9ed2cc40dc2f27e5afe38",
+   "sha256": "ae643d39ac6abdf618ff20948e71b901608a0ae25df9ed2cc40dc2f27e5afe38",
+   "modified": false
+  },
+  "replays/g27598.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "5e8687cd36c60a940dd4ff447a9ab9086dffcd1ba828f47687fcd5cf2afbbc53",
+   "sha256": "5e8687cd36c60a940dd4ff447a9ab9086dffcd1ba828f47687fcd5cf2afbbc53",
+   "modified": false
+  },
+  "replays/g2781.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "b7c19b6bc1191c2e1c3f4ac2fa7f70a58e296aa6f71242c6e944360d6c9930f8",
+   "sha256": "b7c19b6bc1191c2e1c3f4ac2fa7f70a58e296aa6f71242c6e944360d6c9930f8",
+   "modified": false
+  },
+  "replays/g27851.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "2aaf60500235a4950cea91dbec2ca114fb0ba64e46174f91682e12663daec2fa",
+   "sha256": "2aaf60500235a4950cea91dbec2ca114fb0ba64e46174f91682e12663daec2fa",
+   "modified": false
+  },
+  "replays/g28121.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "00f1b082425088e7a89137313a5edcede5bff6e192a983ea763ba968d10357d8",
+   "sha256": "00f1b082425088e7a89137313a5edcede5bff6e192a983ea763ba968d10357d8",
+   "modified": false
+  },
+  "replays/g29113.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "e4f69d596791f73a408ea2a70f63c48047c2c8c73bf6b8bab28847bc59da1e87",
+   "sha256": "e4f69d596791f73a408ea2a70f63c48047c2c8c73bf6b8bab28847bc59da1e87",
+   "modified": false
+  },
+  "replays/g29654.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "95f37c475ebcce08ab5a43c6bf913acbe8693a3932d8341125c5f30ecfa7a070",
+   "sha256": "95f37c475ebcce08ab5a43c6bf913acbe8693a3932d8341125c5f30ecfa7a070",
+   "modified": false
+  },
+  "replays/g29835.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "896c7a20b5fc857bb4ee2b158bc7e551be5ef4cfedb9c003a5e8e5a76914c8b3",
+   "sha256": "896c7a20b5fc857bb4ee2b158bc7e551be5ef4cfedb9c003a5e8e5a76914c8b3",
+   "modified": false
+  },
+  "replays/g2999.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "e724f778daab551ee8e8ad5de5df0dd7012ce03a5f249d12ee88cc4b0b29c6d9",
+   "sha256": "e724f778daab551ee8e8ad5de5df0dd7012ce03a5f249d12ee88cc4b0b29c6d9",
+   "modified": false
+  },
+  "replays/g30984.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "614c51ed93d3fcdca03144b3f4139cde43c0d35feb3ae066e816a644195abed0",
+   "sha256": "614c51ed93d3fcdca03144b3f4139cde43c0d35feb3ae066e816a644195abed0",
+   "modified": false
+  },
+  "replays/g31793.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "0a8f6052609469d4d6f4777631d9153b2585a90287357ce50d1c45b5ada108c3",
+   "sha256": "0a8f6052609469d4d6f4777631d9153b2585a90287357ce50d1c45b5ada108c3",
+   "modified": false
+  },
+  "replays/g3300.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "d3a2fd220f8dbcb9bb490d6819e7de75377ad131b7cbdadd16f1507b3640f703",
+   "sha256": "d3a2fd220f8dbcb9bb490d6819e7de75377ad131b7cbdadd16f1507b3640f703",
+   "modified": false
+  },
+  "replays/g3629.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "fb7c165b24df52e82805f89d9acfbbc82c0a0d9059bf7a971a9c61f4f89b6429",
+   "sha256": "fb7c165b24df52e82805f89d9acfbbc82c0a0d9059bf7a971a9c61f4f89b6429",
+   "modified": false
+  },
+  "replays/g3721.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "5f1a8c27ef0968398b3ba5a53e9a50923674981bcf4662ae1db69b1c5ad663b3",
+   "sha256": "5f1a8c27ef0968398b3ba5a53e9a50923674981bcf4662ae1db69b1c5ad663b3",
+   "modified": false
+  },
+  "replays/g4038.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "5e643839824d6fafebf7f6d5214ec05ccfa49ff44ae2a443f24afc46f1d97a52",
+   "sha256": "5e643839824d6fafebf7f6d5214ec05ccfa49ff44ae2a443f24afc46f1d97a52",
+   "modified": false
+  },
+  "replays/g428.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "c1cdacd6e6307158ea720bba42273ceef7ac4c0a48e56e8b5e38f33e1192bb57",
+   "sha256": "c1cdacd6e6307158ea720bba42273ceef7ac4c0a48e56e8b5e38f33e1192bb57",
+   "modified": false
+  },
+  "replays/g4329.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "15e5b0d1fd664d1d33ad40493f627546bc1ecb7c469b5be814ad2268cceed781",
+   "sha256": "15e5b0d1fd664d1d33ad40493f627546bc1ecb7c469b5be814ad2268cceed781",
+   "modified": false
+  },
+  "replays/g4339.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "b74fe214a9cc2acd2738a3e258c272cd1685dc2ae86bb239c86a457a1df2e956",
+   "sha256": "b74fe214a9cc2acd2738a3e258c272cd1685dc2ae86bb239c86a457a1df2e956",
+   "modified": false
+  },
+  "replays/g4675.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "1a9d12e3a8316ea9ad1ddc2d89af624cc558d745595bbe84c3662ef6cb8f5579",
+   "sha256": "1a9d12e3a8316ea9ad1ddc2d89af624cc558d745595bbe84c3662ef6cb8f5579",
+   "modified": false
+  },
+  "replays/g489.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "a0e168fab14031ae792f1e6a3b99f2d0535596945d80226029409966df97a6a8",
+   "sha256": "a0e168fab14031ae792f1e6a3b99f2d0535596945d80226029409966df97a6a8",
+   "modified": false
+  },
+  "replays/g4984.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "08387ca6dfc3cc9962436389a3a252f294ccbc58605e2ca7c9a0df4cc84070a3",
+   "sha256": "08387ca6dfc3cc9962436389a3a252f294ccbc58605e2ca7c9a0df4cc84070a3",
+   "modified": false
+  },
+  "replays/g5158.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "f06aa1a8a4930edef95857c06f0b1391bb24dceec9831cec247a52865283168b",
+   "sha256": "f06aa1a8a4930edef95857c06f0b1391bb24dceec9831cec247a52865283168b",
+   "modified": false
+  },
+  "replays/g5376.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "cc7ac47a3227b9ccb042e5d3fbe4a7c547200c1940ccc676b88564834f796b99",
+   "sha256": "cc7ac47a3227b9ccb042e5d3fbe4a7c547200c1940ccc676b88564834f796b99",
+   "modified": false
+  },
+  "replays/g5652.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "b5c3c907c116e605b414be9da2fd6ba90ec12a021622c4fd951b86178d5b4e2e",
+   "sha256": "b5c3c907c116e605b414be9da2fd6ba90ec12a021622c4fd951b86178d5b4e2e",
+   "modified": false
+  },
+  "replays/g5893.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "82475aad3d57423cee8bb166b45bd7de0130ff5a88a2edb7a82860adcd286bea",
+   "sha256": "82475aad3d57423cee8bb166b45bd7de0130ff5a88a2edb7a82860adcd286bea",
+   "modified": false
+  },
+  "replays/g5981.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "76fb02c617dcbf9452cd507d4d91156db21c6c02a2ee94880bc5ee181c3d1f02",
+   "sha256": "76fb02c617dcbf9452cd507d4d91156db21c6c02a2ee94880bc5ee181c3d1f02",
+   "modified": false
+  },
+  "replays/g6264.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "be1c4d68c03d2bc6a9d373f72d3dc094d7cf303f8c94bd951629a6ea35a18a00",
+   "sha256": "be1c4d68c03d2bc6a9d373f72d3dc094d7cf303f8c94bd951629a6ea35a18a00",
+   "modified": false
+  },
+  "replays/g6559.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "5c9e525032519a02ff63e90fe7b5b6de76d81febee9056bc1fa98f58e0f2ab8a",
+   "sha256": "5c9e525032519a02ff63e90fe7b5b6de76d81febee9056bc1fa98f58e0f2ab8a",
+   "modified": false
+  },
+  "replays/g6812.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "ef8faeed6b0676480420d01dd2592a3ecdc9ff098d5007a4216eb5f4c42b9bc2",
+   "sha256": "ef8faeed6b0676480420d01dd2592a3ecdc9ff098d5007a4216eb5f4c42b9bc2",
+   "modified": false
+  },
+  "replays/g6998.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "03e6553f4acc2e7db4cac85f9a29ba04b1b54240f23711a5ea188a54455b380d",
+   "sha256": "03e6553f4acc2e7db4cac85f9a29ba04b1b54240f23711a5ea188a54455b380d",
+   "modified": false
+  },
+  "replays/g7293.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "62bb9c53363ee315f13ad6f7bb462128d9cab70446fc7605e6498d5e25af1130",
+   "sha256": "62bb9c53363ee315f13ad6f7bb462128d9cab70446fc7605e6498d5e25af1130",
+   "modified": false
+  },
+  "replays/g7397.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "456f635f9643cd70355dc1fddd1c1e3ab9b8a475f01bafa988ec8759d228a1b6",
+   "sha256": "456f635f9643cd70355dc1fddd1c1e3ab9b8a475f01bafa988ec8759d228a1b6",
+   "modified": false
+  },
+  "replays/g742.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "81d16668c97fa9ef148a2a5f465f14196db9ef6e14c4cbabdb28d72b358774c1",
+   "sha256": "81d16668c97fa9ef148a2a5f465f14196db9ef6e14c4cbabdb28d72b358774c1",
+   "modified": false
+  },
+  "replays/g7570.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "a0c81d4c0bade7abef714dd18e78bc339562bc870ce267f269f36c4944bb013d",
+   "sha256": "a0c81d4c0bade7abef714dd18e78bc339562bc870ce267f269f36c4944bb013d",
+   "modified": false
+  },
+  "replays/g7835.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "62dd14644b888de5d14443a1ef068156593ce88b97d1ae8b2fc43d727fdd6cbb",
+   "sha256": "62dd14644b888de5d14443a1ef068156593ce88b97d1ae8b2fc43d727fdd6cbb",
+   "modified": false
+  },
+  "replays/g8161.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "3003ac9bf46af817fb7c7823879193767fbd7e128a8aff6db72d6d26dc69c1f6",
+   "sha256": "3003ac9bf46af817fb7c7823879193767fbd7e128a8aff6db72d6d26dc69c1f6",
+   "modified": false
+  },
+  "replays/g8372.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "d072930451045a6bc0cbe79efee9d85422e78b4892e9a88bdaedbcce5078bed7",
+   "sha256": "d072930451045a6bc0cbe79efee9d85422e78b4892e9a88bdaedbcce5078bed7",
+   "modified": false
+  },
+  "replays/g8582.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "1cf499573fda14667d0730796fdc7abdd3fbc26094b0fafd19e2f1dc6375ad87",
+   "sha256": "1cf499573fda14667d0730796fdc7abdd3fbc26094b0fafd19e2f1dc6375ad87",
+   "modified": false
+  },
+  "replays/g8723.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "66e3b8ab6d81395414e4fcc597e044256037ecfaf0ca30551bd1d34e23fc2b48",
+   "sha256": "66e3b8ab6d81395414e4fcc597e044256037ecfaf0ca30551bd1d34e23fc2b48",
+   "modified": false
+  },
+  "replays/g8947.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "da4cb43a0587e20de434db815f2b3cc8b5367a7fdd4462b98ebdd9208625b3ae",
+   "sha256": "da4cb43a0587e20de434db815f2b3cc8b5367a7fdd4462b98ebdd9208625b3ae",
+   "modified": false
+  },
+  "replays/g9254.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "53063a18bece7e450126eee8cf68efcf00dcc8ca8a18e187de10ff1a63fe41e3",
+   "sha256": "53063a18bece7e450126eee8cf68efcf00dcc8ca8a18e187de10ff1a63fe41e3",
+   "modified": false
+  },
+  "replays/g9429.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "8fa437599b50ec48b03470d818e148e7a9e167b45d5271f45d35d95b53ffcfc4",
+   "sha256": "8fa437599b50ec48b03470d818e148e7a9e167b45d5271f45d35d95b53ffcfc4",
+   "modified": false
+  },
+  "replays/g9731.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "d95f018bdcaa52090b876b87be153c929559ad41ca1b79625865e82f2eb334e6",
+   "sha256": "d95f018bdcaa52090b876b87be153c929559ad41ca1b79625865e82f2eb334e6",
+   "modified": false
+  },
+  "replays/g9891.txt": {
+   "source": "replay_rerun",
+   "original_sha256": "dc03a7778cb2da74498169ea193851385e2a8265dbea0bc4b979bd6588a22bf2",
+   "sha256": "dc03a7778cb2da74498169ea193851385e2a8265dbea0bc4b979bd6588a22bf2",
+   "modified": false
+  },
+  "results/games.jsonl.gz": {
+   "source": "official_result",
+   "original_sha256": "125eaf1d1842bae27e4461a9a12af162d7347f89575a25b3010e06ff168b20b2",
+   "sha256": "9008af4eb00e7d42269a8b6e31425e8290325d899134212e8994586a5b44dac4",
+   "modified": true,
+   "note": "逐局结果.json 的内容，每局一行、gzip 压缩（解压后逐行 json.loads 与原文件的列表逐项相等）"
+  },
+  "results/schedule.json.gz": {
+   "source": "official_result",
+   "original_sha256": "23443a169efa738246c054efbef5b7370f14e74753c1f396a905cbd0b2788e35",
+   "sha256": "2b5e963ceea88fc70b2055cc07795cc8c4b958176df636ebd6fbcfa1d29af5de",
+   "modified": true,
+   "note": "赛程.json：每局的 mapfile 从主办方电脑上的绝对路径改成仓库里的相对路径，其余原样；gzip 压缩"
+  },
+  "results/海选成绩.json": {
+   "source": "official_result",
+   "original_sha256": "145b7077319dd434b867c5a7cbf5b8d538a96a64a66f070885bbf2d264528059",
+   "sha256": "145b7077319dd434b867c5a7cbf5b8d538a96a64a66f070885bbf2d264528059",
+   "modified": false
+  },
+  "results/海选榜.md": {
+   "source": "official_result",
+   "original_sha256": "873e8643522f3d5117deff21ee926cc9001a1e9dfdc37c68bd524f3ae61fe8d4",
+   "sha256": "873e8643522f3d5117deff21ee926cc9001a1e9dfdc37c68bd524f3ae61fe8d4",
+   "modified": false
+  },
+  "tournament/hidden/forest.txt": {
+   "source": "hidden_map",
+   "original_sha256": "8ec9ae7ae2f2397c6fc606c4e82c2b3db7a9997fdd503dc318cc3eb72c8df9cc",
+   "sha256": "8ec9ae7ae2f2397c6fc606c4e82c2b3db7a9997fdd503dc318cc3eb72c8df9cc",
+   "modified": false
+  },
+  "tournament/hidden/icefloes.txt": {
+   "source": "hidden_map",
+   "original_sha256": "93cacf4c6e988e967cb99e60d67c73b5063e274699f5cecd9abcd7e1e3346675",
+   "sha256": "93cacf4c6e988e967cb99e60d67c73b5063e274699f5cecd9abcd7e1e3346675",
+   "modified": false
+  },
+  "tournament/hidden/oldtown.txt": {
+   "source": "hidden_map",
+   "original_sha256": "89cad60f4d6713133dd445c5c93e50ad69b2583030e71a19e92822d6914cf6fd",
+   "sha256": "89cad60f4d6713133dd445c5c93e50ad69b2583030e71a19e92822d6914cf6fd",
+   "modified": false
+  },
+  "tournament/hidden/ruins.txt": {
+   "source": "hidden_map",
+   "original_sha256": "99311c59067f6262a8d2b016fb664fe2f79c24b3b13a4fa1114b9d19d936cbd7",
+   "sha256": "99311c59067f6262a8d2b016fb664fe2f79c24b3b13a4fa1114b9d19d936cbd7",
+   "modified": false
+  },
+  "tournament/hidden/skybridge.txt": {
+   "source": "hidden_map",
+   "original_sha256": "8899df55d48be7df0d88d610cfd927eaea492a7b85edd611682108433e7bee2b",
+   "sha256": "8899df55d48be7df0d88d610cfd927eaea492a7b85edd611682108433e7bee2b",
+   "modified": false
+  },
+  "tournament/hidden/stonecircle.txt": {
+   "source": "hidden_map",
+   "original_sha256": "f5540b67a3148fc4b98010fc349b05a35b056a0f22c6f7d45ae5ebe8dd25179e",
+   "sha256": "f5540b67a3148fc4b98010fc349b05a35b056a0f22c6f7d45ae5ebe8dd25179e",
+   "modified": false
+  },
+  "workspace/README.md": {
+   "source": "player_pack",
+   "original_sha256": "d0b4fd34c8c62049231a6e1a3f129e64819f0d8ba7a2ffb472f3899fc834f160",
+   "sha256": "d0b4fd34c8c62049231a6e1a3f129e64819f0d8ba7a2ffb472f3899fc834f160",
+   "modified": false
+  },
+  "workspace/RULES.md": {
+   "source": "player_pack",
+   "original_sha256": "34d0564e10434c5196c629a532dd365b0d911426547eb3a2740437504e72ed32",
+   "sha256": "34d0564e10434c5196c629a532dd365b0d911426547eb3a2740437504e72ed32",
+   "modified": false
+  },
+  "workspace/arena.cpp": {
+   "source": "player_pack",
+   "original_sha256": "a49da3f44c69ec602e3846291b6abc10cf92264d8eb1437b776b659f9b4125bc",
+   "sha256": "a49da3f44c69ec602e3846291b6abc10cf92264d8eb1437b776b659f9b4125bc",
+   "modified": false
+  },
+  "workspace/arena.exe": {
+   "source": "player_pack",
+   "original_sha256": "98b40097079d77ea04b4717cde67787f07834099ca1eb8bdee9eeb7d305ddf35",
+   "sha256": null,
+   "modified": false,
+   "note": "可执行文件不入库，由 build_engine.py 从源码编译"
+  },
+  "workspace/bots/mid.exe": {
+   "source": "player_pack",
+   "original_sha256": "2a7f4db0fe8f7c5c2162732234e8c50ff68f2b844a6d0d39c4529a75d3ddbce7",
+   "sha256": null,
+   "modified": false,
+   "note": "可执行文件不入库，由 build_engine.py 从源码编译"
+  },
+  "workspace/bots/strong.exe": {
+   "source": "player_pack",
+   "original_sha256": "adfe213fc66edd1abcbef8b07fa6edda133576066a71fe4285c49b9bf7a646e7",
+   "sha256": null,
+   "modified": false,
+   "note": "可执行文件不入库，由 build_engine.py 从源码编译"
+  },
+  "workspace/bots/weak.exe": {
+   "source": "player_pack",
+   "original_sha256": "a9c1e7517d132368b50d30de275344bd15198dd4e196c0dad67d2047997f6399",
+   "sha256": null,
+   "modified": false,
+   "note": "可执行文件不入库，由 build_engine.py 从源码编译"
+  },
+  "workspace/build.py": {
+   "source": "player_pack",
+   "original_sha256": "4ca125b3fc71f90d4a285b860a681feab8801ffd432e7c7a317442b84839122e",
+   "sha256": "4ca125b3fc71f90d4a285b860a681feab8801ffd432e7c7a317442b84839122e",
+   "modified": false
+  },
+  "workspace/clock.py": {
+   "source": "player_pack",
+   "original_sha256": "2db77e3c250f0c57af3ffa30b54493b223e9d837d35b524db18616584c395c2a",
+   "sha256": "2db77e3c250f0c57af3ffa30b54493b223e9d837d35b524db18616584c395c2a",
+   "modified": false
+  },
+  "workspace/dart.hpp": {
+   "source": "player_pack",
+   "original_sha256": "54b3f0dbe4a8001bd0bb96f2c62ba6a68a29c9bc004792e14541bd9d4eea45f0",
+   "sha256": "54b3f0dbe4a8001bd0bb96f2c62ba6a68a29c9bc004792e14541bd9d4eea45f0",
+   "modified": false
+  },
+  "workspace/maps/canyon.txt": {
+   "source": "player_pack",
+   "original_sha256": "a730607776f5f741d3637551cb443a664719154ed0cd40592080bfc1725a8317",
+   "sha256": "a730607776f5f741d3637551cb443a664719154ed0cd40592080bfc1725a8317",
+   "modified": false
+  },
+  "workspace/maps/hourglass.txt": {
+   "source": "player_pack",
+   "original_sha256": "50a8150ba4a0a89161cd785899e83e2c964f7e5e712269d7847e2a259f7d85dc",
+   "sha256": "50a8150ba4a0a89161cd785899e83e2c964f7e5e712269d7847e2a259f7d85dc",
+   "modified": false
+  },
+  "workspace/maps/twinlakes.txt": {
+   "source": "player_pack",
+   "original_sha256": "efe4878019e2f02890767667aed2a1bcb2cfb813ed79fe1ec1d81fe3a4e6600d",
+   "sha256": "efe4878019e2f02890767667aed2a1bcb2cfb813ed79fe1ec1d81fe3a4e6600d",
+   "modified": false
+  },
+  "workspace/maps/yinyang.txt": {
+   "source": "player_pack",
+   "original_sha256": "fc98009a2677ba6ff8011f8d89ddebd28cecb7a64e7bdbc1cead8b886b107bb6",
+   "sha256": "fc98009a2677ba6ff8011f8d89ddebd28cecb7a64e7bdbc1cead8b886b107bb6",
+   "modified": false
+  },
+  "workspace/match.py": {
+   "source": "player_pack",
+   "original_sha256": "aa66dd8cc682e64da6a8f1f143a996d26449ee13f43f0c54175ebe8bd873c531",
+   "sha256": "aa66dd8cc682e64da6a8f1f143a996d26449ee13f43f0c54175ebe8bd873c531",
+   "modified": false
+  },
+  "workspace/template.cpp": {
+   "source": "player_pack",
+   "original_sha256": "738e37b237a90813acc319f251cd41629ed79ed5bf9f73ee6f5387299a6374bc",
+   "sha256": "738e37b237a90813acc319f251cd41629ed79ed5bf9f73ee6f5387299a6374bc",
+   "modified": false
+  },
+  "workspace/viewer.html": {
+   "source": "player_pack",
+   "original_sha256": "98a211d0fd3d50ad293ee31936dab2efbe53fbb75d3c326ff11a42f2ab596e97",
+   "sha256": "98a211d0fd3d50ad293ee31936dab2efbe53fbb75d3c326ff11a42f2ab596e97",
+   "modified": false
+  },
+  "workspace/回放格式.md": {
+   "source": "player_pack",
+   "original_sha256": "7fdb9aa01288a576da950d9088debf649964eca5393eee5697720812cb7a5d70",
+   "sha256": "7fdb9aa01288a576da950d9088debf649964eca5393eee5697720812cb7a5d70",
+   "modified": false
+  },
+  "workspace/实验笔记.md": {
+   "source": "player_pack",
+   "original_sha256": "9288ca446c090b1b74bc9dc3fe02bee06334c3a2433a901ff90feaebe252097e",
+   "sha256": "9288ca446c090b1b74bc9dc3fe02bee06334c3a2433a901ff90feaebe252097e",
+   "modified": false
+  },
+  "workspace/示例回放.txt": {
+   "source": "player_pack",
+   "original_sha256": "d826535d1d8a7765ec578932472fd0f085af9468adc00ea71dfadf28f89704bb",
+   "sha256": "d826535d1d8a7765ec578932472fd0f085af9468adc00ea71dfadf28f89704bb",
+   "modified": false
+  },
+  "renderer/assets/avatars/Claude_大_Opus.png": {
+   "original_sha256": "da64ca32b27f462672770b9c685a97baaea4683ae1a76d51579794fc91cb8711",
+   "sha256": "da64ca32b27f462672770b9c685a97baaea4683ae1a76d51579794fc91cb8711",
+   "modified": false,
+   "source": "renderer"
+  },
+  "renderer/assets/avatars/DeepSeek.png": {
+   "original_sha256": "e538dabfc62637ce410c76b0cdb06b097fc7efcfc31f5020242218b8565fda76",
+   "sha256": "e538dabfc62637ce410c76b0cdb06b097fc7efcfc31f5020242218b8565fda76",
+   "modified": false,
+   "source": "renderer"
+  },
+  "renderer/assets/avatars/Fable.png": {
+   "original_sha256": "2ed813d1baf2b19ae745d18210120d5483329a93c8dbb9c062f048bf070d3c97",
+   "sha256": "2ed813d1baf2b19ae745d18210120d5483329a93c8dbb9c062f048bf070d3c97",
+   "modified": false,
+   "source": "renderer"
+  },
+  "renderer/assets/avatars/GLM.png": {
+   "original_sha256": "dc3bdd1019b87aacfb33c3ad128fa878e9dc680cc6b944a1a7c84261d473130c",
+   "sha256": "dc3bdd1019b87aacfb33c3ad128fa878e9dc680cc6b944a1a7c84261d473130c",
+   "modified": false,
+   "source": "renderer"
+  },
+  "renderer/assets/avatars/GPT_大_Astra.png": {
+   "original_sha256": "692b19ed3d009ebf0d7e6d9876c00425cef1f09d9526b54c3de02bfe5667a308",
+   "sha256": "692b19ed3d009ebf0d7e6d9876c00425cef1f09d9526b54c3de02bfe5667a308",
+   "modified": false,
+   "source": "renderer"
+  },
+  "renderer/assets/avatars/GPT_小_Sol.png": {
+   "original_sha256": "40790f7b4659a8744839b397b7bd902c6c4abe59697316145521bf8a1f221ad1",
+   "sha256": "40790f7b4659a8744839b397b7bd902c6c4abe59697316145521bf8a1f221ad1",
+   "modified": false,
+   "source": "renderer"
+  },
+  "renderer/assets/avatars/Gemini.png": {
+   "original_sha256": "62c8979222de392248ee36fc21a261894be2d1abee636a8bff84b3f2042530c0",
+   "sha256": "62c8979222de392248ee36fc21a261894be2d1abee636a8bff84b3f2042530c0",
+   "modified": false,
+   "source": "renderer"
+  },
+  "renderer/assets/avatars/Gemini_小.png": {
+   "original_sha256": "1fddb744b8a4feba474a22f45ee254f8a421fbe3e61282b5dece951445a55a18",
+   "sha256": "1fddb744b8a4feba474a22f45ee254f8a421fbe3e61282b5dece951445a55a18",
+   "modified": false,
+   "source": "renderer"
+  },
+  "renderer/assets/avatars/Grok.png": {
+   "original_sha256": "712122919f7f2c66b063870bfe149c212bc1ea6c0324bb6d8cd54340ea5dd26c",
+   "sha256": "712122919f7f2c66b063870bfe149c212bc1ea6c0324bb6d8cd54340ea5dd26c",
+   "modified": false,
+   "source": "renderer"
+  },
+  "renderer/assets/avatars/Kimi.png": {
+   "original_sha256": "3cbd6fd31971dc5eb8a1353397fb4ab0bd4525abd1f203fc9195061a5c3dfb5e",
+   "sha256": "3cbd6fd31971dc5eb8a1353397fb4ab0bd4525abd1f203fc9195061a5c3dfb5e",
+   "modified": false,
+   "source": "renderer"
+  },
+  "renderer/assets/avatars/Qwen_千问.png": {
+   "original_sha256": "67d7190f01205764cc4582c038be0b701761262e13801adfdaad14fdb5008321",
+   "sha256": "67d7190f01205764cc4582c038be0b701761262e13801adfdaad14fdb5008321",
+   "modified": false,
+   "source": "renderer"
+  },
+  "renderer/assets/avatars/小米MiMo.png": {
+   "original_sha256": "316abcc4e3c98bbe5acaf09efd5bf18d64803c07c196ea87235fad3cc4167586",
+   "sha256": "316abcc4e3c98bbe5acaf09efd5bf18d64803c07c196ea87235fad3cc4167586",
+   "modified": false,
+   "source": "renderer"
+  },
+  "renderer/assets/avatars/豆包.png": {
+   "original_sha256": "3ed29fbdc4360148146ee43cc5f97b25033c8057c324908d6efced5acf4a4eba",
+   "sha256": "3ed29fbdc4360148146ee43cc5f97b25033c8057c324908d6efced5acf4a4eba",
+   "modified": false,
+   "source": "renderer"
+  },
+  "renderer/maps/canyon.txt": {
+   "original_sha256": "54f7935f205151c9f3bcb2c717063036672ccbe95b38c75c5bd16ee66d679fb2",
+   "sha256": "54f7935f205151c9f3bcb2c717063036672ccbe95b38c75c5bd16ee66d679fb2",
+   "modified": false,
+   "source": "renderer"
+  },
+  "renderer/maps/forest.txt": {
+   "original_sha256": "155c1be094c34dba9a645c1005faf1c3c8fba7135636c5b0be134996cca40cd3",
+   "sha256": "155c1be094c34dba9a645c1005faf1c3c8fba7135636c5b0be134996cca40cd3",
+   "modified": false,
+   "source": "renderer"
+  },
+  "renderer/maps/hourglass.txt": {
+   "original_sha256": "70ffcb2470986562b3fcf5c451aa037829adbfd6161449875572a9f43741bd88",
+   "sha256": "70ffcb2470986562b3fcf5c451aa037829adbfd6161449875572a9f43741bd88",
+   "modified": false,
+   "source": "renderer"
+  },
+  "renderer/maps/icefloes.txt": {
+   "original_sha256": "da6cef49711ad1afea6e7c3153eec8899ba347fc1510104b6cae969e36adea31",
+   "sha256": "da6cef49711ad1afea6e7c3153eec8899ba347fc1510104b6cae969e36adea31",
+   "modified": false,
+   "source": "renderer"
+  },
+  "renderer/maps/oldtown.txt": {
+   "original_sha256": "ff5ba12e3bb76b65cf5e0ea1f9fd6b767dc073b6fa344e319302df1f7e435365",
+   "sha256": "ff5ba12e3bb76b65cf5e0ea1f9fd6b767dc073b6fa344e319302df1f7e435365",
+   "modified": false,
+   "source": "renderer"
+  },
+  "renderer/maps/ruins.txt": {
+   "original_sha256": "f1e2b0fef8ab2a12b009e37b1ea97bb5f055b39dfc30828dd9d239672db03122",
+   "sha256": "f1e2b0fef8ab2a12b009e37b1ea97bb5f055b39dfc30828dd9d239672db03122",
+   "modified": false,
+   "source": "renderer"
+  },
+  "renderer/maps/skybridge.txt": {
+   "original_sha256": "12f2a873cce4ae38cf7b6af2450a936653ee2e1afe525e758fad3a7a599c2f98",
+   "sha256": "12f2a873cce4ae38cf7b6af2450a936653ee2e1afe525e758fad3a7a599c2f98",
+   "modified": false,
+   "source": "renderer"
+  },
+  "renderer/maps/stonecircle.txt": {
+   "original_sha256": "992db0eefb81e60937e2f2e80f22e4a2fac29571a2906d020f1f3c9e69b44aa8",
+   "sha256": "992db0eefb81e60937e2f2e80f22e4a2fac29571a2906d020f1f3c9e69b44aa8",
+   "modified": false,
+   "source": "renderer"
+  },
+  "renderer/maps/twinlakes.txt": {
+   "original_sha256": "39300a046c7c12f1f7dba5f33e055b9d179c927c15e7eeed3fd45f3851795d14",
+   "sha256": "39300a046c7c12f1f7dba5f33e055b9d179c927c15e7eeed3fd45f3851795d14",
+   "modified": false,
+   "source": "renderer"
+  },
+  "renderer/maps/yinyang.txt": {
+   "original_sha256": "02fe003e189438371efda796ea58a5baf9f3d16aac877a0688878b7fc258087e",
+   "sha256": "02fe003e189438371efda796ea58a5baf9f3d16aac877a0688878b7fc258087e",
+   "modified": false,
+   "source": "renderer"
+  },
+  "renderer/maps/定稿说明.md": {
+   "original_sha256": "36b7ef8da5b3186c170ba2db65e6f3bd40f15480bcfea4767c9cf2362066f197",
+   "sha256": "36b7ef8da5b3186c170ba2db65e6f3bd40f15480bcfea4767c9cf2362066f197",
+   "modified": false,
+   "source": "renderer"
+  },
+  "renderer/maps/总览_定稿十图.png": {
+   "original_sha256": "dd8320a5193f67ae463442218867558a4db1b00a3beb42401b2a59014471f947",
+   "sha256": "dd8320a5193f67ae463442218867558a4db1b00a3beb42401b2a59014471f947",
+   "modified": false,
+   "source": "renderer"
+  },
+  "renderer/samples/1v1_石阵_stonecircle_s452716595.txt": {
+   "original_sha256": "1610f8a2b8e4937d3859822ec3937f3006ef48c59e0cf434cb7980ce6fd98a1d",
+   "sha256": "1610f8a2b8e4937d3859822ec3937f3006ef48c59e0cf434cb7980ce6fd98a1d",
+   "modified": false,
+   "source": "renderer"
+  },
+  "renderer/samples/4v4_峡谷_canyon_s660339338.txt": {
+   "original_sha256": "2aa597eb3e0a13581ab9a63f94c8a948f0d2e4b4829514ef230f5ca5ca5c0fe5",
+   "sha256": "2aa597eb3e0a13581ab9a63f94c8a948f0d2e4b4829514ef230f5ca5ca5c0fe5",
+   "modified": false,
+   "source": "renderer"
+  },
+  "renderer/samples/4v4_林地_forest_s1372611326.txt": {
+   "original_sha256": "37540b89a1530860510593d10669ba52d838c37e5540a116535d8fb6ee13b6f0",
+   "sha256": "37540b89a1530860510593d10669ba52d838c37e5540a116535d8fb6ee13b6f0",
+   "modified": false,
+   "source": "renderer"
+  },
+  "renderer/samples/四人_双湖_twinlakes_s590488064.txt": {
+   "original_sha256": "9dc80a07a6e58a5f92efc7c877cedfa8f203ec2524dedbadf6bd6bde841a938c",
+   "sha256": "9dc80a07a6e58a5f92efc7c877cedfa8f203ec2524dedbadf6bd6bde841a938c",
+   "modified": false,
+   "source": "renderer"
+  },
+  "renderer/src/cast.py": {
+   "original_sha256": "6b48b2599ad3bd27a48697490451e0b893dd4bd60bcc702cdfde50e75e1b835a",
+   "sha256": "6b48b2599ad3bd27a48697490451e0b893dd4bd60bcc702cdfde50e75e1b835a",
+   "modified": false,
+   "source": "renderer"
+  },
+  "renderer/src/chars.py": {
+   "original_sha256": "9fbbcdade0579df98019b12c873cba0280f724edf0bb4c6dd3b10e6ad4400236",
+   "sha256": "9fbbcdade0579df98019b12c873cba0280f724edf0bb4c6dd3b10e6ad4400236",
+   "modified": false,
+   "source": "renderer"
+  },
+  "renderer/src/chars_voxel.py": {
+   "original_sha256": "a887c8eb799fe7b7d17083bd28a45849cb90771d70f742989a48091691c22280",
+   "sha256": "a887c8eb799fe7b7d17083bd28a45849cb90771d70f742989a48091691c22280",
+   "modified": false,
+   "source": "renderer"
+  },
+  "renderer/src/demo.py": {
+   "original_sha256": "ad28b5be8d28959d3f2d446a1fe5598ec4aed5e8b5a9dbe9906c464ae0aabf31",
+   "sha256": "ad28b5be8d28959d3f2d446a1fe5598ec4aed5e8b5a9dbe9906c464ae0aabf31",
+   "modified": false,
+   "source": "renderer"
+  },
+  "renderer/src/env.py": {
+   "original_sha256": "07640b83125c2d9954221a7e2250a5c372db94cee76320d36ccf7ba5f0cdf987",
+   "sha256": "88609f6839d51e34248ba998549b7a6925c7218ff7676dd397d9aa2810e2fb31",
+   "modified": true,
+   "source": "renderer",
+   "note": "内部绝对路径改成相对仓库的默认值和环境变量（DART_*），见 renderer/README.md"
+  },
+  "renderer/src/export_voxchars.py": {
+   "original_sha256": "cc984c6de0d93293bf366da3eac989c3b51eb3644742fc8947642c88e30b53ad",
+   "sha256": "cc984c6de0d93293bf366da3eac989c3b51eb3644742fc8947642c88e30b53ad",
+   "modified": false,
+   "source": "renderer"
+  },
+  "renderer/src/fx.py": {
+   "original_sha256": "31fa7d40ab8d42c0652196b2655fbc196d8dea920eb835aa930ab655e7c9e23b",
+   "sha256": "31fa7d40ab8d42c0652196b2655fbc196d8dea920eb835aa930ab655e7c9e23b",
+   "modified": false,
+   "source": "renderer"
+  },
+  "renderer/src/geom.py": {
+   "original_sha256": "7b79f13984b00555f6aa78034b07513faa1f486be529b2a14d92c883fe15e003",
+   "sha256": "7b79f13984b00555f6aa78034b07513faa1f486be529b2a14d92c883fe15e003",
+   "modified": false,
+   "source": "renderer"
+  },
+  "renderer/src/ground_paint.py": {
+   "original_sha256": "270744a2176e34406c87d6020a0154c6e71d993b927333dacc0da6feb6520649",
+   "sha256": "270744a2176e34406c87d6020a0154c6e71d993b927333dacc0da6feb6520649",
+   "modified": false,
+   "source": "renderer"
+  },
+  "renderer/src/hud.py": {
+   "original_sha256": "e3674735e6e13ea5935b113b527f220817cbe14fa8b8767d783ea97bee9fc2b2",
+   "sha256": "9c9d959371af3a3dcbb318f68079ad2193b1316dcd48fe6981692593c9b075fc",
+   "modified": true,
+   "source": "renderer",
+   "note": "内部绝对路径改成相对仓库的默认值和环境变量（DART_*），见 renderer/README.md"
+  },
+  "renderer/src/make_video.py": {
+   "original_sha256": "0f761f4701ab00f1b50a5a77490862d354ecaeee4032a232fcb719583540469c",
+   "sha256": "59451fe271edea8e0f67449cefd2eb7ed3c2abb01b458b276c8bf37959b22eef",
+   "modified": true,
+   "source": "renderer",
+   "note": "内部绝对路径改成相对仓库的默认值和环境变量（DART_*），见 renderer/README.md"
+  },
+  "renderer/src/mapfile.py": {
+   "original_sha256": "71b3030e9f0278ad37b17f83bf41dd9723b5d8d0c00d0899dafe4308fe7a7249",
+   "sha256": "71b3030e9f0278ad37b17f83bf41dd9723b5d8d0c00d0899dafe4308fe7a7249",
+   "modified": false,
+   "source": "renderer"
+  },
+  "renderer/src/pose.py": {
+   "original_sha256": "1bdc79099af69b42060348662a524a037285b71f8517efcbd200e93ee49bbfec",
+   "sha256": "1bdc79099af69b42060348662a524a037285b71f8517efcbd200e93ee49bbfec",
+   "modified": false,
+   "source": "renderer"
+  },
+  "renderer/src/prep.py": {
+   "original_sha256": "01852e0479176963d04f09739879f1d825fe0c2122abb6d4f6d44b623d2c4a48",
+   "sha256": "a5c6ba5741cd6724317c0925d1e4dfa5b65ce7785a160d9a37724c5c5dc1d20f",
+   "modified": true,
+   "source": "renderer",
+   "note": "内部绝对路径改成相对仓库的默认值和环境变量（DART_*），见 renderer/README.md"
+  },
+  "renderer/src/props.py": {
+   "original_sha256": "5d77500414a6f906f4aa7a8938112232050e250c2529d49ed9ba8d38fc0a1757",
+   "sha256": "5d77500414a6f906f4aa7a8938112232050e250c2529d49ed9ba8d38fc0a1757",
+   "modified": false,
+   "source": "renderer"
+  },
+  "renderer/src/render_bl.py": {
+   "original_sha256": "2dd7d4b98ed24f93b2b85c777121874e213465573aa6484586d8f31587902d1e",
+   "sha256": "2dd7d4b98ed24f93b2b85c777121874e213465573aa6484586d8f31587902d1e",
+   "modified": false,
+   "source": "renderer"
+  },
+  "renderer/src/replay.py": {
+   "original_sha256": "c1001848d725a3270d4773f55bfddaf6bc88e11fb2e2ec2b91a45b8634787131",
+   "sha256": "c9308d108a8c48bcdcfbe798fca096c09598340d788e5b4e6f74f83ceb6a01ce",
+   "modified": true,
+   "source": "renderer",
+   "note": "内部绝对路径改成相对仓库的默认值和环境变量（DART_*），见 renderer/README.md"
+  },
+  "renderer/src/scene_lib.py": {
+   "original_sha256": "42e138c33e8cf1f892aac0e5bc6dfdba0a471a55538c1bd4ec254631c3fcd17c",
+   "sha256": "42e138c33e8cf1f892aac0e5bc6dfdba0a471a55538c1bd4ec254631c3fcd17c",
+   "modified": false,
+   "source": "renderer"
+  },
+  "renderer/src/stills.py": {
+   "original_sha256": "fc2accc1953be4e556805a1a59a72ddde5fc677eb1e77251502d035799dcd9ec",
+   "sha256": "53b10143a1aaacc600bd4380e05ceafc10caf0aebfec1f7b009bdac1a785a48b",
+   "modified": true,
+   "source": "renderer",
+   "note": "内部绝对路径改成相对仓库的默认值和环境变量（DART_*），见 renderer/README.md"
+  },
+  "renderer/src/terrain.py": {
+   "original_sha256": "7920498898cc075a6ee699b12ddf1d8b111959f64dbe4b46d9ee5581c592b36e",
+   "sha256": "7920498898cc075a6ee699b12ddf1d8b111959f64dbe4b46d9ee5581c592b36e",
+   "modified": false,
+   "source": "renderer"
+  },
+  "renderer/src/themes.py": {
+   "original_sha256": "9daf18375aeefea0be96dc715e4f644dc879ae1843584698be20875fae5949f3",
+   "sha256": "9daf18375aeefea0be96dc715e4f644dc879ae1843584698be20875fae5949f3",
+   "modified": false,
+   "source": "renderer"
+  },
+  "renderer/src/timeline.py": {
+   "original_sha256": "d9376bd243aad27caed4935af8bf4a15b97f1b4e958bb21e0aae5f891d055e2d",
+   "sha256": "d9376bd243aad27caed4935af8bf4a15b97f1b4e958bb21e0aae5f891d055e2d",
+   "modified": false,
+   "source": "renderer"
+  },
+  "renderer/src/voxchars/__init__.py": {
+   "original_sha256": "f1636f758aa381489270d7f452013b15e6b620225741c13d7a82e3ac694e3a91",
+   "sha256": "f1636f758aa381489270d7f452013b15e6b620225741c13d7a82e3ac694e3a91",
+   "modified": false,
+   "source": "renderer"
+  },
+  "renderer/src/voxchars/astra.py": {
+   "original_sha256": "fa7032d8186ed1ba5f70499047f28adcd710c0eb20ff6d74906024503c614d55",
+   "sha256": "fa7032d8186ed1ba5f70499047f28adcd710c0eb20ff6d74906024503c614d55",
+   "modified": false,
+   "source": "renderer"
+  },
+  "renderer/src/voxchars/deepseek.py": {
+   "original_sha256": "5f6a3914a623c2f6a0c8c2ee34a66e349d2f887c245fa9a2ddb08976ea15547d",
+   "sha256": "5f6a3914a623c2f6a0c8c2ee34a66e349d2f887c245fa9a2ddb08976ea15547d",
+   "modified": false,
+   "source": "renderer"
+  },
+  "renderer/src/voxchars/demo_blue.py": {
+   "original_sha256": "e0bc723a264a34e8b4a1eb64d68ba17bf228dd825f05e7adb4d1ca3df19d241b",
+   "sha256": "e0bc723a264a34e8b4a1eb64d68ba17bf228dd825f05e7adb4d1ca3df19d241b",
+   "modified": false,
+   "source": "renderer"
+  },
+  "renderer/src/voxchars/demo_red.py": {
+   "original_sha256": "49b80141144498d746de1841a05ed2bc9294ccfbe3aa42897d5e010d24c0dd9c",
+   "sha256": "49b80141144498d746de1841a05ed2bc9294ccfbe3aa42897d5e010d24c0dd9c",
+   "modified": false,
+   "source": "renderer"
+  },
+  "renderer/src/voxchars/doubao.py": {
+   "original_sha256": "072188ceff6b5bdb91249cd8e078d42f0205e2ae4cfc5be55714ba1226f60a70",
+   "sha256": "072188ceff6b5bdb91249cd8e078d42f0205e2ae4cfc5be55714ba1226f60a70",
+   "modified": false,
+   "source": "renderer"
+  },
+  "renderer/src/voxchars/fable.py": {
+   "original_sha256": "f6cd3987eff7b689948772faead8787e4840ab6df19e60161b7ed513b4f81f58",
+   "sha256": "f6cd3987eff7b689948772faead8787e4840ab6df19e60161b7ed513b4f81f58",
+   "modified": false,
+   "source": "renderer"
+  },
+  "renderer/src/voxchars/gemini.py": {
+   "original_sha256": "026a58841ab8a38a6a0bc20c2a0eedf9b61813bb8e98a879843df3527550512c",
+   "sha256": "026a58841ab8a38a6a0bc20c2a0eedf9b61813bb8e98a879843df3527550512c",
+   "modified": false,
+   "source": "renderer"
+  },
+  "renderer/src/voxchars/gemini_s.py": {
+   "original_sha256": "8749ccb10c4def6495e3203a35f5394db4df41f03b8bf0a195f7846de829b997",
+   "sha256": "8749ccb10c4def6495e3203a35f5394db4df41f03b8bf0a195f7846de829b997",
+   "modified": false,
+   "source": "renderer"
+  },
+  "renderer/src/voxchars/glm.py": {
+   "original_sha256": "4fc101260d7810479fbaae0fc4b553252aa5f8b869b59ea7b1b000847b894efc",
+   "sha256": "4fc101260d7810479fbaae0fc4b553252aa5f8b869b59ea7b1b000847b894efc",
+   "modified": false,
+   "source": "renderer"
+  },
+  "renderer/src/voxchars/grok.py": {
+   "original_sha256": "0390bccd563f9e4022a3b02339bb203e935643f73ebd55b02b041621378a6536",
+   "sha256": "0390bccd563f9e4022a3b02339bb203e935643f73ebd55b02b041621378a6536",
+   "modified": false,
+   "source": "renderer"
+  },
+  "renderer/src/voxchars/kimi.py": {
+   "original_sha256": "47ad3045003e665fa9c7f0862872f32d31ee01b5798c2e62fc6ef00b49d28bd2",
+   "sha256": "47ad3045003e665fa9c7f0862872f32d31ee01b5798c2e62fc6ef00b49d28bd2",
+   "modified": false,
+   "source": "renderer"
+  },
+  "renderer/src/voxchars/mimo.py": {
+   "original_sha256": "4b849a5d787d3b250a83a1c34caa67a535cd8679ea4192f874e6d13b70dc97ce",
+   "sha256": "4b849a5d787d3b250a83a1c34caa67a535cd8679ea4192f874e6d13b70dc97ce",
+   "modified": false,
+   "source": "renderer"
+  },
+  "renderer/src/voxchars/opus.py": {
+   "original_sha256": "70e24cc255b25000f3db975e6c5faae1b1ad22a8980f4ed27b933b63d073f5fa",
+   "sha256": "70e24cc255b25000f3db975e6c5faae1b1ad22a8980f4ed27b933b63d073f5fa",
+   "modified": false,
+   "source": "renderer"
+  },
+  "renderer/src/voxchars/qwen.py": {
+   "original_sha256": "af24a1858460176c5aa3379270670e0be8e9fbedcfb83cbffccc684fef1bea33",
+   "sha256": "af24a1858460176c5aa3379270670e0be8e9fbedcfb83cbffccc684fef1bea33",
+   "modified": false,
+   "source": "renderer"
+  },
+  "renderer/src/voxchars/sol.py": {
+   "original_sha256": "d3a553ccec03c9d2b920369f3f098579167adc33ffb391d9b8ef77211a96e1b7",
+   "sha256": "d3a553ccec03c9d2b920369f3f098579167adc33ffb391d9b8ef77211a96e1b7",
+   "modified": false,
+   "source": "renderer"
+  },
+  "renderer/src/voxkit.py": {
+   "original_sha256": "924a02aa7db039a44769ab0808d7713634608fb408c6e632ff1519e9e1edfff5",
+   "sha256": "924a02aa7db039a44769ab0808d7713634608fb408c6e632ff1519e9e1edfff5",
+   "modified": false,
+   "source": "renderer"
+  },
+  "renderer/src/voxpreview.py": {
+   "original_sha256": "69bf4bad8e70d030dc158d5bba87571eec3c275cf764644524ce2a44b606c71c",
+   "sha256": "69bf4bad8e70d030dc158d5bba87571eec3c275cf764644524ce2a44b606c71c",
+   "modified": false,
+   "source": "renderer"
+  },
+  "renderer/src/voxsheet.py": {
+   "original_sha256": "1c5a16287ad0318f0bf4519e7ae1975ce4070ae71188be94ec039b81de91a049",
+   "sha256": "5a30cb0adc62ffa67e09ad1d548b2db06e0c087238573d6df114e1d512124773",
+   "modified": true,
+   "source": "renderer",
+   "note": "内部绝对路径改成相对仓库的默认值和环境变量（DART_*），见 renderer/README.md"
+  }
+ }
+}

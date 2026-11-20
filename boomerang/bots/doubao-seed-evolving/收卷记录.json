@@ -1,0 +1,16 @@
+{
+  "time": 1794857422.3739972,
+  "why": "进程已退出（自己交卷或被中断，要看日志）",
+  "files": {
+    "player.cpp": {
+      "sha256": "c818cccccffce6755ed3481614ee2119ca7a0da57e5c7facff64d8ac451a4b50",
+      "bytes": 32611,
+      "mtime": 1794857309.6831641
+    },
+    "notes.md": {
+      "sha256": "ae461cdcdd05e6fdf25ba5c44a9565e330f7145432f9bd21bff8e05b725b74a6",
+      "bytes": 5897,
+      "mtime": 1794857265.5149634
+    }
+  }
+}

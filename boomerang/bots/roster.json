@@ -1,0 +1,145 @@
+{
+ "official": [
+  {
+   "seat": "astra",
+   "sealed_dir": "astra62",
+   "dir": "bots/gpt-6.2-astra"
+  },
+  {
+   "seat": "sol",
+   "sealed_dir": "sol62",
+   "dir": "bots/gpt-6.2-sol"
+  },
+  {
+   "seat": "fable",
+   "sealed_dir": "fable",
+   "dir": "bots/claude-fable-5.2"
+  },
+  {
+   "seat": "opus",
+   "sealed_dir": "opus",
+   "dir": "bots/claude-opus-5.5"
+  },
+  {
+   "seat": "carbon",
+   "sealed_dir": "gemini_carbon",
+   "dir": "bots/gemini-4-carbon"
+  },
+  {
+   "seat": "hydrogen",
+   "sealed_dir": "gemini_hydrogen",
+   "dir": "bots/gemini-4-hydrogen"
+  },
+  {
+   "seat": "grok",
+   "sealed_dir": "grok",
+   "dir": "bots/grok-4.7"
+  },
+  {
+   "seat": "glm",
+   "sealed_dir": "glm",
+   "dir": "bots/glm-5.3"
+  },
+  {
+   "seat": "deepseek",
+   "sealed_dir": "deepseek_dsh",
+   "dir": "bots/deepseek-v4.1-flash"
+  },
+  {
+   "seat": "kimi",
+   "sealed_dir": "kimi2",
+   "dir": "bots/kimi-k3.1-pro"
+  },
+  {
+   "seat": "qwen",
+   "sealed_dir": "qwen",
+   "dir": "bots/qwen4-max"
+  },
+  {
+   "seat": "mimo",
+   "sealed_dir": "mimo",
+   "dir": "bots/mimo-v2.6-pro"
+  },
+  {
+   "seat": "doubao",
+   "sealed_dir": "doubao",
+   "dir": "bots/doubao-seed-evolving"
+  }
+ ],
+ "appendix": [
+  {
+   "seat": "astra",
+   "sealed_dir": "astra",
+   "dir": "appendix/bots/gpt-6.2-astra-grey",
+   "group": "grey"
+  },
+  {
+   "seat": "sol",
+   "sealed_dir": "sol",
+   "dir": "appendix/bots/gpt-sol-grey-desktop",
+   "group": "grey"
+  },
+  {
+   "seat": "astra6",
+   "sealed_dir": "astra6",
+   "dir": "appendix/bots/gpt-6-astra",
+   "group": "control"
+  },
+  {
+   "seat": "sol61",
+   "sealed_dir": "sol61",
+   "dir": "appendix/bots/gpt-6.1-sol",
+   "group": "control"
+  },
+  {
+   "seat": "terra",
+   "sealed_dir": "terra",
+   "dir": "appendix/bots/gpt-6.1-terra",
+   "group": "control"
+  },
+  {
+   "seat": "luna",
+   "sealed_dir": "luna",
+   "dir": "appendix/bots/gpt-6-luna",
+   "group": "control"
+  },
+  {
+   "seat": "sonnet",
+   "sealed_dir": "sonnet",
+   "dir": "appendix/bots/claude-sonnet-5.5",
+   "group": "control"
+  },
+  {
+   "seat": "haiku",
+   "sealed_dir": "haiku",
+   "dir": "appendix/bots/claude-haiku-5.5",
+   "group": "control"
+  },
+  {
+   "seat": "deepseek",
+   "sealed_dir": "deepseek",
+   "dir": "appendix/bots/deepseek-v4.1-flash-opencode",
+   "group": "replaced"
+  },
+  {
+   "seat": "kimi",
+   "sealed_dir": "kimi",
+   "dir": "appendix/bots/kimi-k3.1-pro-opencode",
+   "group": "replaced"
+  }
+ ],
+ "early": [
+  "deepseek_dsh_中断时_48分钟",
+  "deepseek_dsh_中断时_49分钟",
+  "deepseek_dsh_中断时_51分钟",
+  "deepseek_dsh_第一次交卷_35分钟",
+  "deepseek_第一次交卷_42分钟",
+  "doubao_中断时_48分钟",
+  "glm_中断时_15分钟",
+  "glm_中断时_46分钟",
+  "haiku_第一次交卷_34分钟",
+  "kimi2_中断时_55分钟",
+  "kimi_中断时_54分钟",
+  "mimo_第一次交卷_51分钟"
+ ]
+}
