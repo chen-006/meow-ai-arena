@@ -123,7 +123,7 @@ python match.py play ../bots/gpt-6.2-astra/player.cpp mid --map ../tournament/hi
 
 ## 视频
 
-B 站：<B站链接>
+B 站：https://www.bilibili.com/video/BV1Y6ypzJEmo
 
 ## 声明和许可
 

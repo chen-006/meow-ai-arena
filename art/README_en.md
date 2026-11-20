@@ -4,7 +4,7 @@
 
 From episode 10 (*Armchair Generals*, 纸上谈兵) on, the characters that stand for each AI in the videos use this new set of designs. This folder holds the delivery-version illustrations, the cut-out expressions, the prompts and model parameters actually used for the final images, and the scripts that generate, tidy and slice them. Like the rest of the repository it is released under the [MIT license](../LICENSE).
 
-**Credit**: Character design: 小叶子XIYZ (Bilibili); art and production: 喵了个猫了个咪了个猫. The new designs are based on 小叶子XIYZ's designs and were made by the show. Please include these two lines and a link to this repository when you use them.
+**Credit**: Character design reference: 小叶子XIYZ (Bilibili); art and production: 喵了个猫了个咪了个猫. The new designs are based on 小叶子XIYZ's designs and were made by the show. Please include these two lines and a link to this repository when you use them.
 
 Model and company names in character names belong to their owners and only indicate which model a character stands for; they do not imply endorsement by or involvement of those companies.
 
@@ -13,7 +13,7 @@ Model and company names in character names belong to their owners and only indic
 | Path | Contents |
 |---|---|
 | [portraits/](portraits/) | 22 illustrations (delivery version): 1672×941 transparent PNGs, figure 927 px tall and centred horizontally, ready to drop into a 16:9 frame |
-| [expressions/<character>/](expressions/) | Expressions for 13 characters: 12 transparent 1024×1024 busts each (cut flat at the chest, which sits on the bottom edge), plus 512×512 square and round avatars `头像_方.png` and `头像_圆.png`; [预览_总览.jpg](expressions/预览_总览.jpg) is an overview |
+| [expressions/<character>/](expressions/) | Expressions for 13 characters: 12 transparent 768×768 busts each (cut flat at the chest, which sits on the bottom edge), plus 512×512 square and round avatars `头像_方.png` and `头像_圆.png`; [预览_总览.jpg](expressions/预览_总览.jpg) is an overview |
 | [prompts/portraits/](prompts/portraits/) | Illustration prompts, verbatim |
 | [prompts/expressions/](prompts/expressions/) | Expression-sheet prompts, verbatim; `军需官_表情名.json` holds the Quartermaster's own 12 expression names |
 | [prompts/jobs_portraits.txt](prompts/jobs_portraits.txt), [jobs_expressions.txt](prompts/jobs_expressions.txt) | The job lists of the runs that produced the final images: one line per image, `name\|prompt file\|reference images,…\|size` |

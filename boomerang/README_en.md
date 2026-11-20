@@ -120,7 +120,7 @@ Character art is in [art/v2/](../art/v2/README.md); this episode's voxel charact
 
 ## Video
 
-Bilibili: <B站链接>
+Bilibili: https://www.bilibili.com/video/BV1Y6ypzJEmo
 
 ## Disclaimer and licence
 
