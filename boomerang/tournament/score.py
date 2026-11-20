@@ -47,6 +47,16 @@ def observations(rows, names=NAMES):
     return obs
 
 
+def _same_score_value(a, b):
+    if isinstance(a, list):
+        return isinstance(b, list) and len(a) == len(b) and all(
+            _same_score_value(x, y) for x, y in zip(a, b)
+        )
+    if isinstance(a, float):
+        return abs(a - b) < 1e-9
+    return a == b
+
+
 def main():
     quick = '--quick' in sys.argv
     sys.stdout.reconfigure(encoding='utf-8')
@@ -67,8 +77,7 @@ def main():
     for n in NAMES:
         for k in keys:
             a, b = res['players'][n][k], off['players'][n][k]
-            same = a == b if not isinstance(a, float) else abs(a - b) < 1e-9
-            if not same:
+            if not _same_score_value(a, b):
                 bad.append(f'{n}.{k}: 重算 {a} / 成绩表 {b}')
     if not quick:
         for g1, g2 in zip(res['gaps'], off['gaps']):
