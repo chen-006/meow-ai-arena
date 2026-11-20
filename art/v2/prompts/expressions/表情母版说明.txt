@@ -1,0 +1,21 @@
+EXPRESSION SHEET (character expression variants for an anime game character)
+
+Draw the SAME character as described in the character design below, as a 4 columns x 3 rows grid of 12 head-and-shoulders portraits (from the top of the hair ornament down to mid-chest), each portrait centered in its own cell, all cells the same size, generous empty space between cells, plain flat light gray background (#F0F0F2) everywhere, no borders, no text, no numbers, no speech bubbles.
+
+Every cell: exactly the same character, same face shape, same hair color and hairstyle, same brand-logo hair ornament (shown once, same size), same outfit collar, same art style and rendering quality as the full-body illustration; facing the viewer or turned slightly; only the facial expression and a small gesture change. Hands, if visible, never cover the face. Keep it cute and wholesome.
+
+Cells in reading order (left to right, top row first):
+1. Neutral: calm default expression, gentle closed-mouth smile.
+2. Happy: big bright open smile, eyes sparkling.
+3. Smug: confident smirk, one eyebrow raised, chin slightly up.
+4. Angry: puffed cheeks, frowning eyebrows, small anger vein mark beside the head.
+5. Sad: teary eyes, trembling mouth, small tear drops.
+6. Shocked: wide eyes, small pupils, mouth open, little shock lines around the head.
+7. Speechless: flat unamused half-lidded eyes, straight-line mouth, single sweat drop.
+8. Thinking: eyes looking up to one side, one finger touching the chin (finger below the lips, not covering the face).
+9. Drooling: dreamy longing eyes, a small drool drop at the corner of the mouth, imagining something delicious.
+10. Metal basin: a shiny metal wash basin has just landed on top of her head with a comical "clang" motion lines, dizzy swirl eyes.
+11. Awkward laugh: forced awkward smile, sweat drops, scratching the cheek lightly beside the face (not covering it).
+12. Sleepy: drowsy half-closed eyes, small yawn, a tiny "z" floating beside the head.
+
+CHARACTER DESIGN (appearance reference; ignore any pose, full-body framing and background instructions in it — use only how she looks):

@@ -1,0 +1,9 @@
+{
+ "astra": "主办方固定配置：模型 gpt-6.2-astra，思考档位 max。",
+ "sol": "主办方固定配置：模型 gpt-6.2-sol，思考档位 max。",
+ "fable": "主办方固定配置：模型 claude-fable-5-2，思考档位 max。",
+ "opus": "主办方固定配置：模型 claude-opus-5-5，思考档位 max。",
+ "deepseek": "主办方固定配置：模型 deepseek/deepseek-flash，思考档位 max。",
+ "kimi": "主办方固定配置：模型 moonshotai-cn/kimi-k3.1-pro，思考档位 max。",
+ "deepseek_dsh": "主办方固定配置：模型 deepseek/deepseek-flash，思考档位 max。"
+}

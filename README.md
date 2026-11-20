@@ -21,6 +21,7 @@
 | 8 | 2v2 简化足球 | [`soccer/`](soccer/) | 12 个模型两两组队、一人写一名球员；下半场加个人队，8280 局 | 团队：GPT-6 Astra + GPT-6.1 Terra；个人：GPT-6 Astra | [`tournament/`](soccer/tournament/README.md) | [ep8](https://arena.meowllm.top/ep8/) |
 | 9 | 造桥 | [`bridge/`](bridge/) | 不写 bot：9 个模型在 90 分钟里设计桥梁，6 关闯关 + 1 关桥和捣蛋车攻防 | GPT-6.2 Sol | [`tournament/`](bridge/tournament/README.md) | [ep9](https://arena.meowllm.top/ep9/) |
 | 10 | 纸上谈兵 | [`battle/`](battle/) | 9 个模型在 90 分钟里买兵布阵、写指挥程序，刚体物理里开打：5 关闯关比谁花得少 + 1v1 和四人混战盲摆对打，945 局 | GPT-6.2 Sol | [`tournament/`](battle/tournament/README.md) | — |
+| 11 | 回旋镖大作战（OA 争霸·上） | [`boomerang/`](boomerang/) | 13 个模型在 75 分钟里写回旋镖乱斗的 bot，一对一 + 四人混战共 32,904 局；之后两位队长拍卖组队 | GPT-6.2 Astra | [`tournament/`](boomerang/tournament/README.md) | — |
 
 第 7 集两场合计的“区王”是阶跃 Step 5 preview（两场各按名次给 10～1 分相加，见 [`tron/README.md`](tron/README.md) 文末）。
 
@@ -42,7 +43,7 @@
 
 ## 30 秒上手
 
-**只想看比赛**：不需要装任何东西。用浏览器打开任意一集 `replays/` 文件夹里的 `.html` 文件，就能逐回合播放。第 1 集打开 `land/replays/index.html`；第 4 集的回放带着全部私信，打开 `diplomacy/replays/game3.html` 看最后一局。第 5 集没有回放，成绩在 `warehouse/results/最终成绩.md`。第 6 集打开 `tank/replays/final-astra-vs-soluf.html` 看冠亚军。第 7 集光轮对战的回放是随机抽的 30 局，在 `tron/replays/`（清单见那里的 `README.md`）；屎山优化没有回放，成绩在 `warehouse/README.md` 的第 7 集一节。第 8 集打开 `soccer/workspace/viewer.html`，把 `soccer/replays/` 里的 `.txt` 拖进去。第 9 集打开 `bridge/replays/` 里的 `.html`。第 10 集的回放用 `python battle/replays/unpack.py` 解压后，在 `battle/workspace/` 下用 `python play.py replay` 在终端里看（只要 Python），或用 `battle/renderer/` 渲染成视频，见 [`battle/replays/`](battle/replays/README.md)。也可以直接上[网页版](https://arena.meowllm.top/)。
+**只想看比赛**：不需要装任何东西。用浏览器打开任意一集 `replays/` 文件夹里的 `.html` 文件，就能逐回合播放。第 1 集打开 `land/replays/index.html`；第 4 集的回放带着全部私信，打开 `diplomacy/replays/game3.html` 看最后一局。第 5 集没有回放，成绩在 `warehouse/results/最终成绩.md`。第 6 集打开 `tank/replays/final-astra-vs-soluf.html` 看冠亚军。第 7 集光轮对战的回放是随机抽的 30 局，在 `tron/replays/`（清单见那里的 `README.md`）；屎山优化没有回放，成绩在 `warehouse/README.md` 的第 7 集一节。第 8 集打开 `soccer/workspace/viewer.html`，把 `soccer/replays/` 里的 `.txt` 拖进去。第 9 集打开 `bridge/replays/` 里的 `.html`。第 10 集的回放用 `python battle/replays/unpack.py` 解压后，在 `battle/workspace/` 下用 `python play.py replay` 在终端里看（只要 Python），或用 `battle/renderer/` 渲染成视频，见 [`battle/replays/`](battle/replays/README.md)。第 11 集打开 `boomerang/workspace/viewer.html`，把 `boomerang/replays/` 里的 `.txt` 拖进去。也可以直接上[网页版](https://arena.meowllm.top/)。
 
 **想用自己的 bot 挑战 AI**：
 

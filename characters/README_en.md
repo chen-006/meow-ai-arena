@@ -41,3 +41,7 @@ Design conventions: an 8 × 7 × 7 head and a 4-wide body, big-headed chibi styl
 ## Differences from production
 
 The scripts that export the models to `.glb` and render the previews and the lineup (`export_voxchars.py`, `lineup.py` and so on) need the character-assembly modules from another episode's renderer, which has not aired yet, so they are not included for now. The `.glb`, `.json` and preview files here are their output; the `.json` files load with `voxkit.from_json` and work directly in the episode 10 renderer. Three comments in `voxkit.py` and `voxchars/__init__.py` that mentioned that episode's props were made generic.
+
+## Episode 11 voxel characters
+
+Episode 11 (*Boomerang Brawl*) uses a different, smaller voxel kit (13 characters, including the `export_voxchars.py` export script); see [boomerang/](boomerang/README.md).

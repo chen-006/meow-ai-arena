@@ -103,3 +103,7 @@ The scripts read and write under the current directory; output folders can be ch
 - The expression prompt builder was called `build_prompts_v3.py` and is `build_prompts.py` here (the first-round version is not included); `slice.py` gained one feature: if `expr/<character>_表情名.json` exists, its names are used (in production the Quartermaster's names were swapped in by hand).
 - The job lists merge the job lines of the runs that produced the final images; reference-image paths are kept as they were.
 - Drafts, the older white-dress version, rejects, master originals, call logs and cost tallies are not included.
+
+## v2 character art (episode 11 on)
+
+From episode 11 (*Boomerang Brawl*) on, ten characters (all except GPT's Astra and Sol, and Doubao) use the redesigned "v2" art: portraits, small versions, expression sheets and prompts are in [v2/](v2/README.md) (documentation in Chinese). The episode-10 set in this folder is unchanged.

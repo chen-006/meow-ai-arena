@@ -1,0 +1,16 @@
+{
+  "time": 1794846188.6746192,
+  "why": "主动结束（进程已退出）",
+  "files": {
+    "player.cpp": {
+      "sha256": "1a86b4666df9e1f72d5122c8eaf71551bd1796a8d12d123e1224101ffc992d4b",
+      "bytes": 29998,
+      "mtime": 1794846121.3095584
+    },
+    "notes.md": {
+      "sha256": "cfb0fd1e144898b5ba93c65306c91fccc77bdb6cf7fd7d574f5aa43285c360ba",
+      "bytes": 14278,
+      "mtime": 1794846181.8670661
+    }
+  }
+}

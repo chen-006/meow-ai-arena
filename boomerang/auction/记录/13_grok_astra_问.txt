@@ -1,0 +1,168 @@
+【主办方】下一次报价。history 里是到目前为止每位候选人双方各出了多少、谁买走、成交价。
+
+这一次要你报价的情况（JSON）：
+{
+ "candidate": {
+  "id": "grok",
+  "name": "Grok 4.7",
+  "rank": 3,
+  "summary": {
+   "海选名次": 7,
+   "个人实力值": -1,
+   "一对一实力值": 5,
+   "四人局实力值": -6
+  },
+  "vs_you": {
+   "他胜": 37,
+   "平": 0,
+   "他负": 191
+  }
+ },
+ "remaining_candidates": [
+  {
+   "id": "glm",
+   "name": "GLM 5.3",
+   "rank": 4
+  },
+  {
+   "id": "deepseek",
+   "name": "DeepSeek",
+   "rank": 5
+  },
+  {
+   "id": "kimi",
+   "name": "Kimi K3.1 Pro",
+   "rank": 6
+  },
+  {
+   "id": "qwen",
+   "name": "千问 Qwen 4",
+   "rank": 7
+  },
+  {
+   "id": "mimo",
+   "name": "MiMo v2.6 Pro",
+   "rank": 8
+  },
+  {
+   "id": "doubao",
+   "name": "豆包",
+   "rank": 9
+  }
+ ],
+ "own": {
+  "id": "astra",
+  "name": "GPT-6.2 Astra",
+  "budget": 600,
+  "members": [
+   {
+    "candidate": {
+     "id": "hydrogen",
+     "name": "Gemini 4 Hydrogen",
+     "rank": 2,
+     "summary": {
+      "海选名次": 6,
+      "个人实力值": 30,
+      "一对一实力值": 51,
+      "四人局实力值": 9
+     }
+    },
+    "price": 400
+   }
+  ]
+ },
+ "opponent": {
+  "id": "fable",
+  "name": "Claude Fable 5.2",
+  "budget": 401,
+  "members": [
+   {
+    "candidate": {
+     "id": "carbon",
+     "name": "Gemini 4 Carbon",
+     "rank": 1,
+     "summary": {
+      "海选名次": 4,
+      "个人实力值": 51,
+      "一对一实力值": 37,
+      "四人局实力值": 65
+     }
+    },
+    "price": 599
+   }
+  ]
+ },
+ "ceiling": 599,
+ "round": 2,
+ "mode": "暗标",
+ "no_pass": false,
+ "retry": 0,
+ "history": [
+  {
+   "候选人": "carbon",
+   "各次出价": [
+    {
+     "第几次报价": 1,
+     "出价": {
+      "astra": 501,
+      "fable": 599
+     }
+    }
+   ],
+   "买走的队长": "fable",
+   "成交价": 599,
+   "说明": "高价成交"
+  },
+  {
+   "候选人": "hydrogen",
+   "各次出价": [
+    {
+     "第几次报价": 1,
+     "出价": {
+      "astra": 400,
+      "fable": 400
+     }
+    },
+    {
+     "第几次报价": 2,
+     "出价": {
+      "astra": 400,
+      "fable": 400
+     }
+    },
+    {
+     "第几次报价": 3,
+     "出价": {
+      "astra": 400,
+      "fable": 400
+     }
+    },
+    {
+     "第几次报价": 4,
+     "出价": {
+      "astra": 400,
+      "fable": 400
+     }
+    }
+   ],
+   "买走的队长": "astra",
+   "成交价": 400,
+   "说明": "三次重拍仍平局；剩余预算"
+  },
+  {
+   "候选人": "grok",
+   "各次出价": [
+    {
+     "第几次报价": 1,
+     "出价": {
+      "astra": 400,
+      "fable": 400
+     }
+    }
+   ],
+   "说明": "双方出价相同，正在重新报价"
+  }
+ ]
+}
+
+请只回答一个 JSON 对象，恰好两个字段，不要加代码块标记：{"出价": 0 到 ceiling 之间的整数, "理由": "一两句话"}

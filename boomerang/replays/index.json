@@ -1,0 +1,2732 @@
+[
+ {
+  "id": 428,
+  "mode": 0,
+  "map": "stonecircle",
+  "seed": 11006,
+  "names": [
+   "astra",
+   "fable"
+  ],
+  "steps": 278,
+  "reason": "ko",
+  "winner": [
+   "astra"
+  ],
+  "ranks": [
+   1,
+   2
+  ],
+  "same_as_official": true,
+  "faults": 0,
+  "no": 1
+ },
+ {
+  "id": 17237,
+  "mode": 0,
+  "map": "ruins",
+  "seed": 11012,
+  "names": [
+   "mimo",
+   "glm"
+  ],
+  "steps": 154,
+  "reason": "ko",
+  "winner": [
+   "glm"
+  ],
+  "ranks": [
+   2,
+   1
+  ],
+  "same_as_official": false,
+  "faults": 0,
+  "no": 2
+ },
+ {
+  "id": 23457,
+  "mode": 1,
+  "map": "yinyang",
+  "seed": 2558,
+  "names": [
+   "kimi",
+   "doubao",
+   "sol",
+   "hydrogen"
+  ],
+  "steps": 61,
+  "reason": "ko",
+  "winner": [
+   "sol"
+  ],
+  "ranks": [
+   4,
+   3,
+   1,
+   2
+  ],
+  "same_as_official": false,
+  "faults": 0,
+  "no": 3
+ },
+ {
+  "id": 16601,
+  "mode": 0,
+  "map": "skybridge",
+  "seed": 11017,
+  "names": [
+   "glm",
+   "qwen"
+  ],
+  "steps": 59,
+  "reason": "ko",
+  "winner": [
+   "glm"
+  ],
+  "ranks": [
+   1,
+   2
+  ],
+  "same_as_official": false,
+  "faults": 0,
+  "no": 4
+ },
+ {
+  "id": 16283,
+  "mode": 0,
+  "map": "icefloes",
+  "seed": 11010,
+  "names": [
+   "doubao",
+   "kimi"
+  ],
+  "steps": 9,
+  "reason": "ko",
+  "winner": [
+   "kimi"
+  ],
+  "ranks": [
+   2,
+   1
+  ],
+  "same_as_official": true,
+  "faults": 0,
+  "no": 5
+ },
+ {
+  "id": 19360,
+  "mode": 1,
+  "map": "yinyang",
+  "seed": 2444,
+  "names": [
+   "deepseek",
+   "sol",
+   "mimo",
+   "glm"
+  ],
+  "steps": 108,
+  "reason": "ko",
+  "winner": [
+   "sol"
+  ],
+  "ranks": [
+   2,
+   1,
+   3,
+   4
+  ],
+  "same_as_official": false,
+  "faults": 0,
+  "no": 6
+ },
+ {
+  "id": 14140,
+  "mode": 0,
+  "map": "twinlakes",
+  "seed": 11003,
+  "names": [
+   "grok",
+   "doubao"
+  ],
+  "steps": 68,
+  "reason": "ko",
+  "winner": [
+   "grok"
+  ],
+  "ranks": [
+   1,
+   2
+  ],
+  "same_as_official": true,
+  "faults": 0,
+  "no": 7
+ },
+ {
+  "id": 10142,
+  "mode": 0,
+  "map": "icefloes",
+  "seed": 11018,
+  "names": [
+   "carbon",
+   "deepseek"
+  ],
+  "steps": 54,
+  "reason": "ko",
+  "winner": [
+   "deepseek"
+  ],
+  "ranks": [
+   2,
+   1
+  ],
+  "same_as_official": true,
+  "faults": 0,
+  "no": 8
+ },
+ {
+  "id": 27851,
+  "mode": 1,
+  "map": "ruins",
+  "seed": 2680,
+  "names": [
+   "sol",
+   "doubao",
+   "grok",
+   "kimi"
+  ],
+  "steps": 264,
+  "reason": "ko",
+  "winner": [
+   "grok"
+  ],
+  "ranks": [
+   4,
+   2,
+   1,
+   3
+  ],
+  "same_as_official": false,
+  "faults": 0,
+  "no": 9
+ },
+ {
+  "id": 6812,
+  "mode": 0,
+  "map": "stonecircle",
+  "seed": 11006,
+  "names": [
+   "fable",
+   "qwen"
+  ],
+  "steps": 82,
+  "reason": "ko",
+  "winner": [
+   "fable"
+  ],
+  "ranks": [
+   1,
+   2
+  ],
+  "same_as_official": false,
+  "faults": 0,
+  "no": 10
+ },
+ {
+  "id": 1050,
+  "mode": 0,
+  "map": "ruins",
+  "seed": 11013,
+  "names": [
+   "astra",
+   "hydrogen"
+  ],
+  "steps": 180,
+  "reason": "ko",
+  "winner": [
+   "astra"
+  ],
+  "ranks": [
+   1,
+   2
+  ],
+  "same_as_official": false,
+  "faults": 0,
+  "no": 11
+ },
+ {
+  "id": 27297,
+  "mode": 1,
+  "map": "twinlakes",
+  "seed": 2665,
+  "names": [
+   "kimi",
+   "mimo",
+   "sol",
+   "deepseek"
+  ],
+  "steps": 52,
+  "reason": "ko",
+  "winner": [
+   "kimi"
+  ],
+  "ranks": [
+   1,
+   3,
+   4,
+   2
+  ],
+  "same_as_official": true,
+  "faults": 0,
+  "no": 12
+ },
+ {
+  "id": 742,
+  "mode": 0,
+  "map": "yinyang",
+  "seed": 11011,
+  "names": [
+   "astra",
+   "carbon"
+  ],
+  "steps": 62,
+  "reason": "ko",
+  "winner": [
+   "astra"
+  ],
+  "ranks": [
+   1,
+   2
+  ],
+  "same_as_official": true,
+  "faults": 0,
+  "no": 13
+ },
+ {
+  "id": 4339,
+  "mode": 0,
+  "map": "twinlakes",
+  "seed": 11004,
+  "names": [
+   "qwen",
+   "sol"
+  ],
+  "steps": 42,
+  "reason": "ko",
+  "winner": [
+   "sol"
+  ],
+  "ranks": [
+   2,
+   1
+  ],
+  "same_as_official": true,
+  "faults": 0,
+  "no": 14
+ },
+ {
+  "id": 27172,
+  "mode": 1,
+  "map": "icefloes",
+  "seed": 2661,
+  "names": [
+   "astra",
+   "mimo",
+   "deepseek",
+   "grok"
+  ],
+  "steps": 165,
+  "reason": "ko",
+  "winner": [
+   "astra"
+  ],
+  "ranks": [
+   1,
+   3,
+   2,
+   4
+  ],
+  "same_as_official": false,
+  "faults": 0,
+  "no": 15
+ },
+ {
+  "id": 11330,
+  "mode": 0,
+  "map": "skybridge",
+  "seed": 11004,
+  "names": [
+   "carbon",
+   "doubao"
+  ],
+  "steps": 60,
+  "reason": "ko",
+  "winner": [
+   "carbon"
+  ],
+  "ranks": [
+   1,
+   2
+  ],
+  "same_as_official": true,
+  "faults": 0,
+  "no": 16
+ },
+ {
+  "id": 14828,
+  "mode": 0,
+  "map": "twinlakes",
+  "seed": 11005,
+  "names": [
+   "deepseek",
+   "glm"
+  ],
+  "steps": 61,
+  "reason": "ko",
+  "winner": [
+   "glm"
+  ],
+  "ranks": [
+   2,
+   1
+  ],
+  "same_as_official": true,
+  "faults": 0,
+  "no": 17
+ },
+ {
+  "id": 28121,
+  "mode": 1,
+  "map": "stonecircle",
+  "seed": 2688,
+  "names": [
+   "astra",
+   "fable",
+   "opus",
+   "grok"
+  ],
+  "steps": 361,
+  "reason": "ko",
+  "winner": [
+   "astra"
+  ],
+  "ranks": [
+   1,
+   3,
+   2,
+   4
+  ],
+  "same_as_official": false,
+  "faults": 0,
+  "no": 18
+ },
+ {
+  "id": 10999,
+  "mode": 0,
+  "map": "yinyang",
+  "seed": 11009,
+  "names": [
+   "mimo",
+   "carbon"
+  ],
+  "steps": 100,
+  "reason": "ko",
+  "winner": [
+   "carbon"
+  ],
+  "ranks": [
+   2,
+   1
+  ],
+  "same_as_official": true,
+  "faults": 0,
+  "no": 19
+ },
+ {
+  "id": 1295,
+  "mode": 0,
+  "map": "skybridge",
+  "seed": 11002,
+  "names": [
+   "grok",
+   "astra"
+  ],
+  "steps": 93,
+  "reason": "ko",
+  "winner": [
+   "astra"
+  ],
+  "ranks": [
+   2,
+   1
+  ],
+  "same_as_official": false,
+  "faults": 0,
+  "no": 20
+ },
+ {
+  "id": 30984,
+  "mode": 1,
+  "map": "twinlakes",
+  "seed": 2767,
+  "names": [
+   "glm",
+   "sol",
+   "kimi",
+   "opus"
+  ],
+  "steps": 104,
+  "reason": "ko",
+  "winner": [
+   "sol"
+  ],
+  "ranks": [
+   4,
+   1,
+   2,
+   3
+  ],
+  "same_as_official": true,
+  "faults": 0,
+  "no": 21
+ },
+ {
+  "id": 5652,
+  "mode": 0,
+  "map": "skybridge",
+  "seed": 11015,
+  "names": [
+   "fable",
+   "carbon"
+  ],
+  "steps": 55,
+  "reason": "ko",
+  "winner": [
+   "fable"
+  ],
+  "ranks": [
+   1,
+   2
+  ],
+  "same_as_official": true,
+  "faults": 0,
+  "no": 22
+ },
+ {
+  "id": 3721,
+  "mode": 0,
+  "map": "yinyang",
+  "seed": 11018,
+  "names": [
+   "grok",
+   "sol"
+  ],
+  "steps": 73,
+  "reason": "ko",
+  "winner": [
+   "sol"
+  ],
+  "ranks": [
+   2,
+   1
+  ],
+  "same_as_official": true,
+  "faults": 0,
+  "no": 23
+ },
+ {
+  "id": 19067,
+  "mode": 1,
+  "map": "stonecircle",
+  "seed": 2436,
+  "names": [
+   "fable",
+   "hydrogen",
+   "qwen",
+   "deepseek"
+  ],
+  "steps": 116,
+  "reason": "ko",
+  "winner": [
+   "fable"
+  ],
+  "ranks": [
+   1,
+   2,
+   4,
+   3
+  ],
+  "same_as_official": false,
+  "faults": 0,
+  "no": 24
+ },
+ {
+  "id": 7570,
+  "mode": 0,
+  "map": "yinyang",
+  "seed": 11005,
+  "names": [
+   "opus",
+   "carbon"
+  ],
+  "steps": 49,
+  "reason": "ko",
+  "winner": [
+   "carbon"
+  ],
+  "ranks": [
+   2,
+   1
+  ],
+  "same_as_official": true,
+  "faults": 0,
+  "no": 25
+ },
+ {
+  "id": 4038,
+  "mode": 0,
+  "map": "skybridge",
+  "seed": 11006,
+  "names": [
+   "sol",
+   "deepseek"
+  ],
+  "steps": 86,
+  "reason": "ko",
+  "winner": [
+   "sol"
+  ],
+  "ranks": [
+   1,
+   2
+  ],
+  "same_as_official": true,
+  "faults": 0,
+  "no": 26
+ },
+ {
+  "id": 26196,
+  "mode": 1,
+  "map": "stonecircle",
+  "seed": 2634,
+  "names": [
+   "fable",
+   "grok",
+   "opus",
+   "hydrogen"
+  ],
+  "steps": 341,
+  "reason": "ko",
+  "winner": [
+   "fable"
+  ],
+  "ranks": [
+   1,
+   4,
+   3,
+   2
+  ],
+  "same_as_official": false,
+  "faults": 0,
+  "no": 27
+ },
+ {
+  "id": 15748,
+  "mode": 0,
+  "map": "twinlakes",
+  "seed": 11009,
+  "names": [
+   "kimi",
+   "glm"
+  ],
+  "steps": 86,
+  "reason": "ko",
+  "winner": [
+   "glm"
+  ],
+  "ranks": [
+   2,
+   1
+  ],
+  "same_as_official": false,
+  "faults": 0,
+  "no": 28
+ },
+ {
+  "id": 5893,
+  "mode": 0,
+  "map": "stonecircle",
+  "seed": 11002,
+  "names": [
+   "hydrogen",
+   "fable"
+  ],
+  "steps": 61,
+  "reason": "ko",
+  "winner": [
+   "fable"
+  ],
+  "ranks": [
+   2,
+   1
+  ],
+  "same_as_official": true,
+  "faults": 0,
+  "no": 29
+ },
+ {
+  "id": 19794,
+  "mode": 1,
+  "map": "yinyang",
+  "seed": 2456,
+  "names": [
+   "sol",
+   "carbon",
+   "deepseek",
+   "glm"
+  ],
+  "steps": 216,
+  "reason": "ko",
+  "winner": [
+   "carbon"
+  ],
+  "ranks": [
+   2,
+   1,
+   3,
+   4
+  ],
+  "same_as_official": false,
+  "faults": 0,
+  "no": 30
+ },
+ {
+  "id": 11873,
+  "mode": 0,
+  "map": "twinlakes",
+  "seed": 11009,
+  "names": [
+   "kimi",
+   "hydrogen"
+  ],
+  "steps": 61,
+  "reason": "ko",
+  "winner": [
+   "hydrogen"
+  ],
+  "ranks": [
+   2,
+   1
+  ],
+  "same_as_official": false,
+  "faults": 0,
+  "no": 31
+ },
+ {
+  "id": 13772,
+  "mode": 0,
+  "map": "icefloes",
+  "seed": 11009,
+  "names": [
+   "grok",
+   "glm"
+  ],
+  "steps": 57,
+  "reason": "ko",
+  "winner": [
+   "glm"
+  ],
+  "ranks": [
+   2,
+   1
+  ],
+  "same_as_official": false,
+  "faults": 0,
+  "no": 32
+ },
+ {
+  "id": 24614,
+  "mode": 1,
+  "map": "ruins",
+  "seed": 2590,
+  "names": [
+   "kimi",
+   "qwen",
+   "astra",
+   "carbon"
+  ],
+  "steps": 251,
+  "reason": "ko",
+  "winner": [
+   "astra"
+  ],
+  "ranks": [
+   2,
+   4,
+   1,
+   3
+  ],
+  "same_as_official": false,
+  "faults": 0,
+  "no": 33
+ },
+ {
+  "id": 11579,
+  "mode": 0,
+  "map": "skybridge",
+  "seed": 11014,
+  "names": [
+   "grok",
+   "hydrogen"
+  ],
+  "steps": 40,
+  "reason": "ko",
+  "winner": [
+   "hydrogen"
+  ],
+  "ranks": [
+   2,
+   1
+  ],
+  "same_as_official": true,
+  "faults": 0,
+  "no": 34
+ },
+ {
+  "id": 8723,
+  "mode": 0,
+  "map": "yinyang",
+  "seed": 11011,
+  "names": [
+   "qwen",
+   "opus"
+  ],
+  "steps": 101,
+  "reason": "ko",
+  "winner": [
+   "opus"
+  ],
+  "ranks": [
+   2,
+   1
+  ],
+  "same_as_official": true,
+  "faults": 0,
+  "no": 35
+ },
+ {
+  "id": 21124,
+  "mode": 1,
+  "map": "icefloes",
+  "seed": 2493,
+  "names": [
+   "glm",
+   "sol",
+   "fable",
+   "astra"
+  ],
+  "steps": 252,
+  "reason": "ko",
+  "winner": [
+   "astra"
+  ],
+  "ranks": [
+   3,
+   4,
+   2,
+   1
+  ],
+  "same_as_official": false,
+  "faults": 0,
+  "no": 36
+ },
+ {
+  "id": 13975,
+  "mode": 0,
+  "map": "yinyang",
+  "seed": 11015,
+  "names": [
+   "mimo",
+   "grok"
+  ],
+  "steps": 332,
+  "reason": "ko",
+  "winner": [
+   "grok"
+  ],
+  "ranks": [
+   2,
+   1
+  ],
+  "same_as_official": false,
+  "faults": 0,
+  "no": 37
+ },
+ {
+  "id": 6559,
+  "mode": 0,
+  "map": "skybridge",
+  "seed": 11012,
+  "names": [
+   "kimi",
+   "fable"
+  ],
+  "steps": 230,
+  "reason": "ko",
+  "winner": [
+   "kimi"
+  ],
+  "ranks": [
+   1,
+   2
+  ],
+  "same_as_official": true,
+  "faults": 0,
+  "no": 38
+ },
+ {
+  "id": 23756,
+  "mode": 1,
+  "map": "ruins",
+  "seed": 2566,
+  "names": [
+   "qwen",
+   "astra",
+   "carbon",
+   "grok"
+  ],
+  "steps": 257,
+  "reason": "ko",
+  "winner": [
+   "carbon"
+  ],
+  "ranks": [
+   3,
+   2,
+   1,
+   4
+  ],
+  "same_as_official": false,
+  "faults": 0,
+  "no": 39
+ },
+ {
+  "id": 12562,
+  "mode": 0,
+  "map": "twinlakes",
+  "seed": 11012,
+  "names": [
+   "hydrogen",
+   "mimo"
+  ],
+  "steps": 146,
+  "reason": "ko",
+  "winner": [
+   "hydrogen"
+  ],
+  "ranks": [
+   1,
+   2
+  ],
+  "same_as_official": false,
+  "faults": 0,
+  "no": 40
+ },
+ {
+  "id": 5376,
+  "mode": 0,
+  "map": "ruins",
+  "seed": 11010,
+  "names": [
+   "fable",
+   "opus"
+  ],
+  "steps": 354,
+  "reason": "ko",
+  "winner": [
+   "fable"
+  ],
+  "ranks": [
+   1,
+   2
+  ],
+  "same_as_official": true,
+  "faults": 0,
+  "no": 41
+ },
+ {
+  "id": 23123,
+  "mode": 1,
+  "map": "skybridge",
+  "seed": 2549,
+  "names": [
+   "qwen",
+   "mimo",
+   "carbon",
+   "deepseek"
+  ],
+  "steps": 162,
+  "reason": "ko",
+  "winner": [
+   "deepseek"
+  ],
+  "ranks": [
+   3,
+   4,
+   2,
+   1
+  ],
+  "same_as_official": false,
+  "faults": 0,
+  "no": 42
+ },
+ {
+  "id": 5158,
+  "mode": 0,
+  "map": "ruins",
+  "seed": 11015,
+  "names": [
+   "sol",
+   "doubao"
+  ],
+  "steps": 91,
+  "reason": "ko",
+  "winner": [
+   "sol"
+  ],
+  "ranks": [
+   1,
+   2
+  ],
+  "same_as_official": true,
+  "faults": 0,
+  "no": 43
+ },
+ {
+  "id": 2456,
+  "mode": 0,
+  "map": "skybridge",
+  "seed": 11013,
+  "names": [
+   "astra",
+   "mimo"
+  ],
+  "steps": 65,
+  "reason": "ko",
+  "winner": [
+   "mimo"
+  ],
+  "ranks": [
+   2,
+   1
+  ],
+  "same_as_official": true,
+  "faults": 0,
+  "no": 44
+ },
+ {
+  "id": 22845,
+  "mode": 1,
+  "map": "icefloes",
+  "seed": 2541,
+  "names": [
+   "fable",
+   "sol",
+   "opus",
+   "hydrogen"
+  ],
+  "steps": 126,
+  "reason": "ko",
+  "winner": [
+   "hydrogen"
+  ],
+  "ranks": [
+   2,
+   3,
+   4,
+   1
+  ],
+  "same_as_official": false,
+  "faults": 0,
+  "no": 45
+ },
+ {
+  "id": 2667,
+  "mode": 0,
+  "map": "skybridge",
+  "seed": 11004,
+  "names": [
+   "doubao",
+   "astra"
+  ],
+  "steps": 62,
+  "reason": "ko",
+  "winner": [
+   "astra"
+  ],
+  "ranks": [
+   2,
+   1
+  ],
+  "same_as_official": true,
+  "faults": 0,
+  "no": 46
+ },
+ {
+  "id": 10389,
+  "mode": 0,
+  "map": "ruins",
+  "seed": 11008,
+  "names": [
+   "kimi",
+   "carbon"
+  ],
+  "steps": 162,
+  "reason": "ko",
+  "winner": [
+   "carbon"
+  ],
+  "ranks": [
+   2,
+   1
+  ],
+  "same_as_official": false,
+  "faults": 0,
+  "no": 47
+ },
+ {
+  "id": 18722,
+  "mode": 1,
+  "map": "icefloes",
+  "seed": 2427,
+  "names": [
+   "mimo",
+   "hydrogen",
+   "fable",
+   "glm"
+  ],
+  "steps": 180,
+  "reason": "ko",
+  "winner": [
+   "glm"
+  ],
+  "ranks": [
+   2,
+   4,
+   3,
+   1
+  ],
+  "same_as_official": false,
+  "faults": 0,
+  "no": 48
+ },
+ {
+  "id": 8582,
+  "mode": 0,
+  "map": "ruins",
+  "seed": 11017,
+  "names": [
+   "opus",
+   "kimi"
+  ],
+  "steps": 137,
+  "reason": "ko",
+  "winner": [
+   "opus"
+  ],
+  "ranks": [
+   1,
+   2
+  ],
+  "same_as_official": false,
+  "faults": 0,
+  "no": 49
+ },
+ {
+  "id": 17097,
+  "mode": 0,
+  "map": "stonecircle",
+  "seed": 11018,
+  "names": [
+   "doubao",
+   "qwen"
+  ],
+  "steps": 284,
+  "reason": "ko",
+  "winner": [
+   "qwen"
+  ],
+  "ranks": [
+   2,
+   1
+  ],
+  "same_as_official": false,
+  "faults": 0,
+  "no": 50
+ },
+ {
+  "id": 20750,
+  "mode": 1,
+  "map": "skybridge",
+  "seed": 2483,
+  "names": [
+   "carbon",
+   "mimo",
+   "hydrogen",
+   "deepseek"
+  ],
+  "steps": 169,
+  "reason": "ko",
+  "winner": [
+   "hydrogen"
+  ],
+  "ranks": [
+   2,
+   4,
+   1,
+   3
+  ],
+  "same_as_official": false,
+  "faults": 0,
+  "no": 51
+ },
+ {
+  "id": 4675,
+  "mode": 0,
+  "map": "ruins",
+  "seed": 11001,
+  "names": [
+   "glm",
+   "sol"
+  ],
+  "steps": 58,
+  "reason": "ko",
+  "winner": [
+   "glm"
+  ],
+  "ranks": [
+   1,
+   2
+  ],
+  "same_as_official": true,
+  "faults": 0,
+  "no": 52
+ },
+ {
+  "id": 11685,
+  "mode": 0,
+  "map": "yinyang",
+  "seed": 11010,
+  "names": [
+   "deepseek",
+   "hydrogen"
+  ],
+  "steps": 86,
+  "reason": "ko",
+  "winner": [
+   "hydrogen"
+  ],
+  "ranks": [
+   2,
+   1
+  ],
+  "same_as_official": true,
+  "faults": 0,
+  "no": 53
+ },
+ {
+  "id": 26075,
+  "mode": 1,
+  "map": "icefloes",
+  "seed": 2631,
+  "names": [
+   "doubao",
+   "qwen",
+   "grok",
+   "kimi"
+  ],
+  "steps": 170,
+  "reason": "ko",
+  "winner": [
+   "qwen"
+  ],
+  "ranks": [
+   3,
+   1,
+   4,
+   2
+  ],
+  "same_as_official": false,
+  "faults": 0,
+  "no": 54
+ },
+ {
+  "id": 10746,
+  "mode": 0,
+  "map": "twinlakes",
+  "seed": 11016,
+  "names": [
+   "carbon",
+   "glm"
+  ],
+  "steps": 257,
+  "reason": "ko",
+  "winner": [
+   "carbon"
+  ],
+  "ranks": [
+   1,
+   2
+  ],
+  "same_as_official": false,
+  "faults": 0,
+  "no": 55
+ },
+ {
+  "id": 6264,
+  "mode": 0,
+  "map": "icefloes",
+  "seed": 11017,
+  "names": [
+   "fable",
+   "deepseek"
+  ],
+  "steps": 42,
+  "reason": "ko",
+  "winner": [
+   "fable"
+  ],
+  "ranks": [
+   1,
+   2
+  ],
+  "same_as_official": true,
+  "faults": 0,
+  "no": 56
+ },
+ {
+  "id": 29835,
+  "mode": 1,
+  "map": "skybridge",
+  "seed": 2735,
+  "names": [
+   "hydrogen",
+   "doubao",
+   "sol",
+   "grok"
+  ],
+  "steps": 123,
+  "reason": "ko",
+  "winner": [
+   "hydrogen"
+  ],
+  "ranks": [
+   1,
+   4,
+   2,
+   3
+  ],
+  "same_as_official": false,
+  "faults": 0,
+  "no": 57
+ },
+ {
+  "id": 15997,
+  "mode": 0,
+  "map": "twinlakes",
+  "seed": 11019,
+  "names": [
+   "mimo",
+   "kimi"
+  ],
+  "steps": 61,
+  "reason": "ko",
+  "winner": [
+   "mimo"
+  ],
+  "ranks": [
+   1,
+   2
+  ],
+  "same_as_official": true,
+  "faults": 0,
+  "no": 58
+ },
+ {
+  "id": 7397,
+  "mode": 0,
+  "map": "icefloes",
+  "seed": 11013,
+  "names": [
+   "doubao",
+   "fable"
+  ],
+  "steps": 241,
+  "reason": "ko",
+  "winner": [
+   "fable"
+  ],
+  "ranks": [
+   2,
+   1
+  ],
+  "same_as_official": true,
+  "faults": 0,
+  "no": 59
+ },
+ {
+  "id": 27296,
+  "mode": 1,
+  "map": "twinlakes",
+  "seed": 2665,
+  "names": [
+   "deepseek",
+   "kimi",
+   "mimo",
+   "sol"
+  ],
+  "steps": 75,
+  "reason": "ko",
+  "winner": [
+   "deepseek"
+  ],
+  "ranks": [
+   1,
+   3,
+   2,
+   4
+  ],
+  "same_as_official": false,
+  "faults": 0,
+  "no": 60
+ },
+ {
+  "id": 9731,
+  "mode": 0,
+  "map": "skybridge",
+  "seed": 11002,
+  "names": [
+   "hydrogen",
+   "carbon"
+  ],
+  "steps": 52,
+  "reason": "ko",
+  "winner": [
+   "carbon"
+  ],
+  "ranks": [
+   2,
+   1
+  ],
+  "same_as_official": false,
+  "faults": 0,
+  "no": 61
+ },
+ {
+  "id": 15247,
+  "mode": 0,
+  "map": "stonecircle",
+  "seed": 11005,
+  "names": [
+   "mimo",
+   "deepseek"
+  ],
+  "steps": 63,
+  "reason": "ko",
+  "winner": [
+   "deepseek"
+  ],
+  "ranks": [
+   2,
+   1
+  ],
+  "same_as_official": true,
+  "faults": 0,
+  "no": 62
+ },
+ {
+  "id": 23963,
+  "mode": 1,
+  "map": "ruins",
+  "seed": 2572,
+  "names": [
+   "doubao",
+   "hydrogen",
+   "carbon",
+   "opus"
+  ],
+  "steps": 273,
+  "reason": "ko",
+  "winner": [
+   "carbon"
+  ],
+  "ranks": [
+   2,
+   4,
+   1,
+   3
+  ],
+  "same_as_official": false,
+  "faults": 0,
+  "no": 63
+ },
+ {
+  "id": 13092,
+  "mode": 0,
+  "map": "icefloes",
+  "seed": 11011,
+  "names": [
+   "grok",
+   "deepseek"
+  ],
+  "steps": 59,
+  "reason": "ko",
+  "winner": [
+   "grok"
+  ],
+  "ranks": [
+   1,
+   2
+  ],
+  "same_as_official": true,
+  "faults": 0,
+  "no": 64
+ },
+ {
+  "id": 9254,
+  "mode": 0,
+  "map": "ruins",
+  "seed": 11011,
+  "names": [
+   "opus",
+   "mimo"
+  ],
+  "steps": 271,
+  "reason": "ko",
+  "winner": [
+   "opus"
+  ],
+  "ranks": [
+   1,
+   2
+  ],
+  "same_as_official": true,
+  "faults": 0,
+  "no": 65
+ },
+ {
+  "id": 24206,
+  "mode": 1,
+  "map": "skybridge",
+  "seed": 2579,
+  "names": [
+   "glm",
+   "hydrogen",
+   "doubao",
+   "astra"
+  ],
+  "steps": 271,
+  "reason": "ko",
+  "winner": [
+   "astra"
+  ],
+  "ranks": [
+   3,
+   2,
+   4,
+   1
+  ],
+  "same_as_official": false,
+  "faults": 0,
+  "no": 66
+ },
+ {
+  "id": 14640,
+  "mode": 0,
+  "map": "yinyang",
+  "seed": 11006,
+  "names": [
+   "deepseek",
+   "qwen"
+  ],
+  "steps": 65,
+  "reason": "ko",
+  "winner": [
+   "deepseek"
+  ],
+  "ranks": [
+   1,
+   2
+  ],
+  "same_as_official": false,
+  "faults": 0,
+  "no": 67
+ },
+ {
+  "id": 9429,
+  "mode": 0,
+  "map": "icefloes",
+  "seed": 11003,
+  "names": [
+   "doubao",
+   "opus"
+  ],
+  "steps": 241,
+  "reason": "ko",
+  "winner": [
+   "opus"
+  ],
+  "ranks": [
+   2,
+   1
+  ],
+  "same_as_official": true,
+  "faults": 0,
+  "no": 68
+ },
+ {
+  "id": 29654,
+  "mode": 1,
+  "map": "stonecircle",
+  "seed": 2730,
+  "names": [
+   "sol",
+   "astra",
+   "qwen",
+   "mimo"
+  ],
+  "steps": 176,
+  "reason": "ko",
+  "winner": [
+   "astra"
+  ],
+  "ranks": [
+   2,
+   1,
+   4,
+   3
+  ],
+  "same_as_official": false,
+  "faults": 0,
+  "no": 69
+ },
+ {
+  "id": 8372,
+  "mode": 0,
+  "map": "skybridge",
+  "seed": 11007,
+  "names": [
+   "opus",
+   "deepseek"
+  ],
+  "steps": 220,
+  "reason": "ko",
+  "winner": [
+   "deepseek"
+  ],
+  "ranks": [
+   2,
+   1
+  ],
+  "same_as_official": false,
+  "faults": 0,
+  "no": 70
+ },
+ {
+  "id": 2781,
+  "mode": 0,
+  "map": "yinyang",
+  "seed": 11004,
+  "names": [
+   "fable",
+   "sol"
+  ],
+  "steps": 246,
+  "reason": "ko",
+  "winner": [
+   "sol"
+  ],
+  "ranks": [
+   2,
+   1
+  ],
+  "same_as_official": true,
+  "faults": 0,
+  "no": 71
+ },
+ {
+  "id": 18246,
+  "mode": 1,
+  "map": "twinlakes",
+  "seed": 2413,
+  "names": [
+   "doubao",
+   "glm",
+   "astra",
+   "opus"
+  ],
+  "steps": 233,
+  "reason": "ko",
+  "winner": [
+   "opus"
+  ],
+  "ranks": [
+   2,
+   3,
+   4,
+   1
+  ],
+  "same_as_official": false,
+  "faults": 0,
+  "no": 72
+ },
+ {
+  "id": 3629,
+  "mode": 0,
+  "map": "stonecircle",
+  "seed": 11010,
+  "names": [
+   "hydrogen",
+   "sol"
+  ],
+  "steps": 40,
+  "reason": "ko",
+  "winner": [
+   "hydrogen"
+  ],
+  "ranks": [
+   1,
+   2
+  ],
+  "same_as_official": false,
+  "faults": 0,
+  "no": 73
+ },
+ {
+  "id": 17705,
+  "mode": 0,
+  "map": "ruins",
+  "seed": 11018,
+  "names": [
+   "doubao",
+   "mimo"
+  ],
+  "steps": 301,
+  "reason": "ko",
+  "winner": [
+   "mimo"
+  ],
+  "ranks": [
+   2,
+   1
+  ],
+  "same_as_official": true,
+  "faults": 0,
+  "no": 74
+ },
+ {
+  "id": 20873,
+  "mode": 1,
+  "map": "yinyang",
+  "seed": 2486,
+  "names": [
+   "fable",
+   "astra",
+   "opus",
+   "grok"
+  ],
+  "steps": 222,
+  "reason": "ko",
+  "winner": [
+   "fable"
+  ],
+  "ranks": [
+   1,
+   4,
+   3,
+   2
+  ],
+  "same_as_official": false,
+  "faults": 0,
+  "no": 75
+ },
+ {
+  "id": 12292,
+  "mode": 0,
+  "map": "stonecircle",
+  "seed": 11010,
+  "names": [
+   "hydrogen",
+   "qwen"
+  ],
+  "steps": 96,
+  "reason": "ko",
+  "winner": [
+   "qwen"
+  ],
+  "ranks": [
+   2,
+   1
+  ],
+  "same_as_official": false,
+  "faults": 0,
+  "no": 76
+ },
+ {
+  "id": 8947,
+  "mode": 0,
+  "map": "yinyang",
+  "seed": 11009,
+  "names": [
+   "glm",
+   "opus"
+  ],
+  "steps": 97,
+  "reason": "ko",
+  "winner": [
+   "opus"
+  ],
+  "ranks": [
+   2,
+   1
+  ],
+  "same_as_official": false,
+  "faults": 0,
+  "no": 77
+ },
+ {
+  "id": 24268,
+  "mode": 1,
+  "map": "twinlakes",
+  "seed": 2581,
+  "names": [
+   "astra",
+   "kimi",
+   "carbon",
+   "mimo"
+  ],
+  "steps": 203,
+  "reason": "ko",
+  "winner": [
+   "carbon"
+  ],
+  "ranks": [
+   2,
+   4,
+   1,
+   3
+  ],
+  "same_as_official": false,
+  "faults": 0,
+  "no": 78
+ },
+ {
+  "id": 8161,
+  "mode": 0,
+  "map": "skybridge",
+  "seed": 11015,
+  "names": [
+   "grok",
+   "opus"
+  ],
+  "steps": 178,
+  "reason": "ko",
+  "winner": [
+   "opus"
+  ],
+  "ranks": [
+   2,
+   1
+  ],
+  "same_as_official": false,
+  "faults": 0,
+  "no": 79
+ },
+ {
+  "id": 2202,
+  "mode": 0,
+  "map": "ruins",
+  "seed": 11019,
+  "names": [
+   "astra",
+   "glm"
+  ],
+  "steps": 99,
+  "reason": "ko",
+  "winner": [
+   "glm"
+  ],
+  "ranks": [
+   2,
+   1
+  ],
+  "same_as_official": false,
+  "faults": 0,
+  "no": 80
+ },
+ {
+  "id": 22373,
+  "mode": 1,
+  "map": "yinyang",
+  "seed": 2528,
+  "names": [
+   "sol",
+   "kimi",
+   "carbon",
+   "mimo"
+  ],
+  "steps": 76,
+  "reason": "ko",
+  "winner": [
+   "sol"
+  ],
+  "ranks": [
+   1,
+   2,
+   4,
+   3
+  ],
+  "same_as_official": false,
+  "faults": 0,
+  "no": 81
+ },
+ {
+  "id": 1592,
+  "mode": 0,
+  "map": "stonecircle",
+  "seed": 11018,
+  "names": [
+   "astra",
+   "deepseek"
+  ],
+  "steps": 59,
+  "reason": "ko",
+  "winner": [
+   "astra"
+  ],
+  "ranks": [
+   1,
+   2
+  ],
+  "same_as_official": true,
+  "faults": 0,
+  "no": 82
+ },
+ {
+  "id": 17331,
+  "mode": 0,
+  "map": "twinlakes",
+  "seed": 11002,
+  "names": [
+   "doubao",
+   "glm"
+  ],
+  "steps": 63,
+  "reason": "ko",
+  "winner": [
+   "doubao"
+  ],
+  "ranks": [
+   1,
+   2
+  ],
+  "same_as_official": false,
+  "faults": 0,
+  "no": 83
+ },
+ {
+  "id": 23370,
+  "mode": 1,
+  "map": "stonecircle",
+  "seed": 2556,
+  "names": [
+   "mimo",
+   "fable",
+   "hydrogen",
+   "carbon"
+  ],
+  "steps": 317,
+  "reason": "ko",
+  "winner": [
+   "fable"
+  ],
+  "ranks": [
+   2,
+   1,
+   3,
+   4
+  ],
+  "same_as_official": false,
+  "faults": 0,
+  "no": 84
+ },
+ {
+  "id": 1694,
+  "mode": 0,
+  "map": "icefloes",
+  "seed": 11012,
+  "names": [
+   "astra",
+   "kimi"
+  ],
+  "steps": 78,
+  "reason": "ko",
+  "winner": [
+   "astra"
+  ],
+  "ranks": [
+   1,
+   2
+  ],
+  "same_as_official": false,
+  "faults": 0,
+  "no": 85
+ },
+ {
+  "id": 7293,
+  "mode": 0,
+  "map": "stonecircle",
+  "seed": 11018,
+  "names": [
+   "mimo",
+   "fable"
+  ],
+  "steps": 161,
+  "reason": "ko",
+  "winner": [
+   "fable"
+  ],
+  "ranks": [
+   2,
+   1
+  ],
+  "same_as_official": true,
+  "faults": 0,
+  "no": 86
+ },
+ {
+  "id": 18445,
+  "mode": 1,
+  "map": "twinlakes",
+  "seed": 2419,
+  "names": [
+   "carbon",
+   "qwen",
+   "grok",
+   "deepseek"
+  ],
+  "steps": 202,
+  "reason": "ko",
+  "winner": [
+   "grok"
+  ],
+  "ranks": [
+   2,
+   4,
+   1,
+   3
+  ],
+  "same_as_official": false,
+  "faults": 0,
+  "no": 87
+ },
+ {
+  "id": 4329,
+  "mode": 0,
+  "map": "stonecircle",
+  "seed": 11018,
+  "names": [
+   "kimi",
+   "sol"
+  ],
+  "steps": 39,
+  "reason": "ko",
+  "winner": [
+   "sol"
+  ],
+  "ranks": [
+   2,
+   1
+  ],
+  "same_as_official": false,
+  "faults": 0,
+  "no": 88
+ },
+ {
+  "id": 1916,
+  "mode": 0,
+  "map": "icefloes",
+  "seed": 11009,
+  "names": [
+   "astra",
+   "qwen"
+  ],
+  "steps": 288,
+  "reason": "ko",
+  "winner": [
+   "astra"
+  ],
+  "ranks": [
+   1,
+   2
+  ],
+  "same_as_official": false,
+  "faults": 0,
+  "no": 89
+ },
+ {
+  "id": 26169,
+  "mode": 1,
+  "map": "skybridge",
+  "seed": 2633,
+  "names": [
+   "glm",
+   "fable",
+   "doubao",
+   "opus"
+  ],
+  "steps": 331,
+  "reason": "ko",
+  "winner": [
+   "opus"
+  ],
+  "ranks": [
+   4,
+   3,
+   2,
+   1
+  ],
+  "same_as_official": false,
+  "faults": 0,
+  "no": 90
+ },
+ {
+  "id": 13439,
+  "mode": 0,
+  "map": "stonecircle",
+  "seed": 11013,
+  "names": [
+   "kimi",
+   "grok"
+  ],
+  "steps": 89,
+  "reason": "ko",
+  "winner": [
+   "kimi"
+  ],
+  "ranks": [
+   1,
+   2
+  ],
+  "same_as_official": false,
+  "faults": 0,
+  "no": 91
+ },
+ {
+  "id": 3300,
+  "mode": 0,
+  "map": "icefloes",
+  "seed": 11017,
+  "names": [
+   "sol",
+   "carbon"
+  ],
+  "steps": 71,
+  "reason": "ko",
+  "winner": [
+   "carbon"
+  ],
+  "ranks": [
+   2,
+   1
+  ],
+  "same_as_official": false,
+  "faults": 0,
+  "no": 92
+ },
+ {
+  "id": 23514,
+  "mode": 1,
+  "map": "ruins",
+  "seed": 2560,
+  "names": [
+   "glm",
+   "doubao",
+   "fable",
+   "qwen"
+  ],
+  "steps": 75,
+  "reason": "ko",
+  "winner": [
+   "fable"
+  ],
+  "ranks": [
+   3,
+   2,
+   1,
+   3
+  ],
+  "same_as_official": false,
+  "faults": 0,
+  "no": 93
+ },
+ {
+  "id": 14572,
+  "mode": 0,
+  "map": "stonecircle",
+  "seed": 11010,
+  "names": [
+   "deepseek",
+   "kimi"
+  ],
+  "steps": 71,
+  "reason": "ko",
+  "winner": [
+   "deepseek"
+  ],
+  "ranks": [
+   1,
+   2
+  ],
+  "same_as_official": true,
+  "faults": 0,
+  "no": 94
+ },
+ {
+  "id": 13457,
+  "mode": 0,
+  "map": "twinlakes",
+  "seed": 11003,
+  "names": [
+   "qwen",
+   "grok"
+  ],
+  "steps": 34,
+  "reason": "ko",
+  "winner": [
+   "grok"
+  ],
+  "ranks": [
+   2,
+   1
+  ],
+  "same_as_official": true,
+  "faults": 0,
+  "no": 95
+ },
+ {
+  "id": 27180,
+  "mode": 1,
+  "map": "ruins",
+  "seed": 2662,
+  "names": [
+   "deepseek",
+   "doubao",
+   "fable",
+   "opus"
+  ],
+  "steps": 315,
+  "reason": "ko",
+  "winner": [
+   "fable"
+  ],
+  "ranks": [
+   3,
+   4,
+   1,
+   2
+  ],
+  "same_as_official": false,
+  "faults": 0,
+  "no": 96
+ },
+ {
+  "id": 10522,
+  "mode": 0,
+  "map": "twinlakes",
+  "seed": 11018,
+  "names": [
+   "carbon",
+   "qwen"
+  ],
+  "steps": 110,
+  "reason": "ko",
+  "winner": [
+   "qwen"
+  ],
+  "ranks": [
+   2,
+   1
+  ],
+  "same_as_official": false,
+  "faults": 0,
+  "no": 97
+ },
+ {
+  "id": 6998,
+  "mode": 0,
+  "map": "skybridge",
+  "seed": 11004,
+  "names": [
+   "fable",
+   "glm"
+  ],
+  "steps": 279,
+  "reason": "ko",
+  "winner": [
+   "fable"
+  ],
+  "ranks": [
+   1,
+   2
+  ],
+  "same_as_official": false,
+  "faults": 0,
+  "no": 98
+ },
+ {
+  "id": 20578,
+  "mode": 1,
+  "map": "stonecircle",
+  "seed": 2478,
+  "names": [
+   "doubao",
+   "grok",
+   "qwen",
+   "opus"
+  ],
+  "steps": 123,
+  "reason": "ko",
+  "winner": [
+   "opus"
+  ],
+  "ranks": [
+   2,
+   3,
+   4,
+   1
+  ],
+  "same_as_official": false,
+  "faults": 0,
+  "no": 99
+ },
+ {
+  "id": 129,
+  "mode": 0,
+  "map": "ruins",
+  "seed": 11008,
+  "names": [
+   "sol",
+   "astra"
+  ],
+  "steps": 55,
+  "reason": "ko",
+  "winner": [
+   "astra"
+  ],
+  "ranks": [
+   2,
+   1
+  ],
+  "same_as_official": true,
+  "faults": 0,
+  "no": 100
+ },
+ {
+  "id": 15369,
+  "mode": 0,
+  "map": "icefloes",
+  "seed": 11009,
+  "names": [
+   "doubao",
+   "deepseek"
+  ],
+  "steps": 207,
+  "reason": "ko",
+  "winner": [
+   "deepseek"
+  ],
+  "ranks": [
+   2,
+   1
+  ],
+  "same_as_official": true,
+  "faults": 0,
+  "no": 101
+ },
+ {
+  "id": 19436,
+  "mode": 1,
+  "map": "ruins",
+  "seed": 2446,
+  "names": [
+   "kimi",
+   "grok",
+   "glm",
+   "mimo"
+  ],
+  "steps": 105,
+  "reason": "ko",
+  "winner": [
+   "kimi"
+  ],
+  "ranks": [
+   1,
+   2,
+   3,
+   4
+  ],
+  "same_as_official": false,
+  "faults": 0,
+  "no": 102
+ },
+ {
+  "id": 489,
+  "mode": 0,
+  "map": "twinlakes",
+  "seed": 11017,
+  "names": [
+   "opus",
+   "astra"
+  ],
+  "steps": 325,
+  "reason": "ko",
+  "winner": [
+   "astra"
+  ],
+  "ranks": [
+   2,
+   1
+  ],
+  "same_as_official": false,
+  "faults": 0,
+  "no": 103
+ },
+ {
+  "id": 15635,
+  "mode": 0,
+  "map": "ruins",
+  "seed": 11009,
+  "names": [
+   "qwen",
+   "kimi"
+  ],
+  "steps": 94,
+  "reason": "ko",
+  "winner": [
+   "kimi"
+  ],
+  "ranks": [
+   2,
+   1
+  ],
+  "same_as_official": false,
+  "faults": 0,
+  "no": 104
+ },
+ {
+  "id": 27598,
+  "mode": 1,
+  "map": "icefloes",
+  "seed": 2673,
+  "names": [
+   "doubao",
+   "deepseek",
+   "hydrogen",
+   "grok"
+  ],
+  "steps": 105,
+  "reason": "ko",
+  "winner": [
+   "grok"
+  ],
+  "ranks": [
+   3,
+   2,
+   4,
+   1
+  ],
+  "same_as_official": false,
+  "faults": 0,
+  "no": 105
+ },
+ {
+  "id": 4984,
+  "mode": 0,
+  "map": "stonecircle",
+  "seed": 11004,
+  "names": [
+   "sol",
+   "mimo"
+  ],
+  "steps": 51,
+  "reason": "ko",
+  "winner": [
+   "sol"
+  ],
+  "ranks": [
+   1,
+   2
+  ],
+  "same_as_official": true,
+  "faults": 0,
+  "no": 106
+ },
+ {
+  "id": 12351,
+  "mode": 0,
+  "map": "yinyang",
+  "seed": 11001,
+  "names": [
+   "glm",
+   "hydrogen"
+  ],
+  "steps": 63,
+  "reason": "ko",
+  "winner": [
+   "hydrogen"
+  ],
+  "ranks": [
+   2,
+   1
+  ],
+  "same_as_official": false,
+  "faults": 0,
+  "no": 107
+ },
+ {
+  "id": 29113,
+  "mode": 1,
+  "map": "icefloes",
+  "seed": 2715,
+  "names": [
+   "fable",
+   "opus",
+   "qwen",
+   "carbon"
+  ],
+  "steps": 181,
+  "reason": "ko",
+  "winner": [
+   "carbon"
+  ],
+  "ranks": [
+   4,
+   3,
+   2,
+   1
+  ],
+  "same_as_official": false,
+  "faults": 0,
+  "no": 108
+ },
+ {
+  "id": 12809,
+  "mode": 0,
+  "map": "yinyang",
+  "seed": 11002,
+  "names": [
+   "doubao",
+   "hydrogen"
+  ],
+  "steps": 65,
+  "reason": "ko",
+  "winner": [
+   "hydrogen"
+  ],
+  "ranks": [
+   2,
+   1
+  ],
+  "same_as_official": true,
+  "faults": 0,
+  "no": 109
+ },
+ {
+  "id": 9891,
+  "mode": 0,
+  "map": "icefloes",
+  "seed": 11006,
+  "names": [
+   "grok",
+   "carbon"
+  ],
+  "steps": 45,
+  "reason": "ko",
+  "winner": [
+   "grok"
+  ],
+  "ranks": [
+   1,
+   2
+  ],
+  "same_as_official": true,
+  "faults": 0,
+  "no": 110
+ },
+ {
+  "id": 21504,
+  "mode": 1,
+  "map": "yinyang",
+  "seed": 2504,
+  "names": [
+   "deepseek",
+   "glm",
+   "hydrogen",
+   "qwen"
+  ],
+  "steps": 114,
+  "reason": "ko",
+  "winner": [
+   "hydrogen"
+  ],
+  "ranks": [
+   2,
+   3,
+   1,
+   4
+  ],
+  "same_as_official": false,
+  "faults": 0,
+  "no": 111
+ },
+ {
+  "id": 2999,
+  "mode": 0,
+  "map": "twinlakes",
+  "seed": 11018,
+  "names": [
+   "opus",
+   "sol"
+  ],
+  "steps": 85,
+  "reason": "ko",
+  "winner": [
+   "sol"
+  ],
+  "ranks": [
+   2,
+   1
+  ],
+  "same_as_official": true,
+  "faults": 0,
+  "no": 112
+ },
+ {
+  "id": 16790,
+  "mode": 0,
+  "map": "ruins",
+  "seed": 11017,
+  "names": [
+   "qwen",
+   "mimo"
+  ],
+  "steps": 271,
+  "reason": "ko",
+  "winner": [
+   "qwen"
+  ],
+  "ranks": [
+   1,
+   2
+  ],
+  "same_as_official": false,
+  "faults": 0,
+  "no": 113
+ },
+ {
+  "id": 31793,
+  "mode": 1,
+  "map": "stonecircle",
+  "seed": 2790,
+  "names": [
+   "kimi",
+   "glm",
+   "opus",
+   "astra"
+  ],
+  "steps": 241,
+  "reason": "ko",
+  "winner": [
+   "astra"
+  ],
+  "ranks": [
+   4,
+   3,
+   2,
+   1
+  ],
+  "same_as_official": false,
+  "faults": 0,
+  "no": 114
+ },
+ {
+  "id": 5981,
+  "mode": 0,
+  "map": "yinyang",
+  "seed": 11008,
+  "names": [
+   "grok",
+   "fable"
+  ],
+  "steps": 204,
+  "reason": "ko",
+  "winner": [
+   "fable"
+  ],
+  "ranks": [
+   2,
+   1
+  ],
+  "same_as_official": false,
+  "faults": 0,
+  "no": 115
+ },
+ {
+  "id": 7835,
+  "mode": 0,
+  "map": "icefloes",
+  "seed": 11004,
+  "names": [
+   "hydrogen",
+   "opus"
+  ],
+  "steps": 53,
+  "reason": "ko",
+  "winner": [
+   "opus"
+  ],
+  "ranks": [
+   2,
+   1
+  ],
+  "same_as_official": true,
+  "faults": 0,
+  "no": 116
+ },
+ {
+  "id": 19336,
+  "mode": 1,
+  "map": "yinyang",
+  "seed": 2444,
+  "names": [
+   "qwen",
+   "carbon",
+   "astra",
+   "kimi"
+  ],
+  "steps": 119,
+  "reason": "ko",
+  "winner": [
+   "astra"
+  ],
+  "ranks": [
+   3,
+   2,
+   1,
+   4
+  ],
+  "same_as_official": false,
+  "faults": 0,
+  "no": 117
+ }
+]
