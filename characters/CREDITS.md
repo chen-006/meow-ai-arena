@@ -19,3 +19,14 @@ The new designs used from episode 10 on are based on 小叶子XIYZ's designs and
 
 角色名里的模型名和公司名属于各自的权利人，只用来说明角色对应哪个模型，不表示这些公司认可或参与本项目。体素小人不使用各家公司的商标图形。
 Model and company names in character names belong to their owners and only indicate which model a character stands for; they do not imply endorsement by or involvement of those companies. The voxel characters do not use any company's logos.
+
+## 第 11 集的体素小人 / Episode 11 voxel characters（[boomerang/](boomerang/README.md)）
+
+署名同上。Credit as above.
+
+| 体素小人 / Voxel character | 照哪张立绘 / Based on |
+|---|---|
+| `astra`、`sol` | `art/portraits/GPT_大_Astra.png`、`GPT_小_Sol.png`（第 10 集那一套 / the episode-10 set） |
+| `fable`、`opus`、`gemini`、`deepseek`、`kimi`、`glm`、`grok`、`qwen`、`mimo` | `art/v2/portraits/` 里的同名立绘（正式形象 v2 / v2 art） |
+| `gemini_s` | `art/v2/portraits_small/Gemini_小.png` |
+| `doubao` | 节目组另做，不对应仓库里的立绘 / made by the show, no matching illustration in the repo |

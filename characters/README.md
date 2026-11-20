@@ -40,4 +40,8 @@ battle\renderer\出片.cmd battle\replays\L4_gemini_carbon.wrp -o L4.mp4 --lord 
 
 ## 和制作时的差别
 
-把模型导出成 `.glb`、渲预览图和合影的脚本（`export_voxchars.py`、`lineup.py` 等）要用节目另一集渲染器里的角色装配模块，那一集还没播出，这几个脚本暂时没有放进来；这里的 `.glb`、`.json`、预览图就是用它们导出的成品，`.json` 用 `voxkit.from_json` 就能读回、在第 10 集渲染器里直接用。`voxkit.py` 和 `voxchars/__init__.py` 里有三处注释提到那一集的道具，改成了泛称。
+把模型导出成 `.glb`、渲预览图和合影的脚本（`export_voxchars.py`、`lineup.py` 等）要用节目另一集渲染器里的角色装配模块，收录第 10 集时那一集还没播出，脚本没有放进来；这里的 `.glb`、`.json`、预览图就是用它们导出的成品，`.json` 用 `voxkit.from_json` 就能读回、在第 10 集渲染器里直接用。`voxkit.py` 和 `voxchars/__init__.py` 里有三处注释提到那一集的道具，改成了泛称。
+
+## 第 11 集的体素小人
+
+第 11 集《回旋镖大作战》用的是另一套更小的体素小人（13 位，含导出脚本 `export_voxchars.py`），在 [boomerang/](boomerang/README.md)。
