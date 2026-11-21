@@ -1,0 +1,6 @@
+# eol=lf
+--- a/bots/gpt-6.2-sol/player.cpp
++++ b/s62_dash20.cpp
+@@ -1635 +1635 @@
+-            v -= urgent ? 3.2 : 8.4;
++            v -= urgent ? 3.2 : 20.0;

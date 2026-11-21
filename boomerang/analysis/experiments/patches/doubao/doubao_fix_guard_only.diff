@@ -1,0 +1,8 @@
+# eol=crlf
+--- a/bots/doubao-seed-evolving/player.cpp
++++ b/doubao_fix_guard_only.cpp
+@@ -390 +390,3 @@
+-        const i64 nx = M.x + a.mx, ny = M.y + a.my;
++        i64 sx = 0, sy = 0;
++        scale_to(a.mx, a.my, gi.cfg.run_v, sx, sy);
++        const i64 nx = M.x + sx, ny = M.y + sy;

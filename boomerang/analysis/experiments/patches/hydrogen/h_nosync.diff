@@ -1,0 +1,6 @@
+# eol=lf
+--- a/bots/gemini-4-hydrogen/player.cpp
++++ b/h_nosync.cpp
+@@ -741 +741 @@
+-        if (dart_flying(sim_my_dart.st) && o.my_dart().st == D_GROUND) {
++        if (false && dart_flying(sim_my_dart.st) && o.my_dart().st == D_GROUND) {

@@ -1,0 +1,6 @@
+# eol=lf
+--- a/bots/glm-5.3/player.cpp
++++ b/glm_oneside.cpp
+@@ -694 +694 @@
+-                    rotv(rx, ry, (li % 2 ? 4500 : -4500), c.mdx, c.mdy);  // 扔完往两侧斜撤（回程镖追我的位置，绕圈能带弯）
++                    rotv(rx, ry, (4500), c.mdx, c.mdy);  // 扔完往两侧斜撤（回程镖追我的位置，绕圈能带弯）

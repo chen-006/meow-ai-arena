@@ -1,0 +1,14 @@
+# eol=crlf
+--- a/bots/gpt-6.2-sol/player.cpp
++++ b/s62_combo.cpp
+@@ -40 +40 @@
+-constexpr int NearH = 8;
++constexpr int NearH = 13;
+@@ -1993,2 +1993,2 @@
+-                if (++counts[group] > (group == A_NONE ? 5 : 4)) continue;
+-                if (used >= (n > 4 ? 6 : 13)) break;
++                if (++counts[group] > (group == A_NONE ? 9 : 4)) continue;
++                if (used >= (n > 4 ? 6 : 17)) break;
+@@ -1996 +1996 @@
+-                if (used >= 5 && terrain.simulations >= (n > 4 ? 970 : n == 4 ? 1650 : 2010)) break;
++                if (used >= 5 && terrain.simulations >= (n > 4 ? 970 : n == 4 ? 2700 : 2400)) break;

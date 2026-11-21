@@ -1,3 +1,5 @@
+[English](README_en.md)
+
 # 回放（117 局）
 
 **怎么看**：浏览器打开 [../workspace/viewer.html](../workspace/viewer.html)，把 `.txt` 拖进去（空格播放，← → 单步）。也可以用 [../renderer/](../renderer/README.md) 渲染成视频：`python renderer/render_game.py replays/g428.txt -o g428.mp4`。格式见 [../workspace/回放格式.md](../workspace/回放格式.md)。

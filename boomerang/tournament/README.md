@@ -1,3 +1,5 @@
+[English](README_en.md)
+
 # 计分和复现
 
 ## 一条命令重算个人榜

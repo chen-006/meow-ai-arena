@@ -1,0 +1,5 @@
+# eol=lf
+--- a/bots/grok-4.7/player.cpp
++++ b/grok_noreact.cpp
+@@ -396,0 +397 @@
++        if (true) return true;

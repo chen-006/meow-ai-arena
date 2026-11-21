@@ -1,0 +1,17 @@
+# eol=lf
+--- a/bots/qwen4-max/player.cpp
++++ b/qwen_diag.cpp
+@@ -2,0 +3 @@
++#include <cstdio>
+@@ -887,0 +889 @@
++        i64 lastNormal = 0, bestNormal = 0;
+@@ -890,0 +893 @@
++            lastNormal = s;
+@@ -900,0 +904 @@
++        bestNormal = lastNormal;
+@@ -913,2 +917,3 @@
+-            if (s > bestScore) { bestScore = s; best = a; }
+-        }
++            if (s > bestScore) { bestScore = s; best = a; bestNormal = lastNormal; }
++        }
++        fprintf(stderr,"S %lld best=%lld normal=%lld act=%lld\n",(long long)o.t,(long long)bestScore,(long long)bestNormal,(long long)best.act);

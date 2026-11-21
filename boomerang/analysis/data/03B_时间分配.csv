@@ -1,0 +1,14 @@
+﻿席位,选手,总名次,总实力分,模型活动估算分,测试调用可见估算分,编译调用可见估算分,编辑调用可见估算分,其他工具可见估算分,可见活动合计估算分,剩余未归因赛钟分,交卷墙钟分,模型生成或请求计时分（原统计）,计时工具口径
+astra62,GPT-6.2 Astra,1,306.11861,48.489,25.089,0.498,0.023,0.368,74.467,0.953,75.42,48.381,近似：task_started／上次 token_count／工具结束到本次 token_usage_record 的间隔，扣除可配对工具区间
+fable,Claude Fable 5.2,2,131.985225,28.782,31.004,0.246,0.011,0.234,60.277,14.853,87.64,28.798,近似：Claude api-request 到关联的最后一条 assistant，工具为 tool_use→tool_result 区间并集
+opus,Claude Opus 5.5,3,76.295964,31.561,29.493,0.048,0.021,0.366,61.489,12.961,75.19,31.582,近似：Claude api-request 到关联的最后一条 assistant，工具为 tool_use→tool_result 区间并集
+gemini_carbon,Gemini Carbon,4,50.985416,66.75,2.769,0,3.005,0.464,72.988,0.432,73.42,69.583,agy duration_seconds 与 transcript.created_at 对齐；工具用输出 Created/Completed At 或 step 起点和 duration
+sol62,GPT-6.2 Sol,5,33.075887,40.36,33.112,0.143,0.072,0.128,73.815,1.005,74.82,40.336,近似：task_started／上次 token_count／工具结束到本次 token_usage_record 的间隔，扣除可配对工具区间
+gemini_hydrogen,Gemini Hydrogen,6,29.846392,50.259,6.718,0,5.402,3.943,66.322,0.778,67.1,53.798,agy duration_seconds 与 transcript.created_at 对齐；工具用输出 Created/Completed At 或 step 起点和 duration
+grok,Grok 4.7,7,-0.917347,50.973,3.9,1.183,1.583,1.901,59.54,0.51,60.05,56.395,turn_completed.usage.apiDurationMs；在干活用事件相位并集（waiting_for_model／streaming 加已配对工具）
+glm,GLM 5.3,8,-9.442858,45.079,5.531,0.275,5.792,0,56.677,4.103,74.75,31.814,DB 成功请求 assistant.time，实干用 created→completed 与工具并集；TPS 用 firstToken→streamed/completed，缺首字时间用 created 近似
+deepseek_dsh,DeepSeek,9,-29.991057,35.269,19.923,0.221,0.217,0.953,56.583,5.107,85.6,35.269,近似：step/start→assistant/message；工具采用 job/settled 或调用→返回，重叠取并集
+kimi2,Kimi K3.1,10,-83.54399,51.766,6.926,0.03,0.017,0.026,58.765,1.945,65.97,35.927,wire step.end.llmStreamDurationMs（含思考输出，除首字延迟）；实干另用 step.begin→首字＋流式区间和工具并集
+qwen,千问 Qwen4,11,-87.082463,,9.207,0.285,0.136,0.186,9.814,65.406,75.22,,过程记录缺逐请求起止；已配对工具时长仅作核查，压缩有独立时长
+mimo,MiMo v2.6,12,-166.592781,47.461,0.822,0.619,5.11,0,54.012,9.498,64.39,45.528,DB 成功请求 assistant.time，实干用 created→completed 与工具并集；TPS 用 firstToken→streamed/completed，缺首字时间用 created 近似
+doubao,豆包,13,-250.736997,43.744,4.514,0.201,13.646,0,62.105,1.145,72.67,33.591,DB 成功请求 assistant.time，实干用 created→completed 与工具并集；TPS 用 firstToken→streamed/completed，缺首字时间用 created 近似

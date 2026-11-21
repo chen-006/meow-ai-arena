@@ -1,0 +1,12 @@
+# eol=crlf
+--- a/bots/claude-opus-5.5/player.cpp
++++ b/opus_v_parry.cpp
+@@ -364,0 +365 @@
++        const bool canParry = ob.d[k].st == D_HAND && ob.p[k].st == S_FREE;
+@@ -366,0 +368 @@
++            double hitMul = 1.0;
+@@ -373,0 +376 @@
++                    if (canParry && j >= cf.delay + 1) hitMul = 0.2;
+@@ -377 +380 @@
+-            if (h) hit += s.w;
++            if (h) hit += s.w * hitMul;

@@ -1,0 +1,8 @@
+# eol=lf
+--- a/bots/mimo-v2.6-pro/player.cpp
++++ b/mimo_block_real.cpp
+@@ -333,0 +334 @@
++        const size_t n_real = threats.size();   // 改版：记下真镖条数
+@@ -582 +583 @@
+-                for (size_t i = 0; i < threats.size() && a.act == 0; ++i) {
++                for (size_t i = 0; i < n_real && a.act == 0; ++i) {

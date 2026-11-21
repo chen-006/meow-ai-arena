@@ -1,0 +1,8 @@
+# eol=lf
+--- a/bots/grok-4.7/player.cpp
++++ b/grok_graze10.cpp
+@@ -1051,2 +1051,2 @@
+-                if (d < R + 450) graze += 420000;
+-                else if (d < R + 900) graze += 50000;
++                if (d < R + 450) graze += 42000;
++                else if (d < R + 900) graze += 5000;

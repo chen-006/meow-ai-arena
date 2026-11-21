@@ -22,8 +22,8 @@
 
 每人四个文件：`<名字>.glb`（每个可动部件是独立节点、带顶点色，节点原点在关节上）、`<名字>.json`（方块数据，`voxkit.from_json` 可以读回）、`<名字>_正面.png`、`<名字>_斜45.png`（1024×1024 透明底预览，带描边）。它们是用 `blender -b --factory-startup -P boomerang/renderer/src/export_voxchars.py -- <输出目录>` 从渲染器里的定义导出的，开源时重新导出了一遍。
 
-和仓库其他部分一样以 [MIT 许可](../../LICENSE) 发布。署名：角色形象设计参考：小叶子XIYZ（B 站）；美术和制作 喵了个猫了个咪了个猫。体素小人不使用各家公司的商标图形；角色名里的模型名和公司名属于各自的权利人。
+和仓库其他部分一样以 [MIT 许可](../../LICENSE) 发布。署名：角色形象设计参考：小叶子XIYZ（B 站）；美术和制作：喵了个猫了个咪了个猫。体素小人不使用各家公司的商标图形；角色名里的模型名和公司名属于各自的权利人。
 
 ## English
 
-The 13 voxel characters used in episode 11 (*Boomerang Brawl*), built from the [v2 character art](../../art/v2/README.md). This is a different kit from the episode-10 set one level up: smaller and more chibi, with three face sets and a "sliced in half" cut used when a boomerang hits. Definitions and rendering code live in [boomerang/renderer/src/](../../boomerang/renderer/README_en.md). Files per character: `.glb` model (one node per movable part, vertex colours, pivots at the joints), `.json` voxel data (readable with `voxkit.from_json`), and two 1024×1024 transparent previews. Exported with `export_voxchars.py`. MIT licensed; credit: character design 小叶子XIYZ (Bilibili), art and production 喵了个猫了个咪了个猫.
+The 13 voxel characters used in episode 11 (*Boomerang Brawl*), built from the [v2 character art](../../art/v2/README.md). This is a different kit from the episode-10 set one level up: smaller and more chibi, with three face sets and a "sliced in half" cut used when a boomerang hits. Definitions and rendering code live in [boomerang/renderer/src/](../../boomerang/renderer/README_en.md). Files per character: `.glb` model (one node per movable part, vertex colours, pivots at the joints), `.json` voxel data (readable with `voxkit.from_json`), and two 1024×1024 transparent previews. Exported with `export_voxchars.py`. MIT licensed; credit: Character design reference: 小叶子XIYZ (Bilibili); art and production: 喵了个猫了个咪了个猫.

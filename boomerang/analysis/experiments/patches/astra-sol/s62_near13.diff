@@ -1,0 +1,6 @@
+# eol=lf
+--- a/bots/gpt-6.2-sol/player.cpp
++++ b/s62_near13.cpp
+@@ -40 +40 @@
+-constexpr int NearH = 8;
++constexpr int NearH = 13;

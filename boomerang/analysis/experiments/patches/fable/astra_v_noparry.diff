@@ -1,0 +1,9 @@
+# eol=crlf
+--- a/bots/gpt-6.2-astra/player.cpp
++++ b/astra_v_noparry.cpp
+@@ -1571 +1571 @@
+-                if(slot>=0) consider(d,A_NONE,{},frame,slot);
++                if(false && slot>=0) consider(d,A_NONE,{},frame,slot);
+@@ -1592 +1592 @@
+-                if(h.known && h.s[hit-1].on) consider({},A_MELEE,(h.s[hit-1].a-p.p[hit]).unit());
++                if(false && h.known && h.s[hit-1].on) consider({},A_MELEE,(h.s[hit-1].a-p.p[hit]).unit());

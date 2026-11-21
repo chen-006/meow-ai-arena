@@ -1,0 +1,6 @@
+# eol=lf
+--- a/bots/deepseek-v4.1-flash/player.cpp
++++ b/deepseek_melee700.cpp
+@@ -197 +197 @@
+-            if (dd <= 1450) {
++            if (dd <= 700) {

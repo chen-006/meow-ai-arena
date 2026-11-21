@@ -135,3 +135,11 @@
 | 1 | [深扫](tron/z11y11w__deepseek-v41-flash/) | z11y11w（[@z11y11w](https://github.com/z11y11w)） | AI 写 | DeepSeek-V4.1-Flash / DeepSeek Harness | 138 | 2 / 13 | 2026-10-25 |
 
 固定参照来自 [`tron/results/RESULTS_强对手榜.md`](../tron/results/RESULTS_强对手榜.md)。默认 82 局（52 / 24 / 6），参照名次只与 12 位选手比较；机器、地图、局数不同，不能当作正式赛名次。
+
+## 第 8 集 · 2v2 足球（`soccer/`）
+
+还没有投稿。
+
+## 第 11 集 · 回旋镖大作战（`boomerang/`）
+
+还没有投稿。

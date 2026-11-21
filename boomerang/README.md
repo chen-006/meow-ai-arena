@@ -4,7 +4,7 @@
 
 13 个模型各自在 75 分钟里写一个 C++ 程序，操控俯视角小场地里一个拿回旋镖的角色：扔镖、挥砍、空手踢人、冲刺越坑，被镖打中或掉下浮岛就出局，最后活下来的赢。程序看到的别人永远是 0.2 秒以前的样子，要靠预判。海选打一对一和四人各自为战两项，共 32,904 局，用 Bradley-Terry 实力值出个人榜。之后海选第一、第二的两位当队长，用 1000 元预算暗标拍卖其余 9 位候选人，为下一集的团队赛组队。
 
-- **目录里有什么**：`workspace/` 选手包 · `engine/` 陪练源码 · `bots/` 十三位选手的程序和笔记 · `results/` 成绩和逐局结果 · `replays/` 117 局回放 · `tournament/` 计分、复现、隐藏地图 · `auction/` 队长拍卖的全部问答 · `renderer/` 回放转视频的渲染器 · `appendix/` 灰度版、对照组和全员大混战榜（不计成绩）
+- **目录里有什么**：`workspace/` 选手包 · `engine/` 陪练源码 · `bots/` 十三位选手的程序和笔记 · `results/` 成绩和逐局结果 · `replays/` 117 局回放 · `tournament/` 计分、复现、隐藏地图 · `auction/` 队长拍卖的全部问答 · `renderer/` 回放转视频的渲染器 · `appendix/` 灰度版、对照组和全员大混战榜（不计成绩） · `analysis/` 选手作品解析和拍卖分析 · `challenge.py` 用你的程序挑战 13 位选手
 - **复现榜单**：`python tournament/score.py`：用比赛时的出榜程序从 32,904 局逐局结果重算个人榜（含 2000 次重抽样的区间），逐项和 `results/海选成绩.json` 核对，打印"核对通过"，约 20 秒，只要 Python。重打全部对局：`python build_engine.py` 后运行 `python tournament/rerun.py`，16 线程约 15～20 分钟（结果会有出入，原因见 [tournament/README.md](tournament/README.md)）。
 
 ## 规则速览
@@ -90,6 +90,15 @@ python match.py play ../bots/gpt-6.2-astra/player.cpp mid --map ../tournament/hi
 
 **出视频**：视频里的对局画面都是 [renderer/](renderer/README.md) 用 Blender 从回放渲染的，装好 Blender 5.2、Python（numpy、scipy、scikit-image、pillow）和 ffmpeg 后，`python renderer/render_game.py replays/g428.txt -o g428.mp4` 一条命令出片。
 
+## 挑战 AI / 投稿
+
+```text
+python challenge.py 你的bot.cpp            和 13 位选手打一对一 312 局 + 四人局 104 局（正式计时），放到海选个人榜的尺上（本机几十秒到几分钟）
+python challenge.py 你的bot.cpp --full     局数 4 倍
+```
+
+13 位选手的一对一、四人局实力值固定取 `results/海选成绩.json`，只拟合你的两项，平均就是个人实力值；地图是海选的 6 张，种子换了一批。有几位选手按时钟决定算多深，重测会有十几分的出入。想进[社区榜](../community/LEADERBOARD.md)，把程序改名 `bot.cpp`，放进 `community/boomerang/<GitHub用户名>__<作品名>/` 开 Pull Request，见 [`community/README.md`](../community/README.md)。
+
 ## 目录
 
 | 路径 | 内容 |
@@ -97,6 +106,7 @@ python match.py play ../bots/gpt-6.2-astra/player.cpp mid --map ../tournament/hi
 | [workspace/](workspace/README.md) | 赛时选手包原样（不含 exe）：README、RULES、`dart.hpp`、裁判源码 `arena.cpp`、`build.py`、`match.py`、`clock.py`、模板、四张公开地图、网页查看器、回放格式、示例回放 |
 | [engine/](engine/README.md) | 三档陪练的源码和说明（比赛时只发了编译好的程序） |
 | [build_engine.py](build_engine.py) | 编译裁判和陪练 |
+| [challenge.py](challenge.py) | 用你的程序挑战 13 位选手、进社区榜（见上） |
 | [prompt.md](prompt.md)、[prompts/](prompts/) | 开赛消息（两批）和叫回通知的原文 |
 | [bots/](bots/README.md) | 十三位选手的收卷原样：`player.cpp`、`notes.md`、`收卷记录.json` |
 | [results/](results/README.md) | 个人榜（`海选成绩.json`、`海选榜.md`）、32,904 局逐局结果、赛程 |
@@ -104,6 +114,7 @@ python match.py play ../bots/gpt-6.2-astra/player.cpp mid --map ../tournament/hi
 | [tournament/](tournament/README.md) | 出榜程序 `rating.py`、`bt.py`（原样）、复现脚本 `score.py`、重打脚本 `rerun.py`、赛时保密的 6 张地图 |
 | [auction/](auction/README.md) | 队长拍卖：规则程序、尽调材料、逐轮问答、结果、队长笔记；演习和重拍通知 |
 | [renderer/](renderer/README.md) | 回放转视频的渲染器：代码、十张图的场景主题、体素小人、头像、出片命令 |
+| [analysis/](analysis/README.md) | 分析稿：14 份 bot 解析（含 GPT 逐条核查）、拍卖环节分析、全场分析总汇；AI 整理，可能有错，以代码和对局数据为准 |
 | [appendix/](appendix/README.md) | 不计成绩：GPT 两位的灰度版、六位对照选手、DeepSeek 和 Kimi 换工具前的版本、60 分钟前停下时的版本；灰度版海选、对照赛、全员大混战（21 位）榜和复现脚本 |
 | [CONDITIONS.md](CONDITIONS.md) | 比赛条件：型号、工具、用时、叫回、中断、对局时的机器负载 |
 | [MANIFEST.md](MANIFEST.md) | 这一集放了什么、没放什么、为什么 |
@@ -129,4 +140,4 @@ B 站：https://www.bilibili.com/video/BV1Y6ypzJEmo
 
 这是一次具体比赛的记录。工具、接入渠道和每次做题的发挥都会影响结果，同一个模型重做一次名次也可能变（附录里灰度版和正式版的差别就是例子），不据此预设模型强弱。程序和笔记由模型生成，主办方没有修改；题目、引擎、地图、陪练和赛事规则由主办方提供。
 
-沿用仓库 [MIT 许可](../LICENSE)。渲染器里的角色形象：角色形象设计参考：小叶子XIYZ（B 站）；美术和制作 喵了个猫了个咪了个猫，见 [art/v2/](../art/v2/README.md)。
+沿用仓库 [MIT 许可](../LICENSE)。渲染器里的角色形象：角色形象设计参考：小叶子XIYZ（B 站）；美术和制作：喵了个猫了个咪了个猫，见 [art/v2/](../art/v2/README.md)。

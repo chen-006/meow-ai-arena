@@ -1,0 +1,12638 @@
+{
+ "speed_kq|twinlakes|11001-11004": {
+  "n": 8,
+  "w": [
+   2,
+   6
+  ],
+  "draw": 0,
+  "fall": [
+   1,
+   0
+  ],
+  "dart": [
+   4,
+   1
+  ],
+  "slash": [
+   1,
+   1
+  ],
+  "kills": [
+   2,
+   5
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 14,
+    "slashes": 4,
+    "kicks": 6,
+    "dashes": 11,
+    "recalls": 1
+   },
+   {
+    "throws": 13,
+    "slashes": 2,
+    "kicks": 2,
+    "dashes": 25,
+    "recalls": 4
+   }
+  ]
+ },
+ "kq_orig|twinlakes|11001-11019": {
+  "n": 38,
+  "w": [
+   21,
+   17
+  ],
+  "draw": 0,
+  "fall": [
+   1,
+   1
+  ],
+  "dart": [
+   14,
+   16
+  ],
+  "slash": [
+   2,
+   4
+  ],
+  "kills": [
+   21,
+   16
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 70,
+    "slashes": 19,
+    "kicks": 51,
+    "dashes": 55,
+    "recalls": 20
+   },
+   {
+    "throws": 50,
+    "slashes": 14,
+    "kicks": 3,
+    "dashes": 140,
+    "recalls": 13
+   }
+  ]
+ },
+ "kq_orig|yinyang|11001-11019": {
+  "n": 38,
+  "w": [
+   21,
+   17
+  ],
+  "draw": 0,
+  "fall": [
+   2,
+   5
+  ],
+  "dart": [
+   13,
+   14
+  ],
+  "slash": [
+   2,
+   2
+  ],
+  "kills": [
+   21,
+   15
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 79,
+    "slashes": 19,
+    "kicks": 70,
+    "dashes": 79,
+    "recalls": 26
+   },
+   {
+    "throws": 51,
+    "slashes": 17,
+    "kicks": 5,
+    "dashes": 152,
+    "recalls": 6
+   }
+  ]
+ },
+ "kq_orig|icefloes|11001-11019": {
+  "n": 38,
+  "w": [
+   22,
+   16
+  ],
+  "draw": 0,
+  "fall": [
+   2,
+   2
+  ],
+  "dart": [
+   11,
+   20
+  ],
+  "slash": [
+   3,
+   0
+  ],
+  "kills": [
+   21,
+   14
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 63,
+    "slashes": 18,
+    "kicks": 37,
+    "dashes": 52,
+    "recalls": 26
+   },
+   {
+    "throws": 37,
+    "slashes": 13,
+    "kicks": 7,
+    "dashes": 138,
+    "recalls": 6
+   }
+  ]
+ },
+ "kq_orig|ruins|11001-11019": {
+  "n": 38,
+  "w": [
+   29,
+   9
+  ],
+  "draw": 0,
+  "fall": [
+   0,
+   3
+  ],
+  "dart": [
+   7,
+   25
+  ],
+  "slash": [
+   2,
+   1
+  ],
+  "kills": [
+   28,
+   9
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 77,
+    "slashes": 25,
+    "kicks": 186,
+    "dashes": 82,
+    "recalls": 20
+   },
+   {
+    "throws": 39,
+    "slashes": 8,
+    "kicks": 17,
+    "dashes": 182,
+    "recalls": 12
+   }
+  ]
+ },
+ "kq_orig|skybridge|11001-11019": {
+  "n": 38,
+  "w": [
+   22,
+   16
+  ],
+  "draw": 0,
+  "fall": [
+   5,
+   2
+  ],
+  "dart": [
+   9,
+   16
+  ],
+  "slash": [
+   2,
+   4
+  ],
+  "kills": [
+   22,
+   14
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 57,
+    "slashes": 23,
+    "kicks": 36,
+    "dashes": 44,
+    "recalls": 9
+   },
+   {
+    "throws": 35,
+    "slashes": 12,
+    "kicks": 11,
+    "dashes": 122,
+    "recalls": 24
+   }
+  ]
+ },
+ "kq_orig|stonecircle|11001-11019": {
+  "n": 38,
+  "w": [
+   20,
+   16
+  ],
+  "draw": 2,
+  "fall": [
+   1,
+   1
+  ],
+  "dart": [
+   13,
+   17
+  ],
+  "slash": [
+   4,
+   4
+  ],
+  "kills": [
+   22,
+   18
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 72,
+    "slashes": 27,
+    "kicks": 81,
+    "dashes": 87,
+    "recalls": 31
+   },
+   {
+    "throws": 56,
+    "slashes": 15,
+    "kicks": 9,
+    "dashes": 151,
+    "recalls": 12
+   }
+  ]
+ },
+ "kq_orig2|twinlakes|11001-11019": {
+  "n": 38,
+  "w": [
+   17,
+   20
+  ],
+  "draw": 1,
+  "fall": [
+   4,
+   4
+  ],
+  "dart": [
+   16,
+   11
+  ],
+  "slash": [
+   1,
+   3
+  ],
+  "kills": [
+   18,
+   18
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 59,
+    "slashes": 18,
+    "kicks": 54,
+    "dashes": 64,
+    "recalls": 21
+   },
+   {
+    "throws": 54,
+    "slashes": 9,
+    "kicks": 9,
+    "dashes": 133,
+    "recalls": 11
+   }
+  ]
+ },
+ "kq_orig2|yinyang|11001-11019": {
+  "n": 38,
+  "w": [
+   18,
+   19
+  ],
+  "draw": 1,
+  "fall": [
+   1,
+   0
+  ],
+  "dart": [
+   16,
+   18
+  ],
+  "slash": [
+   3,
+   1
+  ],
+  "kills": [
+   19,
+   19
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 77,
+    "slashes": 19,
+    "kicks": 66,
+    "dashes": 75,
+    "recalls": 27
+   },
+   {
+    "throws": 46,
+    "slashes": 17,
+    "kicks": 11,
+    "dashes": 158,
+    "recalls": 7
+   }
+  ]
+ },
+ "kq_orig2|icefloes|11001-11019": {
+  "n": 38,
+  "w": [
+   19,
+   19
+  ],
+  "draw": 0,
+  "fall": [
+   4,
+   2
+  ],
+  "dart": [
+   11,
+   17
+  ],
+  "slash": [
+   4,
+   0
+  ],
+  "kills": [
+   18,
+   17
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 66,
+    "slashes": 19,
+    "kicks": 55,
+    "dashes": 58,
+    "recalls": 17
+   },
+   {
+    "throws": 46,
+    "slashes": 18,
+    "kicks": 10,
+    "dashes": 151,
+    "recalls": 7
+   }
+  ]
+ },
+ "kq_orig2|ruins|11001-11019": {
+  "n": 38,
+  "w": [
+   19,
+   19
+  ],
+  "draw": 0,
+  "fall": [
+   0,
+   1
+  ],
+  "dart": [
+   15,
+   18
+  ],
+  "slash": [
+   4,
+   0
+  ],
+  "kills": [
+   19,
+   19
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 68,
+    "slashes": 25,
+    "kicks": 200,
+    "dashes": 98,
+    "recalls": 25
+   },
+   {
+    "throws": 48,
+    "slashes": 22,
+    "kicks": 8,
+    "dashes": 189,
+    "recalls": 12
+   }
+  ]
+ },
+ "kq_orig2|skybridge|11001-11019": {
+  "n": 38,
+  "w": [
+   21,
+   17
+  ],
+  "draw": 0,
+  "fall": [
+   3,
+   2
+  ],
+  "dart": [
+   12,
+   17
+  ],
+  "slash": [
+   2,
+   2
+  ],
+  "kills": [
+   21,
+   14
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 53,
+    "slashes": 19,
+    "kicks": 36,
+    "dashes": 48,
+    "recalls": 19
+   },
+   {
+    "throws": 44,
+    "slashes": 12,
+    "kicks": 11,
+    "dashes": 108,
+    "recalls": 6
+   }
+  ]
+ },
+ "kq_orig2|stonecircle|11001-11019": {
+  "n": 38,
+  "w": [
+   26,
+   12
+  ],
+  "draw": 0,
+  "fall": [
+   0,
+   2
+  ],
+  "dart": [
+   10,
+   21
+  ],
+  "slash": [
+   2,
+   3
+  ],
+  "kills": [
+   26,
+   12
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 104,
+    "slashes": 33,
+    "kicks": 92,
+    "dashes": 121,
+    "recalls": 31
+   },
+   {
+    "throws": 50,
+    "slashes": 13,
+    "kicks": 16,
+    "dashes": 189,
+    "recalls": 29
+   }
+  ]
+ },
+ "kq_fixspeed|twinlakes|11001-11019": {
+  "n": 38,
+  "w": [
+   25,
+   13
+  ],
+  "draw": 0,
+  "fall": [
+   1,
+   3
+  ],
+  "dart": [
+   10,
+   19
+  ],
+  "slash": [
+   2,
+   3
+  ],
+  "kills": [
+   24,
+   12
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 74,
+    "slashes": 26,
+    "kicks": 44,
+    "dashes": 51,
+    "recalls": 19
+   },
+   {
+    "throws": 48,
+    "slashes": 8,
+    "kicks": 5,
+    "dashes": 138,
+    "recalls": 18
+   }
+  ]
+ },
+ "kq_fixspeed|yinyang|11001-11019": {
+  "n": 38,
+  "w": [
+   16,
+   22
+  ],
+  "draw": 0,
+  "fall": [
+   2,
+   0
+  ],
+  "dart": [
+   19,
+   15
+  ],
+  "slash": [
+   1,
+   1
+  ],
+  "kills": [
+   16,
+   22
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 82,
+    "slashes": 20,
+    "kicks": 62,
+    "dashes": 80,
+    "recalls": 63
+   },
+   {
+    "throws": 50,
+    "slashes": 8,
+    "kicks": 16,
+    "dashes": 159,
+    "recalls": 6
+   }
+  ]
+ },
+ "kq_fixspeed|icefloes|11001-11019": {
+  "n": 38,
+  "w": [
+   16,
+   22
+  ],
+  "draw": 0,
+  "fall": [
+   6,
+   3
+  ],
+  "dart": [
+   14,
+   13
+  ],
+  "slash": [
+   2,
+   0
+  ],
+  "kills": [
+   15,
+   17
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 64,
+    "slashes": 21,
+    "kicks": 51,
+    "dashes": 56,
+    "recalls": 46
+   },
+   {
+    "throws": 44,
+    "slashes": 14,
+    "kicks": 5,
+    "dashes": 150,
+    "recalls": 11
+   }
+  ]
+ },
+ "kq_fixspeed|ruins|11001-11019": {
+  "n": 38,
+  "w": [
+   19,
+   19
+  ],
+  "draw": 0,
+  "fall": [
+   0,
+   1
+  ],
+  "dart": [
+   16,
+   14
+  ],
+  "slash": [
+   3,
+   4
+  ],
+  "kills": [
+   19,
+   19
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 67,
+    "slashes": 21,
+    "kicks": 99,
+    "dashes": 91,
+    "recalls": 28
+   },
+   {
+    "throws": 40,
+    "slashes": 14,
+    "kicks": 13,
+    "dashes": 181,
+    "recalls": 7
+   }
+  ]
+ },
+ "kq_fixspeed|skybridge|11001-11019": {
+  "n": 38,
+  "w": [
+   16,
+   22
+  ],
+  "draw": 0,
+  "fall": [
+   4,
+   3
+  ],
+  "dart": [
+   14,
+   12
+  ],
+  "slash": [
+   4,
+   1
+  ],
+  "kills": [
+   15,
+   18
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 51,
+    "slashes": 14,
+    "kicks": 23,
+    "dashes": 35,
+    "recalls": 30
+   },
+   {
+    "throws": 39,
+    "slashes": 8,
+    "kicks": 9,
+    "dashes": 107,
+    "recalls": 25
+   }
+  ]
+ },
+ "kq_fixspeed|stonecircle|11001-11019": {
+  "n": 38,
+  "w": [
+   20,
+   16
+  ],
+  "draw": 2,
+  "fall": [
+   1,
+   2
+  ],
+  "dart": [
+   17,
+   18
+  ],
+  "slash": [
+   0,
+   2
+  ],
+  "kills": [
+   22,
+   18
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 73,
+    "slashes": 27,
+    "kicks": 84,
+    "dashes": 93,
+    "recalls": 20
+   },
+   {
+    "throws": 45,
+    "slashes": 10,
+    "kicks": 18,
+    "dashes": 154,
+    "recalls": 8
+   }
+  ]
+ },
+ "kq_orig2|twinlakes|11020-11038": {
+  "n": 38,
+  "w": [
+   21,
+   17
+  ],
+  "draw": 0,
+  "fall": [
+   2,
+   3
+  ],
+  "dart": [
+   14,
+   18
+  ],
+  "slash": [
+   1,
+   0
+  ],
+  "kills": [
+   21,
+   17
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 65,
+    "slashes": 19,
+    "kicks": 41,
+    "dashes": 51,
+    "recalls": 19
+   },
+   {
+    "throws": 40,
+    "slashes": 13,
+    "kicks": 10,
+    "dashes": 132,
+    "recalls": 12
+   }
+  ]
+ },
+ "kq_orig2|yinyang|11020-11038": {
+  "n": 38,
+  "w": [
+   23,
+   15
+  ],
+  "draw": 0,
+  "fall": [
+   0,
+   1
+  ],
+  "dart": [
+   13,
+   21
+  ],
+  "slash": [
+   2,
+   1
+  ],
+  "kills": [
+   23,
+   15
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 86,
+    "slashes": 22,
+    "kicks": 53,
+    "dashes": 73,
+    "recalls": 27
+   },
+   {
+    "throws": 41,
+    "slashes": 14,
+    "kicks": 13,
+    "dashes": 162,
+    "recalls": 11
+   }
+  ]
+ },
+ "kq_orig2|icefloes|11020-11038": {
+  "n": 38,
+  "w": [
+   21,
+   17
+  ],
+  "draw": 0,
+  "fall": [
+   1,
+   4
+  ],
+  "dart": [
+   13,
+   17
+  ],
+  "slash": [
+   3,
+   0
+  ],
+  "kills": [
+   21,
+   16
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 77,
+    "slashes": 18,
+    "kicks": 61,
+    "dashes": 68,
+    "recalls": 38
+   },
+   {
+    "throws": 51,
+    "slashes": 14,
+    "kicks": 4,
+    "dashes": 162,
+    "recalls": 25
+   }
+  ]
+ },
+ "kq_orig2|ruins|11020-11038": {
+  "n": 38,
+  "w": [
+   22,
+   16
+  ],
+  "draw": 0,
+  "fall": [
+   0,
+   0
+  ],
+  "dart": [
+   12,
+   18
+  ],
+  "slash": [
+   4,
+   4
+  ],
+  "kills": [
+   22,
+   16
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 57,
+    "slashes": 19,
+    "kicks": 53,
+    "dashes": 63,
+    "recalls": 36
+   },
+   {
+    "throws": 44,
+    "slashes": 20,
+    "kicks": 6,
+    "dashes": 159,
+    "recalls": 7
+   }
+  ]
+ },
+ "kq_orig2|skybridge|11020-11038": {
+  "n": 38,
+  "w": [
+   21,
+   16
+  ],
+  "draw": 1,
+  "fall": [
+   2,
+   2
+  ],
+  "dart": [
+   13,
+   16
+  ],
+  "slash": [
+   2,
+   4
+  ],
+  "kills": [
+   22,
+   15
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 62,
+    "slashes": 20,
+    "kicks": 44,
+    "dashes": 51,
+    "recalls": 37
+   },
+   {
+    "throws": 39,
+    "slashes": 12,
+    "kicks": 8,
+    "dashes": 131,
+    "recalls": 24
+   }
+  ]
+ },
+ "kq_orig2|stonecircle|11020-11038": {
+  "n": 38,
+  "w": [
+   19,
+   19
+  ],
+  "draw": 0,
+  "fall": [
+   0,
+   0
+  ],
+  "dart": [
+   16,
+   16
+  ],
+  "slash": [
+   3,
+   3
+  ],
+  "kills": [
+   19,
+   19
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 79,
+    "slashes": 29,
+    "kicks": 84,
+    "dashes": 101,
+    "recalls": 13
+   },
+   {
+    "throws": 53,
+    "slashes": 13,
+    "kicks": 12,
+    "dashes": 168,
+    "recalls": 9
+   }
+  ]
+ },
+ "kq_fixspeed|twinlakes|11020-11038": {
+  "n": 38,
+  "w": [
+   19,
+   19
+  ],
+  "draw": 0,
+  "fall": [
+   5,
+   5
+  ],
+  "dart": [
+   10,
+   13
+  ],
+  "slash": [
+   4,
+   1
+  ],
+  "kills": [
+   18,
+   16
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 61,
+    "slashes": 23,
+    "kicks": 56,
+    "dashes": 69,
+    "recalls": 63
+   },
+   {
+    "throws": 40,
+    "slashes": 15,
+    "kicks": 7,
+    "dashes": 137,
+    "recalls": 3
+   }
+  ]
+ },
+ "kq_fixspeed|yinyang|11020-11038": {
+  "n": 38,
+  "w": [
+   12,
+   26
+  ],
+  "draw": 0,
+  "fall": [
+   2,
+   2
+  ],
+  "dart": [
+   20,
+   8
+  ],
+  "slash": [
+   4,
+   2
+  ],
+  "kills": [
+   12,
+   24
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 73,
+    "slashes": 24,
+    "kicks": 69,
+    "dashes": 82,
+    "recalls": 34
+   },
+   {
+    "throws": 56,
+    "slashes": 17,
+    "kicks": 12,
+    "dashes": 149,
+    "recalls": 15
+   }
+  ]
+ },
+ "kq_fixspeed|icefloes|11020-11038": {
+  "n": 38,
+  "w": [
+   17,
+   21
+  ],
+  "draw": 0,
+  "fall": [
+   4,
+   2
+  ],
+  "dart": [
+   16,
+   13
+  ],
+  "slash": [
+   1,
+   2
+  ],
+  "kills": [
+   17,
+   18
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 67,
+    "slashes": 26,
+    "kicks": 57,
+    "dashes": 69,
+    "recalls": 76
+   },
+   {
+    "throws": 50,
+    "slashes": 16,
+    "kicks": 9,
+    "dashes": 173,
+    "recalls": 38
+   }
+  ]
+ },
+ "kq_fixspeed|ruins|11020-11038": {
+  "n": 38,
+  "w": [
+   17,
+   20
+  ],
+  "draw": 1,
+  "fall": [
+   0,
+   3
+  ],
+  "dart": [
+   15,
+   11
+  ],
+  "slash": [
+   6,
+   4
+  ],
+  "kills": [
+   18,
+   21
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 58,
+    "slashes": 26,
+    "kicks": 106,
+    "dashes": 96,
+    "recalls": 43
+   },
+   {
+    "throws": 34,
+    "slashes": 24,
+    "kicks": 3,
+    "dashes": 169,
+    "recalls": 8
+   }
+  ]
+ },
+ "kq_fixspeed|skybridge|11020-11038": {
+  "n": 38,
+  "w": [
+   14,
+   23
+  ],
+  "draw": 1,
+  "fall": [
+   8,
+   3
+  ],
+  "dart": [
+   12,
+   11
+  ],
+  "slash": [
+   4,
+   1
+  ],
+  "kills": [
+   15,
+   20
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 54,
+    "slashes": 22,
+    "kicks": 34,
+    "dashes": 42,
+    "recalls": 34
+   },
+   {
+    "throws": 36,
+    "slashes": 15,
+    "kicks": 10,
+    "dashes": 106,
+    "recalls": 27
+   }
+  ]
+ },
+ "kq_fixspeed|stonecircle|11020-11038": {
+  "n": 38,
+  "w": [
+   22,
+   16
+  ],
+  "draw": 0,
+  "fall": [
+   0,
+   2
+  ],
+  "dart": [
+   15,
+   16
+  ],
+  "slash": [
+   1,
+   4
+  ],
+  "kills": [
+   22,
+   16
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 77,
+    "slashes": 17,
+    "kicks": 102,
+    "dashes": 105,
+    "recalls": 43
+   },
+   {
+    "throws": 42,
+    "slashes": 23,
+    "kicks": 6,
+    "dashes": 160,
+    "recalls": 11
+   }
+  ]
+ },
+ "ffa_kqdg|twinlakes|11001-11006": {
+  "n": 24,
+  "w": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "draw": 0,
+  "fall": [
+   4,
+   1,
+   0,
+   1
+  ],
+  "dart": [
+   12,
+   10,
+   14,
+   14
+  ],
+  "slash": [
+   3,
+   6,
+   6,
+   1
+  ],
+  "kills": [
+   12,
+   16,
+   19,
+   21
+  ],
+  "pts": [
+   42.0,
+   47.5,
+   58.0,
+   64.5
+  ],
+  "faults": [
+   0,
+   2,
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 46,
+    "slashes": 14,
+    "kicks": 2,
+    "dashes": 31,
+    "recalls": 7
+   },
+   {
+    "throws": 35,
+    "slashes": 13,
+    "kicks": 11,
+    "dashes": 66,
+    "recalls": 7
+   },
+   {
+    "throws": 36,
+    "slashes": 13,
+    "kicks": 10,
+    "dashes": 55,
+    "recalls": 7
+   },
+   {
+    "throws": 46,
+    "slashes": 11,
+    "kicks": 16,
+    "dashes": 21,
+    "recalls": 9
+   }
+  ]
+ },
+ "ffa_kqdg|icefloes|11001-11006": {
+  "n": 24,
+  "w": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "draw": 0,
+  "fall": [
+   4,
+   0,
+   3,
+   1
+  ],
+  "dart": [
+   17,
+   18,
+   17,
+   10
+  ],
+  "slash": [
+   0,
+   0,
+   1,
+   3
+  ],
+  "kills": [
+   13,
+   18,
+   17,
+   23
+  ],
+  "pts": [
+   45.5,
+   55.0,
+   45.5,
+   69.0
+  ],
+  "faults": [
+   0,
+   3,
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 54,
+    "slashes": 23,
+    "kicks": 6,
+    "dashes": 39,
+    "recalls": 16
+   },
+   {
+    "throws": 46,
+    "slashes": 11,
+    "kicks": 21,
+    "dashes": 92,
+    "recalls": 10
+   },
+   {
+    "throws": 34,
+    "slashes": 3,
+    "kicks": 11,
+    "dashes": 65,
+    "recalls": 9
+   },
+   {
+    "throws": 54,
+    "slashes": 10,
+    "kicks": 25,
+    "dashes": 25,
+    "recalls": 17
+   }
+  ]
+ },
+ "ffa_kqdg|skybridge|11001-11006": {
+  "n": 24,
+  "w": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "draw": 0,
+  "fall": [
+   4,
+   0,
+   2,
+   2
+  ],
+  "dart": [
+   15,
+   20,
+   10,
+   13
+  ],
+  "slash": [
+   3,
+   0,
+   2,
+   1
+  ],
+  "kills": [
+   14,
+   12,
+   25,
+   18
+  ],
+  "pts": [
+   39.0,
+   46.0,
+   74.0,
+   54.0
+  ],
+  "faults": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 46,
+    "slashes": 16,
+    "kicks": 6,
+    "dashes": 39,
+    "recalls": 17
+   },
+   {
+    "throws": 42,
+    "slashes": 10,
+    "kicks": 16,
+    "dashes": 98,
+    "recalls": 11
+   },
+   {
+    "throws": 49,
+    "slashes": 14,
+    "kicks": 5,
+    "dashes": 52,
+    "recalls": 28
+   },
+   {
+    "throws": 39,
+    "slashes": 18,
+    "kicks": 7,
+    "dashes": 22,
+    "recalls": 11
+   }
+  ]
+ },
+ "ffa_kdiag|twinlakes|11001-11006": {
+  "n": 24,
+  "w": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "draw": 0,
+  "fall": [
+   7,
+   1,
+   3,
+   1
+  ],
+  "dart": [
+   9,
+   14,
+   11,
+   14
+  ],
+  "slash": [
+   1,
+   4,
+   3,
+   4
+  ],
+  "kills": [
+   16,
+   13,
+   21,
+   18
+  ],
+  "pts": [
+   54.0,
+   41.0,
+   59.5,
+   57.5
+  ],
+  "faults": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 55,
+    "slashes": 16,
+    "kicks": 5,
+    "dashes": 43,
+    "recalls": 6
+   },
+   {
+    "throws": 42,
+    "slashes": 7,
+    "kicks": 16,
+    "dashes": 71,
+    "recalls": 9
+   },
+   {
+    "throws": 32,
+    "slashes": 8,
+    "kicks": 9,
+    "dashes": 47,
+    "recalls": 14
+   },
+   {
+    "throws": 46,
+    "slashes": 12,
+    "kicks": 12,
+    "dashes": 24,
+    "recalls": 19
+   }
+  ]
+ },
+ "ffa_kdiag|icefloes|11001-11006": {
+  "n": 24,
+  "w": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "draw": 0,
+  "fall": [
+   7,
+   3,
+   4,
+   2
+  ],
+  "dart": [
+   12,
+   15,
+   9,
+   11
+  ],
+  "slash": [
+   2,
+   1,
+   3,
+   3
+  ],
+  "kills": [
+   14,
+   17,
+   17,
+   20
+  ],
+  "pts": [
+   45.5,
+   52.5,
+   52.0,
+   62.0
+  ],
+  "faults": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 48,
+    "slashes": 13,
+    "kicks": 12,
+    "dashes": 44,
+    "recalls": 18
+   },
+   {
+    "throws": 46,
+    "slashes": 16,
+    "kicks": 18,
+    "dashes": 104,
+    "recalls": 11
+   },
+   {
+    "throws": 39,
+    "slashes": 8,
+    "kicks": 10,
+    "dashes": 63,
+    "recalls": 8
+   },
+   {
+    "throws": 54,
+    "slashes": 8,
+    "kicks": 24,
+    "dashes": 28,
+    "recalls": 18
+   }
+  ]
+ },
+ "ffa_kdiag|skybridge|11001-11006": {
+  "n": 24,
+  "w": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "draw": 0,
+  "fall": [
+   2,
+   1,
+   3,
+   3
+  ],
+  "dart": [
+   12,
+   18,
+   8,
+   12
+  ],
+  "slash": [
+   4,
+   0,
+   6,
+   3
+  ],
+  "kills": [
+   18,
+   18,
+   16,
+   18
+  ],
+  "pts": [
+   55.0,
+   53.0,
+   53.0,
+   53.0
+  ],
+  "faults": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 51,
+    "slashes": 18,
+    "kicks": 4,
+    "dashes": 31,
+    "recalls": 22
+   },
+   {
+    "throws": 44,
+    "slashes": 18,
+    "kicks": 10,
+    "dashes": 105,
+    "recalls": 8
+   },
+   {
+    "throws": 33,
+    "slashes": 10,
+    "kicks": 6,
+    "dashes": 41,
+    "recalls": 9
+   },
+   {
+    "throws": 28,
+    "slashes": 26,
+    "kicks": 10,
+    "dashes": 24,
+    "recalls": 5
+   }
+  ]
+ },
+ "duel_kdiag|twinlakes|11001-11006": {
+  "n": 12,
+  "w": [
+   5,
+   7
+  ],
+  "draw": 0,
+  "fall": [
+   1,
+   0
+  ],
+  "dart": [
+   5,
+   5
+  ],
+  "slash": [
+   1,
+   0
+  ],
+  "kills": [
+   5,
+   6
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 25,
+    "slashes": 6,
+    "kicks": 22,
+    "dashes": 27,
+    "recalls": 7
+   },
+   {
+    "throws": 22,
+    "slashes": 7,
+    "kicks": 3,
+    "dashes": 52,
+    "recalls": 8
+   }
+  ]
+ },
+ "duel_kdiag|icefloes|11001-11006": {
+  "n": 12,
+  "w": [
+   6,
+   6
+  ],
+  "draw": 0,
+  "fall": [
+   1,
+   1
+  ],
+  "dart": [
+   5,
+   5
+  ],
+  "slash": [
+   0,
+   0
+  ],
+  "kills": [
+   6,
+   5
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 22,
+    "slashes": 2,
+    "kicks": 21,
+    "dashes": 21,
+    "recalls": 34
+   },
+   {
+    "throws": 12,
+    "slashes": 4,
+    "kicks": 2,
+    "dashes": 53,
+    "recalls": 12
+   }
+  ]
+ },
+ "duel_kdiag|skybridge|11001-11006": {
+  "n": 12,
+  "w": [
+   6,
+   6
+  ],
+  "draw": 0,
+  "fall": [
+   2,
+   2
+  ],
+  "dart": [
+   3,
+   3
+  ],
+  "slash": [
+   1,
+   1
+  ],
+  "kills": [
+   6,
+   4
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 15,
+    "slashes": 7,
+    "kicks": 18,
+    "dashes": 19,
+    "recalls": 17
+   },
+   {
+    "throws": 16,
+    "slashes": 6,
+    "kicks": 2,
+    "dashes": 38,
+    "recalls": 3
+   }
+  ]
+ },
+ "duel_dqdiag|twinlakes|11001-11006": {
+  "n": 12,
+  "w": [
+   8,
+   4
+  ],
+  "draw": 0,
+  "fall": [
+   0,
+   1
+  ],
+  "dart": [
+   3,
+   7
+  ],
+  "slash": [
+   1,
+   0
+  ],
+  "kills": [
+   8,
+   4
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 44,
+    "slashes": 0,
+    "kicks": 4,
+    "dashes": 50,
+    "recalls": 10
+   },
+   {
+    "throws": 17,
+    "slashes": 8,
+    "kicks": 3,
+    "dashes": 43,
+    "recalls": 0
+   }
+  ]
+ },
+ "duel_dqdiag|icefloes|11001-11006": {
+  "n": 12,
+  "w": [
+   6,
+   6
+  ],
+  "draw": 0,
+  "fall": [
+   0,
+   0
+  ],
+  "dart": [
+   3,
+   6
+  ],
+  "slash": [
+   3,
+   0
+  ],
+  "kills": [
+   6,
+   6
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 31,
+    "slashes": 2,
+    "kicks": 2,
+    "dashes": 39,
+    "recalls": 6
+   },
+   {
+    "throws": 14,
+    "slashes": 6,
+    "kicks": 0,
+    "dashes": 40,
+    "recalls": 0
+   }
+  ]
+ },
+ "duel_dqdiag|skybridge|11001-11006": {
+  "n": 12,
+  "w": [
+   8,
+   4
+  ],
+  "draw": 0,
+  "fall": [
+   1,
+   0
+  ],
+  "dart": [
+   3,
+   8
+  ],
+  "slash": [
+   0,
+   0
+  ],
+  "kills": [
+   8,
+   4
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 39,
+    "slashes": 0,
+    "kicks": 2,
+    "dashes": 54,
+    "recalls": 25
+   },
+   {
+    "throws": 14,
+    "slashes": 6,
+    "kicks": 2,
+    "dashes": 43,
+    "recalls": 14
+   }
+  ]
+ },
+ "ffa_dqdiag|twinlakes|11001-11006": {
+  "n": 24,
+  "w": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "draw": 0,
+  "fall": [
+   3,
+   2,
+   10,
+   2
+  ],
+  "dart": [
+   10,
+   14,
+   11,
+   11
+  ],
+  "slash": [
+   4,
+   3,
+   0,
+   2
+  ],
+  "kills": [
+   21,
+   12,
+   11,
+   21
+  ],
+  "pts": [
+   58.0,
+   36.5,
+   45.5,
+   69.0
+  ],
+  "faults": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 44,
+    "slashes": 7,
+    "kicks": 9,
+    "dashes": 60,
+    "recalls": 13
+   },
+   {
+    "throws": 35,
+    "slashes": 11,
+    "kicks": 16,
+    "dashes": 59,
+    "recalls": 2
+   },
+   {
+    "throws": 52,
+    "slashes": 11,
+    "kicks": 5,
+    "dashes": 38,
+    "recalls": 13
+   },
+   {
+    "throws": 47,
+    "slashes": 9,
+    "kicks": 22,
+    "dashes": 26,
+    "recalls": 14
+   }
+  ]
+ },
+ "ffa_dqdiag|icefloes|11001-11006": {
+  "n": 24,
+  "w": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "draw": 0,
+  "fall": [
+   1,
+   2,
+   6,
+   0
+  ],
+  "dart": [
+   15,
+   12,
+   15,
+   14
+  ],
+  "slash": [
+   3,
+   1,
+   1,
+   2
+  ],
+  "kills": [
+   19,
+   21,
+   7,
+   20
+  ],
+  "pts": [
+   47.0,
+   68.0,
+   38.0,
+   58.0
+  ],
+  "faults": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 29,
+    "slashes": 11,
+    "kicks": 6,
+    "dashes": 53,
+    "recalls": 3
+   },
+   {
+    "throws": 56,
+    "slashes": 19,
+    "kicks": 17,
+    "dashes": 106,
+    "recalls": 6
+   },
+   {
+    "throws": 42,
+    "slashes": 21,
+    "kicks": 9,
+    "dashes": 31,
+    "recalls": 23
+   },
+   {
+    "throws": 43,
+    "slashes": 14,
+    "kicks": 10,
+    "dashes": 14,
+    "recalls": 15
+   }
+  ]
+ },
+ "ffa_dqdiag|skybridge|11001-11006": {
+  "n": 24,
+  "w": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "draw": 0,
+  "fall": [
+   3,
+   2,
+   4,
+   1
+  ],
+  "dart": [
+   13,
+   10,
+   10,
+   13
+  ],
+  "slash": [
+   2,
+   4,
+   6,
+   4
+  ],
+  "kills": [
+   22,
+   15,
+   16,
+   13
+  ],
+  "pts": [
+   69.0,
+   49.0,
+   46.5,
+   45.5
+  ],
+  "faults": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 48,
+    "slashes": 20,
+    "kicks": 10,
+    "dashes": 72,
+    "recalls": 23
+   },
+   {
+    "throws": 47,
+    "slashes": 19,
+    "kicks": 15,
+    "dashes": 110,
+    "recalls": 19
+   },
+   {
+    "throws": 54,
+    "slashes": 18,
+    "kicks": 10,
+    "dashes": 38,
+    "recalls": 8
+   },
+   {
+    "throws": 40,
+    "slashes": 24,
+    "kicks": 14,
+    "dashes": 23,
+    "recalls": 15
+   }
+  ]
+ },
+ "dg_orig|twinlakes|11001-11019": {
+  "n": 38,
+  "w": [
+   15,
+   23
+  ],
+  "draw": 0,
+  "fall": [
+   4,
+   1
+  ],
+  "dart": [
+   19,
+   14
+  ],
+  "slash": [
+   0,
+   0
+  ],
+  "kills": [
+   15,
+   22
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 102,
+    "slashes": 1,
+    "kicks": 17,
+    "dashes": 116,
+    "recalls": 14
+   },
+   {
+    "throws": 61,
+    "slashes": 5,
+    "kicks": 21,
+    "dashes": 34,
+    "recalls": 12
+   }
+  ]
+ },
+ "dg_orig|yinyang|11001-11019": {
+  "n": 38,
+  "w": [
+   19,
+   19
+  ],
+  "draw": 0,
+  "fall": [
+   1,
+   1
+  ],
+  "dart": [
+   13,
+   15
+  ],
+  "slash": [
+   5,
+   3
+  ],
+  "kills": [
+   19,
+   19
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 83,
+    "slashes": 5,
+    "kicks": 15,
+    "dashes": 94,
+    "recalls": 10
+   },
+   {
+    "throws": 52,
+    "slashes": 13,
+    "kicks": 13,
+    "dashes": 31,
+    "recalls": 1
+   }
+  ]
+ },
+ "dg_orig|icefloes|11001-11019": {
+  "n": 38,
+  "w": [
+   14,
+   24
+  ],
+  "draw": 0,
+  "fall": [
+   4,
+   1
+  ],
+  "dart": [
+   16,
+   11
+  ],
+  "slash": [
+   4,
+   2
+  ],
+  "kills": [
+   14,
+   24
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 123,
+    "slashes": 3,
+    "kicks": 14,
+    "dashes": 164,
+    "recalls": 25
+   },
+   {
+    "throws": 69,
+    "slashes": 15,
+    "kicks": 24,
+    "dashes": 22,
+    "recalls": 8
+   }
+  ]
+ },
+ "dg_orig|ruins|11001-11019": {
+  "n": 38,
+  "w": [
+   8,
+   29
+  ],
+  "draw": 1,
+  "fall": [
+   0,
+   0
+  ],
+  "dart": [
+   16,
+   7
+  ],
+  "slash": [
+   14,
+   2
+  ],
+  "kills": [
+   9,
+   30
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 172,
+    "slashes": 3,
+    "kicks": 3,
+    "dashes": 130,
+    "recalls": 20
+   },
+   {
+    "throws": 30,
+    "slashes": 29,
+    "kicks": 6,
+    "dashes": 30,
+    "recalls": 0
+   }
+  ]
+ },
+ "dg_orig|skybridge|11001-11019": {
+  "n": 38,
+  "w": [
+   18,
+   19
+  ],
+  "draw": 1,
+  "fall": [
+   5,
+   1
+  ],
+  "dart": [
+   13,
+   17
+  ],
+  "slash": [
+   2,
+   1
+  ],
+  "kills": [
+   19,
+   20
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 157,
+    "slashes": 1,
+    "kicks": 19,
+    "dashes": 173,
+    "recalls": 75
+   },
+   {
+    "throws": 76,
+    "slashes": 33,
+    "kicks": 11,
+    "dashes": 25,
+    "recalls": 32
+   }
+  ]
+ },
+ "dg_orig|stonecircle|11001-11019": {
+  "n": 38,
+  "w": [
+   20,
+   18
+  ],
+  "draw": 0,
+  "fall": [
+   2,
+   0
+  ],
+  "dart": [
+   12,
+   19
+  ],
+  "slash": [
+   4,
+   1
+  ],
+  "kills": [
+   20,
+   18
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 108,
+    "slashes": 2,
+    "kicks": 7,
+    "dashes": 80,
+    "recalls": 12
+   },
+   {
+    "throws": 41,
+    "slashes": 9,
+    "kicks": 12,
+    "dashes": 54,
+    "recalls": 1
+   }
+  ]
+ },
+ "dg_cap2400|twinlakes|11001-11019": {
+  "n": 38,
+  "w": [
+   22,
+   16
+  ],
+  "draw": 0,
+  "fall": [
+   2,
+   1
+  ],
+  "dart": [
+   10,
+   20
+  ],
+  "slash": [
+   4,
+   1
+  ],
+  "kills": [
+   22,
+   16
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 76,
+    "slashes": 2,
+    "kicks": 10,
+    "dashes": 117,
+    "recalls": 8
+   },
+   {
+    "throws": 52,
+    "slashes": 15,
+    "kicks": 21,
+    "dashes": 42,
+    "recalls": 8
+   }
+  ]
+ },
+ "dg_cap2400|yinyang|11001-11019": {
+  "n": 38,
+  "w": [
+   12,
+   25
+  ],
+  "draw": 1,
+  "fall": [
+   1,
+   0
+  ],
+  "dart": [
+   17,
+   11
+  ],
+  "slash": [
+   8,
+   2
+  ],
+  "kills": [
+   13,
+   25
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 71,
+    "slashes": 2,
+    "kicks": 10,
+    "dashes": 112,
+    "recalls": 20
+   },
+   {
+    "throws": 58,
+    "slashes": 16,
+    "kicks": 16,
+    "dashes": 32,
+    "recalls": 3
+   }
+  ]
+ },
+ "dg_cap2400|icefloes|11001-11019": {
+  "n": 38,
+  "w": [
+   15,
+   22
+  ],
+  "draw": 1,
+  "fall": [
+   4,
+   3
+  ],
+  "dart": [
+   17,
+   12
+  ],
+  "slash": [
+   2,
+   1
+  ],
+  "kills": [
+   16,
+   22
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 81,
+    "slashes": 1,
+    "kicks": 11,
+    "dashes": 170,
+    "recalls": 37
+   },
+   {
+    "throws": 68,
+    "slashes": 19,
+    "kicks": 18,
+    "dashes": 26,
+    "recalls": 14
+   }
+  ]
+ },
+ "dg_cap2400|ruins|11001-11019": {
+  "n": 38,
+  "w": [
+   19,
+   18
+  ],
+  "draw": 1,
+  "fall": [
+   0,
+   0
+  ],
+  "dart": [
+   12,
+   18
+  ],
+  "slash": [
+   7,
+   2
+  ],
+  "kills": [
+   20,
+   19
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 153,
+    "slashes": 3,
+    "kicks": 8,
+    "dashes": 130,
+    "recalls": 22
+   },
+   {
+    "throws": 39,
+    "slashes": 25,
+    "kicks": 12,
+    "dashes": 33,
+    "recalls": 2
+   }
+  ]
+ },
+ "dg_cap2400|skybridge|11001-11019": {
+  "n": 38,
+  "w": [
+   16,
+   22
+  ],
+  "draw": 0,
+  "fall": [
+   4,
+   1
+  ],
+  "dart": [
+   15,
+   14
+  ],
+  "slash": [
+   3,
+   1
+  ],
+  "kills": [
+   16,
+   22
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 163,
+    "slashes": 3,
+    "kicks": 16,
+    "dashes": 200,
+    "recalls": 99
+   },
+   {
+    "throws": 83,
+    "slashes": 54,
+    "kicks": 14,
+    "dashes": 21,
+    "recalls": 23
+   }
+  ]
+ },
+ "dg_cap2400|stonecircle|11001-11019": {
+  "n": 38,
+  "w": [
+   18,
+   20
+  ],
+  "draw": 0,
+  "fall": [
+   2,
+   0
+  ],
+  "dart": [
+   15,
+   16
+  ],
+  "slash": [
+   3,
+   2
+  ],
+  "kills": [
+   18,
+   20
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 89,
+    "slashes": 5,
+    "kicks": 4,
+    "dashes": 95,
+    "recalls": 19
+   },
+   {
+    "throws": 48,
+    "slashes": 14,
+    "kicks": 14,
+    "dashes": 42,
+    "recalls": 0
+   }
+  ]
+ },
+ "dg_orig|twinlakes|11020-11038": {
+  "n": 38,
+  "w": [
+   18,
+   20
+  ],
+  "draw": 0,
+  "fall": [
+   4,
+   1
+  ],
+  "dart": [
+   16,
+   15
+  ],
+  "slash": [
+   0,
+   2
+  ],
+  "kills": [
+   18,
+   18
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 101,
+    "slashes": 4,
+    "kicks": 17,
+    "dashes": 114,
+    "recalls": 20
+   },
+   {
+    "throws": 69,
+    "slashes": 4,
+    "kicks": 17,
+    "dashes": 35,
+    "recalls": 8
+   }
+  ]
+ },
+ "dg_orig|yinyang|11020-11038": {
+  "n": 38,
+  "w": [
+   11,
+   26
+  ],
+  "draw": 1,
+  "fall": [
+   3,
+   0
+  ],
+  "dart": [
+   13,
+   12
+  ],
+  "slash": [
+   11,
+   0
+  ],
+  "kills": [
+   12,
+   27
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 82,
+    "slashes": 0,
+    "kicks": 10,
+    "dashes": 92,
+    "recalls": 7
+   },
+   {
+    "throws": 49,
+    "slashes": 13,
+    "kicks": 18,
+    "dashes": 36,
+    "recalls": 1
+   }
+  ]
+ },
+ "dg_orig|icefloes|11020-11038": {
+  "n": 38,
+  "w": [
+   22,
+   16
+  ],
+  "draw": 0,
+  "fall": [
+   4,
+   1
+  ],
+  "dart": [
+   10,
+   21
+  ],
+  "slash": [
+   2,
+   0
+  ],
+  "kills": [
+   22,
+   15
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 156,
+    "slashes": 4,
+    "kicks": 13,
+    "dashes": 193,
+    "recalls": 23
+   },
+   {
+    "throws": 67,
+    "slashes": 19,
+    "kicks": 23,
+    "dashes": 24,
+    "recalls": 12
+   }
+  ]
+ },
+ "dg_orig|ruins|11020-11038": {
+  "n": 38,
+  "w": [
+   17,
+   21
+  ],
+  "draw": 0,
+  "fall": [
+   1,
+   1
+  ],
+  "dart": [
+   17,
+   15
+  ],
+  "slash": [
+   3,
+   1
+  ],
+  "kills": [
+   17,
+   21
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 212,
+    "slashes": 2,
+    "kicks": 8,
+    "dashes": 148,
+    "recalls": 31
+   },
+   {
+    "throws": 37,
+    "slashes": 18,
+    "kicks": 16,
+    "dashes": 30,
+    "recalls": 0
+   }
+  ]
+ },
+ "dg_orig|skybridge|11020-11038": {
+  "n": 38,
+  "w": [
+   15,
+   22
+  ],
+  "draw": 1,
+  "fall": [
+   4,
+   2
+  ],
+  "dart": [
+   18,
+   13
+  ],
+  "slash": [
+   1,
+   1
+  ],
+  "kills": [
+   16,
+   21
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 127,
+    "slashes": 8,
+    "kicks": 16,
+    "dashes": 172,
+    "recalls": 88
+   },
+   {
+    "throws": 79,
+    "slashes": 34,
+    "kicks": 16,
+    "dashes": 16,
+    "recalls": 25
+   }
+  ]
+ },
+ "dg_orig|stonecircle|11020-11038": {
+  "n": 38,
+  "w": [
+   15,
+   23
+  ],
+  "draw": 0,
+  "fall": [
+   0,
+   0
+  ],
+  "dart": [
+   13,
+   15
+  ],
+  "slash": [
+   10,
+   0
+  ],
+  "kills": [
+   15,
+   23
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 103,
+    "slashes": 2,
+    "kicks": 9,
+    "dashes": 80,
+    "recalls": 5
+   },
+   {
+    "throws": 42,
+    "slashes": 13,
+    "kicks": 9,
+    "dashes": 50,
+    "recalls": 0
+   }
+  ]
+ },
+ "dg_cap2400|twinlakes|11020-11038": {
+  "n": 38,
+  "w": [
+   17,
+   21
+  ],
+  "draw": 0,
+  "fall": [
+   3,
+   0
+  ],
+  "dart": [
+   15,
+   16
+  ],
+  "slash": [
+   3,
+   1
+  ],
+  "kills": [
+   17,
+   20
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 72,
+    "slashes": 3,
+    "kicks": 17,
+    "dashes": 114,
+    "recalls": 22
+   },
+   {
+    "throws": 60,
+    "slashes": 17,
+    "kicks": 15,
+    "dashes": 27,
+    "recalls": 3
+   }
+  ]
+ },
+ "dg_cap2400|yinyang|11020-11038": {
+  "n": 38,
+  "w": [
+   17,
+   21
+  ],
+  "draw": 0,
+  "fall": [
+   1,
+   0
+  ],
+  "dart": [
+   12,
+   17
+  ],
+  "slash": [
+   8,
+   0
+  ],
+  "kills": [
+   17,
+   21
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 68,
+    "slashes": 0,
+    "kicks": 12,
+    "dashes": 105,
+    "recalls": 11
+   },
+   {
+    "throws": 51,
+    "slashes": 15,
+    "kicks": 13,
+    "dashes": 26,
+    "recalls": 2
+   }
+  ]
+ },
+ "dg_cap2400|icefloes|11020-11038": {
+  "n": 38,
+  "w": [
+   20,
+   18
+  ],
+  "draw": 0,
+  "fall": [
+   1,
+   1
+  ],
+  "dart": [
+   14,
+   17
+  ],
+  "slash": [
+   3,
+   2
+  ],
+  "kills": [
+   20,
+   18
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 82,
+    "slashes": 3,
+    "kicks": 13,
+    "dashes": 174,
+    "recalls": 15
+   },
+   {
+    "throws": 62,
+    "slashes": 15,
+    "kicks": 16,
+    "dashes": 25,
+    "recalls": 11
+   }
+  ]
+ },
+ "dg_cap2400|ruins|11020-11038": {
+  "n": 38,
+  "w": [
+   19,
+   19
+  ],
+  "draw": 0,
+  "fall": [
+   1,
+   0
+  ],
+  "dart": [
+   13,
+   19
+  ],
+  "slash": [
+   5,
+   0
+  ],
+  "kills": [
+   19,
+   19
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 186,
+    "slashes": 0,
+    "kicks": 5,
+    "dashes": 147,
+    "recalls": 33
+   },
+   {
+    "throws": 38,
+    "slashes": 18,
+    "kicks": 12,
+    "dashes": 37,
+    "recalls": 4
+   }
+  ]
+ },
+ "dg_cap2400|skybridge|11020-11038": {
+  "n": 38,
+  "w": [
+   19,
+   18
+  ],
+  "draw": 1,
+  "fall": [
+   4,
+   3
+  ],
+  "dart": [
+   14,
+   16
+  ],
+  "slash": [
+   1,
+   1
+  ],
+  "kills": [
+   20,
+   19
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 155,
+    "slashes": 5,
+    "kicks": 16,
+    "dashes": 177,
+    "recalls": 46
+   },
+   {
+    "throws": 62,
+    "slashes": 30,
+    "kicks": 13,
+    "dashes": 12,
+    "recalls": 51
+   }
+  ]
+ },
+ "dg_cap2400|stonecircle|11020-11038": {
+  "n": 38,
+  "w": [
+   16,
+   21
+  ],
+  "draw": 1,
+  "fall": [
+   0,
+   0
+  ],
+  "dart": [
+   15,
+   13
+  ],
+  "slash": [
+   7,
+   4
+  ],
+  "kills": [
+   17,
+   22
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 102,
+    "slashes": 9,
+    "kicks": 9,
+    "dashes": 101,
+    "recalls": 41
+   },
+   {
+    "throws": 49,
+    "slashes": 15,
+    "kicks": 17,
+    "dashes": 43,
+    "recalls": 0
+   }
+  ]
+ },
+ "dg_melee700|twinlakes|11001-11019": {
+  "n": 38,
+  "w": [
+   15,
+   23
+  ],
+  "draw": 0,
+  "fall": [
+   3,
+   2
+  ],
+  "dart": [
+   20,
+   13
+  ],
+  "slash": [
+   0,
+   0
+  ],
+  "kills": [
+   15,
+   22
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 96,
+    "slashes": 4,
+    "kicks": 13,
+    "dashes": 105,
+    "recalls": 15
+   },
+   {
+    "throws": 61,
+    "slashes": 4,
+    "kicks": 17,
+    "dashes": 28,
+    "recalls": 7
+   }
+  ]
+ },
+ "dg_melee700|yinyang|11001-11019": {
+  "n": 38,
+  "w": [
+   22,
+   15
+  ],
+  "draw": 1,
+  "fall": [
+   2,
+   1
+  ],
+  "dart": [
+   10,
+   20
+  ],
+  "slash": [
+   4,
+   2
+  ],
+  "kills": [
+   23,
+   16
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 95,
+    "slashes": 4,
+    "kicks": 19,
+    "dashes": 102,
+    "recalls": 14
+   },
+   {
+    "throws": 55,
+    "slashes": 11,
+    "kicks": 25,
+    "dashes": 34,
+    "recalls": 3
+   }
+  ]
+ },
+ "dg_melee700|icefloes|11001-11019": {
+  "n": 38,
+  "w": [
+   15,
+   23
+  ],
+  "draw": 0,
+  "fall": [
+   4,
+   1
+  ],
+  "dart": [
+   18,
+   13
+  ],
+  "slash": [
+   1,
+   1
+  ],
+  "kills": [
+   15,
+   23
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 128,
+    "slashes": 3,
+    "kicks": 13,
+    "dashes": 171,
+    "recalls": 29
+   },
+   {
+    "throws": 69,
+    "slashes": 17,
+    "kicks": 20,
+    "dashes": 18,
+    "recalls": 11
+   }
+  ]
+ },
+ "dg_melee700|ruins|11001-11019": {
+  "n": 38,
+  "w": [
+   15,
+   22
+  ],
+  "draw": 1,
+  "fall": [
+   1,
+   0
+  ],
+  "dart": [
+   13,
+   14
+  ],
+  "slash": [
+   9,
+   2
+  ],
+  "kills": [
+   16,
+   22
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 222,
+    "slashes": 3,
+    "kicks": 9,
+    "dashes": 152,
+    "recalls": 21
+   },
+   {
+    "throws": 33,
+    "slashes": 22,
+    "kicks": 11,
+    "dashes": 32,
+    "recalls": 0
+   }
+  ]
+ },
+ "dg_melee700|skybridge|11001-11019": {
+  "n": 38,
+  "w": [
+   19,
+   19
+  ],
+  "draw": 0,
+  "fall": [
+   7,
+   3
+  ],
+  "dart": [
+   11,
+   16
+  ],
+  "slash": [
+   1,
+   0
+  ],
+  "kills": [
+   18,
+   17
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 158,
+    "slashes": 2,
+    "kicks": 13,
+    "dashes": 167,
+    "recalls": 91
+   },
+   {
+    "throws": 80,
+    "slashes": 29,
+    "kicks": 16,
+    "dashes": 8,
+    "recalls": 19
+   }
+  ]
+ },
+ "dg_melee700|stonecircle|11001-11019": {
+  "n": 38,
+  "w": [
+   21,
+   17
+  ],
+  "draw": 0,
+  "fall": [
+   1,
+   0
+  ],
+  "dart": [
+   13,
+   18
+  ],
+  "slash": [
+   3,
+   3
+  ],
+  "kills": [
+   21,
+   17
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 101,
+    "slashes": 6,
+    "kicks": 5,
+    "dashes": 75,
+    "recalls": 9
+   },
+   {
+    "throws": 39,
+    "slashes": 7,
+    "kicks": 12,
+    "dashes": 44,
+    "recalls": 2
+   }
+  ]
+ },
+ "dg_melee700|twinlakes|11020-11038": {
+  "n": 38,
+  "w": [
+   9,
+   29
+  ],
+  "draw": 0,
+  "fall": [
+   7,
+   0
+  ],
+  "dart": [
+   19,
+   8
+  ],
+  "slash": [
+   3,
+   1
+  ],
+  "kills": [
+   9,
+   27
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 101,
+    "slashes": 2,
+    "kicks": 18,
+    "dashes": 119,
+    "recalls": 16
+   },
+   {
+    "throws": 70,
+    "slashes": 9,
+    "kicks": 20,
+    "dashes": 34,
+    "recalls": 11
+   }
+  ]
+ },
+ "dg_melee700|yinyang|11020-11038": {
+  "n": 38,
+  "w": [
+   12,
+   25
+  ],
+  "draw": 1,
+  "fall": [
+   3,
+   0
+  ],
+  "dart": [
+   14,
+   13
+  ],
+  "slash": [
+   9,
+   0
+  ],
+  "kills": [
+   13,
+   25
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 102,
+    "slashes": 2,
+    "kicks": 10,
+    "dashes": 101,
+    "recalls": 14
+   },
+   {
+    "throws": 54,
+    "slashes": 13,
+    "kicks": 19,
+    "dashes": 40,
+    "recalls": 1
+   }
+  ]
+ },
+ "dg_melee700|icefloes|11020-11038": {
+  "n": 38,
+  "w": [
+   13,
+   25
+  ],
+  "draw": 0,
+  "fall": [
+   3,
+   3
+  ],
+  "dart": [
+   19,
+   9
+  ],
+  "slash": [
+   3,
+   1
+  ],
+  "kills": [
+   13,
+   24
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 144,
+    "slashes": 3,
+    "kicks": 17,
+    "dashes": 182,
+    "recalls": 37
+   },
+   {
+    "throws": 59,
+    "slashes": 20,
+    "kicks": 28,
+    "dashes": 23,
+    "recalls": 8
+   }
+  ]
+ },
+ "dg_melee700|ruins|11020-11038": {
+  "n": 38,
+  "w": [
+   14,
+   24
+  ],
+  "draw": 0,
+  "fall": [
+   0,
+   0
+  ],
+  "dart": [
+   15,
+   13
+  ],
+  "slash": [
+   9,
+   1
+  ],
+  "kills": [
+   14,
+   24
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 172,
+    "slashes": 4,
+    "kicks": 7,
+    "dashes": 145,
+    "recalls": 44
+   },
+   {
+    "throws": 38,
+    "slashes": 29,
+    "kicks": 15,
+    "dashes": 44,
+    "recalls": 2
+   }
+  ]
+ },
+ "dg_melee700|skybridge|11020-11038": {
+  "n": 38,
+  "w": [
+   18,
+   20
+  ],
+  "draw": 0,
+  "fall": [
+   4,
+   3
+  ],
+  "dart": [
+   15,
+   14
+  ],
+  "slash": [
+   1,
+   1
+  ],
+  "kills": [
+   18,
+   18
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 151,
+    "slashes": 3,
+    "kicks": 13,
+    "dashes": 168,
+    "recalls": 74
+   },
+   {
+    "throws": 76,
+    "slashes": 35,
+    "kicks": 13,
+    "dashes": 11,
+    "recalls": 21
+   }
+  ]
+ },
+ "dg_melee700|stonecircle|11020-11038": {
+  "n": 38,
+  "w": [
+   22,
+   16
+  ],
+  "draw": 0,
+  "fall": [
+   0,
+   0
+  ],
+  "dart": [
+   13,
+   22
+  ],
+  "slash": [
+   3,
+   0
+  ],
+  "kills": [
+   22,
+   16
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 91,
+    "slashes": 0,
+    "kicks": 9,
+    "dashes": 82,
+    "recalls": 4
+   },
+   {
+    "throws": 42,
+    "slashes": 9,
+    "kicks": 8,
+    "dashes": 50,
+    "recalls": 0
+   }
+  ]
+ },
+ "qk_orig|twinlakes|11001-11019": {
+  "n": 38,
+  "w": [
+   26,
+   12
+  ],
+  "draw": 0,
+  "fall": [
+   1,
+   2
+  ],
+  "dart": [
+   9,
+   19
+  ],
+  "slash": [
+   2,
+   5
+  ],
+  "kills": [
+   24,
+   12
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 55,
+    "slashes": 19,
+    "kicks": 1,
+    "dashes": 153,
+    "recalls": 22
+   },
+   {
+    "throws": 76,
+    "slashes": 24,
+    "kicks": 75,
+    "dashes": 82,
+    "recalls": 36
+   }
+  ]
+ },
+ "qk_orig|yinyang|11001-11019": {
+  "n": 38,
+  "w": [
+   16,
+   22
+  ],
+  "draw": 0,
+  "fall": [
+   2,
+   0
+  ],
+  "dart": [
+   16,
+   13
+  ],
+  "slash": [
+   4,
+   3
+  ],
+  "kills": [
+   16,
+   22
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 49,
+    "slashes": 12,
+    "kicks": 6,
+    "dashes": 154,
+    "recalls": 19
+   },
+   {
+    "throws": 74,
+    "slashes": 27,
+    "kicks": 55,
+    "dashes": 73,
+    "recalls": 17
+   }
+  ]
+ },
+ "qk_orig|icefloes|11001-11019": {
+  "n": 38,
+  "w": [
+   15,
+   23
+  ],
+  "draw": 0,
+  "fall": [
+   4,
+   2
+  ],
+  "dart": [
+   18,
+   10
+  ],
+  "slash": [
+   1,
+   3
+  ],
+  "kills": [
+   13,
+   22
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 48,
+    "slashes": 22,
+    "kicks": 5,
+    "dashes": 163,
+    "recalls": 19
+   },
+   {
+    "throws": 76,
+    "slashes": 20,
+    "kicks": 74,
+    "dashes": 82,
+    "recalls": 47
+   }
+  ]
+ },
+ "qk_orig|ruins|11001-11019": {
+  "n": 38,
+  "w": [
+   16,
+   21
+  ],
+  "draw": 1,
+  "fall": [
+   1,
+   1
+  ],
+  "dart": [
+   19,
+   13
+  ],
+  "slash": [
+   2,
+   3
+  ],
+  "kills": [
+   16,
+   22
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 49,
+    "slashes": 18,
+    "kicks": 15,
+    "dashes": 195,
+    "recalls": 18
+   },
+   {
+    "throws": 80,
+    "slashes": 36,
+    "kicks": 218,
+    "dashes": 117,
+    "recalls": 20
+   }
+  ]
+ },
+ "qk_orig|skybridge|11001-11019": {
+  "n": 38,
+  "w": [
+   20,
+   18
+  ],
+  "draw": 0,
+  "fall": [
+   2,
+   8
+  ],
+  "dart": [
+   14,
+   10
+  ],
+  "slash": [
+   2,
+   2
+  ],
+  "kills": [
+   14,
+   18
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 34,
+    "slashes": 18,
+    "kicks": 6,
+    "dashes": 121,
+    "recalls": 38
+   },
+   {
+    "throws": 59,
+    "slashes": 17,
+    "kicks": 37,
+    "dashes": 45,
+    "recalls": 28
+   }
+  ]
+ },
+ "qk_orig|stonecircle|11001-11019": {
+  "n": 38,
+  "w": [
+   14,
+   24
+  ],
+  "draw": 0,
+  "fall": [
+   1,
+   0
+  ],
+  "dart": [
+   20,
+   13
+  ],
+  "slash": [
+   3,
+   1
+  ],
+  "kills": [
+   14,
+   23
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 54,
+    "slashes": 20,
+    "kicks": 10,
+    "dashes": 168,
+    "recalls": 10
+   },
+   {
+    "throws": 90,
+    "slashes": 32,
+    "kicks": 73,
+    "dashes": 103,
+    "recalls": 40
+   }
+  ]
+ },
+ "qk_dash400|twinlakes|11001-11019": {
+  "n": 38,
+  "w": [
+   19,
+   19
+  ],
+  "draw": 0,
+  "fall": [
+   3,
+   2
+  ],
+  "dart": [
+   15,
+   15
+  ],
+  "slash": [
+   1,
+   2
+  ],
+  "kills": [
+   19,
+   19
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 64,
+    "slashes": 17,
+    "kicks": 18,
+    "dashes": 117,
+    "recalls": 18
+   },
+   {
+    "throws": 80,
+    "slashes": 31,
+    "kicks": 90,
+    "dashes": 84,
+    "recalls": 50
+   }
+  ]
+ },
+ "qk_dash400|yinyang|11001-11019": {
+  "n": 38,
+  "w": [
+   15,
+   23
+  ],
+  "draw": 0,
+  "fall": [
+   3,
+   0
+  ],
+  "dart": [
+   19,
+   13
+  ],
+  "slash": [
+   1,
+   2
+  ],
+  "kills": [
+   15,
+   23
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 56,
+    "slashes": 16,
+    "kicks": 16,
+    "dashes": 125,
+    "recalls": 22
+   },
+   {
+    "throws": 79,
+    "slashes": 31,
+    "kicks": 68,
+    "dashes": 88,
+    "recalls": 45
+   }
+  ]
+ },
+ "qk_dash400|icefloes|11001-11019": {
+  "n": 38,
+  "w": [
+   24,
+   13
+  ],
+  "draw": 1,
+  "fall": [
+   1,
+   4
+  ],
+  "dart": [
+   10,
+   17
+  ],
+  "slash": [
+   3,
+   4
+  ],
+  "kills": [
+   23,
+   13
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 56,
+    "slashes": 13,
+    "kicks": 3,
+    "dashes": 111,
+    "recalls": 40
+   },
+   {
+    "throws": 67,
+    "slashes": 33,
+    "kicks": 42,
+    "dashes": 58,
+    "recalls": 25
+   }
+  ]
+ },
+ "qk_dash400|ruins|11001-11019": {
+  "n": 38,
+  "w": [
+   16,
+   22
+  ],
+  "draw": 0,
+  "fall": [
+   0,
+   0
+  ],
+  "dart": [
+   18,
+   14
+  ],
+  "slash": [
+   4,
+   2
+  ],
+  "kills": [
+   16,
+   22
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 34,
+    "slashes": 17,
+    "kicks": 5,
+    "dashes": 86,
+    "recalls": 16
+   },
+   {
+    "throws": 63,
+    "slashes": 19,
+    "kicks": 58,
+    "dashes": 73,
+    "recalls": 21
+   }
+  ]
+ },
+ "qk_dash400|skybridge|11001-11019": {
+  "n": 38,
+  "w": [
+   17,
+   21
+  ],
+  "draw": 0,
+  "fall": [
+   4,
+   5
+  ],
+  "dart": [
+   14,
+   11
+  ],
+  "slash": [
+   3,
+   1
+  ],
+  "kills": [
+   14,
+   20
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 32,
+    "slashes": 16,
+    "kicks": 10,
+    "dashes": 77,
+    "recalls": 9
+   },
+   {
+    "throws": 50,
+    "slashes": 11,
+    "kicks": 37,
+    "dashes": 38,
+    "recalls": 45
+   }
+  ]
+ },
+ "qk_dash400|stonecircle|11001-11019": {
+  "n": 38,
+  "w": [
+   19,
+   19
+  ],
+  "draw": 0,
+  "fall": [
+   0,
+   2
+  ],
+  "dart": [
+   18,
+   15
+  ],
+  "slash": [
+   1,
+   2
+  ],
+  "kills": [
+   18,
+   19
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 64,
+    "slashes": 9,
+    "kicks": 21,
+    "dashes": 134,
+    "recalls": 8
+   },
+   {
+    "throws": 88,
+    "slashes": 16,
+    "kicks": 104,
+    "dashes": 112,
+    "recalls": 42
+   }
+  ]
+ },
+ "qk_orig|twinlakes|11020-11038": {
+  "n": 38,
+  "w": [
+   13,
+   25
+  ],
+  "draw": 0,
+  "fall": [
+   5,
+   3
+  ],
+  "dart": [
+   17,
+   8
+  ],
+  "slash": [
+   3,
+   2
+  ],
+  "kills": [
+   10,
+   25
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 42,
+    "slashes": 18,
+    "kicks": 2,
+    "dashes": 144,
+    "recalls": 9
+   },
+   {
+    "throws": 70,
+    "slashes": 23,
+    "kicks": 49,
+    "dashes": 54,
+    "recalls": 32
+   }
+  ]
+ },
+ "qk_orig|yinyang|11020-11038": {
+  "n": 38,
+  "w": [
+   18,
+   20
+  ],
+  "draw": 0,
+  "fall": [
+   1,
+   0
+  ],
+  "dart": [
+   16,
+   15
+  ],
+  "slash": [
+   3,
+   3
+  ],
+  "kills": [
+   18,
+   20
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 50,
+    "slashes": 12,
+    "kicks": 5,
+    "dashes": 151,
+    "recalls": 11
+   },
+   {
+    "throws": 80,
+    "slashes": 28,
+    "kicks": 55,
+    "dashes": 75,
+    "recalls": 18
+   }
+  ]
+ },
+ "qk_orig|icefloes|11020-11038": {
+  "n": 38,
+  "w": [
+   21,
+   17
+  ],
+  "draw": 0,
+  "fall": [
+   3,
+   2
+  ],
+  "dart": [
+   12,
+   16
+  ],
+  "slash": [
+   2,
+   3
+  ],
+  "kills": [
+   19,
+   16
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 51,
+    "slashes": 16,
+    "kicks": 7,
+    "dashes": 147,
+    "recalls": 12
+   },
+   {
+    "throws": 64,
+    "slashes": 22,
+    "kicks": 39,
+    "dashes": 56,
+    "recalls": 48
+   }
+  ]
+ },
+ "qk_orig|ruins|11020-11038": {
+  "n": 38,
+  "w": [
+   16,
+   22
+  ],
+  "draw": 0,
+  "fall": [
+   2,
+   1
+  ],
+  "dart": [
+   19,
+   13
+  ],
+  "slash": [
+   1,
+   2
+  ],
+  "kills": [
+   16,
+   22
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 52,
+    "slashes": 10,
+    "kicks": 9,
+    "dashes": 176,
+    "recalls": 11
+   },
+   {
+    "throws": 71,
+    "slashes": 20,
+    "kicks": 83,
+    "dashes": 85,
+    "recalls": 26
+   }
+  ]
+ },
+ "qk_orig|skybridge|11020-11038": {
+  "n": 38,
+  "w": [
+   19,
+   19
+  ],
+  "draw": 0,
+  "fall": [
+   1,
+   6
+  ],
+  "dart": [
+   13,
+   10
+  ],
+  "slash": [
+   5,
+   3
+  ],
+  "kills": [
+   14,
+   19
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 43,
+    "slashes": 10,
+    "kicks": 12,
+    "dashes": 136,
+    "recalls": 15
+   },
+   {
+    "throws": 57,
+    "slashes": 28,
+    "kicks": 31,
+    "dashes": 45,
+    "recalls": 23
+   }
+  ]
+ },
+ "qk_orig|stonecircle|11020-11038": {
+  "n": 38,
+  "w": [
+   14,
+   24
+  ],
+  "draw": 0,
+  "fall": [
+   1,
+   0
+  ],
+  "dart": [
+   23,
+   11
+  ],
+  "slash": [
+   0,
+   3
+  ],
+  "kills": [
+   14,
+   24
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 52,
+    "slashes": 22,
+    "kicks": 15,
+    "dashes": 201,
+    "recalls": 30
+   },
+   {
+    "throws": 104,
+    "slashes": 27,
+    "kicks": 121,
+    "dashes": 136,
+    "recalls": 29
+   }
+  ]
+ },
+ "qk_dash400|twinlakes|11020-11038": {
+  "n": 38,
+  "w": [
+   14,
+   24
+  ],
+  "draw": 0,
+  "fall": [
+   3,
+   2
+  ],
+  "dart": [
+   14,
+   10
+  ],
+  "slash": [
+   7,
+   2
+  ],
+  "kills": [
+   12,
+   22
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 51,
+    "slashes": 20,
+    "kicks": 9,
+    "dashes": 112,
+    "recalls": 12
+   },
+   {
+    "throws": 74,
+    "slashes": 20,
+    "kicks": 69,
+    "dashes": 79,
+    "recalls": 43
+   }
+  ]
+ },
+ "qk_dash400|yinyang|11020-11038": {
+  "n": 38,
+  "w": [
+   20,
+   17
+  ],
+  "draw": 1,
+  "fall": [
+   3,
+   5
+  ],
+  "dart": [
+   15,
+   15
+  ],
+  "slash": [
+   0,
+   1
+  ],
+  "kills": [
+   18,
+   16
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 41,
+    "slashes": 12,
+    "kicks": 8,
+    "dashes": 118,
+    "recalls": 11
+   },
+   {
+    "throws": 81,
+    "slashes": 13,
+    "kicks": 48,
+    "dashes": 62,
+    "recalls": 60
+   }
+  ]
+ },
+ "qk_dash400|icefloes|11020-11038": {
+  "n": 38,
+  "w": [
+   23,
+   15
+  ],
+  "draw": 0,
+  "fall": [
+   2,
+   3
+  ],
+  "dart": [
+   11,
+   18
+  ],
+  "slash": [
+   2,
+   2
+  ],
+  "kills": [
+   21,
+   15
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 53,
+    "slashes": 15,
+    "kicks": 14,
+    "dashes": 115,
+    "recalls": 31
+   },
+   {
+    "throws": 70,
+    "slashes": 42,
+    "kicks": 57,
+    "dashes": 69,
+    "recalls": 26
+   }
+  ]
+ },
+ "qk_dash400|ruins|11020-11038": {
+  "n": 38,
+  "w": [
+   22,
+   16
+  ],
+  "draw": 0,
+  "fall": [
+   1,
+   1
+  ],
+  "dart": [
+   14,
+   16
+  ],
+  "slash": [
+   1,
+   5
+  ],
+  "kills": [
+   22,
+   16
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 50,
+    "slashes": 14,
+    "kicks": 15,
+    "dashes": 117,
+    "recalls": 7
+   },
+   {
+    "throws": 68,
+    "slashes": 31,
+    "kicks": 60,
+    "dashes": 75,
+    "recalls": 23
+   }
+  ]
+ },
+ "qk_dash400|skybridge|11020-11038": {
+  "n": 38,
+  "w": [
+   15,
+   22
+  ],
+  "draw": 1,
+  "fall": [
+   5,
+   3
+  ],
+  "dart": [
+   14,
+   11
+  ],
+  "slash": [
+   4,
+   2
+  ],
+  "kills": [
+   15,
+   22
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 42,
+    "slashes": 7,
+    "kicks": 8,
+    "dashes": 74,
+    "recalls": 7
+   },
+   {
+    "throws": 49,
+    "slashes": 12,
+    "kicks": 26,
+    "dashes": 31,
+    "recalls": 20
+   }
+  ]
+ },
+ "qk_dash400|stonecircle|11020-11038": {
+  "n": 38,
+  "w": [
+   16,
+   22
+  ],
+  "draw": 0,
+  "fall": [
+   1,
+   0
+  ],
+  "dart": [
+   19,
+   14
+  ],
+  "slash": [
+   2,
+   2
+  ],
+  "kills": [
+   16,
+   22
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 57,
+    "slashes": 15,
+    "kicks": 17,
+    "dashes": 129,
+    "recalls": 25
+   },
+   {
+    "throws": 93,
+    "slashes": 30,
+    "kicks": 89,
+    "dashes": 102,
+    "recalls": 67
+   }
+  ]
+ },
+ "fq_orig|twinlakes|11001-11006": {
+  "n": 24,
+  "w": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "draw": 0,
+  "fall": [
+   3,
+   5,
+   2,
+   0
+  ],
+  "dart": [
+   15,
+   12,
+   10,
+   19
+  ],
+  "slash": [
+   2,
+   2,
+   0,
+   2
+  ],
+  "kills": [
+   14,
+   21,
+   22,
+   11
+  ],
+  "pts": [
+   36.0,
+   55.5,
+   74.5,
+   46.0
+  ],
+  "faults": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 29,
+    "slashes": 10,
+    "kicks": 10,
+    "dashes": 56,
+    "recalls": 1
+   },
+   {
+    "throws": 56,
+    "slashes": 9,
+    "kicks": 5,
+    "dashes": 36,
+    "recalls": 10
+   },
+   {
+    "throws": 41,
+    "slashes": 11,
+    "kicks": 3,
+    "dashes": 44,
+    "recalls": 24
+   },
+   {
+    "throws": 43,
+    "slashes": 5,
+    "kicks": 6,
+    "dashes": 7,
+    "recalls": 14
+   }
+  ]
+ },
+ "fq_orig|yinyang|11001-11006": {
+  "n": 24,
+  "w": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "draw": 0,
+  "fall": [
+   5,
+   2,
+   0,
+   1
+  ],
+  "dart": [
+   12,
+   17,
+   9,
+   18
+  ],
+  "slash": [
+   1,
+   4,
+   3,
+   0
+  ],
+  "kills": [
+   17,
+   11,
+   29,
+   14
+  ],
+  "pts": [
+   52.0,
+   38.0,
+   79.0,
+   46.0
+  ],
+  "faults": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 33,
+    "slashes": 28,
+    "kicks": 8,
+    "dashes": 81,
+    "recalls": 2
+   },
+   {
+    "throws": 45,
+    "slashes": 17,
+    "kicks": 11,
+    "dashes": 52,
+    "recalls": 16
+   },
+   {
+    "throws": 52,
+    "slashes": 9,
+    "kicks": 6,
+    "dashes": 38,
+    "recalls": 14
+   },
+   {
+    "throws": 37,
+    "slashes": 22,
+    "kicks": 11,
+    "dashes": 21,
+    "recalls": 21
+   }
+  ]
+ },
+ "fq_orig|icefloes|11001-11006": {
+  "n": 24,
+  "w": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "draw": 0,
+  "fall": [
+   1,
+   2,
+   1,
+   1
+  ],
+  "dart": [
+   7,
+   15,
+   12,
+   18
+  ],
+  "slash": [
+   3,
+   4,
+   5,
+   3
+  ],
+  "kills": [
+   31,
+   13,
+   15,
+   10
+  ],
+  "pts": [
+   81.0,
+   44.5,
+   55.5,
+   32.0
+  ],
+  "faults": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 54,
+    "slashes": 29,
+    "kicks": 14,
+    "dashes": 115,
+    "recalls": 6
+   },
+   {
+    "throws": 46,
+    "slashes": 19,
+    "kicks": 7,
+    "dashes": 43,
+    "recalls": 15
+   },
+   {
+    "throws": 36,
+    "slashes": 14,
+    "kicks": 4,
+    "dashes": 76,
+    "recalls": 4
+   },
+   {
+    "throws": 32,
+    "slashes": 95,
+    "kicks": 5,
+    "dashes": 28,
+    "recalls": 22
+   }
+  ]
+ },
+ "fq_orig|ruins|11001-11006": {
+  "n": 24,
+  "w": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "draw": 0,
+  "fall": [
+   1,
+   2,
+   0,
+   5
+  ],
+  "dart": [
+   14,
+   15,
+   8,
+   13
+  ],
+  "slash": [
+   3,
+   4,
+   5,
+   3
+  ],
+  "kills": [
+   21,
+   18,
+   22,
+   6
+  ],
+  "pts": [
+   58.5,
+   52.0,
+   62.5,
+   38.0
+  ],
+  "faults": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 41,
+    "slashes": 22,
+    "kicks": 22,
+    "dashes": 128,
+    "recalls": 16
+   },
+   {
+    "throws": 46,
+    "slashes": 57,
+    "kicks": 16,
+    "dashes": 80,
+    "recalls": 27
+   },
+   {
+    "throws": 39,
+    "slashes": 12,
+    "kicks": 4,
+    "dashes": 23,
+    "recalls": 19
+   },
+   {
+    "throws": 27,
+    "slashes": 147,
+    "kicks": 13,
+    "dashes": 42,
+    "recalls": 39
+   }
+  ]
+ },
+ "fq_orig|skybridge|11001-11006": {
+  "n": 24,
+  "w": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "draw": 0,
+  "fall": [
+   1,
+   5,
+   0,
+   2
+  ],
+  "dart": [
+   13,
+   11,
+   12,
+   20
+  ],
+  "slash": [
+   2,
+   6,
+   1,
+   1
+  ],
+  "kills": [
+   31,
+   11,
+   22,
+   4
+  ],
+  "pts": [
+   79.0,
+   32.5,
+   71.5,
+   29.0
+  ],
+  "faults": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 57,
+    "slashes": 23,
+    "kicks": 9,
+    "dashes": 149,
+    "recalls": 22
+   },
+   {
+    "throws": 40,
+    "slashes": 30,
+    "kicks": 6,
+    "dashes": 37,
+    "recalls": 30
+   },
+   {
+    "throws": 34,
+    "slashes": 28,
+    "kicks": 7,
+    "dashes": 56,
+    "recalls": 10
+   },
+   {
+    "throws": 38,
+    "slashes": 79,
+    "kicks": 3,
+    "dashes": 11,
+    "recalls": 18
+   }
+  ]
+ },
+ "fq_orig|stonecircle|11001-11006": {
+  "n": 24,
+  "w": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "draw": 0,
+  "fall": [
+   1,
+   1,
+   3,
+   0
+  ],
+  "dart": [
+   12,
+   13,
+   12,
+   19
+  ],
+  "slash": [
+   3,
+   3,
+   2,
+   3
+  ],
+  "kills": [
+   23,
+   19,
+   21,
+   8
+  ],
+  "pts": [
+   69.0,
+   51.0,
+   62.0,
+   33.0
+  ],
+  "faults": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 38,
+    "slashes": 17,
+    "kicks": 15,
+    "dashes": 114,
+    "recalls": 13
+   },
+   {
+    "throws": 50,
+    "slashes": 45,
+    "kicks": 8,
+    "dashes": 56,
+    "recalls": 16
+   },
+   {
+    "throws": 44,
+    "slashes": 3,
+    "kicks": 1,
+    "dashes": 27,
+    "recalls": 34
+   },
+   {
+    "throws": 31,
+    "slashes": 45,
+    "kicks": 8,
+    "dashes": 18,
+    "recalls": 31
+   }
+  ]
+ },
+ "fq_units|twinlakes|11001-11006": {
+  "n": 24,
+  "w": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "draw": 0,
+  "fall": [
+   0,
+   5,
+   3,
+   1
+  ],
+  "dart": [
+   16,
+   15,
+   8,
+   14
+  ],
+  "slash": [
+   2,
+   0,
+   6,
+   2
+  ],
+  "kills": [
+   18,
+   15,
+   22,
+   14
+  ],
+  "pts": [
+   44.5,
+   50.0,
+   69.5,
+   49.0
+  ],
+  "faults": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 27,
+    "slashes": 12,
+    "kicks": 14,
+    "dashes": 71,
+    "recalls": 7
+   },
+   {
+    "throws": 63,
+    "slashes": 23,
+    "kicks": 7,
+    "dashes": 48,
+    "recalls": 16
+   },
+   {
+    "throws": 53,
+    "slashes": 9,
+    "kicks": 12,
+    "dashes": 71,
+    "recalls": 23
+   },
+   {
+    "throws": 48,
+    "slashes": 6,
+    "kicks": 7,
+    "dashes": 13,
+    "recalls": 34
+   }
+  ]
+ },
+ "fq_units|yinyang|11001-11006": {
+  "n": 24,
+  "w": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "draw": 0,
+  "fall": [
+   1,
+   2,
+   0,
+   1
+  ],
+  "dart": [
+   18,
+   16,
+   11,
+   18
+  ],
+  "slash": [
+   1,
+   2,
+   1,
+   1
+  ],
+  "kills": [
+   16,
+   14,
+   31,
+   10
+  ],
+  "pts": [
+   48.0,
+   47.0,
+   82.0,
+   38.0
+  ],
+  "faults": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 33,
+    "slashes": 17,
+    "kicks": 11,
+    "dashes": 84,
+    "recalls": 13
+   },
+   {
+    "throws": 46,
+    "slashes": 8,
+    "kicks": 7,
+    "dashes": 42,
+    "recalls": 14
+   },
+   {
+    "throws": 45,
+    "slashes": 7,
+    "kicks": 9,
+    "dashes": 29,
+    "recalls": 14
+   },
+   {
+    "throws": 35,
+    "slashes": 26,
+    "kicks": 3,
+    "dashes": 17,
+    "recalls": 15
+   }
+  ]
+ },
+ "fq_units|icefloes|11001-11006": {
+  "n": 24,
+  "w": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "draw": 0,
+  "fall": [
+   1,
+   7,
+   2,
+   4
+  ],
+  "dart": [
+   13,
+   14,
+   10,
+   15
+  ],
+  "slash": [
+   0,
+   1,
+   2,
+   3
+  ],
+  "kills": [
+   20,
+   9,
+   23,
+   8
+  ],
+  "pts": [
+   70.0,
+   36.0,
+   66.0,
+   32.0
+  ],
+  "faults": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 46,
+    "slashes": 12,
+    "kicks": 19,
+    "dashes": 124,
+    "recalls": 29
+   },
+   {
+    "throws": 41,
+    "slashes": 12,
+    "kicks": 3,
+    "dashes": 36,
+    "recalls": 23
+   },
+   {
+    "throws": 31,
+    "slashes": 13,
+    "kicks": 9,
+    "dashes": 61,
+    "recalls": 4
+   },
+   {
+    "throws": 32,
+    "slashes": 101,
+    "kicks": 8,
+    "dashes": 25,
+    "recalls": 15
+   }
+  ]
+ },
+ "fq_units|ruins|11001-11006": {
+  "n": 24,
+  "w": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "draw": 0,
+  "fall": [
+   2,
+   0,
+   3,
+   7
+  ],
+  "dart": [
+   18,
+   10,
+   8,
+   14
+  ],
+  "slash": [
+   1,
+   7,
+   2,
+   0
+  ],
+  "kills": [
+   23,
+   19,
+   15,
+   7
+  ],
+  "pts": [
+   53.0,
+   52.0,
+   59.0,
+   44.0
+  ],
+  "faults": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 43,
+    "slashes": 16,
+    "kicks": 21,
+    "dashes": 138,
+    "recalls": 40
+   },
+   {
+    "throws": 39,
+    "slashes": 35,
+    "kicks": 32,
+    "dashes": 82,
+    "recalls": 36
+   },
+   {
+    "throws": 40,
+    "slashes": 24,
+    "kicks": 10,
+    "dashes": 34,
+    "recalls": 26
+   },
+   {
+    "throws": 34,
+    "slashes": 152,
+    "kicks": 5,
+    "dashes": 55,
+    "recalls": 13
+   }
+  ]
+ },
+ "fq_units|skybridge|11001-11006": {
+  "n": 24,
+  "w": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "draw": 0,
+  "fall": [
+   1,
+   6,
+   2,
+   3
+  ],
+  "dart": [
+   13,
+   13,
+   6,
+   13
+  ],
+  "slash": [
+   6,
+   0,
+   6,
+   4
+  ],
+  "kills": [
+   17,
+   16,
+   20,
+   11
+  ],
+  "pts": [
+   50.0,
+   52.0,
+   62.5,
+   43.5
+  ],
+  "faults": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 40,
+    "slashes": 15,
+    "kicks": 17,
+    "dashes": 139,
+    "recalls": 19
+   },
+   {
+    "throws": 43,
+    "slashes": 26,
+    "kicks": 3,
+    "dashes": 45,
+    "recalls": 104
+   },
+   {
+    "throws": 35,
+    "slashes": 15,
+    "kicks": 4,
+    "dashes": 50,
+    "recalls": 17
+   },
+   {
+    "throws": 43,
+    "slashes": 86,
+    "kicks": 7,
+    "dashes": 19,
+    "recalls": 11
+   }
+  ]
+ },
+ "fq_units|stonecircle|11001-11006": {
+  "n": 24,
+  "w": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "draw": 0,
+  "fall": [
+   1,
+   1,
+   2,
+   2
+  ],
+  "dart": [
+   14,
+   13,
+   9,
+   18
+  ],
+  "slash": [
+   4,
+   2,
+   3,
+   3
+  ],
+  "kills": [
+   19,
+   21,
+   25,
+   6
+  ],
+  "pts": [
+   53.0,
+   59.0,
+   71.0,
+   32.0
+  ],
+  "faults": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 41,
+    "slashes": 19,
+    "kicks": 18,
+    "dashes": 109,
+    "recalls": 15
+   },
+   {
+    "throws": 48,
+    "slashes": 48,
+    "kicks": 5,
+    "dashes": 80,
+    "recalls": 19
+   },
+   {
+    "throws": 52,
+    "slashes": 8,
+    "kicks": 7,
+    "dashes": 33,
+    "recalls": 27
+   },
+   {
+    "throws": 41,
+    "slashes": 37,
+    "kicks": 4,
+    "dashes": 21,
+    "recalls": 19
+   }
+  ]
+ },
+ "fq_orig|twinlakes|11007-11012": {
+  "n": 24,
+  "w": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "draw": 0,
+  "fall": [
+   3,
+   4,
+   1,
+   0
+  ],
+  "dart": [
+   11,
+   14,
+   11,
+   18
+  ],
+  "slash": [
+   1,
+   2,
+   2,
+   5
+  ],
+  "kills": [
+   21,
+   16,
+   19,
+   10
+  ],
+  "pts": [
+   57.0,
+   55.5,
+   62.0,
+   35.5
+  ],
+  "faults": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 48,
+    "slashes": 16,
+    "kicks": 11,
+    "dashes": 87,
+    "recalls": 8
+   },
+   {
+    "throws": 60,
+    "slashes": 18,
+    "kicks": 34,
+    "dashes": 48,
+    "recalls": 9
+   },
+   {
+    "throws": 40,
+    "slashes": 23,
+    "kicks": 5,
+    "dashes": 61,
+    "recalls": 22
+   },
+   {
+    "throws": 37,
+    "slashes": 15,
+    "kicks": 10,
+    "dashes": 15,
+    "recalls": 13
+   }
+  ]
+ },
+ "fq_orig|yinyang|11007-11012": {
+  "n": 24,
+  "w": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "draw": 0,
+  "fall": [
+   2,
+   6,
+   3,
+   0
+  ],
+  "dart": [
+   14,
+   14,
+   10,
+   20
+  ],
+  "slash": [
+   2,
+   0,
+   1,
+   0
+  ],
+  "kills": [
+   20,
+   18,
+   23,
+   11
+  ],
+  "pts": [
+   51.0,
+   52.0,
+   72.0,
+   41.0
+  ],
+  "faults": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 33,
+    "slashes": 12,
+    "kicks": 11,
+    "dashes": 63,
+    "recalls": 6
+   },
+   {
+    "throws": 46,
+    "slashes": 19,
+    "kicks": 12,
+    "dashes": 45,
+    "recalls": 2
+   },
+   {
+    "throws": 38,
+    "slashes": 4,
+    "kicks": 9,
+    "dashes": 35,
+    "recalls": 16
+   },
+   {
+    "throws": 32,
+    "slashes": 18,
+    "kicks": 7,
+    "dashes": 9,
+    "recalls": 10
+   }
+  ]
+ },
+ "fq_orig|icefloes|11007-11012": {
+  "n": 24,
+  "w": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "draw": 0,
+  "fall": [
+   1,
+   5,
+   3,
+   1
+  ],
+  "dart": [
+   11,
+   14,
+   13,
+   17
+  ],
+  "slash": [
+   0,
+   2,
+   4,
+   1
+  ],
+  "kills": [
+   25,
+   9,
+   21,
+   10
+  ],
+  "pts": [
+   69.5,
+   34.5,
+   60.5,
+   44.5
+  ],
+  "faults": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 44,
+    "slashes": 25,
+    "kicks": 12,
+    "dashes": 107,
+    "recalls": 10
+   },
+   {
+    "throws": 42,
+    "slashes": 12,
+    "kicks": 6,
+    "dashes": 45,
+    "recalls": 19
+   },
+   {
+    "throws": 39,
+    "slashes": 10,
+    "kicks": 6,
+    "dashes": 65,
+    "recalls": 5
+   },
+   {
+    "throws": 45,
+    "slashes": 23,
+    "kicks": 7,
+    "dashes": 26,
+    "recalls": 21
+   }
+  ]
+ },
+ "fq_orig|ruins|11007-11012": {
+  "n": 24,
+  "w": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "draw": 0,
+  "fall": [
+   2,
+   1,
+   0,
+   7
+  ],
+  "dart": [
+   16,
+   16,
+   7,
+   13
+  ],
+  "slash": [
+   2,
+   3,
+   3,
+   2
+  ],
+  "kills": [
+   20,
+   12,
+   29,
+   5
+  ],
+  "pts": [
+   52.5,
+   38.5,
+   82.0,
+   37.0
+  ],
+  "faults": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 44,
+    "slashes": 24,
+    "kicks": 11,
+    "dashes": 120,
+    "recalls": 10
+   },
+   {
+    "throws": 38,
+    "slashes": 37,
+    "kicks": 15,
+    "dashes": 60,
+    "recalls": 21
+   },
+   {
+    "throws": 45,
+    "slashes": 11,
+    "kicks": 6,
+    "dashes": 24,
+    "recalls": 22
+   },
+   {
+    "throws": 26,
+    "slashes": 123,
+    "kicks": 7,
+    "dashes": 37,
+    "recalls": 34
+   }
+  ]
+ },
+ "fq_orig|skybridge|11007-11012": {
+  "n": 24,
+  "w": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "draw": 0,
+  "fall": [
+   5,
+   7,
+   2,
+   1
+  ],
+  "dart": [
+   8,
+   14,
+   4,
+   16
+  ],
+  "slash": [
+   5,
+   1,
+   5,
+   5
+  ],
+  "kills": [
+   18,
+   14,
+   27,
+   6
+  ],
+  "pts": [
+   56.5,
+   40.5,
+   83.0,
+   29.0
+  ],
+  "faults": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 41,
+    "slashes": 26,
+    "kicks": 11,
+    "dashes": 116,
+    "recalls": 26
+   },
+   {
+    "throws": 44,
+    "slashes": 22,
+    "kicks": 14,
+    "dashes": 48,
+    "recalls": 29
+   },
+   {
+    "throws": 43,
+    "slashes": 24,
+    "kicks": 10,
+    "dashes": 58,
+    "recalls": 31
+   },
+   {
+    "throws": 35,
+    "slashes": 89,
+    "kicks": 4,
+    "dashes": 12,
+    "recalls": 13
+   }
+  ]
+ },
+ "fq_orig|stonecircle|11007-11012": {
+  "n": 24,
+  "w": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "draw": 0,
+  "fall": [
+   0,
+   2,
+   0,
+   2
+  ],
+  "dart": [
+   16,
+   13,
+   8,
+   18
+  ],
+  "slash": [
+   3,
+   4,
+   5,
+   1
+  ],
+  "kills": [
+   22,
+   18,
+   24,
+   7
+  ],
+  "pts": [
+   56.0,
+   45.0,
+   71.0,
+   43.0
+  ],
+  "faults": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 43,
+    "slashes": 25,
+    "kicks": 16,
+    "dashes": 110,
+    "recalls": 5
+   },
+   {
+    "throws": 47,
+    "slashes": 16,
+    "kicks": 5,
+    "dashes": 51,
+    "recalls": 8
+   },
+   {
+    "throws": 53,
+    "slashes": 8,
+    "kicks": 11,
+    "dashes": 26,
+    "recalls": 35
+   },
+   {
+    "throws": 43,
+    "slashes": 103,
+    "kicks": 9,
+    "dashes": 18,
+    "recalls": 24
+   }
+  ]
+ },
+ "fq_units|twinlakes|11007-11012": {
+  "n": 24,
+  "w": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "draw": 0,
+  "fall": [
+   5,
+   3,
+   3,
+   2
+  ],
+  "dart": [
+   15,
+   9,
+   13,
+   20
+  ],
+  "slash": [
+   0,
+   1,
+   0,
+   1
+  ],
+  "kills": [
+   17,
+   19,
+   19,
+   13
+  ],
+  "pts": [
+   46.5,
+   60.5,
+   66.0,
+   39.0
+  ],
+  "faults": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 43,
+    "slashes": 10,
+    "kicks": 26,
+    "dashes": 98,
+    "recalls": 9
+   },
+   {
+    "throws": 62,
+    "slashes": 11,
+    "kicks": 15,
+    "dashes": 35,
+    "recalls": 20
+   },
+   {
+    "throws": 41,
+    "slashes": 5,
+    "kicks": 14,
+    "dashes": 60,
+    "recalls": 22
+   },
+   {
+    "throws": 37,
+    "slashes": 9,
+    "kicks": 6,
+    "dashes": 11,
+    "recalls": 17
+   }
+  ]
+ },
+ "fq_units|yinyang|11007-11012": {
+  "n": 24,
+  "w": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "draw": 0,
+  "fall": [
+   1,
+   6,
+   0,
+   0
+  ],
+  "dart": [
+   15,
+   12,
+   12,
+   19
+  ],
+  "slash": [
+   2,
+   1,
+   3,
+   3
+  ],
+  "kills": [
+   17,
+   16,
+   25,
+   15
+  ],
+  "pts": [
+   49.0,
+   44.5,
+   71.5,
+   52.0
+  ],
+  "faults": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 36,
+    "slashes": 17,
+    "kicks": 17,
+    "dashes": 96,
+    "recalls": 7
+   },
+   {
+    "throws": 43,
+    "slashes": 19,
+    "kicks": 3,
+    "dashes": 47,
+    "recalls": 32
+   },
+   {
+    "throws": 46,
+    "slashes": 10,
+    "kicks": 6,
+    "dashes": 44,
+    "recalls": 11
+   },
+   {
+    "throws": 51,
+    "slashes": 20,
+    "kicks": 17,
+    "dashes": 21,
+    "recalls": 30
+   }
+  ]
+ },
+ "fq_units|icefloes|11007-11012": {
+  "n": 24,
+  "w": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "draw": 0,
+  "fall": [
+   1,
+   4,
+   4,
+   1
+  ],
+  "dart": [
+   14,
+   13,
+   9,
+   20
+  ],
+  "slash": [
+   0,
+   2,
+   3,
+   1
+  ],
+  "kills": [
+   17,
+   12,
+   34,
+   4
+  ],
+  "pts": [
+   64.5,
+   45.0,
+   82.0,
+   19.5
+  ],
+  "faults": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 46,
+    "slashes": 10,
+    "kicks": 13,
+    "dashes": 127,
+    "recalls": 64
+   },
+   {
+    "throws": 53,
+    "slashes": 15,
+    "kicks": 9,
+    "dashes": 48,
+    "recalls": 7
+   },
+   {
+    "throws": 46,
+    "slashes": 17,
+    "kicks": 6,
+    "dashes": 77,
+    "recalls": 16
+   },
+   {
+    "throws": 34,
+    "slashes": 13,
+    "kicks": 4,
+    "dashes": 26,
+    "recalls": 9
+   }
+  ]
+ },
+ "fq_units|ruins|11007-11012": {
+  "n": 24,
+  "w": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "draw": 0,
+  "fall": [
+   3,
+   0,
+   1,
+   7
+  ],
+  "dart": [
+   14,
+   16,
+   7,
+   14
+  ],
+  "slash": [
+   0,
+   4,
+   4,
+   2
+  ],
+  "kills": [
+   18,
+   15,
+   28,
+   4
+  ],
+  "pts": [
+   52.0,
+   53.0,
+   78.0,
+   26.0
+  ],
+  "faults": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 47,
+    "slashes": 27,
+    "kicks": 14,
+    "dashes": 146,
+    "recalls": 12
+   },
+   {
+    "throws": 49,
+    "slashes": 34,
+    "kicks": 19,
+    "dashes": 78,
+    "recalls": 77
+   },
+   {
+    "throws": 51,
+    "slashes": 23,
+    "kicks": 10,
+    "dashes": 35,
+    "recalls": 42
+   },
+   {
+    "throws": 28,
+    "slashes": 145,
+    "kicks": 7,
+    "dashes": 52,
+    "recalls": 14
+   }
+  ]
+ },
+ "fq_units|skybridge|11007-11012": {
+  "n": 24,
+  "w": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "draw": 0,
+  "fall": [
+   3,
+   4,
+   2,
+   3
+  ],
+  "dart": [
+   12,
+   13,
+   11,
+   19
+  ],
+  "slash": [
+   0,
+   4,
+   1,
+   0
+  ],
+  "kills": [
+   23,
+   13,
+   23,
+   7
+  ],
+  "pts": [
+   67.0,
+   38.5,
+   71.5,
+   33.0
+  ],
+  "faults": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 45,
+    "slashes": 11,
+    "kicks": 35,
+    "dashes": 155,
+    "recalls": 44
+   },
+   {
+    "throws": 47,
+    "slashes": 17,
+    "kicks": 6,
+    "dashes": 39,
+    "recalls": 38
+   },
+   {
+    "throws": 36,
+    "slashes": 30,
+    "kicks": 5,
+    "dashes": 63,
+    "recalls": 57
+   },
+   {
+    "throws": 31,
+    "slashes": 97,
+    "kicks": 8,
+    "dashes": 15,
+    "recalls": 16
+   }
+  ]
+ },
+ "fq_units|stonecircle|11007-11012": {
+  "n": 24,
+  "w": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "draw": 0,
+  "fall": [
+   0,
+   3,
+   0,
+   2
+  ],
+  "dart": [
+   17,
+   15,
+   8,
+   19
+  ],
+  "slash": [
+   2,
+   3,
+   2,
+   1
+  ],
+  "kills": [
+   15,
+   16,
+   31,
+   7
+  ],
+  "pts": [
+   52.0,
+   39.0,
+   82.0,
+   40.0
+  ],
+  "faults": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 37,
+    "slashes": 16,
+    "kicks": 16,
+    "dashes": 108,
+    "recalls": 27
+   },
+   {
+    "throws": 48,
+    "slashes": 23,
+    "kicks": 4,
+    "dashes": 48,
+    "recalls": 4
+   },
+   {
+    "throws": 58,
+    "slashes": 0,
+    "kicks": 5,
+    "dashes": 25,
+    "recalls": 33
+   },
+   {
+    "throws": 45,
+    "slashes": 89,
+    "kicks": 4,
+    "dashes": 13,
+    "recalls": 26
+   }
+  ]
+ },
+ "mq_orig|twinlakes|11001-11019": {
+  "n": 38,
+  "w": [
+   10,
+   28
+  ],
+  "draw": 0,
+  "fall": [
+   0,
+   2
+  ],
+  "dart": [
+   28,
+   8
+  ],
+  "slash": [
+   0,
+   0
+  ],
+  "kills": [
+   10,
+   28
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 56,
+    "slashes": 17,
+    "kicks": 10,
+    "dashes": 27,
+    "recalls": 53
+   },
+   {
+    "throws": 48,
+    "slashes": 21,
+    "kicks": 1,
+    "dashes": 148,
+    "recalls": 8
+   }
+  ]
+ },
+ "mq_orig|yinyang|11001-11019": {
+  "n": 38,
+  "w": [
+   13,
+   24
+  ],
+  "draw": 1,
+  "fall": [
+   2,
+   0
+  ],
+  "dart": [
+   21,
+   14
+  ],
+  "slash": [
+   2,
+   0
+  ],
+  "kills": [
+   14,
+   23
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 75,
+    "slashes": 33,
+    "kicks": 9,
+    "dashes": 31,
+    "recalls": 79
+   },
+   {
+    "throws": 56,
+    "slashes": 29,
+    "kicks": 3,
+    "dashes": 242,
+    "recalls": 13
+   }
+  ]
+ },
+ "mq_orig|icefloes|11001-11019": {
+  "n": 38,
+  "w": [
+   16,
+   22
+  ],
+  "draw": 0,
+  "fall": [
+   1,
+   2
+  ],
+  "dart": [
+   19,
+   13
+  ],
+  "slash": [
+   2,
+   1
+  ],
+  "kills": [
+   15,
+   22
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 70,
+    "slashes": 29,
+    "kicks": 5,
+    "dashes": 69,
+    "recalls": 34
+   },
+   {
+    "throws": 46,
+    "slashes": 24,
+    "kicks": 2,
+    "dashes": 175,
+    "recalls": 11
+   }
+  ]
+ },
+ "mq_orig|ruins|11001-11019": {
+  "n": 38,
+  "w": [
+   7,
+   30
+  ],
+  "draw": 1,
+  "fall": [
+   10,
+   0
+  ],
+  "dart": [
+   15,
+   7
+  ],
+  "slash": [
+   5,
+   0
+  ],
+  "kills": [
+   7,
+   22
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 38,
+    "slashes": 50,
+    "kicks": 17,
+    "dashes": 37,
+    "recalls": 33
+   },
+   {
+    "throws": 29,
+    "slashes": 23,
+    "kicks": 7,
+    "dashes": 282,
+    "recalls": 4
+   }
+  ]
+ },
+ "mq_orig|skybridge|11001-11019": {
+  "n": 38,
+  "w": [
+   16,
+   22
+  ],
+  "draw": 0,
+  "fall": [
+   1,
+   3
+  ],
+  "dart": [
+   20,
+   13
+  ],
+  "slash": [
+   1,
+   0
+  ],
+  "kills": [
+   16,
+   21
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 65,
+    "slashes": 9,
+    "kicks": 14,
+    "dashes": 37,
+    "recalls": 138
+   },
+   {
+    "throws": 53,
+    "slashes": 46,
+    "kicks": 5,
+    "dashes": 160,
+    "recalls": 23
+   }
+  ]
+ },
+ "mq_orig|stonecircle|11001-11019": {
+  "n": 38,
+  "w": [
+   15,
+   23
+  ],
+  "draw": 0,
+  "fall": [
+   2,
+   1
+  ],
+  "dart": [
+   16,
+   14
+  ],
+  "slash": [
+   5,
+   0
+  ],
+  "kills": [
+   15,
+   23
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 72,
+    "slashes": 35,
+    "kicks": 32,
+    "dashes": 34,
+    "recalls": 76
+   },
+   {
+    "throws": 44,
+    "slashes": 30,
+    "kicks": 36,
+    "dashes": 256,
+    "recalls": 7
+   }
+  ]
+ },
+ "mq_waypoint|twinlakes|11001-11019": {
+  "n": 38,
+  "w": [
+   14,
+   24
+  ],
+  "draw": 0,
+  "fall": [
+   0,
+   0
+  ],
+  "dart": [
+   20,
+   14
+  ],
+  "slash": [
+   4,
+   0
+  ],
+  "kills": [
+   14,
+   24
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 64,
+    "slashes": 19,
+    "kicks": 8,
+    "dashes": 40,
+    "recalls": 49
+   },
+   {
+    "throws": 50,
+    "slashes": 21,
+    "kicks": 4,
+    "dashes": 129,
+    "recalls": 6
+   }
+  ]
+ },
+ "mq_waypoint|yinyang|11001-11019": {
+  "n": 38,
+  "w": [
+   18,
+   20
+  ],
+  "draw": 0,
+  "fall": [
+   1,
+   0
+  ],
+  "dart": [
+   18,
+   18
+  ],
+  "slash": [
+   1,
+   0
+  ],
+  "kills": [
+   18,
+   19
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 81,
+    "slashes": 24,
+    "kicks": 7,
+    "dashes": 55,
+    "recalls": 151
+   },
+   {
+    "throws": 69,
+    "slashes": 19,
+    "kicks": 7,
+    "dashes": 169,
+    "recalls": 11
+   }
+  ]
+ },
+ "mq_waypoint|icefloes|11001-11019": {
+  "n": 38,
+  "w": [
+   19,
+   19
+  ],
+  "draw": 0,
+  "fall": [
+   2,
+   1
+  ],
+  "dart": [
+   14,
+   18
+  ],
+  "slash": [
+   3,
+   0
+  ],
+  "kills": [
+   18,
+   17
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 72,
+    "slashes": 15,
+    "kicks": 8,
+    "dashes": 57,
+    "recalls": 51
+   },
+   {
+    "throws": 46,
+    "slashes": 21,
+    "kicks": 2,
+    "dashes": 157,
+    "recalls": 17
+   }
+  ]
+ },
+ "mq_waypoint|ruins|11001-11019": {
+  "n": 38,
+  "w": [
+   17,
+   21
+  ],
+  "draw": 0,
+  "fall": [
+   1,
+   1
+  ],
+  "dart": [
+   16,
+   16
+  ],
+  "slash": [
+   4,
+   0
+  ],
+  "kills": [
+   17,
+   21
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 58,
+    "slashes": 52,
+    "kicks": 32,
+    "dashes": 64,
+    "recalls": 64
+   },
+   {
+    "throws": 47,
+    "slashes": 30,
+    "kicks": 8,
+    "dashes": 208,
+    "recalls": 5
+   }
+  ]
+ },
+ "mq_waypoint|skybridge|11001-11019": {
+  "n": 38,
+  "w": [
+   21,
+   17
+  ],
+  "draw": 0,
+  "fall": [
+   2,
+   7
+  ],
+  "dart": [
+   12,
+   12
+  ],
+  "slash": [
+   3,
+   2
+  ],
+  "kills": [
+   21,
+   16
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 81,
+    "slashes": 13,
+    "kicks": 19,
+    "dashes": 103,
+    "recalls": 141
+   },
+   {
+    "throws": 49,
+    "slashes": 64,
+    "kicks": 4,
+    "dashes": 190,
+    "recalls": 22
+   }
+  ]
+ },
+ "mq_waypoint|stonecircle|11001-11019": {
+  "n": 38,
+  "w": [
+   18,
+   19
+  ],
+  "draw": 1,
+  "fall": [
+   0,
+   2
+  ],
+  "dart": [
+   15,
+   15
+  ],
+  "slash": [
+   5,
+   2
+  ],
+  "kills": [
+   19,
+   20
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 68,
+    "slashes": 29,
+    "kicks": 6,
+    "dashes": 51,
+    "recalls": 54
+   },
+   {
+    "throws": 44,
+    "slashes": 25,
+    "kicks": 4,
+    "dashes": 152,
+    "recalls": 16
+   }
+  ]
+ },
+ "mq_orbit|twinlakes|11001-11019": {
+  "n": 38,
+  "w": [
+   10,
+   28
+  ],
+  "draw": 0,
+  "fall": [
+   3,
+   2
+  ],
+  "dart": [
+   23,
+   8
+  ],
+  "slash": [
+   2,
+   0
+  ],
+  "kills": [
+   10,
+   26
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 51,
+    "slashes": 18,
+    "kicks": 9,
+    "dashes": 27,
+    "recalls": 49
+   },
+   {
+    "throws": 36,
+    "slashes": 28,
+    "kicks": 4,
+    "dashes": 139,
+    "recalls": 2
+   }
+  ]
+ },
+ "mq_orbit|yinyang|11001-11019": {
+  "n": 38,
+  "w": [
+   10,
+   28
+  ],
+  "draw": 0,
+  "fall": [
+   0,
+   0
+  ],
+  "dart": [
+   25,
+   10
+  ],
+  "slash": [
+   3,
+   0
+  ],
+  "kills": [
+   10,
+   28
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 67,
+    "slashes": 26,
+    "kicks": 9,
+    "dashes": 37,
+    "recalls": 133
+   },
+   {
+    "throws": 51,
+    "slashes": 27,
+    "kicks": 3,
+    "dashes": 215,
+    "recalls": 4
+   }
+  ]
+ },
+ "mq_orbit|icefloes|11001-11019": {
+  "n": 38,
+  "w": [
+   10,
+   28
+  ],
+  "draw": 0,
+  "fall": [
+   1,
+   1
+  ],
+  "dart": [
+   25,
+   9
+  ],
+  "slash": [
+   2,
+   0
+  ],
+  "kills": [
+   10,
+   27
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 58,
+    "slashes": 13,
+    "kicks": 5,
+    "dashes": 43,
+    "recalls": 62
+   },
+   {
+    "throws": 50,
+    "slashes": 30,
+    "kicks": 0,
+    "dashes": 159,
+    "recalls": 6
+   }
+  ]
+ },
+ "mq_orbit|ruins|11001-11019": {
+  "n": 38,
+  "w": [
+   10,
+   28
+  ],
+  "draw": 0,
+  "fall": [
+   17,
+   1
+  ],
+  "dart": [
+   8,
+   8
+  ],
+  "slash": [
+   3,
+   1
+  ],
+  "kills": [
+   10,
+   11
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 32,
+    "slashes": 32,
+    "kicks": 7,
+    "dashes": 48,
+    "recalls": 28
+   },
+   {
+    "throws": 22,
+    "slashes": 12,
+    "kicks": 1,
+    "dashes": 289,
+    "recalls": 24
+   }
+  ]
+ },
+ "mq_orbit|skybridge|11001-11019": {
+  "n": 38,
+  "w": [
+   16,
+   22
+  ],
+  "draw": 0,
+  "fall": [
+   3,
+   3
+  ],
+  "dart": [
+   13,
+   13
+  ],
+  "slash": [
+   6,
+   0
+  ],
+  "kills": [
+   15,
+   20
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 74,
+    "slashes": 6,
+    "kicks": 18,
+    "dashes": 50,
+    "recalls": 129
+   },
+   {
+    "throws": 61,
+    "slashes": 41,
+    "kicks": 6,
+    "dashes": 177,
+    "recalls": 25
+   }
+  ]
+ },
+ "mq_orbit|stonecircle|11001-11019": {
+  "n": 38,
+  "w": [
+   11,
+   27
+  ],
+  "draw": 0,
+  "fall": [
+   2,
+   0
+  ],
+  "dart": [
+   24,
+   11
+  ],
+  "slash": [
+   1,
+   0
+  ],
+  "kills": [
+   11,
+   27
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 62,
+    "slashes": 19,
+    "kicks": 17,
+    "dashes": 32,
+    "recalls": 69
+   },
+   {
+    "throws": 46,
+    "slashes": 24,
+    "kicks": 6,
+    "dashes": 218,
+    "recalls": 11
+   }
+  ]
+ },
+ "mq_orig|twinlakes|11020-11038": {
+  "n": 38,
+  "w": [
+   9,
+   29
+  ],
+  "draw": 0,
+  "fall": [
+   1,
+   2
+  ],
+  "dart": [
+   27,
+   7
+  ],
+  "slash": [
+   1,
+   0
+  ],
+  "kills": [
+   9,
+   28
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 55,
+    "slashes": 25,
+    "kicks": 13,
+    "dashes": 32,
+    "recalls": 63
+   },
+   {
+    "throws": 52,
+    "slashes": 29,
+    "kicks": 3,
+    "dashes": 170,
+    "recalls": 8
+   }
+  ]
+ },
+ "mq_orig|yinyang|11020-11038": {
+  "n": 38,
+  "w": [
+   10,
+   28
+  ],
+  "draw": 0,
+  "fall": [
+   0,
+   0
+  ],
+  "dart": [
+   26,
+   9
+  ],
+  "slash": [
+   2,
+   1
+  ],
+  "kills": [
+   10,
+   28
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 64,
+    "slashes": 15,
+    "kicks": 6,
+    "dashes": 23,
+    "recalls": 117
+   },
+   {
+    "throws": 49,
+    "slashes": 30,
+    "kicks": 0,
+    "dashes": 235,
+    "recalls": 11
+   }
+  ]
+ },
+ "mq_orig|icefloes|11020-11038": {
+  "n": 38,
+  "w": [
+   5,
+   33
+  ],
+  "draw": 0,
+  "fall": [
+   0,
+   0
+  ],
+  "dart": [
+   30,
+   5
+  ],
+  "slash": [
+   3,
+   0
+  ],
+  "kills": [
+   5,
+   33
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 44,
+    "slashes": 25,
+    "kicks": 6,
+    "dashes": 48,
+    "recalls": 25
+   },
+   {
+    "throws": 45,
+    "slashes": 17,
+    "kicks": 0,
+    "dashes": 143,
+    "recalls": 6
+   }
+  ]
+ },
+ "mq_orig|ruins|11020-11038": {
+  "n": 38,
+  "w": [
+   12,
+   26
+  ],
+  "draw": 0,
+  "fall": [
+   11,
+   0
+  ],
+  "dart": [
+   13,
+   11
+  ],
+  "slash": [
+   2,
+   1
+  ],
+  "kills": [
+   12,
+   15
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 32,
+    "slashes": 56,
+    "kicks": 8,
+    "dashes": 31,
+    "recalls": 39
+   },
+   {
+    "throws": 25,
+    "slashes": 16,
+    "kicks": 1,
+    "dashes": 269,
+    "recalls": 10
+   }
+  ]
+ },
+ "mq_orig|skybridge|11020-11038": {
+  "n": 38,
+  "w": [
+   17,
+   21
+  ],
+  "draw": 0,
+  "fall": [
+   1,
+   3
+  ],
+  "dart": [
+   15,
+   14
+  ],
+  "slash": [
+   5,
+   0
+  ],
+  "kills": [
+   17,
+   20
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 69,
+    "slashes": 7,
+    "kicks": 12,
+    "dashes": 38,
+    "recalls": 143
+   },
+   {
+    "throws": 53,
+    "slashes": 48,
+    "kicks": 4,
+    "dashes": 192,
+    "recalls": 10
+   }
+  ]
+ },
+ "mq_orig|stonecircle|11020-11038": {
+  "n": 38,
+  "w": [
+   12,
+   26
+  ],
+  "draw": 0,
+  "fall": [
+   2,
+   2
+  ],
+  "dart": [
+   19,
+   10
+  ],
+  "slash": [
+   5,
+   0
+  ],
+  "kills": [
+   12,
+   26
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 67,
+    "slashes": 22,
+    "kicks": 22,
+    "dashes": 46,
+    "recalls": 97
+   },
+   {
+    "throws": 37,
+    "slashes": 51,
+    "kicks": 7,
+    "dashes": 255,
+    "recalls": 5
+   }
+  ]
+ },
+ "mq_waypoint|twinlakes|11020-11038": {
+  "n": 38,
+  "w": [
+   19,
+   19
+  ],
+  "draw": 0,
+  "fall": [
+   2,
+   1
+  ],
+  "dart": [
+   12,
+   17
+  ],
+  "slash": [
+   5,
+   1
+  ],
+  "kills": [
+   19,
+   18
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 76,
+    "slashes": 17,
+    "kicks": 16,
+    "dashes": 48,
+    "recalls": 42
+   },
+   {
+    "throws": 38,
+    "slashes": 28,
+    "kicks": 8,
+    "dashes": 141,
+    "recalls": 7
+   }
+  ]
+ },
+ "mq_waypoint|yinyang|11020-11038": {
+  "n": 38,
+  "w": [
+   16,
+   22
+  ],
+  "draw": 0,
+  "fall": [
+   5,
+   1
+  ],
+  "dart": [
+   16,
+   15
+  ],
+  "slash": [
+   1,
+   0
+  ],
+  "kills": [
+   16,
+   19
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 73,
+    "slashes": 23,
+    "kicks": 12,
+    "dashes": 72,
+    "recalls": 117
+   },
+   {
+    "throws": 52,
+    "slashes": 26,
+    "kicks": 7,
+    "dashes": 175,
+    "recalls": 17
+   }
+  ]
+ },
+ "mq_waypoint|icefloes|11020-11038": {
+  "n": 38,
+  "w": [
+   20,
+   18
+  ],
+  "draw": 0,
+  "fall": [
+   2,
+   4
+  ],
+  "dart": [
+   15,
+   15
+  ],
+  "slash": [
+   1,
+   1
+  ],
+  "kills": [
+   19,
+   18
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 64,
+    "slashes": 22,
+    "kicks": 8,
+    "dashes": 50,
+    "recalls": 34
+   },
+   {
+    "throws": 50,
+    "slashes": 20,
+    "kicks": 4,
+    "dashes": 140,
+    "recalls": 5
+   }
+  ]
+ },
+ "mq_waypoint|ruins|11020-11038": {
+  "n": 38,
+  "w": [
+   15,
+   22
+  ],
+  "draw": 1,
+  "fall": [
+   2,
+   1
+  ],
+  "dart": [
+   17,
+   12
+  ],
+  "slash": [
+   4,
+   3
+  ],
+  "kills": [
+   15,
+   22
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 58,
+    "slashes": 75,
+    "kicks": 27,
+    "dashes": 76,
+    "recalls": 59
+   },
+   {
+    "throws": 48,
+    "slashes": 34,
+    "kicks": 14,
+    "dashes": 205,
+    "recalls": 9
+   }
+  ]
+ },
+ "mq_waypoint|skybridge|11020-11038": {
+  "n": 38,
+  "w": [
+   26,
+   11
+  ],
+  "draw": 1,
+  "fall": [
+   0,
+   6
+  ],
+  "dart": [
+   10,
+   20
+  ],
+  "slash": [
+   2,
+   1
+  ],
+  "kills": [
+   27,
+   12
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 80,
+    "slashes": 2,
+    "kicks": 18,
+    "dashes": 105,
+    "recalls": 145
+   },
+   {
+    "throws": 59,
+    "slashes": 45,
+    "kicks": 10,
+    "dashes": 185,
+    "recalls": 24
+   }
+  ]
+ },
+ "mq_waypoint|stonecircle|11020-11038": {
+  "n": 38,
+  "w": [
+   19,
+   19
+  ],
+  "draw": 0,
+  "fall": [
+   0,
+   2
+  ],
+  "dart": [
+   15,
+   16
+  ],
+  "slash": [
+   4,
+   1
+  ],
+  "kills": [
+   19,
+   19
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 70,
+    "slashes": 34,
+    "kicks": 17,
+    "dashes": 74,
+    "recalls": 76
+   },
+   {
+    "throws": 47,
+    "slashes": 34,
+    "kicks": 16,
+    "dashes": 163,
+    "recalls": 10
+   }
+  ]
+ },
+ "mq_orbit|twinlakes|11020-11038": {
+  "n": 38,
+  "w": [
+   10,
+   28
+  ],
+  "draw": 0,
+  "fall": [
+   3,
+   0
+  ],
+  "dart": [
+   21,
+   10
+  ],
+  "slash": [
+   4,
+   0
+  ],
+  "kills": [
+   10,
+   26
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 58,
+    "slashes": 20,
+    "kicks": 5,
+    "dashes": 31,
+    "recalls": 35
+   },
+   {
+    "throws": 42,
+    "slashes": 19,
+    "kicks": 3,
+    "dashes": 157,
+    "recalls": 10
+   }
+  ]
+ },
+ "mq_orbit|yinyang|11020-11038": {
+  "n": 38,
+  "w": [
+   12,
+   25
+  ],
+  "draw": 1,
+  "fall": [
+   2,
+   1
+  ],
+  "dart": [
+   23,
+   11
+  ],
+  "slash": [
+   1,
+   1
+  ],
+  "kills": [
+   13,
+   25
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 60,
+    "slashes": 19,
+    "kicks": 9,
+    "dashes": 25,
+    "recalls": 97
+   },
+   {
+    "throws": 53,
+    "slashes": 18,
+    "kicks": 5,
+    "dashes": 195,
+    "recalls": 13
+   }
+  ]
+ },
+ "mq_orbit|icefloes|11020-11038": {
+  "n": 38,
+  "w": [
+   14,
+   24
+  ],
+  "draw": 0,
+  "fall": [
+   3,
+   1
+  ],
+  "dart": [
+   20,
+   13
+  ],
+  "slash": [
+   1,
+   0
+  ],
+  "kills": [
+   14,
+   21
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 58,
+    "slashes": 24,
+    "kicks": 7,
+    "dashes": 38,
+    "recalls": 26
+   },
+   {
+    "throws": 44,
+    "slashes": 17,
+    "kicks": 2,
+    "dashes": 155,
+    "recalls": 9
+   }
+  ]
+ },
+ "mq_orbit|ruins|11020-11038": {
+  "n": 38,
+  "w": [
+   5,
+   33
+  ],
+  "draw": 0,
+  "fall": [
+   24,
+   1
+  ],
+  "dart": [
+   8,
+   4
+  ],
+  "slash": [
+   1,
+   0
+  ],
+  "kills": [
+   4,
+   9
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 24,
+    "slashes": 33,
+    "kicks": 1,
+    "dashes": 53,
+    "recalls": 17
+   },
+   {
+    "throws": 16,
+    "slashes": 8,
+    "kicks": 0,
+    "dashes": 289,
+    "recalls": 31
+   }
+  ]
+ },
+ "mq_orbit|skybridge|11020-11038": {
+  "n": 38,
+  "w": [
+   15,
+   23
+  ],
+  "draw": 0,
+  "fall": [
+   0,
+   3
+  ],
+  "dart": [
+   16,
+   12
+  ],
+  "slash": [
+   7,
+   0
+  ],
+  "kills": [
+   15,
+   23
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 77,
+    "slashes": 11,
+    "kicks": 13,
+    "dashes": 58,
+    "recalls": 114
+   },
+   {
+    "throws": 62,
+    "slashes": 49,
+    "kicks": 2,
+    "dashes": 191,
+    "recalls": 21
+   }
+  ]
+ },
+ "mq_orbit|stonecircle|11020-11038": {
+  "n": 38,
+  "w": [
+   9,
+   29
+  ],
+  "draw": 0,
+  "fall": [
+   0,
+   0
+  ],
+  "dart": [
+   24,
+   9
+  ],
+  "slash": [
+   5,
+   0
+  ],
+  "kills": [
+   9,
+   29
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 67,
+    "slashes": 21,
+    "kicks": 14,
+    "dashes": 32,
+    "recalls": 115
+   },
+   {
+    "throws": 44,
+    "slashes": 44,
+    "kicks": 3,
+    "dashes": 262,
+    "recalls": 6
+   }
+  ]
+ },
+ "mq_orig_b|twinlakes|11001-11019": {
+  "n": 38,
+  "w": [
+   10,
+   27
+  ],
+  "draw": 1,
+  "fall": [
+   2,
+   1
+  ],
+  "dart": [
+   23,
+   9
+  ],
+  "slash": [
+   3,
+   1
+  ],
+  "kills": [
+   11,
+   27
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 63,
+    "slashes": 22,
+    "kicks": 13,
+    "dashes": 27,
+    "recalls": 92
+   },
+   {
+    "throws": 51,
+    "slashes": 25,
+    "kicks": 4,
+    "dashes": 159,
+    "recalls": 20
+   }
+  ]
+ },
+ "mq_orig_b|yinyang|11001-11019": {
+  "n": 38,
+  "w": [
+   12,
+   26
+  ],
+  "draw": 0,
+  "fall": [
+   1,
+   1
+  ],
+  "dart": [
+   23,
+   9
+  ],
+  "slash": [
+   2,
+   2
+  ],
+  "kills": [
+   12,
+   25
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 67,
+    "slashes": 18,
+    "kicks": 7,
+    "dashes": 33,
+    "recalls": 98
+   },
+   {
+    "throws": 56,
+    "slashes": 29,
+    "kicks": 0,
+    "dashes": 255,
+    "recalls": 6
+   }
+  ]
+ },
+ "mq_orig_b|icefloes|11001-11019": {
+  "n": 38,
+  "w": [
+   8,
+   30
+  ],
+  "draw": 0,
+  "fall": [
+   1,
+   0
+  ],
+  "dart": [
+   26,
+   8
+  ],
+  "slash": [
+   3,
+   0
+  ],
+  "kills": [
+   8,
+   30
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 39,
+    "slashes": 27,
+    "kicks": 4,
+    "dashes": 50,
+    "recalls": 19
+   },
+   {
+    "throws": 39,
+    "slashes": 14,
+    "kicks": 2,
+    "dashes": 139,
+    "recalls": 0
+   }
+  ]
+ },
+ "mq_orig_b|ruins|11001-11019": {
+  "n": 38,
+  "w": [
+   9,
+   29
+  ],
+  "draw": 0,
+  "fall": [
+   17,
+   1
+  ],
+  "dart": [
+   10,
+   8
+  ],
+  "slash": [
+   2,
+   0
+  ],
+  "kills": [
+   9,
+   12
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 23,
+    "slashes": 38,
+    "kicks": 67,
+    "dashes": 31,
+    "recalls": 9
+   },
+   {
+    "throws": 18,
+    "slashes": 6,
+    "kicks": 0,
+    "dashes": 253,
+    "recalls": 2
+   }
+  ]
+ },
+ "mq_orig_b|skybridge|11001-11019": {
+  "n": 38,
+  "w": [
+   22,
+   16
+  ],
+  "draw": 0,
+  "fall": [
+   1,
+   3
+  ],
+  "dart": [
+   9,
+   19
+  ],
+  "slash": [
+   6,
+   0
+  ],
+  "kills": [
+   22,
+   15
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 74,
+    "slashes": 7,
+    "kicks": 12,
+    "dashes": 29,
+    "recalls": 112
+   },
+   {
+    "throws": 46,
+    "slashes": 47,
+    "kicks": 5,
+    "dashes": 178,
+    "recalls": 24
+   }
+  ]
+ },
+ "mq_orig_b|stonecircle|11001-11019": {
+  "n": 38,
+  "w": [
+   15,
+   23
+  ],
+  "draw": 0,
+  "fall": [
+   1,
+   0
+  ],
+  "dart": [
+   17,
+   13
+  ],
+  "slash": [
+   5,
+   2
+  ],
+  "kills": [
+   15,
+   23
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 76,
+    "slashes": 23,
+    "kicks": 11,
+    "dashes": 38,
+    "recalls": 90
+   },
+   {
+    "throws": 43,
+    "slashes": 46,
+    "kicks": 7,
+    "dashes": 258,
+    "recalls": 10
+   }
+  ]
+ },
+ "mq_blockreal|twinlakes|11001-11019": {
+  "n": 38,
+  "w": [
+   12,
+   25
+  ],
+  "draw": 1,
+  "fall": [
+   1,
+   1
+  ],
+  "dart": [
+   16,
+   12
+  ],
+  "slash": [
+   9,
+   0
+  ],
+  "kills": [
+   13,
+   26
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 84,
+    "slashes": 2,
+    "kicks": 13,
+    "dashes": 39,
+    "recalls": 77
+   },
+   {
+    "throws": 48,
+    "slashes": 32,
+    "kicks": 3,
+    "dashes": 188,
+    "recalls": 18
+   }
+  ]
+ },
+ "mq_blockreal|yinyang|11001-11019": {
+  "n": 38,
+  "w": [
+   15,
+   22
+  ],
+  "draw": 1,
+  "fall": [
+   1,
+   1
+  ],
+  "dart": [
+   18,
+   14
+  ],
+  "slash": [
+   4,
+   1
+  ],
+  "kills": [
+   16,
+   22
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 88,
+    "slashes": 4,
+    "kicks": 9,
+    "dashes": 33,
+    "recalls": 127
+   },
+   {
+    "throws": 56,
+    "slashes": 42,
+    "kicks": 3,
+    "dashes": 266,
+    "recalls": 9
+   }
+  ]
+ },
+ "mq_blockreal|icefloes|11001-11019": {
+  "n": 38,
+  "w": [
+   17,
+   21
+  ],
+  "draw": 0,
+  "fall": [
+   1,
+   1
+  ],
+  "dart": [
+   18,
+   16
+  ],
+  "slash": [
+   2,
+   0
+  ],
+  "kills": [
+   17,
+   20
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 76,
+    "slashes": 3,
+    "kicks": 4,
+    "dashes": 39,
+    "recalls": 32
+   },
+   {
+    "throws": 46,
+    "slashes": 25,
+    "kicks": 2,
+    "dashes": 155,
+    "recalls": 11
+   }
+  ]
+ },
+ "mq_blockreal|ruins|11001-11019": {
+  "n": 38,
+  "w": [
+   11,
+   27
+  ],
+  "draw": 0,
+  "fall": [
+   10,
+   1
+  ],
+  "dart": [
+   15,
+   9
+  ],
+  "slash": [
+   2,
+   1
+  ],
+  "kills": [
+   10,
+   18
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 38,
+    "slashes": 6,
+    "kicks": 15,
+    "dashes": 41,
+    "recalls": 45
+   },
+   {
+    "throws": 32,
+    "slashes": 22,
+    "kicks": 10,
+    "dashes": 273,
+    "recalls": 20
+   }
+  ]
+ },
+ "mq_blockreal|skybridge|11001-11019": {
+  "n": 38,
+  "w": [
+   18,
+   20
+  ],
+  "draw": 0,
+  "fall": [
+   0,
+   4
+  ],
+  "dart": [
+   16,
+   13
+  ],
+  "slash": [
+   4,
+   1
+  ],
+  "kills": [
+   18,
+   20
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 69,
+    "slashes": 2,
+    "kicks": 14,
+    "dashes": 47,
+    "recalls": 160
+   },
+   {
+    "throws": 53,
+    "slashes": 58,
+    "kicks": 3,
+    "dashes": 174,
+    "recalls": 20
+   }
+  ]
+ },
+ "mq_blockreal|stonecircle|11001-11019": {
+  "n": 38,
+  "w": [
+   13,
+   25
+  ],
+  "draw": 0,
+  "fall": [
+   1,
+   2
+  ],
+  "dart": [
+   16,
+   11
+  ],
+  "slash": [
+   8,
+   0
+  ],
+  "kills": [
+   13,
+   25
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 86,
+    "slashes": 3,
+    "kicks": 38,
+    "dashes": 38,
+    "recalls": 96
+   },
+   {
+    "throws": 43,
+    "slashes": 41,
+    "kicks": 13,
+    "dashes": 269,
+    "recalls": 6
+   }
+  ]
+ },
+ "mq_orig_b|twinlakes|11020-11038": {
+  "n": 38,
+  "w": [
+   11,
+   27
+  ],
+  "draw": 0,
+  "fall": [
+   0,
+   2
+  ],
+  "dart": [
+   24,
+   9
+  ],
+  "slash": [
+   3,
+   0
+  ],
+  "kills": [
+   11,
+   27
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 63,
+    "slashes": 24,
+    "kicks": 7,
+    "dashes": 35,
+    "recalls": 79
+   },
+   {
+    "throws": 51,
+    "slashes": 36,
+    "kicks": 2,
+    "dashes": 175,
+    "recalls": 3
+   }
+  ]
+ },
+ "mq_orig_b|yinyang|11020-11038": {
+  "n": 38,
+  "w": [
+   13,
+   24
+  ],
+  "draw": 1,
+  "fall": [
+   2,
+   1
+  ],
+  "dart": [
+   19,
+   13
+  ],
+  "slash": [
+   4,
+   0
+  ],
+  "kills": [
+   13,
+   24
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 64,
+    "slashes": 21,
+    "kicks": 4,
+    "dashes": 28,
+    "recalls": 138
+   },
+   {
+    "throws": 51,
+    "slashes": 27,
+    "kicks": 4,
+    "dashes": 213,
+    "recalls": 12
+   }
+  ]
+ },
+ "mq_orig_b|icefloes|11020-11038": {
+  "n": 38,
+  "w": [
+   6,
+   32
+  ],
+  "draw": 0,
+  "fall": [
+   2,
+   2
+  ],
+  "dart": [
+   28,
+   4
+  ],
+  "slash": [
+   2,
+   0
+  ],
+  "kills": [
+   5,
+   31
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 54,
+    "slashes": 38,
+    "kicks": 6,
+    "dashes": 49,
+    "recalls": 28
+   },
+   {
+    "throws": 46,
+    "slashes": 21,
+    "kicks": 1,
+    "dashes": 153,
+    "recalls": 8
+   }
+  ]
+ },
+ "mq_orig_b|ruins|11020-11038": {
+  "n": 38,
+  "w": [
+   9,
+   29
+  ],
+  "draw": 0,
+  "fall": [
+   15,
+   2
+  ],
+  "dart": [
+   11,
+   6
+  ],
+  "slash": [
+   3,
+   1
+  ],
+  "kills": [
+   7,
+   15
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 30,
+    "slashes": 25,
+    "kicks": 5,
+    "dashes": 42,
+    "recalls": 38
+   },
+   {
+    "throws": 22,
+    "slashes": 19,
+    "kicks": 2,
+    "dashes": 306,
+    "recalls": 16
+   }
+  ]
+ },
+ "mq_orig_b|skybridge|11020-11038": {
+  "n": 38,
+  "w": [
+   13,
+   25
+  ],
+  "draw": 0,
+  "fall": [
+   1,
+   0
+  ],
+  "dart": [
+   20,
+   13
+  ],
+  "slash": [
+   4,
+   0
+  ],
+  "kills": [
+   13,
+   25
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 69,
+    "slashes": 14,
+    "kicks": 5,
+    "dashes": 40,
+    "recalls": 117
+   },
+   {
+    "throws": 49,
+    "slashes": 53,
+    "kicks": 2,
+    "dashes": 181,
+    "recalls": 16
+   }
+  ]
+ },
+ "mq_orig_b|stonecircle|11020-11038": {
+  "n": 38,
+  "w": [
+   16,
+   22
+  ],
+  "draw": 0,
+  "fall": [
+   0,
+   1
+  ],
+  "dart": [
+   18,
+   15
+  ],
+  "slash": [
+   4,
+   0
+  ],
+  "kills": [
+   16,
+   22
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 77,
+    "slashes": 30,
+    "kicks": 12,
+    "dashes": 34,
+    "recalls": 90
+   },
+   {
+    "throws": 43,
+    "slashes": 32,
+    "kicks": 5,
+    "dashes": 255,
+    "recalls": 9
+   }
+  ]
+ },
+ "mq_blockreal|twinlakes|11020-11038": {
+  "n": 38,
+  "w": [
+   11,
+   27
+  ],
+  "draw": 0,
+  "fall": [
+   3,
+   3
+  ],
+  "dart": [
+   17,
+   7
+  ],
+  "slash": [
+   7,
+   1
+  ],
+  "kills": [
+   11,
+   26
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 73,
+    "slashes": 8,
+    "kicks": 16,
+    "dashes": 29,
+    "recalls": 52
+   },
+   {
+    "throws": 45,
+    "slashes": 35,
+    "kicks": 3,
+    "dashes": 161,
+    "recalls": 11
+   }
+  ]
+ },
+ "mq_blockreal|yinyang|11020-11038": {
+  "n": 38,
+  "w": [
+   13,
+   25
+  ],
+  "draw": 0,
+  "fall": [
+   0,
+   2
+  ],
+  "dart": [
+   20,
+   11
+  ],
+  "slash": [
+   5,
+   0
+  ],
+  "kills": [
+   13,
+   25
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 76,
+    "slashes": 4,
+    "kicks": 12,
+    "dashes": 30,
+    "recalls": 115
+   },
+   {
+    "throws": 55,
+    "slashes": 30,
+    "kicks": 2,
+    "dashes": 241,
+    "recalls": 17
+   }
+  ]
+ },
+ "mq_blockreal|icefloes|11020-11038": {
+  "n": 38,
+  "w": [
+   17,
+   21
+  ],
+  "draw": 0,
+  "fall": [
+   1,
+   3
+  ],
+  "dart": [
+   20,
+   13
+  ],
+  "slash": [
+   0,
+   1
+  ],
+  "kills": [
+   16,
+   21
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 74,
+    "slashes": 5,
+    "kicks": 8,
+    "dashes": 50,
+    "recalls": 49
+   },
+   {
+    "throws": 49,
+    "slashes": 20,
+    "kicks": 4,
+    "dashes": 160,
+    "recalls": 18
+   }
+  ]
+ },
+ "mq_blockreal|ruins|11020-11038": {
+  "n": 38,
+  "w": [
+   10,
+   28
+  ],
+  "draw": 0,
+  "fall": [
+   18,
+   0
+  ],
+  "dart": [
+   8,
+   10
+  ],
+  "slash": [
+   2,
+   0
+  ],
+  "kills": [
+   10,
+   11
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 33,
+    "slashes": 2,
+    "kicks": 12,
+    "dashes": 30,
+    "recalls": 22
+   },
+   {
+    "throws": 25,
+    "slashes": 10,
+    "kicks": 2,
+    "dashes": 247,
+    "recalls": 6
+   }
+  ]
+ },
+ "mq_blockreal|skybridge|11020-11038": {
+  "n": 38,
+  "w": [
+   13,
+   24
+  ],
+  "draw": 1,
+  "fall": [
+   3,
+   4
+  ],
+  "dart": [
+   18,
+   10
+  ],
+  "slash": [
+   4,
+   0
+  ],
+  "kills": [
+   13,
+   22
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 67,
+    "slashes": 3,
+    "kicks": 13,
+    "dashes": 42,
+    "recalls": 124
+   },
+   {
+    "throws": 59,
+    "slashes": 43,
+    "kicks": 7,
+    "dashes": 178,
+    "recalls": 22
+   }
+  ]
+ },
+ "mq_blockreal|stonecircle|11020-11038": {
+  "n": 38,
+  "w": [
+   22,
+   16
+  ],
+  "draw": 0,
+  "fall": [
+   1,
+   0
+  ],
+  "dart": [
+   12,
+   22
+  ],
+  "slash": [
+   3,
+   0
+  ],
+  "kills": [
+   22,
+   15
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 69,
+    "slashes": 3,
+    "kicks": 21,
+    "dashes": 26,
+    "recalls": 69
+   },
+   {
+    "throws": 38,
+    "slashes": 33,
+    "kicks": 5,
+    "dashes": 251,
+    "recalls": 4
+   }
+  ]
+ },
+ "dm_orig|twinlakes|11001-11019": {
+  "n": 38,
+  "w": [
+   9,
+   29
+  ],
+  "draw": 0,
+  "fall": [
+   8,
+   0
+  ],
+  "dart": [
+   20,
+   9
+  ],
+  "slash": [
+   1,
+   0
+  ],
+  "kills": [
+   9,
+   21
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 65,
+    "slashes": 0,
+    "kicks": 1,
+    "dashes": 29,
+    "recalls": 2
+   },
+   {
+    "throws": 72,
+    "slashes": 10,
+    "kicks": 3,
+    "dashes": 9,
+    "recalls": 11
+   }
+  ]
+ },
+ "dm_orig|yinyang|11001-11019": {
+  "n": 38,
+  "w": [
+   0,
+   38
+  ],
+  "draw": 0,
+  "fall": [
+   38,
+   0
+  ],
+  "dart": [
+   0,
+   0
+  ],
+  "slash": [
+   0,
+   0
+  ],
+  "kills": [
+   0,
+   0
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 0,
+    "slashes": 0,
+    "kicks": 0,
+    "dashes": 0,
+    "recalls": 0
+   },
+   {
+    "throws": 0,
+    "slashes": 0,
+    "kicks": 0,
+    "dashes": 0,
+    "recalls": 0
+   }
+  ]
+ },
+ "dm_orig|icefloes|11001-11019": {
+  "n": 38,
+  "w": [
+   0,
+   36
+  ],
+  "draw": 2,
+  "fall": [
+   38,
+   2
+  ],
+  "dart": [
+   0,
+   0
+  ],
+  "slash": [
+   0,
+   0
+  ],
+  "kills": [
+   0,
+   0
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 0,
+    "slashes": 0,
+    "kicks": 0,
+    "dashes": 0,
+    "recalls": 0
+   },
+   {
+    "throws": 0,
+    "slashes": 0,
+    "kicks": 0,
+    "dashes": 12,
+    "recalls": 0
+   }
+  ]
+ },
+ "dm_orig|ruins|11001-11019": {
+  "n": 38,
+  "w": [
+   0,
+   38
+  ],
+  "draw": 0,
+  "fall": [
+   36,
+   0
+  ],
+  "dart": [
+   2,
+   0
+  ],
+  "slash": [
+   0,
+   0
+  ],
+  "kills": [
+   0,
+   2
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 2,
+    "slashes": 0,
+    "kicks": 0,
+    "dashes": 1,
+    "recalls": 1
+   },
+   {
+    "throws": 3,
+    "slashes": 1,
+    "kicks": 0,
+    "dashes": 9,
+    "recalls": 1
+   }
+  ]
+ },
+ "dm_orig|skybridge|11001-11019": {
+  "n": 38,
+  "w": [
+   13,
+   25
+  ],
+  "draw": 0,
+  "fall": [
+   15,
+   11
+  ],
+  "dart": [
+   10,
+   2
+  ],
+  "slash": [
+   0,
+   0
+  ],
+  "kills": [
+   2,
+   10
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 36,
+    "slashes": 1,
+    "kicks": 0,
+    "dashes": 9,
+    "recalls": 8
+   },
+   {
+    "throws": 19,
+    "slashes": 6,
+    "kicks": 0,
+    "dashes": 100,
+    "recalls": 0
+   }
+  ]
+ },
+ "dm_orig|stonecircle|11001-11019": {
+  "n": 38,
+  "w": [
+   7,
+   30
+  ],
+  "draw": 1,
+  "fall": [
+   24,
+   0
+  ],
+  "dart": [
+   7,
+   7
+  ],
+  "slash": [
+   0,
+   1
+  ],
+  "kills": [
+   8,
+   7
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 24,
+    "slashes": 1,
+    "kicks": 0,
+    "dashes": 11,
+    "recalls": 3
+   },
+   {
+    "throws": 18,
+    "slashes": 6,
+    "kicks": 5,
+    "dashes": 14,
+    "recalls": 4
+   }
+  ]
+ },
+ "dm_evade4|twinlakes|11001-11019": {
+  "n": 38,
+  "w": [
+   12,
+   26
+  ],
+  "draw": 0,
+  "fall": [
+   8,
+   1
+  ],
+  "dart": [
+   18,
+   8
+  ],
+  "slash": [
+   0,
+   3
+  ],
+  "kills": [
+   12,
+   18
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 65,
+    "slashes": 3,
+    "kicks": 2,
+    "dashes": 23,
+    "recalls": 2
+   },
+   {
+    "throws": 63,
+    "slashes": 12,
+    "kicks": 2,
+    "dashes": 7,
+    "recalls": 13
+   }
+  ]
+ },
+ "dm_evade4|yinyang|11001-11019": {
+  "n": 38,
+  "w": [
+   0,
+   38
+  ],
+  "draw": 0,
+  "fall": [
+   38,
+   0
+  ],
+  "dart": [
+   0,
+   0
+  ],
+  "slash": [
+   0,
+   0
+  ],
+  "kills": [
+   0,
+   0
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 0,
+    "slashes": 0,
+    "kicks": 0,
+    "dashes": 0,
+    "recalls": 0
+   },
+   {
+    "throws": 0,
+    "slashes": 0,
+    "kicks": 0,
+    "dashes": 0,
+    "recalls": 0
+   }
+  ]
+ },
+ "dm_evade4|icefloes|11001-11019": {
+  "n": 38,
+  "w": [
+   0,
+   36
+  ],
+  "draw": 2,
+  "fall": [
+   38,
+   2
+  ],
+  "dart": [
+   0,
+   0
+  ],
+  "slash": [
+   0,
+   0
+  ],
+  "kills": [
+   0,
+   0
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 0,
+    "slashes": 0,
+    "kicks": 0,
+    "dashes": 0,
+    "recalls": 0
+   },
+   {
+    "throws": 0,
+    "slashes": 0,
+    "kicks": 0,
+    "dashes": 12,
+    "recalls": 0
+   }
+  ]
+ },
+ "dm_evade4|ruins|11001-11019": {
+  "n": 38,
+  "w": [
+   0,
+   38
+  ],
+  "draw": 0,
+  "fall": [
+   36,
+   0
+  ],
+  "dart": [
+   2,
+   0
+  ],
+  "slash": [
+   0,
+   0
+  ],
+  "kills": [
+   0,
+   2
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 2,
+    "slashes": 0,
+    "kicks": 0,
+    "dashes": 1,
+    "recalls": 1
+   },
+   {
+    "throws": 3,
+    "slashes": 1,
+    "kicks": 0,
+    "dashes": 9,
+    "recalls": 1
+   }
+  ]
+ },
+ "dm_evade4|skybridge|11001-11019": {
+  "n": 38,
+  "w": [
+   9,
+   28
+  ],
+  "draw": 1,
+  "fall": [
+   17,
+   9
+  ],
+  "dart": [
+   12,
+   1
+  ],
+  "slash": [
+   0,
+   0
+  ],
+  "kills": [
+   1,
+   12
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 36,
+    "slashes": 1,
+    "kicks": 0,
+    "dashes": 7,
+    "recalls": 11
+   },
+   {
+    "throws": 23,
+    "slashes": 2,
+    "kicks": 0,
+    "dashes": 100,
+    "recalls": 1
+   }
+  ]
+ },
+ "dm_evade4|stonecircle|11001-11019": {
+  "n": 38,
+  "w": [
+   7,
+   30
+  ],
+  "draw": 1,
+  "fall": [
+   25,
+   1
+  ],
+  "dart": [
+   6,
+   4
+  ],
+  "slash": [
+   0,
+   3
+  ],
+  "kills": [
+   8,
+   7
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 18,
+    "slashes": 4,
+    "kicks": 3,
+    "dashes": 6,
+    "recalls": 1
+   },
+   {
+    "throws": 18,
+    "slashes": 4,
+    "kicks": 5,
+    "dashes": 13,
+    "recalls": 4
+   }
+  ]
+ },
+ "dm_orig|twinlakes|11020-11038": {
+  "n": 38,
+  "w": [
+   10,
+   28
+  ],
+  "draw": 0,
+  "fall": [
+   10,
+   1
+  ],
+  "dart": [
+   17,
+   8
+  ],
+  "slash": [
+   1,
+   1
+  ],
+  "kills": [
+   9,
+   18
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 62,
+    "slashes": 1,
+    "kicks": 0,
+    "dashes": 24,
+    "recalls": 0
+   },
+   {
+    "throws": 59,
+    "slashes": 12,
+    "kicks": 2,
+    "dashes": 19,
+    "recalls": 9
+   }
+  ]
+ },
+ "dm_orig|yinyang|11020-11038": {
+  "n": 38,
+  "w": [
+   0,
+   38
+  ],
+  "draw": 0,
+  "fall": [
+   38,
+   0
+  ],
+  "dart": [
+   0,
+   0
+  ],
+  "slash": [
+   0,
+   0
+  ],
+  "kills": [
+   0,
+   0
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 0,
+    "slashes": 0,
+    "kicks": 0,
+    "dashes": 0,
+    "recalls": 0
+   },
+   {
+    "throws": 0,
+    "slashes": 0,
+    "kicks": 0,
+    "dashes": 0,
+    "recalls": 0
+   }
+  ]
+ },
+ "dm_orig|icefloes|11020-11038": {
+  "n": 38,
+  "w": [
+   0,
+   34
+  ],
+  "draw": 4,
+  "fall": [
+   38,
+   4
+  ],
+  "dart": [
+   0,
+   0
+  ],
+  "slash": [
+   0,
+   0
+  ],
+  "kills": [
+   0,
+   0
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 0,
+    "slashes": 0,
+    "kicks": 0,
+    "dashes": 0,
+    "recalls": 0
+   },
+   {
+    "throws": 0,
+    "slashes": 0,
+    "kicks": 0,
+    "dashes": 4,
+    "recalls": 0
+   }
+  ]
+ },
+ "dm_orig|ruins|11020-11038": {
+  "n": 38,
+  "w": [
+   1,
+   37
+  ],
+  "draw": 0,
+  "fall": [
+   36,
+   1
+  ],
+  "dart": [
+   1,
+   0
+  ],
+  "slash": [
+   0,
+   0
+  ],
+  "kills": [
+   0,
+   1
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 3,
+    "slashes": 0,
+    "kicks": 0,
+    "dashes": 2,
+    "recalls": 1
+   },
+   {
+    "throws": 3,
+    "slashes": 1,
+    "kicks": 0,
+    "dashes": 11,
+    "recalls": 1
+   }
+  ]
+ },
+ "dm_orig|skybridge|11020-11038": {
+  "n": 38,
+  "w": [
+   12,
+   26
+  ],
+  "draw": 0,
+  "fall": [
+   15,
+   9
+  ],
+  "dart": [
+   11,
+   3
+  ],
+  "slash": [
+   0,
+   0
+  ],
+  "kills": [
+   3,
+   11
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 34,
+    "slashes": 0,
+    "kicks": 0,
+    "dashes": 10,
+    "recalls": 6
+   },
+   {
+    "throws": 19,
+    "slashes": 3,
+    "kicks": 0,
+    "dashes": 75,
+    "recalls": 5
+   }
+  ]
+ },
+ "dm_orig|stonecircle|11020-11038": {
+  "n": 38,
+  "w": [
+   8,
+   30
+  ],
+  "draw": 0,
+  "fall": [
+   25,
+   2
+  ],
+  "dart": [
+   5,
+   6
+  ],
+  "slash": [
+   0,
+   0
+  ],
+  "kills": [
+   8,
+   5
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 17,
+    "slashes": 3,
+    "kicks": 4,
+    "dashes": 5,
+    "recalls": 1
+   },
+   {
+    "throws": 24,
+    "slashes": 2,
+    "kicks": 6,
+    "dashes": 9,
+    "recalls": 8
+   }
+  ]
+ },
+ "dm_evade4|twinlakes|11020-11038": {
+  "n": 38,
+  "w": [
+   9,
+   29
+  ],
+  "draw": 0,
+  "fall": [
+   11,
+   1
+  ],
+  "dart": [
+   18,
+   6
+  ],
+  "slash": [
+   0,
+   2
+  ],
+  "kills": [
+   8,
+   18
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 57,
+    "slashes": 4,
+    "kicks": 0,
+    "dashes": 19,
+    "recalls": 2
+   },
+   {
+    "throws": 56,
+    "slashes": 9,
+    "kicks": 8,
+    "dashes": 17,
+    "recalls": 14
+   }
+  ]
+ },
+ "dm_evade4|yinyang|11020-11038": {
+  "n": 38,
+  "w": [
+   0,
+   38
+  ],
+  "draw": 0,
+  "fall": [
+   38,
+   0
+  ],
+  "dart": [
+   0,
+   0
+  ],
+  "slash": [
+   0,
+   0
+  ],
+  "kills": [
+   0,
+   0
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 0,
+    "slashes": 0,
+    "kicks": 0,
+    "dashes": 0,
+    "recalls": 0
+   },
+   {
+    "throws": 0,
+    "slashes": 0,
+    "kicks": 0,
+    "dashes": 0,
+    "recalls": 0
+   }
+  ]
+ },
+ "dm_evade4|icefloes|11020-11038": {
+  "n": 38,
+  "w": [
+   0,
+   34
+  ],
+  "draw": 4,
+  "fall": [
+   38,
+   4
+  ],
+  "dart": [
+   0,
+   0
+  ],
+  "slash": [
+   0,
+   0
+  ],
+  "kills": [
+   0,
+   0
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 0,
+    "slashes": 0,
+    "kicks": 0,
+    "dashes": 0,
+    "recalls": 0
+   },
+   {
+    "throws": 0,
+    "slashes": 0,
+    "kicks": 0,
+    "dashes": 4,
+    "recalls": 0
+   }
+  ]
+ },
+ "dm_evade4|ruins|11020-11038": {
+  "n": 38,
+  "w": [
+   2,
+   36
+  ],
+  "draw": 0,
+  "fall": [
+   35,
+   1
+  ],
+  "dart": [
+   1,
+   1
+  ],
+  "slash": [
+   0,
+   0
+  ],
+  "kills": [
+   1,
+   1
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 4,
+    "slashes": 0,
+    "kicks": 0,
+    "dashes": 2,
+    "recalls": 1
+   },
+   {
+    "throws": 4,
+    "slashes": 1,
+    "kicks": 0,
+    "dashes": 10,
+    "recalls": 0
+   }
+  ]
+ },
+ "dm_evade4|skybridge|11020-11038": {
+  "n": 38,
+  "w": [
+   11,
+   27
+  ],
+  "draw": 0,
+  "fall": [
+   14,
+   10
+  ],
+  "dart": [
+   13,
+   1
+  ],
+  "slash": [
+   0,
+   0
+  ],
+  "kills": [
+   1,
+   13
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 30,
+    "slashes": 0,
+    "kicks": 0,
+    "dashes": 8,
+    "recalls": 6
+   },
+   {
+    "throws": 21,
+    "slashes": 3,
+    "kicks": 0,
+    "dashes": 76,
+    "recalls": 8
+   }
+  ]
+ },
+ "dm_evade4|stonecircle|11020-11038": {
+  "n": 38,
+  "w": [
+   7,
+   31
+  ],
+  "draw": 0,
+  "fall": [
+   25,
+   1
+  ],
+  "dart": [
+   3,
+   6
+  ],
+  "slash": [
+   3,
+   0
+  ],
+  "kills": [
+   7,
+   6
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 18,
+    "slashes": 4,
+    "kicks": 3,
+    "dashes": 4,
+    "recalls": 1
+   },
+   {
+    "throws": 22,
+    "slashes": 5,
+    "kicks": 5,
+    "dashes": 9,
+    "recalls": 6
+   }
+  ]
+ },
+ "dm_guard|twinlakes|11001-11019": {
+  "n": 38,
+  "w": [
+   13,
+   25
+  ],
+  "draw": 0,
+  "fall": [
+   5,
+   2
+  ],
+  "dart": [
+   19,
+   9
+  ],
+  "slash": [
+   1,
+   2
+  ],
+  "kills": [
+   13,
+   21
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 79,
+    "slashes": 2,
+    "kicks": 6,
+    "dashes": 32,
+    "recalls": 5
+   },
+   {
+    "throws": 74,
+    "slashes": 14,
+    "kicks": 6,
+    "dashes": 15,
+    "recalls": 14
+   }
+  ]
+ },
+ "dm_guard|yinyang|11001-11019": {
+  "n": 38,
+  "w": [
+   16,
+   20
+  ],
+  "draw": 2,
+  "fall": [
+   12,
+   9
+  ],
+  "dart": [
+   9,
+   8
+  ],
+  "slash": [
+   1,
+   1
+  ],
+  "kills": [
+   10,
+   11
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 50,
+    "slashes": 1,
+    "kicks": 1,
+    "dashes": 13,
+    "recalls": 7
+   },
+   {
+    "throws": 40,
+    "slashes": 14,
+    "kicks": 5,
+    "dashes": 26,
+    "recalls": 6
+   }
+  ]
+ },
+ "dm_guard|icefloes|11001-11019": {
+  "n": 38,
+  "w": [
+   7,
+   31
+  ],
+  "draw": 0,
+  "fall": [
+   25,
+   4
+  ],
+  "dart": [
+   6,
+   3
+  ],
+  "slash": [
+   0,
+   0
+  ],
+  "kills": [
+   3,
+   7
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 28,
+    "slashes": 0,
+    "kicks": 0,
+    "dashes": 9,
+    "recalls": 0
+   },
+   {
+    "throws": 31,
+    "slashes": 8,
+    "kicks": 2,
+    "dashes": 33,
+    "recalls": 3
+   }
+  ]
+ },
+ "dm_guard|ruins|11001-11019": {
+  "n": 38,
+  "w": [
+   1,
+   37
+  ],
+  "draw": 0,
+  "fall": [
+   35,
+   0
+  ],
+  "dart": [
+   2,
+   1
+  ],
+  "slash": [
+   0,
+   0
+  ],
+  "kills": [
+   1,
+   2
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 4,
+    "slashes": 0,
+    "kicks": 0,
+    "dashes": 0,
+    "recalls": 0
+   },
+   {
+    "throws": 3,
+    "slashes": 0,
+    "kicks": 0,
+    "dashes": 6,
+    "recalls": 0
+   }
+  ]
+ },
+ "dm_guard|skybridge|11001-11019": {
+  "n": 38,
+  "w": [
+   18,
+   20
+  ],
+  "draw": 0,
+  "fall": [
+   4,
+   15
+  ],
+  "dart": [
+   15,
+   3
+  ],
+  "slash": [
+   1,
+   0
+  ],
+  "kills": [
+   3,
+   16
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 59,
+    "slashes": 0,
+    "kicks": 1,
+    "dashes": 15,
+    "recalls": 18
+   },
+   {
+    "throws": 49,
+    "slashes": 4,
+    "kicks": 2,
+    "dashes": 83,
+    "recalls": 22
+   }
+  ]
+ },
+ "dm_guard|stonecircle|11001-11019": {
+  "n": 38,
+  "w": [
+   27,
+   11
+  ],
+  "draw": 0,
+  "fall": [
+   2,
+   0
+  ],
+  "dart": [
+   9,
+   25
+  ],
+  "slash": [
+   0,
+   2
+  ],
+  "kills": [
+   27,
+   10
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 58,
+    "slashes": 3,
+    "kicks": 2,
+    "dashes": 21,
+    "recalls": 4
+   },
+   {
+    "throws": 46,
+    "slashes": 19,
+    "kicks": 24,
+    "dashes": 30,
+    "recalls": 13
+   }
+  ]
+ },
+ "dm_strafe|twinlakes|11001-11019": {
+  "n": 38,
+  "w": [
+   17,
+   21
+  ],
+  "draw": 0,
+  "fall": [
+   6,
+   0
+  ],
+  "dart": [
+   15,
+   14
+  ],
+  "slash": [
+   0,
+   3
+  ],
+  "kills": [
+   17,
+   19
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 57,
+    "slashes": 3,
+    "kicks": 4,
+    "dashes": 23,
+    "recalls": 4
+   },
+   {
+    "throws": 55,
+    "slashes": 11,
+    "kicks": 17,
+    "dashes": 30,
+    "recalls": 4
+   }
+  ]
+ },
+ "dm_strafe|yinyang|11001-11019": {
+  "n": 38,
+  "w": [
+   8,
+   30
+  ],
+  "draw": 0,
+  "fall": [
+   15,
+   1
+  ],
+  "dart": [
+   15,
+   6
+  ],
+  "slash": [
+   0,
+   1
+  ],
+  "kills": [
+   7,
+   15
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 22,
+    "slashes": 1,
+    "kicks": 0,
+    "dashes": 11,
+    "recalls": 1
+   },
+   {
+    "throws": 35,
+    "slashes": 4,
+    "kicks": 3,
+    "dashes": 7,
+    "recalls": 8
+   }
+  ]
+ },
+ "dm_strafe|icefloes|11001-11019": {
+  "n": 38,
+  "w": [
+   2,
+   32
+  ],
+  "draw": 4,
+  "fall": [
+   32,
+   4
+  ],
+  "dart": [
+   4,
+   2
+  ],
+  "slash": [
+   0,
+   0
+  ],
+  "kills": [
+   2,
+   4
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 6,
+    "slashes": 0,
+    "kicks": 0,
+    "dashes": 2,
+    "recalls": 0
+   },
+   {
+    "throws": 8,
+    "slashes": 0,
+    "kicks": 2,
+    "dashes": 19,
+    "recalls": 0
+   }
+  ]
+ },
+ "dm_strafe|ruins|11001-11019": {
+  "n": 38,
+  "w": [
+   23,
+   11
+  ],
+  "draw": 4,
+  "fall": [
+   10,
+   14
+  ],
+  "dart": [
+   3,
+   9
+  ],
+  "slash": [
+   2,
+   4
+  ],
+  "kills": [
+   13,
+   5
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 22,
+    "slashes": 4,
+    "kicks": 0,
+    "dashes": 0,
+    "recalls": 0
+   },
+   {
+    "throws": 14,
+    "slashes": 68,
+    "kicks": 2,
+    "dashes": 29,
+    "recalls": 1
+   }
+  ]
+ },
+ "dm_strafe|skybridge|11001-11019": {
+  "n": 38,
+  "w": [
+   4,
+   34
+  ],
+  "draw": 0,
+  "fall": [
+   3,
+   1
+  ],
+  "dart": [
+   31,
+   2
+  ],
+  "slash": [
+   0,
+   1
+  ],
+  "kills": [
+   3,
+   32
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 67,
+    "slashes": 3,
+    "kicks": 0,
+    "dashes": 25,
+    "recalls": 13
+   },
+   {
+    "throws": 71,
+    "slashes": 3,
+    "kicks": 4,
+    "dashes": 28,
+    "recalls": 21
+   }
+  ]
+ },
+ "dm_strafe|stonecircle|11001-11019": {
+  "n": 38,
+  "w": [
+   24,
+   14
+  ],
+  "draw": 0,
+  "fall": [
+   0,
+   0
+  ],
+  "dart": [
+   13,
+   21
+  ],
+  "slash": [
+   1,
+   3
+  ],
+  "kills": [
+   24,
+   14
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 52,
+    "slashes": 5,
+    "kicks": 0,
+    "dashes": 32,
+    "recalls": 1
+   },
+   {
+    "throws": 49,
+    "slashes": 31,
+    "kicks": 8,
+    "dashes": 19,
+    "recalls": 21
+   }
+  ]
+ },
+ "dm_guard|twinlakes|11020-11038": {
+  "n": 38,
+  "w": [
+   11,
+   27
+  ],
+  "draw": 0,
+  "fall": [
+   2,
+   0
+  ],
+  "dart": [
+   25,
+   11
+  ],
+  "slash": [
+   0,
+   0
+  ],
+  "kills": [
+   11,
+   26
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 80,
+    "slashes": 1,
+    "kicks": 1,
+    "dashes": 37,
+    "recalls": 4
+   },
+   {
+    "throws": 77,
+    "slashes": 5,
+    "kicks": 13,
+    "dashes": 23,
+    "recalls": 7
+   }
+  ]
+ },
+ "dm_guard|yinyang|11020-11038": {
+  "n": 38,
+  "w": [
+   17,
+   20
+  ],
+  "draw": 1,
+  "fall": [
+   11,
+   8
+  ],
+  "dart": [
+   10,
+   10
+  ],
+  "slash": [
+   0,
+   0
+  ],
+  "kills": [
+   11,
+   11
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 49,
+    "slashes": 0,
+    "kicks": 3,
+    "dashes": 19,
+    "recalls": 8
+   },
+   {
+    "throws": 38,
+    "slashes": 14,
+    "kicks": 7,
+    "dashes": 25,
+    "recalls": 10
+   }
+  ]
+ },
+ "dm_guard|icefloes|11020-11038": {
+  "n": 38,
+  "w": [
+   8,
+   30
+  ],
+  "draw": 0,
+  "fall": [
+   26,
+   2
+  ],
+  "dart": [
+   4,
+   5
+  ],
+  "slash": [
+   0,
+   1
+  ],
+  "kills": [
+   6,
+   4
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 18,
+    "slashes": 1,
+    "kicks": 0,
+    "dashes": 8,
+    "recalls": 1
+   },
+   {
+    "throws": 13,
+    "slashes": 16,
+    "kicks": 1,
+    "dashes": 17,
+    "recalls": 2
+   }
+  ]
+ },
+ "dm_guard|ruins|11020-11038": {
+  "n": 38,
+  "w": [
+   4,
+   34
+  ],
+  "draw": 0,
+  "fall": [
+   30,
+   4
+  ],
+  "dart": [
+   4,
+   0
+  ],
+  "slash": [
+   0,
+   0
+  ],
+  "kills": [
+   0,
+   4
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 2,
+    "slashes": 0,
+    "kicks": 0,
+    "dashes": 0,
+    "recalls": 0
+   },
+   {
+    "throws": 7,
+    "slashes": 16,
+    "kicks": 0,
+    "dashes": 9,
+    "recalls": 5
+   }
+  ]
+ },
+ "dm_guard|skybridge|11020-11038": {
+  "n": 38,
+  "w": [
+   24,
+   12
+  ],
+  "draw": 2,
+  "fall": [
+   7,
+   20
+  ],
+  "dart": [
+   7,
+   4
+  ],
+  "slash": [
+   0,
+   2
+  ],
+  "kills": [
+   6,
+   7
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 36,
+    "slashes": 2,
+    "kicks": 0,
+    "dashes": 21,
+    "recalls": 26
+   },
+   {
+    "throws": 37,
+    "slashes": 0,
+    "kicks": 3,
+    "dashes": 63,
+    "recalls": 34
+   }
+  ]
+ },
+ "dm_guard|stonecircle|11020-11038": {
+  "n": 38,
+  "w": [
+   21,
+   16
+  ],
+  "draw": 1,
+  "fall": [
+   1,
+   5
+  ],
+  "dart": [
+   15,
+   16
+  ],
+  "slash": [
+   1,
+   1
+  ],
+  "kills": [
+   17,
+   16
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 52,
+    "slashes": 1,
+    "kicks": 4,
+    "dashes": 25,
+    "recalls": 0
+   },
+   {
+    "throws": 48,
+    "slashes": 27,
+    "kicks": 11,
+    "dashes": 29,
+    "recalls": 20
+   }
+  ]
+ },
+ "dm_strafe|twinlakes|11020-11038": {
+  "n": 38,
+  "w": [
+   12,
+   26
+  ],
+  "draw": 0,
+  "fall": [
+   4,
+   0
+  ],
+  "dart": [
+   18,
+   12
+  ],
+  "slash": [
+   4,
+   0
+  ],
+  "kills": [
+   12,
+   24
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 59,
+    "slashes": 3,
+    "kicks": 3,
+    "dashes": 20,
+    "recalls": 1
+   },
+   {
+    "throws": 49,
+    "slashes": 18,
+    "kicks": 11,
+    "dashes": 37,
+    "recalls": 4
+   }
+  ]
+ },
+ "dm_strafe|yinyang|11020-11038": {
+  "n": 38,
+  "w": [
+   10,
+   28
+  ],
+  "draw": 0,
+  "fall": [
+   10,
+   1
+  ],
+  "dart": [
+   17,
+   8
+  ],
+  "slash": [
+   1,
+   1
+  ],
+  "kills": [
+   9,
+   18
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 28,
+    "slashes": 1,
+    "kicks": 2,
+    "dashes": 13,
+    "recalls": 2
+   },
+   {
+    "throws": 34,
+    "slashes": 9,
+    "kicks": 1,
+    "dashes": 9,
+    "recalls": 5
+   }
+  ]
+ },
+ "dm_strafe|icefloes|11020-11038": {
+  "n": 38,
+  "w": [
+   2,
+   30
+  ],
+  "draw": 6,
+  "fall": [
+   33,
+   8
+  ],
+  "dart": [
+   3,
+   0
+  ],
+  "slash": [
+   0,
+   0
+  ],
+  "kills": [
+   0,
+   3
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 4,
+    "slashes": 0,
+    "kicks": 2,
+    "dashes": 4,
+    "recalls": 0
+   },
+   {
+    "throws": 21,
+    "slashes": 4,
+    "kicks": 1,
+    "dashes": 7,
+    "recalls": 0
+   }
+  ]
+ },
+ "dm_strafe|ruins|11020-11038": {
+  "n": 38,
+  "w": [
+   20,
+   12
+  ],
+  "draw": 6,
+  "fall": [
+   15,
+   12
+  ],
+  "dart": [
+   3,
+   7
+  ],
+  "slash": [
+   0,
+   7
+  ],
+  "kills": [
+   14,
+   3
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 22,
+    "slashes": 9,
+    "kicks": 0,
+    "dashes": 3,
+    "recalls": 0
+   },
+   {
+    "throws": 22,
+    "slashes": 49,
+    "kicks": 5,
+    "dashes": 25,
+    "recalls": 5
+   }
+  ]
+ },
+ "dm_strafe|skybridge|11020-11038": {
+  "n": 38,
+  "w": [
+   10,
+   27
+  ],
+  "draw": 1,
+  "fall": [
+   4,
+   0
+  ],
+  "dart": [
+   23,
+   9
+  ],
+  "slash": [
+   1,
+   2
+  ],
+  "kills": [
+   11,
+   25
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 79,
+    "slashes": 5,
+    "kicks": 2,
+    "dashes": 28,
+    "recalls": 13
+   },
+   {
+    "throws": 85,
+    "slashes": 6,
+    "kicks": 15,
+    "dashes": 30,
+    "recalls": 47
+   }
+  ]
+ },
+ "dm_strafe|stonecircle|11020-11038": {
+  "n": 38,
+  "w": [
+   22,
+   16
+  ],
+  "draw": 0,
+  "fall": [
+   0,
+   2
+  ],
+  "dart": [
+   15,
+   20
+  ],
+  "slash": [
+   1,
+   0
+  ],
+  "kills": [
+   20,
+   16
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 49,
+    "slashes": 0,
+    "kicks": 0,
+    "dashes": 20,
+    "recalls": 4
+   },
+   {
+    "throws": 43,
+    "slashes": 13,
+    "kicks": 1,
+    "dashes": 22,
+    "recalls": 20
+   }
+  ]
+ },
+ "dk_orig|twinlakes|11001-11019": {
+  "n": 38,
+  "w": [
+   6,
+   32
+  ],
+  "draw": 0,
+  "fall": [
+   15,
+   1
+  ],
+  "dart": [
+   16,
+   5
+  ],
+  "slash": [
+   1,
+   0
+  ],
+  "kills": [
+   5,
+   19
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 44,
+    "slashes": 0,
+    "kicks": 17,
+    "dashes": 13,
+    "recalls": 1
+   },
+   {
+    "throws": 46,
+    "slashes": 26,
+    "kicks": 30,
+    "dashes": 36,
+    "recalls": 2
+   }
+  ]
+ },
+ "dk_orig|yinyang|11001-11019": {
+  "n": 38,
+  "w": [
+   11,
+   27
+  ],
+  "draw": 0,
+  "fall": [
+   3,
+   0
+  ],
+  "dart": [
+   20,
+   10
+  ],
+  "slash": [
+   4,
+   1
+  ],
+  "kills": [
+   11,
+   24
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 58,
+    "slashes": 1,
+    "kicks": 1,
+    "dashes": 13,
+    "recalls": 8
+   },
+   {
+    "throws": 53,
+    "slashes": 64,
+    "kicks": 14,
+    "dashes": 30,
+    "recalls": 106
+   }
+  ]
+ },
+ "dk_orig|icefloes|11001-11019": {
+  "n": 38,
+  "w": [
+   5,
+   33
+  ],
+  "draw": 0,
+  "fall": [
+   24,
+   1
+  ],
+  "dart": [
+   9,
+   4
+  ],
+  "slash": [
+   0,
+   0
+  ],
+  "kills": [
+   4,
+   9
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 33,
+    "slashes": 0,
+    "kicks": 2,
+    "dashes": 5,
+    "recalls": 0
+   },
+   {
+    "throws": 27,
+    "slashes": 6,
+    "kicks": 3,
+    "dashes": 7,
+    "recalls": 31
+   }
+  ]
+ },
+ "dk_orig|ruins|11001-11019": {
+  "n": 38,
+  "w": [
+   15,
+   23
+  ],
+  "draw": 0,
+  "fall": [
+   3,
+   1
+  ],
+  "dart": [
+   17,
+   14
+  ],
+  "slash": [
+   3,
+   0
+  ],
+  "kills": [
+   14,
+   22
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 37,
+    "slashes": 2,
+    "kicks": 3,
+    "dashes": 3,
+    "recalls": 0
+   },
+   {
+    "throws": 32,
+    "slashes": 78,
+    "kicks": 12,
+    "dashes": 65,
+    "recalls": 1
+   }
+  ]
+ },
+ "dk_orig|skybridge|11001-11019": {
+  "n": 38,
+  "w": [
+   6,
+   32
+  ],
+  "draw": 0,
+  "fall": [
+   7,
+   2
+  ],
+  "dart": [
+   19,
+   4
+  ],
+  "slash": [
+   6,
+   0
+  ],
+  "kills": [
+   4,
+   25
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 43,
+    "slashes": 0,
+    "kicks": 4,
+    "dashes": 10,
+    "recalls": 2
+   },
+   {
+    "throws": 70,
+    "slashes": 9,
+    "kicks": 12,
+    "dashes": 25,
+    "recalls": 3
+   }
+  ]
+ },
+ "dk_orig|stonecircle|11001-11019": {
+  "n": 38,
+  "w": [
+   12,
+   26
+  ],
+  "draw": 0,
+  "fall": [
+   0,
+   1
+  ],
+  "dart": [
+   24,
+   11
+  ],
+  "slash": [
+   2,
+   0
+  ],
+  "kills": [
+   12,
+   26
+  ],
+  "pts": [
+   0.0,
+   0.0
+  ],
+  "faults": [
+   0,
+   0
+  ],
+  "acts": [
+   {
+    "throws": 47,
+    "slashes": 1,
+    "kicks": 10,
+    "dashes": 8,
+    "recalls": 4
+   },
+   {
+    "throws": 56,
+    "slashes": 25,
+    "kicks": 21,
+    "dashes": 41,
+    "recalls": 3
+   }
+  ]
+ }
+}

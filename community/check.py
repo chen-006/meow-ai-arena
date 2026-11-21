@@ -5,7 +5,7 @@
   python community/check.py <投稿目录> --full        局数更多（bot 类）/ 跑全部 8 组隐藏负载（仓储调度）
   python community/check.py <投稿目录> --skip-eval   只查结构和能否编译，不跑评测
 
-bot 类五集（land、bomberman、ctf、tank、tron）直接调用那一集的 challenge.py，不改动游戏引擎、预算或评分算法。
+bot 类各集（land、bomberman、ctf、tank、tron、soccer、boomerang）直接调用那一集的 challenge.py，不改动游戏引擎、预算或评分算法。
 仓储调度（warehouse）在本机把基线和投稿各跑一遍：先比输出，再算加速比。
 默认的快速档跑 5 组公开负载和 3 组较快的隐藏负载；--full 跑第 1 轮的全部 8 组隐藏负载。
 
@@ -29,10 +29,17 @@ HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
 SCHEMA = 1
 
-BOT_EPISODES = ("land", "bomberman", "ctf", "tank", "tron")
-EPISODES = ("land", "bomberman", "ctf", "warehouse", "tank", "tron")
+BOT_EPISODES = ("land", "bomberman", "ctf", "tank", "tron", "soccer", "boomerang")
+EPISODES = ("land", "bomberman", "ctf", "warehouse", "tank", "tron", "soccer", "boomerang")
 EPISODE_TITLES = {"land": "第 1 集 · 圈地", "bomberman": "第 2 集 · 炸弹人", "ctf": "第 3 集 · 夺旗",
-                  "warehouse": "第 5 集 · 仓储调度", "tank": "第 6 集 · 坦克大战", "tron": "第 7 集 · 光轮对战"}
+                  "warehouse": "第 5 集 · 仓储调度", "tank": "第 6 集 · 坦克大战", "tron": "第 7 集 · 光轮对战",
+                  "soccer": "第 8 集 · 2v2 足球", "boomerang": "第 11 集 · 回旋镖大作战"}
+# 裁判只支持 Windows 的几集：本地评测和 GitHub Actions 都要在 Windows 上跑
+WINDOWS_EPISODES = ("tron", "soccer", "boomerang")
+# 评测脚本自己写 result.json、按固定参照只拟合投稿的几集
+FIXED_REF_EPISODES = ("tank", "tron", "soccer", "boomerang")
+# 选手包自带 build.py 的几集：试编译沿用它的源码检查和正式编译命令，只配这一个官方头文件
+KIT_HEADER = {"soccer": "soccer.hpp", "boomerang": "dart.hpp"}
 
 # 目录名：<GitHub 用户名小写>__<作品名>。两段都只允许小写字母、数字、连字符，连字符不能在开头结尾，也不能连用。
 _PART = r"[a-z0-9]+(?:-[a-z0-9]+)*"
@@ -109,10 +116,19 @@ def cxx_flags():
     return ["-O2", "-std=c++20"] + (["-static"] if os.name == "nt" else [])
 
 
-def compile_in(build_dir, sources, exe_name, cxx, timeout=None):
+def load_module(name, path):
+    """按路径加载可信 checkout 里的脚本（各集的 challenge.py、选手包的 build.py），不从投稿目录找。"""
+    import importlib.util
+    spec = importlib.util.spec_from_file_location(name, path)
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
+def compile_in(build_dir, sources, exe_name, cxx, timeout=None, flags=None):
     """在 build_dir 里编译。源文件事先复制进去，命令行里只出现不带目录的文件名，
     所以仓库放在中文路径下、Windows 代码页是 UTF-8 时也不会碰到链接器打不开文件的问题。"""
-    cmd = [cxx] + cxx_flags() + ["-o", exe_name] + sorted(sources)
+    cmd = [cxx] + (flags or cxx_flags()) + ["-o", exe_name] + sorted(sources)
     try:
         r = subprocess.run(cmd, cwd=build_dir, capture_output=True, text=True, encoding="utf-8", errors="replace", timeout=timeout)
     except subprocess.TimeoutExpired:
@@ -276,7 +292,7 @@ def validate(entry, episode):
             found = sorted({x.group(1) for x in re.finditer(pattern, text)})
             for name in found[:5]:
                 rule = ("请维护者按 %s/workspace/README.md 人工确认；允许线程，但按所有线程的 CPU 总时间计费" % episode
-                        if episode in ("tank", "tron") else "规则不允许读写文件、联网、启动别的程序或多线程，请维护者人工确认")
+                        if episode in ("tank", "tron", "soccer", "boomerang") else "规则不允许读写文件、联网、启动别的程序或多线程，请维护者人工确认")
                 warnings.append("%s：%s。%s" % (rel, message % name, rule))
     return meta, errors, warnings, files
 
@@ -360,6 +376,14 @@ def parse_tron(run_dir):
     return validate_result(doc, ROOT)
 
 
+def parse_fixed(episode):
+    """足球、回旋镖：用可信 checkout 里那一集的 challenge.py 按固定赛程和固定参照重算一遍，不信任结果文件里的分数。"""
+    def parse(run_dir):
+        doc = json.loads((run_dir / "result.json").read_text(encoding="utf-8"))
+        return load_module("trusted_%s_challenge" % episode, ROOT / episode / "challenge.py").validate_result(doc, ROOT)
+    return parse
+
+
 def run_tron_challenge(cmd, cwd, env, timeout):
     """Keep the parent alive until Windows can terminate its complete process tree."""
     process = subprocess.Popen(cmd, cwd=cwd, env=env)
@@ -377,6 +401,10 @@ def run_tron_challenge(cmd, cwd, env, timeout):
 
 
 BOT_SPEC = {
+    "soccer": {"parse": parse_fixed("soccer"), "report": "report.md",
+               "score_label": "实力值（固定个人榜参照，只拟合投稿的 Bradley–Terry 实力值；你的程序踢两个座位，基准队 = 0，强 10 倍记 +400）"},
+    "boomerang": {"parse": parse_fixed("boomerang"), "report": "report.md",
+                  "score_label": "个人实力值（固定海选参照，只拟合投稿；一对一、四人局两项平均，13 位选手平均 = 0，强 10 倍记 +400）"},
     "tron": {"parse": parse_tron, "report": "report.md",
              "score_label": "加权实力值（固定终场强对手榜，只拟合投稿；豆包 = 0；1v1 / 4人 / 12人 = 50 / 30 / 20%）"},
     "tank": {"parse": parse_tank, "report": "report.md",
@@ -391,8 +419,8 @@ BOT_SPEC = {
 
 
 def eval_bot(entry, episode, work, full, timeout, result):
-    if episode == "tron" and sys.platform != "win32":
-        result["errors"].append("光轮对战沿用官方 Windows 正式裁判；请在 Windows 自测，社区 CI 使用 Windows。")
+    if episode in WINDOWS_EPISODES and sys.platform != "win32":
+        result["errors"].append("%s沿用官方 Windows 正式裁判；请在 Windows 自测，社区 CI 使用 Windows。" % EPISODE_TITLES[episode])
         return
     cxx = find_compiler()
     if not cxx:
@@ -410,9 +438,19 @@ def eval_bot(entry, episode, work, full, timeout, result):
         for name in (episode + ".hpp", episode + "_main.cpp"):
             shutil.copy(ROOT / episode / "workspace" / name, build / name)
         sources.append(episode + "_main.cpp")
-    out("[1/2] 试编译 bot.cpp（%s）" % " ".join(["g++"] + cxx_flags() + sources))
+    flags = None
+    if episode in KIT_HEADER:
+        # 和比赛时相同：选手包 build.py 的源码检查和正式编译命令，只配官方头文件
+        kit = load_module("trusted_%s_build" % episode, ROOT / episode / "workspace" / "build.py")
+        problems = kit.check_source((entry / "bot.cpp").read_text(encoding="utf-8", errors="replace"))
+        if problems:
+            result["errors"].append("bot.cpp 没通过选手包的源码检查：" + "；".join(problems[:5]))
+            return
+        shutil.copy(ROOT / episode / "workspace" / KIT_HEADER[episode], build / KIT_HEADER[episode])
+        flags = list(kit.FLAGS)
+    out("[1/2] 试编译 bot.cpp（%s）" % " ".join(["g++"] + (flags or cxx_flags()) + sources))
     exe, err = compile_in(build, sources, "bot" + (".exe" if os.name == "nt" else ""), cxx,
-                          **({"timeout": 300} if episode == "tron" else {}))
+                          **({"timeout": 300} if episode in WINDOWS_EPISODES else {}), flags=flags)
     if err:
         result["errors"].append("bot.cpp 编译失败")
         result["detail"]["compile_error"] = err
@@ -424,16 +462,16 @@ def eval_bot(entry, episode, work, full, timeout, result):
     ep_dir = ROOT / episode
     runs = ep_dir / "challenge-runs"
     before = {p.name for p in runs.iterdir()} if runs.is_dir() else set()
-    source = build / "bot.cpp" if episode in ("tank", "tron") else entry / "bot.cpp"
+    source = build / "bot.cpp" if episode in FIXED_REF_EPISODES else entry / "bot.cpp"
     cmd = [sys.executable, "-X", "utf8", str(ep_dir / "challenge.py"), str(source.resolve())] + (["--full"] if full else [])
-    if episode in ("tank", "tron"):
+    if episode in FIXED_REF_EPISODES:
         run_dir = work / "challenge"
         shutil.rmtree(run_dir, ignore_errors=True)
-        cmd += ["--out", str(run_dir.resolve()), "--require-cpu"]
+        cmd += ["--out", str(run_dir.resolve())] + (["--require-cpu"] if episode != "boomerang" else [])
     out("[2/2] 运行 %s/challenge.py%s（官方脚本，原样调用）\n" % (episode, " --full" if full else ""))
     env = dict(os.environ, PYTHONUTF8="1", CXX=cxx)
     try:
-        r = (run_tron_challenge(cmd, ep_dir, env, timeout) if episode == "tron" else
+        r = (run_tron_challenge(cmd, ep_dir, env, timeout) if episode in WINDOWS_EPISODES else
              subprocess.run(cmd, cwd=ep_dir, env=env, timeout=timeout))
     except subprocess.TimeoutExpired:
         result["errors"].append("%s/challenge.py 运行超过 %d 分钟，已中止" % (episode, timeout // 60))
@@ -441,7 +479,7 @@ def eval_bot(entry, episode, work, full, timeout, result):
     if r.returncode != 0:
         result["errors"].append("%s/challenge.py 以退出码 %d 结束，比赛没有打完（上面有它的报错）" % (episode, r.returncode))
         return
-    if episode not in ("tank", "tron"):
+    if episode not in FIXED_REF_EPISODES:
         new = sorted(p for p in runs.iterdir() if p.name not in before) if runs.is_dir() else []
         if not new:
             result["errors"].append("没有在 %s/challenge-runs/ 里找到这次运行的结果目录" % episode)
@@ -453,9 +491,9 @@ def eval_bot(entry, episode, work, full, timeout, result):
         if episode == "tank" and (extra["source_sha256"] != result["files"]["bot.cpp"] or
                                    extra["games"] != (1280 if full else 320)):
             raise ValueError("坦克成绩的源码哈希或局数与本次投稿评测不符")
-        if episode == "tron" and (extra["source_sha256"] != result["files"]["bot.cpp"] or
-                                   extra["full"] is not full):
-            raise ValueError("光轮成绩的源码哈希或档位与本次投稿评测不符")
+        if episode in ("tron", "soccer", "boomerang") and (extra["source_sha256"] != result["files"]["bot.cpp"] or
+                                                           extra["full"] is not full):
+            raise ValueError("%s成绩的源码哈希或档位与本次投稿评测不符" % EPISODE_TITLES[episode])
     except (OSError, ValueError, KeyError, TypeError, IndexError, AttributeError, OverflowError) as e:
         result["errors"].append("读不懂 %s 里的成绩文件：%s: %s" % (run_dir.name, type(e).__name__, e))
         return
@@ -472,7 +510,7 @@ def eval_bot(entry, episode, work, full, timeout, result):
         result["errors"].append("成绩表里没有这份投稿的实力值（多半是它在评测脚本里编译失败或一局都没打成）")
         return
     result["score"] = mine["score"]
-    result["detail"]["rank"] = extra["rank"] if episode in ("tank", "tron") else mine["rank"]
+    result["detail"]["rank"] = extra["rank"] if episode in FIXED_REF_EPISODES else mine["rank"]
     if "ci95" in mine:
         result["detail"]["ci95"] = mine["ci95"]
 
@@ -684,6 +722,24 @@ def render_summary(result):
         for mode, weight in d["weights"].items():
             L.append("| %s | %s | %.0f%% |" % (mode, fmt(d["ratings"][mode]), weight * 100))
         L += ["", "首回合 2000 CPU 毫秒、之后 50 CPU 毫秒，所有线程合计。固定参照不是本次重测成绩；机器、地图和局数不同，参照名次不是正式赛名次。", ""]
+    elif ep == "soccer" and d.get("field"):
+        L += ["### 成绩", "", "Windows 正式计时，你的程序同时踢本队两个座位，逐一对踢个人赛的 12 支个人队和 3 支参考队；%s。" % d["games_note"], "",
+              "实力值 **%s**；放进个人榜的 12 支个人队里相当于第 **%s / 13** 名。" % (fmt(result["score"]), d["rank"]), "",
+              result["score_label"] + "。对手分数固定取比赛时个人榜的 BT 点估计，参考队参加拟合、不占名次。", "",
+              "| 对手 | 个人榜实力值（固定） | 你的胜-平-负 |", "|---|---:|---|"]
+        for r in d["opponents"]:
+            L.append("| %s | %s | %d-%d-%d |" % (md_escape(r["display"]), fmt(r["rating"]), r["wins"], r["draws"], r["losses"]))
+        L += ["", "每步 10 CPU 毫秒，和比赛时同一个裁判和编译命令。种子和正式赛不同、局数少，参照名次不是正式名次。", ""]
+    elif ep == "boomerang" and d.get("field"):
+        L += ["### 成绩", "", "Windows 正式计时，和海选的 13 位选手对打；%s。" % d["games_note"], "",
+              "个人实力值 **%s**（一对一 %s、四人局 %s）；放进海选个人榜相当于第 **%s / 14** 名。" % (
+                  fmt(result["score"]), fmt(d["ratings"]["duel"]), fmt(d["ratings"]["ffa"]), d["rank"]), "",
+              result["score_label"] + "。官方选手的分数固定取比赛时的海选成绩，不是这次重新测出的。", "",
+              "| 对手 | 海选个人实力值（固定） | 一对一 胜-平-负 | 四人局两两比 胜-平-负 |", "|---|---:|---|---|"]
+        for r in d["opponents"]:
+            L.append("| %s | %s | %s | %s |" % (md_escape(r["display"]), fmt(r["rating"]),
+                                               "-".join(map(str, r["tally"]["duel"])), "-".join(map(str, r["tally"]["ffa"]))))
+        L += ["", "每步 10 CPU 毫秒、第 0 步 1000 毫秒，累计超时 20 次程序被结束。种子和海选不同、局数少，参照名次不是正式名次。", ""]
     elif ep in BOT_EPISODES and d.get("field"):
         land = ep == "land"
         L += ["### 成绩", "", "这份投稿和全部官方选手、基准打了一轮小型比赛（%s）。" % d.get("games_note", ""), ""]

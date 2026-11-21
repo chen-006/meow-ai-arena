@@ -1,0 +1,6 @@
+# eol=crlf
+--- a/bots/claude-fable-5.2/player.cpp
++++ b/fable_v_norecallnear.cpp
+@@ -768 +768 @@
+-                    if (g0.d[k].st == D_HAND && ilen(g0.p[k].x - D0.x, g0.p[k].y - D0.y) < 5000) allow = true;
++                    if (false && g0.d[k].st == D_HAND && ilen(g0.p[k].x - D0.x, g0.p[k].y - D0.y) < 5000) allow = true;

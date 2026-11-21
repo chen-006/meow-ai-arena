@@ -1,0 +1,841 @@
+﻿赛制,行席位,行选手,列席位,列选手,局数,胜,平,负,得分率百分比
+一对一,astra62,GPT-6.2 Astra,astra,Astra 灰度版,228,133,7,88,59.868421
+一对一,astra62,GPT-6.2 Astra,fable,Claude Fable 5.2,228,182,1,45,80.04386
+一对一,astra62,GPT-6.2 Astra,sol,Sol 6.1 灰度版,228,143,1,84,62.938596
+一对一,astra62,GPT-6.2 Astra,opus,Claude Opus 5.5,228,190,0,38,83.333333
+一对一,astra62,GPT-6.2 Astra,sonnet,Claude Sonnet 5.5（对照）,228,190,1,37,83.552632
+一对一,astra62,GPT-6.2 Astra,astra6,GPT-6 Astra（对照）,228,186,0,42,81.578947
+一对一,astra62,GPT-6.2 Astra,terra,GPT-6.1 Terra（对照）,228,187,10,31,84.210526
+一对一,astra62,GPT-6.2 Astra,sol61,GPT-6.1 Sol（对照）,228,184,0,44,80.701754
+一对一,astra62,GPT-6.2 Astra,carbon,Gemini Carbon,228,191,0,37,83.77193
+一对一,astra62,GPT-6.2 Astra,sol62,GPT-6.2 Sol,228,178,2,48,78.508772
+一对一,astra62,GPT-6.2 Astra,hydrogen,Gemini Hydrogen,228,202,0,26,88.596491
+一对一,astra62,GPT-6.2 Astra,grok,Grok 4.7,228,191,0,37,83.77193
+一对一,astra62,GPT-6.2 Astra,glm,GLM 5.3,228,200,1,27,87.938596
+一对一,astra62,GPT-6.2 Astra,haiku,Claude Haiku 5.5（对照）,228,210,0,18,92.105263
+一对一,astra62,GPT-6.2 Astra,deepseek,DeepSeek,228,203,1,24,89.254386
+一对一,astra62,GPT-6.2 Astra,kimi,Kimi K3.1,228,212,1,15,93.201754
+一对一,astra62,GPT-6.2 Astra,qwen,千问 Qwen4,228,208,1,19,91.447368
+一对一,astra62,GPT-6.2 Astra,luna,GPT-6 Luna（对照）,228,226,0,2,99.122807
+一对一,astra62,GPT-6.2 Astra,mimo,MiMo v2.6,228,225,0,3,98.684211
+一对一,astra62,GPT-6.2 Astra,doubao,豆包,228,222,0,6,97.368421
+一对一,astra,Astra 灰度版,astra62,GPT-6.2 Astra,228,88,7,133,40.131579
+一对一,astra,Astra 灰度版,fable,Claude Fable 5.2,228,155,2,71,68.421053
+一对一,astra,Astra 灰度版,sol,Sol 6.1 灰度版,228,165,2,61,72.807018
+一对一,astra,Astra 灰度版,opus,Claude Opus 5.5,228,178,0,50,78.070175
+一对一,astra,Astra 灰度版,sonnet,Claude Sonnet 5.5（对照）,228,200,4,24,88.596491
+一对一,astra,Astra 灰度版,astra6,GPT-6 Astra（对照）,228,202,0,26,88.596491
+一对一,astra,Astra 灰度版,terra,GPT-6.1 Terra（对照）,228,197,1,30,86.622807
+一对一,astra,Astra 灰度版,sol61,GPT-6.1 Sol（对照）,228,170,1,57,74.780702
+一对一,astra,Astra 灰度版,carbon,Gemini Carbon,228,200,0,28,87.719298
+一对一,astra,Astra 灰度版,sol62,GPT-6.2 Sol,228,173,2,53,76.315789
+一对一,astra,Astra 灰度版,hydrogen,Gemini Hydrogen,228,185,3,40,81.798246
+一对一,astra,Astra 灰度版,grok,Grok 4.7,228,178,2,48,78.508772
+一对一,astra,Astra 灰度版,glm,GLM 5.3,228,186,1,41,81.798246
+一对一,astra,Astra 灰度版,haiku,Claude Haiku 5.5（对照）,228,199,1,28,87.5
+一对一,astra,Astra 灰度版,deepseek,DeepSeek,228,197,0,31,86.403509
+一对一,astra,Astra 灰度版,kimi,Kimi K3.1,228,212,1,15,93.201754
+一对一,astra,Astra 灰度版,qwen,千问 Qwen4,228,212,4,12,93.859649
+一对一,astra,Astra 灰度版,luna,GPT-6 Luna（对照）,228,223,0,5,97.807018
+一对一,astra,Astra 灰度版,mimo,MiMo v2.6,228,220,0,8,96.491228
+一对一,astra,Astra 灰度版,doubao,豆包,228,228,0,0,100.0
+一对一,fable,Claude Fable 5.2,astra62,GPT-6.2 Astra,228,45,1,182,19.95614
+一对一,fable,Claude Fable 5.2,astra,Astra 灰度版,228,71,2,155,31.578947
+一对一,fable,Claude Fable 5.2,sol,Sol 6.1 灰度版,228,100,4,124,44.736842
+一对一,fable,Claude Fable 5.2,opus,Claude Opus 5.5,228,129,0,99,56.578947
+一对一,fable,Claude Fable 5.2,sonnet,Claude Sonnet 5.5（对照）,228,119,1,108,52.412281
+一对一,fable,Claude Fable 5.2,astra6,GPT-6 Astra（对照）,228,129,2,97,57.017544
+一对一,fable,Claude Fable 5.2,terra,GPT-6.1 Terra（对照）,228,146,2,80,64.473684
+一对一,fable,Claude Fable 5.2,sol61,GPT-6.1 Sol（对照）,228,141,3,84,62.5
+一对一,fable,Claude Fable 5.2,carbon,Gemini Carbon,228,153,0,75,67.105263
+一对一,fable,Claude Fable 5.2,sol62,GPT-6.2 Sol,228,133,3,92,58.991228
+一对一,fable,Claude Fable 5.2,hydrogen,Gemini Hydrogen,228,141,4,83,62.719298
+一对一,fable,Claude Fable 5.2,grok,Grok 4.7,228,154,2,72,67.982456
+一对一,fable,Claude Fable 5.2,glm,GLM 5.3,228,124,5,99,55.482456
+一对一,fable,Claude Fable 5.2,haiku,Claude Haiku 5.5（对照）,228,144,1,83,63.377193
+一对一,fable,Claude Fable 5.2,deepseek,DeepSeek,228,179,1,48,78.72807
+一对一,fable,Claude Fable 5.2,kimi,Kimi K3.1,228,182,0,46,79.824561
+一对一,fable,Claude Fable 5.2,qwen,千问 Qwen4,228,192,2,34,84.649123
+一对一,fable,Claude Fable 5.2,luna,GPT-6 Luna（对照）,228,190,1,37,83.552632
+一对一,fable,Claude Fable 5.2,mimo,MiMo v2.6,228,202,1,25,88.815789
+一对一,fable,Claude Fable 5.2,doubao,豆包,228,219,0,9,96.052632
+一对一,sol,Sol 6.1 灰度版,astra62,GPT-6.2 Astra,228,84,1,143,37.061404
+一对一,sol,Sol 6.1 灰度版,astra,Astra 灰度版,228,61,2,165,27.192982
+一对一,sol,Sol 6.1 灰度版,fable,Claude Fable 5.2,228,124,4,100,55.263158
+一对一,sol,Sol 6.1 灰度版,opus,Claude Opus 5.5,228,120,3,105,53.289474
+一对一,sol,Sol 6.1 灰度版,sonnet,Claude Sonnet 5.5（对照）,228,123,5,100,55.04386
+一对一,sol,Sol 6.1 灰度版,astra6,GPT-6 Astra（对照）,228,118,2,108,52.192982
+一对一,sol,Sol 6.1 灰度版,terra,GPT-6.1 Terra（对照）,228,149,3,76,66.008772
+一对一,sol,Sol 6.1 灰度版,sol61,GPT-6.1 Sol（对照）,228,107,0,121,46.929825
+一对一,sol,Sol 6.1 灰度版,carbon,Gemini Carbon,228,150,0,78,65.789474
+一对一,sol,Sol 6.1 灰度版,sol62,GPT-6.2 Sol,228,124,1,103,54.605263
+一对一,sol,Sol 6.1 灰度版,hydrogen,Gemini Hydrogen,228,132,0,96,57.894737
+一对一,sol,Sol 6.1 灰度版,grok,Grok 4.7,228,146,1,81,64.254386
+一对一,sol,Sol 6.1 灰度版,glm,GLM 5.3,228,155,1,72,68.201754
+一对一,sol,Sol 6.1 灰度版,haiku,Claude Haiku 5.5（对照）,228,150,0,78,65.789474
+一对一,sol,Sol 6.1 灰度版,deepseek,DeepSeek,228,150,2,76,66.22807
+一对一,sol,Sol 6.1 灰度版,kimi,Kimi K3.1,228,157,0,71,68.859649
+一对一,sol,Sol 6.1 灰度版,qwen,千问 Qwen4,228,183,0,45,80.263158
+一对一,sol,Sol 6.1 灰度版,luna,GPT-6 Luna（对照）,228,161,1,66,70.833333
+一对一,sol,Sol 6.1 灰度版,mimo,MiMo v2.6,228,182,2,44,80.263158
+一对一,sol,Sol 6.1 灰度版,doubao,豆包,228,204,0,24,89.473684
+一对一,opus,Claude Opus 5.5,astra62,GPT-6.2 Astra,228,38,0,190,16.666667
+一对一,opus,Claude Opus 5.5,astra,Astra 灰度版,228,50,0,178,21.929825
+一对一,opus,Claude Opus 5.5,fable,Claude Fable 5.2,228,99,0,129,43.421053
+一对一,opus,Claude Opus 5.5,sol,Sol 6.1 灰度版,228,105,3,120,46.710526
+一对一,opus,Claude Opus 5.5,sonnet,Claude Sonnet 5.5（对照）,228,101,3,124,44.95614
+一对一,opus,Claude Opus 5.5,astra6,GPT-6 Astra（对照）,228,115,1,112,50.657895
+一对一,opus,Claude Opus 5.5,terra,GPT-6.1 Terra（对照）,228,120,1,107,52.850877
+一对一,opus,Claude Opus 5.5,sol61,GPT-6.1 Sol（对照）,228,131,2,95,57.894737
+一对一,opus,Claude Opus 5.5,carbon,Gemini Carbon,228,124,4,100,55.263158
+一对一,opus,Claude Opus 5.5,sol62,GPT-6.2 Sol,228,109,1,118,48.026316
+一对一,opus,Claude Opus 5.5,hydrogen,Gemini Hydrogen,228,122,4,102,54.385965
+一对一,opus,Claude Opus 5.5,grok,Grok 4.7,228,137,1,90,60.307018
+一对一,opus,Claude Opus 5.5,glm,GLM 5.3,228,133,1,94,58.552632
+一对一,opus,Claude Opus 5.5,haiku,Claude Haiku 5.5（对照）,228,165,0,63,72.368421
+一对一,opus,Claude Opus 5.5,deepseek,DeepSeek,228,144,1,83,63.377193
+一对一,opus,Claude Opus 5.5,kimi,Kimi K3.1,228,154,2,72,67.982456
+一对一,opus,Claude Opus 5.5,qwen,千问 Qwen4,228,178,0,50,78.070175
+一对一,opus,Claude Opus 5.5,luna,GPT-6 Luna（对照）,228,176,0,52,77.192982
+一对一,opus,Claude Opus 5.5,mimo,MiMo v2.6,228,197,1,30,86.622807
+一对一,opus,Claude Opus 5.5,doubao,豆包,228,222,0,6,97.368421
+一对一,sonnet,Claude Sonnet 5.5（对照）,astra62,GPT-6.2 Astra,228,37,1,190,16.447368
+一对一,sonnet,Claude Sonnet 5.5（对照）,astra,Astra 灰度版,228,24,4,200,11.403509
+一对一,sonnet,Claude Sonnet 5.5（对照）,fable,Claude Fable 5.2,228,108,1,119,47.587719
+一对一,sonnet,Claude Sonnet 5.5（对照）,sol,Sol 6.1 灰度版,228,100,5,123,44.95614
+一对一,sonnet,Claude Sonnet 5.5（对照）,opus,Claude Opus 5.5,228,124,3,101,55.04386
+一对一,sonnet,Claude Sonnet 5.5（对照）,astra6,GPT-6 Astra（对照）,228,117,4,107,52.192982
+一对一,sonnet,Claude Sonnet 5.5（对照）,terra,GPT-6.1 Terra（对照）,228,111,10,107,50.877193
+一对一,sonnet,Claude Sonnet 5.5（对照）,sol61,GPT-6.1 Sol（对照）,228,117,5,106,52.412281
+一对一,sonnet,Claude Sonnet 5.5（对照）,carbon,Gemini Carbon,228,106,1,121,46.710526
+一对一,sonnet,Claude Sonnet 5.5（对照）,sol62,GPT-6.2 Sol,228,104,3,121,46.27193
+一对一,sonnet,Claude Sonnet 5.5（对照）,hydrogen,Gemini Hydrogen,228,106,0,122,46.491228
+一对一,sonnet,Claude Sonnet 5.5（对照）,grok,Grok 4.7,228,119,2,107,52.631579
+一对一,sonnet,Claude Sonnet 5.5（对照）,glm,GLM 5.3,228,119,9,100,54.166667
+一对一,sonnet,Claude Sonnet 5.5（对照）,haiku,Claude Haiku 5.5（对照）,228,157,1,70,69.078947
+一对一,sonnet,Claude Sonnet 5.5（对照）,deepseek,DeepSeek,228,145,2,81,64.035088
+一对一,sonnet,Claude Sonnet 5.5（对照）,kimi,Kimi K3.1,228,141,1,86,62.061404
+一对一,sonnet,Claude Sonnet 5.5（对照）,qwen,千问 Qwen4,228,159,5,64,70.833333
+一对一,sonnet,Claude Sonnet 5.5（对照）,luna,GPT-6 Luna（对照）,228,189,1,38,83.114035
+一对一,sonnet,Claude Sonnet 5.5（对照）,mimo,MiMo v2.6,228,188,3,37,83.114035
+一对一,sonnet,Claude Sonnet 5.5（对照）,doubao,豆包,228,209,1,18,91.885965
+一对一,astra6,GPT-6 Astra（对照）,astra62,GPT-6.2 Astra,228,42,0,186,18.421053
+一对一,astra6,GPT-6 Astra（对照）,astra,Astra 灰度版,228,26,0,202,11.403509
+一对一,astra6,GPT-6 Astra（对照）,fable,Claude Fable 5.2,228,97,2,129,42.982456
+一对一,astra6,GPT-6 Astra（对照）,sol,Sol 6.1 灰度版,228,108,2,118,47.807018
+一对一,astra6,GPT-6 Astra（对照）,opus,Claude Opus 5.5,228,112,1,115,49.342105
+一对一,astra6,GPT-6 Astra（对照）,sonnet,Claude Sonnet 5.5（对照）,228,107,4,117,47.807018
+一对一,astra6,GPT-6 Astra（对照）,terra,GPT-6.1 Terra（对照）,228,124,3,101,55.04386
+一对一,astra6,GPT-6 Astra（对照）,sol61,GPT-6.1 Sol（对照）,228,92,3,133,41.008772
+一对一,astra6,GPT-6 Astra（对照）,carbon,Gemini Carbon,228,120,0,108,52.631579
+一对一,astra6,GPT-6 Astra（对照）,sol62,GPT-6.2 Sol,228,114,2,112,50.438596
+一对一,astra6,GPT-6 Astra（对照）,hydrogen,Gemini Hydrogen,228,139,2,87,61.403509
+一对一,astra6,GPT-6 Astra（对照）,grok,Grok 4.7,228,126,2,100,55.701754
+一对一,astra6,GPT-6 Astra（对照）,glm,GLM 5.3,228,154,3,71,68.201754
+一对一,astra6,GPT-6 Astra（对照）,haiku,Claude Haiku 5.5（对照）,228,123,4,101,54.824561
+一对一,astra6,GPT-6 Astra（对照）,deepseek,DeepSeek,228,146,5,77,65.131579
+一对一,astra6,GPT-6 Astra（对照）,kimi,Kimi K3.1,228,144,1,83,63.377193
+一对一,astra6,GPT-6 Astra（对照）,qwen,千问 Qwen4,228,169,2,57,74.561404
+一对一,astra6,GPT-6 Astra（对照）,luna,GPT-6 Luna（对照）,228,163,2,63,71.929825
+一对一,astra6,GPT-6 Astra（对照）,mimo,MiMo v2.6,228,178,2,48,78.508772
+一对一,astra6,GPT-6 Astra（对照）,doubao,豆包,228,202,0,26,88.596491
+一对一,terra,GPT-6.1 Terra（对照）,astra62,GPT-6.2 Astra,228,31,10,187,15.789474
+一对一,terra,GPT-6.1 Terra（对照）,astra,Astra 灰度版,228,30,1,197,13.377193
+一对一,terra,GPT-6.1 Terra（对照）,fable,Claude Fable 5.2,228,80,2,146,35.526316
+一对一,terra,GPT-6.1 Terra（对照）,sol,Sol 6.1 灰度版,228,76,3,149,33.991228
+一对一,terra,GPT-6.1 Terra（对照）,opus,Claude Opus 5.5,228,107,1,120,47.149123
+一对一,terra,GPT-6.1 Terra（对照）,sonnet,Claude Sonnet 5.5（对照）,228,107,10,111,49.122807
+一对一,terra,GPT-6.1 Terra（对照）,astra6,GPT-6 Astra（对照）,228,101,3,124,44.95614
+一对一,terra,GPT-6.1 Terra（对照）,sol61,GPT-6.1 Sol（对照）,228,109,4,115,48.684211
+一对一,terra,GPT-6.1 Terra（对照）,carbon,Gemini Carbon,228,150,2,76,66.22807
+一对一,terra,GPT-6.1 Terra（对照）,sol62,GPT-6.2 Sol,228,88,5,135,39.692982
+一对一,terra,GPT-6.1 Terra（对照）,hydrogen,Gemini Hydrogen,228,129,2,97,57.017544
+一对一,terra,GPT-6.1 Terra（对照）,grok,Grok 4.7,228,114,1,113,50.219298
+一对一,terra,GPT-6.1 Terra（对照）,glm,GLM 5.3,228,137,1,90,60.307018
+一对一,terra,GPT-6.1 Terra（对照）,haiku,Claude Haiku 5.5（对照）,228,160,2,66,70.614035
+一对一,terra,GPT-6.1 Terra（对照）,deepseek,DeepSeek,228,139,0,89,60.964912
+一对一,terra,GPT-6.1 Terra（对照）,kimi,Kimi K3.1,228,136,4,88,60.526316
+一对一,terra,GPT-6.1 Terra（对照）,qwen,千问 Qwen4,228,157,2,69,69.298246
+一对一,terra,GPT-6.1 Terra（对照）,luna,GPT-6 Luna（对照）,228,171,1,56,75.219298
+一对一,terra,GPT-6.1 Terra（对照）,mimo,MiMo v2.6,228,196,0,32,85.964912
+一对一,terra,GPT-6.1 Terra（对照）,doubao,豆包,228,196,0,32,85.964912
+一对一,sol61,GPT-6.1 Sol（对照）,astra62,GPT-6.2 Astra,228,44,0,184,19.298246
+一对一,sol61,GPT-6.1 Sol（对照）,astra,Astra 灰度版,228,57,1,170,25.219298
+一对一,sol61,GPT-6.1 Sol（对照）,fable,Claude Fable 5.2,228,84,3,141,37.5
+一对一,sol61,GPT-6.1 Sol（对照）,sol,Sol 6.1 灰度版,228,121,0,107,53.070175
+一对一,sol61,GPT-6.1 Sol（对照）,opus,Claude Opus 5.5,228,95,2,131,42.105263
+一对一,sol61,GPT-6.1 Sol（对照）,sonnet,Claude Sonnet 5.5（对照）,228,106,5,117,47.587719
+一对一,sol61,GPT-6.1 Sol（对照）,astra6,GPT-6 Astra（对照）,228,133,3,92,58.991228
+一对一,sol61,GPT-6.1 Sol（对照）,terra,GPT-6.1 Terra（对照）,228,115,4,109,51.315789
+一对一,sol61,GPT-6.1 Sol（对照）,carbon,Gemini Carbon,228,128,1,99,56.359649
+一对一,sol61,GPT-6.1 Sol（对照）,sol62,GPT-6.2 Sol,228,121,1,106,53.289474
+一对一,sol61,GPT-6.1 Sol（对照）,hydrogen,Gemini Hydrogen,228,125,2,101,55.263158
+一对一,sol61,GPT-6.1 Sol（对照）,grok,Grok 4.7,228,122,2,104,53.947368
+一对一,sol61,GPT-6.1 Sol（对照）,glm,GLM 5.3,228,140,1,87,61.622807
+一对一,sol61,GPT-6.1 Sol（对照）,haiku,Claude Haiku 5.5（对照）,228,148,0,80,64.912281
+一对一,sol61,GPT-6.1 Sol（对照）,deepseek,DeepSeek,228,142,2,84,62.719298
+一对一,sol61,GPT-6.1 Sol（对照）,kimi,Kimi K3.1,228,150,2,76,66.22807
+一对一,sol61,GPT-6.1 Sol（对照）,qwen,千问 Qwen4,228,168,4,56,74.561404
+一对一,sol61,GPT-6.1 Sol（对照）,luna,GPT-6 Luna（对照）,228,182,0,46,79.824561
+一对一,sol61,GPT-6.1 Sol（对照）,mimo,MiMo v2.6,228,178,2,48,78.508772
+一对一,sol61,GPT-6.1 Sol（对照）,doubao,豆包,228,199,0,29,87.280702
+一对一,carbon,Gemini Carbon,astra62,GPT-6.2 Astra,228,37,0,191,16.22807
+一对一,carbon,Gemini Carbon,astra,Astra 灰度版,228,28,0,200,12.280702
+一对一,carbon,Gemini Carbon,fable,Claude Fable 5.2,228,75,0,153,32.894737
+一对一,carbon,Gemini Carbon,sol,Sol 6.1 灰度版,228,78,0,150,34.210526
+一对一,carbon,Gemini Carbon,opus,Claude Opus 5.5,228,100,4,124,44.736842
+一对一,carbon,Gemini Carbon,sonnet,Claude Sonnet 5.5（对照）,228,121,1,106,53.289474
+一对一,carbon,Gemini Carbon,astra6,GPT-6 Astra（对照）,228,108,0,120,47.368421
+一对一,carbon,Gemini Carbon,terra,GPT-6.1 Terra（对照）,228,76,2,150,33.77193
+一对一,carbon,Gemini Carbon,sol61,GPT-6.1 Sol（对照）,228,99,1,128,43.640351
+一对一,carbon,Gemini Carbon,sol62,GPT-6.2 Sol,228,85,0,143,37.280702
+一对一,carbon,Gemini Carbon,hydrogen,Gemini Hydrogen,228,99,3,126,44.078947
+一对一,carbon,Gemini Carbon,grok,Grok 4.7,228,124,3,101,55.04386
+一对一,carbon,Gemini Carbon,glm,GLM 5.3,228,123,0,105,53.947368
+一对一,carbon,Gemini Carbon,haiku,Claude Haiku 5.5（对照）,228,144,2,82,63.596491
+一对一,carbon,Gemini Carbon,deepseek,DeepSeek,228,140,0,88,61.403509
+一对一,carbon,Gemini Carbon,kimi,Kimi K3.1,228,145,1,82,63.815789
+一对一,carbon,Gemini Carbon,qwen,千问 Qwen4,228,175,1,52,76.973684
+一对一,carbon,Gemini Carbon,luna,GPT-6 Luna（对照）,228,167,0,61,73.245614
+一对一,carbon,Gemini Carbon,mimo,MiMo v2.6,228,205,2,21,90.350877
+一对一,carbon,Gemini Carbon,doubao,豆包,228,185,0,43,81.140351
+一对一,sol62,GPT-6.2 Sol,astra62,GPT-6.2 Astra,228,48,2,178,21.491228
+一对一,sol62,GPT-6.2 Sol,astra,Astra 灰度版,228,53,2,173,23.684211
+一对一,sol62,GPT-6.2 Sol,fable,Claude Fable 5.2,228,92,3,133,41.008772
+一对一,sol62,GPT-6.2 Sol,sol,Sol 6.1 灰度版,228,103,1,124,45.394737
+一对一,sol62,GPT-6.2 Sol,opus,Claude Opus 5.5,228,118,1,109,51.973684
+一对一,sol62,GPT-6.2 Sol,sonnet,Claude Sonnet 5.5（对照）,228,121,3,104,53.72807
+一对一,sol62,GPT-6.2 Sol,astra6,GPT-6 Astra（对照）,228,112,2,114,49.561404
+一对一,sol62,GPT-6.2 Sol,terra,GPT-6.1 Terra（对照）,228,135,5,88,60.307018
+一对一,sol62,GPT-6.2 Sol,sol61,GPT-6.1 Sol（对照）,228,106,1,121,46.710526
+一对一,sol62,GPT-6.2 Sol,carbon,Gemini Carbon,228,143,0,85,62.719298
+一对一,sol62,GPT-6.2 Sol,hydrogen,Gemini Hydrogen,228,124,1,103,54.605263
+一对一,sol62,GPT-6.2 Sol,grok,Grok 4.7,228,143,1,84,62.938596
+一对一,sol62,GPT-6.2 Sol,glm,GLM 5.3,228,135,3,90,59.868421
+一对一,sol62,GPT-6.2 Sol,haiku,Claude Haiku 5.5（对照）,228,154,1,73,67.763158
+一对一,sol62,GPT-6.2 Sol,deepseek,DeepSeek,228,141,0,87,61.842105
+一对一,sol62,GPT-6.2 Sol,kimi,Kimi K3.1,228,157,5,66,69.95614
+一对一,sol62,GPT-6.2 Sol,qwen,千问 Qwen4,228,172,1,55,75.657895
+一对一,sol62,GPT-6.2 Sol,luna,GPT-6 Luna（对照）,228,164,0,64,71.929825
+一对一,sol62,GPT-6.2 Sol,mimo,MiMo v2.6,228,185,5,38,82.236842
+一对一,sol62,GPT-6.2 Sol,doubao,豆包,228,192,1,35,84.429825
+一对一,hydrogen,Gemini Hydrogen,astra62,GPT-6.2 Astra,228,26,0,202,11.403509
+一对一,hydrogen,Gemini Hydrogen,astra,Astra 灰度版,228,40,3,185,18.201754
+一对一,hydrogen,Gemini Hydrogen,fable,Claude Fable 5.2,228,83,4,141,37.280702
+一对一,hydrogen,Gemini Hydrogen,sol,Sol 6.1 灰度版,228,96,0,132,42.105263
+一对一,hydrogen,Gemini Hydrogen,opus,Claude Opus 5.5,228,102,4,122,45.614035
+一对一,hydrogen,Gemini Hydrogen,sonnet,Claude Sonnet 5.5（对照）,228,122,0,106,53.508772
+一对一,hydrogen,Gemini Hydrogen,astra6,GPT-6 Astra（对照）,228,87,2,139,38.596491
+一对一,hydrogen,Gemini Hydrogen,terra,GPT-6.1 Terra（对照）,228,97,2,129,42.982456
+一对一,hydrogen,Gemini Hydrogen,sol61,GPT-6.1 Sol（对照）,228,101,2,125,44.736842
+一对一,hydrogen,Gemini Hydrogen,carbon,Gemini Carbon,228,126,3,99,55.921053
+一对一,hydrogen,Gemini Hydrogen,sol62,GPT-6.2 Sol,228,103,1,124,45.394737
+一对一,hydrogen,Gemini Hydrogen,grok,Grok 4.7,228,123,2,103,54.385965
+一对一,hydrogen,Gemini Hydrogen,glm,GLM 5.3,228,114,3,111,50.657895
+一对一,hydrogen,Gemini Hydrogen,haiku,Claude Haiku 5.5（对照）,228,129,1,98,56.798246
+一对一,hydrogen,Gemini Hydrogen,deepseek,DeepSeek,228,159,1,68,69.95614
+一对一,hydrogen,Gemini Hydrogen,kimi,Kimi K3.1,228,154,1,73,67.763158
+一对一,hydrogen,Gemini Hydrogen,qwen,千问 Qwen4,228,162,4,62,71.929825
+一对一,hydrogen,Gemini Hydrogen,luna,GPT-6 Luna（对照）,228,196,1,31,86.184211
+一对一,hydrogen,Gemini Hydrogen,mimo,MiMo v2.6,228,189,4,35,83.77193
+一对一,hydrogen,Gemini Hydrogen,doubao,豆包,228,198,0,30,86.842105
+一对一,grok,Grok 4.7,astra62,GPT-6.2 Astra,228,37,0,191,16.22807
+一对一,grok,Grok 4.7,astra,Astra 灰度版,228,48,2,178,21.491228
+一对一,grok,Grok 4.7,fable,Claude Fable 5.2,228,72,2,154,32.017544
+一对一,grok,Grok 4.7,sol,Sol 6.1 灰度版,228,81,1,146,35.745614
+一对一,grok,Grok 4.7,opus,Claude Opus 5.5,228,90,1,137,39.692982
+一对一,grok,Grok 4.7,sonnet,Claude Sonnet 5.5（对照）,228,107,2,119,47.368421
+一对一,grok,Grok 4.7,astra6,GPT-6 Astra（对照）,228,100,2,126,44.298246
+一对一,grok,Grok 4.7,terra,GPT-6.1 Terra（对照）,228,113,1,114,49.780702
+一对一,grok,Grok 4.7,sol61,GPT-6.1 Sol（对照）,228,104,2,122,46.052632
+一对一,grok,Grok 4.7,carbon,Gemini Carbon,228,101,3,124,44.95614
+一对一,grok,Grok 4.7,sol62,GPT-6.2 Sol,228,84,1,143,37.061404
+一对一,grok,Grok 4.7,hydrogen,Gemini Hydrogen,228,103,2,123,45.614035
+一对一,grok,Grok 4.7,glm,GLM 5.3,228,103,2,123,45.614035
+一对一,grok,Grok 4.7,haiku,Claude Haiku 5.5（对照）,228,112,2,114,49.561404
+一对一,grok,Grok 4.7,deepseek,DeepSeek,228,131,1,96,57.675439
+一对一,grok,Grok 4.7,kimi,Kimi K3.1,228,137,2,89,60.526316
+一对一,grok,Grok 4.7,qwen,千问 Qwen4,228,133,0,95,58.333333
+一对一,grok,Grok 4.7,luna,GPT-6 Luna（对照）,228,152,0,76,66.666667
+一对一,grok,Grok 4.7,mimo,MiMo v2.6,228,184,0,44,80.701754
+一对一,grok,Grok 4.7,doubao,豆包,228,200,0,28,87.719298
+一对一,glm,GLM 5.3,astra62,GPT-6.2 Astra,228,27,1,200,12.061404
+一对一,glm,GLM 5.3,astra,Astra 灰度版,228,41,1,186,18.201754
+一对一,glm,GLM 5.3,fable,Claude Fable 5.2,228,99,5,124,44.517544
+一对一,glm,GLM 5.3,sol,Sol 6.1 灰度版,228,72,1,155,31.798246
+一对一,glm,GLM 5.3,opus,Claude Opus 5.5,228,94,1,133,41.447368
+一对一,glm,GLM 5.3,sonnet,Claude Sonnet 5.5（对照）,228,100,9,119,45.833333
+一对一,glm,GLM 5.3,astra6,GPT-6 Astra（对照）,228,71,3,154,31.798246
+一对一,glm,GLM 5.3,terra,GPT-6.1 Terra（对照）,228,90,1,137,39.692982
+一对一,glm,GLM 5.3,sol61,GPT-6.1 Sol（对照）,228,87,1,140,38.377193
+一对一,glm,GLM 5.3,carbon,Gemini Carbon,228,105,0,123,46.052632
+一对一,glm,GLM 5.3,sol62,GPT-6.2 Sol,228,90,3,135,40.131579
+一对一,glm,GLM 5.3,hydrogen,Gemini Hydrogen,228,111,3,114,49.342105
+一对一,glm,GLM 5.3,grok,Grok 4.7,228,123,2,103,54.385965
+一对一,glm,GLM 5.3,haiku,Claude Haiku 5.5（对照）,228,113,2,113,50.0
+一对一,glm,GLM 5.3,deepseek,DeepSeek,228,129,1,98,56.798246
+一对一,glm,GLM 5.3,kimi,Kimi K3.1,228,141,5,82,62.938596
+一对一,glm,GLM 5.3,qwen,千问 Qwen4,228,133,5,90,59.429825
+一对一,glm,GLM 5.3,luna,GPT-6 Luna（对照）,228,141,1,86,62.061404
+一对一,glm,GLM 5.3,mimo,MiMo v2.6,228,192,1,35,84.429825
+一对一,glm,GLM 5.3,doubao,豆包,228,170,0,58,74.561404
+一对一,haiku,Claude Haiku 5.5（对照）,astra62,GPT-6.2 Astra,228,18,0,210,7.894737
+一对一,haiku,Claude Haiku 5.5（对照）,astra,Astra 灰度版,228,28,1,199,12.5
+一对一,haiku,Claude Haiku 5.5（对照）,fable,Claude Fable 5.2,228,83,1,144,36.622807
+一对一,haiku,Claude Haiku 5.5（对照）,sol,Sol 6.1 灰度版,228,78,0,150,34.210526
+一对一,haiku,Claude Haiku 5.5（对照）,opus,Claude Opus 5.5,228,63,0,165,27.631579
+一对一,haiku,Claude Haiku 5.5（对照）,sonnet,Claude Sonnet 5.5（对照）,228,70,1,157,30.921053
+一对一,haiku,Claude Haiku 5.5（对照）,astra6,GPT-6 Astra（对照）,228,101,4,123,45.175439
+一对一,haiku,Claude Haiku 5.5（对照）,terra,GPT-6.1 Terra（对照）,228,66,2,160,29.385965
+一对一,haiku,Claude Haiku 5.5（对照）,sol61,GPT-6.1 Sol（对照）,228,80,0,148,35.087719
+一对一,haiku,Claude Haiku 5.5（对照）,carbon,Gemini Carbon,228,82,2,144,36.403509
+一对一,haiku,Claude Haiku 5.5（对照）,sol62,GPT-6.2 Sol,228,73,1,154,32.236842
+一对一,haiku,Claude Haiku 5.5（对照）,hydrogen,Gemini Hydrogen,228,98,1,129,43.201754
+一对一,haiku,Claude Haiku 5.5（对照）,grok,Grok 4.7,228,114,2,112,50.438596
+一对一,haiku,Claude Haiku 5.5（对照）,glm,GLM 5.3,228,113,2,113,50.0
+一对一,haiku,Claude Haiku 5.5（对照）,deepseek,DeepSeek,228,121,0,107,53.070175
+一对一,haiku,Claude Haiku 5.5（对照）,kimi,Kimi K3.1,228,145,0,83,63.596491
+一对一,haiku,Claude Haiku 5.5（对照）,qwen,千问 Qwen4,228,145,2,81,64.035088
+一对一,haiku,Claude Haiku 5.5（对照）,luna,GPT-6 Luna（对照）,228,188,0,40,82.45614
+一对一,haiku,Claude Haiku 5.5（对照）,mimo,MiMo v2.6,228,178,8,42,79.824561
+一对一,haiku,Claude Haiku 5.5（对照）,doubao,豆包,228,185,0,43,81.140351
+一对一,deepseek,DeepSeek,astra62,GPT-6.2 Astra,228,24,1,203,10.745614
+一对一,deepseek,DeepSeek,astra,Astra 灰度版,228,31,0,197,13.596491
+一对一,deepseek,DeepSeek,fable,Claude Fable 5.2,228,48,1,179,21.27193
+一对一,deepseek,DeepSeek,sol,Sol 6.1 灰度版,228,76,2,150,33.77193
+一对一,deepseek,DeepSeek,opus,Claude Opus 5.5,228,83,1,144,36.622807
+一对一,deepseek,DeepSeek,sonnet,Claude Sonnet 5.5（对照）,228,81,2,145,35.964912
+一对一,deepseek,DeepSeek,astra6,GPT-6 Astra（对照）,228,77,5,146,34.868421
+一对一,deepseek,DeepSeek,terra,GPT-6.1 Terra（对照）,228,89,0,139,39.035088
+一对一,deepseek,DeepSeek,sol61,GPT-6.1 Sol（对照）,228,84,2,142,37.280702
+一对一,deepseek,DeepSeek,carbon,Gemini Carbon,228,88,0,140,38.596491
+一对一,deepseek,DeepSeek,sol62,GPT-6.2 Sol,228,87,0,141,38.157895
+一对一,deepseek,DeepSeek,hydrogen,Gemini Hydrogen,228,68,1,159,30.04386
+一对一,deepseek,DeepSeek,grok,Grok 4.7,228,96,1,131,42.324561
+一对一,deepseek,DeepSeek,glm,GLM 5.3,228,98,1,129,43.201754
+一对一,deepseek,DeepSeek,haiku,Claude Haiku 5.5（对照）,228,107,0,121,46.929825
+一对一,deepseek,DeepSeek,kimi,Kimi K3.1,228,129,1,98,56.798246
+一对一,deepseek,DeepSeek,qwen,千问 Qwen4,228,126,4,98,56.140351
+一对一,deepseek,DeepSeek,luna,GPT-6 Luna（对照）,228,141,2,85,62.280702
+一对一,deepseek,DeepSeek,mimo,MiMo v2.6,228,175,3,50,77.412281
+一对一,deepseek,DeepSeek,doubao,豆包,228,213,0,15,93.421053
+一对一,kimi,Kimi K3.1,astra62,GPT-6.2 Astra,228,15,1,212,6.798246
+一对一,kimi,Kimi K3.1,astra,Astra 灰度版,228,15,1,212,6.798246
+一对一,kimi,Kimi K3.1,fable,Claude Fable 5.2,228,46,0,182,20.175439
+一对一,kimi,Kimi K3.1,sol,Sol 6.1 灰度版,228,71,0,157,31.140351
+一对一,kimi,Kimi K3.1,opus,Claude Opus 5.5,228,72,2,154,32.017544
+一对一,kimi,Kimi K3.1,sonnet,Claude Sonnet 5.5（对照）,228,86,1,141,37.938596
+一对一,kimi,Kimi K3.1,astra6,GPT-6 Astra（对照）,228,83,1,144,36.622807
+一对一,kimi,Kimi K3.1,terra,GPT-6.1 Terra（对照）,228,88,4,136,39.473684
+一对一,kimi,Kimi K3.1,sol61,GPT-6.1 Sol（对照）,228,76,2,150,33.77193
+一对一,kimi,Kimi K3.1,carbon,Gemini Carbon,228,82,1,145,36.184211
+一对一,kimi,Kimi K3.1,sol62,GPT-6.2 Sol,228,66,5,157,30.04386
+一对一,kimi,Kimi K3.1,hydrogen,Gemini Hydrogen,228,73,1,154,32.236842
+一对一,kimi,Kimi K3.1,grok,Grok 4.7,228,89,2,137,39.473684
+一对一,kimi,Kimi K3.1,glm,GLM 5.3,228,82,5,141,37.061404
+一对一,kimi,Kimi K3.1,haiku,Claude Haiku 5.5（对照）,228,83,0,145,36.403509
+一对一,kimi,Kimi K3.1,deepseek,DeepSeek,228,98,1,129,43.201754
+一对一,kimi,Kimi K3.1,qwen,千问 Qwen4,228,122,2,104,53.947368
+一对一,kimi,Kimi K3.1,luna,GPT-6 Luna（对照）,228,141,1,86,62.061404
+一对一,kimi,Kimi K3.1,mimo,MiMo v2.6,228,131,3,94,58.114035
+一对一,kimi,Kimi K3.1,doubao,豆包,228,173,1,54,76.096491
+一对一,qwen,千问 Qwen4,astra62,GPT-6.2 Astra,228,19,1,208,8.552632
+一对一,qwen,千问 Qwen4,astra,Astra 灰度版,228,12,4,212,6.140351
+一对一,qwen,千问 Qwen4,fable,Claude Fable 5.2,228,34,2,192,15.350877
+一对一,qwen,千问 Qwen4,sol,Sol 6.1 灰度版,228,45,0,183,19.736842
+一对一,qwen,千问 Qwen4,opus,Claude Opus 5.5,228,50,0,178,21.929825
+一对一,qwen,千问 Qwen4,sonnet,Claude Sonnet 5.5（对照）,228,64,5,159,29.166667
+一对一,qwen,千问 Qwen4,astra6,GPT-6 Astra（对照）,228,57,2,169,25.438596
+一对一,qwen,千问 Qwen4,terra,GPT-6.1 Terra（对照）,228,69,2,157,30.701754
+一对一,qwen,千问 Qwen4,sol61,GPT-6.1 Sol（对照）,228,56,4,168,25.438596
+一对一,qwen,千问 Qwen4,carbon,Gemini Carbon,228,52,1,175,23.026316
+一对一,qwen,千问 Qwen4,sol62,GPT-6.2 Sol,228,55,1,172,24.342105
+一对一,qwen,千问 Qwen4,hydrogen,Gemini Hydrogen,228,62,4,162,28.070175
+一对一,qwen,千问 Qwen4,grok,Grok 4.7,228,95,0,133,41.666667
+一对一,qwen,千问 Qwen4,glm,GLM 5.3,228,90,5,133,40.570175
+一对一,qwen,千问 Qwen4,haiku,Claude Haiku 5.5（对照）,228,81,2,145,35.964912
+一对一,qwen,千问 Qwen4,deepseek,DeepSeek,228,98,4,126,43.859649
+一对一,qwen,千问 Qwen4,kimi,Kimi K3.1,228,104,2,122,46.052632
+一对一,qwen,千问 Qwen4,luna,GPT-6 Luna（对照）,228,111,9,108,50.657895
+一对一,qwen,千问 Qwen4,mimo,MiMo v2.6,228,160,1,67,70.394737
+一对一,qwen,千问 Qwen4,doubao,豆包,228,183,0,45,80.263158
+一对一,luna,GPT-6 Luna（对照）,astra62,GPT-6.2 Astra,228,2,0,226,0.877193
+一对一,luna,GPT-6 Luna（对照）,astra,Astra 灰度版,228,5,0,223,2.192982
+一对一,luna,GPT-6 Luna（对照）,fable,Claude Fable 5.2,228,37,1,190,16.447368
+一对一,luna,GPT-6 Luna（对照）,sol,Sol 6.1 灰度版,228,66,1,161,29.166667
+一对一,luna,GPT-6 Luna（对照）,opus,Claude Opus 5.5,228,52,0,176,22.807018
+一对一,luna,GPT-6 Luna（对照）,sonnet,Claude Sonnet 5.5（对照）,228,38,1,189,16.885965
+一对一,luna,GPT-6 Luna（对照）,astra6,GPT-6 Astra（对照）,228,63,2,163,28.070175
+一对一,luna,GPT-6 Luna（对照）,terra,GPT-6.1 Terra（对照）,228,56,1,171,24.780702
+一对一,luna,GPT-6 Luna（对照）,sol61,GPT-6.1 Sol（对照）,228,46,0,182,20.175439
+一对一,luna,GPT-6 Luna（对照）,carbon,Gemini Carbon,228,61,0,167,26.754386
+一对一,luna,GPT-6 Luna（对照）,sol62,GPT-6.2 Sol,228,64,0,164,28.070175
+一对一,luna,GPT-6 Luna（对照）,hydrogen,Gemini Hydrogen,228,31,1,196,13.815789
+一对一,luna,GPT-6 Luna（对照）,grok,Grok 4.7,228,76,0,152,33.333333
+一对一,luna,GPT-6 Luna（对照）,glm,GLM 5.3,228,86,1,141,37.938596
+一对一,luna,GPT-6 Luna（对照）,haiku,Claude Haiku 5.5（对照）,228,40,0,188,17.54386
+一对一,luna,GPT-6 Luna（对照）,deepseek,DeepSeek,228,85,2,141,37.719298
+一对一,luna,GPT-6 Luna（对照）,kimi,Kimi K3.1,228,86,1,141,37.938596
+一对一,luna,GPT-6 Luna（对照）,qwen,千问 Qwen4,228,108,9,111,49.342105
+一对一,luna,GPT-6 Luna（对照）,mimo,MiMo v2.6,228,107,15,106,50.219298
+一对一,luna,GPT-6 Luna（对照）,doubao,豆包,228,145,18,65,67.54386
+一对一,mimo,MiMo v2.6,astra62,GPT-6.2 Astra,228,3,0,225,1.315789
+一对一,mimo,MiMo v2.6,astra,Astra 灰度版,228,8,0,220,3.508772
+一对一,mimo,MiMo v2.6,fable,Claude Fable 5.2,228,25,1,202,11.184211
+一对一,mimo,MiMo v2.6,sol,Sol 6.1 灰度版,228,44,2,182,19.736842
+一对一,mimo,MiMo v2.6,opus,Claude Opus 5.5,228,30,1,197,13.377193
+一对一,mimo,MiMo v2.6,sonnet,Claude Sonnet 5.5（对照）,228,37,3,188,16.885965
+一对一,mimo,MiMo v2.6,astra6,GPT-6 Astra（对照）,228,48,2,178,21.491228
+一对一,mimo,MiMo v2.6,terra,GPT-6.1 Terra（对照）,228,32,0,196,14.035088
+一对一,mimo,MiMo v2.6,sol61,GPT-6.1 Sol（对照）,228,48,2,178,21.491228
+一对一,mimo,MiMo v2.6,carbon,Gemini Carbon,228,21,2,205,9.649123
+一对一,mimo,MiMo v2.6,sol62,GPT-6.2 Sol,228,38,5,185,17.763158
+一对一,mimo,MiMo v2.6,hydrogen,Gemini Hydrogen,228,35,4,189,16.22807
+一对一,mimo,MiMo v2.6,grok,Grok 4.7,228,44,0,184,19.298246
+一对一,mimo,MiMo v2.6,glm,GLM 5.3,228,35,1,192,15.570175
+一对一,mimo,MiMo v2.6,haiku,Claude Haiku 5.5（对照）,228,42,8,178,20.175439
+一对一,mimo,MiMo v2.6,deepseek,DeepSeek,228,50,3,175,22.587719
+一对一,mimo,MiMo v2.6,kimi,Kimi K3.1,228,94,3,131,41.885965
+一对一,mimo,MiMo v2.6,qwen,千问 Qwen4,228,67,1,160,29.605263
+一对一,mimo,MiMo v2.6,luna,GPT-6 Luna（对照）,228,106,15,107,49.780702
+一对一,mimo,MiMo v2.6,doubao,豆包,228,196,3,29,86.622807
+一对一,doubao,豆包,astra62,GPT-6.2 Astra,228,6,0,222,2.631579
+一对一,doubao,豆包,astra,Astra 灰度版,228,0,0,228,0.0
+一对一,doubao,豆包,fable,Claude Fable 5.2,228,9,0,219,3.947368
+一对一,doubao,豆包,sol,Sol 6.1 灰度版,228,24,0,204,10.526316
+一对一,doubao,豆包,opus,Claude Opus 5.5,228,6,0,222,2.631579
+一对一,doubao,豆包,sonnet,Claude Sonnet 5.5（对照）,228,18,1,209,8.114035
+一对一,doubao,豆包,astra6,GPT-6 Astra（对照）,228,26,0,202,11.403509
+一对一,doubao,豆包,terra,GPT-6.1 Terra（对照）,228,32,0,196,14.035088
+一对一,doubao,豆包,sol61,GPT-6.1 Sol（对照）,228,29,0,199,12.719298
+一对一,doubao,豆包,carbon,Gemini Carbon,228,43,0,185,18.859649
+一对一,doubao,豆包,sol62,GPT-6.2 Sol,228,35,1,192,15.570175
+一对一,doubao,豆包,hydrogen,Gemini Hydrogen,228,30,0,198,13.157895
+一对一,doubao,豆包,grok,Grok 4.7,228,28,0,200,12.280702
+一对一,doubao,豆包,glm,GLM 5.3,228,58,0,170,25.438596
+一对一,doubao,豆包,haiku,Claude Haiku 5.5（对照）,228,43,0,185,18.859649
+一对一,doubao,豆包,deepseek,DeepSeek,228,15,0,213,6.578947
+一对一,doubao,豆包,kimi,Kimi K3.1,228,54,1,173,23.903509
+一对一,doubao,豆包,qwen,千问 Qwen4,228,45,0,183,19.736842
+一对一,doubao,豆包,luna,GPT-6 Luna（对照）,228,65,18,145,32.45614
+一对一,doubao,豆包,mimo,MiMo v2.6,228,29,3,196,13.377193
+四人局,astra62,GPT-6.2 Astra,astra,Astra 灰度版,360,183,30,147,55.0
+四人局,astra62,GPT-6.2 Astra,fable,Claude Fable 5.2,1548,1080,109,359,73.288114
+四人局,astra62,GPT-6.2 Astra,sol,Sol 6.1 灰度版,360,242,26,92,70.833333
+四人局,astra62,GPT-6.2 Astra,opus,Claude Opus 5.5,1512,1110,78,324,75.992063
+四人局,astra62,GPT-6.2 Astra,sonnet,Claude Sonnet 5.5（对照）,360,254,29,77,74.583333
+四人局,astra62,GPT-6.2 Astra,astra6,GPT-6 Astra（对照）,372,263,30,79,74.731183
+四人局,astra62,GPT-6.2 Astra,terra,GPT-6.1 Terra（对照）,336,238,20,78,73.809524
+四人局,astra62,GPT-6.2 Astra,sol61,GPT-6.1 Sol（对照）,384,292,25,67,79.296875
+四人局,astra62,GPT-6.2 Astra,carbon,Gemini Carbon,1512,1097,93,322,75.628307
+四人局,astra62,GPT-6.2 Astra,sol62,GPT-6.2 Sol,1512,1102,98,312,76.124339
+四人局,astra62,GPT-6.2 Astra,hydrogen,Gemini Hydrogen,1524,1169,103,252,80.085302
+四人局,astra62,GPT-6.2 Astra,grok,Grok 4.7,1512,1237,74,201,84.259259
+四人局,astra62,GPT-6.2 Astra,glm,GLM 5.3,1512,1294,66,152,87.76455
+四人局,astra62,GPT-6.2 Astra,haiku,Claude Haiku 5.5（对照）,372,306,22,44,85.215054
+四人局,astra62,GPT-6.2 Astra,deepseek,DeepSeek,1512,1219,98,195,83.862434
+四人局,astra62,GPT-6.2 Astra,kimi,Kimi K3.1,1500,1316,59,125,89.7
+四人局,astra62,GPT-6.2 Astra,qwen,千问 Qwen4,1536,1300,76,160,87.109375
+四人局,astra62,GPT-6.2 Astra,luna,GPT-6 Luna（对照）,372,345,12,15,94.354839
+四人局,astra62,GPT-6.2 Astra,mimo,MiMo v2.6,1512,1384,33,95,92.625661
+四人局,astra62,GPT-6.2 Astra,doubao,豆包,1524,1416,26,82,93.766404
+四人局,astra,Astra 灰度版,astra62,GPT-6.2 Astra,360,147,30,183,45.0
+四人局,astra,Astra 灰度版,fable,Claude Fable 5.2,2256,1428,171,657,67.087766
+四人局,astra,Astra 灰度版,sol,Sol 6.1 灰度版,2220,1411,200,609,68.063063
+四人局,astra,Astra 灰度版,opus,Claude Opus 5.5,2232,1630,136,466,76.075269
+四人局,astra,Astra 灰度版,sonnet,Claude Sonnet 5.5（对照）,1068,811,56,201,78.558052
+四人局,astra,Astra 灰度版,astra6,GPT-6 Astra（对照）,1068,770,75,223,75.608614
+四人局,astra,Astra 灰度版,terra,GPT-6.1 Terra（对照）,1080,821,72,187,79.351852
+四人局,astra,Astra 灰度版,sol61,GPT-6.1 Sol（对照）,1044,781,68,195,78.065134
+四人局,astra,Astra 灰度版,carbon,Gemini Carbon,2244,1656,159,429,77.339572
+四人局,astra,Astra 灰度版,sol62,GPT-6.2 Sol,360,261,22,77,75.555556
+四人局,astra,Astra 灰度版,hydrogen,Gemini Hydrogen,2220,1625,164,431,76.891892
+四人局,astra,Astra 灰度版,grok,Grok 4.7,2220,1747,134,339,81.711712
+四人局,astra,Astra 灰度版,glm,GLM 5.3,2232,1850,110,272,85.349462
+四人局,astra,Astra 灰度版,haiku,Claude Haiku 5.5（对照）,1056,840,71,145,82.907197
+四人局,astra,Astra 灰度版,deepseek,DeepSeek,2220,1734,135,351,81.148649
+四人局,astra,Astra 灰度版,kimi,Kimi K3.1,2208,1924,101,183,89.424819
+四人局,astra,Astra 灰度版,qwen,千问 Qwen4,2220,1853,112,255,85.990991
+四人局,astra,Astra 灰度版,luna,GPT-6 Luna（对照）,1080,967,37,76,91.25
+四人局,astra,Astra 灰度版,mimo,MiMo v2.6,2220,2017,56,147,92.117117
+四人局,astra,Astra 灰度版,doubao,豆包,2232,2081,42,109,94.175627
+四人局,fable,Claude Fable 5.2,astra62,GPT-6.2 Astra,1548,359,109,1080,26.711886
+四人局,fable,Claude Fable 5.2,astra,Astra 灰度版,2256,657,171,1428,32.912234
+四人局,fable,Claude Fable 5.2,sol,Sol 6.1 灰度版,2208,1117,156,935,54.121377
+四人局,fable,Claude Fable 5.2,opus,Claude Opus 5.5,2664,1433,153,1078,56.662913
+四人局,fable,Claude Fable 5.2,sonnet,Claude Sonnet 5.5（对照）,1068,578,64,426,57.116105
+四人局,fable,Claude Fable 5.2,astra6,GPT-6 Astra（对照）,1068,588,81,399,58.848315
+四人局,fable,Claude Fable 5.2,terra,GPT-6.1 Terra（对照）,1080,616,68,396,60.185185
+四人局,fable,Claude Fable 5.2,sol61,GPT-6.1 Sol（对照）,1056,634,79,343,63.778409
+四人局,fable,Claude Fable 5.2,carbon,Gemini Carbon,2652,1449,186,1017,58.144796
+四人局,fable,Claude Fable 5.2,sol62,GPT-6.2 Sol,1512,1009,103,400,70.138889
+四人局,fable,Claude Fable 5.2,hydrogen,Gemini Hydrogen,2604,1626,177,801,65.841014
+四人局,fable,Claude Fable 5.2,grok,Grok 4.7,2664,1755,159,750,68.862613
+四人局,fable,Claude Fable 5.2,glm,GLM 5.3,2676,1809,157,710,70.53438
+四人局,fable,Claude Fable 5.2,haiku,Claude Haiku 5.5（对照）,1056,662,74,320,66.193182
+四人局,fable,Claude Fable 5.2,deepseek,DeepSeek,2628,1797,168,663,71.575342
+四人局,fable,Claude Fable 5.2,kimi,Kimi K3.1,2568,1926,137,505,77.667445
+四人局,fable,Claude Fable 5.2,qwen,千问 Qwen4,2628,1966,121,541,77.111872
+四人局,fable,Claude Fable 5.2,luna,GPT-6 Luna（对照）,1068,864,52,152,83.333333
+四人局,fable,Claude Fable 5.2,mimo,MiMo v2.6,2664,2132,105,427,82.000751
+四人局,fable,Claude Fable 5.2,doubao,豆包,2544,2182,86,276,87.460692
+四人局,sol,Sol 6.1 灰度版,astra62,GPT-6.2 Astra,360,92,26,242,29.166667
+四人局,sol,Sol 6.1 灰度版,astra,Astra 灰度版,2220,609,200,1411,31.936937
+四人局,sol,Sol 6.1 灰度版,fable,Claude Fable 5.2,2208,935,156,1117,45.878623
+四人局,sol,Sol 6.1 灰度版,opus,Claude Opus 5.5,2220,1123,141,956,53.761261
+四人局,sol,Sol 6.1 灰度版,sonnet,Claude Sonnet 5.5（对照）,1080,552,60,468,53.888889
+四人局,sol,Sol 6.1 灰度版,astra6,GPT-6 Astra（对照）,1080,532,50,498,51.574074
+四人局,sol,Sol 6.1 灰度版,terra,GPT-6.1 Terra（对照）,1068,594,59,415,58.38015
+四人局,sol,Sol 6.1 灰度版,sol61,GPT-6.1 Sol（对照）,1044,579,46,419,57.662835
+四人局,sol,Sol 6.1 灰度版,carbon,Gemini Carbon,2220,1142,123,955,54.211712
+四人局,sol,Sol 6.1 灰度版,sol62,GPT-6.2 Sol,360,208,15,137,59.861111
+四人局,sol,Sol 6.1 灰度版,hydrogen,Gemini Hydrogen,2244,1278,99,867,59.157754
+四人局,sol,Sol 6.1 灰度版,grok,Grok 4.7,2232,1281,104,847,59.722222
+四人局,sol,Sol 6.1 灰度版,glm,GLM 5.3,2244,1412,87,745,64.861854
+四人局,sol,Sol 6.1 灰度版,haiku,Claude Haiku 5.5（对照）,1068,683,60,325,66.7603
+四人局,sol,Sol 6.1 灰度版,deepseek,DeepSeek,2244,1393,105,746,64.416221
+四人局,sol,Sol 6.1 灰度版,kimi,Kimi K3.1,2244,1515,97,632,69.674688
+四人局,sol,Sol 6.1 灰度版,qwen,千问 Qwen4,2244,1512,104,628,69.69697
+四人局,sol,Sol 6.1 灰度版,luna,GPT-6 Luna（对照）,1056,781,37,238,75.710227
+四人局,sol,Sol 6.1 灰度版,mimo,MiMo v2.6,2232,1650,81,501,75.739247
+四人局,sol,Sol 6.1 灰度版,doubao,豆包,2244,1707,71,466,77.651515
+四人局,opus,Claude Opus 5.5,astra62,GPT-6.2 Astra,1512,324,78,1110,24.007937
+四人局,opus,Claude Opus 5.5,astra,Astra 灰度版,2232,466,136,1630,23.924731
+四人局,opus,Claude Opus 5.5,fable,Claude Fable 5.2,2664,1078,153,1433,43.337087
+四人局,opus,Claude Opus 5.5,sol,Sol 6.1 灰度版,2220,956,141,1123,46.238739
+四人局,opus,Claude Opus 5.5,sonnet,Claude Sonnet 5.5（对照）,1056,515,60,481,51.609848
+四人局,opus,Claude Opus 5.5,astra6,GPT-6 Astra（对照）,1068,526,66,476,52.340824
+四人局,opus,Claude Opus 5.5,terra,GPT-6.1 Terra（对照）,1068,554,67,447,55.009363
+四人局,opus,Claude Opus 5.5,sol61,GPT-6.1 Sol（对照）,1080,581,64,435,56.759259
+四人局,opus,Claude Opus 5.5,carbon,Gemini Carbon,2688,1231,182,1275,49.181548
+四人局,opus,Claude Opus 5.5,sol62,GPT-6.2 Sol,1512,809,108,595,57.07672
+四人局,opus,Claude Opus 5.5,hydrogen,Gemini Hydrogen,2652,1403,168,1081,56.07089
+四人局,opus,Claude Opus 5.5,grok,Grok 4.7,2724,1558,179,987,60.48091
+四人局,opus,Claude Opus 5.5,glm,GLM 5.3,2640,1676,146,818,66.25
+四人局,opus,Claude Opus 5.5,haiku,Claude Haiku 5.5（对照）,1068,622,82,364,62.078652
+四人局,opus,Claude Opus 5.5,deepseek,DeepSeek,2652,1618,128,906,63.423831
+四人局,opus,Claude Opus 5.5,kimi,Kimi K3.1,2604,1769,136,699,70.545315
+四人局,opus,Claude Opus 5.5,qwen,千问 Qwen4,2640,1761,137,742,69.299242
+四人局,opus,Claude Opus 5.5,luna,GPT-6 Luna（对照）,1080,800,33,247,75.601852
+四人局,opus,Claude Opus 5.5,mimo,MiMo v2.6,2604,1944,100,560,76.574501
+四人局,opus,Claude Opus 5.5,doubao,豆包,2592,2101,72,419,82.445988
+四人局,sonnet,Claude Sonnet 5.5（对照）,astra62,GPT-6.2 Astra,360,77,29,254,25.416667
+四人局,sonnet,Claude Sonnet 5.5（对照）,astra,Astra 灰度版,1068,201,56,811,21.441948
+四人局,sonnet,Claude Sonnet 5.5（对照）,fable,Claude Fable 5.2,1068,426,64,578,42.883895
+四人局,sonnet,Claude Sonnet 5.5（对照）,sol,Sol 6.1 灰度版,1080,468,60,552,46.111111
+四人局,sonnet,Claude Sonnet 5.5（对照）,opus,Claude Opus 5.5,1056,481,60,515,48.390152
+四人局,sonnet,Claude Sonnet 5.5（对照）,astra6,GPT-6 Astra（对照）,1056,523,65,468,52.604167
+四人局,sonnet,Claude Sonnet 5.5（对照）,terra,GPT-6.1 Terra（对照）,1056,490,73,493,49.857955
+四人局,sonnet,Claude Sonnet 5.5（对照）,sol61,GPT-6.1 Sol（对照）,1080,551,65,464,54.027778
+四人局,sonnet,Claude Sonnet 5.5（对照）,carbon,Gemini Carbon,1080,525,66,489,51.666667
+四人局,sonnet,Claude Sonnet 5.5（对照）,sol62,GPT-6.2 Sol,348,200,29,119,61.637931
+四人局,sonnet,Claude Sonnet 5.5（对照）,hydrogen,Gemini Hydrogen,1044,557,64,423,56.417625
+四人局,sonnet,Claude Sonnet 5.5（对照）,grok,Grok 4.7,1068,589,58,421,57.865169
+四人局,sonnet,Claude Sonnet 5.5（对照）,glm,GLM 5.3,1068,682,67,319,66.994382
+四人局,sonnet,Claude Sonnet 5.5（对照）,haiku,Claude Haiku 5.5（对照）,1056,588,65,403,58.75947
+四人局,sonnet,Claude Sonnet 5.5（对照）,deepseek,DeepSeek,1092,640,60,392,61.355311
+四人局,sonnet,Claude Sonnet 5.5（对照）,kimi,Kimi K3.1,1068,694,56,318,67.602996
+四人局,sonnet,Claude Sonnet 5.5（对照）,qwen,千问 Qwen4,1092,715,36,341,67.124542
+四人局,sonnet,Claude Sonnet 5.5（对照）,luna,GPT-6 Luna（对照）,1068,786,41,241,75.514981
+四人局,sonnet,Claude Sonnet 5.5（对照）,mimo,MiMo v2.6,1068,765,50,253,73.970037
+四人局,sonnet,Claude Sonnet 5.5（对照）,doubao,豆包,1068,873,32,163,83.2397
+四人局,astra6,GPT-6 Astra（对照）,astra62,GPT-6.2 Astra,372,79,30,263,25.268817
+四人局,astra6,GPT-6 Astra（对照）,astra,Astra 灰度版,1068,223,75,770,24.391386
+四人局,astra6,GPT-6 Astra（对照）,fable,Claude Fable 5.2,1068,399,81,588,41.151685
+四人局,astra6,GPT-6 Astra（对照）,sol,Sol 6.1 灰度版,1080,498,50,532,48.425926
+四人局,astra6,GPT-6 Astra（对照）,opus,Claude Opus 5.5,1068,476,66,526,47.659176
+四人局,astra6,GPT-6 Astra（对照）,sonnet,Claude Sonnet 5.5（对照）,1056,468,65,523,47.395833
+四人局,astra6,GPT-6 Astra（对照）,terra,GPT-6.1 Terra（对照）,1080,538,66,476,52.87037
+四人局,astra6,GPT-6 Astra（对照）,sol61,GPT-6.1 Sol（对照）,1080,570,43,467,54.768519
+四人局,astra6,GPT-6 Astra（对照）,carbon,Gemini Carbon,1080,538,64,478,52.777778
+四人局,astra6,GPT-6 Astra（对照）,sol62,GPT-6.2 Sol,360,208,14,138,59.722222
+四人局,astra6,GPT-6 Astra（对照）,hydrogen,Gemini Hydrogen,1056,578,50,428,57.102273
+四人局,astra6,GPT-6 Astra（对照）,grok,Grok 4.7,1056,560,48,448,55.30303
+四人局,astra6,GPT-6 Astra（对照）,glm,GLM 5.3,1056,628,35,393,61.126894
+四人局,astra6,GPT-6 Astra（对照）,haiku,Claude Haiku 5.5（对照）,1068,605,59,404,59.410112
+四人局,astra6,GPT-6 Astra（对照）,deepseek,DeepSeek,1056,626,47,383,61.505682
+四人局,astra6,GPT-6 Astra（对照）,kimi,Kimi K3.1,1044,673,37,334,66.235632
+四人局,astra6,GPT-6 Astra（对照）,qwen,千问 Qwen4,1068,710,49,309,68.773408
+四人局,astra6,GPT-6 Astra（对照）,luna,GPT-6 Luna（对照）,1080,801,24,255,75.277778
+四人局,astra6,GPT-6 Astra（对照）,mimo,MiMo v2.6,1068,777,45,246,74.859551
+四人局,astra6,GPT-6 Astra（对照）,doubao,豆包,1080,813,49,218,77.546296
+四人局,terra,GPT-6.1 Terra（对照）,astra62,GPT-6.2 Astra,336,78,20,238,26.190476
+四人局,terra,GPT-6.1 Terra（对照）,astra,Astra 灰度版,1080,187,72,821,20.648148
+四人局,terra,GPT-6.1 Terra（对照）,fable,Claude Fable 5.2,1080,396,68,616,39.814815
+四人局,terra,GPT-6.1 Terra（对照）,sol,Sol 6.1 灰度版,1068,415,59,594,41.61985
+四人局,terra,GPT-6.1 Terra（对照）,opus,Claude Opus 5.5,1068,447,67,554,44.990637
+四人局,terra,GPT-6.1 Terra（对照）,sonnet,Claude Sonnet 5.5（对照）,1056,493,73,490,50.142045
+四人局,terra,GPT-6.1 Terra（对照）,astra6,GPT-6 Astra（对照）,1080,476,66,538,47.12963
+四人局,terra,GPT-6.1 Terra（对照）,sol61,GPT-6.1 Sol（对照）,1056,474,60,522,47.727273
+四人局,terra,GPT-6.1 Terra（对照）,carbon,Gemini Carbon,1080,512,69,499,50.601852
+四人局,terra,GPT-6.1 Terra（对照）,sol62,GPT-6.2 Sol,360,204,19,137,59.305556
+四人局,terra,GPT-6.1 Terra（对照）,hydrogen,Gemini Hydrogen,1056,554,60,442,55.30303
+四人局,terra,GPT-6.1 Terra（对照）,grok,Grok 4.7,1092,589,63,440,56.822344
+四人局,terra,GPT-6.1 Terra（对照）,glm,GLM 5.3,1068,633,50,385,61.610487
+四人局,terra,GPT-6.1 Terra（对照）,haiku,Claude Haiku 5.5（对照）,1068,638,73,357,63.155431
+四人局,terra,GPT-6.1 Terra（对照）,deepseek,DeepSeek,1068,651,48,369,63.202247
+四人局,terra,GPT-6.1 Terra（对照）,kimi,Kimi K3.1,1080,727,61,292,70.138889
+四人局,terra,GPT-6.1 Terra（对照）,qwen,千问 Qwen4,1056,677,45,334,66.24053
+四人局,terra,GPT-6.1 Terra（对照）,luna,GPT-6 Luna（对照）,1056,807,53,196,78.929924
+四人局,terra,GPT-6.1 Terra（对照）,mimo,MiMo v2.6,1068,805,42,221,77.340824
+四人局,terra,GPT-6.1 Terra（对照）,doubao,豆包,1068,833,37,198,79.728464
+四人局,sol61,GPT-6.1 Sol（对照）,astra62,GPT-6.2 Astra,384,67,25,292,20.703125
+四人局,sol61,GPT-6.1 Sol（对照）,astra,Astra 灰度版,1044,195,68,781,21.934866
+四人局,sol61,GPT-6.1 Sol（对照）,fable,Claude Fable 5.2,1056,343,79,634,36.221591
+四人局,sol61,GPT-6.1 Sol（对照）,sol,Sol 6.1 灰度版,1044,419,46,579,42.337165
+四人局,sol61,GPT-6.1 Sol（对照）,opus,Claude Opus 5.5,1080,435,64,581,43.240741
+四人局,sol61,GPT-6.1 Sol（对照）,sonnet,Claude Sonnet 5.5（对照）,1080,464,65,551,45.972222
+四人局,sol61,GPT-6.1 Sol（对照）,astra6,GPT-6 Astra（对照）,1080,467,43,570,45.231481
+四人局,sol61,GPT-6.1 Sol（对照）,terra,GPT-6.1 Terra（对照）,1056,522,60,474,52.272727
+四人局,sol61,GPT-6.1 Sol（对照）,carbon,Gemini Carbon,1068,479,55,534,47.425094
+四人局,sol61,GPT-6.1 Sol（对照）,sol62,GPT-6.2 Sol,360,192,11,157,54.861111
+四人局,sol61,GPT-6.1 Sol（对照）,hydrogen,Gemini Hydrogen,1056,515,56,485,51.420455
+四人局,sol61,GPT-6.1 Sol（对照）,grok,Grok 4.7,1068,537,50,481,52.621723
+四人局,sol61,GPT-6.1 Sol（对照）,glm,GLM 5.3,1080,608,45,427,58.37963
+四人局,sol61,GPT-6.1 Sol（对照）,haiku,Claude Haiku 5.5（对照）,1092,582,58,452,55.952381
+四人局,sol61,GPT-6.1 Sol（对照）,deepseek,DeepSeek,1056,597,50,409,58.901515
+四人局,sol61,GPT-6.1 Sol（对照）,kimi,Kimi K3.1,1080,697,46,337,66.666667
+四人局,sol61,GPT-6.1 Sol（对照）,qwen,千问 Qwen4,1068,668,34,366,64.138577
+四人局,sol61,GPT-6.1 Sol（对照）,luna,GPT-6 Luna（对照）,1068,736,34,298,70.505618
+四人局,sol61,GPT-6.1 Sol（对照）,mimo,MiMo v2.6,1056,703,36,317,68.276515
+四人局,sol61,GPT-6.1 Sol（对照）,doubao,豆包,1068,783,30,255,74.719101
+四人局,carbon,Gemini Carbon,astra62,GPT-6.2 Astra,1512,322,93,1097,24.371693
+四人局,carbon,Gemini Carbon,astra,Astra 灰度版,2244,429,159,1656,22.660428
+四人局,carbon,Gemini Carbon,fable,Claude Fable 5.2,2652,1017,186,1449,41.855204
+四人局,carbon,Gemini Carbon,sol,Sol 6.1 灰度版,2220,955,123,1142,45.788288
+四人局,carbon,Gemini Carbon,opus,Claude Opus 5.5,2688,1275,182,1231,50.818452
+四人局,carbon,Gemini Carbon,sonnet,Claude Sonnet 5.5（对照）,1080,489,66,525,48.333333
+四人局,carbon,Gemini Carbon,astra6,GPT-6 Astra（对照）,1080,478,64,538,47.222222
+四人局,carbon,Gemini Carbon,terra,GPT-6.1 Terra（对照）,1080,499,69,512,49.398148
+四人局,carbon,Gemini Carbon,sol61,GPT-6.1 Sol（对照）,1068,534,55,479,52.574906
+四人局,carbon,Gemini Carbon,sol62,GPT-6.2 Sol,1524,799,98,627,55.643045
+四人局,carbon,Gemini Carbon,hydrogen,Gemini Hydrogen,2712,1460,145,1107,56.508112
+四人局,carbon,Gemini Carbon,grok,Grok 4.7,2700,1475,151,1074,57.425926
+四人局,carbon,Gemini Carbon,glm,GLM 5.3,2556,1620,131,805,65.942879
+四人局,carbon,Gemini Carbon,haiku,Claude Haiku 5.5（对照）,1068,628,69,371,62.031835
+四人局,carbon,Gemini Carbon,deepseek,DeepSeek,2544,1572,151,821,64.76022
+四人局,carbon,Gemini Carbon,kimi,Kimi K3.1,2652,1716,143,793,67.401961
+四人局,carbon,Gemini Carbon,qwen,千问 Qwen4,2580,1696,104,780,67.751938
+四人局,carbon,Gemini Carbon,luna,GPT-6 Luna（对照）,1056,787,40,229,76.420455
+四人局,carbon,Gemini Carbon,mimo,MiMo v2.6,2676,1953,106,617,74.962631
+四人局,carbon,Gemini Carbon,doubao,豆包,2664,2142,85,437,82.000751
+四人局,sol62,GPT-6.2 Sol,astra62,GPT-6.2 Astra,1512,312,98,1102,23.875661
+四人局,sol62,GPT-6.2 Sol,astra,Astra 灰度版,360,77,22,261,24.444444
+四人局,sol62,GPT-6.2 Sol,fable,Claude Fable 5.2,1512,400,103,1009,29.861111
+四人局,sol62,GPT-6.2 Sol,sol,Sol 6.1 灰度版,360,137,15,208,40.138889
+四人局,sol62,GPT-6.2 Sol,opus,Claude Opus 5.5,1512,595,108,809,42.92328
+四人局,sol62,GPT-6.2 Sol,sonnet,Claude Sonnet 5.5（对照）,348,119,29,200,38.362069
+四人局,sol62,GPT-6.2 Sol,astra6,GPT-6 Astra（对照）,360,138,14,208,40.277778
+四人局,sol62,GPT-6.2 Sol,terra,GPT-6.1 Terra（对照）,360,137,19,204,40.694444
+四人局,sol62,GPT-6.2 Sol,sol61,GPT-6.1 Sol（对照）,360,157,11,192,45.138889
+四人局,sol62,GPT-6.2 Sol,carbon,Gemini Carbon,1524,627,98,799,44.356955
+四人局,sol62,GPT-6.2 Sol,hydrogen,Gemini Hydrogen,1536,685,61,790,46.582031
+四人局,sol62,GPT-6.2 Sol,grok,Grok 4.7,1524,632,78,814,44.028871
+四人局,sol62,GPT-6.2 Sol,glm,GLM 5.3,1536,779,49,708,52.311198
+四人局,sol62,GPT-6.2 Sol,haiku,Claude Haiku 5.5（对照）,360,167,21,172,49.305556
+四人局,sol62,GPT-6.2 Sol,deepseek,DeepSeek,1524,731,62,731,50.0
+四人局,sol62,GPT-6.2 Sol,kimi,Kimi K3.1,1512,806,51,655,54.993386
+四人局,sol62,GPT-6.2 Sol,qwen,千问 Qwen4,1536,867,48,621,58.007812
+四人局,sol62,GPT-6.2 Sol,luna,GPT-6 Luna（对照）,372,254,11,107,69.758065
+四人局,sol62,GPT-6.2 Sol,mimo,MiMo v2.6,1548,882,83,583,59.657623
+四人局,sol62,GPT-6.2 Sol,doubao,豆包,1512,996,59,457,67.824074
+四人局,hydrogen,Gemini Hydrogen,astra62,GPT-6.2 Astra,1524,252,103,1169,19.914698
+四人局,hydrogen,Gemini Hydrogen,astra,Astra 灰度版,2220,431,164,1625,23.108108
+四人局,hydrogen,Gemini Hydrogen,fable,Claude Fable 5.2,2604,801,177,1626,34.158986
+四人局,hydrogen,Gemini Hydrogen,sol,Sol 6.1 灰度版,2244,867,99,1278,40.842246
+四人局,hydrogen,Gemini Hydrogen,opus,Claude Opus 5.5,2652,1081,168,1403,43.92911
+四人局,hydrogen,Gemini Hydrogen,sonnet,Claude Sonnet 5.5（对照）,1044,423,64,557,43.582375
+四人局,hydrogen,Gemini Hydrogen,astra6,GPT-6 Astra（对照）,1056,428,50,578,42.897727
+四人局,hydrogen,Gemini Hydrogen,terra,GPT-6.1 Terra（对照）,1056,442,60,554,44.69697
+四人局,hydrogen,Gemini Hydrogen,sol61,GPT-6.1 Sol（对照）,1056,485,56,515,48.579545
+四人局,hydrogen,Gemini Hydrogen,carbon,Gemini Carbon,2712,1107,145,1460,43.491888
+四人局,hydrogen,Gemini Hydrogen,sol62,GPT-6.2 Sol,1536,790,61,685,53.417969
+四人局,hydrogen,Gemini Hydrogen,grok,Grok 4.7,2520,1255,99,1166,51.765873
+四人局,hydrogen,Gemini Hydrogen,glm,GLM 5.3,2652,1398,108,1146,54.751131
+四人局,hydrogen,Gemini Hydrogen,haiku,Claude Haiku 5.5（对照）,1056,530,49,477,52.50947
+四人局,hydrogen,Gemini Hydrogen,deepseek,DeepSeek,2568,1318,114,1136,53.543614
+四人局,hydrogen,Gemini Hydrogen,kimi,Kimi K3.1,2676,1593,127,956,61.902093
+四人局,hydrogen,Gemini Hydrogen,qwen,千问 Qwen4,2676,1675,92,909,64.312407
+四人局,hydrogen,Gemini Hydrogen,luna,GPT-6 Luna（对照）,1092,739,51,302,70.009158
+四人局,hydrogen,Gemini Hydrogen,mimo,MiMo v2.6,2556,1599,169,788,65.864632
+四人局,hydrogen,Gemini Hydrogen,doubao,豆包,2676,1850,110,716,71.188341
+四人局,grok,Grok 4.7,astra62,GPT-6.2 Astra,1512,201,74,1237,15.740741
+四人局,grok,Grok 4.7,astra,Astra 灰度版,2220,339,134,1747,18.288288
+四人局,grok,Grok 4.7,fable,Claude Fable 5.2,2664,750,159,1755,31.137387
+四人局,grok,Grok 4.7,sol,Sol 6.1 灰度版,2232,847,104,1281,40.277778
+四人局,grok,Grok 4.7,opus,Claude Opus 5.5,2724,987,179,1558,39.51909
+四人局,grok,Grok 4.7,sonnet,Claude Sonnet 5.5（对照）,1068,421,58,589,42.134831
+四人局,grok,Grok 4.7,astra6,GPT-6 Astra（对照）,1056,448,48,560,44.69697
+四人局,grok,Grok 4.7,terra,GPT-6.1 Terra（对照）,1092,440,63,589,43.177656
+四人局,grok,Grok 4.7,sol61,GPT-6.1 Sol（对照）,1068,481,50,537,47.378277
+四人局,grok,Grok 4.7,carbon,Gemini Carbon,2700,1074,151,1475,42.574074
+四人局,grok,Grok 4.7,sol62,GPT-6.2 Sol,1524,814,78,632,55.971129
+四人局,grok,Grok 4.7,hydrogen,Gemini Hydrogen,2520,1166,99,1255,48.234127
+四人局,grok,Grok 4.7,glm,GLM 5.3,2628,1361,152,1115,54.680365
+四人局,grok,Grok 4.7,haiku,Claude Haiku 5.5（对照）,1056,473,64,519,47.82197
+四人局,grok,Grok 4.7,deepseek,DeepSeek,2628,1366,131,1131,54.471081
+四人局,grok,Grok 4.7,kimi,Kimi K3.1,2700,1619,136,945,62.481481
+四人局,grok,Grok 4.7,qwen,千问 Qwen4,2628,1463,108,1057,57.724505
+四人局,grok,Grok 4.7,luna,GPT-6 Luna（对照）,1056,719,37,300,69.839015
+四人局,grok,Grok 4.7,mimo,MiMo v2.6,2664,1698,158,808,66.704204
+四人局,grok,Grok 4.7,doubao,豆包,2652,1832,102,718,71.003017
+四人局,glm,GLM 5.3,astra62,GPT-6.2 Astra,1512,152,66,1294,12.23545
+四人局,glm,GLM 5.3,astra,Astra 灰度版,2232,272,110,1850,14.650538
+四人局,glm,GLM 5.3,fable,Claude Fable 5.2,2676,710,157,1809,29.46562
+四人局,glm,GLM 5.3,sol,Sol 6.1 灰度版,2244,745,87,1412,35.138146
+四人局,glm,GLM 5.3,opus,Claude Opus 5.5,2640,818,146,1676,33.75
+四人局,glm,GLM 5.3,sonnet,Claude Sonnet 5.5（对照）,1068,319,67,682,33.005618
+四人局,glm,GLM 5.3,astra6,GPT-6 Astra（对照）,1056,393,35,628,38.873106
+四人局,glm,GLM 5.3,terra,GPT-6.1 Terra（对照）,1068,385,50,633,38.389513
+四人局,glm,GLM 5.3,sol61,GPT-6.1 Sol（对照）,1080,427,45,608,41.62037
+四人局,glm,GLM 5.3,carbon,Gemini Carbon,2556,805,131,1620,34.057121
+四人局,glm,GLM 5.3,sol62,GPT-6.2 Sol,1536,708,49,779,47.688802
+四人局,glm,GLM 5.3,hydrogen,Gemini Hydrogen,2652,1146,108,1398,45.248869
+四人局,glm,GLM 5.3,grok,Grok 4.7,2628,1115,152,1361,45.319635
+四人局,glm,GLM 5.3,haiku,Claude Haiku 5.5（对照）,1056,523,52,481,51.988636
+四人局,glm,GLM 5.3,deepseek,DeepSeek,2664,1262,105,1297,49.343093
+四人局,glm,GLM 5.3,kimi,Kimi K3.1,2640,1525,132,983,60.265152
+四人局,glm,GLM 5.3,qwen,千问 Qwen4,2604,1399,109,1096,55.817972
+四人局,glm,GLM 5.3,luna,GPT-6 Luna（对照）,1068,718,42,308,69.194757
+四人局,glm,GLM 5.3,mimo,MiMo v2.6,2616,1494,159,963,60.149083
+四人局,glm,GLM 5.3,doubao,豆包,2580,1698,106,776,67.868217
+四人局,haiku,Claude Haiku 5.5（对照）,astra62,GPT-6.2 Astra,372,44,22,306,14.784946
+四人局,haiku,Claude Haiku 5.5（对照）,astra,Astra 灰度版,1056,145,71,840,17.092803
+四人局,haiku,Claude Haiku 5.5（对照）,fable,Claude Fable 5.2,1056,320,74,662,33.806818
+四人局,haiku,Claude Haiku 5.5（对照）,sol,Sol 6.1 灰度版,1068,325,60,683,33.2397
+四人局,haiku,Claude Haiku 5.5（对照）,opus,Claude Opus 5.5,1068,364,82,622,37.921348
+四人局,haiku,Claude Haiku 5.5（对照）,sonnet,Claude Sonnet 5.5（对照）,1056,403,65,588,41.24053
+四人局,haiku,Claude Haiku 5.5（对照）,astra6,GPT-6 Astra（对照）,1068,404,59,605,40.589888
+四人局,haiku,Claude Haiku 5.5（对照）,terra,GPT-6.1 Terra（对照）,1068,357,73,638,36.844569
+四人局,haiku,Claude Haiku 5.5（对照）,sol61,GPT-6.1 Sol（对照）,1092,452,58,582,44.047619
+四人局,haiku,Claude Haiku 5.5（对照）,carbon,Gemini Carbon,1068,371,69,628,37.968165
+四人局,haiku,Claude Haiku 5.5（对照）,sol62,GPT-6.2 Sol,360,172,21,167,50.694444
+四人局,haiku,Claude Haiku 5.5（对照）,hydrogen,Gemini Hydrogen,1056,477,49,530,47.49053
+四人局,haiku,Claude Haiku 5.5（对照）,grok,Grok 4.7,1056,519,64,473,52.17803
+四人局,haiku,Claude Haiku 5.5（对照）,glm,GLM 5.3,1056,481,52,523,48.011364
+四人局,haiku,Claude Haiku 5.5（对照）,deepseek,DeepSeek,1068,510,58,500,50.468165
+四人局,haiku,Claude Haiku 5.5（对照）,kimi,Kimi K3.1,1068,592,61,415,58.286517
+四人局,haiku,Claude Haiku 5.5（对照）,qwen,千问 Qwen4,1056,588,53,415,58.191288
+四人局,haiku,Claude Haiku 5.5（对照）,luna,GPT-6 Luna（对照）,1080,719,48,313,68.796296
+四人局,haiku,Claude Haiku 5.5（对照）,mimo,MiMo v2.6,1068,709,59,300,69.14794
+四人局,haiku,Claude Haiku 5.5（对照）,doubao,豆包,1068,691,57,320,67.368914
+四人局,deepseek,DeepSeek,astra62,GPT-6.2 Astra,1512,195,98,1219,16.137566
+四人局,deepseek,DeepSeek,astra,Astra 灰度版,2220,351,135,1734,18.851351
+四人局,deepseek,DeepSeek,fable,Claude Fable 5.2,2628,663,168,1797,28.424658
+四人局,deepseek,DeepSeek,sol,Sol 6.1 灰度版,2244,746,105,1393,35.583779
+四人局,deepseek,DeepSeek,opus,Claude Opus 5.5,2652,906,128,1618,36.576169
+四人局,deepseek,DeepSeek,sonnet,Claude Sonnet 5.5（对照）,1092,392,60,640,38.644689
+四人局,deepseek,DeepSeek,astra6,GPT-6 Astra（对照）,1056,383,47,626,38.494318
+四人局,deepseek,DeepSeek,terra,GPT-6.1 Terra（对照）,1068,369,48,651,36.797753
+四人局,deepseek,DeepSeek,sol61,GPT-6.1 Sol（对照）,1056,409,50,597,41.098485
+四人局,deepseek,DeepSeek,carbon,Gemini Carbon,2544,821,151,1572,35.23978
+四人局,deepseek,DeepSeek,sol62,GPT-6.2 Sol,1524,731,62,731,50.0
+四人局,deepseek,DeepSeek,hydrogen,Gemini Hydrogen,2568,1136,114,1318,46.456386
+四人局,deepseek,DeepSeek,grok,Grok 4.7,2628,1131,131,1366,45.528919
+四人局,deepseek,DeepSeek,glm,GLM 5.3,2664,1297,105,1262,50.656907
+四人局,deepseek,DeepSeek,haiku,Claude Haiku 5.5（对照）,1068,500,58,510,49.531835
+四人局,deepseek,DeepSeek,kimi,Kimi K3.1,2748,1529,110,1109,57.641921
+四人局,deepseek,DeepSeek,qwen,千问 Qwen4,2556,1408,111,1037,57.257433
+四人局,deepseek,DeepSeek,luna,GPT-6 Luna（对照）,1056,706,27,323,68.13447
+四人局,deepseek,DeepSeek,mimo,MiMo v2.6,2664,1642,119,903,63.87012
+四人局,deepseek,DeepSeek,doubao,豆包,2592,1726,110,756,68.71142
+四人局,kimi,Kimi K3.1,astra62,GPT-6.2 Astra,1500,125,59,1316,10.3
+四人局,kimi,Kimi K3.1,astra,Astra 灰度版,2208,183,101,1924,10.575181
+四人局,kimi,Kimi K3.1,fable,Claude Fable 5.2,2568,505,137,1926,22.332555
+四人局,kimi,Kimi K3.1,sol,Sol 6.1 灰度版,2244,632,97,1515,30.325312
+四人局,kimi,Kimi K3.1,opus,Claude Opus 5.5,2604,699,136,1769,29.454685
+四人局,kimi,Kimi K3.1,sonnet,Claude Sonnet 5.5（对照）,1068,318,56,694,32.397004
+四人局,kimi,Kimi K3.1,astra6,GPT-6 Astra（对照）,1044,334,37,673,33.764368
+四人局,kimi,Kimi K3.1,terra,GPT-6.1 Terra（对照）,1080,292,61,727,29.861111
+四人局,kimi,Kimi K3.1,sol61,GPT-6.1 Sol（对照）,1080,337,46,697,33.333333
+四人局,kimi,Kimi K3.1,carbon,Gemini Carbon,2652,793,143,1716,32.598039
+四人局,kimi,Kimi K3.1,sol62,GPT-6.2 Sol,1512,655,51,806,45.006614
+四人局,kimi,Kimi K3.1,hydrogen,Gemini Hydrogen,2676,956,127,1593,38.097907
+四人局,kimi,Kimi K3.1,grok,Grok 4.7,2700,945,136,1619,37.518519
+四人局,kimi,Kimi K3.1,glm,GLM 5.3,2640,983,132,1525,39.734848
+四人局,kimi,Kimi K3.1,haiku,Claude Haiku 5.5（对照）,1068,415,61,592,41.713483
+四人局,kimi,Kimi K3.1,deepseek,DeepSeek,2748,1109,110,1529,42.358079
+四人局,kimi,Kimi K3.1,qwen,千问 Qwen4,2640,1185,106,1349,46.893939
+四人局,kimi,Kimi K3.1,luna,GPT-6 Luna（对照）,1056,600,37,419,58.570076
+四人局,kimi,Kimi K3.1,mimo,MiMo v2.6,2652,1374,134,1144,54.33635
+四人局,kimi,Kimi K3.1,doubao,豆包,2652,1549,105,998,60.388386
+四人局,qwen,千问 Qwen4,astra62,GPT-6.2 Astra,1536,160,76,1300,12.890625
+四人局,qwen,千问 Qwen4,astra,Astra 灰度版,2220,255,112,1853,14.009009
+四人局,qwen,千问 Qwen4,fable,Claude Fable 5.2,2628,541,121,1966,22.888128
+四人局,qwen,千问 Qwen4,sol,Sol 6.1 灰度版,2244,628,104,1512,30.30303
+四人局,qwen,千问 Qwen4,opus,Claude Opus 5.5,2640,742,137,1761,30.700758
+四人局,qwen,千问 Qwen4,sonnet,Claude Sonnet 5.5（对照）,1092,341,36,715,32.875458
+四人局,qwen,千问 Qwen4,astra6,GPT-6 Astra（对照）,1068,309,49,710,31.226592
+四人局,qwen,千问 Qwen4,terra,GPT-6.1 Terra（对照）,1056,334,45,677,33.75947
+四人局,qwen,千问 Qwen4,sol61,GPT-6.1 Sol（对照）,1068,366,34,668,35.861423
+四人局,qwen,千问 Qwen4,carbon,Gemini Carbon,2580,780,104,1696,32.248062
+四人局,qwen,千问 Qwen4,sol62,GPT-6.2 Sol,1536,621,48,867,41.992188
+四人局,qwen,千问 Qwen4,hydrogen,Gemini Hydrogen,2676,909,92,1675,35.687593
+四人局,qwen,千问 Qwen4,grok,Grok 4.7,2628,1057,108,1463,42.275495
+四人局,qwen,千问 Qwen4,glm,GLM 5.3,2604,1096,109,1399,44.182028
+四人局,qwen,千问 Qwen4,haiku,Claude Haiku 5.5（对照）,1056,415,53,588,41.808712
+四人局,qwen,千问 Qwen4,deepseek,DeepSeek,2556,1037,111,1408,42.742567
+四人局,qwen,千问 Qwen4,kimi,Kimi K3.1,2640,1349,106,1185,53.106061
+四人局,qwen,千问 Qwen4,luna,GPT-6 Luna（对照）,1056,569,32,455,55.397727
+四人局,qwen,千问 Qwen4,mimo,MiMo v2.6,2652,1442,96,1114,56.184012
+四人局,qwen,千问 Qwen4,doubao,豆包,2640,1637,91,912,63.731061
+四人局,luna,GPT-6 Luna（对照）,astra62,GPT-6.2 Astra,372,15,12,345,5.645161
+四人局,luna,GPT-6 Luna（对照）,astra,Astra 灰度版,1080,76,37,967,8.75
+四人局,luna,GPT-6 Luna（对照）,fable,Claude Fable 5.2,1068,152,52,864,16.666667
+四人局,luna,GPT-6 Luna（对照）,sol,Sol 6.1 灰度版,1056,238,37,781,24.289773
+四人局,luna,GPT-6 Luna（对照）,opus,Claude Opus 5.5,1080,247,33,800,24.398148
+四人局,luna,GPT-6 Luna（对照）,sonnet,Claude Sonnet 5.5（对照）,1068,241,41,786,24.485019
+四人局,luna,GPT-6 Luna（对照）,astra6,GPT-6 Astra（对照）,1080,255,24,801,24.722222
+四人局,luna,GPT-6 Luna（对照）,terra,GPT-6.1 Terra（对照）,1056,196,53,807,21.070076
+四人局,luna,GPT-6 Luna（对照）,sol61,GPT-6.1 Sol（对照）,1068,298,34,736,29.494382
+四人局,luna,GPT-6 Luna（对照）,carbon,Gemini Carbon,1056,229,40,787,23.579545
+四人局,luna,GPT-6 Luna（对照）,sol62,GPT-6.2 Sol,372,107,11,254,30.241935
+四人局,luna,GPT-6 Luna（对照）,hydrogen,Gemini Hydrogen,1092,302,51,739,29.990842
+四人局,luna,GPT-6 Luna（对照）,grok,Grok 4.7,1056,300,37,719,30.160985
+四人局,luna,GPT-6 Luna（对照）,glm,GLM 5.3,1068,308,42,718,30.805243
+四人局,luna,GPT-6 Luna（对照）,haiku,Claude Haiku 5.5（对照）,1080,313,48,719,31.203704
+四人局,luna,GPT-6 Luna（对照）,deepseek,DeepSeek,1056,323,27,706,31.86553
+四人局,luna,GPT-6 Luna（对照）,kimi,Kimi K3.1,1056,419,37,600,41.429924
+四人局,luna,GPT-6 Luna（对照）,qwen,千问 Qwen4,1056,455,32,569,44.602273
+四人局,luna,GPT-6 Luna（对照）,mimo,MiMo v2.6,1068,425,50,593,42.134831
+四人局,luna,GPT-6 Luna（对照）,doubao,豆包,1056,506,39,511,49.763258
+四人局,mimo,MiMo v2.6,astra62,GPT-6.2 Astra,1512,95,33,1384,7.374339
+四人局,mimo,MiMo v2.6,astra,Astra 灰度版,2220,147,56,2017,7.882883
+四人局,mimo,MiMo v2.6,fable,Claude Fable 5.2,2664,427,105,2132,17.999249
+四人局,mimo,MiMo v2.6,sol,Sol 6.1 灰度版,2232,501,81,1650,24.260753
+四人局,mimo,MiMo v2.6,opus,Claude Opus 5.5,2604,560,100,1944,23.425499
+四人局,mimo,MiMo v2.6,sonnet,Claude Sonnet 5.5（对照）,1068,253,50,765,26.029963
+四人局,mimo,MiMo v2.6,astra6,GPT-6 Astra（对照）,1068,246,45,777,25.140449
+四人局,mimo,MiMo v2.6,terra,GPT-6.1 Terra（对照）,1068,221,42,805,22.659176
+四人局,mimo,MiMo v2.6,sol61,GPT-6.1 Sol（对照）,1056,317,36,703,31.723485
+四人局,mimo,MiMo v2.6,carbon,Gemini Carbon,2676,617,106,1953,25.037369
+四人局,mimo,MiMo v2.6,sol62,GPT-6.2 Sol,1548,583,83,882,40.342377
+四人局,mimo,MiMo v2.6,hydrogen,Gemini Hydrogen,2556,788,169,1599,34.135368
+四人局,mimo,MiMo v2.6,grok,Grok 4.7,2664,808,158,1698,33.295796
+四人局,mimo,MiMo v2.6,glm,GLM 5.3,2616,963,159,1494,39.850917
+四人局,mimo,MiMo v2.6,haiku,Claude Haiku 5.5（对照）,1068,300,59,709,30.85206
+四人局,mimo,MiMo v2.6,deepseek,DeepSeek,2664,903,119,1642,36.12988
+四人局,mimo,MiMo v2.6,kimi,Kimi K3.1,2652,1144,134,1374,45.66365
+四人局,mimo,MiMo v2.6,qwen,千问 Qwen4,2652,1114,96,1442,43.815988
+四人局,mimo,MiMo v2.6,luna,GPT-6 Luna（对照）,1068,593,50,425,57.865169
+四人局,mimo,MiMo v2.6,doubao,豆包,2556,1457,100,999,58.959311
+四人局,doubao,豆包,astra62,GPT-6.2 Astra,1524,82,26,1416,6.233596
+四人局,doubao,豆包,astra,Astra 灰度版,2232,109,42,2081,5.824373
+四人局,doubao,豆包,fable,Claude Fable 5.2,2544,276,86,2182,12.539308
+四人局,doubao,豆包,sol,Sol 6.1 灰度版,2244,466,71,1707,22.348485
+四人局,doubao,豆包,opus,Claude Opus 5.5,2592,419,72,2101,17.554012
+四人局,doubao,豆包,sonnet,Claude Sonnet 5.5（对照）,1068,163,32,873,16.7603
+四人局,doubao,豆包,astra6,GPT-6 Astra（对照）,1080,218,49,813,22.453704
+四人局,doubao,豆包,terra,GPT-6.1 Terra（对照）,1068,198,37,833,20.271536
+四人局,doubao,豆包,sol61,GPT-6.1 Sol（对照）,1068,255,30,783,25.280899
+四人局,doubao,豆包,carbon,Gemini Carbon,2664,437,85,2142,17.999249
+四人局,doubao,豆包,sol62,GPT-6.2 Sol,1512,457,59,996,32.175926
+四人局,doubao,豆包,hydrogen,Gemini Hydrogen,2676,716,110,1850,28.811659
+四人局,doubao,豆包,grok,Grok 4.7,2652,718,102,1832,28.996983
+四人局,doubao,豆包,glm,GLM 5.3,2580,776,106,1698,32.131783
+四人局,doubao,豆包,haiku,Claude Haiku 5.5（对照）,1068,320,57,691,32.631086
+四人局,doubao,豆包,deepseek,DeepSeek,2592,756,110,1726,31.28858
+四人局,doubao,豆包,kimi,Kimi K3.1,2652,998,105,1549,39.611614
+四人局,doubao,豆包,qwen,千问 Qwen4,2640,912,91,1637,36.268939
+四人局,doubao,豆包,luna,GPT-6 Luna（对照）,1056,511,39,506,50.236742
+四人局,doubao,豆包,mimo,MiMo v2.6,2556,999,100,1457,41.040689

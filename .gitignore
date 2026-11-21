@@ -77,3 +77,5 @@ battle/replays/*.wrp
 # 第 11 集回旋镖大作战：渲染器的缓存和中间帧、裁判的沙箱目录
 boomerang/renderer/work/
 boomerang/workspace/_dart_box/
+# 第 11 集探索小实验的跑批脚本要公开（复现用）
+!boomerang/analysis/experiments/tools/

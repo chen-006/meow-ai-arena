@@ -1,0 +1,6 @@
+# eol=lf
+--- a/bots/deepseek-v4.1-flash/player.cpp
++++ b/deepseek_cap2400.cpp
+@@ -332 +332 @@
+-                if ((double)nd > pref + 1500) score -= std::min((double)nd - pref - 1500, 4500.0) * 0.05;
++                if ((double)nd > pref + 1500) score -= std::min((double)nd - pref - 1500, 2400.0) * 0.05;

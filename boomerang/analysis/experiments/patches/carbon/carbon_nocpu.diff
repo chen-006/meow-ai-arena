@@ -1,0 +1,6 @@
+# eol=crlf
+--- a/bots/gemini-4-carbon/player.cpp
++++ b/carbon_nocpu.cpp
+@@ -1345 +1345 @@
+-            if (cpu_start < 0) return false;
++            if (true || cpu_start < 0) return false;

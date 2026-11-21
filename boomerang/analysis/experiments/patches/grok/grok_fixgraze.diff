@@ -1,0 +1,9 @@
+# eol=crlf
+--- a/bots/grok-4.7/player.cpp
++++ b/grok_fixgraze.cpp
+@@ -1035 +1035 @@
+-            if (!g.p[seat].alive) return evaluate(g) - graze;
++            if (!g.p[seat].alive) return evaluate(g);
+@@ -1047 +1047 @@
+-            if (!g.p[seat].alive) return evaluate(g) - graze;
++            if (!g.p[seat].alive) return evaluate(g);

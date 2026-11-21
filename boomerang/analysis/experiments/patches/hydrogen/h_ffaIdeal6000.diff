@@ -1,0 +1,6 @@
+# eol=lf
+--- a/bots/gemini-4-hydrogen/player.cpp
++++ b/h_ffaIdeal6000.cpp
+@@ -1232 +1232 @@
+-                const i64 ideal = (nearest_armed_d > 50000) ? 2100 : (cf.mode == M_FFA && enemies_alive >= 2 ? 4800 : 3400);
++                const i64 ideal = (nearest_armed_d > 50000) ? 2100 : (cf.mode == M_FFA && enemies_alive >= 2 ? 6000 : 3400);

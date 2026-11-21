@@ -1,0 +1,6 @@
+# eol=lf
+--- a/bots/gpt-6.2-astra/player.cpp
++++ b/a62_recallhold.cpp
+@@ -1244 +1244 @@
+-            if(obs->me().st==S_RECALL) value+=(c->recall_pre-obs->me().timer)*0.55;
++            if(obs->me().st==S_RECALL) value+=(c->recall_pre-obs->me().timer)*1.6;

@@ -1,0 +1,6 @@
+# eol=lf
+--- a/bots/gpt-6.2-sol/player.cpp
++++ b/s62_sims2700.cpp
+@@ -1996 +1996 @@
+-                if (used >= 5 && terrain.simulations >= (n > 4 ? 970 : n == 4 ? 1650 : 2010)) break;
++                if (used >= 5 && terrain.simulations >= (n > 4 ? 970 : n == 4 ? 2700 : 2010)) break;

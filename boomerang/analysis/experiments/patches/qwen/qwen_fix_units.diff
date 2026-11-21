@@ -1,0 +1,27 @@
+# eol=crlf
+--- a/bots/qwen4-max/player.cpp
++++ b/qwen_fix_units.cpp
+@@ -277 +277 @@
+-                    if (!standable_at(info(), P.x + ux * 300, P.y + uy * 300, g.t)) continue;
++                    if (!standable_at(info(), P.x + rdiv(ux * 300, 1000), P.y + rdiv(uy * 300, 1000), g.t)) continue;
+@@ -282 +282 @@
+-                            i64 d = ilen(fpx[j][s] - P.x - ux * 250 * s, fpy[j][s] - P.y - uy * 250 * s);
++                            i64 d = ilen(fpx[j][s] - P.x - rdiv(ux * 250 * s, 1000), fpy[j][s] - P.y - rdiv(uy * 250 * s, 1000));
+@@ -313 +313 @@
+-                        if (standable_at(info(), P.x + px * 350, P.y + py * 350, g.t)) {
++                        if (standable_at(info(), P.x + rdiv(px * 350, 1000), P.y + rdiv(py * 350, 1000), g.t)) {
+@@ -324 +324 @@
+-            bool safe = standable_at(info(), P.x + ux * 450, P.y + uy * 450, g.t);
++            bool safe = standable_at(info(), P.x + rdiv(ux * 450, 1000), P.y + rdiv(uy * 450, 1000), g.t);
+@@ -328 +328 @@
+-                    if (standable_at(info(), P.x + vx2 * 450, P.y + vy2 * 450, g.t)) { ux = vx2; uy = vy2; safe = true; break; }
++                    if (standable_at(info(), P.x + rdiv(vx2 * 450, 1000), P.y + rdiv(vy2 * 450, 1000), g.t)) { ux = vx2; uy = vy2; safe = true; break; }
+@@ -457 +457 @@
+-                if (!standable_at(gi, P.x + ux * 300, P.y + uy * 300, g.t)) sc -= 6000;
++                if (!standable_at(gi, P.x + rdiv(ux * 300, 1000), P.y + rdiv(uy * 300, 1000), g.t)) sc -= 6000;
+@@ -462 +462 @@
+-                    i64 mxp = P.x + ux * 250 * s, myp = P.y + uy * 250 * s;
++                    i64 mxp = P.x + rdiv(ux * 250 * s, 1000), myp = P.y + rdiv(uy * 250 * s, 1000);
+@@ -749 +749 @@
+-                            i64 lx = E.x + ux * 2797, ly = E.y + uy * 2797;
++                            i64 lx = E.x + rdiv(ux * 2797, 1000), ly = E.y + rdiv(uy * 2797, 1000);

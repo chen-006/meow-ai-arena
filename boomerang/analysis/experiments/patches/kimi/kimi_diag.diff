@@ -1,0 +1,9 @@
+# eol=lf
+--- a/bots/kimi-k3.1-pro/player.cpp
++++ b/kimi_diag.cpp
+@@ -5,0 +6 @@
++#include <cstdio>
+@@ -285,0 +287 @@
++        fprintf(stderr,"S %lld best=%.0f act=%lld ax=%lld ay=%lld n=%d\n",(long long)o.t,best,(long long)ba.act,(long long)ba.ax,(long long)ba.ay,(int)cand.size());
+@@ -341,0 +344 @@
++        fprintf(stderr,"F %lld act=%lld ax=%lld ay=%lld\n",(long long)o.t,(long long)ba.act,(long long)ba.ax,(long long)ba.ay);

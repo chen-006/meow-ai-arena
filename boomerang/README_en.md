@@ -4,7 +4,7 @@
 
 13 models each had 75 minutes to write a C++ program that controls one boomerang-wielding character on a small top-down arena: throw, slash, kick when unarmed, dash over pits. Get hit by a boomerang or fall off the floating island and you are out; the last one standing wins. A program always sees the others as they were 0.2 seconds ago, so it has to predict. The qualifier has two events, 1v1 and four-player free-for-all, 32,904 games in total, ranked by Bradley–Terry ratings. Afterwards the top two became captains and used a 1,000-yuan budget in sealed-bid auctions for the other nine candidates, building teams for the team battle in the next episode.
 
-- **What's here**: `workspace/` player pack · `engine/` sparring-bot sources · `bots/` the 13 programs and notes · `results/` ratings and per-game results · `replays/` 117 replays · `tournament/` scoring, reproduction, hidden maps · `auction/` every message of the captain auction · `renderer/` replay-to-video renderer · `appendix/` preview builds, control group and the 21-player combined board (not scored)
+- **What's here**: `workspace/` player pack · `engine/` sparring-bot sources · `bots/` the 13 programs and notes · `results/` ratings and per-game results · `replays/` 117 replays · `tournament/` scoring, reproduction, hidden maps · `auction/` every message of the captain auction · `renderer/` replay-to-video renderer · `appendix/` preview builds, control group and the 21-player combined board (not scored) · `analysis/` analysis notes on every program and the auction · `challenge.py` challenge the 13 contestants with your own program
 - **Reproduce the ranking**: `python tournament/score.py` recomputes the ranking (including the 2,000-resample intervals) from the 32,904 per-game results with the scoring code used at the event, checks every number against `results/海选成绩.json` and prints "核对通过" (check passed). About 20 seconds, Python only. To replay every game: `python build_engine.py`, then `python tournament/rerun.py` (about 15–20 minutes on 16 threads; results differ somewhat, see [tournament/README.md](tournament/README.md)).
 
 ## Rules at a glance
@@ -89,6 +89,15 @@ python match.py play ../bots/gpt-6.2-astra/player.cpp mid --map ../tournament/hi
 
 **Make video**: all match footage in the video was rendered from replays by [renderer/](renderer/README_en.md) with Blender. With Blender 5.2, Python (numpy, scipy, scikit-image, pillow) and ffmpeg installed: `python renderer/render_game.py replays/g428.txt -o g428.mp4`.
 
+## Challenge the AIs / submit
+
+```text
+python challenge.py your_bot.cpp           312 one-on-one games against the 13 contestants + 104 four-player games (formal timing), placed on the qualifier scale
+python challenge.py your_bot.cpp --full    4 times as many games
+```
+
+The 13 contestants' one-on-one and four-player ratings stay fixed at `results/海选成绩.json`; only your two ratings are fitted and averaged, exactly like the qualifier board. The maps are the six qualifier maps with a new batch of seeds. Some contestants size their search by the clock, so a rerun can move by a dozen points. To enter the [community leaderboard](../community/LEADERBOARD.md), rename your program to `bot.cpp`, put it in `community/boomerang/<github-user>__<name>/` and open a pull request; see [`community/README_en.md`](../community/README_en.md). Windows only.
+
 ## Directory
 
 | Path | Contents |
@@ -103,6 +112,7 @@ python match.py play ../bots/gpt-6.2-astra/player.cpp mid --map ../tournament/hi
 | `tournament/` | Scoring code `rating.py`, `bt.py` (verbatim), `score.py`, `rerun.py`, the 6 hidden maps |
 | `auction/` | Auction rules program, due-diligence material, every message and answer, results, captains' notes; the rehearsal |
 | `renderer/` | Renderer: code, ten map themes, voxel characters, avatars, render commands |
+| [`analysis/`](analysis/README_en.md) | Analysis notes (Chinese): 14 bot analyses with GPT's claim-by-claim check, the auction analysis and an overview; AI-compiled, may contain errors, the code and game data are authoritative |
 | `appendix/` | Not scored: preview builds of the two GPT models, six control players, the OpenCode builds of DeepSeek and Kimi, builds saved when someone stopped before minute 60; their ratings and the 21-player board with a reproduction script |
 | `CONDITIONS.md` | Event conditions |
 | `MANIFEST.md` | What was published, what was not, and why |
@@ -124,4 +134,4 @@ Bilibili: https://www.bilibili.com/video/BV1Y6ypzJEmo
 
 ## Disclaimer and licence
 
-This is the record of one specific event. Tools, access channels and how each run happens to go all affect the result — the same model can land elsewhere on a rerun (see the preview vs. release builds in the appendix) — so it says nothing definitive about which model is stronger. Programs and notes were written by the models and not edited; the task, engine, maps, sparring bots and rules were made by the organisers. [MIT licence](../LICENSE) as for the rest of the repository. Character art: character design 小叶子XIYZ (Bilibili); art and production 喵了个猫了个咪了个猫.
+This is the record of one specific event. Tools, access channels and how each run happens to go all affect the result — the same model can land elsewhere on a rerun (see the preview vs. release builds in the appendix) — so it says nothing definitive about which model is stronger. Programs and notes were written by the models and not edited; the task, engine, maps, sparring bots and rules were made by the organisers. [MIT licence](../LICENSE) as for the rest of the repository. Character art: character design 小叶子XIYZ (Bilibili); art and production: 喵了个猫了个咪了个猫.

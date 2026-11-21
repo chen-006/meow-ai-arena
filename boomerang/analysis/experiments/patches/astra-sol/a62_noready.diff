@@ -1,0 +1,6 @@
+# eol=lf
+--- a/bots/gpt-6.2-astra/player.cpp
++++ b/a62_noready.cpp
+@@ -1112 +1112 @@
+-            double range=people[focus].ready<dt+3?4.0:2.6-1.2*pressure;
++            double range=4.0;

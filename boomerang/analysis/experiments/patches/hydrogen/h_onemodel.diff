@@ -1,0 +1,6 @@
+# eol=lf
+--- a/bots/gemini-4-hydrogen/player.cpp
++++ b/h_onemodel.cpp
+@@ -1789 +1789 @@
+-        const bool use_two_models = (cf.mode != M_TEAM);
++        const bool use_two_models = false;

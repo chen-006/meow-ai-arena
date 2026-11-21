@@ -16,8 +16,10 @@ English: [README_en.md](README_en.md)
 | 第 5 集 · 仓储调度 | `community/warehouse/` | 一个 `src/` 文件夹：优化后的仓储调度程序 |
 | 第 6 集 · 坦克大战 | `community/tank/` | 一个 `bot.cpp`，只实现 `init` 和 `decide` |
 | 第 7 集 · 光轮对战 | `community/tron/` | 一个 `bot.cpp`，只实现 `decide`；本地评测需要 Windows |
+| 第 8 集 · 2v2 足球 | `community/soccer/` | 一个 `bot.cpp`：一个球员程序，评测时同时踢本队两个座位；本地评测需要 Windows |
+| 第 11 集 · 回旋镖大作战 | `community/boomerang/` | 一个 `bot.cpp`：就是选手包里的 `player.cpp`（`#include "dart.hpp"`，用 `DART_MAIN`）；本地评测需要 Windows |
 
-第 9 集 · 造桥不收 Pull Request：投稿走网站的第 1～6 关排行榜（[https://arena.meowllm.top/ep9/](https://arena.meowllm.top/ep9/)），见 [`bridge/README.md`](../bridge/README.md#投稿)；给 coding agent 的提示词在 [`bridge/AGENT_PROMPT.md`](../bridge/AGENT_PROMPT.md)。
+第 9 集 · 造桥、第 10 集 · 纸上谈兵不收 Pull Request，投稿走网站：造桥在 [https://arena.meowllm.top/ep9/](https://arena.meowllm.top/ep9/) 的第 1～6 关排行榜上传，见 [`bridge/README.md`](../bridge/README.md#投稿)，给 coding agent 的提示词在 [`bridge/AGENT_PROMPT.md`](../bridge/AGENT_PROMPT.md)；纸上谈兵在 [https://arena.meowllm.top/ep10/](https://arena.meowllm.top/ep10/) 闯关或打完擂台后上传社区榜，带 C++ 指挥程序的方案按那一页的说明提交。第 4 集（外交）没有可以提交的程序。
 
 下面这些都可以：
 
@@ -45,7 +47,7 @@ English: [README_en.md](README_en.md)
 community/<集>/<GitHub用户名>__<作品名>/
 ```
 
-- `<集>` 是 `land`、`bomberman`、`ctf`、`warehouse`、`tank`、`tron` 之一。
+- `<集>` 是 `land`、`bomberman`、`ctf`、`warehouse`、`tank`、`tron`、`soccer`、`boomerang` 之一。
 - `<GitHub用户名>` 是你开 PR 用的账号，全部写成小写。
 - `<作品名>` 自己取，最多 40 个字符。
 - 两段都只能用小写字母、数字和连字符 `-`；连字符不能在开头和结尾，也不能连着用。两段之间是两个下划线。
@@ -55,7 +57,7 @@ community/<集>/<GitHub用户名>__<作品名>/
 
 文件夹里只能有这些文件：
 
-| 文件 | bot 类五集 | 仓储调度 | 说明 |
+| 文件 | bot 类各集 | 仓储调度 | 说明 |
 |---|---|---|---|
 | `bot.cpp` | 必须有 | 不要 | 单个源文件，最大 256 KB |
 | `src/` | 不要 | 必须有 | 只能有 `.cpp`、`.h`、`.hpp`、`.md` 文件，不能有子文件夹；单个文件最大 256 KB，合计最大 768 KB，最多 40 个文件 |
@@ -75,13 +77,19 @@ community/<集>/<GitHub用户名>__<作品名>/
 | 夺旗 | `g++ -std=c++20 -O2 bot.cpp` | 第一回合 2 秒（含程序启动），之后每回合 50 毫秒；同一个程序要支持 2–15 方 | 读写文件、联网、启动其他程序；只能用 C++ 标准库 | `ctf/workspace/RULES.md` |
 | 坦克大战 | `g++ -O2 -std=c++20 -I<官方tank/workspace> bot.cpp <官方tank/workspace>/tank_main.cpp` | 首回合（`init` + 首次 `decide`，含启动）2000 CPU 毫秒，之后每回合 50 CPU 毫秒；正式模式独立进程，线程 CPU 时间合计 | 读写文件、联网、启动其他程序、干扰裁判；只依赖官方 `tank.hpp` 和标准库 | `tank/workspace/README.md`、`RULES.md` |
 | 光轮对战 | `g++ -O2 -std=c++20 -static -Wl,--stack,67108864 -I<官方tron/workspace> bot.cpp <官方tron/workspace>/tron_main.cpp` | 首回合（含启动）2000 CPU 毫秒，之后每回合 50 CPU 毫秒；正式模式独立进程，线程 CPU 时间合计 | 读写文件、联网、启动其他程序、干扰裁判；只依赖官方 `tron.hpp` 和标准库 | `tron/workspace/README.md`、`RULES.md` |
+| 2v2 足球 | `g++ -std=c++17 -O2 -static -Wl,--stack,67108864 bot.cpp`（可以 `#include "soccer.hpp"`，用官方那一份） | 每步 10 CPU 毫秒，第 0 步 1000 毫秒；累计超时 30 次程序被结束；内存 1 GB | 读写文件、联网、开子进程；只能 `#include` 标准库和 `"soccer.hpp"`，编译前的源码检查和比赛时相同 | `soccer/workspace/README.md`、`RULES.md` |
+| 回旋镖大作战 | `g++ -std=c++17 -O2 -static -Wl,--stack,67108864 bot.cpp`（只配官方 `boomerang/workspace/dart.hpp`） | 第 0 步 1000 CPU 毫秒，之后每步 10 CPU 毫秒；超时那一步按不动处理，累计 20 次程序被结束；内存 1 GB | 读写文件、联网、开子进程；只能 `#include` 标准库和 `"dart.hpp"`，编译前的源码检查和比赛时相同 | `boomerang/workspace/README.md`、`RULES.md` |
 | 仓储调度 | `g++ -O2 -std=c++20 src/*.cpp` | 内存上限 1 GB；计时用进程的 CPU 总时间，多线程不会更快 | 读写文件、联网、在两次运行之间缓存信息；只能用 C++ 标准库；只读标准输入、只写标准输出 | `warehouse/workspace/TASK.md` |
 
-Windows 上编译时会多加一个 `-static`。**Tron 的裁判和主循环只支持 Windows**，本地编译（包括 `--skip-eval`）和评测都需要 Windows + g++；自动评测用 GitHub 标准 `windows-2025` 虚拟机。其他集仍在 Linux 上用 g++ 编译，请不要依赖 Windows 专有的头文件。
+Windows 上编译时会多加一个 `-static`。**Tron、足球和回旋镖的裁判只支持 Windows**，本地编译（包括 `--skip-eval`）和评测都需要 Windows + g++；自动评测用 GitHub 标准 `windows-2025` 虚拟机。其他集仍在 Linux 上用 g++ 编译，请不要依赖 Windows 专有的头文件。
 
 坦克大战不能提交自己的 `main`、`tank.hpp` 或 `tank_main.cpp`。在 `bot.cpp` 中 `#include "tank.hpp"`，定义 `void init(const tank::State&, int)` 和 `tank::Orders decide(const tank::State&, int)`；自测会使用仓库里的可信头文件和主循环一起编译。评测沿用原生正式模式的 CPU 预算，不使用不判超时的快速模式，也不放宽 2000/50 毫秒的时限。Tank 允许开线程，预算按所有线程合计；源码扫描中的线程提示只是审查提醒，不代表禁止。正式比赛允许的 Windows 专用头文件不适用于 Linux 社区评测。
 
 光轮对战不能提交自己的 `main`、`tron.hpp` 或 `tron_main.cpp`。在 `bot.cpp` 中 `#include "tron.hpp"`，定义 `int decide(const tron::State&)`，返回 `tron::U / R / D / L`。自测只使用可信选手包里的头文件和主循环，正式评测不改引擎、2000/50 CPU 毫秒预算或超时规则，也不用快速模式。允许开线程，CPU 时间按整个进程合计。超时或返回不合法值时，该回合沿上一回合方向走（第 0 回合为 `U`），不直接判负；摘要会记录超时、不合法输出和崩溃。
+
+足球的 `bot.cpp` 就是一个球员程序，和比赛选手的 `player.cpp` 一样从 `soccer/workspace/template.cpp` 改起；评测时你的程序同时踢本队两个座位（两个独立进程，和个人赛里没交搭档的个人队一样）。不要提交 `soccer.hpp`，评测用可信 checkout 里的那一份。
+
+回旋镖大作战的 `bot.cpp` 和比赛选手的 `player.cpp` 一样：从 `boomerang/workspace/template.cpp` 改起，`#include "dart.hpp"`，定义一个带 `decide` 的结构体，最后写 `DART_MAIN(你的结构体)`。不要提交 `dart.hpp`；评测用可信 checkout 里的那一份，编译命令和源码检查都取自选手包的 `build.py`。评测不改裁判、不放宽 10 毫秒的预算，也不进沙箱（和比赛一样只用 Job Object 管进程：内存 1 GB、不能开子进程）。
 
 仓储调度的评测只编译 `src/` 这一层的全部 `.cpp`（和 `warehouse/workspace/tools/measure.py` 的做法一样），文件怎么拆随你。对任何合法输入，输出都要和 `warehouse/workspace/baseline/` 逐字节相同，`\r\n` 和 `\n` 视为相同。
 
@@ -129,7 +137,7 @@ python community/check.py community/<集>/<你的目录>
 
 1. 检查目录名、文件、`meta.json` 和大小限制。
 2. 运行那一集的评测。
-   - bot 类五集：调用那一集的 `challenge.py`。圈地约 380 局，炸弹人 330 局，夺旗约 180 局，和官方选手、基准打一轮小比赛。坦克大战则只让你的 bot 和 14 个下半场版本、出题方参照、基准这 16 个对手各打 20 局，共 320 局；`--full` 为每个对手 80 局，共 1280 局，均为正式模式。光轮对战默认 82 局（1v1 52 局、4 人局 24 局、12 人局 6 局），`--full` 为 328 局，均为正式模式；对手是 10 位正式选手、2 位参考选手和强档陪练线。首次运行还需编译官方选手。
+   - bot 类各集：调用那一集的 `challenge.py`。圈地约 380 局，炸弹人 330 局，夺旗约 180 局，和官方选手、基准打一轮小比赛。坦克大战则只让你的 bot 和 14 个下半场版本、出题方参照、基准这 16 个对手各打 20 局，共 320 局；`--full` 为每个对手 80 局，共 1280 局，均为正式模式。光轮对战默认 82 局（1v1 52 局、4 人局 24 局、12 人局 6 局），`--full` 为 328 局，均为正式模式；对手是 10 位正式选手、2 位参考选手和强档陪练线。足球默认 120 局：逐一对踢个人赛的 12 支个人队和 3 支参考队（基准、中档陪练、陪练），每队 4 个种子 × 换边；`--full` 为 480 局。回旋镖大作战默认 416 局：和 13 位海选选手每人一对一 24 局（6 张海选地图 × 2 个种子 × 换边，共 312 局），再和其中三位同桌打四人局（26 组 × 你轮流坐 4 个座位，共 104 局）；`--full` 为 1664 局。首次运行还需编译官方选手。
    - 仓储调度：在你的电脑上把基线和你的代码各跑一遍，先比输出，再算每组的加速比和几何平均。
 3. 输出成绩表，并把 `result.json` 和 `summary.md` 写到 `community/.runs/<集>/<你的目录>/`。这个目录不会进 git。
 
@@ -170,6 +178,8 @@ python community/check.py <目录> --full        # bot 类：局数更多；仓�
 - 圈地、炸弹人、夺旗的实力值来自“这份投稿 + 全部官方选手 + 基准”的一轮小比赛，基准记 0 分。社区投稿之间不直接交手。局数少，实力值上下浮动几十分是正常的。
 - 坦克大战单独使用**固定终场赛参照**：固定 `tank/results/final/成绩.json` 中 16 个对手的实力值，只拟合投稿者自己的实力值（Bradley–Terry，基准 = 0，强 10 倍 = +400），不会重新拟合一轮小比赛。摘要中的对手分数是历史终场赛参照值，不是这次社区评测重新测出的成绩；相当名次只和 14 位正式选手比较，基准和出题方参照不排名。局数、地图和机器都与正式赛不同，这个估计不能当作正式赛名次。
 - 光轮对战沿用 `tron/challenge.py` 的**固定终场强对手榜参照**：`tron/results/results.json` 中强对手榜的各局型实力值保持不变，分别只拟合投稿者的 Bradley–Terry 实力值，再按 1v1 50%、4 人局 30%、12 人局 20% 加权（豆包 = 0，强 10 倍 = +400）。`sparring_hard` 参与对战和拟合，但只作参考线、不占名次；参照名次与 12 位选手比较。这里的“3～4 人”分项实际只打 4 人局。选手包 `RULES.md` 保留赛前的 greedy = 0 等口径，社区挑战采用赛后强对手榜口径，不改写历史规则文件。分数、名次只是新地图上少量对局的估计，不是重跑正式赛。
+- 足球用**固定个人榜参照**：15 个对手的实力值固定取 `soccer/results/` 里个人赛的 Bradley–Terry 点估计（基准队 = 0，强 10 倍 = +400），只拟合投稿者（胜 1、平 0.5），参照名次只和 12 支个人队比较，参考队参加拟合、不占名次。
+- 回旋镖大作战沿用海选个人榜的口径，但用**固定海选参照**：`boomerang/results/海选成绩.json` 里 13 位选手的一对一、四人局实力值保持不变，分别只拟合投稿者的 Bradley–Terry 实力值（一对一：名次高的赢；四人局：你和每位同桌对手比这局的得分，名次分 3/2/1/0 加每次击杀 1 分），两项平均就是个人实力值（13 位选手平均 = 0，强 10 倍 = +400），参照名次和 13 位选手比较。有几位选手按时钟决定算多深，同一份投稿重测会有十几分的出入；种子和海选不同、局数少，不是正式名次。
 - 圈地的官方评分脚本会把场上最强的选手换算成 100 分，不适合拿来给社区投稿排序。社区榜用的是单挑和混战两种赛制的 Bradley–Terry 实力值的平均（greedy 基准 = 0），官方脚本算出的 0–100 总分也会列在自测摘要里。
 - 仓储调度的加速比是同一台机器上基线和投稿的 CPU 时间之比，输出有任何一组不对就没有成绩。不同投稿可能在不同的虚拟机上测，相近的数字不必当真。
 - 榜单默认只重测有改动的投稿，原因写在 `.github/workflows/community-leaderboard.yml` 开头。
@@ -186,10 +196,10 @@ python community/check.py <目录> --full        # bot 类：局数更多；仓�
 
 | 路径 | 内容 |
 |---|---|
-| `land/`、`bomberman/`、`ctf/`、`warehouse/`、`tank/`、`tron/` | 各集的投稿 |
-| `_example/` | 四份示例投稿，演示格式，不参加榜单 |
+| `land/`、`bomberman/`、`ctf/`、`warehouse/`、`tank/`、`tron/`、`soccer/`、`boomerang/` | 各集的投稿 |
+| `_example/` | 六份示例投稿，演示格式，不参加榜单 |
 | `contests/` | 社区自建的非官方比赛，各自带说明，不进社区榜；有自己许可的以目录里的许可为准 |
-| `tests/` | 投稿通道（坦克、光轮）的回归测试，PR 评测时运行 |
+| `tests/` | 投稿通道（坦克、光轮、足球、回旋镖）的回归测试，PR 评测时运行 |
 | `check.py` | 本地自测，自动评测用的也是它 |
 | `ci_tools.py` | GitHub Actions 用的工具：检查 PR 的改动范围、生成榜单 |
 | `tron_contract.py` | 光轮评测结果的核对规则，本地自测和发布榜单时都用 |

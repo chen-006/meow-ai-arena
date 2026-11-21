@@ -1,0 +1,9 @@
+# eol=crlf
+--- a/bots/gemini-4-carbon/player.cpp
++++ b/carbon_nocpu_allhyp.cpp
+@@ -1024 +1024 @@
+-                    if (hyps[h].reactive && cf.block && g_now.d[k].st == D_HAND &&
++                    if (cf.block && g_now.d[k].st == D_HAND &&
+@@ -1345 +1345 @@
+-            if (cpu_start < 0) return false;
++            if (true || cpu_start < 0) return false;

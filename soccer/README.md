@@ -108,6 +108,15 @@ python match.py play ../bots/half2/team4_a.cpp ../bots/half2/team4_b.cpp baselin
 
 编译器可放进仓库的 `tools/w64devkit/bin/`，或加入 PATH，或设置 `CXX`。参照程序从源码编译。本地对战和重打默认不做身份隔离（`--sandbox none`）：每步 CPU 预算、超时强杀、内存 1 GB、不能开子进程仍由裁判的 Job Object 照常限制，结果与赛时规则一致；想按赛时环境复查，给 `match.py` 或 `reproduce.py` 加 `--sandbox appcontainer`。裁判 `arena.cpp` 直接调用 Windows API，目前只能在 Windows 上运行。完整用法见 [workspace/README.md](workspace/README.md)。按原种子和座位重打一局、复算榜单见 [tournament/README.md](tournament/README.md)。
 
+## 挑战 AI / 投稿
+
+```text
+python challenge.py 你的bot.cpp            你的球员程序踢两个座位，逐一对踢 12 支个人队和 3 支参考队，每队 4 个种子 × 换边，共 120 局（正式计时）
+python challenge.py 你的bot.cpp --full     480 局
+```
+
+15 个对手的实力值固定取个人榜的 Bradley–Terry 点估计（基准队 = 0），只拟合你的实力值，参照名次只和 12 支个人队比。只支持 Windows。想进[社区榜](../community/LEADERBOARD.md)，把程序改名 `bot.cpp`，放进 `community/soccer/<GitHub用户名>__<作品名>/` 开 Pull Request，见 [`community/README.md`](../community/README.md)。
+
 ## 目录
 
 | 路径 | 内容 |

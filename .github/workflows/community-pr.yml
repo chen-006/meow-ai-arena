@@ -16,6 +16,8 @@ on:
       - 'community/**'
       - 'tank/challenge.py'
       - 'tron/challenge.py'
+      - 'soccer/challenge.py'
+      - 'boomerang/challenge.py'
       - '.github/workflows/community-pr.yml'
 
 permissions:
@@ -82,7 +84,7 @@ jobs:
           python3 - <<'PYTHON'
           import os, re, subprocess
           paths = subprocess.check_output(["git", "-C", "pr", "diff", "--name-only", "-z", "HEAD^1", "HEAD"]).decode("utf-8").split("\0")
-          pattern = r"(?:\.github/workflows/community-(?:pr|leaderboard)\.yml|community/(?:check|ci_tools|tron_contract)\.py|community/tests/test_tron[^/]*\.py|tron/challenge\.py)"
+          pattern = r"(?:\.github/workflows/community-(?:pr|leaderboard)\.yml|community/(?:check|ci_tools|tron_contract)\.py|community/tests/test_(?:tron|soccer|boomerang)[^/]*\.py|(?:tron|soccer|boomerang)/challenge\.py)"
           relevant = any(re.fullmatch(pattern, path) for path in paths)
           with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as output:
               output.write("relevant=" + str(relevant).lower() + "\n")
@@ -92,8 +94,12 @@ jobs:
     name: 检查并评测投稿
     needs: scope
     if: needs.scope.outputs.kind == 'submission'
-    runs-on: ${{ needs.scope.outputs.episode == 'tron' && 'windows-2025' || 'ubuntu-24.04' }}
+    # 光轮、足球、回旋镖的裁判只支持 Windows（Job Object 管进程），这几集用 Windows 虚拟机
+    runs-on: ${{ contains(fromJSON('["tron", "soccer", "boomerang"]'), needs.scope.outputs.episode) && 'windows-2025' || 'ubuntu-24.04' }}
     timeout-minutes: 90
+    env:
+      PYTHONUTF8: "1"
+      PYTHONIOENCODING: utf-8
     defaults:
       run:
         shell: bash
@@ -112,7 +118,7 @@ jobs:
           $compiler = (Get-Command g++.exe -ErrorAction Stop).Source
           "CXX=$compiler" | Out-File -FilePath $env:GITHUB_ENV -Append -Encoding utf8
           & $compiler --version
-      # bot 类五集调用那一集的 challenge.py（几百局）；仓储调度跑快速档（5 组公开负载 + 3 组隐藏负载）。
+      # bot 类各集调用那一集的 challenge.py（几百局）；仓储调度跑快速档（5 组公开负载 + 3 组隐藏负载）。
       - name: 评测
         if: needs.scope.outputs.kind == 'submission'
         env:
@@ -145,7 +151,7 @@ jobs:
 
 
   tron-native:
-    name: 光轮 Windows 原生回归
+    name: 光轮 / 足球 / 回旋镖 Windows 原生回归
     needs: scope
     # Maintainer-authored PR-head code is not inherently trusted: use a read-only disposable VM.
     # It never approves fork workflows or widens token/secrets permissions.
@@ -154,6 +160,9 @@ jobs:
       contains(fromJSON('["OWNER", "MEMBER", "COLLABORATOR"]'), github.event.pull_request.author_association)
     runs-on: windows-2025
     timeout-minutes: 30
+    env:
+      PYTHONUTF8: "1"
+      PYTHONIOENCODING: utf-8
     steps:
       - uses: actions/checkout@v4
         with:
@@ -187,4 +196,28 @@ jobs:
           assert result["detail"]["games"] == 82, result
           assert result["detail"]["games_by_mode"] == {"1v1": 52, "3-4": 24, "12": 6}, result
           print("Verified community checker + publisher contract: complete 82 formal CPU games (52/24/6). " + note)
+          PYTHON
+      - name: 足球、回旋镖回归测试
+        run: |
+          python -m unittest discover -s community/tests -p "test_soccer*.py" -v
+          python -m unittest discover -s community/tests -p "test_boomerang*.py" -v
+      - name: 回旋镖示例的社区入口完整 416 局回归
+        run: python community/check.py community/_example/boomerang/chen-006__starter --out boomerang-smoke --timeout 20
+      - name: 只读复核回旋镖产物的发布校验
+        shell: bash
+        run: |
+          python - <<'PYTHON'
+          import os, shutil, sys
+          from pathlib import Path
+          sys.path.insert(0, "community")
+          import ci_tools
+          ci_tools.HERE = Path("community/_example").resolve()
+          artifact = Path("boomerang-smoke-artifacts/result-boomerang-chen-006__starter")
+          artifact.mkdir(parents=True)
+          shutil.copyfile("boomerang-smoke/result.json", artifact / "result.json")
+          result, note = ci_tools.collect_one("boomerang", "chen-006__starter", artifact.parent, os.environ["GITHUB_SHA"])
+          assert result is not None and result["status"] == "pass", result
+          assert result["detail"]["games"] == 416, result
+          assert result["detail"]["games_by_mode"] == {"duel": 312, "ffa": 104}, result
+          print("Verified boomerang checker + publisher contract: 416 formal CPU games (312/104). " + note)
           PYTHON
