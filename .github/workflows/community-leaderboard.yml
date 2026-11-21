@@ -61,7 +61,7 @@ jobs:
     name: 评测 ${{ matrix.episode }}/${{ matrix.entry }}
     needs: plan
     if: needs.plan.outputs.count != '0'
-    runs-on: ${{ matrix.episode == 'tron' && 'windows-2025' || 'ubuntu-24.04' }}
+    runs-on: ${{ contains(fromJSON('["tron", "soccer", "boomerang"]'), matrix.episode) && 'windows-2025' || 'ubuntu-24.04' }}
     defaults:
       run:
         shell: bash

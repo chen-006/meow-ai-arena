@@ -1,0 +1,11 @@
+{
+  "author": "示例",
+  "github": "chen-006",
+  "name": "起步模板",
+  "description": "第 8 集选手包里的球员模板原样复制，两个座位都用它，只用来演示投稿格式。",
+  "written_by": "human",
+  "model": "",
+  "tool": "",
+  "based_on": "soccer/workspace/template.cpp",
+  "license": "MIT"
+}

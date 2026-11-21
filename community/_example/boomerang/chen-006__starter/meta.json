@@ -1,0 +1,11 @@
+{
+  "author": "示例",
+  "github": "chen-006",
+  "name": "起步模板",
+  "description": "第 11 集选手包里的模板原样复制，走向最近的对手、近了就扔镖，只用来演示投稿格式。",
+  "written_by": "human",
+  "model": "",
+  "tool": "",
+  "based_on": "boomerang/workspace/template.cpp",
+  "license": "MIT"
+}

@@ -260,6 +260,19 @@ def collect_one(ep, name, artifacts, commit):
         except (OSError, ValueError, KeyError, TypeError, IndexError, AttributeError, OverflowError) as error:
             rec["status"], rec["score"] = "fail", None
             rec["errors"].append("光轮结果未通过固定参照与赛程复核：%s" % error)
+    if ep in ("soccer", "boomerang") and rec["status"] == "pass":
+        try:
+            field, verified = check.load_module("trusted_%s_challenge" % ep, ROOT / ep / "challenge.py") \
+                .validate_result(detail, ROOT)
+            if (verified["source_sha256"] != files.get("bot.cpp") or
+                    verified["full"] is not (rec["mode"] == "full") or rec["mode"] not in ("quick", "full") or
+                    not math.isclose(rec["score"], round(verified["rating"], 1), abs_tol=1e-7)):
+                raise ValueError("源码、档位或实力值与投稿不符")
+            rec["detail"] = dict(verified, field=field, field_size=len(field))
+            rec["score"] = round(verified["rating"], 1)
+        except (OSError, ValueError, KeyError, TypeError, IndexError, AttributeError, OverflowError) as error:
+            rec["status"], rec["score"] = "fail", None
+            rec["errors"].append("%s结果未通过固定参照与赛程复核：%s" % (check.EPISODE_TITLES[ep], error))
     return rec, "已采用（%s）" % rec["status"]
 
 
@@ -359,6 +372,30 @@ def cmd_render(args):
                     i, who_cells(ep, name, meta), rec["score"], d.get("rank") or "—", E(str(rec.get("time", ""))[:10])))
             L += ["", "固定参照来自 [`tron/results/RESULTS_强对手榜.md`](../tron/results/RESULTS_强对手榜.md)。"
                   "默认 82 局（52 / 24 / 6），参照名次只与 12 位选手比较；机器、地图、局数不同，不能当作正式赛名次。", ""]
+        elif ranked and ep == "soccer":
+            L += ["按实力值排序：Windows 正式计时，投稿同时踢本队两个座位，逐一对踢个人赛的 12 支个人队和 3 支参考队；"
+                  "固定个人榜的 BT 参照分，只拟合投稿（基准队 = 0，强 10 倍 = +400）。参考队参加拟合、不占名次。", "",
+                  "| 名次 | 作品 | 作者 | 谁写的 | 模型 / 工具 | 实力值 | 个人榜参照名次 | 评测日期 |", "|---:|---|---|---|---|---:|---|---|"]
+            for i, (name, meta, rec, _) in enumerate(ranked, 1):
+                d = rec.get("detail") or {}
+                L.append("| %d | %s | %.0f | %s / 13 | %s |" % (
+                    i, who_cells(ep, name, meta), rec["score"], d.get("rank") or "—", E(str(rec.get("time", ""))[:10])))
+            L += ["", "固定参照来自 [`soccer/results/个人榜.md`](../soccer/results/个人榜.md)。"
+                  "默认 120 局（15 个对手 × 4 个种子 × 换边），种子和正式赛不同；参照名次只和 12 支个人队比较，不能当作正式名次。", ""]
+        elif ranked and ep == "boomerang":
+            L += ["按个人实力值排序：Windows 正式计时，和海选的 13 位选手打一对一和四人局；固定海选成绩里两项的参照分，"
+                  "只拟合投稿，两项平均（13 位选手平均 = 0，强 10 倍 = +400），和海选个人榜同一口径。", "",
+                  "| 名次 | 作品 | 作者 | 谁写的 | 模型 / 工具 | 个人实力值 | 一对一 | 四人局 | 海选参照名次 | 评测日期 |",
+                  "|---:|---|---|---|---|---:|---:|---:|---|---|"]
+            for i, (name, meta, rec, _) in enumerate(ranked, 1):
+                d = rec.get("detail") or {}
+                r = d.get("ratings") if isinstance(d.get("ratings"), dict) else {}
+                cell = lambda v: "%.0f" % v if is_num(v) else "—"
+                L.append("| %d | %s | %.0f | %s | %s | %s / 14 | %s |" % (
+                    i, who_cells(ep, name, meta), rec["score"], cell(r.get("duel")), cell(r.get("ffa")), d.get("rank") or "—",
+                    E(str(rec.get("time", ""))[:10])))
+            L += ["", "固定参照来自 [`boomerang/results/海选榜.md`](../boomerang/results/海选榜.md)。"
+                  "默认 416 局（一对一 312、四人局 104），种子和海选不同；参照名次只和 13 位选手比较，不能当作正式名次。", ""]
         elif ranked:
             label = "单挑、混战两种赛制的 Bradley–Terry 实力值取平均，greedy 基准 = 0" if ep == "land" else "Bradley–Terry，基准 = 0"
             L += ["按实力值排序（%s，强 10 倍记 +400）。“小比赛名次”是这份投稿在它自己那一轮小比赛里排第几。" % label, "",
