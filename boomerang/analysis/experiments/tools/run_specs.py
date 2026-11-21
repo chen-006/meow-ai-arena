@@ -38,7 +38,7 @@ def main():
         r = res[i]; pl = sorted(r['players'], key=lambda p: p['seat'])
         games.append({'id': i, 'map': mp, 'seed': seed, 'names': order, 'rank': [p['rank'] for p in pl],
                       'kills': [p['kills'] for p in pl], 'cause': [p['cause_name'] for p in pl], 'steps': r.get('steps'),
-                      'faults': [len(p['faults']) if isinstance(p.get('faults'), list) else int(p.get('faults') or 0) for p in pl]})
+                      'faults': [int(p['faults_total']) if 'faults_total' in p else (len(p['faults']) if isinstance(p.get('faults'), list) else int(p.get('faults') or 0)) for p in pl]})
     summ = {}
     for nm in names:
         c = collections.Counter(); bymap = collections.defaultdict(collections.Counter)

@@ -11,7 +11,7 @@ def main():
     av = sys.argv[1:]
     rep = '--replays' in av; se = '--stderr' in av; av = [x for x in av if x not in ('--replays','--stderr')]
     tag, pa, pb, maps, s0, s1 = av[:6]
-    extra = av[6:]
+    extra = [x for x in av[6:] if x != '--ffa']   # --ffa 只是标记，后面两个才是程序
     args = types.SimpleNamespace(step_ms=10.0, sandbox='none', cfg=None, replays=rep, no_stderr=not se, no_replay=not rep)
     progs = [match.resolve_prog(pa), match.resolve_prog(pb)] + [match.resolve_prog(x) for x in extra]
     entries, seats = match.entries_for(progs)
