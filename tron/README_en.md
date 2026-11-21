@@ -89,7 +89,7 @@ The two boards are separate fits (shared 1v1 games, separate multiplayer games);
 
 ## Differences from the race
 
-- The contestants received only compiled sparring bots; this repository ships their source (`sparring/`). Rebuilt with GCC 16.2, `sparring_hard.exe` is byte-identical to the one used in the race; `sparring.exe` differs only in the embedded source file name and timestamp.
+- The contestants received only compiled sparring bots; this repository ships their source (`sparring/`). Rebuilt with GCC 16.2, `sparring_hard.exe` is byte-identical to the one used in the race; `sparring.exe` differs only in the embedded source file name and timestamp. The open-source `workspace/arena.py` adds one error message: when a sparring program is missing it says to run `make_player_pack.py` first (before, `play`/`run` failed with "启动 bot 程序失败" or a Python traceback); its open-source hash is in `workspace_manifest.json`, and with the sparring programs present it behaves as in the race.
 - Otherwise `workspace/` is byte-identical to the package given to contestants, and `bots/` is byte-identical to the sealed code (sha256 in `results/清单.json`).
 - The two final schedules, including every map seed, are in `tournament/赛程_1018终场.json` and `tournament/赛程_1020补打.json`.
 - Not included: raw session logs, the contestants' written strategy notes, all replays except the 30 sampled ones, the organizer's timing/sealing/launch scripts, and data from post-race experiments.

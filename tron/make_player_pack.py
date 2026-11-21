@@ -70,7 +70,7 @@ def make_zip():
             p = WS / rel
             if not p.is_file():
                 raise SystemExit(f"缺文件：workspace/{rel}")
-            if sha(p) != info["sha256"]:
+            if sha(p) != info.get("open_source_sha256", info["sha256"]):   # 开源时改过的文件核对开源版哈希
                 differ.append(rel)
             z.write(p, f"workspace/{rel}")
     print(f"\n已生成 {out.relative_to(HERE)}，{len(manifest['files'])} 个文件，和比赛时的文件清单相同。")
@@ -78,7 +78,7 @@ def make_zip():
     if src:
         print("注意：这些文件和比赛时的选手包不一样（可能被改过）：" + "、".join(src))
     else:
-        print("除陪练的可执行文件外，每个文件的 sha256 都和比赛时的选手包一致。")
+        print("除陪练的可执行文件外，每个文件的 sha256 都和比赛时的选手包一致（arena.py 是开源版，只多一句找不到陪练时的提示）。")
     if differ:
         print("陪练是现编的，可执行文件的 sha256 不一定和比赛时相同（编译器版本、时间戳等），"
               "行为相同：sparring_hard.exe 用 GCC 16.2 编出来和比赛时逐字节相同。")

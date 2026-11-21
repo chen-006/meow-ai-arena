@@ -112,6 +112,8 @@ class Entry:
             self.name, self.src, self.exe = low, BUILTIN[low], None
         elif low in SPARRING:
             self.name, self.src, self.exe = low, None, SPARRING[low].with_suffix(".exe")
+            if not self.exe.is_file():   # 开源版加的提示
+                raise Fail(f"找不到陪练 {low}（{self.exe}）。开源版不带编译好的陪练：先在上一层（tron\\）运行 python make_player_pack.py")
         else:
             p = Path(spec)
             if not p.is_file():

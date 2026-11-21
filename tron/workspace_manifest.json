@@ -6,7 +6,9 @@
  "files": {
   "arena.py": {
    "sha256": "9f664de0b05d6c18a856dfd5d5f9a80bbeb9079e9485ce0f3a05b3196b507416",
-   "bytes": 20667
+   "bytes": 20667,
+   "open_source_sha256": "e584b6b7eb959298f79cf47e93ac2a4cb835efa12dbeb099c41ca0b778d1a99c",
+   "note": "开源版改过：找不到陪练程序时报错提示先运行 make_player_pack.py（只加了这句报错；有陪练程序时行为和比赛时相同）"
   },
   "bots/greedy.cpp": {
    "sha256": "4ad6c24ec815d3de347e0601b7820580162969925c0155647f63485f9771e91a",
