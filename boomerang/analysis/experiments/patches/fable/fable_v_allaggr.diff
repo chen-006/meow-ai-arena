@@ -1,0 +1,19 @@
+# eol=crlf
+--- a/bots/claude-fable-5.2/player.cpp
++++ b/fable_v_allaggr.cpp
+@@ -516,6 +516,9 @@
+-        for (int k : tg) {
+-            if (ilen(gn.p[k].x - M0.x, gn.p[k].y - M0.y) > (N > 4 ? 4500 : 6500)) continue;
+-            aggrOnly = k;
+-            rollout(gw[W_AGGR], pl, W_AGGR, H, ra, false);
+-            if (ra.dead) s += wA * (-1000.0 + 20.0 * ra.deadStep);
+-            else if (ra.stunned) s -= wA * 300.0;
++        {
++            bool any = false;
++            for (int k : tg) if (ilen(gn.p[k].x - M0.x, gn.p[k].y - M0.y) <= (N > 4 ? 4500 : 6500)) any = true;
++            if (any) {
++                aggrOnly = -1;
++                rollout(gw[W_AGGR], pl, W_AGGR, H, ra, false);
++                if (ra.dead) s += wA * (-1000.0 + 20.0 * ra.deadStep);
++                else if (ra.stunned) s -= wA * 300.0;
++            }

@@ -1,0 +1,6 @@
+# eol=crlf
+--- a/bots/claude-opus-5.5/player.cpp
++++ b/opus_v_nocpu.cpp
+@@ -1374 +1374 @@
+-            if (pi > 40 && cpuOver(65000)) break;
++            (void)pi;

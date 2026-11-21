@@ -1,0 +1,6 @@
+# eol=crlf
+--- a/bots/gemini-4-hydrogen/player.cpp
++++ b/hydrogen_nocpu.cpp
+@@ -1794 +1794 @@
+-                if (cpu_start >= 0 && cpu_now >= 0 && (cpu_now - cpu_start) >= CPU_BUDGET_100NS) break;
++                (void)cpu_now;

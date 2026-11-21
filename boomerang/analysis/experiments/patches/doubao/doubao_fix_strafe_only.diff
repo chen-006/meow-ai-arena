@@ -1,0 +1,12 @@
+# eol=crlf
+--- a/bots/doubao-seed-evolving/player.cpp
++++ b/doubao_fix_strafe_only.cpp
+@@ -629 +629,2 @@
+-            if (ilen(rx, ry) > 1200) {
++            const i64 rl = ilen(rx, ry);
++            if (rl > 1200) {
+@@ -631,2 +632,2 @@
+-                mx += rdiv((-ry) * 350 * sgn, UNIT);
+-                my += rdiv(rx * 350 * sgn, UNIT);
++                mx += rdiv((-ry) * 350 * sgn, rl);
++                my += rdiv(rx * 350 * sgn, rl);

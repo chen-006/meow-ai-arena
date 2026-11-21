@@ -1,0 +1,6 @@
+# eol=lf
+--- a/bots/glm-5.3/player.cpp
++++ b/glm_fullonly.cpp
+@@ -397 +397 @@
+-        return s0 < s1 ? s0 : s1;
++        (void)s0; return s1;

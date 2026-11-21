@@ -1,0 +1,5 @@
+# eol=lf
+--- a/bots/qwen4-max/player.cpp
++++ b/qwen_dashcost400.cpp
+@@ -896,0 +897 @@
++            if (a.act == A_DASH) s -= 400;

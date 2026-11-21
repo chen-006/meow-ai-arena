@@ -1,0 +1,6 @@
+# eol=lf
+--- a/bots/kimi-k3.1-pro/player.cpp
++++ b/kimi_fix_speed.cpp
+@@ -51 +51 @@
+-                    as[k].mx=g.p[k].vx; as[k].my=g.p[k].vy;
++                    as[k].mx=g.p[k].vx*4; as[k].my=g.p[k].vy*4;

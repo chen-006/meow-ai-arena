@@ -1,0 +1,8 @@
+# eol=lf
+--- a/bots/glm-5.3/player.cpp
++++ b/glm_probe.cpp
+@@ -505,0 +506,2 @@
++            static bool told = false;
++            if (!told) { told = true; std::fprintf(stderr, "REALDEAD %d\n", t); }
+@@ -596,0 +599 @@
++        if (!g0.p[seat].alive || !g.p[seat].alive) std::fprintf(stderr, "FAKEDEAD %d %d %d\n", t, (int)!g0.p[seat].alive, (int)!g.p[seat].alive);

@@ -1,0 +1,6 @@
+# eol=crlf
+--- a/bots/gpt-6.2-astra/player.cpp
++++ b/astra_v_nolearn.cpp
+@@ -678 +678 @@
+-            for(int m=0;m<MODES;++m) w[m]*=std::exp(4.8*learning.success[context][m]);
++            for(int m=0;m<MODES;++m) w[m]*=1.0;

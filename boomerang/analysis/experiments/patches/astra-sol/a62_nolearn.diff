@@ -1,0 +1,9 @@
+# eol=lf
+--- a/bots/gpt-6.2-astra/player.cpp
++++ b/a62_nolearn.cpp
+@@ -678 +678 @@
+-            for(int m=0;m<MODES;++m) w[m]*=std::exp(4.8*learning.success[context][m]);
++            // nolearn
+@@ -845 +845 @@
+-            weights[a]=prior[a]*std::exp(5.5*learned[k].aimSkill[a]); total+=weights[a];
++            weights[a]=prior[a]; total+=weights[a];

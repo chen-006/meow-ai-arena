@@ -1,0 +1,6 @@
+# eol=lf
+--- a/bots/mimo-v2.6-pro/player.cpp
++++ b/mimo_orbit_flip.cpp
+@@ -440 +440 @@
+-            const i64 ov = 1;   // 环绕方向整局固定（逐步翻转会让横向位移互相抵消）
++            const i64 ov = ((o.t / 40) % 2) ? 1 : -1;   // 改版：每 2 秒换一次环绕方向

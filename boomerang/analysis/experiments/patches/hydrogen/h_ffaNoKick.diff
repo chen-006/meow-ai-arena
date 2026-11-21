@@ -1,0 +1,6 @@
+# eol=lf
+--- a/bots/gemini-4-hydrogen/player.cpp
++++ b/h_ffaNoKick.cpp
+@@ -1718 +1718 @@
+-            } else {
++            } else if (cf.mode != M_FFA) {

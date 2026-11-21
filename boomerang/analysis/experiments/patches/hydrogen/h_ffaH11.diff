@@ -1,0 +1,6 @@
+# eol=lf
+--- a/bots/gemini-4-hydrogen/player.cpp
++++ b/h_ffaH11.cpp
+@@ -1778 +1778 @@
+-        const int H = (cf.mode == M_DUEL) ? 11 : (cf.mode == M_FFA ? 9 : 7);
++        const int H = (cf.mode == M_DUEL) ? 11 : (cf.mode == M_FFA ? 11 : 7);

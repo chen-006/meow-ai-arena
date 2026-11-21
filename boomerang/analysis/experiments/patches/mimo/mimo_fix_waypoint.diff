@@ -1,0 +1,6 @@
+# eol=crlf
+--- a/bots/mimo-v2.6-pro/player.cpp
++++ b/mimo_fix_waypoint.cpp
+@@ -458 +458 @@
+-            if (path_next(gi, me.x, me.y, gx, gy, o.t, wx, wy)) { gx = wx; gy = wy; }
++            if (path_next(gi, me.x, me.y, gx, gy, o.t, wx, wy)) { i64 pdx, pdy; scale_to(wx - me.x, wy - me.y, 3000, pdx, pdy); gx = me.x + pdx; gy = me.y + pdy; }

@@ -1,0 +1,6 @@
+# eol=lf
+--- a/bots/gpt-6.2-sol/player.cpp
++++ b/s62_moves9.cpp
+@@ -1993 +1993 @@
+-                if (++counts[group] > (group == A_NONE ? 5 : 4)) continue;
++                if (++counts[group] > (group == A_NONE ? 9 : 4)) continue;

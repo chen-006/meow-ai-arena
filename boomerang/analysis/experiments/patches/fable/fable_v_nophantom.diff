@@ -1,0 +1,6 @@
+# eol=crlf
+--- a/bots/claude-fable-5.2/player.cpp
++++ b/fable_v_nophantom.cpp
+@@ -502 +502 @@
+-        return pen * 1000.0;
++        return 0.0 * pen;

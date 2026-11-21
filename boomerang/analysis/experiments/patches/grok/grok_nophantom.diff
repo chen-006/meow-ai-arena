@@ -1,0 +1,6 @@
+# eol=lf
+--- a/bots/grok-4.7/player.cpp
++++ b/grok_nophantom.cpp
+@@ -1408 +1408 @@
+-        bool has_ph = make_phantom(now, phantom, ph_e);
++        bool has_ph = false && make_phantom(now, phantom, ph_e);

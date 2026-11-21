@@ -1,0 +1,6 @@
+# eol=lf
+--- a/bots/gemini-4-hydrogen/player.cpp
++++ b/h_ffaNoDashIn.cpp
+@@ -1752 +1752 @@
+-                if (o.my_dart().st == D_HAND) {
++                if (o.my_dart().st == D_HAND && cf.mode != M_FFA) {

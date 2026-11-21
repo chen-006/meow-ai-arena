@@ -1,0 +1,9 @@
+# eol=crlf
+--- a/bots/gemini-4-carbon/player.cpp
++++ b/carbon_nocpu_nosandwich.cpp
+@@ -1259 +1259 @@
+-        if (cf.mode == M_FFA && alive_enemies >= 2 && d_near_threat2 < 5600.0) {
++        if (false && cf.mode == M_FFA && alive_enemies >= 2 && d_near_threat2 < 5600.0) {
+@@ -1345 +1345 @@
+-            if (cpu_start < 0) return false;
++            if (true || cpu_start < 0) return false;

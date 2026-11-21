@@ -1,0 +1,6 @@
+# eol=lf
+--- a/bots/doubao-seed-evolving/player.cpp
++++ b/doubao_evade_speed.cpp
+@@ -129 +129 @@
+-                if (P.alive && !P.unknown) { acts[k].mx = P.vx; acts[k].my = P.vy; }
++                if (P.alive && !P.unknown) { acts[k].mx = P.vx * 4; acts[k].my = P.vy * 4; }

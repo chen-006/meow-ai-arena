@@ -1,0 +1,6 @@
+# eol=crlf
+--- a/bots/claude-fable-5.2/player.cpp
++++ b/fable_v_thr60.cpp
+@@ -681 +681 @@
+-                const double thr = allUnarmed ? 0.33 : 0.45;
++                const double thr = allUnarmed ? 0.45 : 0.60;

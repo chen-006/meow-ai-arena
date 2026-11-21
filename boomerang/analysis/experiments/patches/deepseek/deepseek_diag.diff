@@ -1,0 +1,5 @@
+# eol=lf
+--- a/bots/deepseek-v4.1-flash/player.cpp
++++ b/deepseek_diag.cpp
+@@ -637,0 +638 @@
++        fprintf(stderr,"S %lld best=%.0f kind=%d\n",(long long)o.t,best[bi].score,best[bi].kind);

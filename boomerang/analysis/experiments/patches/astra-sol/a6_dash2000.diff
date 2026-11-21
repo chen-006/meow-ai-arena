@@ -1,0 +1,6 @@
+# eol=lf
+--- a/appendix/bots/gpt-6-astra/player.cpp
++++ b/a6_dash2000.cpp
+@@ -313 +313 @@
+-  if(ca.a.act==A_DASH)val-=140;
++  if(ca.a.act==A_DASH)val-=2000;
