@@ -57,6 +57,7 @@ MODE_NAME = ['duel', 'ffa', 'team']
 MODE_CN = ['1v1', '四人各自为战', '4v4']
 ARENA = KIT / 'arena.exe'
 REPLAYS = KIT / 'replays'
+BUILD_HINT = '开源版不带编译好的程序：先在上一层（boomerang\\）运行 python build_engine.py，生成裁判 arena.exe 和三档陪练 bots\\*.exe'  # 开源版加的提示
 BUILTIN = {'template': KIT / 'template.cpp', 'weak': KIT / 'bots' / 'weak.exe', 'mid': KIT / 'bots' / 'mid.exe',
            'strong': KIT / 'bots' / 'strong.exe'}  # 三档陪练只发可执行文件
 STATUS_CN = {'crash': '程序退出/崩溃', 'lost': '失去响应被结束', 'timeout_limit': '累计超时过多被结束',
@@ -135,10 +136,10 @@ def compile_arena():
     # 从源码编译 arena.exe（需要 g++）。复制到纯英文临时目录再编，避开路径里的中文
     cxx = build.find_compiler()
     if not cxx:
-        raise build.BuildError('没有 arena.exe，也没有找到 g++ 来编译它')
+        raise build.BuildError('没有 arena.exe，也没有找到 g++ 来编译它。' + BUILD_HINT)
     for f in ('arena.cpp', 'dart.hpp'):
         if not (KIT / f).is_file():
-            raise build.BuildError(f'没有 arena.exe，也没有 {f}，编译不了裁判程序')
+            raise build.BuildError(f'没有 arena.exe，也没有 {f}，编译不了裁判程序。' + BUILD_HINT)
     print('编译裁判程序 arena.exe ...')
     work = Path(tempfile.mkdtemp(prefix='arena-'))
     try:
@@ -172,7 +173,7 @@ def resolve_prog(spec):
         src = BUILTIN[low]
         if src.suffix.lower() == '.exe':
             if not src.is_file():
-                raise build.BuildError(f'找不到陪练 {low}：{src}')
+                raise build.BuildError(f'找不到陪练 {low}：{src}\n' + BUILD_HINT)
             res = (low, src.resolve())
         elif src.is_file():
             res = (low, build.compile_cpp(src))

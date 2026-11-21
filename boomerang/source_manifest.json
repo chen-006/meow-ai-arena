@@ -2212,8 +2212,9 @@
   "workspace/README.md": {
    "source": "player_pack",
    "original_sha256": "d0b4fd34c8c62049231a6e1a3f129e64819f0d8ba7a2ffb472f3899fc834f160",
-   "sha256": "d0b4fd34c8c62049231a6e1a3f129e64819f0d8ba7a2ffb472f3899fc834f160",
-   "modified": false
+   "sha256": "3790dd9ed09547f1439a729b77fc24e832c3e100bfc0e80dcca5025c8d2babdc",
+   "modified": true,
+   "note": "开源版改动：开头加一段说明（开源版不带编译好的程序，先在上一层运行 build_engine.py），第 3 节陪练那一句改成开源版的说法；其余原样"
   },
   "workspace/RULES.md": {
    "source": "player_pack",
@@ -2300,8 +2301,9 @@
   "workspace/match.py": {
    "source": "player_pack",
    "original_sha256": "aa66dd8cc682e64da6a8f1f143a996d26449ee13f43f0c54175ebe8bd873c531",
-   "sha256": "aa66dd8cc682e64da6a8f1f143a996d26449ee13f43f0c54175ebe8bd873c531",
-   "modified": false
+   "sha256": "a8571e32dd10f936be6e17a5d4dffbe2910715e61fedd28ecc177b10a18936c7",
+   "modified": true,
+   "note": "开源版改动：找不到三档陪练或编不了裁判 arena.exe 时，报错里加一句先在上一层运行 build_engine.py；其余原样"
   },
   "workspace/template.cpp": {
    "source": "player_pack",

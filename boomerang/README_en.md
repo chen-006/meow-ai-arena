@@ -102,7 +102,7 @@ The 13 contestants' one-on-one and four-player ratings stay fixed at `results/�
 
 | Path | Contents |
 |---|---|
-| `workspace/` | The player pack as handed out (minus exe files) |
+| `workspace/` | The player pack as handed out (minus exe files; `README.md` and `match.py` add a "run `build_engine.py` first" hint) |
 | `engine/` | Sources of the three sparring bots (only binaries were handed out) |
 | `build_engine.py` | Builds the referee and the sparring bots |
 | `prompt.md`, `prompts/` | Opening messages (two batches) and call-back notices, verbatim |
@@ -123,6 +123,7 @@ Character art is in [art/v2/](../art/v2/README.md); this episode's voxel charact
 ## Differences from the event
 
 - The player pack, sparring sources and all submissions are byte-for-byte originals (hashes in `source_manifest.json`). The exe files in the pack are not committed; `build_engine.py` rebuilds them and the result is byte-identical with w64devkit GCC 16.2.0.
+- Two additions to the player pack in the open-source version, only to say "run `build_engine.py` first": `workspace/README.md` gets an open-source note at the top, and its section-3 line "the three sparring bots are only given as binaries" now says how to build them; `workspace/match.py` adds the same hint to its error when a sparring exe is missing or `arena.exe` cannot be built. Game behaviour is unchanged. The originals: `original_sha256` of these two files in `source_manifest.json`, and the files themselves at commit `4218610` (`git show 4218610:boomerang/workspace/README.md`).
 - `results/games.jsonl.gz` is the event's per-game result list, one game per line, gzipped; `results/schedule.json.gz` is the schedule with map paths made relative.
 - No replays were saved during the event. `replays/` was re-played for the video with the same seeds, maps, seats and programs; some programs decide search depth by the clock, so a replayed game may differ from the official one (45 of the 117 match).
 - The organiser's paths are written as `{赛事目录}` in the auction messages and `{WORKDIR}` in the opening message; the renderer's absolute paths became repo-relative defaults plus environment variables.
