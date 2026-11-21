@@ -120,14 +120,16 @@
   "workspace/play.py": {
    "source": "player_pack",
    "original_sha256": "3c4fc610c7704f3709037bce6deabc04f41faea243f5d46edf36b3b5489cbec1",
-   "sha256": "3c4fc610c7704f3709037bce6deabc04f41faea243f5d46edf36b3b5489cbec1",
-   "modified": false
+   "sha256": "e5c51f096de0aab5a5e324ba5c1a2fc1bcf808f62ddbfcec9415f9ae642f2b05",
+   "modified": true,
+   "note": "开源版改动：找不到 war.exe 时的报错加一句先在上一层运行 build_engine.py；其余原样"
   },
   "workspace/README.md": {
    "source": "player_pack",
    "original_sha256": "5d4cc7061ee8bcc90a96a7481001368d01488c878dc6def52b955f714ea408d6",
-   "sha256": "5d4cc7061ee8bcc90a96a7481001368d01488c878dc6def52b955f714ea408d6",
-   "modified": false
+   "sha256": "4c95e657d5b0b496a6372f0c352287684fa37825072f2a102e32ffe45384bc47",
+   "modified": true,
+   "note": "开源版改动：开头加一段开源版说明（先在上一层运行 build_engine.py 编出 war.exe）；其余原样"
   },
   "workspace/RULES.md": {
    "source": "player_pack",

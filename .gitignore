@@ -14,6 +14,7 @@ rerun/
 *.pdb
 *.ilk
 workspace/replays/
+*/workspace/replays/
 # 本地放编译器（w64devkit）的目录，见顶层 README
 tools/
 

@@ -103,7 +103,7 @@ python challenge.py 你的bot.cpp --full     局数 4 倍
 
 | 路径 | 内容 |
 |---|---|
-| [workspace/](workspace/README.md) | 赛时选手包原样（不含 exe）：README、RULES、`dart.hpp`、裁判源码 `arena.cpp`、`build.py`、`match.py`、`clock.py`、模板、四张公开地图、网页查看器、回放格式、示例回放 |
+| [workspace/](workspace/README.md) | 赛时选手包（不含 exe；`README.md`、`match.py` 加了一句“先运行 `build_engine.py`”的提示，见下文“和比赛时的差别”）：README、RULES、`dart.hpp`、裁判源码 `arena.cpp`、`build.py`、`match.py`、`clock.py`、模板、四张公开地图、网页查看器、回放格式、示例回放 |
 | [engine/](engine/README.md) | 三档陪练的源码和说明（比赛时只发了编译好的程序） |
 | [build_engine.py](build_engine.py) | 编译裁判和陪练 |
 | [challenge.py](challenge.py) | 用你的程序挑战 13 位选手、进社区榜（见上） |
@@ -125,6 +125,7 @@ python challenge.py 你的bot.cpp --full     局数 4 倍
 ## 和比赛时的差别
 
 - 选手包（`workspace/`）、陪练源码、选手作品（`bots/`、`appendix/bots/`、`appendix/early/`）逐字节原样，哈希见 [source_manifest.json](source_manifest.json)。比赛时的选手包是一个压缩包（SHA-256 `74dfde0d…5d3c1dc3`），里面的 `arena.exe` 和三档陪练 exe 不入库，用 `build_engine.py` 从源码编译，和比赛时逐字节相同（w64devkit 的 GCC 16.2.0）。
+- 开源版对选手包做了两处附加改动，只为提示“先运行 `build_engine.py`”：`workspace/README.md` 开头加了一段开源版说明，第 3 节“三档陪练只给编译好的程序”那一句改成开源版的说法；`workspace/match.py` 找不到陪练 exe、或没有 `arena.exe` 又编不了时，报错里加一句先运行 `build_engine.py`。对局行为不变。比赛时的原样：哈希是 `source_manifest.json` 里这两个文件的 `original_sha256`，原文见本仓库提交 `4218610` 里的同名文件（`git show 4218610:boomerang/workspace/README.md`）。
 - `workspace/arena.cpp` 里沙箱目录的备选路径和 `workspace/build.py` 里找编译器的备选路径是主办方电脑上的位置，原样保留；比赛和复现都不进沙箱（`--sandbox none`），只用 Job Object 管进程。
 - `results/games.jsonl.gz` 是比赛时 `逐局结果.json` 的内容按每局一行、gzip 压缩；`results/schedule.json.gz` 是赛程，每局的地图路径改成了仓库里的相对路径。`海选成绩.json`、`海选榜.md` 原样。
 - 比赛时的对局没有存回放。`replays/` 是做视频时用同样的种子、地图、座位和程序重打的；有的程序按时钟决定算多深，重打结果和比赛时不一定相同（117 局里 45 局名次相同）。

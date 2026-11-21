@@ -6,7 +6,7 @@
 
 | 类别 | 放了什么 | 在哪 |
 |---|---|---|
-| 游戏本体 | 规则引擎 `dart.hpp`、裁判 `arena.cpp`、本地工具 `build.py`、`match.py`、`clock.py`、网页查看器、规则和回放格式文档、4 张公开地图 | `workspace/`（选手包原样，exe 除外） |
+| 游戏本体 | 规则引擎 `dart.hpp`、裁判 `arena.cpp`、本地工具 `build.py`、`match.py`、`clock.py`、网页查看器、规则和回放格式文档、4 张公开地图 | `workspace/`（选手包原样，exe 除外；`README.md`、`match.py` 加了“先运行 `build_engine.py`”的提示，见 README“和比赛时的差别”） |
 | | 赛时保密的 6 张地图 | `tournament/hidden/` |
 | | 三档陪练的源码（比赛时只发 exe）；编译裁判和陪练的脚本（实测与比赛时 exe 逐字节相同） | `engine/sparring/`、`build_engine.py` |
 | 比赛材料 | 选手包原样（打包哈希见 `source_manifest.json`） | `workspace/` |

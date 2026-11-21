@@ -2,7 +2,7 @@
 
 # Bridge Building · contestant package
 
-This folder is the package every contestant received, unchanged (the Chinese files are the originals; the `*_en.md` files are reference translations added for the open-source release). The only file not included is `bridge_sim.exe`: build it from source with `python build_engine.py` in the parent folder.
+This folder is the package every contestant received (the Chinese files are the originals; the `*_en.md` files are reference translations added for the open-source release). The only file not included is `bridge_sim.exe`: build it from source with `python build_engine.py` in the parent folder. The open-source version adds one note to `README.md` and the same hint to `bridge.py` when `bridge_sim.exe` is missing; everything else is unchanged.
 
 Read `RULES.md` first ([English](RULES_en.md): full rules, schedule, materials, levels 1–6) and `RULES_决赛.md` ([English](RULES_final_en.md): level 7, attack and defense). Submissions go into `submission/`.
 

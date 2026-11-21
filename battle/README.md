@@ -116,7 +116,7 @@ python play.py replay replays/level2.wrp --at 20    讲一场的经过，画第 
 
 | 路径 | 内容 |
 |---|---|
-| [workspace/](workspace/README.md) | 赛时选手包原样：README、RULES、COMMANDER、本地工具 `play.py`、`build.py`、`clock.py`、五关、三张对抗图、陪练、示例、起步版 `submission/` |
+| [workspace/](workspace/README.md) | 赛时选手包（`README.md`、`play.py` 加了“先运行 `build_engine.py`”的提示）：README、RULES、COMMANDER、本地工具 `play.py`、`build.py`、`clock.py`、五关、三张对抗图、陪练、示例、起步版 `submission/` |
 | [engine/](engine/README.md) | 模拟器源码（C++，基于 Jolt Physics）、接口说明、回放格式；`python build_engine.py` 编译 |
 | [prompt.md](prompt.md) | 开赛消息和续接消息原文 |
 | [bots/](bots/README.md) | 九位选手的收卷原样：`level1.json`～`level5.json`、`duel.json`、`melee.json`、`commander.cpp`、`notes.md` |
@@ -134,6 +134,7 @@ python play.py replay replays/level2.wrp --at 20    讲一场的经过，画第 
 
 - 选手包（`workspace/`）和选手作品（`bots/`）逐字节原样，哈希见 [source_manifest.json](source_manifest.json)。`workspace/build.py` 里找编译器的备选路径是主办方电脑上的位置，原样保留；在别的电脑上设环境变量 `CXX` 或把 g++ 放进 PATH 即可（`score.py`、`build_engine.py` 也会找仓库的 `tools/w64devkit/`）。
 - 比赛时选手包带着编译好的 `war.exe`。仓库不提交 exe，改为提供源码和 `build_engine.py`：用 w64devkit 的 GCC 16.2.0 和 Jolt Physics 提交 `6a985659a781` 编译，得到的 exe 与比赛时**逐字节相同**（SHA-256 `f703bab3…`）。其他编译器不保证字节相同，可以用 `tournament/score.py --rerun` 核对结果。
+- 开源版对选手包做了两处附加改动，只为提示“先运行 `build_engine.py`”：`workspace/README.md` 开头加了一段开源版说明；`workspace/play.py` 找不到 `war.exe` 时的报错（原来只有“找不到 war.exe”）加了一句先运行 `build_engine.py`。模拟和计分不变。比赛时的原样：哈希是 `source_manifest.json` 里这两个文件的 `original_sha256`，原文见本仓库提交 `4218610` 里的同名文件（`git show 4218610:battle/workspace/play.py`）。
 - 引擎源码改了三行，都不影响编译结果：`host.hpp` 开头两行注释里提到节目另一集内部文件的说法删掉了；`CMakeLists.txt` 里 Jolt Physics 的默认路径从主办方电脑上的位置改成 `engine/third_party/JoltPhysics`。
 - 选手的工作目录在开赛消息里写成 `{WORKDIR}`。
 - `results/` 是 Claude Fable 5.2 这一席换成重跑记录以后，主办方重新评测、出榜的输出（见 [CONDITIONS.md](CONDITIONS.md#claude-fable-52-这一席采用第三方重跑)）。里面的 json（成绩表和 `eval/`）把主办方电脑上的绝对路径改成了相对赛事目录的路径（`kit/` 是选手包，`sealed/<席位>/submission/` 是收卷，`eval/` 是评测），编译器路径写成 `g++`，其余数值原样；`.md` 成绩表原样。

@@ -146,7 +146,7 @@ python make_player_pack.py --zip       # 编译陪练，按比赛时的文件清
 
 ## 和比赛时的差别
 
-- **陪练**：比赛时选手包里只有陪练编译好的程序（`bots/sparring.exe/.dll`、`bots/sparring_hard.exe/.dll`），开源版放的是源码 `sparring/*.cpp`，用 `make_player_pack.py` 按比赛时的编译参数编出来。开源前核对过：用 GCC 16.2 编出的 `sparring_hard.exe` 和比赛时上场的那份逐字节相同；`sparring.exe` 只差源文件名符号和时间戳；两个陪练的快速模式版本对打 24 组对局，逐回合相同。
+- **陪练**：比赛时选手包里只有陪练编译好的程序（`bots/sparring.exe/.dll`、`bots/sparring_hard.exe/.dll`），开源版放的是源码 `sparring/*.cpp`，用 `make_player_pack.py` 按比赛时的编译参数编出来。开源前核对过：用 GCC 16.2 编出的 `sparring_hard.exe` 和比赛时上场的那份逐字节相同；`sparring.exe` 只差源文件名符号和时间戳；两个陪练的快速模式版本对打 24 组对局，逐回合相同。开源版 `workspace/arena.py` 只加了一句报错：找不到陪练程序时提示先运行 `make_player_pack.py`（原来 `play`/`run` 会报“启动 bot 程序失败”或 Python 报错）；`workspace_manifest.json` 里记了开源版哈希，有陪练程序时行为和比赛时相同。
 - 除此之外，`workspace/` 和发给选手的 `workspace.zip` 逐字节相同（`RULES.md` 里写的计分口径就是赛前的版本，赛后调整见上面"赛制"）；`bots/` 里的代码和主办方封存的版本逐字节相同（sha256 与 `results/清单.json` 一致）。
 - **没有放进仓库的**：各模型的原始会话记录；选手交卷时用文字写的策略说明；终场全部对局的回放（只放了随机抽的 30 局，逐局结果在 `results/` 里）；主办方计时、封存、补时、启动选手的脚本和操作手册；赛后的几个实验（成长曲线、大图实验、稳定性重跑）的数据；2010 年人类选手 bot 的适配代码（见下）。
 

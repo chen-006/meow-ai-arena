@@ -7,7 +7,8 @@
 想让一个新模型按比赛时的条件参赛，不要把 workspace/ 文件夹直接给它，用这个脚本打包：
 
   1. 用比赛时的编译参数（-std=c++20 -O2，Windows 上加 -static）把 workspace/baseline.cpp 编译成 baseline.exe；
-  2. 逐个核对 baseline.exe 以外的文件和 workspace_manifest.json 里记的 sha256（比赛时发出去的那一份），不一致就停下；
+  2. 逐个核对 baseline.exe 以外的文件和 workspace_manifest.json 里记的 sha256（比赛时发出去的那一份），不一致就停下。
+     arena.py 开源时改过一句报错（清单里有说明），核对的是开源版的哈希；其余和比赛时发出去的逐字节相同；
   3. 按比赛时压缩包的文件清单和顺序打包：顶层只有 workspace/，模板在 submission/bot.cpp，不放 baseline.cpp。
 
 需要 Python 3.10+ 和 g++（Windows 可用 w64devkit，见仓库根目录 README）。
@@ -47,7 +48,7 @@ def main():
     manifest = json.loads((HERE / "workspace_manifest.json").read_text(encoding="utf-8"))
     ensure_compiler()
 
-    # 1. 核对：除 baseline.exe 外，每个文件都要和比赛时发出去的逐字节相同
+    # 1. 核对：除 baseline.exe 外，每个文件都要和比赛时发出去的逐字节相同（开源时改过的核对开源版哈希）
     contents, bad = {}, []
     for item in manifest["files"]:
         rel = item["path"].removeprefix("workspace/")
@@ -58,7 +59,7 @@ def main():
             bad.append(f"缺少 {path}")
             continue
         data = path.read_bytes()
-        if sha(data) != item["sha256"]:
+        if sha(data) != item.get("open_source_sha256", item["sha256"]):
             bad.append(f"和比赛时的不一致：{path}")
         contents[item["path"]] = data
     if bad:

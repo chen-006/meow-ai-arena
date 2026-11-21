@@ -1,5 +1,7 @@
 # 造桥大赛 · 选手包
 
+> **开源版说明**：开源版不带编译好的物理内核 `bridge_sim.exe`（下表那一行）。第一次使用先在上一层（`bridge/`）运行 `python build_engine.py`，从 `engine/bridge_sim.cpp` 编出来（和比赛时逐字节相同），之后再在本目录用 `bridge.py`。开源时只加了这段说明和 `bridge.py` 找不到内核时的同一句提示，其余是比赛时的原文，见上一层 README 的“和比赛时的差别”。
+
 先读 `RULES.md`（完整规则、赛程、材料表、第 1～6 关说明）和 `RULES_决赛.md`（第 7 关攻防）。交卷文件放 `submission/`。
 
 | 文件 | 用途 |

@@ -36,6 +36,7 @@ import build  # noqa: E402
 
 ARENA = KIT / 'arena.exe'
 REPLAYS = KIT / 'replays'
+BUILD_HINT = '开源版不带编译好的程序：先在上一层（soccer\\）运行 python build_reference.py，编出裁判 arena.exe 和 bots\\ 里的三个参考 bot'  # 开源版加的提示
 BUILTIN = {'baseline': KIT / 'bots' / 'baseline.exe', 'midfield': KIT / 'bots' / 'midfield.exe', 'sparring': KIT / 'bots' / 'sparring.exe'}
 
 
@@ -47,7 +48,7 @@ def arena_exe():
     # 没有现成的 arena.exe：从源码编译（需要 g++）
     cxx = build.find_compiler()
     if not cxx:
-        raise build.BuildError('没有 arena.exe，也没有找到 g++ 来编译它')
+        raise build.BuildError('没有 arena.exe，也没有找到 g++ 来编译它。' + BUILD_HINT)
     r = subprocess.run([cxx, '-std=c++17', '-O2', '-static', 'arena.cpp', '-o', 'arena.exe', '-lshell32', '-luserenv'], cwd=KIT,
                        capture_output=True, text=True, encoding='utf-8', errors='replace')
     if r.returncode:
@@ -59,6 +60,8 @@ def resolve(spec):
     """参赛者 → (显示名, exe 路径)"""
     low = spec.lower()
     if low in BUILTIN:
+        if not BUILTIN[low].is_file():
+            raise build.BuildError(f'找不到参考 bot {low}：{BUILTIN[low]}\n' + BUILD_HINT)
         return low, BUILTIN[low]
     if low == 'template':
         return 'template', build.compile_cpp(KIT / 'template.cpp')
@@ -299,7 +302,7 @@ def cmd_check(a):
         print(e)
         return 1
     if not BUILTIN['baseline'].is_file():
-        print(f"找不到基准程序：{BUILTIN['baseline']}")
+        print(f"找不到基准程序：{BUILTIN['baseline']}\n" + BUILD_HINT)
         return 1
     print(f'编译 / 找到程序：{me[1]}')
     entries = [me, BUILTIN and ('baseline', BUILTIN['baseline'])]

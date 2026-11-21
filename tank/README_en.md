@@ -108,13 +108,13 @@ Open a PR containing only that entry folder once it passes. See the [submission 
 python make_player_pack.py        # writes out/workspace.zip
 ```
 
-The script compiles `baseline.cpp` into `baseline.exe` with the contest flags, checks every other file against the sha256 of the original package recorded in `workspace_manifest.json`, and zips them with the original file list and layout, without `baseline.cpp`. Then put only `out/workspace.zip` in an empty folder, start a fresh session there, and send the opening prompt from `prompt.md` verbatim. The time rules (30 minutes, earliest submission at minute 20, forced collection at 45) are in the prompt; `clock.py` in the package starts counting when it is extracted. For the second half, run a half-time tournament with `tournament/`, place the standings, the model's replays and the opponents' executables in `workspace/halftime/` as described under Format, and send the half-time message from `prompt.md`. For a single half, just run `challenge.py` on the submitted `submission/bot.cpp`.
+The script compiles `baseline.cpp` into `baseline.exe` with the contest flags, checks every other file against the sha256 of the original package recorded in `workspace_manifest.json` (`arena.py` has one changed error message in the open-source version and is checked against its open-source hash), and zips them with the original file list and layout, without `baseline.cpp`. Then put only `out/workspace.zip` in an empty folder, start a fresh session there, and send the opening prompt from `prompt.md` verbatim. The time rules (30 minutes, earliest submission at minute 20, forced collection at 45) are in the prompt; `clock.py` in the package starts counting when it is extracted. For the second half, run a half-time tournament with `tournament/`, place the standings, the model's replays and the opponents' executables in `workspace/halftime/` as described under Format, and send the half-time message from `prompt.md`. For a single half, just run `challenge.py` on the submitted `submission/bot.cpp`.
 
 ## Folder
 
 | Path | Contents |
 |---|---|
-| `workspace/` | Contestant package (identical to the original zip, except that contestants only got the compiled `baseline.exe` while this repo ships its source `baseline.cpp`; the two play turn-for-turn identical games) |
+| `workspace/` | Contestant package (identical to the original zip, except that contestants only got the compiled `baseline.exe` while this repo ships its source `baseline.cpp`; the two play turn-for-turn identical games. Commands in `workspace/README.md` that name `baseline.exe` work with `baseline.cpp`; the open-source `arena.py` says so when `baseline.exe` is missing — its only change) |
 | `prompt.md` | Every message sent to the models |
 | `bots/half1/`, `bots/half2/` | Each model's sealed first- and second-half code, unmodified |
 | `results/` | Standings and per-game results of all three tournaments, plus the two supplementary tables |

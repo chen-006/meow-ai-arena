@@ -1,5 +1,7 @@
 # 飞镖乱斗 · 选手包
 
+> **开源版说明**：开源版不带编译好的程序。第一次使用先在上一层（`boomerang/`）运行 `python build_engine.py`，生成裁判 `arena.exe` 和三档陪练 `bots\weak.exe`、`bots\mid.exe`、`bots\strong.exe`（和比赛时逐字节相同），之后再在本目录用 `match.py`。开源时只在本文件和 `match.py` 里加了这条提示（本段和第 3 节陪练那一条；`match.py` 找不到陪练或裁判时提示先运行 `build_engine.py`），其余是比赛时发给选手的原文；比赛时的原样见上一层 `README.md` 的“和比赛时的差别”。
+
 ## 1. 这是什么比赛
 
 你写一个 C++ 程序，操控俯视角小场地里的一个角色。每人一把回旋镖：扔出去会飞回来，打中谁谁出局；也可以近身挥砍、空手踢人、冲刺越过坑。被打中或掉进坑里就出局，最后活下来的赢。场地过了 12 秒开始一圈圈塌陷，大家会被挤到一起。所有角色完全一样，赢在谁预判得准、躲得好、抓得住机会。
@@ -70,7 +72,7 @@ python match.py play player.cpp mid --map twinlakes --seed 7
 python match.py play player.cpp mid mid mid --map yinyang --seed 7
 ```
 
-- 程序可以写 `template`、`weak`（弱档陪练）、`mid`（中档陪练）、`strong`（强档陪练）、任何 `.cpp` 或 `.exe` 路径。三档陪练只给编译好的程序（`bots\weak.exe`、`bots\mid.exe`、`bots\strong.exe`），不给源码。它们是用来量进步的尺子：打赢强档也不代表够强，正式对手是其他选手认真写出来的程序，本地成绩只用来比较自己的版本。
+- 程序可以写 `template`、`weak`（弱档陪练）、`mid`（中档陪练）、`strong`（强档陪练）、任何 `.cpp` 或 `.exe` 路径。三档陪练是编译好的程序（`bots\weak.exe`、`bots\mid.exe`、`bots\strong.exe`）：比赛时只发了程序、不给源码；开源版不带这三个程序，源码在上一层 `engine/sparring/`，先在上一层运行 `python build_engine.py` 编出来。它们是用来量进步的尺子：打赢强档也不代表够强，正式对手是其他选手认真写出来的程序，本地成绩只用来比较自己的版本。
 - 结果有噪声：比较两个版本，同一组对手**至少 40 局**再下结论，几局的输赢说明不了什么。
 - 地图：`--map 名字`（`maps\` 里的文件名，不带 .txt）或 `--map 路径.txt`，可以写多次；不写就把 `maps\` 里所有支持这种形式的图轮流用。也可以照 `RULES.md` 第 4.1 节自己画图测试，地图有错时裁判会说第几行哪里不对。
 - 种子（`--seed`、`--seed-base`）只决定出生点最多 1 米的小抖动，对局本身没有随机。

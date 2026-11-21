@@ -138,7 +138,7 @@ python tournament/score.py
 
 | 路径 | 内容 |
 |---|---|
-| [workspace/](workspace/README.md) | 赛时选手包原样：规则、模拟器前端 `bridge.py`、捣蛋车与攻防 `saboteur.py`、回放查看器、7 关关卡与场景 |
+| [workspace/](workspace/README.md) | 赛时选手包（`README.md`、`bridge.py` 加了“先运行 `build_engine.py`”的提示）：规则、模拟器前端 `bridge.py`、捣蛋车与攻防 `saboteur.py`、回放查看器、7 关关卡与场景 |
 | [engine/](engine/bridge_sim.cpp) | 物理内核源码；`python build_engine.py` 编译到 `workspace/bridge_sim.exe` |
 | [prompt.md](prompt.md) | 发给选手的开赛消息 |
 | [designs/](designs/README.md) | 九位选手的最终设计：`level1.json`～`level6.json`、`final_bridge.json`、`saboteur.json` |
@@ -153,6 +153,7 @@ python tournament/score.py
 ## 和比赛时的差别
 
 - 选手包（`workspace/` 里的规则、`bridge.py`、`saboteur.py`、`viewer.html`、`levels/`）和选手设计逐字节原样，哈希见 [来源清单](source_manifest.json)。英文规则是另加的参考译文。
+- 开源版对选手包做了两处附加改动，只为提示“先运行 `build_engine.py`”：`workspace/README.md` 开头加了一段开源版说明；`workspace/bridge.py` 找不到 `bridge_sim.exe` 时直接提示先运行 `build_engine.py`（原来会重试十几秒后报“无法启动 bridge_sim.exe”）。模拟和计分不变。比赛时的原样：哈希是来源清单里这两个文件的 `original_sha256`，原文见本仓库提交 `4218610` 里的同名文件（`git show 4218610:bridge/workspace/bridge.py`）。
 - 比赛时选手包带着编译好的 `bridge_sim.exe`。仓库不提交 exe，改为提供源码和 `build_engine.py`；用 w64devkit 的 GCC 16.2.0 按原参数（`-O2 -std=c++17 -static -municode`）编译，得到的 exe 与比赛时**逐字节相同**。其他编译器不保证字节相同，可用 `tournament/score.py` 核对结果。
 - 开赛消息里的选手工作目录换成了 `{选手目录}`。
 - `results/` 由 `tournament/score.py` 重算写出，数值与比赛时的最终成绩逐项相同；回放是赛后用同一引擎重跑生成的（引擎确定，与评分时一致），第 7 关回放里的结论按正式计分口径写。
