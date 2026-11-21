@@ -16,8 +16,10 @@ You can do it by hand, or paste the prompt in [`AGENT_PROMPT.md`](AGENT_PROMPT.m
 | 5 · Warehouse scheduling | `community/warehouse/` | a `src/` folder with your optimized program |
 | 6 · Tank Battle | `community/tank/` | one `bot.cpp` implementing only `init` and `decide` |
 | 7 · Tron | `community/tron/` | one `bot.cpp` implementing only `decide`; Windows required for local evaluation |
+| 8 · 2v2 soccer | `community/soccer/` | one `bot.cpp`: a single player program that takes both seats of your team; Windows required for local evaluation |
+| 11 · Boomerang brawl | `community/boomerang/` | one `bot.cpp`: the package's `player.cpp` format (`#include "dart.hpp"`, `DART_MAIN`); Windows required for local evaluation |
 
-Episode 9 (bridge building) does not take pull requests: submissions go to the website leaderboards for levels 1–6 ([https://arena.meowllm.top/ep9/](https://arena.meowllm.top/ep9/)); see [`bridge/README_en.md`](../bridge/README_en.md#submit-your-own). The prompt for coding agents is in [`bridge/AGENT_PROMPT.md`](../bridge/AGENT_PROMPT.md).
+Episodes 9 (bridge building) and 10 (Armchair Generals) do not take pull requests. Bridge designs go to the website leaderboards for levels 1–6 ([https://arena.meowllm.top/ep9/](https://arena.meowllm.top/ep9/)); see [`bridge/README_en.md`](../bridge/README_en.md#submit-your-own). Armchair Generals entries are uploaded to the community board at [https://arena.meowllm.top/ep10/](https://arena.meowllm.top/ep10/) after clearing the levels or the arena; entries with a C++ commander follow the instructions on that page. The prompt for coding agents is in [`bridge/AGENT_PROMPT.md`](../bridge/AGENT_PROMPT.md).
 
 Hand-written bots, AI-written bots, modified versions of the official bots, optimized versions of the warehouse baseline, and fixed versions of a model's code with known defects are all welcome. Episode 4 (Diplomacy) has nothing to submit. Malicious code, code that breaks the episode's rules (file access, network access, spawning processes), and uncredited copies of other people's work are not accepted.
 
@@ -31,7 +33,7 @@ community/<episode>/<github-username>__<entry-name>/
     NOTES.md       (optional)
 ```
 
-`<episode>` is `land`, `bomberman`, `ctf`, `warehouse`, `tank` or `tron`.
+`<episode>` is `land`, `bomberman`, `ctf`, `warehouse`, `tank`, `tron`, `soccer` or `boomerang`.
 
 Both parts of the folder name use only lowercase letters, digits and single hyphens, joined by two underscores. The first part must be the GitHub account that opens the pull request, in lowercase.
 
@@ -84,6 +86,8 @@ Community results are measured on GitHub-hosted VMs with fewer games per bot. **
 Tank instead uses a **fixed final-tournament reference**: the 16 opponent ratings from `tank/results/final/成绩.json` stay fixed, and only the entrant's Bradley–Terry rating is fitted (baseline = 0, ten times stronger = +400). The opponent numbers in the summary are historical reference ratings, not ratings newly measured in this community run. The estimated placement compares only the 14 ranked contestants, excluding baseline and sparring. This is not a refitted mini-tournament or an official final-tournament placing: the maps, game counts and hardware differ.
 
 Tron likewise keeps the **final strong-opponent board** ratings in `tron/results/results.json` fixed and fits only the entrant, separately by game type. The weighted total is 50% 1v1, 30% four-player and 20% twelve-player (Doubao = 0, ten times stronger = +400). `sparring_hard` participates in games and fitting but is a reference line, excluded from the estimated rank among the 12 contestants. The “3–4” category uses only four-player games. The archived workspace rules retain the pre-tournament greedy = 0 scale; community scores follow the post-tournament strong-opponent board used by `tron/challenge.py`, without changing those historical files. New maps, fewer games and different hardware mean this is not an official tournament placing.
+
+Soccer (episode 8) and Boomerang brawl (episode 11) follow the same fixed-reference approach and run on Windows only, with the episode's own compile command and source check (`g++ -std=c++17 -O2 -static -Wl,--stack,67108864`, only the official `soccer.hpp` / `dart.hpp` header; 10 CPU ms per step). Soccer: your program takes both seats and plays the 12 individual teams and 3 reference teams, 4 seeds x both sides, 120 games (`--full` 480); the opponents' ratings are the individual board's Bradley–Terry point estimates (baseline team = 0) and the reference rank compares you with the 12 individual teams. Boomerang: 312 one-on-one games against the 13 qualifier contestants (6 qualifier maps x 2 seeds x both seats) plus 104 four-player games (26 tables x 4 seat rotations; `--full` 1,664 in total); the contestants' one-on-one and four-player ratings stay fixed at `boomerang/results/海选成绩.json`, only yours are fitted and averaged as in the qualifier board. Some contestants size their search by the clock, so reruns differ by a dozen points or so.
 
 Warehouse speedups are the ratio of baseline to submission CPU time on the same machine.
 

@@ -20,7 +20,7 @@
 | 7 · 第二场 | 屎山优化 | [`warehouse/`](warehouse/#第-7-集--屎山优化) | 同样 10 个模型各自优化第 5 集那份老代码（另有 Claude 3 位作参照） | 阶跃 Step 5 preview / 腾讯混元 Hy4 preview（并列） | [`results/ep7/`](warehouse/results/ep7/README.md) | — |
 | 8 | 2v2 简化足球 | [`soccer/`](soccer/) | 12 个模型两两组队、一人写一名球员；下半场加个人队，8280 局 | 团队：GPT-6 Astra + GPT-6.1 Terra；个人：GPT-6 Astra | [`tournament/`](soccer/tournament/README.md) | [ep8](https://arena.meowllm.top/ep8/) |
 | 9 | 造桥 | [`bridge/`](bridge/) | 不写 bot：9 个模型在 90 分钟里设计桥梁，6 关闯关 + 1 关桥和捣蛋车攻防 | GPT-6.2 Sol | [`tournament/`](bridge/tournament/README.md) | [ep9](https://arena.meowllm.top/ep9/) |
-| 10 | 纸上谈兵 | [`battle/`](battle/) | 9 个模型在 90 分钟里买兵布阵、写指挥程序，刚体物理里开打：5 关闯关比谁花得少 + 1v1 和四人混战盲摆对打，945 局 | GPT-6.2 Sol | [`tournament/`](battle/tournament/README.md) | — |
+| 10 | 纸上谈兵 | [`battle/`](battle/) | 9 个模型在 90 分钟里买兵布阵、写指挥程序，刚体物理里开打：5 关闯关比谁花得少 + 1v1 和四人混战盲摆对打，945 局 | GPT-6.2 Sol | [`tournament/`](battle/tournament/README.md) | [ep10](https://arena.meowllm.top/ep10/) |
 | 11 | 回旋镖大作战（OA 争霸·上） | [`boomerang/`](boomerang/) | 13 个模型在 75 分钟里写回旋镖乱斗的 bot，一对一 + 四人混战共 32,904 局；之后两位队长拍卖组队 | GPT-6.2 Astra | [`tournament/`](boomerang/tournament/README.md) | — |
 
 第 7 集两场合计的“区王”是阶跃 Step 5 preview（两场各按名次给 10～1 分相加，见 [`tron/README.md`](tron/README.md) 文末）。
@@ -64,7 +64,7 @@ python challenge.py 你的bot.cpp
 
 你的作品可以交到这个仓库里，合并后进[社区榜](community/LEADERBOARD.md)。
 
-**可以交什么**：第 1、2、3、6 集的 bot 和第 7 集的光轮 bot（自己写的、让 AI 写的、在官方选手代码上改的都行），第 5 集优化过的仓储调度代码，或者修好了某份模型代码里已知缺陷的版本。第 4 集没有可以提交的程序，不收；第 8 集足球目前没有投稿通道。第 9 集造桥的投稿走网站排行榜，不走 Pull Request，见 [`bridge/README.md`](bridge/README.md#投稿)。
+**可以交什么**：第 1、2、3、6 集的 bot、第 7 集的光轮 bot、第 8 集的足球球员程序、第 11 集的回旋镖 bot（自己写的、让 AI 写的、在官方选手代码上改的都行），第 5 集优化过的仓储调度代码，或者修好了某份模型代码里已知缺陷的版本。第 4 集没有可以提交的程序，不收。第 9 集造桥、第 10 集纸上谈兵的投稿走网站（[ep9](https://arena.meowllm.top/ep9/)、[ep10](https://arena.meowllm.top/ep10/)），不走 Pull Request，见 [`bridge/README.md`](bridge/README.md#投稿) 和网站上的说明。
 
 **最快的办法**是交给你的 coding agent（Claude Code、Codex、Cursor 等）。把下面这句话发给它，它会问你几个问题，在本地测一遍，然后把要提交的内容给你过目，你同意后再开 Pull Request：
 
@@ -80,7 +80,7 @@ python challenge.py 你的bot.cpp
 2. 运行 `python community/check.py community/<集>/<你的文件夹>`，它会检查格式并跑一遍评测。
 3. 只提交这一个文件夹，开 Pull Request，把自测摘要贴进描述。
 
-第 6 集目录名用 `tank`，第 7 集光轮对战用 `tron`，详情见 [投稿规则](community/README.md#代码要遵守的规则)。Tron 只实现 `int decide(const tron::State&)`，使用官方 `tron.hpp` 和 `tron_main.cpp`，不要自己写 `main`；本地编译和评测需要 Windows。Tank / Tron 投稿支持需要先合并到目标分支，再提交作品；PR 评测使用目标分支的可信脚本。
+第 6 集目录名用 `tank`，第 7 集光轮对战用 `tron`，第 8 集用 `soccer`，第 11 集用 `boomerang`，详情见 [投稿规则](community/README.md#代码要遵守的规则)。Tron 只实现 `int decide(const tron::State&)`，使用官方 `tron.hpp` 和 `tron_main.cpp`，不要自己写 `main`；足球、回旋镖交的就是选手包里那种单文件 `player.cpp`（改名 `bot.cpp`）；这三集的本地编译和评测需要 Windows。Tank / Tron 投稿支持需要先合并到目标分支，再提交作品；PR 评测使用目标分支的可信脚本。
 
 之后 GitHub Actions 会自动评测，维护者看过后合并。社区榜是在 GitHub 的虚拟机上测的，局数少，和节目里的正式成绩不能直接比。规则、`meta.json` 的写法和成绩口径见 [`community/README.md`](community/README.md)。
 
@@ -109,7 +109,7 @@ python challenge.py 你的bot.cpp
 
 第 7 集光轮对战（`tron/`）的结构和第 6 集相近，只有一个半场；另有两位参考选手和主办方的强档陪练线，单独出一张强对手榜；没有赛前狠话和赛后复盘（这一期没有收集狠话，复盘消息没有发）。陪练在比赛时只给了可执行程序，开源版放源码，用 `tron/make_player_pack.py` 编译。第 7 集屎山优化并进了 `warehouse/`（`submissions/ep7/`、`results/ep7/`、`packages/ep7/`），见 [`warehouse/README.md`](warehouse/README.md) 文末。
 
-第 8 集足球（`soccer/`）也分上下半场：`bots/half1/`、`bots/half2/` 是两个半场的程序；`prompts/` 是开赛、中场、续跑的全部主办方消息，`packages/` 是赛时包和队聊说明，`sparring/` 是基准和陪练，`notes/` 是赛后复盘回答；没有挑战脚本，见 [`soccer/README.md`](soccer/README.md)。
+第 8 集足球（`soccer/`）也分上下半场：`bots/half1/`、`bots/half2/` 是两个半场的程序；`prompts/` 是开赛、中场、续跑的全部主办方消息，`packages/` 是赛时包和队聊说明，`sparring/` 是基准和陪练，`notes/` 是赛后复盘回答；`challenge.py` 让你的球员程序踢两个座位，和 12 支个人队、3 支参考队对踢，见 [`soccer/README.md`](soccer/README.md)。
 
 第 9 集造桥（`bridge/`）的结构不同：没有 bot 和挑战脚本，`designs/` 是每人 8 份设计 JSON（第 1～6 关、决赛桥、捣蛋车），`reference/` 是参考答案，`engine/` 是物理内核源码（用 `bridge/build_engine.py` 编译），`tournament/score.py` 重算并核对全部成绩，见 [`bridge/README.md`](bridge/README.md)。
 

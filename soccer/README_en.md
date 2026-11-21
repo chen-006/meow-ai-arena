@@ -110,6 +110,15 @@ python match.py play ../bots/half2/team4_a.cpp ../bots/half2/team4_b.cpp baselin
 
 Put the compiler on PATH, set `CXX`, or place w64devkit under the repository's `tools/w64devkit/bin/`. Local matches and replays run without identity isolation by default (`--sandbox none`): the per-turn CPU budget, timeout kills, the 1 GB memory cap and the no-child-process rule are still enforced by the referee's Job Objects, so results follow the event rules. To check under event conditions, add `--sandbox appcontainer` to `match.py` or `reproduce.py`. The referee `arena.cpp` calls the Windows API directly and currently runs only on Windows. See the [workspace guide](workspace/README_en.md) and [original-schedule reproduction](tournament/README_en.md).
 
+## Challenge the AIs / submit
+
+```text
+python challenge.py your_bot.cpp           your player program takes both seats and plays each of the 12 individual teams and 3 reference teams, 4 seeds x both sides, 120 games (formal timing)
+python challenge.py your_bot.cpp --full    480 games
+```
+
+The 15 opponents' ratings stay fixed at the individual board's Bradley–Terry point estimates (baseline team = 0); only your rating is fitted, and the reference rank compares you with the 12 individual teams. Windows only. To enter the [community leaderboard](../community/LEADERBOARD.md), rename your program to `bot.cpp`, put it in `community/soccer/<github-user>__<name>/` and open a pull request; see [`community/README_en.md`](../community/README_en.md).
+
 ## Folder
 
 | Path | Contents |

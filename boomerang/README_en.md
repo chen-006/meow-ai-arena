@@ -89,6 +89,15 @@ python match.py play ../bots/gpt-6.2-astra/player.cpp mid --map ../tournament/hi
 
 **Make video**: all match footage in the video was rendered from replays by [renderer/](renderer/README_en.md) with Blender. With Blender 5.2, Python (numpy, scipy, scikit-image, pillow) and ffmpeg installed: `python renderer/render_game.py replays/g428.txt -o g428.mp4`.
 
+## Challenge the AIs / submit
+
+```text
+python challenge.py your_bot.cpp           312 one-on-one games against the 13 contestants + 104 four-player games (formal timing), placed on the qualifier scale
+python challenge.py your_bot.cpp --full    4 times as many games
+```
+
+The 13 contestants' one-on-one and four-player ratings stay fixed at `results/海选成绩.json`; only your two ratings are fitted and averaged, exactly like the qualifier board. The maps are the six qualifier maps with a new batch of seeds. Some contestants size their search by the clock, so a rerun can move by a dozen points. To enter the [community leaderboard](../community/LEADERBOARD.md), rename your program to `bot.cpp`, put it in `community/boomerang/<github-user>__<name>/` and open a pull request; see [`community/README_en.md`](../community/README_en.md). Windows only.
+
 ## Directory
 
 | Path | Contents |

@@ -90,6 +90,15 @@ python match.py play ../bots/gpt-6.2-astra/player.cpp mid --map ../tournament/hi
 
 **出视频**：视频里的对局画面都是 [renderer/](renderer/README.md) 用 Blender 从回放渲染的，装好 Blender 5.2、Python（numpy、scipy、scikit-image、pillow）和 ffmpeg 后，`python renderer/render_game.py replays/g428.txt -o g428.mp4` 一条命令出片。
 
+## 挑战 AI / 投稿
+
+```text
+python challenge.py 你的bot.cpp            和 13 位选手打一对一 312 局 + 四人局 104 局（正式计时），放到海选个人榜的尺上（本机几十秒到几分钟）
+python challenge.py 你的bot.cpp --full     局数 4 倍
+```
+
+13 位选手的一对一、四人局实力值固定取 `results/海选成绩.json`，只拟合你的两项，平均就是个人实力值；地图是海选的 6 张，种子换了一批。有几位选手按时钟决定算多深，重测会有十几分的出入。想进[社区榜](../community/LEADERBOARD.md)，把程序改名 `bot.cpp`，放进 `community/boomerang/<GitHub用户名>__<作品名>/` 开 Pull Request，见 [`community/README.md`](../community/README.md)。
+
 ## 目录
 
 | 路径 | 内容 |
@@ -97,6 +106,7 @@ python match.py play ../bots/gpt-6.2-astra/player.cpp mid --map ../tournament/hi
 | [workspace/](workspace/README.md) | 赛时选手包原样（不含 exe）：README、RULES、`dart.hpp`、裁判源码 `arena.cpp`、`build.py`、`match.py`、`clock.py`、模板、四张公开地图、网页查看器、回放格式、示例回放 |
 | [engine/](engine/README.md) | 三档陪练的源码和说明（比赛时只发了编译好的程序） |
 | [build_engine.py](build_engine.py) | 编译裁判和陪练 |
+| [challenge.py](challenge.py) | 用你的程序挑战 13 位选手、进社区榜（见上） |
 | [prompt.md](prompt.md)、[prompts/](prompts/) | 开赛消息（两批）和叫回通知的原文 |
 | [bots/](bots/README.md) | 十三位选手的收卷原样：`player.cpp`、`notes.md`、`收卷记录.json` |
 | [results/](results/README.md) | 个人榜（`海选成绩.json`、`海选榜.md`）、32,904 局逐局结果、赛程 |
