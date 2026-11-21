@@ -146,6 +146,8 @@ def validate_records(games, recs):
         if not isinstance(pl, list) or len(pl) != n or sorted(p.get("seat") for p in pl if isinstance(p, dict)) != list(range(n)):
             raise ValueError("第 %d 局的座位不齐" % i)
         for p in pl:
+            if p.get("status") == "start_fail":
+                raise ValueError("第 %d 局有程序启动失败（主办方故障），不当作完整评测" % i)
             if (type(p.get("rank")) is not int or not 1 <= p["rank"] <= n or type(p.get("kills")) is not int or
                     not 0 <= p["kills"] < n or p.get("status") not in STATUSES or
                     any(type(p.get(k)) is not int or p[k] < 0 for k in ("timeouts", "invalid"))):
