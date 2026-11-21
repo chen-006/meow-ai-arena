@@ -471,6 +471,8 @@ def build_sim(lv, P, scenario, sab=None):
 
 
 def run_sim(text, frames=False, n_vehicles=None, n_cons=None):
+    if not os.path.isfile(SIM_EXE):   # 开源版加的提示：仓库不带编译好的 bridge_sim.exe
+        raise EngineError(f'找不到物理内核 {SIM_EXE}。开源版不带编译好的程序：先在上一层（bridge\\）运行 python build_engine.py')
     with tempfile.TemporaryDirectory() as td:
         ip = os.path.join(td, 'in.txt')
         with open(ip, 'w') as f:
@@ -923,6 +925,8 @@ def main(argv):
     need = {'check': 2, 'run': 2, 'duel': 2}
     if cmd in need and len(pos) < need[cmd]:
         print(__doc__); return 2
+    if cmd in ('run', 'duel') and not os.path.isfile(SIM_EXE):   # 开源版加的提示
+        print(f'找不到物理内核 {SIM_EXE}。开源版不带编译好的程序：先在上一层（bridge\\）运行 python build_engine.py'); return 2
     if cmd == 'check':
         lv = load_level(pos[0])
         try:

@@ -5,14 +5,16 @@
   "workspace/bridge.py": {
    "source": "player_pack",
    "original_sha256": "99c27adbc008c2777168bee680419bb3179f78504702fc1fb2a163f3eebf96a3",
-   "sha256": "99c27adbc008c2777168bee680419bb3179f78504702fc1fb2a163f3eebf96a3",
-   "modified": false
+   "sha256": "f6bc97c4c2e120b947a85248703dfb3441e5a6d3ef3d44d0e8216c25453aaa5f",
+   "modified": true,
+   "note": "开源版改动：run / duel 找不到 bridge_sim.exe 时直接提示先在上一层运行 build_engine.py；其余原样"
   },
   "workspace/README.md": {
    "source": "player_pack",
    "original_sha256": "e5c438192f096cd48dc47013f79cffdbbe639d5ed79a46d2052844849db439d5",
-   "sha256": "e5c438192f096cd48dc47013f79cffdbbe639d5ed79a46d2052844849db439d5",
-   "modified": false
+   "sha256": "9a70115f73e34c6e825e02f163421268aaeb577dca5430c214a5ad0c5c08d5db",
+   "modified": true,
+   "note": "开源版改动：开头加一段开源版说明（先在上一层运行 build_engine.py 编出 bridge_sim.exe）；其余原样"
   },
   "workspace/RULES.md": {
    "source": "player_pack",

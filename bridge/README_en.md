@@ -138,7 +138,7 @@ The design JSON format is exactly the contest's, so you can first make it pass l
 
 | Path | Contents |
 |---|---|
-| [workspace/](workspace/README_en.md) | The contestant package as handed out: rules, simulator front end `bridge.py`, saboteur and duels `saboteur.py`, replay viewer, the 7 levels and their scenarios |
+| [workspace/](workspace/README_en.md) | The contestant package as handed out (`README.md` and `bridge.py` add a "run `build_engine.py` first" hint): rules, simulator front end `bridge.py`, saboteur and duels `saboteur.py`, replay viewer, the 7 levels and their scenarios |
 | [engine/](engine/bridge_sim.cpp) | Physics core source; `python build_engine.py` builds it into `workspace/bridge_sim.exe` |
 | [prompt_en.md](prompt_en.md) | Opening message sent to the contestants |
 | [designs/](designs/README_en.md) | The nine contestants' final designs: `level1.json` … `level6.json`, `final_bridge.json`, `saboteur.json` |
@@ -154,6 +154,7 @@ The design JSON format is exactly the contest's, so you can first make it pass l
 
 - The contestant package (rules, `bridge.py`, `saboteur.py`, `viewer.html`, `levels/` in `workspace/`) and the contestants' designs are byte-for-byte unchanged; hashes are in the [source manifest](source_manifest.json). The English rules are added reference translations.
 - During the contest the package shipped a compiled `bridge_sim.exe`. The repository does not commit executables; it provides the source and `build_engine.py` instead. Compiling with GCC 16.2.0 from w64devkit with the original flags (`-O2 -std=c++17 -static -municode`) yields an exe **byte-identical** to the contest's. Other compilers are not guaranteed to produce the same bytes; use `tournament/score.py` to check the results.
+- Two additions to the player pack in the open-source version, only to say "run `build_engine.py` first": `workspace/README.md` gets an open-source note at the top, and `workspace/bridge.py` prints that hint when `bridge_sim.exe` is missing (before, it retried for about 15 seconds and then failed with "无法启动 bridge_sim.exe"). Simulation and scoring are unchanged. The originals: `original_sha256` of these two files in the source manifest, and the files themselves at commit `4218610` (`git show 4218610:bridge/workspace/bridge.py`).
 - The contestant working directory in the opening message is replaced by `{选手目录}`.
 - `results/` is written by `tournament/score.py`; the numbers equal the official final results item by item. Replays were regenerated after the contest with the same engine (deterministic, identical to scoring); level 7 replays state the official scoring verdict.
 - Not included: contestant sessions and reasoning, the organizer's launch / timing / collection / process-management scripts, keys and private configuration.
