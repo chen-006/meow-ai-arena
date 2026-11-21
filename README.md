@@ -58,7 +58,7 @@ cd ctf
 python challenge.py 你的bot.cpp
 ```
 
-**想写 bot**：先读那一集的 `workspace/RULES.md`（规则与输入输出协议），再看 `workspace/` 里的模板。第 1–3 集的模板已经写好了输入解析；第 6 集只实现 `init` 和 `decide`，使用官方 `tank.hpp`，由官方 `tank_main.cpp` 负责输入输出，不要自己写 `main`。`workspace/` 就是当时发给 AI 的选手包，里面的本地裁判和比赛时完全一样。各个 AI 的代码在 `bots/` 里，可以直接拿来当对手或参考。
+**想写 bot**：先读那一集的 `workspace/RULES.md`（规则与输入输出协议），再看 `workspace/` 里的模板。第 1–3 集的模板已经写好了输入解析；第 6 集只实现 `init` 和 `decide`，使用官方 `tank.hpp`，由官方 `tank_main.cpp` 负责输入输出，不要自己写 `main`。`workspace/` 就是当时发给 AI 的选手包，里面的本地裁判和比赛时完全一样。仓库不提交编译好的程序：第 7 集的陪练、第 8 集的裁判和参考 bot、第 9 集的物理内核、第 10 集的模拟器、第 11 集的裁判和三档陪练，第一次在 `workspace/` 里对战前，先在那一集的目录下运行一次 `python make_player_pack.py`（第 7 集）、`python build_reference.py`（第 8 集）或 `python build_engine.py`（第 9～11 集）；第 3、6 集的基准直接用 `baseline.cpp`，会自动编译。各个 AI 的代码在 `bots/` 里，可以直接拿来当对手或参考。
 
 ## 来投稿
 
