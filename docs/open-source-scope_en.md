@@ -55,6 +55,12 @@ The goal is simple: anyone who clones this repository should be able to understa
 - Text-to-speech settings: service and model, the voice used for each character, the prompts verbatim, post-processing parameters, and the per-line tone sheet.
 - All of it lives in the top-level [`audio/`](../audio/README_en.md).
 
+**Analysis notes** (from episode 11)
+
+- Analyses written while making the episode: how each program thinks, where it is strong and weak, how the captains did their sums in the auction. AI (Gemini, Claude) compiles them from the code and controlled experiments, and GPT checks them claim by claim; the README says they may contain errors and that the code and game data are authoritative.
+- Before publication, production material (instructions for the script, lists of claims to avoid, on-screen lists), internal paths, the organizer's internal arrangements and references to unpublished material are removed. No raw session logs and no long passages of a contestant's raw reasoning; paraphrase and short quotes are fine.
+- They go in the episode's `analysis/`.
+
 ## What is not published
 
 - Voice-over recordings and the music and sound-effect files (third-party assets or output of third-party services that may not be redistributed; the track list and voice settings are in `audio/`), narration scripts, final cuts and editing projects.
@@ -86,6 +92,7 @@ The whole repository uses a single license: [MIT](../LICENSE). Every category ab
 
 - The full scope applies from episode 10 (*Armchair Generals*, 纸上谈兵) on; the renderer, voxel characters, the new illustrations and expression sheets and the image-generation prompts are published from that episode on, together with its video.
 - The episodes among 1–9 that had a standalone renderer got it added in November 2026: episode 3 (capture the flag), 6 (tanks), 7 (light cycles), 8 (soccer) and 9 (bridges), each under its `renderer/`. Voxel characters and illustrations are not added retroactively. Their other materials were already published to roughly the same scope; where an episode falls short (for example, a final tournament that can only be re-run in full with the organizer's control script), its README says so in its section on differences from the contest or in its reproduction notes. Old images and notes in those folders stay as they are.
+- Episode 11 (*Boomerang brawl*, 回旋镖大作战) follows this scope and is the first to include analysis notes (`boomerang/analysis/`); its community challenge is `boomerang/challenge.py` (fixed qualifier reference). See [`boomerang/MANIFEST.md`](../boomerang/MANIFEST.md).
 - Voxel characters, illustrations, expression sheets and image-generation prompts are shared across episodes, so they live in the top-level `characters/` and `art/`, and new characters are added there.
 
 ## Folder layout for each episode
@@ -111,6 +118,7 @@ Future episodes follow the layout below. The folder is named after the game, in 
 │   ├── src/                        Replay-to-footage code
 │   ├── themes/                     Scene themes
 │   └── models/                     Unit and item models
+├── analysis/                       (optional) Analysis notes on the contestants' programs and the event; the README states the source and that errors may remain
 ├── challenge.py                    (optional) One-click challenge: play your program against every contestant
 └── appendix/                       (optional) Side experiments that don't count toward the results
 ```
