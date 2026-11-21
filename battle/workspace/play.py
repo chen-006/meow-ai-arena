@@ -920,7 +920,7 @@ def main():
     except Exception:
         pass
     if not WAR.is_file():
-        fail("找不到 war.exe")
+        fail("找不到 war.exe。开源版不带编译好的模拟器：先在上一层（battle\\）运行 python build_engine.py")   # 开源版加的提示
     a = sys.argv[1:]
     if not a or a[0] in ("-h", "--help", "help"):
         out(__doc__)

@@ -116,7 +116,7 @@ All `play.py` commands are listed in [workspace/README.md](workspace/README.md) 
 
 | Path | Contents |
 |---|---|
-| [workspace/](workspace/README.md) | The contestant package as handed out: README, RULES, COMMANDER, local tools `play.py`, `build.py`, `clock.py`, five levels, three versus maps, sparring armies, examples, starter `submission/` |
+| [workspace/](workspace/README.md) | The contestant package as handed out (`README.md` and `play.py` add a "run `build_engine.py` first" hint): README, RULES, COMMANDER, local tools `play.py`, `build.py`, `clock.py`, five levels, three versus maps, sparring armies, examples, starter `submission/` |
 | [engine/](engine/README_en.md) | Simulator source (C++, on Jolt Physics), interface notes, replay format; built with `python build_engine.py` |
 | [prompt_en.md](prompt_en.md) | The opening and resume messages (translation; original in [prompt.md](prompt.md)) |
 | [bots/](bots/README_en.md) | The nine hand-ins, unmodified: `level1.json`–`level5.json`, `duel.json`, `melee.json`, `commander.cpp`, `notes.md` |
@@ -133,6 +133,7 @@ The character illustrations, expressions and voxel characters live at the top le
 ## Differences from the contest
 
 - The contestant package (`workspace/`) and the submissions (`bots/`) are byte-for-byte originals; hashes are in [source_manifest.json](source_manifest.json). The fallback compiler path in `workspace/build.py` points to a location on the organizer's machine and is kept as is; elsewhere set `CXX` or put g++ on PATH (`score.py` and `build_engine.py` also look in the repository's `tools/w64devkit/`).
+- Two additions to the player pack in the open-source version, only to say "run `build_engine.py` first": `workspace/README.md` gets an open-source note at the top, and the error `play.py` prints when `war.exe` is missing (previously just "找不到 war.exe", war.exe not found) now adds that hint. Simulation and scoring are unchanged. The originals: `original_sha256` of these two files in `source_manifest.json`, and the files themselves at commit `4218610` (`git show 4218610:battle/workspace/play.py`).
 - The contest package shipped a prebuilt `war.exe`. The repository does not commit the exe; it ships the source and `build_engine.py`. Built with w64devkit's GCC 16.2.0 and Jolt Physics commit `6a985659a781`, the exe is **byte-identical** to the contest one (SHA-256 `f703bab3…`). Other compilers are not guaranteed to match; check the results with `tournament/score.py --rerun`.
 - Three lines of engine source changed, none affecting the binary: two comment lines at the top of `host.hpp` that referred to another episode's internal files, and the default Jolt Physics path in `CMakeLists.txt`, which pointed to the organizer's machine and now points to `engine/third_party/JoltPhysics`.
 - The contestant working directory in the opening message is written as `{WORKDIR}`.
