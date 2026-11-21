@@ -1,6 +1,6 @@
 # 配音：音色、提示词、参数
 
-节目里所有人声都是语音合成。这一页写第 10 集（纸上谈兵）实际用的设置，前几集基本相同，差别写在最后。
+节目里所有人声都是语音合成。这一页写第 10 集（纸上谈兵）实际用的设置，前几集基本相同，差别写在最后；第 11 集（OA 争霸·上）的音色、提示词和参数单独写在"第 11 集的设置"一节。
 
 ## 一句话版
 
@@ -107,9 +107,67 @@ Fable 的音色是这样挑的：三个候选音色各配同一句，让 Gemini 
 
 成品统一 48 kHz 立体声 16 位。混音时有人说话的地方背景音乐压低，整片约 -13 LUFS。
 
+## 第 11 集（OA 争霸·上）的设置
+
+模型、服务、后期滤镜都和上面一样（旁白 Charon、角色 Breeze TTS 2 的 `guidance_scale` 2.5 / `speed` 1.0、豆包 `seed-tts-2.0`），这一集只有下面这些不同。**逐句语气表不收**（等于解说稿），只写做法。
+
+### 旁白：整组念、英文提示
+
+- 这一集旁白按语气表分成"组"（开赛前 10 组，一两句到十来句；后半程 8 段共 56 个大组，每组一两分钟），每组一口气念完，再用本地语音识别的词级时间加静音切成句，放回各自的卡点。
+- **提示词只写英文。** 中文的导演说明混在提示里，Charon 会把说明念出来、还会自己编词；Vertex 的 TTS 也不支持 `system_instruction`（返回 400）。所以送去的内容仍是 风格提示 + 读音提示 + `Read this aloud:` + 台词，风格提示改成下面这段（同一个人、同一个状态念完整段），再接**这一组的一句英文基调**（例如"这一段开场，节奏紧凑一点""规则讲解，清楚利落，数字念清楚但别一字一顿"，不收）：
+
+```text
+Keep EXACTLY the same person and the same state for the whole passage (it is one part of a longer episode narrated by the same man): a man around thirty, relaxed and conversational, like telling a friend about a match he is looking forward to; a light variety-show touch, but NOT an announcer or broadcaster voice, never shouting, no exaggerated acting. Keep loudness, pitch and energy within a narrow range. Speak Mandarin Chinese.
+```
+
+- 想让整组快一点时在后面加一句：`Keep it a little quicker and tighter than usual, with shorter pauses, but do not rush the words or swallow syllables.`
+- 整组念两遍的重配：照第 10 集，换"只念一遍"的那几句接在风格提示后面。一两分钟的大组即使加了也还是会重复，所以每组至少配 3 版，再配"中组"（约 200 字一组）当后备，**逐句**在所有版本里挑：整版重复扣 20、句子被标记扣 10、听审点名扣 5、语速偏离扣分，大组优先于中组。
+- 拆成短组（4 句、100 字以内）试过：同一段大组一口气 46 秒，拆成小组 62 秒，Charon 拖慢、乱停，作废，保留大组。
+
+### 旁白的后期（和第 10 集不同的几处）
+
+| 项 | 第 11 集 |
+|---|---|
+| 句内停顿 | 超过 0.35 秒的静音（-40 dB 以下）压到 0.3 秒；句首句尾不动 |
+| 语速 | 后半程整体 **1.05 倍**（`atempo=1.05`）；开赛前按卡点时长对个别句微调 |
+| 句间 | 拼段时每句之间补 0.3 秒静音 |
+| 响度 | 同第 10 集（压缩 + -16 LUFS） |
+
+### 角色音色（第 11 集）
+
+送给 Breeze 的指令格式不变（人设 + 这一句的语气）。第 11 集沿用的音色编号见上面第 10 集的表和 [tts/voices_breeze.json](tts/voices_breeze.json)；新增或改动的如下（人设为指令原文）：
+
+| 角色 | 音色名 | 音色编号 | 人设 |
+|---|---|---|---|
+| Astra | 清雅引路人 | `voc_jgkfvjryu84b` | 二十三到二十六岁阳光明媚的成熟大姐姐，清亮亲切，尾音微微上扬，自信从容。 |
+| Grok | 傲气学姐 | `voc_kwje43kewnst` | 十五到十七岁傲娇拽酷的小恶魔少女，清脆但冷淡，居高临下带点嘲讽，句子短，面无表情地毒舌。 |
+| GLM | 灵犀助手 | `voc_qtzjr6fsztb5` | 十六七岁戴透明护目镜的理科少女，声音清亮年轻，带一点少年气的小得意，笃定但不老成、不端着。（原先用的"韧性逐风者"`voc_a9qfvny3tuky` 太成熟，换掉） |
+| MiMo | 街头追风少女 | `voc_nzxhjaxm6h59` | 十七八岁穿白橙机能外套的明亮少女，开心元气、有点皮，自信又有野心。 |
+| MiMo 的队友（路人台词） | 山野灵果儿 | `voc_cgxpmn7k9gs2` | 十八九岁的普通女生路人，清爽自然，口语化，带一点无奈的吐槽感，不嘶吼。 |
+| Opus | 香农小姐 | `voc_b86bfwct4cjn` | 二十二到二十五岁的名门大小姐，清冷端庄、有书卷气，吐字讲究，礼貌里带一点距离感。 |
+
+- MiMo 的音色是这样选的：三个候选（山野灵果儿、街头追风少女、灵动晨曦）各配同一句，让 Gemini 听了描述选；第 7、8 集 MiMo 用的"傲气学姐"在第 9 集起归了 Grok，两人同场所以换。
+- Sol、Fable、Carbon、Hydrogen、DeepSeek、Kimi、千问沿用第 10 集的音色，人设删掉了"做砸了会自嘲"这类只属于第 10 集剧情的句子。豆包仍是爽快思思，24 kHz，1.1 倍速，不给语气指令。
+- 角色句每句 3 版，后期同第 10 集（切首尾静音、1.1 倍、-16 LUFS）。
+
+### 第 11 集新增的读法
+
+| 台词里 | 送合成的文字 |
+|---|---|
+| `OpenAI` | `Open A I` |
+| `Kimi K3.1` | `Kimi K 三点一` |
+| `Qwen4` | `Qwen 四`（再配读音提示：`Pronounce "Qwen" as one syllable: chwen.`） |
+| `官方 API` | `官方 A P I` |
+| `Epoch AI` | `Epoch A I`（`Pronounce "Epoch" like the English word epoch: EE-pok.`） |
+| `OA` | `O A`（`Say "O A" as two English letters: O, A.`） |
+| `OpenCode` | `Open Code` |
+
+另加了读音提示：`ChatGPT`（chat 加字母 G、P、T）、`Qoder`（像 coder）、`D S H`、`A P I`（逐个字母读）。旁白的"和"一律送"跟"（防念成 hàn），字幕不变；用 Gemini 听审时要告诉它这是规定，不然会把"跟"判成错字。
+
 ## 往期的差别
 
 - 旁白从第 3 集起一直是 Charon 加上面这段风格提示；第 6 集试过在提示词里加一点台湾口音，后来没再用。
 - 角色从第 6 集起用 Breeze 的现成音色；倍速第 6 集是 1.25，第 7 集起定为 1.1。
 - 豆包第 8 集及以前用的是 Seed Audio 1.0 的同一个"爽快思思"音色，第 9 集起换成 seed-tts-2.0。
+- 第 11 集见上面"第 11 集的设置"：旁白改成整组念、提示只写英文，压停顿 + 1.05 倍。
 - 英文版：旁白还是 Charon，角色改用 Gemini 的英文音色（中文音色念英文有口音）。
