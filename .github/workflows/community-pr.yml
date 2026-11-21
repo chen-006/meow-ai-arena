@@ -97,6 +97,9 @@ jobs:
     # 光轮、足球、回旋镖的裁判只支持 Windows（Job Object 管进程），这几集用 Windows 虚拟机
     runs-on: ${{ contains(fromJSON('["tron", "soccer", "boomerang"]'), needs.scope.outputs.episode) && 'windows-2025' || 'ubuntu-24.04' }}
     timeout-minutes: 90
+    env:
+      PYTHONUTF8: "1"
+      PYTHONIOENCODING: utf-8
     defaults:
       run:
         shell: bash
@@ -157,6 +160,9 @@ jobs:
       contains(fromJSON('["OWNER", "MEMBER", "COLLABORATOR"]'), github.event.pull_request.author_association)
     runs-on: windows-2025
     timeout-minutes: 30
+    env:
+      PYTHONUTF8: "1"
+      PYTHONIOENCODING: utf-8
     steps:
       - uses: actions/checkout@v4
         with:
