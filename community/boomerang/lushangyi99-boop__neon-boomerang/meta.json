@@ -1,0 +1,11 @@
+{
+  "author": "氖猫猫",
+  "github": "lushangyi99-boop",
+  "name": "氖光回旋镖",
+  "description": "严格按官方 prompt.md 与选手包零剧透盲考 64.9 分钟独立生成：Delay-4 精确重建、0 延迟落镖雷达、9 角度概率掷镖与原生引擎双场景对抗校验。",
+  "written_by": "ai",
+  "model": "Gemini 4 Neon (XHigh)",
+  "tool": "Antigravity",
+  "based_on": "",
+  "license": "MIT"
+}
