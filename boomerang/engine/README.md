@@ -1,3 +1,5 @@
+[English](README_en.md)
+
 # 引擎和陪练
 
 这一集的规则引擎是单头文件 [`workspace/dart.hpp`](../workspace/dart.hpp)，裁判是 [`workspace/arena.cpp`](../workspace/arena.cpp)，都在选手包里，选手和裁判用的是同一份。这里放的是比赛时**只发了编译好的程序**的三档陪练的源码：
