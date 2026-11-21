@@ -178,7 +178,7 @@ Windows 上没有 `python` 命令时，把 `python` 换成 `.\run.cmd`。如果�
 python make_player_pack.py        # 生成 out/workspace.zip
 ```
 
-脚本用比赛时的编译参数把 `baseline.cpp` 编成 `baseline.exe`，逐个核对其余文件和 `workspace_manifest.json` 里记的比赛时选手包的 sha256，再按原来的文件清单和目录结构打包，包里没有 `baseline.cpp`。然后：
+脚本用比赛时的编译参数把 `baseline.cpp` 编成 `baseline.exe`，逐个核对其余文件和 `workspace_manifest.json` 里记的比赛时选手包的 sha256（`arena.py` 开源时改过一句报错，核对开源版哈希），再按原来的文件清单和目录结构打包，包里没有 `baseline.cpp`。然后：
 
 1. 新建一个空文件夹，只放 `out/workspace.zip`，在里面给模型开一个新会话；
 2. 发 `prompt.md` 里的"开赛提示词"原文。时间规则（30 分钟、最早第 20 分钟交卷、45 分钟强制收卷）写在提示词里，选手包里的 `clock.py` 从解压时刻开始计时；
@@ -186,7 +186,7 @@ python make_player_pack.py        # 生成 out/workspace.zip
 
 ## 和比赛时的差别
 
-- **基准**：比赛时选手只拿到编译好的程序 `baseline.exe`，开源版放的是源码 `workspace/baseline.cpp`，两者对局逐回合一致（开源前对打 30 张图核对过）。`workspace/README.md` 里写到 `baseline.exe` 的命令，换成 `baseline.cpp` 就能用，`arena.py` 会自动编译。
+- **基准**：比赛时选手只拿到编译好的程序 `baseline.exe`，开源版放的是源码 `workspace/baseline.cpp`，两者对局逐回合一致（开源前对打 30 张图核对过）。`workspace/README.md` 里写到 `baseline.exe` 的命令，换成 `baseline.cpp` 就能用，`arena.py` 会自动编译。开源版 `arena.py` 只改了一句报错：找不到 `baseline.exe` 时提示换成 `baseline.cpp`（原来只报“找不到程序”），`workspace_manifest.json` 里记了开源版哈希，`make_player_pack.py` 按它核对；有 `baseline.exe` 时行为和比赛时相同。
 - 除此之外，`workspace/` 和发给选手的 `workspace.zip` 逐字节相同；`bots/` 里的代码和主办方封存的版本逐字节相同（sha256 与 `results/*/清单.json` 里记录的一致）。
 - **中场包**没有单独放：成绩表就是 `results/halftime/成绩.md` 的内容，回放可以用 `tournament/` 重打，对手程序就是 `bots/half1/` 编译出来的。比赛时主办方用脚本计时、封存、补时和生成中场包，这些脚本没有放。
 - **没有放进仓库的**：各模型的原始会话记录；选手交卷时用文字写的策略说明（在会话记录里）；全部 27840 局的完整回放（压缩后约 32 MB，逐局结果在 `results/` 里）；主办方的操作手册、内部说明和测试脚本。

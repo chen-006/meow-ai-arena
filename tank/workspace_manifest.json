@@ -6,7 +6,9 @@
   {
    "path": "workspace/arena.py",
    "size": 44646,
-   "sha256": "f03f6467ecfff2cab94bfaaf5aabd0207bb2fd363030bd1bed3dea07be711522"
+   "sha256": "f03f6467ecfff2cab94bfaaf5aabd0207bb2fd363030bd1bed3dea07be711522",
+   "open_source_sha256": "7980cc97b5da32f5f1eacc90435c4a9559c7a1728c4bc53897814908fe4fdd1b",
+   "note": "开源版改过：找不到 baseline.exe 时报错提示换成 baseline.cpp（只改了这句报错；有 baseline.exe 时行为和比赛时相同）"
   },
   {
    "path": "workspace/baseline.exe",

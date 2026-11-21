@@ -77,6 +77,8 @@ def find_program(spec):
     for p in tried:
         if p.is_file():
             return p.resolve()
+    if Path(spec).name.lower() in ("baseline", "baseline.exe") and (HERE / "baseline.cpp").is_file():   # 开源版加的提示
+        raise SystemExit(f"找不到程序：{spec}。开源版不带编译好的基准 baseline.exe，把它换成 baseline.cpp（会自动编译，对局和 exe 逐回合相同）")
     raise SystemExit(f"找不到程序：{spec}")
 
 
