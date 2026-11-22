@@ -1,0 +1,11 @@
+{
+  "author": "都市小精灵",
+  "github": "ziyanggao64",
+  "name": "四步迎镖",
+  "description": "还原对手四步前看到的局面，预判来镖后迎击或横移冲刺，四人局再按对手的投掷习惯调整走位。",
+  "written_by": "ai",
+  "model": "GPT-6",
+  "tool": "Codex",
+  "based_on": "boomerang/bots/gpt-6.2-astra",
+  "license": "MIT"
+}
