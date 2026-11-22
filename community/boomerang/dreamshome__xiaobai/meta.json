@@ -1,0 +1,10 @@
+{
+  "author": "dreamshome",
+  "github": "dreamshome",
+  "name": "小白",
+  "description": "补偿观测延迟，预测往返镖和混战交火，按地图地形选择走位与出手。",
+  "written_by": "ai",
+  "model": "GPT-6.2 Sol (Max)",
+  "tool": "Codex CLI",
+  "license": "MIT"
+}
