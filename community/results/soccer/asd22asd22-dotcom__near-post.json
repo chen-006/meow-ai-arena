@@ -1,0 +1,290 @@
+{
+ "commit": "fbc31b8953376eaf6cd7aedc89bb2aa46cf5e411",
+ "detail": {
+  "budget": {
+   "budget_kind": "cpu",
+   "first_ms": 1000,
+   "max_timeouts": 30,
+   "step_ms": 10
+  },
+  "complete": true,
+  "field": [
+   {
+    "is_entry": false,
+    "name": "Grok 4.7",
+    "score": -362.3
+   },
+   {
+    "is_entry": false,
+    "name": "腾讯混元 Hy4",
+    "score": -712.5
+   },
+   {
+    "is_entry": false,
+    "name": "Kimi K3.1 Pro",
+    "score": -163.2
+   },
+   {
+    "is_entry": false,
+    "name": "阶跃 Step 5",
+    "score": -720.3
+   },
+   {
+    "is_entry": false,
+    "name": "Gemini 4 Argon",
+    "score": 591.1
+   },
+   {
+    "is_entry": false,
+    "name": "豆包 Doubao-Seed-Evolving",
+    "score": -439.9
+   },
+   {
+    "is_entry": false,
+    "name": "GPT-6 Astra",
+    "score": 793.6
+   },
+   {
+    "is_entry": false,
+    "name": "GPT-6.1 Terra",
+    "score": 669.3
+   },
+   {
+    "is_entry": false,
+    "name": "Claude Opus 5.5",
+    "score": 483.3
+   },
+   {
+    "is_entry": false,
+    "name": "GLM 5.3",
+    "score": -342.8
+   },
+   {
+    "is_entry": false,
+    "name": "DeepSeek V4.1 Flash 1017",
+    "score": -263.2
+   },
+   {
+    "is_entry": false,
+    "name": "Claude Haiku 5.5",
+    "score": -239.6
+   },
+   {
+    "is_entry": true,
+    "name": "你的 bot",
+    "score": -123.4
+   }
+  ],
+  "field_size": 13,
+  "full": false,
+  "games": 120,
+  "games_note": "120 局（15 个对手 × 4 个种子 × 换边）",
+  "mode": "formal",
+  "opponents": [
+   {
+    "display": "Grok 4.7",
+    "draws": 1,
+    "goals_against": 28,
+    "goals_for": 59,
+    "losses": 0,
+    "name": "Grok",
+    "ranked": true,
+    "rating": -362.260770010133,
+    "wins": 7
+   },
+   {
+    "display": "腾讯混元 Hy4",
+    "draws": 0,
+    "goals_against": 33,
+    "goals_for": 95,
+    "losses": 0,
+    "name": "Hunyuan",
+    "ranked": true,
+    "rating": -712.5280485809062,
+    "wins": 8
+   },
+   {
+    "display": "Kimi K3.1 Pro",
+    "draws": 1,
+    "goals_against": 42,
+    "goals_for": 18,
+    "losses": 7,
+    "name": "Kimi",
+    "ranked": true,
+    "rating": -163.2332468168198,
+    "wins": 0
+   },
+   {
+    "display": "阶跃 Step 5",
+    "draws": 0,
+    "goals_against": 19,
+    "goals_for": 161,
+    "losses": 0,
+    "name": "Step",
+    "ranked": true,
+    "rating": -720.2679896089338,
+    "wins": 8
+   },
+   {
+    "display": "Gemini 4 Argon",
+    "draws": 0,
+    "goals_against": 162,
+    "goals_for": 21,
+    "losses": 8,
+    "name": "Gemini",
+    "ranked": true,
+    "rating": 591.1265457076568,
+    "wins": 0
+   },
+   {
+    "display": "豆包 Doubao-Seed-Evolving",
+    "draws": 1,
+    "goals_against": 58,
+    "goals_for": 96,
+    "losses": 1,
+    "name": "Doubao",
+    "ranked": true,
+    "rating": -439.88219441781365,
+    "wins": 6
+   },
+   {
+    "display": "GPT-6 Astra",
+    "draws": 0,
+    "goals_against": 264,
+    "goals_for": 37,
+    "losses": 8,
+    "name": "Astra",
+    "ranked": true,
+    "rating": 793.6188675203998,
+    "wins": 0
+   },
+   {
+    "display": "GPT-6.1 Terra",
+    "draws": 0,
+    "goals_against": 288,
+    "goals_for": 28,
+    "losses": 8,
+    "name": "Terra",
+    "ranked": true,
+    "rating": 669.310827728936,
+    "wins": 0
+   },
+   {
+    "display": "Claude Opus 5.5",
+    "draws": 0,
+    "goals_against": 234,
+    "goals_for": 36,
+    "losses": 8,
+    "name": "Opus",
+    "ranked": true,
+    "rating": 483.3318237742175,
+    "wins": 0
+   },
+   {
+    "display": "GLM 5.3",
+    "draws": 0,
+    "goals_against": 66,
+    "goals_for": 102,
+    "losses": 0,
+    "name": "GLM",
+    "ranked": true,
+    "rating": -342.78464782907105,
+    "wins": 8
+   },
+   {
+    "display": "DeepSeek V4.1 Flash 1017",
+    "draws": 0,
+    "goals_against": 47,
+    "goals_for": 134,
+    "losses": 0,
+    "name": "DeepSeek",
+    "ranked": true,
+    "rating": -263.17964001776016,
+    "wins": 8
+   },
+   {
+    "display": "Claude Haiku 5.5",
+    "draws": 0,
+    "goals_against": 64,
+    "goals_for": 202,
+    "losses": 0,
+    "name": "Haiku",
+    "ranked": true,
+    "rating": -239.6352240107026,
+    "wins": 8
+   },
+   {
+    "display": "基准",
+    "draws": 0,
+    "goals_against": 111,
+    "goals_for": 28,
+    "losses": 8,
+    "name": "ref-baseline",
+    "ranked": false,
+    "rating": 0.0,
+    "wins": 0
+   },
+   {
+    "display": "中档陪练",
+    "draws": 0,
+    "goals_against": 107,
+    "goals_for": 25,
+    "losses": 8,
+    "name": "ref-midfield",
+    "ranked": false,
+    "rating": 206.66357206626833,
+    "wins": 0
+   },
+   {
+    "display": "陪练",
+    "draws": 0,
+    "goals_against": 122,
+    "goals_for": 27,
+    "losses": 8,
+    "name": "ref-sparring",
+    "ranked": false,
+    "rating": 291.35709887140416,
+    "wins": 0
+   }
+  ],
+  "rank": 5,
+  "rating": -123.39488479782494,
+  "rating_method": "fixed-individual",
+  "reference": {
+   "anchor": "ref-baseline",
+   "board": "个人榜",
+   "field": "bt",
+   "path": "soccer/results/individual/results.json.gz"
+  },
+  "schema": 1,
+  "seed": 8001,
+  "seeds_per_opponent": 4,
+  "source_sha256": "56550ef8ee5b05d0395438fb0d8adb6c452488c0bde1f70022f7e9e552fec5b9",
+  "stats": {
+   "crash": 0,
+   "first_ms": 53.015,
+   "invalid": 0,
+   "max_ms": 0.415,
+   "opponent_crash": 0,
+   "opponent_timeouts": 0,
+   "timeouts": 0
+  }
+ },
+ "entry": "asd22asd22-dotcom__near-post",
+ "env": {
+  "compiler": "g++.exe (x86_64-posix-seh-rev1, Built by MinGW-Builds project) 15.2.0",
+  "cpus": 4,
+  "platform": "Windows-2025Server-10.0.26100-SP0",
+  "python": "3.12.10"
+ },
+ "episode": "soccer",
+ "errors": [],
+ "files": {
+  "bot.cpp": "56550ef8ee5b05d0395438fb0d8adb6c452488c0bde1f70022f7e9e552fec5b9"
+ },
+ "mode": "quick",
+ "schema": 1,
+ "score": -123.4,
+ "status": "pass",
+ "time": "2026-11-22T11:51:16Z"
+}
