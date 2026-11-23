@@ -17,24 +17,25 @@
 | 5 | [环路猎手](land/mohen2006__loop-hunter/) | mohen2006（[@mohen2006](https://github.com/mohen2006)） | AI 写 | Step-5-Preview / WorkBuddy | 307 | 3 / 13 | 2026-10-25 |
 | 6 | [大方框](land/light-yuncai__big-loop/) | Light-YunCai（[@light-yuncai](https://github.com/light-yuncai)） | AI 写 | deepseek-flash / DeepSeek Harness | 156 | 6 / 13 | 2026-10-25 |
 | 7 | [ring-weaver](land/laisy25__ring-weaver/) | laisy25（[@laisy25](https://github.com/laisy25)） | AI 写 | DeepSeek-V4.1-Flash / WorkBuddy | 58 | 7 / 13 | 2026-11-10 |
-| 8 | [洪泛圈地](land/spicae__flood-claim/) | spicae（[@spicae](https://github.com/spicae)） | AI 写 | deepseek-V4-pro / WorkBuddy | -38 | 10 / 13 | 2026-10-20 |
+| 8 | [Margin Loop](land/chiiiiiiing__margin-loop/) | LatticeFinch（[@chiiiiiiing](https://github.com/chiiiiiiing)） | AI 写 | GPT-6 / Codex | 14 | 8 / 13 | 2026-11-23 |
+| 9 | [洪泛圈地](land/spicae__flood-claim/) | spicae（[@spicae](https://github.com/spicae)） | AI 写 | deepseek-V4-pro / WorkBuddy | -38 | 10 / 13 | 2026-10-20 |
 
 官方选手参照：每份投稿评测时，官方选手和基准也在同一台虚拟机上打了同一轮小比赛。下表是它们在各次评测里实力值的中位数。
 
 | 官方选手 | 实力值（中位数） | 出现在几次评测里 |
 |---|---:|---:|
-| sonnet-5@claude-code | 330 | 8 |
-| gpt-6-astra@codex | 287 | 8 |
-| opus-5.5@claude-code | 268 | 8 |
-| anchor-sparring | 261 | 8 |
-| gpt-6-sol@codex | 183 | 8 |
-| mimo-2.6-pro@zcode | 157 | 8 |
-| kimi-k3@workbuddy | 35 | 8 |
-| anchor-greedy | 0 | 8 |
-| glm-5.3@workbuddy | -16 | 8 |
-| mystery-model@zcode | -97 | 8 |
-| deepseek-4.1f@workbuddy | -118 | 8 |
-| anchor-random | -321 | 8 |
+| sonnet-5@claude-code | 330 | 9 |
+| gpt-6-astra@codex | 284 | 9 |
+| anchor-sparring | 265 | 9 |
+| opus-5.5@claude-code | 262 | 9 |
+| gpt-6-sol@codex | 184 | 9 |
+| mimo-2.6-pro@zcode | 164 | 9 |
+| kimi-k3@workbuddy | 38 | 9 |
+| anchor-greedy | 0 | 9 |
+| glm-5.3@workbuddy | -19 | 9 |
+| mystery-model@zcode | -97 | 9 |
+| deepseek-4.1f@workbuddy | -118 | 9 |
+| anchor-random | -329 | 9 |
 
 ## 第 2 集 · 炸弹人（`bomberman/`）
 
