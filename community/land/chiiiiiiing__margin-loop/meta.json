@@ -1,0 +1,10 @@
+{
+  "author": "LatticeFinch",
+  "github": "chiiiiiiing",
+  "name": "Margin Loop",
+  "description": "按预期占地面积、行动步数和对手到达轨迹的时间选取折返路线，受威胁时寻最短回程。",
+  "written_by": "ai",
+  "model": "GPT-6",
+  "tool": "Codex",
+  "license": "MIT"
+}
