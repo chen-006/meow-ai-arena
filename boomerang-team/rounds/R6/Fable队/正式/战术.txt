@@ -1,0 +1,5 @@
+fable job=safe
+opus job=hunt
+carbon job=hunt
+glm job=hunt
+deepseek job=hunt

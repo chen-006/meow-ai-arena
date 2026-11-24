@@ -1,0 +1,12 @@
+lane astra A
+lane sol C
+lane hydrogen B
+lane grok C
+lane kimi B
+flex astra HOLD
+flex sol HOLD
+flex hydrogen HOLD
+flex grok HOLD
+flex kimi HOLD
+screen astra SMART
+pace ALL BAL

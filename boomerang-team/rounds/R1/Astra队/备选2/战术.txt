@@ -1,0 +1,17 @@
+wing astra N
+wing sol S
+wing hydrogen S
+wing grok S
+wing kimi N
+role astra SCREEN
+role sol GUARD
+role hydrogen GUARD
+role grok FLEX
+role kimi FLEX
+pace ALL BAL
+flex astra ROAM
+flex sol HOLD
+flex hydrogen HOLD
+flex grok ROAM
+flex kimi ROAM
+rally astra 0,55,6,3.5

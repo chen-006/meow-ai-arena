@@ -1,0 +1,5 @@
+fable pt=A
+opus pt=A
+deepseek pt=C
+carbon pt=C
+glm pt=C job=sit

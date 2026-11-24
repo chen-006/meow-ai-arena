@@ -1,0 +1,26 @@
+--- player.cpp（改前）
++++ player.cpp（改后）
+@@ -930,9 +930,10 @@
+                     const i64 d = ilen(o.p[k].x - me.x, o.p[k].y - me.y);
+                     if (d > 3500) continue;
+                     bool blocked = false;
++                    const i64 fx = me.x + (o.p[k].x - me.x) * 7200 / imax(d, 1), fy = me.y + (o.p[k].y - me.y) * 7200 / imax(d, 1);
+                     for (int m = 0; m < o.n; ++m) {
+                         if (m == seat || !is_mate(gi, m) || !o.p[m].alive) continue;
+-                        if (seg_point_dist(me.x, me.y, o.p[k].x, o.p[k].y, o.p[m].x, o.p[m].y) < 1300) { blocked = true; break; }
++                        if (seg_point_dist(me.x, me.y, fx, fy, o.p[m].x, o.p[m].y) < 1500) { blocked = true; break; }
+                     }
+                     if (!blocked) {
+                         ret.act = A_THROW;
+@@ -967,7 +968,10 @@
+                     const i64 dl = ilen(bdx, bdy);
+                     const Dart& D = o.d[bk];
+                     const i64 spd = dart_step_len(cf, D);
+-                    if (mdst.st == D_HAND && bdist <= 1500 + 2 * spd && bdist > 600) {
++                    bool mate_close = false;
++                    for (int m = 0; m < o.n; ++m)
++                        if (m != seat && is_mate(gi, m) && o.p[m].alive && ilen(o.p[m].x - me.x, o.p[m].y - me.y) < 2400) mate_close = true;
++                    if (!mate_close && mdst.st == D_HAND && bdist <= 1500 + 2 * spd && bdist > 600) {
+                         // 格挡：朝判定那一步镖的位置挥砍
+                         ret.act = A_MELEE;
+                         ret.mx = ret.my = 0;

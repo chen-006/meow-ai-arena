@@ -1,0 +1,5 @@
+fable job=safe go=15,8.5 until=720
+opus job=guard
+carbon job=guard
+glm job=guard
+deepseek job=guard

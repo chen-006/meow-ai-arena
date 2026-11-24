@@ -1,0 +1,95 @@
+--- player.cpp（改前）
++++ player.cpp（改后）
+@@ -6,7 +6,8 @@
+ using namespace dart;
+ 
+ struct Bot {
+-    static constexpr int MAXT = 805;
++    static constexpr int MAXT = 1201;
++    std::string lane = "C", wing = "N", role = "FLEX";
+     std::array<Player, MAXT> hp{};
+     std::array<Dart, MAXT> hd{};
+     std::array<Action, MAXT> ha{};
+@@ -17,6 +18,12 @@
+     void init(const GameInfo& gi) {
+         W = gi.M().width(); H = gi.M().height();
+         last_t.fill(-1000);
++        std::istringstream plan(gi.plan);
++        for (std::string key, name, value; plan >> key >> name >> value;) if (name==gi.names[gi.seat]) {
++            if (key=="lane") lane=value;
++            if (key=="wing") wing=value;
++            if (key=="role") role=value;
++        }
+     }
+ 
+     static i64 dist(const Player& a, const Player& b) { return ilen(a.x-b.x, a.y-b.y); }
+@@ -49,7 +56,7 @@
+             for (int k=0;k<o.n;k++) if (k!=o.seat && g.p[k].alive && !g.p[k].unknown) {
+                 if (g.p[k].st==S_FREE) {
+                     as[k].mx=g.p[k].vx; as[k].my=g.p[k].vy;
+-                    if (threat && g.d[k].st==D_HAND && ilen(g.p[k].x-g.p[o.seat].x,g.p[k].y-g.p[o.seat].y)<4300) {
++                    if (threat && !is_mate(info(),k) && g.d[k].st==D_HAND && ilen(g.p[k].x-g.p[o.seat].x,g.p[k].y-g.p[o.seat].y)<4300) {
+                         as[k].act=A_THROW;
+                         as[k].ax=g.p[o.seat].x+g.p[o.seat].vx*5-g.p[k].x;
+                         as[k].ay=g.p[o.seat].y+g.p[o.seat].vy*5-g.p[k].y;
+@@ -172,7 +179,7 @@
+         }
+         if (was_alive) {
+             score+=5000;
+-            score+=(g.p[seat].kills-oldkills)*14000;
++            score+=(g.p[seat].kills-oldkills)*5200;
+             for (int k=0;k<g.n;k++) if (k!=seat && g.p[k].team!=g.p[seat].team && !g.p[k].alive) score+=6500;
+             for (int k=0;k<g.n;k++) if (k!=seat && g.p[k].team==g.p[seat].team && !g.p[k].alive) score-=9000;
+             int t=target(g,seat);
+@@ -200,16 +207,23 @@
+         std::vector<Action> cand;
+         int t=target(base,o.seat);
+         Action desired=brain(base,o.seat,true);
+-        if (base.p[o.seat].st==S_FREE && (base.d[o.seat].st==D_GROUND || (t>=0 && dist(base.p[o.seat],base.p[t])>3400))) {
+-            i64 gx=base.d[o.seat].st==D_GROUND?base.d[o.seat].x:base.p[t].x;
+-            i64 gy=base.d[o.seat].st==D_GROUND?base.d[o.seat].y:base.p[t].y;
++        bool navigate = o.me().st==S_FREE && (t<0 || dist(o.me(),base.p[t])>3400);
++        i64 gx=W/2, gy=H/2;
++        int side=info().team[o.seat], point=info().point_index(lane);
++        if (o.mode==M_CONTROL && point>=0) { gx=info().points[point].x; gy=info().points[point].y; }
++        if (o.mode==M_ELIM && o.t<70) gy=H/2+((wing=="S")!=bool(side)?5200:-5200);
++        if (o.mode==M_KING && info().king[side]!=o.seat) {
++            int king=info().king[role=="HUNT"?1-side:side];
++            if (king>=0 && o.p[king].vis) { gx=(o.p[king].x*3+W/2)/4; gy=(o.p[king].y*3+H/2)/4; }
++        }
++        if (navigate) {
+             i64 wx,wy;
+             if (path_next(info(),base.p[o.seat].x,base.p[o.seat].y,gx,gy,o.t,wx,wy)) {
+                 desired.mx=wx-base.p[o.seat].x;desired.my=wy-base.p[o.seat].y;unit(desired.mx,desired.my);
+             }
+         }
+         double ang0=std::atan2((double)desired.my,(double)desired.mx);
+-        int nd=info().cfg.mode==M_TEAM?8:12;
++        int nd=8;
+         for (int j=0;j<nd;j++) {
+             double an=ang0+2*3.141592653589793*j/nd;
+             cand.push_back(moving((i64)std::llround(std::cos(an)*1000),(i64)std::llround(std::sin(an)*1000)));
+@@ -274,7 +288,7 @@
+             v+=evaluate(q,o.seat,cand[i],horizon,cpu0)*0.15;
+             if (cand[i].act==A_THROW) v-=25;
+             if (cand[i].act==A_DASH) v-=35;
+-            v+=dot(cand[i].mx,cand[i].my,desired.mx,desired.my)/1000.0*0.10;
++            v+=dot(cand[i].mx,cand[i].my,desired.mx,desired.my)/1000.0*(navigate?2.8:0.10);
+             if (o.t>0) {
+                 i64 dp=dot(cand[i].mx,cand[i].my,ha[o.t-1].mx,ha[o.t-1].my);
+                 if (dp>0) v+=35; else if (dp<0) v-=25;
+@@ -339,6 +353,14 @@
+             }
+             if (!useful) ba.act=A_NONE;
+         }
++        if (ba.act==A_THROW || ba.act==A_MELEE) for (int j=0;j<o.n;++j) if (is_mate(info(),j) && base.p[j].alive) {
++            i64 dx=base.p[j].x-me.x, dy=base.p[j].y-me.y, ax=ba.ax, ay=ba.ay; unit(ax,ay);
++            i64 along=dot(dx,dy,ax,ay)/1000, across=std::abs(dx*ay-dy*ax)/1000;
++            if ((ba.act==A_THROW && along>=-250 && along<7400 && across<850) ||
++                (ba.act==A_MELEE && ilen(dx,dy)<1850 && along>=ilen(dx,dy)*0.38)) ba.act=A_NONE;
++        }
++        int intent=ba.act==A_THROW || me.st==S_THROW ? 1 : ba.act==A_MELEE || me.st==S_SLASH || me.st==S_KICK ? 2 : ba.act==A_DASH || me.st==S_DASH ? 3 : 0;
++        ba.msg=cell_index(me.x)+64*cell_index(me.y)+4096*intent+16384*(o.t%4);
+         if (o.t<MAXT) ha[o.t]=ba;
+         return ba;
+     }

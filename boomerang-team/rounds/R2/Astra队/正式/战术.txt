@@ -1,0 +1,10 @@
+wing astra N
+wing sol S
+wing hydrogen N
+wing grok S
+wing kimi S
+island astra SCREEN
+pace ALL BAL
+rally hydrogen 0,210,6.9,8.3
+rally kimi 0,210,6.9,11.7
+rally sol 0,70,11.0,16.5

@@ -1,0 +1,15 @@
+role astra HUNT
+role sol HUNT
+role hydrogen GUARD
+role grok HUNT
+role kimi GUARD
+wing astra N
+wing sol S
+wing hydrogen S
+wing grok N
+wing kimi N
+kingstyle astra COUNTER
+pace ALL BAL
+mark ALL KING
+rally hydrogen 0,150,4.1,8.5
+pace astra PRESS

@@ -1,0 +1,13 @@
+lane astra B
+lane sol C
+lane hydrogen B
+lane grok C
+lane kimi A
+flex astra HOLD
+flex sol HOLD
+flex hydrogen ROAM
+flex grok HOLD
+flex kimi HOLD
+screen astra SMART
+pace ALL BAL
+rally kimi 0,1200,14.7,3.7

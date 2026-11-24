@@ -1,0 +1,5 @@
+fable go=14.9,10.8 until=720
+opus go=13.1,10.8 until=720
+carbon go=14.0,9.0 until=720
+glm go=4.5,8.5 until=220
+deepseek go=4.5,11.5 until=220

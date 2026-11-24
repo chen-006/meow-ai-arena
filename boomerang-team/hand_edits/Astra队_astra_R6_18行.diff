@@ -1,0 +1,48 @@
+--- player.cpp（改前）
++++ player.cpp（改后）
+@@ -237,6 +237,7 @@
+     array<double,MAXP> importance{};
+     array<double,MAXP> setupSupport{}, incomingSupport{};
+     array<int,MAXP> kingLives{},kingInv{},immuneUntil{};
++    bool guardRim=false;
+     bool exactDuels=false, finalAssist=true;
+     bool readOpening=false, openingDone=false;
+     bool planLeaps=true, leapActive=false;
+@@ -286,6 +287,7 @@
+             if(key=="ring") mobileRing=value!="FIXED";
+             if(key=="push") royalPush=value!="PLAIN";
+             if(key=="aid") coverFriends=value!="ROYAL";
++            if(key=="rim") guardRim=value=="INNER";
+             if(key=="duel") exactDuels=value!="BASIC";
+             if(key=="finish") finalAssist=value!="SOLO";
+             if(key=="opening") readOpening=value=="READ";
+@@ -2256,6 +2258,12 @@
+         int wave=gi->M().wave(cell_index(ir(q.x)),cell_index(ir(q.y)));
+         i64 fall=wave_fall_step(*c,wave);
+         if(fall>=0) v-=17*sat(1-(fall-now-dt)/36.);
++        if(guardRim && king && now>=c->col_start+150 && fall>=0 && fall<lastFloor) {
++            double urgency=sat((now+dt+46.-fall)/40.);
++            Vec centre=vec(gi->M().width(),gi->M().height())*0.5;
++            double outside=std::max(0.,(q-centre).len()/1000.-2.0);
++            v-=urgency*(21.+3.5*outside)+19.*sat((now+dt+14.-fall)/14.);
++        }
+         bool armed=obs->my_dart().st==D_HAND || picked;
+         double near=100,second=100, distFocus=0;
+         for(int k=0;k<n;++k) {
+@@ -3088,6 +3096,16 @@
+         };
+         vector<Vec> dirs;
+         dirs.reserve(40); dirs.push_back({});
++        if(guardRim && king && canMove && now>=c->col_start+150) {
++            int fall=int(cell_fall_step(*gi,cell_index(ir(here.x)),cell_index(ir(here.y))));
++            if(fall>=0 && fall<lastFloor && fall-now<48) {
++                Vec inward=(vec(gi->M().width(),gi->M().height())*0.5-here).unit();
++                consider(inward);
++                if(free && !o.me().cd) consider(inward,A_DASH,inward);
++                dirs.push_back((inward+inward.left()*0.45).unit());
++                dirs.push_back((inward-inward.left()*0.45).unit());
++            }
++        }
+         for(Vec d:interceptions) {
+             consider({},A_THROW,d,-1,-1,-1,{},true);
+             consider(guide,A_THROW,d,-1,-1,-1,{},true);
