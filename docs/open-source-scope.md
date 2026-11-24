@@ -110,6 +110,7 @@ English: [open-source-scope_en.md](open-source-scope_en.md)
 - 这份范围从第 10 集《纸上谈兵》起完整执行，渲染器、体素小人、新立绘和表情差分、生图提示词也从这一集起随视频公开。
 - 第 1～9 集里有独立渲染器的几集，渲染器在 2026-11 补上了：第 3 集夺旗、第 6 集坦克大战、第 7 集光轮对战、第 8 集足球、第 9 集造桥，在各集的 `renderer/`。体素小人和立绘不补。这几集的其余材料已经按大致相同的范围公开；个别与范围不一致的地方（例如某一集的终场需要主办方的总控脚本才能完整重跑），写在那一集 README 的"和比赛时的差别"或复现说明里。往期目录里的旧图和旧说明保持原样。
 - 第 11 集《回旋镖大作战》按这份范围公开，另外第一次收录了分析稿和统计表（`boomerang/analysis/`、`analysis/data/`，含花费表）；第 11 集没有收集赛后复盘回答，选手的说明就是作品里的 `notes.md`；社区挑战用 `boomerang/challenge.py`（固定海选参照）。见 [`boomerang/MANIFEST.md`](../boomerang/MANIFEST.md)。
+- 第 12 集《回旋镖团队赛（OA 争霸·下）》在 [`boomerang-team/`](../boomerang-team/README.md) 按本范围完整公开，除游戏本体、10 位选手代码与赛后复盘、6 回合正式成绩（10,600 局）与 5v5 渲染器外，按第 12 集新增项完整收录了 83 笔正式派活记录（`dispatches/`）、3 笔生效亲手改 diff（`hand_edits/`）、全部 36 套回合布阵与战术单（`rounds/`）、6 张 3×3“如果当时”矩阵（54,000 局，`results/` 与 `tournament/score.py` 一条命令重算核对），以及脱敏分析稿、费用表和三波控制变量实验（`analysis/`）。见 [`boomerang-team/MANIFEST.md`](../boomerang-team/MANIFEST.md)。
 - 体素小人、立绘、表情差分和生图提示词是各集共用的，放在顶层 `characters/` 和 `art/`，以后新增角色也加在这里。
 
 ## 每一集的目录

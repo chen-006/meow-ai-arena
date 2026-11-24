@@ -80,3 +80,7 @@ boomerang/renderer/work/
 boomerang/workspace/_dart_box/
 # 第 11 集探索小实验的跑批脚本要公开（复现用）
 !boomerang/analysis/experiments/tools/
+
+# 第 12 集回旋镖团队赛：渲染器的缓存和中间帧、裁判的沙箱目录
+boomerang-team/renderer/work/
+boomerang-team/workspace/_dart_box/
