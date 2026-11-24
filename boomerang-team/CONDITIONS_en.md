@@ -37,3 +37,14 @@ Episode 12 ("OA Showdown, Part 2" — 5v5 Boomerang Team Match) took place on **
   - Team Astra: 15.8 / 14.7 / 15.4 / 16.6 / 15.7 / 16.2 min (94.3 min total; 28 round dispatches to teammates).
   - Team Fable: 8.5 / 10.8 / 6.9 / 8.9 / 10.3 / 9.8 min (55.1 min total; 0 round dispatches to teammates).
 - **Referee load**: 10 ms CPU per step (1,000 ms step 0), 1 GB memory limit, no child processes, Windows Job Object accounting with `--sandbox none --workers 6`. Across all 10,600 official games, 116 referee faults occurred (all counted as adjudicated; no crashes/exits).
+
+## Interruptions & Incidents
+
+All times are the organizer's local time (PST).
+
+- **Kimi's tools unavailable at the start**: after development began at 08:28, Kimi's file-read and shell tools returned `environment ... does not exist` (dispatches #04, #05), caused by the organizer's pre-match setup; fixed at 08:48. In the meantime Team Astra's captain spent one hand edit at 08:37 to patch Kimi's program ([diff](hand_edits/Astra队_kimi_开发_30行.diff)). After the fix the organizer told the captain the hand edit was refunded and the change kept, so Team Astra still had 3 ([notice](prompts/主办方通知/Astra队_第1条_Kimi修复.txt)).
+- **30-minute cap on a single teammate task**: the dispatch tool originally ended any teammate task after 30 minutes; 7 tasks hit it early in development (Team Astra #01, #02, #03, #11; Team Fable #07, #08, #09, shown as "timeout"), with all saved files kept. The cap was then raised to the development deadline and both captains got the same notice ([text](prompts/主办方通知/)).
+- **Other dispatches that did not finish normally**: in round decision windows Grok twice (#50, #74) had not replied by the deadline, and one Kimi task (#58) ended with an abnormal exit code; captains carried on with whatever they had received.
+- **Overnight break between rounds 5 and 6**: rounds 1–5 were played on the afternoon of 11-21 and round 6 on the morning of 11-22. Programs had been frozen at the development deadline; nobody could dispatch or edit code during the break, and round 6 had the usual 15-minute window.
+- Referee faults in official games stand as adjudicated (see the load notes above).
+

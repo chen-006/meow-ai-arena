@@ -5,6 +5,7 @@
 - **Astra**（R6 亲手改 +18 行）和 **GLM**（R4 亲手改 +6/−2 行）同时保留开发冻结时的 `交卷.cpp` 与亲手改后的最终 `player.cpp`；其余 8 位选手的 `player.cpp` 与开发冻结时的 `交卷.cpp` 逐字节相同。
 - **Kimi** 的 30 行亲手改发生在开发阶段初期，随后 Kimi 本人继续迭代至开发冻结，故冻结版即最终上场版；三笔亲手改的完整 diff 见 [`../hand_edits/`](../hand_edits/README.md)。
 - `gemini-4-hydrogen/notes.md` 与 `gemini-4-carbon/notes.md` 仅将文中 5 处本机 `file:///` 绝对路径链接改为相对路径（如 `player.cpp`），正文一字未改，原件 SHA-256 记录于 `../source_manifest.json`。
+- 笔记原样收录，其中有些相对链接指向选手当时工作目录里的文件（旧版本备份、自测回放、回合材料），这些不在收录范围内，点开会是 404。每回合的布阵和战术单见 [`../rounds/`](../rounds/README.md)，回放见 [`../replays/`](../replays/README.md)。
 
 | 队伍 | 选手 | 身份 | 席位名 | 目录 | 冻结行数 | 终版行数 | 备注 |
 |---|---|---|---|---|---:|---:|---|

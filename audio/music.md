@@ -36,21 +36,28 @@
 | Owies Ukulele | Michael Ramir C. | 1072 | 第 9、10 集纯享版 |
 | Sports Highlights | Ahjay Stelino | 51 | 第 9、10 集纯享版 |
 | Rising Forest | Diego Nava | 471 | 第 9、10 集纯享版结尾 |
-| Thunder | Arulo | 318 | 第 12 集候选：开场高燃 Trap（[Mixkit](https://assets.mixkit.co/music/318/318.mp3)） |
-| Waka Floka Type | Arulo | 364 | 第 12 集候选：暗黑史诗开场 Trap（[Mixkit](https://assets.mixkit.co/music/364/364.mp3)） |
-| Trap | Arulo | 305 | 第 12 集候选：高速卡点 Hard Trap（[Mixkit](https://assets.mixkit.co/music/305/305.mp3)） |
-| Carti Bih | Arulo | 418 | 第 12 集候选：铜管律动 Brass Trap（[Mixkit](https://assets.mixkit.co/music/418/418.mp3)） |
-| G Eazy NBA type | Arulo | 403 | 第 12 集候选：冷峻竞技集锦 Trap（[Mixkit](https://assets.mixkit.co/music/403/403.mp3)） |
-| Trap Electro Vibes | Alejandro Magaña (A. M.) | 126 | 第 12 集候选：赛博科技感 Electro Trap（[Mixkit](https://assets.mixkit.co/music/126/126.mp3)） |
-| War Cry | Michael Ramir C. | 1122 | 第 12 集候选：双堡刺王史诗战歌（[Mixkit](https://assets.mixkit.co/music/1122/1122.mp3)） |
-| Pitbull | Michael Ramir C. | 1008 | 第 12 集候选：火山口电子摇滚（[Mixkit](https://assets.mixkit.co/music/1008/1008.mp3)） |
-| Beating Break | Alejandro Magaña (A. M.) | 174 | 第 12 集候选：解说铺底 Breakbeat（[Mixkit](https://assets.mixkit.co/music/174/174.mp3)） |
-| H. K. | Arulo | 356 | 第 12 集候选：冷峻战术推进 Trap（[Mixkit](https://assets.mixkit.co/music/356/356.mp3)） |
-| Greed | Arulo | 404 | 第 12 集候选：R4 矩阵悬疑博弈 Trap（[Mixkit](https://assets.mixkit.co/music/404/404.mp3)） |
-| No Turning Back | Alejandro Magaña (A. M.) | 118 | 第 12 集候选：工业重低音悬疑（[Mixkit](https://assets.mixkit.co/music/118/118.mp3)） |
-| A Voice from The Past | Eugenio Mininni | 548 | 第 12 集候选：冷静科技数据脉冲（[Mixkit](https://assets.mixkit.co/music/548/548.mp3)） |
-| Life's a Movie | Arulo | 322 | 第 12 集候选：终章谢幕史诗（[Mixkit](https://assets.mixkit.co/music/322/322.mp3)） |
-| Drawing the Sky | Eugenio Mininni | 606 | 第 12 集候选：十人赛后复盘钢琴（[Mixkit](https://assets.mixkit.co/music/606/606.mp3)） |
+
+### 第 12 集候选曲
+
+第 12 集制作时挑出来的候选，还没有对应到发布的视频。视频发布后，用上的按简介里的声明并入上表，没用上的从这里删掉。
+
+| 曲名 | 作者 | 编号 | 风格 |
+|---|---|---|---|
+| Thunder | Arulo | 318 | Trap |
+| Waka Floka Type | Arulo | 364 | 暗黑史诗 Trap |
+| Trap | Arulo | 305 | Hard Trap |
+| Carti Bih | Arulo | 418 | Brass Trap |
+| G Eazy NBA type | Arulo | 403 | 冷峻 Trap |
+| Trap Electro Vibes | Alejandro Magaña (A. M.) | 126 | Electro Trap |
+| War Cry | Michael Ramir C. | 1122 | 史诗战歌 |
+| Pitbull | Michael Ramir C. | 1008 | 电子摇滚 |
+| Beating Break | Alejandro Magaña (A. M.) | 174 | Breakbeat |
+| H. K. | Arulo | 356 | 冷峻 Trap |
+| Greed | Arulo | 404 | 悬疑 Trap |
+| No Turning Back | Alejandro Magaña (A. M.) | 118 | 工业重低音 |
+| A Voice from The Past | Eugenio Mininni | 548 | 科技脉冲 |
+| Life's a Movie | Arulo | 322 | 史诗 |
+| Drawing the Sky | Eugenio Mininni | 606 | 钢琴 |
 
 ### 第 10 集正片的铺法
 

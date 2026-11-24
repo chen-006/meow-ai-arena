@@ -7,7 +7,7 @@
     "workspace/bots/mid.exe": "0088ae09a750eb872a565a598798bbbd03a3ef7a7677e29bcf14ad89416678e1",
     "workspace/bots/strong.exe": "e1b6a977c37546ab110c2b29b2642a88b7892cc3fa42199c710c9b0d26aacbd5"
   },
-  "file_count": 298,
+  "file_count": 297,
   "files": {
     "analysis/data/00_六回合正式成绩.csv": {
       "sha256": "6f9ef903040e5421bdceb4cc62e84bb6507e84c6c1f8057a341a63d21e4aa61a",
@@ -78,8 +78,8 @@
       "bytes": 287
     },
     "analysis/experiments/README.md": {
-      "sha256": "1712dd9617fc07c1fc258e7c068334d020790cf8e96f0a81f0b8c8c6087409e2",
-      "bytes": 2386
+      "sha256": "8bb76a52552ae8f0a88f208a98b22fc853a6a137e4243e6f5200011052266716",
+      "bytes": 3148
     },
     "analysis/experiments/results/wave1_msg_audit.json": {
       "sha256": "3fbdb49b1da64c1511964c249500f6884a7a1b9485727b0026bbe4d4e3224f88",
@@ -126,8 +126,8 @@
       "bytes": 14413
     },
     "analysis/experiments/wave1_探索小实验.md": {
-      "sha256": "7cbbec4344721d4882b524e581e3feb8b0a76c0369b0d21b72c0a19c9fbf5f8d",
-      "bytes": 22142
+      "sha256": "7f6c8fbddf4086dc2f0a4eebe31ecf40509a1a5de53889fc410f03458ecb3629",
+      "bytes": 22273
     },
     "analysis/experiments/wave2_探索小实验_二波.md": {
       "sha256": "9304933809d82886abf8e478ec76a51ee68946115c4d7967bec13de317507d1b",
@@ -150,12 +150,12 @@
       "bytes": 11423
     },
     "analysis/正赛回放寻宝.md": {
-      "sha256": "cef01095750c33d6e7097b882a4a4541bfa145ecc962a0d2189bf3d288304dfa",
-      "bytes": 18601
+      "sha256": "b81728dc657eb27475e1ff5540ee547e5c0fc98d7bc29cb507336164873c635c",
+      "bytes": 18568
     },
     "analysis/硬数据总账.md": {
-      "sha256": "aee4f23f4febdbf32c551a46499df6236f8798ecb0bdcc5a8b768ae1635f7cb0",
-      "bytes": 73775
+      "sha256": "85c48768339e5313afae9c6b8418a24235ca326768d38a42a1fc3f4badcb8aaf",
+      "bytes": 74159
     },
     "analysis/费用表.md": {
       "sha256": "48cb85506ebe871ffb0c5af47820e654f158299fb64714069a4bbe5d775addf7",
@@ -260,36 +260,36 @@
       "bytes": 32355
     },
     "bots/README.md": {
-      "sha256": "3d9c7dc0c13e7d6400abc000db945fd4be41d898df969be8c55f2cae0994680b",
-      "bytes": 2354
+      "sha256": "f8551512a0411f94236a9f964323003ec13e91b71b99cd06487cf273a5b5f765",
+      "bytes": 2669
     },
     "build_engine.py": {
       "sha256": "9d7d0b0e83bf815bb381e84fa8710d8c9229e414ab3f6dcbe2cb72565f00a70d",
       "bytes": 4089
     },
     "CONDITIONS.md": {
-      "sha256": "ddffe72603017f7060db5d0895a7a901c04cda8fb66bc1bd1551c033ebcbf0c4",
-      "bytes": 5536
+      "sha256": "6391968a38cdf35ed5f9e964f1677a5b972e12ef1986cb12fd5a6bacf0fe8e08",
+      "bytes": 7126
     },
     "CONDITIONS_en.md": {
-      "sha256": "638b594fbd832e5c4a593f4c353429885258d6ad363f553013899c6b1fec51fc",
-      "bytes": 3815
+      "sha256": "d1f80143673677c1469b2f0f474fa21f0332476b86e1bb68e0616437d4cc14cb",
+      "bytes": 5464
     },
     "dispatches/astra_team.md": {
-      "sha256": "08f24d68a8fd4771a78e5f3a1d997a628aebaa506676dc39ea651d0b31aa8405",
-      "bytes": 163652
+      "sha256": "502640cbff4d598a07d3092baa2ec2eb24fe62f9251faf78d664df47855c491d",
+      "bytes": 162799
     },
     "dispatches/dispatches.json": {
-      "sha256": "8e52bf0fa037c4acc232782040c931923c82eafa890daf2a08d272ec27e12976",
-      "bytes": 332149
+      "sha256": "8275a45ab8b703c12a5ff527e02a3744f0237b52babc2fd949f5687cb7d27067",
+      "bytes": 331122
     },
     "dispatches/fable_team.md": {
-      "sha256": "5c064bd9396c37c36a4eba27af69a3e7da202bd9814963c3e96b5584a69a9df6",
-      "bytes": 161356
+      "sha256": "60dd55f34a9da8f5d7510343580ea579ab1d181063fd3838eac110969f9a9399",
+      "bytes": 161182
     },
     "dispatches/README.md": {
-      "sha256": "e1fa21da6c4dd1100ac790f6eb315c70bcd930b5c244a932abc87b5eaf0199bc",
-      "bytes": 1669
+      "sha256": "6f82a62feb0fd43f6eec5148a20ff506996d8111fd53080f4e7ebd89dafb6ec1",
+      "bytes": 2750
     },
     "engine/arena.cpp": {
       "sha256": "a808033a00fc779c7123683ef314117090a1731b27b5413bc82d91d66e1a155d",
@@ -338,20 +338,20 @@
       "bytes": 1662
     },
     "hand_edits/README.md": {
-      "sha256": "b82bcad9c83a4f10b9b5866c542a246798087c70d06b3229db320e3a4d213e9d",
-      "bytes": 1359
+      "sha256": "220846f4c6c0a040df3a374abd55e802448b2b9193c2f874083c2dd27e01df0c",
+      "bytes": 1693
     },
     "MANIFEST.md": {
-      "sha256": "9ecf52453eb3844f7dd33c6005212af11a4cebd8224e193d81c98f70bbf01879",
-      "bytes": 3926
+      "sha256": "247793d761de0f2241eb7460eb51f98a4022e7d45733b6fbed1eb7b13e00cd34",
+      "bytes": 4247
     },
     "prompt.md": {
-      "sha256": "5168a15e43ac858c3b5ad5008c3ae7182e587bc16a3c34645e4e63306d2ffffd",
-      "bytes": 389
+      "sha256": "403e98012c9a64f7648660ababbf78b5e255688b86d92b932dbbf6f68894f2b2",
+      "bytes": 8940
     },
     "prompts/README.md": {
-      "sha256": "f2a3a41c311038d4027fa7e89fd15d74636d0d2efc5cc7cbf5ffcbb33b55d335",
-      "bytes": 1216
+      "sha256": "207321621d904a5b889d11206504527c05aaf81287ab6e1380226303ca21337d",
+      "bytes": 2692
     },
     "prompts/主办方通知/Astra队_放宽单次任务上限.txt": {
       "sha256": "b24689ae10db9e32f855968e8e4c44b634df4bfb08b78673b4f8d6170686d2da",
@@ -370,28 +370,28 @@
       "bytes": 1793
     },
     "prompts/回合开始.md": {
-      "sha256": "34556c80737b52c56728765d925fb5b9442df7a5dfc8684a13c1153d586f7956",
-      "bytes": 3742
+      "sha256": "3d57976f8f18cd7333bf6f825331d26e645c7121e2baaf2ba8248e4ced8c93a4",
+      "bytes": 3738
     },
     "prompts/回合结果.md": {
-      "sha256": "c8933a1d1199a1077639e23d9efb8ea59e185f517b913c9497224353cec5fd11",
-      "bytes": 1502
+      "sha256": "49ec31bd99bcd5a13ffff01411947662129f34e1f83b79d4a33b773537ed817b",
+      "bytes": 1532
     },
     "prompts/开发结束_代码冻结.md": {
-      "sha256": "c6b4418bdedccf102f37a0b049dc95ea819b556be15a7166af8eb736a0663ab2",
-      "bytes": 1600
+      "sha256": "f4c831ffe2d2deffa49a8155e48a8268820d347123bc5ac8c104a1ee046cc2b1",
+      "bytes": 1497
     },
     "prompts/开赛_队员.md": {
-      "sha256": "88862cafeba5ad2f6ce52793fb8445c9bf658d21ba24370e7ee5a71fd5e30aee",
-      "bytes": 4963
+      "sha256": "80c83633c1f1e47564d2271cef6d8449a4797e9304a25f97e1b7108501069b61",
+      "bytes": 4989
     },
     "prompts/开赛_队长.md": {
-      "sha256": "014deffcaefe1db8620b616eefb9bfb4e9ab71ddf1503fe56667933f663f24a7",
-      "bytes": 9180
+      "sha256": "9cb6a35efab794f348924e097ba575e873630f5a96a1501d58bdde4be0b10599",
+      "bytes": 9174
     },
     "prompts/比赛结束.md": {
-      "sha256": "a69cc5db1eeb4be2561863076d076124a0cf706994695cfc9704c4866caf52db",
-      "bytes": 1589
+      "sha256": "e1f2d82a968f3c98ab25fd96a6d78381ec16fd4f6993636fbff64190ca269fad",
+      "bytes": 1403
     },
     "prompts/队员赛后复盘提示.txt": {
       "sha256": "846bee3db8e4edc9baa652aca72fb125ac26544fcea9c8cd5e656f1ea322d6fa",
@@ -402,12 +402,12 @@
       "bytes": 6071
     },
     "README.md": {
-      "sha256": "bd23c8f567828fcf95f91c140421fe4bd9937c6c0947336c233d36f80eddfe42",
-      "bytes": 11487
+      "sha256": "b54b3ccb98efd445632fdbc75df97895b6a9587825adc2b29a005f7bae40ee8c",
+      "bytes": 11830
     },
     "README_en.md": {
-      "sha256": "3e149cf416ba39ab1fd69ad3d6ff3444b598776905cb179adb5dde557bc65f87",
-      "bytes": 4018
+      "sha256": "324e7112793ab84e26468d6c2b6645e61a67d651f7a08fdafb947aa6623bee55",
+      "bytes": 4229
     },
     "renderer/maps/caldera.txt": {
       "sha256": "b3b2e326deddea0150089e10a4b266c14ea071bb615069a1c18d72410e77e634",
@@ -422,8 +422,8 @@
       "bytes": 5817
     },
     "renderer/README.md": {
-      "sha256": "1b3d1557ab4060755dc9c4161c21cc61ad5f12d8bd6b1a958f561da5a467c625",
-      "bytes": 4689
+      "sha256": "f8c373ba1709059049d1bdb96fed62ee54c211eec6672bc25e5a0f6e8a984cba",
+      "bytes": 4969
     },
     "renderer/render_game.py": {
       "sha256": "94d405f01512d7183c66a5bb833b74fdebb8d9e14ab9294c637dc1c5fa23ab10",
@@ -432,10 +432,6 @@
     "renderer/src/cast.py": {
       "sha256": "7838555b12c3e71696d191e289397d2029af64b5343a5754cfecae4820cd511b",
       "bytes": 5042
-    },
-    "renderer/src/chain12.py": {
-      "sha256": "25706c0680e0e1e3ddfc94ab892b906c5a769e89bf55df31916a357de0733d4d",
-      "bytes": 3053
     },
     "renderer/src/chars.py": {
       "sha256": "cd310a84a5c6f1196d1292adfc1081bf701d226df90474485ce201dea0e2ecf1",

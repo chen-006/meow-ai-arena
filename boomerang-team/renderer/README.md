@@ -34,6 +34,13 @@ renderer\出片.cmd replays\R5_g1662_glm_kick_king.txt -o R5_g1662.mp4 --procs 3
 - **地图主题自动匹配**：`caldera` → 火山口岩浆、`piers` → 三座栈桥海港、`keeps` → 双堡石城；可用 `--theme <名字>` 覆盖。首次渲染某张图会自动做数分钟地形与贴图预处理，并按地图指纹缓存在 `renderer/work/cache/`。
 - **常用参数**：`-o 输出.mp4`、`--procs 3`（并行 Blender 进程数）、`--samples 12`（EEVEE 采样数）、`--frames a:b`（仅渲片段）、`--roster ...`（手动指定 10 个造型名）、`--no-hud`、`--keep`（保留中间帧）。中断后重跑同一命令可自动跳过已渲帧。
 
+没装 Blender 时，可以先确认回放和信息栏没问题（只需要 Python 和 pillow，几秒钟）：
+
+```bash
+cd renderer/src
+python -c "import replay, timeline, hud; rp = replay.load('../../replays/R6_g1336_kings_duel.txt'); print(rp.T, timeline.Timeline(rp).n)"
+```
+
 ## 3. 出关键时刻静帧
 
 ```bash

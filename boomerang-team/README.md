@@ -2,7 +2,12 @@
 
 # 第 12 集 · 回旋镖团队赛（OA 争霸·下）
 
-承接第 11 集海选与队长拍卖结果，**Astra 队**与 **Fable 队**两支 5 人 AI 战队打一场完整的 5v5 回旋镖团队赛：先各自经历 120 分钟团队开发（队长只能发文字任务书指挥四名队员、全场最多 3 次不超过 30 行的亲手改，编译产物自动共享联调），时间到全员代码冻结；随后在**火山口（歼灭）**、**三座栈桥（占点）**、**双堡（刺王）**三张新地图上展开 **6 回合布阵与战术单博弈**，正式赛共 **10,600 局**，赛后另对 6 回合全部 36 套正式与备选方案跑完 **6 张 3×3“如果当时”矩阵（54,000 局）**。最终 **Astra 队 5.5 : 0.5 获胜**。
+第 11 集海选和队长拍卖之后，**Astra 队**和 **Fable 队**各五个模型，打一场 5v5 回旋镖团队赛。最终 **Astra 队 5.5 : 0.5 获胜**。
+
+比赛分两段：
+
+1. **团队开发 120 分钟**：队长只能用文字任务书指挥四名队员，各人改各人的程序，编译成功的程序自动发给队友联调；全场另有 3 次、每次不超过 30 行的亲手改。时间到，十个程序全部冻结。
+2. **六回合布阵对决**：火山口（歼灭）、三座栈桥（占点）、双堡（刺王）各两回合。每回合两队同时交布阵和战术单，正式那套打 1,300～2,000 局定这一回合的分，六回合共 **10,600 局**。赛后再把每回合两队的正式和两套备选两两对打，得到 6 张 3×3"如果当时"矩阵（**54,000 局**）。
 
 - **目录里有什么**：`workspace/` 团队赛选手包 · `engine/` 裁判与三档陪练源码 · `build_engine.py` 一键编译裁判与陪练 · `prompt.md` 与 `prompts/` 全部提示词与通知原文 · `dispatches/` 83 笔正式派活记录 · `hand_edits/` 3 笔生效亲手改 diff · `rounds/` 6 回合全部 36 套布阵与战术单 · `bots/` 10 位选手程序与笔记（含赛后复盘） · `results/` 6 回合正式成绩、逐局结果与 6 张 3×3 矩阵 · `tournament/` 一条命令重算与核对脚本 · `replays/` 28 局代表性与经典回放 · `analysis/` 脱敏分析稿、费用表、帕累托数据与三波控制变量实验 · `renderer/` 5v5 团队赛渲染器
 - **复现成绩与矩阵**：`cd boomerang-team && python tournament/score.py`：只要 Python 3.9+（无第三方依赖），约 1～2 秒从 `results/formal_games.jsonl.gz`（10,600 局）和 `results/matrix_games.jsonl.gz`（54,000 局）重算全部 6 回合正式比分（含种子配对标准误与两倍 SE 平局判定）及 6 张 3×3 共 54 格矩阵，逐项核对并输出“核对通过”。
@@ -87,7 +92,7 @@ python renderer/render_game.py replays/R1_g366_astra_1v5.txt -o R1_g366.mp4
 | [`replays/`](replays/README.md) | 28 局代表性与精选经典回放 |
 | [`analysis/`](analysis/README.md) | 脱敏分析稿、硬数据总账、费用表、帕累托量化数据与图、双队源码策略解析、正赛回放寻宝、三波控制变量实验 |
 | [`renderer/`](renderer/README.md) | 第 12 集 5v5 团队赛 Blender 渲染器 |
-| [`CONDITIONS.md`](CONDITIONS.md) | 比赛条件：模型、工具、思考档、用时与赛场负载 |
+| [`CONDITIONS.md`](CONDITIONS.md) | 比赛条件：模型、工具、思考档、用时、中断和事故、赛场负载 |
 | [`MANIFEST.md`](MANIFEST.md) | 收录范围：放了什么、不放什么 |
 | [`source_manifest.json`](source_manifest.json) | 全部收录文件与比赛原件的 SHA-256 清单 |
 
@@ -96,7 +101,8 @@ python renderer/render_game.py replays/R1_g366_astra_1v5.txt -o R1_g366.mp4
 - 选手包（`workspace/`）不提交编译好的 `.exe`，改用 `build_engine.py` 从源码编译（实测三档陪练 `weak.exe`、`mid.exe`、`strong.exe` 用 w64devkit GCC 16.2.0 编译与比赛原件逐字节相同）。
 - `workspace/README.md` 与 `workspace/match.py` 仅补充了“开源版先运行 `python build_engine.py`”的提示；`workspace/build.py` 的本地编译器兜底路径改为仓库 `tools/w64devkit`；`engine/arena.cpp` 移除了主办方本地沙箱回退路径（正式赛与本地对战默认均用 `--sandbox none`）。
 - 提示词、派活记录与两份选手笔记（`gemini-4-hydrogen/notes.md`、`gemini-4-carbon/notes.md`）中指向主办方本机的绝对路径已替换为相对路径或 `{WORKDIR}` 占位，原件 SHA-256 记录于 [`source_manifest.json`](source_manifest.json)。
-- 渲染器中主办方本机绝对路径已改为环境变量（`DART_BLENDER`、`DART_WORK`、`DART_CACHE`、`DART_AVATARS`、`DART_FONT`、`DART_FFMPEG`、`DART_PORTRAITS`）和相对仓库的默认值，头像默认复用 [`../boomerang/renderer/assets/avatars/`](../boomerang/renderer/assets/avatars/NOTICE.md)。
+- 渲染器中主办方本机绝对路径已改为环境变量（`DART_BLENDER`、`DART_PYTHON`、`DART_WORK`、`DART_CACHE`、`DART_AVATARS`、`DART_FONT`、`DART_FFMPEG`、`DART_PORTRAITS`）和相对仓库的默认值，头像默认复用 [`../boomerang/renderer/assets/avatars/`](../boomerang/renderer/assets/avatars/NOTICE.md)。
+- 比赛中的中断和事故（Kimi 工具开局不可用、队员单次任务 30 分钟上限、第 5、6 回合之间隔夜）见 [`CONDITIONS.md`](CONDITIONS.md)"中断和事故"。
 - 不收录：选手原始会话日志与原始思考内容、主办方运营脚本与内部日志、密钥/账号/余额、配音/解说稿/字幕/音乐 MP3/剪辑工程、全部 10,600 局原始回放及实验原始大回放。详见 [`MANIFEST.md`](MANIFEST.md)。
 
 ## 视频

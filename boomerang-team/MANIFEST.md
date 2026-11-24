@@ -8,7 +8,7 @@
 |---|---|---|
 | 游戏本体与选手包 | 5v5 团队赛规则 `RULES.md`、引擎头文件 `dart.hpp`、本地工具 `build.py`、`match.py`、`布阵.py`、`clock.py`、模板、网页查看器 `viewer.html`、回放格式、全部 3 张团队地图（`caldera`、`piers`、`keeps`）与默认布阵 | `workspace/`（不提交 `.exe`；`README.md`、`match.py` 增加先运行 `build_engine.py` 提示） |
 | 引擎与陪练源码 | 裁判源码 `arena.cpp`、`json.hpp`、`接口说明.md`、三档陪练源码 `sparring/`、一键构建脚本 `build_engine.py`（实测三档陪练与比赛原件逐字节相同） | `engine/`、`build_engine.py` |
-| 比赛材料 | 队长/队员开赛、冻结、六回合、商量前言、复盘、队长须知与主办方通知原文；比赛条件说明 | `prompt.md`、`prompts/`、`CONDITIONS.md`、`CONDITIONS_en.md` |
+| 比赛材料 | 队长/队员开赛、冻结、六回合、商量前言、复盘、队长须知与比赛期间 3 条临时通知原文（模板开头的引用块是开源时补的说明，主办方操作步骤已删）；比赛条件说明（含中断和事故） | `prompt.md`、`prompts/`、`CONDITIONS.md`、`CONDITIONS_en.md` |
 | 派活与亲手改 | 全部 83 笔正式派活记录（仅含任务书原文、队员最终回复、阶段/耗时/状态）；3 笔生效亲手改 diff（Kimi 30 行、GLM 6 行、Astra 18 行） | `dispatches/`、`hand_edits/` |
 | 回合布阵与战术 | 全部 6 回合两队正式、备选 1、备选 2 共 36 套生效 `布阵.json` 与 `战术.txt` | `rounds/R1..R6/` |
 | 选手作品 | 10 位选手最终 `player.cpp`（Astra 与 GLM 另留亲手改前 `交卷.cpp`）及 `notes.md`（含赛后复盘） | `bots/` |
@@ -27,8 +27,9 @@
 | 密钥、API Token、账号余额与内部账单 | 敏感信息，绝不公开 |
 | 解说稿、视频规划大纲、排雷清单、上屏清单、配音成品、字幕、剪辑工程、音乐 MP3 文件 | 范围规定不公开（Mixkit 许可禁止再分发音频文件） |
 | 编译产物 `.exe`（裁判、陪练、选手冻结 exe）与选手工作目录编译/自测缓存 | 仓库不提交二进制；裁判与陪练由 `build_engine.py` 编译 |
+| 三波探索实验的跑批脚本（`prepare.py`、`run.py` 等） | 只收统计脚本和汇总数据，见 `analysis/experiments/README.md`"能不能复跑" |
 | 全部 10,600 局原始大回放与三波探索实验原始回放 | 体积过大；已提供 28 局代表与经典回放及完整 64,600 局精简逐局数据 |
-| 渲染器 `_work/` 缓存、样片 mp4、静帧成品、旧 `.bak*` 备份 | 可由渲染器按命令重出，不入库 |
+| 渲染器 `work/` 缓存、样片 mp4、静帧成品、旧 `.bak*` 备份、出样片的一次性串联脚本 | 可由渲染器按命令重出，不入库 |
 
 ## 许可与署名
 
