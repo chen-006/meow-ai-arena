@@ -1,0 +1,11 @@
+--- evidence/glm.cpp
++++ patches/glm_xy.cpp
+@@ -798,7 +798,7 @@
+             const i64 m = o.p[k].msg;
+             if (m <= 0) continue;
+             const i64 F = m / 16384;
+-            const i64 qx = (m / 128) % 128, qy = m % 128;
++            const i64 qx = m % 128, qy = (m / 128) % 128;
+             const i64 px = qx * 250 + 125, py = qy * 250 + 125;
+             if (F == 1) {
+                 msgx[k] = px; msgy[k] = py; msgt[k] = t; msgok[k] = true;

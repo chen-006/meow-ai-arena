@@ -1,0 +1,18 @@
+--- ref_noff/original/dart.hpp
++++ ref_noff/patched/dart.hpp
+@@ -1678,6 +1678,7 @@
+                     int nh = 0;
+                     for (int q = 0; q < n; ++q) {
+                         if (q == k || !p[q].alive || p[q].unknown) continue;
++                        if (cf.mode >= M_ELIM && mates(k, q)) continue;
+                         if (slash && p[q].inv > 0) continue;
+                         if (!slash && kick_protected[q]) continue;
+                         const i64 dx = p[q].x - P.x, dy = p[q].y - P.y;
+@@ -1840,6 +1841,7 @@
+             const i64 R = cf.body_r + cf.dart_r;
+             for (int q = 0; q < n; ++q) {
+                 if (q == k || !p[q].alive || p[q].unknown) continue;
++                if (cf.mode >= M_ELIM && mates(k, q)) continue;
+                 const Player& Q = p[q];
+                 if (Q.inv > 0) continue;
+                 if (seg_near_origin(x0 - Q.px, y0 - Q.py, x1 - Q.x, y1 - Q.y, R)) {

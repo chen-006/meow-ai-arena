@@ -1,0 +1,14 @@
+--- sources/hydrogen.cpp
++++ adapters/hydrogen_radio.cpp
+@@ -1,3 +1,4 @@
++#include "radio.hpp"
+ // player.cpp - Boomerang Brawl 5v5 Team Bot (team_v8, Gemini Hydrogen)
+ #include "dart.hpp"
+ 
+@@ -3054,4 +3055,5 @@
+ 
+ } // namespace
+ 
+-DART_MAIN(Bot)
++using AdaptedBot = exp3::RadioAdapter<Bot, true>;
++DART_MAIN(AdaptedBot)

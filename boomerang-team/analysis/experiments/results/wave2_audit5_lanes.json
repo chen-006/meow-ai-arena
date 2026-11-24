@@ -1,0 +1,1098 @@
+[
+  {
+    "group": "无战术",
+    "replay": "g800.txt",
+    "sha256": "30e7cd19370aada00c60cca0707f212cf2dae801eabf18c8fb6260b5359dbad4",
+    "seats": [
+      {
+        "name": "astra",
+        "seat": 0,
+        "first": {
+          "step": 38,
+          "world": "B",
+          "local": "B",
+          "x": 14423,
+          "y": 9163
+        },
+        "expected": "B",
+        "match": true
+      },
+      {
+        "name": "astra2",
+        "seat": 1,
+        "first": {
+          "step": 72,
+          "world": "B",
+          "local": "B",
+          "x": 14312,
+          "y": 10894
+        },
+        "expected": "B",
+        "match": true
+      },
+      {
+        "name": "astra3",
+        "seat": 2,
+        "first": {
+          "step": 155,
+          "world": "B",
+          "local": "B",
+          "x": 14486,
+          "y": 11068
+        },
+        "expected": "B",
+        "match": true
+      },
+      {
+        "name": "astra4",
+        "seat": 3,
+        "first": {
+          "step": 49,
+          "world": "B",
+          "local": "B",
+          "x": 14189,
+          "y": 9235
+        },
+        "expected": "B",
+        "match": true
+      },
+      {
+        "name": "astra5",
+        "seat": 4,
+        "first": {
+          "step": 43,
+          "world": "B",
+          "local": "B",
+          "x": 14359,
+          "y": 11142
+        },
+        "expected": "B",
+        "match": true
+      },
+      {
+        "name": "fable",
+        "seat": 5,
+        "first": {
+          "step": 33,
+          "world": "C",
+          "local": "A",
+          "x": 17831,
+          "y": 16725
+        },
+        "expected": null,
+        "match": null
+      },
+      {
+        "name": "fable2",
+        "seat": 6,
+        "first": {
+          "step": 107,
+          "world": "B",
+          "local": "B",
+          "x": 17360,
+          "y": 8600
+        },
+        "expected": null,
+        "match": null
+      },
+      {
+        "name": "fable3",
+        "seat": 7,
+        "first": {
+          "step": 32,
+          "world": "A",
+          "local": "C",
+          "x": 17291,
+          "y": 3194
+        },
+        "expected": null,
+        "match": null
+      },
+      {
+        "name": "fable4",
+        "seat": 8,
+        "first": {
+          "step": 44,
+          "world": "C",
+          "local": "A",
+          "x": 17984,
+          "y": 16632
+        },
+        "expected": null,
+        "match": null
+      },
+      {
+        "name": "fable5",
+        "seat": 9,
+        "first": {
+          "step": 43,
+          "world": "A",
+          "local": "C",
+          "x": 17816,
+          "y": 3275
+        },
+        "expected": null,
+        "match": null
+      }
+    ]
+  },
+  {
+    "group": "无战术",
+    "replay": "g801.txt",
+    "sha256": "30110e842d33cd28fe494edfd71f9e49bea7462d7a0e1cd6ed3f7bcdede1dc4c",
+    "seats": [
+      {
+        "name": "fable",
+        "seat": 0,
+        "first": {
+          "step": 32,
+          "world": "A",
+          "local": "A",
+          "x": 14116,
+          "y": 3487
+        },
+        "expected": null,
+        "match": null
+      },
+      {
+        "name": "fable2",
+        "seat": 1,
+        "first": {
+          "step": 345,
+          "world": "B",
+          "local": "B",
+          "x": 14378,
+          "y": 9224
+        },
+        "expected": null,
+        "match": null
+      },
+      {
+        "name": "fable3",
+        "seat": 2,
+        "first": {
+          "step": 31,
+          "world": "C",
+          "local": "C",
+          "x": 14274,
+          "y": 16600
+        },
+        "expected": null,
+        "match": null
+      },
+      {
+        "name": "fable4",
+        "seat": 3,
+        "first": {
+          "step": 41,
+          "world": "A",
+          "local": "A",
+          "x": 14006,
+          "y": 3400
+        },
+        "expected": null,
+        "match": null
+      },
+      {
+        "name": "fable5",
+        "seat": 4,
+        "first": {
+          "step": 42,
+          "world": "C",
+          "local": "C",
+          "x": 14134,
+          "y": 16599
+        },
+        "expected": null,
+        "match": null
+      },
+      {
+        "name": "astra",
+        "seat": 5,
+        "first": {
+          "step": 48,
+          "world": "B",
+          "local": "B",
+          "x": 17779,
+          "y": 10899
+        },
+        "expected": "B",
+        "match": true
+      },
+      {
+        "name": "astra2",
+        "seat": 6,
+        "first": {
+          "step": 33,
+          "world": "B",
+          "local": "B",
+          "x": 17356,
+          "y": 10587
+        },
+        "expected": "B",
+        "match": true
+      },
+      {
+        "name": "astra3",
+        "seat": 7,
+        "first": {
+          "step": 134,
+          "world": "B",
+          "local": "B",
+          "x": 17049,
+          "y": 9212
+        },
+        "expected": "B",
+        "match": true
+      },
+      {
+        "name": "astra4",
+        "seat": 8,
+        "first": {
+          "step": 51,
+          "world": "B",
+          "local": "B",
+          "x": 17611,
+          "y": 8850
+        },
+        "expected": "B",
+        "match": true
+      },
+      {
+        "name": "astra5",
+        "seat": 9,
+        "first": {
+          "step": 42,
+          "world": "B",
+          "local": "B",
+          "x": 17553,
+          "y": 9127
+        },
+        "expected": "B",
+        "match": true
+      }
+    ]
+  },
+  {
+    "group": "无战术",
+    "replay": "g802.txt",
+    "sha256": "376d472458d72a15312e154f0a1ef8e305956ddec7b3b2adefee4660e77f9f18",
+    "seats": [
+      {
+        "name": "astra",
+        "seat": 0,
+        "first": {
+          "step": 34,
+          "world": "B",
+          "local": "B",
+          "x": 14292,
+          "y": 9163
+        },
+        "expected": "B",
+        "match": true
+      },
+      {
+        "name": "astra2",
+        "seat": 1,
+        "first": {
+          "step": 33,
+          "world": "B",
+          "local": "B",
+          "x": 14624,
+          "y": 11270
+        },
+        "expected": "B",
+        "match": true
+      },
+      {
+        "name": "astra3",
+        "seat": 2,
+        "first": {
+          "step": 36,
+          "world": "B",
+          "local": "B",
+          "x": 14260,
+          "y": 10958
+        },
+        "expected": "B",
+        "match": true
+      },
+      {
+        "name": "astra4",
+        "seat": 3,
+        "first": {
+          "step": 44,
+          "world": "B",
+          "local": "B",
+          "x": 14400,
+          "y": 9099
+        },
+        "expected": "B",
+        "match": true
+      },
+      {
+        "name": "astra5",
+        "seat": 4,
+        "first": {
+          "step": 44,
+          "world": "B",
+          "local": "B",
+          "x": 14300,
+          "y": 10968
+        },
+        "expected": "B",
+        "match": true
+      },
+      {
+        "name": "fable",
+        "seat": 5,
+        "first": {
+          "step": 30,
+          "world": "C",
+          "local": "A",
+          "x": 17992,
+          "y": 16600
+        },
+        "expected": null,
+        "match": null
+      },
+      {
+        "name": "fable2",
+        "seat": 6,
+        "first": {
+          "step": 98,
+          "world": "B",
+          "local": "B",
+          "x": 17772,
+          "y": 9193
+        },
+        "expected": null,
+        "match": null
+      },
+      {
+        "name": "fable3",
+        "seat": 7,
+        "first": {
+          "step": 30,
+          "world": "A",
+          "local": "C",
+          "x": 17791,
+          "y": 3400
+        },
+        "expected": null,
+        "match": null
+      },
+      {
+        "name": "fable4",
+        "seat": 8,
+        "first": {
+          "step": 45,
+          "world": "C",
+          "local": "A",
+          "x": 17978,
+          "y": 16725
+        },
+        "expected": null,
+        "match": null
+      },
+      {
+        "name": "fable5",
+        "seat": 9,
+        "first": {
+          "step": 42,
+          "world": "A",
+          "local": "C",
+          "x": 17372,
+          "y": 3588
+        },
+        "expected": null,
+        "match": null
+      }
+    ]
+  },
+  {
+    "group": "无战术",
+    "replay": "g803.txt",
+    "sha256": "773746e7f07abca3c2776681e0f02d82447a2853df0a4f80cd34c1c4272dec7a",
+    "seats": [
+      {
+        "name": "fable",
+        "seat": 0,
+        "first": {
+          "step": 30,
+          "world": "A",
+          "local": "A",
+          "x": 14124,
+          "y": 3400
+        },
+        "expected": null,
+        "match": null
+      },
+      {
+        "name": "fable2",
+        "seat": 1,
+        "first": {
+          "step": 106,
+          "world": "B",
+          "local": "B",
+          "x": 15078,
+          "y": 8541
+        },
+        "expected": null,
+        "match": null
+      },
+      {
+        "name": "fable3",
+        "seat": 2,
+        "first": {
+          "step": 29,
+          "world": "C",
+          "local": "C",
+          "x": 14053,
+          "y": 16600
+        },
+        "expected": null,
+        "match": null
+      },
+      {
+        "name": "fable4",
+        "seat": 3,
+        "first": {
+          "step": 42,
+          "world": "A",
+          "local": "A",
+          "x": 14125,
+          "y": 3459
+        },
+        "expected": null,
+        "match": null
+      },
+      {
+        "name": "fable5",
+        "seat": 4,
+        "first": {
+          "step": 40,
+          "world": "C",
+          "local": "C",
+          "x": 14321,
+          "y": 16490
+        },
+        "expected": null,
+        "match": null
+      },
+      {
+        "name": "astra",
+        "seat": 5,
+        "first": {
+          "step": 36,
+          "world": "B",
+          "local": "B",
+          "x": 17633,
+          "y": 11042
+        },
+        "expected": "B",
+        "match": true
+      },
+      {
+        "name": "astra2",
+        "seat": 6,
+        "first": {
+          "step": 34,
+          "world": "B",
+          "local": "B",
+          "x": 17710,
+          "y": 9387
+        },
+        "expected": "B",
+        "match": true
+      },
+      {
+        "name": "astra3",
+        "seat": 7,
+        "first": {
+          "step": 49,
+          "world": "B",
+          "local": "B",
+          "x": 17468,
+          "y": 8792
+        },
+        "expected": "B",
+        "match": true
+      },
+      {
+        "name": "astra4",
+        "seat": 8,
+        "first": {
+          "step": 48,
+          "world": "B",
+          "local": "B",
+          "x": 16939,
+          "y": 10886
+        },
+        "expected": "B",
+        "match": true
+      },
+      {
+        "name": "astra5",
+        "seat": 9,
+        "first": {
+          "step": 43,
+          "world": "B",
+          "local": "B",
+          "x": 17669,
+          "y": 9087
+        },
+        "expected": "B",
+        "match": true
+      }
+    ]
+  },
+  {
+    "group": "5a",
+    "replay": "g0.txt",
+    "sha256": "6af8940f756716f92ec53c4275292f113a3017d6a44f5a1e69acfdfc1ff3b7a1",
+    "seats": [
+      {
+        "name": "astra",
+        "seat": 0,
+        "first": {
+          "step": 26,
+          "world": "A",
+          "local": "A",
+          "x": 14318,
+          "y": 3460
+        },
+        "expected": "A",
+        "match": true
+      },
+      {
+        "name": "astra2",
+        "seat": 1,
+        "first": {
+          "step": 37,
+          "world": "B",
+          "local": "B",
+          "x": 14267,
+          "y": 9103
+        },
+        "expected": "B",
+        "match": true
+      },
+      {
+        "name": "astra3",
+        "seat": 2,
+        "first": {
+          "step": 46,
+          "world": "B",
+          "local": "B",
+          "x": 15033,
+          "y": 10993
+        },
+        "expected": "B",
+        "match": true
+      },
+      {
+        "name": "astra4",
+        "seat": 3,
+        "first": {
+          "step": 59,
+          "world": "C",
+          "local": "C",
+          "x": 14138,
+          "y": 17051
+        },
+        "expected": "C",
+        "match": true
+      },
+      {
+        "name": "astra5",
+        "seat": 4,
+        "first": {
+          "step": 43,
+          "world": "C",
+          "local": "C",
+          "x": 14374,
+          "y": 15619
+        },
+        "expected": "C",
+        "match": true
+      },
+      {
+        "name": "fable",
+        "seat": 5,
+        "first": {
+          "step": 33,
+          "world": "C",
+          "local": "A",
+          "x": 17886,
+          "y": 16725
+        },
+        "expected": "A",
+        "match": true
+      },
+      {
+        "name": "fable2",
+        "seat": 6,
+        "first": {
+          "step": 57,
+          "world": "B",
+          "local": "B",
+          "x": 17743,
+          "y": 10405
+        },
+        "expected": "B",
+        "match": true
+      },
+      {
+        "name": "fable3",
+        "seat": 7,
+        "first": {
+          "step": 60,
+          "world": "B",
+          "local": "B",
+          "x": 17212,
+          "y": 9326
+        },
+        "expected": "B",
+        "match": true
+      },
+      {
+        "name": "fable4",
+        "seat": 8,
+        "first": {
+          "step": 70,
+          "world": "A",
+          "local": "C",
+          "x": 17483,
+          "y": 3437
+        },
+        "expected": "C",
+        "match": true
+      },
+      {
+        "name": "fable5",
+        "seat": 9,
+        "first": {
+          "step": 55,
+          "world": "A",
+          "local": "C",
+          "x": 17559,
+          "y": 3410
+        },
+        "expected": "C",
+        "match": true
+      }
+    ]
+  },
+  {
+    "group": "5a",
+    "replay": "g1.txt",
+    "sha256": "c6126a889404f65341058ef0e856202bef91dd234e0350eb749221d1bbe13b38",
+    "seats": [
+      {
+        "name": "fable",
+        "seat": 0,
+        "first": {
+          "step": 32,
+          "world": "A",
+          "local": "A",
+          "x": 14017,
+          "y": 3400
+        },
+        "expected": "A",
+        "match": true
+      },
+      {
+        "name": "fable2",
+        "seat": 1,
+        "first": {
+          "step": 58,
+          "world": "B",
+          "local": "B",
+          "x": 14773,
+          "y": 8900
+        },
+        "expected": "B",
+        "match": true
+      },
+      {
+        "name": "fable3",
+        "seat": 2,
+        "first": {
+          "step": 50,
+          "world": "B",
+          "local": "B",
+          "x": 15123,
+          "y": 8511
+        },
+        "expected": "B",
+        "match": true
+      },
+      {
+        "name": "fable4",
+        "seat": 3,
+        "first": {
+          "step": 64,
+          "world": "C",
+          "local": "C",
+          "x": 14078,
+          "y": 16450
+        },
+        "expected": "C",
+        "match": true
+      },
+      {
+        "name": "fable5",
+        "seat": 4,
+        "first": {
+          "step": 44,
+          "world": "C",
+          "local": "C",
+          "x": 14358,
+          "y": 16350
+        },
+        "expected": "C",
+        "match": true
+      },
+      {
+        "name": "astra",
+        "seat": 5,
+        "first": {
+          "step": 26,
+          "world": "C",
+          "local": "A",
+          "x": 17811,
+          "y": 16521
+        },
+        "expected": "A",
+        "match": true
+      },
+      {
+        "name": "astra2",
+        "seat": 6,
+        "first": {
+          "step": 50,
+          "world": "B",
+          "local": "B",
+          "x": 17315,
+          "y": 10371
+        },
+        "expected": "B",
+        "match": true
+      },
+      {
+        "name": "astra3",
+        "seat": 7,
+        "first": {
+          "step": 38,
+          "world": "B",
+          "local": "B",
+          "x": 17536,
+          "y": 8958
+        },
+        "expected": "B",
+        "match": true
+      },
+      {
+        "name": "astra4",
+        "seat": 8,
+        "first": {
+          "step": 48,
+          "world": "A",
+          "local": "C",
+          "x": 17630,
+          "y": 3218
+        },
+        "expected": "C",
+        "match": true
+      },
+      {
+        "name": "astra5",
+        "seat": 9,
+        "first": {
+          "step": 46,
+          "world": "A",
+          "local": "C",
+          "x": 17827,
+          "y": 2888
+        },
+        "expected": "C",
+        "match": true
+      }
+    ]
+  },
+  {
+    "group": "5b",
+    "replay": "g200.txt",
+    "sha256": "4add8904818db00d1d912805f28d4465423677ee48c18b8936e646053423ad44",
+    "seats": [
+      {
+        "name": "astra",
+        "seat": 0,
+        "first": {
+          "step": 26,
+          "world": "A",
+          "local": "A",
+          "x": 14318,
+          "y": 3460
+        },
+        "expected": "A",
+        "match": true
+      },
+      {
+        "name": "astra2",
+        "seat": 1,
+        "first": {
+          "step": 41,
+          "world": "A",
+          "local": "A",
+          "x": 14013,
+          "y": 3359
+        },
+        "expected": "A",
+        "match": true
+      },
+      {
+        "name": "astra3",
+        "seat": 2,
+        "first": {
+          "step": 38,
+          "world": "B",
+          "local": "B",
+          "x": 14407,
+          "y": 11016
+        },
+        "expected": "B",
+        "match": true
+      },
+      {
+        "name": "astra4",
+        "seat": 3,
+        "first": {
+          "step": 91,
+          "world": "C",
+          "local": "C",
+          "x": 14545,
+          "y": 16099
+        },
+        "expected": "C",
+        "match": true
+      },
+      {
+        "name": "astra5",
+        "seat": 4,
+        "first": {
+          "step": 110,
+          "world": "C",
+          "local": "C",
+          "x": 14103,
+          "y": 16543
+        },
+        "expected": "C",
+        "match": true
+      },
+      {
+        "name": "fable",
+        "seat": 5,
+        "first": {
+          "step": 34,
+          "world": "C",
+          "local": "A",
+          "x": 17849,
+          "y": 16724
+        },
+        "expected": "A",
+        "match": true
+      },
+      {
+        "name": "fable2",
+        "seat": 6,
+        "first": {
+          "step": 45,
+          "world": "C",
+          "local": "A",
+          "x": 17805,
+          "y": 16823
+        },
+        "expected": "A",
+        "match": true
+      },
+      {
+        "name": "fable3",
+        "seat": 7,
+        "first": {
+          "step": 42,
+          "world": "B",
+          "local": "B",
+          "x": 17317,
+          "y": 8600
+        },
+        "expected": "B",
+        "match": true
+      },
+      {
+        "name": "fable4",
+        "seat": 8,
+        "first": {
+          "step": 370,
+          "world": "A",
+          "local": "C",
+          "x": 17227,
+          "y": 4024
+        },
+        "expected": "C",
+        "match": true
+      },
+      {
+        "name": "fable5",
+        "seat": 9,
+        "first": {
+          "step": 369,
+          "world": "A",
+          "local": "C",
+          "x": 17890,
+          "y": 3175
+        },
+        "expected": "C",
+        "match": true
+      }
+    ]
+  },
+  {
+    "group": "5b",
+    "replay": "g201.txt",
+    "sha256": "aedab2c5c7462618eae28d2e10118ab75829d18992ab51d7c57a2e1a91c1015d",
+    "seats": [
+      {
+        "name": "fable",
+        "seat": 0,
+        "first": {
+          "step": 33,
+          "world": "A",
+          "local": "A",
+          "x": 14051,
+          "y": 3000
+        },
+        "expected": "A",
+        "match": true
+      },
+      {
+        "name": "fable2",
+        "seat": 1,
+        "first": {
+          "step": 50,
+          "world": "A",
+          "local": "A",
+          "x": 14448,
+          "y": 4375
+        },
+        "expected": "A",
+        "match": true
+      },
+      {
+        "name": "fable3",
+        "seat": 2,
+        "first": {
+          "step": 62,
+          "world": "B",
+          "local": "B",
+          "x": 14484,
+          "y": 11017
+        },
+        "expected": "B",
+        "match": true
+      },
+      {
+        "name": "fable4",
+        "seat": 3,
+        "first": {
+          "step": 65,
+          "world": "C",
+          "local": "C",
+          "x": 14829,
+          "y": 15630
+        },
+        "expected": "C",
+        "match": true
+      },
+      {
+        "name": "fable5",
+        "seat": 4,
+        "first": {
+          "step": 49,
+          "world": "C",
+          "local": "C",
+          "x": 14532,
+          "y": 16600
+        },
+        "expected": "C",
+        "match": true
+      },
+      {
+        "name": "astra",
+        "seat": 5,
+        "first": {
+          "step": 26,
+          "world": "C",
+          "local": "A",
+          "x": 17811,
+          "y": 16521
+        },
+        "expected": "A",
+        "match": true
+      },
+      {
+        "name": "astra2",
+        "seat": 6,
+        "first": {
+          "step": 44,
+          "world": "C",
+          "local": "A",
+          "x": 17953,
+          "y": 16501
+        },
+        "expected": "A",
+        "match": true
+      },
+      {
+        "name": "astra3",
+        "seat": 7,
+        "first": {
+          "step": 37,
+          "world": "B",
+          "local": "B",
+          "x": 17701,
+          "y": 8957
+        },
+        "expected": "B",
+        "match": true
+      },
+      {
+        "name": "astra4",
+        "seat": 8,
+        "first": {
+          "step": 154,
+          "world": "A",
+          "local": "C",
+          "x": 17424,
+          "y": 4479
+        },
+        "expected": "C",
+        "match": true
+      },
+      {
+        "name": "astra5",
+        "seat": 9,
+        "first": {
+          "step": 211,
+          "world": "A",
+          "local": "C",
+          "x": 17700,
+          "y": 3947
+        },
+        "expected": "C",
+        "match": true
+      }
+    ]
+  }
+]

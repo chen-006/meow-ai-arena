@@ -1,0 +1,23 @@
+--- hydrogen_original.cpp
++++ hydrogen_roam.cpp
+@@ -1520,6 +1520,20 @@
+                 }
+                 if (o.owner[pt_idx] == ctx.my_team && o.taking[pt_idx] < 0 && mates_cur >= 1 && min_e_cur > 5500) {
+                     int alt = gi.point_index("B");
++                    if (alt == pt_idx) {
++                        alt = -1;
++                        i64 best_dist = 1e9;
++                        for (const char* lane : {"A", "C"}) {
++                            const int candidate = gi.point_index(lane);
++                            if (candidate < 0 || o.owner[candidate] == ctx.my_team) continue;
++                            const Point& p = gi.points[candidate];
++                            const i64 dist = ilen(me.x - p.x, me.y - p.y);
++                            if (dist < best_dist) {
++                                best_dist = dist;
++                                alt = candidate;
++                            }
++                        }
++                    }
+                     if (alt >= 0 && alt != pt_idx && o.owner[alt] != ctx.my_team) {
+                         pt_idx = alt;
+                     }

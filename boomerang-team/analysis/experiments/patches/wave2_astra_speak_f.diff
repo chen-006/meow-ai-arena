@@ -1,0 +1,80 @@
+--- evidence/astra.cpp
++++ patches/astra_speak_f.cpp
+@@ -319,30 +319,45 @@
+             kingInv[k]=std::max(0,immuneUntil[k]-seen);
+         }
+     }
+-    int message(const Player& me,int act) const {
+-        int intent=0;
+-        if(act==A_THROW) intent=1;
+-        else if(act==A_MELEE) intent=2;
+-        else if(act==A_DASH) intent=3;
+-        else if(me.st==S_THROW) intent=1;
+-        else if(me.st==S_SLASH || me.st==S_KICK) intent=2;
+-        else if(me.st==S_DASH) intent=3;
+-        int x=std::clamp(cell_index(me.x),0,63),y=std::clamp(cell_index(me.y),0,63);
+-        return x+64*y+4096*intent+16384*(now%4);
++    int message(const Obs& o,const Action& a) const {
++        const Player& me=o.me();
++        i64 x=me.x,y=me.y;
++        int kind=1;
++        i64 ux,uy;
++        if(me.st==S_FREE && scale_to(a.ax,a.ay,1000,ux,uy)) {
++            if(a.act==A_THROW && o.my_dart().st==D_HAND) {
++                const i64 w=gi->M().width(),h=gi->M().height();
++                for(i64 length=c->range;length>0;length-=100) {
++                    const i64 ex=x+ux*length/1000,ey=y+uy*length/1000;
++                    if(ex>=300 && ey>=300 && ex<=w-300 && ey<=h-300) {
++                        x=ex; y=ey; kind=2; break;
++                    }
++                }
++            } else if(a.act==A_DASH && me.cd==0) {
++                const i64 length=c->dash_v*c->dash_t;
++                x+=ux*length/1000; y+=uy*length/1000; kind=3;
++            }
++        }
++        return iclamp(x/250,0,127)+128*iclamp(y/250,0,127)+16384*kind;
+     }
+     void receive() {
+         if(!now) return;
+         for(int k=0;k<n;++k) if(is_mate(*gi,k)) {
+-            int v=int(obs->p[k].msg),time=now-1;
+-            int x=v&63,y=(v>>6)&63;
+-            if(!v || v>>14!=time%4 || !gi->M().inside(x,y)) continue;
++            const int v=int(obs->p[k].msg),time=now-1,kind=v>>14;
++            if(kind<1 || kind>3 || !obs->p[k].alive) continue;
++            const Packet& previous=radio[k];
++            // F=2/3 carries an endpoint; the most recent position is the event origin estimate.
++            Vec estimate=kind==1 ? vec((v&127)*250+125,((v>>7)&127)*250+125)
++                                 : previous.time==time-1 ? previous.where : pos(obs->p[k]);
++            int x=cell_index(ir(estimate.x)),y=cell_index(ir(estimate.y));
++            if(!gi->M().inside(x,y)) continue;
+             Vec at=vec(cell_center(x),cell_center(y));
+             if(obs->p[k].alive && (at-pos(obs->p[k])).sq()>3700.*3700) continue;
+             Packet& p=radio[k];
+             bool contiguous=p.time==time-1 && (at-p.where).sq()<1550.*1550;
+             Vec delta=at-p.where;
+             p.velocity=contiguous?p.velocity*0.56+delta*0.44:Vec{};
+-            int intent=(v>>12)&3;
++            int intent=kind==2?1:kind==3?3:0;
+             if(!contiguous || intent!=p.intent) p.since=time;
+             p.run=contiguous?p.run+1:1; p.time=time; p.where=at; p.intent=intent;
+         }
+@@ -2982,7 +2997,7 @@
+         rememberScene();
+         if(groupLearning) watchReactions();
+         receive();
+-        result.msg=message(o.me(),A_NONE);
++        result.msg=message(o,result);
+         bool armed=o.my_dart().st==D_HAND;
+         bool free=o.me().st==S_FREE || o.me().st==S_RECALL;
+         bool cancel=c->dash_slash && o.me().st==S_DASH && o.me().timer>c->dash_post && o.me().timer<=c->dash_t+c->dash_post;
+@@ -3249,7 +3264,7 @@
+         if(best.action==A_THROW && !best.intercept && !shot.spawn) recordThrow(shot.target);
+         if(best.action!=A_RECALL) { result.mx=ir(best.move.x*1000); result.my=ir(best.move.y*1000); }
+         result.ax=ir(best.aim.x*1000); result.ay=ir(best.aim.y*1000); result.act=best.action;
+-        result.msg=message(o.me(),best.action);
++        result.msg=message(o,result);
+         previousMove=best.move;
+         history[now%HIST].action=result;
+         return result;

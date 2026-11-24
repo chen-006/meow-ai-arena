@@ -1,0 +1,994 @@
+{
+  "metrics": {
+    "A 原队": {
+      "nonzero": 8316,
+      "format": 8316,
+      "position": 8316,
+      "samples": 12
+    },
+    "F 原队": {
+      "nonzero": 7075,
+      "F1": 6904,
+      "format": 7075,
+      "position": 6904,
+      "F2": 88,
+      "F3": 83,
+      "samples": 12
+    },
+    "Fable → A4": {
+      "nonzero": 14125,
+      "format": 2518,
+      "position": 2518,
+      "error_gt_1m": 2518,
+      "samples": 24
+    },
+    "Astra → F4": {
+      "nonzero": 14694,
+      "F1": 3675,
+      "format": 11014,
+      "position": 3675,
+      "error_gt_1m": 3675,
+      "F2": 3672,
+      "F3": 3667,
+      "samples": 24
+    }
+  },
+  "examples": {
+    "A 原队": [
+      {
+        "id": 1200,
+        "case": "2-base-caldera",
+        "seat": 0,
+        "replay": "main/replays-1795426037676856800/g1200.txt",
+        "counts": {
+          "nonzero": 519,
+          "format": 519,
+          "position": 519
+        }
+      },
+      {
+        "id": 1201,
+        "case": "2-base-caldera",
+        "seat": 5,
+        "replay": "main/replays-1795426037676856800/g1201.txt",
+        "counts": {
+          "nonzero": 538,
+          "format": 538,
+          "position": 538
+        }
+      },
+      {
+        "id": 1202,
+        "case": "2-base-caldera",
+        "seat": 0,
+        "replay": "main/replays-1795426037676856800/g1202.txt",
+        "counts": {
+          "nonzero": 509,
+          "format": 509,
+          "position": 509
+        }
+      },
+      {
+        "id": 1203,
+        "case": "2-base-caldera",
+        "seat": 5,
+        "replay": "main/replays-1795426037676856800/g1203.txt",
+        "counts": {
+          "nonzero": 558,
+          "format": 558,
+          "position": 558
+        }
+      },
+      {
+        "id": 1360,
+        "case": "2-base-piers",
+        "seat": 0,
+        "replay": "main/replays-1795426037676856800/g1360.txt",
+        "counts": {
+          "nonzero": 1020,
+          "format": 1020,
+          "position": 1020
+        }
+      },
+      {
+        "id": 1361,
+        "case": "2-base-piers",
+        "seat": 5,
+        "replay": "main/replays-1795426037676856800/g1361.txt",
+        "counts": {
+          "nonzero": 780,
+          "format": 780,
+          "position": 780
+        }
+      },
+      {
+        "id": 1362,
+        "case": "2-base-piers",
+        "seat": 0,
+        "replay": "main/replays-1795426037676856800/g1362.txt",
+        "counts": {
+          "nonzero": 931,
+          "format": 931,
+          "position": 931
+        }
+      },
+      {
+        "id": 1363,
+        "case": "2-base-piers",
+        "seat": 5,
+        "replay": "main/replays-1795426037676856800/g1363.txt",
+        "counts": {
+          "nonzero": 1140,
+          "format": 1140,
+          "position": 1140
+        }
+      },
+      {
+        "id": 1520,
+        "case": "2-base-keeps",
+        "seat": 0,
+        "replay": "main/replays-1795426037676856800/g1520.txt",
+        "counts": {
+          "nonzero": 498,
+          "format": 498,
+          "position": 498
+        }
+      },
+      {
+        "id": 1521,
+        "case": "2-base-keeps",
+        "seat": 5,
+        "replay": "main/replays-1795426037676856800/g1521.txt",
+        "counts": {
+          "nonzero": 631,
+          "format": 631,
+          "position": 631
+        }
+      },
+      {
+        "id": 1522,
+        "case": "2-base-keeps",
+        "seat": 0,
+        "replay": "main/replays-1795426037676856800/g1522.txt",
+        "counts": {
+          "nonzero": 543,
+          "format": 543,
+          "position": 543
+        }
+      },
+      {
+        "id": 1523,
+        "case": "2-base-keeps",
+        "seat": 5,
+        "replay": "main/replays-1795426037676856800/g1523.txt",
+        "counts": {
+          "nonzero": 649,
+          "format": 649,
+          "position": 649
+        }
+      }
+    ],
+    "F 原队": [
+      {
+        "id": 1200,
+        "case": "2-base-caldera",
+        "seat": 5,
+        "replay": "main/replays-1795426037676856800/g1200.txt",
+        "counts": {
+          "nonzero": 571,
+          "F1": 560,
+          "format": 571,
+          "position": 560,
+          "F2": 6,
+          "F3": 5
+        }
+      },
+      {
+        "id": 1201,
+        "case": "2-base-caldera",
+        "seat": 0,
+        "replay": "main/replays-1795426037676856800/g1201.txt",
+        "counts": {
+          "nonzero": 529,
+          "F1": 517,
+          "format": 529,
+          "position": 517,
+          "F2": 6,
+          "F3": 6
+        }
+      },
+      {
+        "id": 1202,
+        "case": "2-base-caldera",
+        "seat": 5,
+        "replay": "main/replays-1795426037676856800/g1202.txt",
+        "counts": {
+          "nonzero": 295,
+          "F1": 288,
+          "format": 295,
+          "position": 288,
+          "F3": 4,
+          "F2": 3
+        }
+      },
+      {
+        "id": 1203,
+        "case": "2-base-caldera",
+        "seat": 0,
+        "replay": "main/replays-1795426037676856800/g1203.txt",
+        "counts": {
+          "nonzero": 128,
+          "F1": 126,
+          "format": 128,
+          "position": 126,
+          "F2": 1,
+          "F3": 1
+        }
+      },
+      {
+        "id": 1360,
+        "case": "2-base-piers",
+        "seat": 5,
+        "replay": "main/replays-1795426037676856800/g1360.txt",
+        "counts": {
+          "nonzero": 1020,
+          "F3": 10,
+          "format": 1020,
+          "F1": 989,
+          "position": 989,
+          "F2": 21
+        }
+      },
+      {
+        "id": 1361,
+        "case": "2-base-piers",
+        "seat": 0,
+        "replay": "main/replays-1795426037676856800/g1361.txt",
+        "counts": {
+          "nonzero": 720,
+          "F1": 690,
+          "format": 720,
+          "position": 690,
+          "F3": 14,
+          "F2": 16
+        }
+      },
+      {
+        "id": 1362,
+        "case": "2-base-piers",
+        "seat": 5,
+        "replay": "main/replays-1795426037676856800/g1362.txt",
+        "counts": {
+          "nonzero": 720,
+          "F3": 14,
+          "format": 720,
+          "F1": 694,
+          "position": 694,
+          "F2": 12
+        }
+      },
+      {
+        "id": 1363,
+        "case": "2-base-piers",
+        "seat": 0,
+        "replay": "main/replays-1795426037676856800/g1363.txt",
+        "counts": {
+          "nonzero": 771,
+          "F1": 739,
+          "format": 771,
+          "position": 739,
+          "F3": 16,
+          "F2": 16
+        }
+      },
+      {
+        "id": 1520,
+        "case": "2-base-keeps",
+        "seat": 5,
+        "replay": "main/replays-1795426037676856800/g1520.txt",
+        "counts": {
+          "nonzero": 498,
+          "F1": 494,
+          "format": 498,
+          "position": 494,
+          "F3": 3,
+          "F2": 1
+        }
+      },
+      {
+        "id": 1521,
+        "case": "2-base-keeps",
+        "seat": 0,
+        "replay": "main/replays-1795426037676856800/g1521.txt",
+        "counts": {
+          "nonzero": 631,
+          "F1": 626,
+          "format": 631,
+          "position": 626,
+          "F3": 3,
+          "F2": 2
+        }
+      },
+      {
+        "id": 1522,
+        "case": "2-base-keeps",
+        "seat": 5,
+        "replay": "main/replays-1795426037676856800/g1522.txt",
+        "counts": {
+          "nonzero": 543,
+          "F1": 540,
+          "format": 543,
+          "position": 540,
+          "F3": 2,
+          "F2": 1
+        }
+      },
+      {
+        "id": 1523,
+        "case": "2-base-keeps",
+        "seat": 0,
+        "replay": "main/replays-1795426037676856800/g1523.txt",
+        "counts": {
+          "nonzero": 649,
+          "F1": 641,
+          "format": 649,
+          "position": 641,
+          "F3": 5,
+          "F2": 3
+        }
+      }
+    ],
+    "Fable → A4": [
+      {
+        "id": 1680,
+        "case": "2-fable-a4-caldera",
+        "seat": 0,
+        "replay": "main/replays-1795426037676856800/g1680.txt",
+        "counts": {
+          "nonzero": 300,
+          "format": 67,
+          "position": 67,
+          "error_gt_1m": 67
+        }
+      },
+      {
+        "id": 1681,
+        "case": "2-fable-a4-caldera",
+        "seat": 5,
+        "replay": "main/replays-1795426037676856800/g1681.txt",
+        "counts": {
+          "nonzero": 206,
+          "format": 26,
+          "position": 26,
+          "error_gt_1m": 26
+        }
+      },
+      {
+        "id": 1682,
+        "case": "2-fable-a4-caldera",
+        "seat": 0,
+        "replay": "main/replays-1795426037676856800/g1682.txt",
+        "counts": {
+          "nonzero": 259,
+          "format": 38,
+          "position": 38,
+          "error_gt_1m": 38
+        }
+      },
+      {
+        "id": 1683,
+        "case": "2-fable-a4-caldera",
+        "seat": 5,
+        "replay": "main/replays-1795426037676856800/g1683.txt",
+        "counts": {
+          "nonzero": 522,
+          "format": 28,
+          "position": 28,
+          "error_gt_1m": 28
+        }
+      },
+      {
+        "id": 1840,
+        "case": "2-fable-a4-piers",
+        "seat": 0,
+        "replay": "main/replays-1795426037676856800/g1840.txt",
+        "counts": {
+          "nonzero": 834,
+          "format": 207,
+          "position": 207,
+          "error_gt_1m": 207
+        }
+      },
+      {
+        "id": 1841,
+        "case": "2-fable-a4-piers",
+        "seat": 5,
+        "replay": "main/replays-1795426037676856800/g1841.txt",
+        "counts": {
+          "nonzero": 768,
+          "format": 153,
+          "position": 153,
+          "error_gt_1m": 153
+        }
+      },
+      {
+        "id": 1842,
+        "case": "2-fable-a4-piers",
+        "seat": 0,
+        "replay": "main/replays-1795426037676856800/g1842.txt",
+        "counts": {
+          "nonzero": 900,
+          "format": 229,
+          "position": 229,
+          "error_gt_1m": 229
+        }
+      },
+      {
+        "id": 1843,
+        "case": "2-fable-a4-piers",
+        "seat": 5,
+        "replay": "main/replays-1795426037676856800/g1843.txt",
+        "counts": {
+          "nonzero": 836,
+          "format": 174,
+          "position": 174,
+          "error_gt_1m": 174
+        }
+      },
+      {
+        "id": 2000,
+        "case": "2-fable-a4-keeps",
+        "seat": 0,
+        "replay": "main/replays-1795426037676856800/g2000.txt",
+        "counts": {
+          "nonzero": 569,
+          "format": 89,
+          "position": 89,
+          "error_gt_1m": 89
+        }
+      },
+      {
+        "id": 2001,
+        "case": "2-fable-a4-keeps",
+        "seat": 5,
+        "replay": "main/replays-1795426037676856800/g2001.txt",
+        "counts": {
+          "nonzero": 612,
+          "format": 40,
+          "position": 40,
+          "error_gt_1m": 40
+        }
+      },
+      {
+        "id": 2002,
+        "case": "2-fable-a4-keeps",
+        "seat": 0,
+        "replay": "main/replays-1795426037676856800/g2002.txt",
+        "counts": {
+          "nonzero": 634,
+          "format": 102,
+          "position": 102,
+          "error_gt_1m": 102
+        }
+      },
+      {
+        "id": 2003,
+        "case": "2-fable-a4-keeps",
+        "seat": 5,
+        "replay": "main/replays-1795426037676856800/g2003.txt",
+        "counts": {
+          "nonzero": 639,
+          "format": 70,
+          "position": 70,
+          "error_gt_1m": 70
+        }
+      },
+      {
+        "id": 2640,
+        "case": "2-both-swapped-caldera",
+        "seat": 5,
+        "replay": "main/replays-1795426037676856800/g2640.txt",
+        "counts": {
+          "nonzero": 481,
+          "format": 68,
+          "position": 68,
+          "error_gt_1m": 68
+        }
+      },
+      {
+        "id": 2641,
+        "case": "2-both-swapped-caldera",
+        "seat": 0,
+        "replay": "main/replays-1795426037676856800/g2641.txt",
+        "counts": {
+          "nonzero": 535,
+          "format": 70,
+          "position": 70,
+          "error_gt_1m": 70
+        }
+      },
+      {
+        "id": 2642,
+        "case": "2-both-swapped-caldera",
+        "seat": 5,
+        "replay": "main/replays-1795426037676856800/g2642.txt",
+        "counts": {
+          "nonzero": 547,
+          "format": 20,
+          "position": 20,
+          "error_gt_1m": 20
+        }
+      },
+      {
+        "id": 2643,
+        "case": "2-both-swapped-caldera",
+        "seat": 0,
+        "replay": "main/replays-1795426037676856800/g2643.txt",
+        "counts": {
+          "nonzero": 517,
+          "format": 97,
+          "position": 97,
+          "error_gt_1m": 97
+        }
+      },
+      {
+        "id": 2800,
+        "case": "2-both-swapped-piers",
+        "seat": 5,
+        "replay": "main/replays-1795426037676856800/g2800.txt",
+        "counts": {
+          "nonzero": 734,
+          "format": 172,
+          "position": 172,
+          "error_gt_1m": 172
+        }
+      },
+      {
+        "id": 2801,
+        "case": "2-both-swapped-piers",
+        "seat": 0,
+        "replay": "main/replays-1795426037676856800/g2801.txt",
+        "counts": {
+          "nonzero": 847,
+          "format": 215,
+          "position": 215,
+          "error_gt_1m": 215
+        }
+      },
+      {
+        "id": 2802,
+        "case": "2-both-swapped-piers",
+        "seat": 5,
+        "replay": "main/replays-1795426037676856800/g2802.txt",
+        "counts": {
+          "nonzero": 840,
+          "format": 197,
+          "position": 197,
+          "error_gt_1m": 197
+        }
+      },
+      {
+        "id": 2803,
+        "case": "2-both-swapped-piers",
+        "seat": 0,
+        "replay": "main/replays-1795426037676856800/g2803.txt",
+        "counts": {
+          "nonzero": 840,
+          "format": 216,
+          "position": 216,
+          "error_gt_1m": 216
+        }
+      },
+      {
+        "id": 2960,
+        "case": "2-both-swapped-keeps",
+        "seat": 5,
+        "replay": "main/replays-1795426037676856800/g2960.txt",
+        "counts": {
+          "nonzero": 394,
+          "format": 75,
+          "position": 75,
+          "error_gt_1m": 75
+        }
+      },
+      {
+        "id": 2961,
+        "case": "2-both-swapped-keeps",
+        "seat": 0,
+        "replay": "main/replays-1795426037676856800/g2961.txt",
+        "counts": {
+          "nonzero": 507,
+          "format": 53,
+          "position": 53,
+          "error_gt_1m": 53
+        }
+      },
+      {
+        "id": 2962,
+        "case": "2-both-swapped-keeps",
+        "seat": 5,
+        "replay": "main/replays-1795426037676856800/g2962.txt",
+        "counts": {
+          "nonzero": 240,
+          "format": 35,
+          "position": 35,
+          "error_gt_1m": 35
+        }
+      },
+      {
+        "id": 2963,
+        "case": "2-both-swapped-keeps",
+        "seat": 0,
+        "replay": "main/replays-1795426037676856800/g2963.txt",
+        "counts": {
+          "nonzero": 564,
+          "format": 77,
+          "position": 77,
+          "error_gt_1m": 77
+        }
+      }
+    ],
+    "Astra → F4": [
+      {
+        "id": 2160,
+        "case": "2-astra-f4-caldera",
+        "seat": 0,
+        "replay": "main/replays-1795426037676856800/g2160.txt",
+        "counts": {
+          "nonzero": 442,
+          "F1": 111,
+          "format": 331,
+          "position": 111,
+          "error_gt_1m": 111,
+          "F2": 110,
+          "F3": 110
+        }
+      },
+      {
+        "id": 2161,
+        "case": "2-astra-f4-caldera",
+        "seat": 5,
+        "replay": "main/replays-1795426037676856800/g2161.txt",
+        "counts": {
+          "nonzero": 510,
+          "F1": 128,
+          "format": 382,
+          "position": 128,
+          "error_gt_1m": 128,
+          "F2": 127,
+          "F3": 127
+        }
+      },
+      {
+        "id": 2162,
+        "case": "2-astra-f4-caldera",
+        "seat": 0,
+        "replay": "main/replays-1795426037676856800/g2162.txt",
+        "counts": {
+          "nonzero": 59,
+          "F1": 15,
+          "format": 44,
+          "position": 15,
+          "error_gt_1m": 15,
+          "F2": 15,
+          "F3": 14
+        }
+      },
+      {
+        "id": 2163,
+        "case": "2-astra-f4-caldera",
+        "seat": 5,
+        "replay": "main/replays-1795426037676856800/g2163.txt",
+        "counts": {
+          "nonzero": 197,
+          "F1": 49,
+          "format": 147,
+          "position": 49,
+          "error_gt_1m": 49,
+          "F2": 49,
+          "F3": 49
+        }
+      },
+      {
+        "id": 2320,
+        "case": "2-astra-f4-piers",
+        "seat": 0,
+        "replay": "main/replays-1795426037676856800/g2320.txt",
+        "counts": {
+          "nonzero": 1020,
+          "F1": 255,
+          "format": 765,
+          "position": 255,
+          "error_gt_1m": 255,
+          "F2": 255,
+          "F3": 255
+        }
+      },
+      {
+        "id": 2321,
+        "case": "2-astra-f4-piers",
+        "seat": 5,
+        "replay": "main/replays-1795426037676856800/g2321.txt",
+        "counts": {
+          "nonzero": 840,
+          "F1": 210,
+          "format": 630,
+          "position": 210,
+          "error_gt_1m": 210,
+          "F2": 210,
+          "F3": 210
+        }
+      },
+      {
+        "id": 2322,
+        "case": "2-astra-f4-piers",
+        "seat": 0,
+        "replay": "main/replays-1795426037676856800/g2322.txt",
+        "counts": {
+          "nonzero": 1020,
+          "F1": 255,
+          "format": 765,
+          "position": 255,
+          "error_gt_1m": 255,
+          "F2": 255,
+          "F3": 255
+        }
+      },
+      {
+        "id": 2323,
+        "case": "2-astra-f4-piers",
+        "seat": 5,
+        "replay": "main/replays-1795426037676856800/g2323.txt",
+        "counts": {
+          "nonzero": 1020,
+          "F1": 255,
+          "format": 765,
+          "position": 255,
+          "error_gt_1m": 255,
+          "F2": 255,
+          "F3": 255
+        }
+      },
+      {
+        "id": 2480,
+        "case": "2-astra-f4-keeps",
+        "seat": 0,
+        "replay": "main/replays-1795426037676856800/g2480.txt",
+        "counts": {
+          "nonzero": 417,
+          "F1": 104,
+          "format": 312,
+          "position": 104,
+          "error_gt_1m": 104,
+          "F2": 104,
+          "F3": 104
+        }
+      },
+      {
+        "id": 2481,
+        "case": "2-astra-f4-keeps",
+        "seat": 5,
+        "replay": "main/replays-1795426037676856800/g2481.txt",
+        "counts": {
+          "nonzero": 539,
+          "F1": 135,
+          "format": 404,
+          "position": 135,
+          "error_gt_1m": 135,
+          "F2": 135,
+          "F3": 134
+        }
+      },
+      {
+        "id": 2482,
+        "case": "2-astra-f4-keeps",
+        "seat": 0,
+        "replay": "main/replays-1795426037676856800/g2482.txt",
+        "counts": {
+          "nonzero": 548,
+          "F1": 137,
+          "format": 411,
+          "position": 137,
+          "error_gt_1m": 137,
+          "F2": 137,
+          "F3": 137
+        }
+      },
+      {
+        "id": 2483,
+        "case": "2-astra-f4-keeps",
+        "seat": 5,
+        "replay": "main/replays-1795426037676856800/g2483.txt",
+        "counts": {
+          "nonzero": 361,
+          "F1": 90,
+          "format": 270,
+          "position": 90,
+          "error_gt_1m": 90,
+          "F2": 90,
+          "F3": 90
+        }
+      },
+      {
+        "id": 2640,
+        "case": "2-both-swapped-caldera",
+        "seat": 0,
+        "replay": "main/replays-1795426037676856800/g2640.txt",
+        "counts": {
+          "nonzero": 481,
+          "F1": 120,
+          "format": 360,
+          "position": 120,
+          "error_gt_1m": 120,
+          "F2": 120,
+          "F3": 120
+        }
+      },
+      {
+        "id": 2641,
+        "case": "2-both-swapped-caldera",
+        "seat": 5,
+        "replay": "main/replays-1795426037676856800/g2641.txt",
+        "counts": {
+          "nonzero": 403,
+          "F1": 101,
+          "format": 302,
+          "position": 101,
+          "error_gt_1m": 101,
+          "F2": 101,
+          "F3": 100
+        }
+      },
+      {
+        "id": 2642,
+        "case": "2-both-swapped-caldera",
+        "seat": 0,
+        "replay": "main/replays-1795426037676856800/g2642.txt",
+        "counts": {
+          "nonzero": 175,
+          "F1": 44,
+          "format": 131,
+          "position": 44,
+          "error_gt_1m": 44,
+          "F2": 44,
+          "F3": 43
+        }
+      },
+      {
+        "id": 2643,
+        "case": "2-both-swapped-caldera",
+        "seat": 5,
+        "replay": "main/replays-1795426037676856800/g2643.txt",
+        "counts": {
+          "nonzero": 517,
+          "F1": 129,
+          "format": 387,
+          "position": 129,
+          "error_gt_1m": 129,
+          "F2": 129,
+          "F3": 129
+        }
+      },
+      {
+        "id": 2800,
+        "case": "2-both-swapped-piers",
+        "seat": 0,
+        "replay": "main/replays-1795426037676856800/g2800.txt",
+        "counts": {
+          "nonzero": 1140,
+          "F1": 285,
+          "format": 855,
+          "position": 285,
+          "error_gt_1m": 285,
+          "F2": 285,
+          "F3": 285
+        }
+      },
+      {
+        "id": 2801,
+        "case": "2-both-swapped-piers",
+        "seat": 5,
+        "replay": "main/replays-1795426037676856800/g2801.txt",
+        "counts": {
+          "nonzero": 1080,
+          "F1": 270,
+          "format": 810,
+          "position": 270,
+          "error_gt_1m": 270,
+          "F2": 270,
+          "F3": 270
+        }
+      },
+      {
+        "id": 2802,
+        "case": "2-both-swapped-piers",
+        "seat": 0,
+        "replay": "main/replays-1795426037676856800/g2802.txt",
+        "counts": {
+          "nonzero": 1140,
+          "F1": 285,
+          "format": 855,
+          "position": 285,
+          "error_gt_1m": 285,
+          "F2": 285,
+          "F3": 285
+        }
+      },
+      {
+        "id": 2803,
+        "case": "2-both-swapped-piers",
+        "seat": 5,
+        "replay": "main/replays-1795426037676856800/g2803.txt",
+        "counts": {
+          "nonzero": 1080,
+          "F1": 270,
+          "format": 810,
+          "position": 270,
+          "error_gt_1m": 270,
+          "F2": 270,
+          "F3": 270
+        }
+      },
+      {
+        "id": 2960,
+        "case": "2-both-swapped-keeps",
+        "seat": 0,
+        "replay": "main/replays-1795426037676856800/g2960.txt",
+        "counts": {
+          "nonzero": 394,
+          "F1": 99,
+          "format": 295,
+          "position": 99,
+          "error_gt_1m": 99,
+          "F2": 98,
+          "F3": 98
+        }
+      },
+      {
+        "id": 2961,
+        "case": "2-both-swapped-keeps",
+        "seat": 5,
+        "replay": "main/replays-1795426037676856800/g2961.txt",
+        "counts": {
+          "nonzero": 507,
+          "F1": 127,
+          "format": 380,
+          "position": 127,
+          "error_gt_1m": 127,
+          "F2": 127,
+          "F3": 126
+        }
+      },
+      {
+        "id": 2962,
+        "case": "2-both-swapped-keeps",
+        "seat": 0,
+        "replay": "main/replays-1795426037676856800/g2962.txt",
+        "counts": {
+          "nonzero": 240,
+          "F1": 60,
+          "format": 180,
+          "position": 60,
+          "error_gt_1m": 60,
+          "F2": 60,
+          "F3": 60
+        }
+      },
+      {
+        "id": 2963,
+        "case": "2-both-swapped-keeps",
+        "seat": 5,
+        "replay": "main/replays-1795426037676856800/g2963.txt",
+        "counts": {
+          "nonzero": 564,
+          "F1": 141,
+          "format": 423,
+          "position": 141,
+          "error_gt_1m": 141,
+          "F2": 141,
+          "F3": 141
+        }
+      }
+    ]
+  }
+}

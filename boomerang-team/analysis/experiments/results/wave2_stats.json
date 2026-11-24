@@ -1,0 +1,1995 @@
+{
+  "counts": {
+    "lanes": {
+      "done": 400,
+      "total": 400
+    },
+    "raw": {
+      "done": 120,
+      "total": 120
+    },
+    "translate": {
+      "done": 1440,
+      "total": 1440
+    },
+    "mute": {
+      "done": 360,
+      "total": 360
+    },
+    "compat": {
+      "done": 1080,
+      "total": 1080
+    },
+    "msg": {
+      "done": 600,
+      "total": 600
+    },
+    "r3": {
+      "done": 200,
+      "total": 200
+    },
+    "pilot5": {
+      "done": 2,
+      "total": 2
+    },
+    "pilot6": {
+      "done": 6,
+      "total": 6
+    },
+    "pilot7": {
+      "done": 6,
+      "total": 6
+    },
+    "pilot8": {
+      "done": 12,
+      "total": 12
+    }
+  },
+  "raw": {
+    "caldera": {
+      "games": 40,
+      "min_steps": 391,
+      "max_steps": 421,
+      "bot": {
+        "fable": {
+          "seats": 40,
+          "crash": 40,
+          "faults": 40,
+          "t0_exit_0": 40
+        },
+        "opus": {
+          "seats": 40,
+          "crash": 40,
+          "faults": 40,
+          "t0_exit_0": 40
+        },
+        "carbon": {
+          "seats": 40,
+          "crash": 40,
+          "faults": 40,
+          "t0_exit_0": 40
+        },
+        "glm": {
+          "seats": 40,
+          "crash": 40,
+          "faults": 40,
+          "t0_exit_0": 40
+        },
+        "deepseek": {
+          "seats": 40,
+          "crash": 40,
+          "faults": 40,
+          "t0_exit_0": 40
+        },
+        "astra": {
+          "seats": 40,
+          "crash": 40,
+          "faults": 40,
+          "t0_exit_0": 40
+        },
+        "sol": {
+          "seats": 40,
+          "crash": 40,
+          "faults": 40,
+          "t0_exit_0": 40
+        },
+        "hydrogen": {
+          "seats": 40,
+          "crash": 40,
+          "faults": 40,
+          "t0_exit_0": 40
+        },
+        "grok": {
+          "seats": 40,
+          "crash": 40,
+          "faults": 40,
+          "t0_exit_0": 40
+        },
+        "kimi": {
+          "seats": 40,
+          "crash": 40,
+          "faults": 40,
+          "t0_exit_0": 40
+        }
+      }
+    },
+    "piers": {
+      "games": 40,
+      "min_steps": 1200,
+      "max_steps": 1200,
+      "bot": {
+        "fable": {
+          "seats": 40,
+          "crash": 40,
+          "faults": 40,
+          "t0_exit_0": 40
+        },
+        "opus": {
+          "seats": 40,
+          "crash": 40,
+          "faults": 40,
+          "t0_exit_0": 40
+        },
+        "carbon": {
+          "seats": 40,
+          "crash": 40,
+          "faults": 40,
+          "t0_exit_0": 40
+        },
+        "glm": {
+          "seats": 40,
+          "crash": 40,
+          "faults": 40,
+          "t0_exit_0": 40
+        },
+        "deepseek": {
+          "seats": 40,
+          "crash": 40,
+          "faults": 40,
+          "t0_exit_0": 40
+        },
+        "astra": {
+          "seats": 40,
+          "crash": 40,
+          "faults": 40,
+          "t0_exit_0": 40
+        },
+        "sol": {
+          "seats": 40,
+          "crash": 40,
+          "faults": 40,
+          "t0_exit_0": 40
+        },
+        "hydrogen": {
+          "seats": 40,
+          "crash": 40,
+          "faults": 40,
+          "t0_exit_0": 40
+        },
+        "grok": {
+          "seats": 40,
+          "crash": 40,
+          "faults": 40,
+          "t0_exit_0": 40
+        },
+        "kimi": {
+          "seats": 40,
+          "crash": 40,
+          "faults": 40,
+          "t0_exit_0": 40
+        }
+      }
+    },
+    "keeps": {
+      "games": 40,
+      "min_steps": 421,
+      "max_steps": 451,
+      "bot": {
+        "astra": {
+          "seats": 40,
+          "crash": 40,
+          "faults": 40,
+          "t0_exit_0": 40
+        },
+        "sol": {
+          "seats": 40,
+          "crash": 40,
+          "faults": 40,
+          "t0_exit_0": 40
+        },
+        "hydrogen": {
+          "seats": 40,
+          "crash": 40,
+          "faults": 40,
+          "t0_exit_0": 40
+        },
+        "grok": {
+          "seats": 40,
+          "crash": 40,
+          "faults": 40,
+          "t0_exit_0": 40
+        },
+        "kimi": {
+          "seats": 40,
+          "crash": 40,
+          "faults": 40,
+          "t0_exit_0": 40
+        },
+        "fable": {
+          "seats": 40,
+          "crash": 40,
+          "faults": 40,
+          "t0_exit_0": 40
+        },
+        "opus": {
+          "seats": 40,
+          "crash": 40,
+          "faults": 40,
+          "t0_exit_0": 40
+        },
+        "carbon": {
+          "seats": 40,
+          "crash": 40,
+          "faults": 40,
+          "t0_exit_0": 40
+        },
+        "glm": {
+          "seats": 40,
+          "crash": 40,
+          "faults": 40,
+          "t0_exit_0": 40
+        },
+        "deepseek": {
+          "seats": 40,
+          "crash": 40,
+          "faults": 40,
+          "t0_exit_0": 40
+        }
+      }
+    }
+  },
+  "results": {
+    "5a-piers": {
+      "games": 200,
+      "pairs": 100,
+      "n": 100,
+      "rate": 0.845,
+      "se": 0.02532116932848118,
+      "wins": 169,
+      "losses": 31,
+      "draws": 0,
+      "enemy_kills": [
+        33.835,
+        16.99
+      ],
+      "friendly_kills": [
+        1.75,
+        0.79
+      ],
+      "piers_scores": [
+        2050.545,
+        1343.455
+      ],
+      "faults": [
+        {},
+        {}
+      ],
+      "fault_games": 0,
+      "non_ok_status": {},
+      "fault_players": [],
+      "matched_seeds_by_map": {
+        "piers": 100
+      },
+      "baseline": {
+        "n": 100,
+        "rate": 0.0,
+        "se": 0.0
+      },
+      "overlap_current": {
+        "n": 100,
+        "rate": 0.845,
+        "se": 0.02532116932848118
+      },
+      "delta": {
+        "n": 100,
+        "rate": 0.845,
+        "se": 0.02532116932848118
+      },
+      "baseline_ff": [
+        3.42,
+        1.535
+      ],
+      "current_ff": [
+        1.75,
+        0.79
+      ]
+    },
+    "5b-piers": {
+      "games": 200,
+      "pairs": 100,
+      "n": 100,
+      "rate": 0.865,
+      "se": 0.023414361473939944,
+      "wins": 173,
+      "losses": 27,
+      "draws": 0,
+      "enemy_kills": [
+        35.555,
+        20.39
+      ],
+      "friendly_kills": [
+        1.87,
+        0.81
+      ],
+      "piers_scores": [
+        2136.985,
+        1270.165
+      ],
+      "faults": [
+        {
+          "合计": 1,
+          "超时": 1,
+          "非法": 0
+        },
+        {
+          "合计": 1,
+          "超时": 1,
+          "非法": 0
+        }
+      ],
+      "fault_games": 1,
+      "non_ok_status": {},
+      "fault_players": [
+        {
+          "side": 0,
+          "name": "astra2",
+          "count": 1
+        },
+        {
+          "side": 1,
+          "name": "fable2",
+          "count": 1
+        }
+      ],
+      "matched_seeds_by_map": {
+        "piers": 100
+      },
+      "baseline": {
+        "n": 100,
+        "rate": 0.0,
+        "se": 0.0
+      },
+      "overlap_current": {
+        "n": 100,
+        "rate": 0.865,
+        "se": 0.023414361473939944
+      },
+      "delta": {
+        "n": 100,
+        "rate": 0.865,
+        "se": 0.023414361473939944
+      },
+      "baseline_ff": [
+        3.42,
+        1.535
+      ],
+      "current_ff": [
+        1.87,
+        0.81
+      ]
+    },
+    "6a-astra-caldera": {
+      "games": 160,
+      "pairs": 80,
+      "n": 80,
+      "rate": 0.534375,
+      "se": 0.03971410637611231,
+      "wins": 85,
+      "losses": 74,
+      "draws": 1,
+      "enemy_kills": [
+        3.18125,
+        3.1125
+      ],
+      "friendly_kills": [
+        0.26875,
+        0.46875
+      ],
+      "piers_scores": null,
+      "faults": [
+        {},
+        {}
+      ],
+      "fault_games": 0,
+      "non_ok_status": {},
+      "fault_players": [],
+      "matched_seeds_by_map": {
+        "caldera": 80
+      },
+      "baseline": {
+        "n": 80,
+        "rate": 0.55625,
+        "se": 0.03773004334593423
+      },
+      "overlap_current": {
+        "n": 80,
+        "rate": 0.534375,
+        "se": 0.03971410637611231
+      },
+      "delta": {
+        "n": 80,
+        "rate": -0.021875,
+        "se": 0.054139147301833446
+      },
+      "baseline_ff": [
+        0.4125,
+        0.49375
+      ],
+      "current_ff": [
+        0.26875,
+        0.46875
+      ]
+    },
+    "6a-astra-piers": {
+      "games": 160,
+      "pairs": 80,
+      "n": 80,
+      "rate": 0.46875,
+      "se": 0.035958562209890035,
+      "wins": 75,
+      "losses": 85,
+      "draws": 0,
+      "enemy_kills": [
+        19.05,
+        18.425
+      ],
+      "friendly_kills": [
+        1.025,
+        1.41875
+      ],
+      "piers_scores": [
+        1601.2625,
+        1835.89375
+      ],
+      "faults": [
+        {},
+        {}
+      ],
+      "fault_games": 0,
+      "non_ok_status": {},
+      "fault_players": [],
+      "matched_seeds_by_map": {
+        "piers": 80
+      },
+      "baseline": {
+        "n": 80,
+        "rate": 0.28125,
+        "se": 0.034268751219246114
+      },
+      "overlap_current": {
+        "n": 80,
+        "rate": 0.46875,
+        "se": 0.035958562209890035
+      },
+      "delta": {
+        "n": 80,
+        "rate": 0.1875,
+        "se": 0.0473799281862764
+      },
+      "baseline_ff": [
+        1.65625,
+        1.4
+      ],
+      "current_ff": [
+        1.025,
+        1.41875
+      ]
+    },
+    "6a-astra-keeps": {
+      "games": 160,
+      "pairs": 80,
+      "n": 80,
+      "rate": 0.590625,
+      "se": 0.03753788961363664,
+      "wins": 94,
+      "losses": 65,
+      "draws": 1,
+      "enemy_kills": [
+        3.3625,
+        2.3
+      ],
+      "friendly_kills": [
+        0.70625,
+        0.64375
+      ],
+      "piers_scores": null,
+      "faults": [
+        {},
+        {
+          "合计": 1,
+          "超时": 1,
+          "非法": 0
+        }
+      ],
+      "fault_games": 1,
+      "non_ok_status": {},
+      "fault_players": [
+        {
+          "side": 1,
+          "name": "grok",
+          "count": 1
+        }
+      ],
+      "matched_seeds_by_map": {
+        "keeps": 80
+      },
+      "baseline": {
+        "n": 80,
+        "rate": 0.434375,
+        "se": 0.0366042138708273
+      },
+      "overlap_current": {
+        "n": 80,
+        "rate": 0.590625,
+        "se": 0.03753788961363664
+      },
+      "delta": {
+        "n": 80,
+        "rate": 0.15625,
+        "se": 0.0493980778465793
+      },
+      "baseline_ff": [
+        0.8625,
+        0.55625
+      ],
+      "current_ff": [
+        0.70625,
+        0.64375
+      ]
+    },
+    "6a-astra-all": {
+      "games": 480,
+      "pairs": 240,
+      "n": 80,
+      "rate": 0.53125,
+      "se": 0.02103671820076097,
+      "wins": 254,
+      "losses": 224,
+      "draws": 2,
+      "enemy_kills": [
+        8.53125,
+        7.945833333333334
+      ],
+      "friendly_kills": [
+        0.6666666666666666,
+        0.84375
+      ],
+      "piers_scores": [
+        1601.2625,
+        1835.89375
+      ],
+      "faults": [
+        {},
+        {
+          "合计": 1,
+          "超时": 1,
+          "非法": 0
+        }
+      ],
+      "fault_games": 1,
+      "non_ok_status": {},
+      "fault_players": [
+        {
+          "side": 1,
+          "name": "grok",
+          "count": 1
+        }
+      ],
+      "matched_seeds_by_map": {
+        "caldera": 80,
+        "piers": 80,
+        "keeps": 80
+      },
+      "baseline": {
+        "n": 80,
+        "rate": 0.4239583333333333,
+        "se": 0.022047616108206623
+      },
+      "overlap_current": {
+        "n": 80,
+        "rate": 0.53125,
+        "se": 0.02103671820076097
+      },
+      "delta": {
+        "n": 80,
+        "rate": 0.10729166666666666,
+        "se": 0.02886727556034816
+      },
+      "baseline_ff": [
+        0.9770833333333333,
+        0.8166666666666667
+      ],
+      "current_ff": [
+        0.6666666666666666,
+        0.84375
+      ]
+    },
+    "6a-both-caldera": {
+      "games": 160,
+      "pairs": 80,
+      "n": 80,
+      "rate": 0.84375,
+      "se": 0.029957446085228413,
+      "wins": 134,
+      "losses": 24,
+      "draws": 2,
+      "enemy_kills": [
+        3.95625,
+        2.28125
+      ],
+      "friendly_kills": [
+        0.2875,
+        0.3125
+      ],
+      "piers_scores": null,
+      "faults": [
+        {},
+        {}
+      ],
+      "fault_games": 0,
+      "non_ok_status": {},
+      "fault_players": [],
+      "matched_seeds_by_map": {
+        "caldera": 80
+      },
+      "baseline": {
+        "n": 80,
+        "rate": 0.790625,
+        "se": 0.03399894997913236
+      },
+      "overlap_current": {
+        "n": 80,
+        "rate": 0.84375,
+        "se": 0.029957446085228413
+      },
+      "delta": {
+        "n": 80,
+        "rate": 0.053125,
+        "se": 0.04440485267913515
+      },
+      "baseline_ff": [
+        0.475,
+        0.525
+      ],
+      "current_ff": [
+        0.2875,
+        0.3125
+      ]
+    },
+    "6a-both-piers": {
+      "games": 160,
+      "pairs": 80,
+      "n": 80,
+      "rate": 0.525,
+      "se": 0.03546704657009184,
+      "wins": 84,
+      "losses": 76,
+      "draws": 0,
+      "enemy_kills": [
+        20.66875,
+        16.1375
+      ],
+      "friendly_kills": [
+        0.75,
+        1.9125
+      ],
+      "piers_scores": [
+        1713.5125,
+        1710.69375
+      ],
+      "faults": [
+        {},
+        {}
+      ],
+      "fault_games": 0,
+      "non_ok_status": {},
+      "fault_players": [],
+      "matched_seeds_by_map": {
+        "piers": 80
+      },
+      "baseline": {
+        "n": 80,
+        "rate": 0.4875,
+        "se": 0.03874515077865563
+      },
+      "overlap_current": {
+        "n": 80,
+        "rate": 0.525,
+        "se": 0.03546704657009184
+      },
+      "delta": {
+        "n": 80,
+        "rate": 0.0375,
+        "se": 0.05092110427670921
+      },
+      "baseline_ff": [
+        1.26875,
+        3.75
+      ],
+      "current_ff": [
+        0.75,
+        1.9125
+      ]
+    },
+    "6a-both-keeps": {
+      "games": 160,
+      "pairs": 80,
+      "n": 80,
+      "rate": 0.790625,
+      "se": 0.028282785249258886,
+      "wins": 126,
+      "losses": 33,
+      "draws": 1,
+      "enemy_kills": [
+        3.8625,
+        2.20625
+      ],
+      "friendly_kills": [
+        0.74375,
+        0.5375
+      ],
+      "piers_scores": null,
+      "faults": [
+        {},
+        {}
+      ],
+      "fault_games": 0,
+      "non_ok_status": {},
+      "fault_players": [],
+      "matched_seeds_by_map": {
+        "keeps": 80
+      },
+      "baseline": {
+        "n": 80,
+        "rate": 0.753125,
+        "se": 0.029329853537723362
+      },
+      "overlap_current": {
+        "n": 80,
+        "rate": 0.790625,
+        "se": 0.028282785249258886
+      },
+      "delta": {
+        "n": 80,
+        "rate": 0.0375,
+        "se": 0.0426801839413307
+      },
+      "baseline_ff": [
+        0.5875,
+        0.79375
+      ],
+      "current_ff": [
+        0.74375,
+        0.5375
+      ]
+    },
+    "6a-both-all": {
+      "games": 480,
+      "pairs": 240,
+      "n": 80,
+      "rate": 0.7197916666666666,
+      "se": 0.017988446025180828,
+      "wins": 344,
+      "losses": 133,
+      "draws": 3,
+      "enemy_kills": [
+        9.495833333333334,
+        6.875
+      ],
+      "friendly_kills": [
+        0.59375,
+        0.9208333333333333
+      ],
+      "piers_scores": [
+        1713.5125,
+        1710.69375
+      ],
+      "faults": [
+        {},
+        {}
+      ],
+      "fault_games": 0,
+      "non_ok_status": {},
+      "fault_players": [],
+      "matched_seeds_by_map": {
+        "caldera": 80,
+        "piers": 80,
+        "keeps": 80
+      },
+      "baseline": {
+        "n": 80,
+        "rate": 0.6770833333333334,
+        "se": 0.019349874253199357
+      },
+      "overlap_current": {
+        "n": 80,
+        "rate": 0.7197916666666666,
+        "se": 0.017988446025180828
+      },
+      "delta": {
+        "n": 80,
+        "rate": 0.042708333333333334,
+        "se": 0.02533156318418645
+      },
+      "baseline_ff": [
+        0.7770833333333333,
+        1.6895833333333334
+      ],
+      "current_ff": [
+        0.59375,
+        0.9208333333333333
+      ]
+    },
+    "6a-fable-caldera": {
+      "games": 160,
+      "pairs": 80,
+      "n": 80,
+      "rate": 0.303125,
+      "se": 0.03817787887149549,
+      "wins": 48,
+      "losses": 111,
+      "draws": 1,
+      "enemy_kills": [
+        2.95625,
+        3.7
+      ],
+      "friendly_kills": [
+        0.34375,
+        0.25
+      ],
+      "piers_scores": null,
+      "faults": [
+        {},
+        {}
+      ],
+      "fault_games": 0,
+      "non_ok_status": {},
+      "fault_players": [],
+      "matched_seeds_by_map": {
+        "caldera": 80
+      },
+      "baseline": {
+        "n": 80,
+        "rate": 0.2625,
+        "se": 0.030779688765585806
+      },
+      "overlap_current": {
+        "n": 80,
+        "rate": 0.303125,
+        "se": 0.03817787887149549
+      },
+      "delta": {
+        "n": 80,
+        "rate": 0.040625,
+        "se": 0.048604690529368624
+      },
+      "baseline_ff": [
+        0.5375,
+        0.24375
+      ],
+      "current_ff": [
+        0.34375,
+        0.25
+      ]
+    },
+    "6a-fable-piers": {
+      "games": 160,
+      "pairs": 80,
+      "n": 80,
+      "rate": 0.278125,
+      "se": 0.032980188601490344,
+      "wins": 44,
+      "losses": 115,
+      "draws": 1,
+      "enemy_kills": [
+        24.70625,
+        26.50625
+      ],
+      "friendly_kills": [
+        2.63125,
+        0.3375
+      ],
+      "piers_scores": [
+        1496.61875,
+        1907.85625
+      ],
+      "faults": [
+        {},
+        {}
+      ],
+      "fault_games": 0,
+      "non_ok_status": {},
+      "fault_players": [],
+      "matched_seeds_by_map": {
+        "piers": 80
+      },
+      "baseline": {
+        "n": 80,
+        "rate": 0.2125,
+        "se": 0.03418929990286582
+      },
+      "overlap_current": {
+        "n": 80,
+        "rate": 0.278125,
+        "se": 0.032980188601490344
+      },
+      "delta": {
+        "n": 80,
+        "rate": 0.065625,
+        "se": 0.04743077692473047
+      },
+      "baseline_ff": [
+        4.7625,
+        0.33125
+      ],
+      "current_ff": [
+        2.63125,
+        0.3375
+      ]
+    },
+    "6a-fable-keeps": {
+      "games": 160,
+      "pairs": 80,
+      "n": 80,
+      "rate": 0.45625,
+      "se": 0.0379391480623406,
+      "wins": 69,
+      "losses": 83,
+      "draws": 8,
+      "enemy_kills": [
+        3.49375,
+        3.55
+      ],
+      "friendly_kills": [
+        0.525,
+        0.18125
+      ],
+      "piers_scores": null,
+      "faults": [
+        {
+          "合计": 1,
+          "超时": 1,
+          "非法": 0
+        },
+        {
+          "合计": 1,
+          "超时": 1,
+          "非法": 0
+        }
+      ],
+      "fault_games": 1,
+      "non_ok_status": {},
+      "fault_players": [
+        {
+          "side": 0,
+          "name": "grok",
+          "count": 1
+        },
+        {
+          "side": 1,
+          "name": "opus",
+          "count": 1
+        }
+      ],
+      "matched_seeds_by_map": {
+        "keeps": 80
+      },
+      "baseline": {
+        "n": 80,
+        "rate": 0.4125,
+        "se": 0.03670033456199038
+      },
+      "overlap_current": {
+        "n": 80,
+        "rate": 0.45625,
+        "se": 0.0379391480623406
+      },
+      "delta": {
+        "n": 80,
+        "rate": 0.04375,
+        "se": 0.055684570221556824
+      },
+      "baseline_ff": [
+        0.94375,
+        0.2375
+      ],
+      "current_ff": [
+        0.525,
+        0.18125
+      ]
+    },
+    "6a-fable-all": {
+      "games": 480,
+      "pairs": 240,
+      "n": 80,
+      "rate": 0.3458333333333333,
+      "se": 0.020004614446575024,
+      "wins": 161,
+      "losses": 309,
+      "draws": 10,
+      "enemy_kills": [
+        10.385416666666666,
+        11.252083333333333
+      ],
+      "friendly_kills": [
+        1.1666666666666667,
+        0.25625
+      ],
+      "piers_scores": [
+        1496.61875,
+        1907.85625
+      ],
+      "faults": [
+        {
+          "合计": 1,
+          "超时": 1,
+          "非法": 0
+        },
+        {
+          "合计": 1,
+          "超时": 1,
+          "非法": 0
+        }
+      ],
+      "fault_games": 1,
+      "non_ok_status": {},
+      "fault_players": [
+        {
+          "side": 0,
+          "name": "grok",
+          "count": 1
+        },
+        {
+          "side": 1,
+          "name": "opus",
+          "count": 1
+        }
+      ],
+      "matched_seeds_by_map": {
+        "caldera": 80,
+        "piers": 80,
+        "keeps": 80
+      },
+      "baseline": {
+        "n": 80,
+        "rate": 0.29583333333333334,
+        "se": 0.02015782489159126
+      },
+      "overlap_current": {
+        "n": 80,
+        "rate": 0.3458333333333333,
+        "se": 0.020004614446575024
+      },
+      "delta": {
+        "n": 80,
+        "rate": 0.049999999999999996,
+        "se": 0.030939917275465658
+      },
+      "baseline_ff": [
+        2.08125,
+        0.2708333333333333
+      ],
+      "current_ff": [
+        1.1666666666666667,
+        0.25625
+      ]
+    },
+    "6b-caldera": {
+      "games": 120,
+      "pairs": 60,
+      "n": 60,
+      "rate": 0.5458333333333333,
+      "se": 0.048089072056176185,
+      "wins": 65,
+      "losses": 54,
+      "draws": 1,
+      "enemy_kills": [
+        3.4833333333333334,
+        2.8333333333333335
+      ],
+      "friendly_kills": [
+        0.7583333333333333,
+        0.35833333333333334
+      ],
+      "piers_scores": null,
+      "faults": [
+        {},
+        {}
+      ],
+      "fault_games": 0,
+      "non_ok_status": {},
+      "fault_players": [],
+      "matched_seeds_by_map": {
+        "caldera": 60
+      },
+      "baseline": {
+        "n": 60,
+        "rate": 0.5583333333333333,
+        "se": 0.04461332087220928
+      },
+      "overlap_current": {
+        "n": 60,
+        "rate": 0.5458333333333333,
+        "se": 0.048089072056176185
+      },
+      "delta": {
+        "n": 60,
+        "rate": -0.0125,
+        "se": 0.06681436675236677
+      },
+      "baseline_ff": [
+        0.48333333333333334,
+        0.125
+      ],
+      "current_ff": [
+        0.7583333333333333,
+        0.35833333333333334
+      ]
+    },
+    "6b-piers": {
+      "games": 120,
+      "pairs": 60,
+      "n": 60,
+      "rate": 0.75,
+      "se": 0.03663069627518046,
+      "wins": 90,
+      "losses": 30,
+      "draws": 0,
+      "enemy_kills": [
+        25.1,
+        24.983333333333334
+      ],
+      "friendly_kills": [
+        2.75,
+        1.1416666666666666
+      ],
+      "piers_scores": [
+        1982.8,
+        1427.0
+      ],
+      "faults": [
+        {},
+        {}
+      ],
+      "fault_games": 0,
+      "non_ok_status": {},
+      "fault_players": [],
+      "matched_seeds_by_map": {
+        "piers": 60
+      },
+      "baseline": {
+        "n": 60,
+        "rate": 0.7583333333333333,
+        "se": 0.03849511427409351
+      },
+      "overlap_current": {
+        "n": 60,
+        "rate": 0.75,
+        "se": 0.03663069627518046
+      },
+      "delta": {
+        "n": 60,
+        "rate": -0.008333333333333333,
+        "se": 0.04826314795052393
+      },
+      "baseline_ff": [
+        2.2083333333333335,
+        0.44166666666666665
+      ],
+      "current_ff": [
+        2.75,
+        1.1416666666666666
+      ]
+    },
+    "6b-keeps": {
+      "games": 120,
+      "pairs": 60,
+      "n": 60,
+      "rate": 0.6833333333333333,
+      "se": 0.042380884366642016,
+      "wins": 81,
+      "losses": 37,
+      "draws": 2,
+      "enemy_kills": [
+        3.3916666666666666,
+        2.925
+      ],
+      "friendly_kills": [
+        0.8833333333333333,
+        0.6583333333333333
+      ],
+      "piers_scores": null,
+      "faults": [
+        {
+          "合计": 1,
+          "超时": 1,
+          "非法": 0
+        },
+        {}
+      ],
+      "fault_games": 1,
+      "non_ok_status": {},
+      "fault_players": [
+        {
+          "side": 0,
+          "name": "grok",
+          "count": 1
+        }
+      ],
+      "matched_seeds_by_map": {
+        "keeps": 60
+      },
+      "baseline": {
+        "n": 60,
+        "rate": 0.7,
+        "se": 0.04235310272854237
+      },
+      "overlap_current": {
+        "n": 60,
+        "rate": 0.6833333333333333,
+        "se": 0.042380884366642016
+      },
+      "delta": {
+        "n": 60,
+        "rate": -0.016666666666666666,
+        "se": 0.05908514715168246
+      },
+      "baseline_ff": [
+        0.725,
+        0.18333333333333332
+      ],
+      "current_ff": [
+        0.8833333333333333,
+        0.6583333333333333
+      ]
+    },
+    "6b-all": {
+      "games": 360,
+      "pairs": 180,
+      "n": 60,
+      "rate": 0.6597222222222222,
+      "se": 0.02070740345522085,
+      "wins": 236,
+      "losses": 121,
+      "draws": 3,
+      "enemy_kills": [
+        10.658333333333333,
+        10.247222222222222
+      ],
+      "friendly_kills": [
+        1.4638888888888888,
+        0.7194444444444444
+      ],
+      "piers_scores": [
+        1982.8,
+        1427.0
+      ],
+      "faults": [
+        {
+          "合计": 1,
+          "超时": 1,
+          "非法": 0
+        },
+        {}
+      ],
+      "fault_games": 1,
+      "non_ok_status": {},
+      "fault_players": [
+        {
+          "side": 0,
+          "name": "grok",
+          "count": 1
+        }
+      ],
+      "matched_seeds_by_map": {
+        "caldera": 60,
+        "piers": 60,
+        "keeps": 60
+      },
+      "baseline": {
+        "n": 60,
+        "rate": 0.6722222222222223,
+        "se": 0.02685861550852807
+      },
+      "overlap_current": {
+        "n": 60,
+        "rate": 0.6597222222222222,
+        "se": 0.02070740345522085
+      },
+      "delta": {
+        "n": 60,
+        "rate": -0.012499999999999999,
+        "se": 0.03377909338675902
+      },
+      "baseline_ff": [
+        1.1388888888888888,
+        0.25
+      ],
+      "current_ff": [
+        1.4638888888888888,
+        0.7194444444444444
+      ]
+    },
+    "7b-a-caldera": {
+      "games": 120,
+      "pairs": 60,
+      "n": 60,
+      "rate": 0.5333333333333333,
+      "se": 0.039177033127464275,
+      "wins": 64,
+      "losses": 56,
+      "draws": 0,
+      "enemy_kills": [
+        3.0166666666666666,
+        3.091666666666667
+      ],
+      "friendly_kills": [
+        0.4666666666666667,
+        0.9083333333333333
+      ],
+      "piers_scores": null,
+      "faults": [
+        {},
+        {}
+      ],
+      "fault_games": 0,
+      "non_ok_status": {},
+      "fault_players": []
+    },
+    "7b-a-piers": {
+      "games": 120,
+      "pairs": 60,
+      "n": 60,
+      "rate": 1.0,
+      "se": 0.0,
+      "wins": 120,
+      "losses": 0,
+      "draws": 0,
+      "enemy_kills": [
+        20.525,
+        19.525
+      ],
+      "friendly_kills": [
+        1.85,
+        3.441666666666667
+      ],
+      "piers_scores": [
+        2900.4,
+        489.15833333333336
+      ],
+      "faults": [
+        {},
+        {}
+      ],
+      "fault_games": 0,
+      "non_ok_status": {},
+      "fault_players": []
+    },
+    "7b-a-keeps": {
+      "games": 120,
+      "pairs": 60,
+      "n": 60,
+      "rate": 0.575,
+      "se": 0.04727757916312365,
+      "wins": 69,
+      "losses": 51,
+      "draws": 0,
+      "enemy_kills": [
+        3.225,
+        3.125
+      ],
+      "friendly_kills": [
+        0.65,
+        0.9666666666666667
+      ],
+      "piers_scores": null,
+      "faults": [
+        {},
+        {}
+      ],
+      "fault_games": 0,
+      "non_ok_status": {},
+      "fault_players": []
+    },
+    "7b-a-all": {
+      "games": 360,
+      "pairs": 180,
+      "n": 60,
+      "rate": 0.7027777777777777,
+      "se": 0.01819355491564849,
+      "wins": 253,
+      "losses": 107,
+      "draws": 0,
+      "enemy_kills": [
+        8.922222222222222,
+        8.580555555555556
+      ],
+      "friendly_kills": [
+        0.9888888888888889,
+        1.7722222222222221
+      ],
+      "piers_scores": [
+        2900.4,
+        489.15833333333336
+      ],
+      "faults": [
+        {},
+        {}
+      ],
+      "fault_games": 0,
+      "non_ok_status": {},
+      "fault_players": []
+    },
+    "7b-f-caldera": {
+      "games": 120,
+      "pairs": 60,
+      "n": 60,
+      "rate": 0.825,
+      "se": 0.03324493929458384,
+      "wins": 99,
+      "losses": 21,
+      "draws": 0,
+      "enemy_kills": [
+        2.8583333333333334,
+        2.658333333333333
+      ],
+      "friendly_kills": [
+        0.18333333333333332,
+        1.4583333333333333
+      ],
+      "piers_scores": null,
+      "faults": [
+        {},
+        {}
+      ],
+      "fault_games": 0,
+      "non_ok_status": {},
+      "fault_players": []
+    },
+    "7b-f-piers": {
+      "games": 120,
+      "pairs": 60,
+      "n": 60,
+      "rate": 1.0,
+      "se": 0.0,
+      "wins": 120,
+      "losses": 0,
+      "draws": 0,
+      "enemy_kills": [
+        6.666666666666667,
+        4.908333333333333
+      ],
+      "friendly_kills": [
+        0.15,
+        6.483333333333333
+      ],
+      "piers_scores": [
+        3274.991666666667,
+        149.125
+      ],
+      "faults": [
+        {},
+        {}
+      ],
+      "fault_games": 0,
+      "non_ok_status": {},
+      "fault_players": []
+    },
+    "7b-f-keeps": {
+      "games": 120,
+      "pairs": 60,
+      "n": 60,
+      "rate": 0.7041666666666667,
+      "se": 0.042224374883175625,
+      "wins": 84,
+      "losses": 35,
+      "draws": 1,
+      "enemy_kills": [
+        2.95,
+        3.175
+      ],
+      "friendly_kills": [
+        0.30833333333333335,
+        1.2916666666666667
+      ],
+      "piers_scores": null,
+      "faults": [
+        {},
+        {}
+      ],
+      "fault_games": 0,
+      "non_ok_status": {},
+      "fault_players": []
+    },
+    "7b-f-all": {
+      "games": 360,
+      "pairs": 180,
+      "n": 60,
+      "rate": 0.8430555555555556,
+      "se": 0.017278286426529815,
+      "wins": 303,
+      "losses": 56,
+      "draws": 1,
+      "enemy_kills": [
+        4.158333333333333,
+        3.5805555555555557
+      ],
+      "friendly_kills": [
+        0.21388888888888888,
+        3.077777777777778
+      ],
+      "piers_scores": [
+        3274.991666666667,
+        149.125
+      ],
+      "faults": [
+        {},
+        {}
+      ],
+      "fault_games": 0,
+      "non_ok_status": {},
+      "fault_players": []
+    },
+    "7b-cross-caldera": {
+      "games": 120,
+      "pairs": 60,
+      "n": 60,
+      "rate": 0.3125,
+      "se": 0.04664787252704495,
+      "wins": 37,
+      "losses": 82,
+      "draws": 1,
+      "enemy_kills": [
+        2.9833333333333334,
+        2.825
+      ],
+      "friendly_kills": [
+        1.1416666666666666,
+        0.25833333333333336
+      ],
+      "piers_scores": null,
+      "faults": [
+        {},
+        {}
+      ],
+      "fault_games": 0,
+      "non_ok_status": {},
+      "fault_players": []
+    },
+    "7b-cross-piers": {
+      "games": 120,
+      "pairs": 60,
+      "n": 60,
+      "rate": 0.016666666666666666,
+      "se": 0.011684812361551658,
+      "wins": 2,
+      "losses": 118,
+      "draws": 0,
+      "enemy_kills": [
+        18.291666666666668,
+        18.333333333333332
+      ],
+      "friendly_kills": [
+        2.8583333333333334,
+        0.4083333333333333
+      ],
+      "piers_scores": [
+        788.5833333333334,
+        2603.4583333333335
+      ],
+      "faults": [
+        {},
+        {}
+      ],
+      "fault_games": 0,
+      "non_ok_status": {},
+      "fault_players": []
+    },
+    "7b-cross-keeps": {
+      "games": 120,
+      "pairs": 60,
+      "n": 60,
+      "rate": 0.5416666666666666,
+      "se": 0.04208826256302804,
+      "wins": 64,
+      "losses": 54,
+      "draws": 2,
+      "enemy_kills": [
+        3.7,
+        3.0166666666666666
+      ],
+      "friendly_kills": [
+        0.9333333333333333,
+        0.275
+      ],
+      "piers_scores": null,
+      "faults": [
+        {},
+        {}
+      ],
+      "fault_games": 0,
+      "non_ok_status": {},
+      "fault_players": []
+    },
+    "7b-cross-all": {
+      "games": 360,
+      "pairs": 180,
+      "n": 60,
+      "rate": 0.29027777777777775,
+      "se": 0.021101537873027678,
+      "wins": 103,
+      "losses": 254,
+      "draws": 3,
+      "enemy_kills": [
+        8.325,
+        8.058333333333334
+      ],
+      "friendly_kills": [
+        1.6444444444444444,
+        0.3138888888888889
+      ],
+      "piers_scores": [
+        788.5833333333334,
+        2603.4583333333335
+      ],
+      "faults": [
+        {},
+        {}
+      ],
+      "fault_games": 0,
+      "non_ok_status": {},
+      "fault_players": []
+    },
+    "8-default-caldera": {
+      "games": 200,
+      "pairs": 100,
+      "n": 100,
+      "rate": 0.4675,
+      "se": 0.0328862056986288,
+      "wins": 93,
+      "losses": 106,
+      "draws": 1,
+      "enemy_kills": [
+        3.03,
+        3.62
+      ],
+      "friendly_kills": [
+        0.245,
+        0.515
+      ],
+      "piers_scores": null,
+      "faults": [
+        {},
+        {}
+      ],
+      "fault_games": 0,
+      "non_ok_status": {},
+      "fault_players": [],
+      "matched_seeds_by_map": {
+        "caldera": 80
+      },
+      "baseline": {
+        "n": 80,
+        "rate": 0.475,
+        "se": 0.03967829493069977
+      },
+      "overlap_current": {
+        "n": 80,
+        "rate": 0.471875,
+        "se": 0.03720712371817723
+      },
+      "delta": {
+        "n": 80,
+        "rate": -0.003125,
+        "se": 0.056341126959134534
+      },
+      "baseline_ff": [
+        0.15625,
+        0.5125
+      ],
+      "current_ff": [
+        0.25,
+        0.53125
+      ],
+      "glm_baseline": {
+        "friendly": 0.05625,
+        "opponents": 0.61875,
+        "throws": 1.4,
+        "faults": 1
+      },
+      "glm_patched": {
+        "friendly": 0.0125,
+        "opponents": 0.68125,
+        "throws": 1.69375,
+        "faults": 0
+      }
+    },
+    "8-default-piers": {
+      "games": 200,
+      "pairs": 100,
+      "n": 100,
+      "rate": 0.205,
+      "se": 0.026680867430964213,
+      "wins": 41,
+      "losses": 159,
+      "draws": 0,
+      "enemy_kills": [
+        24.755,
+        25.745
+      ],
+      "friendly_kills": [
+        0.37,
+        2.195
+      ],
+      "piers_scores": [
+        1380.145,
+        2030.125
+      ],
+      "faults": [
+        {},
+        {}
+      ],
+      "fault_games": 0,
+      "non_ok_status": {},
+      "fault_players": [],
+      "matched_seeds_by_map": {
+        "piers": 80
+      },
+      "baseline": {
+        "n": 80,
+        "rate": 0.2625,
+        "se": 0.035550596854467306
+      },
+      "overlap_current": {
+        "n": 80,
+        "rate": 0.2,
+        "se": 0.030293918844998276
+      },
+      "delta": {
+        "n": 80,
+        "rate": -0.0625,
+        "se": 0.04207343640152194
+      },
+      "baseline_ff": [
+        0.3875,
+        2.175
+      ],
+      "current_ff": [
+        0.3875,
+        2.25625
+      ],
+      "glm_baseline": {
+        "friendly": 0.13125,
+        "opponents": 0.425,
+        "throws": 1.375,
+        "faults": 0
+      },
+      "glm_patched": {
+        "friendly": 0.05625,
+        "opponents": 0.58125,
+        "throws": 1.1875,
+        "faults": 0
+      }
+    },
+    "8-default-keeps": {
+      "games": 200,
+      "pairs": 100,
+      "n": 100,
+      "rate": 0.26,
+      "se": 0.030134379171982424,
+      "wins": 50,
+      "losses": 146,
+      "draws": 4,
+      "enemy_kills": [
+        2.815,
+        3.685
+      ],
+      "friendly_kills": [
+        0.32,
+        0.86
+      ],
+      "piers_scores": null,
+      "faults": [
+        {},
+        {}
+      ],
+      "fault_games": 0,
+      "non_ok_status": {},
+      "fault_players": [],
+      "matched_seeds_by_map": {
+        "keeps": 80
+      },
+      "baseline": {
+        "n": 80,
+        "rate": 0.275,
+        "se": 0.03574478805948808
+      },
+      "overlap_current": {
+        "n": 80,
+        "rate": 0.25,
+        "se": 0.034160362699286954
+      },
+      "delta": {
+        "n": 80,
+        "rate": -0.025,
+        "se": 0.04740079580595641
+      },
+      "baseline_ff": [
+        0.21875,
+        0.725
+      ],
+      "current_ff": [
+        0.30625,
+        0.85625
+      ],
+      "glm_baseline": {
+        "friendly": 0.0,
+        "opponents": 0.39375,
+        "throws": 1.48125,
+        "faults": 0
+      },
+      "glm_patched": {
+        "friendly": 0.0,
+        "opponents": 0.3,
+        "throws": 1.225,
+        "faults": 0
+      }
+    },
+    "8-default-all": {
+      "games": 600,
+      "pairs": 300,
+      "n": 100,
+      "rate": 0.3108333333333333,
+      "se": 0.018759771116558938,
+      "wins": 184,
+      "losses": 411,
+      "draws": 5,
+      "enemy_kills": [
+        10.2,
+        11.016666666666667
+      ],
+      "friendly_kills": [
+        0.31166666666666665,
+        1.19
+      ],
+      "piers_scores": [
+        1380.145,
+        2030.125
+      ],
+      "faults": [
+        {},
+        {}
+      ],
+      "fault_games": 0,
+      "non_ok_status": {},
+      "fault_players": [],
+      "matched_seeds_by_map": {
+        "caldera": 80,
+        "piers": 80,
+        "keeps": 80
+      },
+      "baseline": {
+        "n": 80,
+        "rate": 0.33749999999999997,
+        "se": 0.0231040954473797
+      },
+      "overlap_current": {
+        "n": 80,
+        "rate": 0.30729166666666663,
+        "se": 0.02104814100169622
+      },
+      "delta": {
+        "n": 80,
+        "rate": -0.030208333333333334,
+        "se": 0.028563063678742395
+      },
+      "baseline_ff": [
+        0.25416666666666665,
+        1.1375
+      ],
+      "current_ff": [
+        0.3145833333333333,
+        1.2145833333333333
+      ],
+      "glm_baseline": {
+        "friendly": 0.0625,
+        "opponents": 0.4791666666666667,
+        "throws": 1.41875,
+        "faults": 1
+      },
+      "glm_patched": {
+        "friendly": 0.022916666666666665,
+        "opponents": 0.5208333333333334,
+        "throws": 1.36875,
+        "faults": 0
+      }
+    },
+    "8-r3-piers": {
+      "games": 200,
+      "pairs": 100,
+      "n": 100,
+      "rate": 0.295,
+      "se": 0.03105469271131079,
+      "wins": 59,
+      "losses": 141,
+      "draws": 0,
+      "enemy_kills": [
+        26.59,
+        37.05
+      ],
+      "friendly_kills": [
+        1.725,
+        2.3
+      ],
+      "piers_scores": [
+        1550.445,
+        1858.13
+      ],
+      "faults": [
+        {
+          "合计": 1,
+          "超时": 1,
+          "非法": 0
+        },
+        {}
+      ],
+      "fault_games": 1,
+      "non_ok_status": {},
+      "fault_players": [
+        {
+          "side": 0,
+          "name": "fable",
+          "count": 1
+        }
+      ],
+      "matched_seeds_by_map": {
+        "piers": 100
+      },
+      "baseline": {
+        "n": 100,
+        "rate": 0.315,
+        "se": 0.033825906036526486
+      },
+      "overlap_current": {
+        "n": 100,
+        "rate": 0.295,
+        "se": 0.03105469271131079
+      },
+      "delta": {
+        "n": 100,
+        "rate": -0.02,
+        "se": 0.04546060565661952
+      },
+      "baseline_ff": [
+        1.925,
+        2.0
+      ],
+      "current_ff": [
+        1.725,
+        2.3
+      ],
+      "glm_baseline": {
+        "friendly": 1.25,
+        "opponents": 1.275,
+        "throws": 1.96,
+        "faults": 0
+      },
+      "glm_patched": {
+        "friendly": 1.155,
+        "opponents": 1.41,
+        "throws": 1.965,
+        "faults": 0
+      }
+    }
+  }
+}

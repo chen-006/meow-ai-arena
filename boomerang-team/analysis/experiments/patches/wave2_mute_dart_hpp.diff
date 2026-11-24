@@ -1,0 +1,11 @@
+--- kit/dart.hpp
++++ mute_src/dart.hpp
+@@ -2570,7 +2570,7 @@
+     Obs o;
+     while (read_obs(std::cin, gi, o)) {
+         const Action a = bot.decide(o);
+-        std::cout << a.mx << ' ' << a.my << ' ' << a.act << ' ' << a.ax << ' ' << a.ay << ' ' << a.msg << '\n' << std::flush;
++        std::cout << a.mx << ' ' << a.my << ' ' << a.act << ' ' << a.ax << ' ' << a.ay << ' ' << 0 << '\n' << std::flush;
+     }
+     return 0;
+ }

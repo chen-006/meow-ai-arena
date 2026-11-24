@@ -1,0 +1,53 @@
+--- legacy/astra/dart.hpp
++++ legacy_compat/dart.hpp
+@@ -73,7 +73,7 @@
+ 
+ constexpr const char* ENGINE_VERSION = "dartfu-v3";
+ constexpr int MAX_DELAY = 20;      // DELAY 的上限（步）
+-constexpr int MAXP = 8;            // 一局最多几人
++constexpr int MAXP = 10;            // 一局最多几人
+ constexpr i64 TICKS = 20;          // 每秒步数
+ constexpr i64 FULL = 36000;        // 一圈
+ constexpr i64 CELL = 500;          // 格子边长（毫米）；程序勿写死格子尺寸
+@@ -962,6 +962,7 @@
+ struct Event { i64 t, type, a, b, c, d; };
+ 
+ struct GameInfo {
++    bool extended_team_wire = false;
+     Config cfg;
+     std::shared_ptr<const Map> map;
+     int n = 0;               // 这一局几人
+@@ -2034,6 +2035,8 @@
+         if (!(is >> gi.team[i])) return false;
+     auto m = std::make_shared<Map>();
+     if (!read_map(is, *m)) return false;
++    gi.extended_team_wire = gi.cfg.mode >= 3 && gi.cfg.mode <= 5;
++    if (gi.extended_team_wire) gi.cfg.mode = M_TEAM;
+     const int md = int(iclamp(gi.cfg.mode, 0, 2));
+     m->modes[md] = true;
+     if (!(is >> tok) || tok != "SPAWN") return false;
+@@ -2041,6 +2044,12 @@
+         if (!(is >> gi.spx[i] >> gi.spy[i])) return false;
+         m->spx[md][i] = gi.spx[i];
+         m->spy[md][i] = gi.spy[i];
++    }
++    if (gi.extended_team_wire) {
++        std::getline(is, line); // remainder of SPAWN
++        for (const char* key : {"BASE ", "NAMES ", "KING ", "POINTS ", "PLAN"}) {
++            if (!std::getline(is, line) || line.rfind(key, 0) != 0) return false;
++        }
+     }
+     gi.map = m;
+     return true;
+@@ -2062,6 +2071,11 @@
+         Dart& D = o.d[i];
+         D = Dart();
+         if (!(is >> D.st >> D.x >> D.y >> D.vx >> D.vy >> D.left >> D.age)) return false;
++    }
++    if (gi.extended_team_wire) {
++        std::string line;
++        std::getline(is, line); // remainder of the last dart record
++        if (!std::getline(is, line) || line.rfind("STATE ", 0) != 0) return false;
+     }
+     return true;
+ }

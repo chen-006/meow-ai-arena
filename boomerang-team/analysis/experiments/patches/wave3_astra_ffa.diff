@@ -1,0 +1,21 @@
+--- sources/astra.cpp
++++ adapters/astra_ffa.cpp
+@@ -254,7 +254,8 @@
+         return side?vec(gi->M().width(),gi->M().height())-p:p;
+     }
+     void readPlan() {
+-        side=int(gi->team[seat]); ownKing=gi->king[side]; enemyKing=gi->king[1-side];
++        side=int(gi->team[seat]);
++        if(c->mode==M_KING) { ownKing=gi->king[side]; enemyKing=gi->king[1-side]; }
+         king=seat==ownKing;
+         const std::string& name=gi->names[seat];
+         lanes.fill(-1);
+@@ -2840,7 +2841,7 @@
+         for(int q=0;q<n;++q) if(w.p[q].alive && w.p[q].team!=p.team) {
+             Vec site=q==seat?seenUs:pos(w.p[q]);
+             double distance=(site-at).len();
+-            if(q==w.formation.king[1-p.team] && w.p[q].inv<3 && distance<7500) distance-=600;
++            if(w.cf.mode==M_KING && q==w.formation.king[1-p.team] && w.p[q].inv<3 && distance<7500) distance-=600;
+             if(distance<nearest) {nearest=distance; target=q; targetPos=site; targetSpeed=q==seat?speedUs:vel(w.p[q]);}
+         }
+         Action out; if(target<0) return out;

@@ -1,0 +1,4395 @@
+{
+  "cells": {
+    "1v1-final": {
+      "games": 200,
+      "pairs": 100,
+      "n": 100,
+      "rate": 0.8125,
+      "se": 0.02806355521513857,
+      "wins": 162,
+      "losses": 37,
+      "draws": 1,
+      "enemy_kills": [
+        0.81,
+        0.18
+      ],
+      "friendly_kills": [
+        0.0,
+        0.0
+      ],
+      "piers_scores": null,
+      "faults": [
+        {},
+        {}
+      ],
+      "fault_games": 0,
+      "non_ok_status": {},
+      "fault_players": []
+    },
+    "1v1-astra": {
+      "games": 100,
+      "pairs": 50,
+      "n": 50,
+      "rate": 0.48,
+      "se": 0.06261316285946036,
+      "wins": 47,
+      "losses": 51,
+      "draws": 2,
+      "enemy_kills": [
+        0.45,
+        0.53
+      ],
+      "friendly_kills": [
+        0.0,
+        0.0
+      ],
+      "piers_scores": null,
+      "faults": [
+        {},
+        {}
+      ],
+      "fault_games": 0,
+      "non_ok_status": {},
+      "fault_players": []
+    },
+    "1v1-fable": {
+      "games": 100,
+      "pairs": 50,
+      "n": 50,
+      "rate": 0.52,
+      "se": 0.044515532716808234,
+      "wins": 51,
+      "losses": 47,
+      "draws": 2,
+      "enemy_kills": [
+        0.53,
+        0.49
+      ],
+      "friendly_kills": [
+        0.0,
+        0.0
+      ],
+      "piers_scores": null,
+      "faults": [
+        {},
+        {}
+      ],
+      "fault_games": 0,
+      "non_ok_status": {},
+      "fault_players": []
+    },
+    "1v1-old-control": {
+      "games": 200,
+      "pairs": 100,
+      "n": 100,
+      "rate": 0.82,
+      "se": 0.02684598798157875,
+      "wins": 163,
+      "losses": 35,
+      "draws": 2,
+      "enemy_kills": [
+        0.815,
+        0.18
+      ],
+      "friendly_kills": [
+        0.0,
+        0.0
+      ],
+      "piers_scores": null,
+      "faults": [
+        {},
+        {}
+      ],
+      "fault_games": 0,
+      "non_ok_status": {},
+      "fault_players": []
+    },
+    "1-clones-caldera": {
+      "games": 200,
+      "pairs": 100,
+      "n": 100,
+      "rate": 0.63,
+      "se": 0.03508287446615629,
+      "wins": 125,
+      "losses": 73,
+      "draws": 2,
+      "enemy_kills": [
+        3.28,
+        1.6
+      ],
+      "friendly_kills": [
+        1.32,
+        0.555
+      ],
+      "piers_scores": null,
+      "faults": [
+        {},
+        {}
+      ],
+      "fault_games": 0,
+      "non_ok_status": {},
+      "fault_players": []
+    },
+    "1-clones-piers": {
+      "games": 200,
+      "pairs": 100,
+      "n": 100,
+      "rate": 0.0,
+      "se": 0.0,
+      "wins": 0,
+      "losses": 200,
+      "draws": 0,
+      "enemy_kills": [
+        21.145,
+        8.06
+      ],
+      "friendly_kills": [
+        3.42,
+        1.535
+      ],
+      "piers_scores": [
+        1139.08,
+        2300.88
+      ],
+      "faults": [
+        {},
+        {
+          "合计": 1,
+          "超时": 1,
+          "非法": 0
+        }
+      ],
+      "fault_games": 1,
+      "non_ok_status": {},
+      "fault_players": [
+        {
+          "side": 1,
+          "name": "fable4",
+          "count": 1
+        }
+      ]
+    },
+    "1-clones-keeps": {
+      "games": 200,
+      "pairs": 100,
+      "n": 100,
+      "rate": 0.975,
+      "se": 0.010952145677879516,
+      "wins": 195,
+      "losses": 5,
+      "draws": 0,
+      "enemy_kills": [
+        4.435,
+        1.105
+      ],
+      "friendly_kills": [
+        0.65,
+        0.2
+      ],
+      "piers_scores": null,
+      "faults": [
+        {},
+        {
+          "合计": 1,
+          "超时": 1,
+          "非法": 0
+        }
+      ],
+      "fault_games": 1,
+      "non_ok_status": {},
+      "fault_players": [
+        {
+          "side": 1,
+          "name": "fable2",
+          "count": 1
+        }
+      ]
+    },
+    "2-base-caldera": {
+      "games": 160,
+      "pairs": 80,
+      "n": 80,
+      "rate": 0.525,
+      "se": 0.03967829493069977,
+      "wins": 84,
+      "losses": 76,
+      "draws": 0,
+      "enemy_kills": [
+        3.51875,
+        3.04375
+      ],
+      "friendly_kills": [
+        0.5125,
+        0.15625
+      ],
+      "piers_scores": null,
+      "faults": [
+        {
+          "合计": 2,
+          "超时": 2,
+          "非法": 0
+        },
+        {
+          "合计": 2,
+          "超时": 2,
+          "非法": 0
+        }
+      ],
+      "fault_games": 1,
+      "non_ok_status": {},
+      "fault_players": [
+        {
+          "side": 0,
+          "name": "astra",
+          "count": 1
+        },
+        {
+          "side": 0,
+          "name": "grok",
+          "count": 1
+        },
+        {
+          "side": 1,
+          "name": "fable",
+          "count": 1
+        },
+        {
+          "side": 1,
+          "name": "glm",
+          "count": 1
+        }
+      ]
+    },
+    "2-base-piers": {
+      "games": 160,
+      "pairs": 80,
+      "n": 80,
+      "rate": 0.7375,
+      "se": 0.035550596854467306,
+      "wins": 118,
+      "losses": 42,
+      "draws": 0,
+      "enemy_kills": [
+        25.81875,
+        25.5125
+      ],
+      "friendly_kills": [
+        2.175,
+        0.3875
+      ],
+      "piers_scores": [
+        1991.81875,
+        1418.89375
+      ],
+      "faults": [
+        {
+          "合计": 2,
+          "超时": 2,
+          "非法": 0
+        },
+        {}
+      ],
+      "fault_games": 2,
+      "non_ok_status": {},
+      "fault_players": [
+        {
+          "side": 0,
+          "name": "grok",
+          "count": 1
+        },
+        {
+          "side": 0,
+          "name": "hydrogen",
+          "count": 1
+        }
+      ]
+    },
+    "2-base-keeps": {
+      "games": 160,
+      "pairs": 80,
+      "n": 80,
+      "rate": 0.725,
+      "se": 0.03574478805948808,
+      "wins": 113,
+      "losses": 41,
+      "draws": 6,
+      "enemy_kills": [
+        3.75,
+        3.00625
+      ],
+      "friendly_kills": [
+        0.725,
+        0.21875
+      ],
+      "piers_scores": null,
+      "faults": [
+        {},
+        {
+          "合计": 1,
+          "超时": 1,
+          "非法": 0
+        }
+      ],
+      "fault_games": 1,
+      "non_ok_status": {},
+      "fault_players": [
+        {
+          "side": 1,
+          "name": "fable",
+          "count": 1
+        }
+      ]
+    },
+    "2-fable-a4-caldera": {
+      "games": 160,
+      "pairs": 80,
+      "n": 80,
+      "rate": 0.2625,
+      "se": 0.030779688765585806,
+      "wins": 42,
+      "losses": 118,
+      "draws": 0,
+      "enemy_kills": [
+        2.88125,
+        3.49375
+      ],
+      "friendly_kills": [
+        0.5375,
+        0.24375
+      ],
+      "piers_scores": null,
+      "faults": [
+        {},
+        {}
+      ],
+      "fault_games": 0,
+      "non_ok_status": {},
+      "fault_players": []
+    },
+    "2-fable-a4-piers": {
+      "games": 160,
+      "pairs": 80,
+      "n": 80,
+      "rate": 0.2125,
+      "se": 0.03418929990286582,
+      "wins": 34,
+      "losses": 126,
+      "draws": 0,
+      "enemy_kills": [
+        23.8625,
+        26.175
+      ],
+      "friendly_kills": [
+        4.7625,
+        0.33125
+      ],
+      "piers_scores": [
+        1431.15625,
+        1969.89375
+      ],
+      "faults": [
+        {},
+        {}
+      ],
+      "fault_games": 0,
+      "non_ok_status": {},
+      "fault_players": []
+    },
+    "2-fable-a4-keeps": {
+      "games": 160,
+      "pairs": 80,
+      "n": 80,
+      "rate": 0.4125,
+      "se": 0.03670033456199038,
+      "wins": 63,
+      "losses": 91,
+      "draws": 6,
+      "enemy_kills": [
+        3.35,
+        3.26875
+      ],
+      "friendly_kills": [
+        0.94375,
+        0.2375
+      ],
+      "piers_scores": null,
+      "faults": [
+        {},
+        {}
+      ],
+      "fault_games": 0,
+      "non_ok_status": {},
+      "fault_players": []
+    },
+    "2-astra-f4-caldera": {
+      "games": 160,
+      "pairs": 80,
+      "n": 80,
+      "rate": 0.55625,
+      "se": 0.03773004334593423,
+      "wins": 89,
+      "losses": 71,
+      "draws": 0,
+      "enemy_kills": [
+        3.2625,
+        2.86875
+      ],
+      "friendly_kills": [
+        0.4125,
+        0.49375
+      ],
+      "piers_scores": null,
+      "faults": [
+        {},
+        {}
+      ],
+      "fault_games": 0,
+      "non_ok_status": {},
+      "fault_players": []
+    },
+    "2-astra-f4-piers": {
+      "games": 160,
+      "pairs": 80,
+      "n": 80,
+      "rate": 0.28125,
+      "se": 0.034268751219246114,
+      "wins": 45,
+      "losses": 115,
+      "draws": 0,
+      "enemy_kills": [
+        18.7875,
+        19.5375
+      ],
+      "friendly_kills": [
+        1.65625,
+        1.4
+      ],
+      "piers_scores": [
+        1495.40625,
+        1936.775
+      ],
+      "faults": [
+        {},
+        {}
+      ],
+      "fault_games": 0,
+      "non_ok_status": {},
+      "fault_players": []
+    },
+    "2-astra-f4-keeps": {
+      "games": 160,
+      "pairs": 80,
+      "n": 80,
+      "rate": 0.434375,
+      "se": 0.0366042138708273,
+      "wins": 69,
+      "losses": 90,
+      "draws": 1,
+      "enemy_kills": [
+        3.2875,
+        2.35
+      ],
+      "friendly_kills": [
+        0.8625,
+        0.55625
+      ],
+      "piers_scores": null,
+      "faults": [
+        {},
+        {
+          "合计": 3,
+          "超时": 3,
+          "非法": 0
+        }
+      ],
+      "fault_games": 3,
+      "non_ok_status": {},
+      "fault_players": [
+        {
+          "side": 1,
+          "name": "grok",
+          "count": 1
+        },
+        {
+          "side": 1,
+          "name": "kimi",
+          "count": 2
+        }
+      ]
+    },
+    "2-both-swapped-caldera": {
+      "games": 160,
+      "pairs": 80,
+      "n": 80,
+      "rate": 0.790625,
+      "se": 0.03399894997913236,
+      "wins": 126,
+      "losses": 33,
+      "draws": 1,
+      "enemy_kills": [
+        3.675,
+        2.425
+      ],
+      "friendly_kills": [
+        0.475,
+        0.525
+      ],
+      "piers_scores": null,
+      "faults": [
+        {},
+        {}
+      ],
+      "fault_games": 0,
+      "non_ok_status": {},
+      "fault_players": []
+    },
+    "2-both-swapped-piers": {
+      "games": 160,
+      "pairs": 80,
+      "n": 80,
+      "rate": 0.4875,
+      "se": 0.03874515077865563,
+      "wins": 78,
+      "losses": 82,
+      "draws": 0,
+      "enemy_kills": [
+        19.24375,
+        16.06875
+      ],
+      "friendly_kills": [
+        1.26875,
+        3.75
+      ],
+      "piers_scores": [
+        1694.6875,
+        1731.19375
+      ],
+      "faults": [
+        {},
+        {}
+      ],
+      "fault_games": 0,
+      "non_ok_status": {},
+      "fault_players": []
+    },
+    "2-both-swapped-keeps": {
+      "games": 160,
+      "pairs": 80,
+      "n": 80,
+      "rate": 0.753125,
+      "se": 0.029329853537723362,
+      "wins": 120,
+      "losses": 39,
+      "draws": 1,
+      "enemy_kills": [
+        3.53125,
+        1.9
+      ],
+      "friendly_kills": [
+        0.5875,
+        0.79375
+      ],
+      "piers_scores": null,
+      "faults": [
+        {},
+        {}
+      ],
+      "fault_games": 0,
+      "non_ok_status": {},
+      "fault_players": []
+    },
+    "4-astra-caldera": {
+      "games": 100,
+      "pairs": 50,
+      "n": 50,
+      "rate": 0.14,
+      "se": 0.03510915922127002,
+      "wins": 14,
+      "losses": 86,
+      "draws": 0,
+      "enemy_kills": [
+        2.24,
+        3.72
+      ],
+      "friendly_kills": [
+        0.37,
+        0.14
+      ],
+      "piers_scores": null,
+      "faults": [
+        {
+          "合计": 1,
+          "超时": 1,
+          "非法": 0
+        },
+        {}
+      ],
+      "fault_games": 1,
+      "non_ok_status": {},
+      "fault_players": [
+        {
+          "side": 0,
+          "name": "kimi",
+          "count": 1
+        }
+      ]
+    },
+    "4-astra-piers": {
+      "games": 100,
+      "pairs": 50,
+      "n": 50,
+      "rate": 0.06,
+      "se": 0.027255405754769875,
+      "wins": 6,
+      "losses": 94,
+      "draws": 0,
+      "enemy_kills": [
+        20.87,
+        28.96
+      ],
+      "friendly_kills": [
+        2.39,
+        0.54
+      ],
+      "piers_scores": [
+        1246.22,
+        2180.34
+      ],
+      "faults": [
+        {},
+        {}
+      ],
+      "fault_games": 0,
+      "non_ok_status": {},
+      "fault_players": []
+    },
+    "4-astra-keeps": {
+      "games": 100,
+      "pairs": 50,
+      "n": 50,
+      "rate": 0.13,
+      "se": 0.031331017427801866,
+      "wins": 13,
+      "losses": 87,
+      "draws": 0,
+      "enemy_kills": [
+        2.45,
+        2.69
+      ],
+      "friendly_kills": [
+        0.33,
+        0.09
+      ],
+      "piers_scores": null,
+      "faults": [
+        {
+          "合计": 9,
+          "超时": 1,
+          "非法": 8
+        },
+        {}
+      ],
+      "fault_games": 2,
+      "non_ok_status": {},
+      "fault_players": [
+        {
+          "side": 0,
+          "name": "astra",
+          "count": 8
+        },
+        {
+          "side": 0,
+          "name": "hydrogen",
+          "count": 1
+        }
+      ]
+    },
+    "4-sol-caldera": {
+      "games": 100,
+      "pairs": 50,
+      "n": 50,
+      "rate": 0.46,
+      "se": 0.04481253468959463,
+      "wins": 46,
+      "losses": 54,
+      "draws": 0,
+      "enemy_kills": [
+        3.34,
+        3.23
+      ],
+      "friendly_kills": [
+        0.54,
+        0.26
+      ],
+      "piers_scores": null,
+      "faults": [
+        {},
+        {}
+      ],
+      "fault_games": 0,
+      "non_ok_status": {},
+      "fault_players": []
+    },
+    "4-sol-piers": {
+      "games": 100,
+      "pairs": 50,
+      "n": 50,
+      "rate": 0.62,
+      "se": 0.04642307659791978,
+      "wins": 62,
+      "losses": 38,
+      "draws": 0,
+      "enemy_kills": [
+        22.67,
+        23.67
+      ],
+      "friendly_kills": [
+        1.69,
+        0.46
+      ],
+      "piers_scores": [
+        1821.93,
+        1591.97
+      ],
+      "faults": [
+        {},
+        {
+          "合计": 1,
+          "超时": 1,
+          "非法": 0
+        }
+      ],
+      "fault_games": 1,
+      "non_ok_status": {},
+      "fault_players": [
+        {
+          "side": 1,
+          "name": "fable",
+          "count": 1
+        }
+      ]
+    },
+    "4-sol-keeps": {
+      "games": 100,
+      "pairs": 50,
+      "n": 50,
+      "rate": 0.65,
+      "se": 0.04573660169594892,
+      "wins": 65,
+      "losses": 35,
+      "draws": 0,
+      "enemy_kills": [
+        3.46,
+        2.8
+      ],
+      "friendly_kills": [
+        1.03,
+        0.29
+      ],
+      "piers_scores": null,
+      "faults": [
+        {},
+        {}
+      ],
+      "fault_games": 0,
+      "non_ok_status": {},
+      "fault_players": []
+    },
+    "4-hydrogen-caldera": {
+      "games": 100,
+      "pairs": 50,
+      "n": 50,
+      "rate": 0.43,
+      "se": 0.04950778128903844,
+      "wins": 43,
+      "losses": 57,
+      "draws": 0,
+      "enemy_kills": [
+        3.3,
+        3.19
+      ],
+      "friendly_kills": [
+        0.56,
+        0.18
+      ],
+      "piers_scores": null,
+      "faults": [
+        {},
+        {}
+      ],
+      "fault_games": 0,
+      "non_ok_status": {},
+      "fault_players": []
+    },
+    "4-hydrogen-piers": {
+      "games": 100,
+      "pairs": 50,
+      "n": 50,
+      "rate": 0.65,
+      "se": 0.04344830378784442,
+      "wins": 65,
+      "losses": 35,
+      "draws": 0,
+      "enemy_kills": [
+        24.47,
+        23.49
+      ],
+      "friendly_kills": [
+        2.33,
+        0.35
+      ],
+      "piers_scores": [
+        1781.85,
+        1623.57
+      ],
+      "faults": [
+        {},
+        {}
+      ],
+      "fault_games": 0,
+      "non_ok_status": {},
+      "fault_players": []
+    },
+    "4-hydrogen-keeps": {
+      "games": 100,
+      "pairs": 50,
+      "n": 50,
+      "rate": 0.64,
+      "se": 0.04050699108216521,
+      "wins": 64,
+      "losses": 36,
+      "draws": 0,
+      "enemy_kills": [
+        3.53,
+        2.94
+      ],
+      "friendly_kills": [
+        0.81,
+        0.28
+      ],
+      "piers_scores": null,
+      "faults": [
+        {},
+        {}
+      ],
+      "fault_games": 0,
+      "non_ok_status": {},
+      "fault_players": []
+    },
+    "4-grok-caldera": {
+      "games": 100,
+      "pairs": 50,
+      "n": 50,
+      "rate": 0.435,
+      "se": 0.0467352508655874,
+      "wins": 43,
+      "losses": 56,
+      "draws": 1,
+      "enemy_kills": [
+        3.26,
+        3.38
+      ],
+      "friendly_kills": [
+        0.74,
+        0.19
+      ],
+      "piers_scores": null,
+      "faults": [
+        {},
+        {
+          "合计": 1,
+          "超时": 1,
+          "非法": 0
+        }
+      ],
+      "fault_games": 1,
+      "non_ok_status": {},
+      "fault_players": [
+        {
+          "side": 1,
+          "name": "fable",
+          "count": 1
+        }
+      ]
+    },
+    "4-grok-piers": {
+      "games": 100,
+      "pairs": 50,
+      "n": 50,
+      "rate": 0.6,
+      "se": 0.05150787536377128,
+      "wins": 60,
+      "losses": 40,
+      "draws": 0,
+      "enemy_kills": [
+        24.0,
+        27.28
+      ],
+      "friendly_kills": [
+        2.09,
+        0.42
+      ],
+      "piers_scores": [
+        1842.82,
+        1571.92
+      ],
+      "faults": [
+        {},
+        {}
+      ],
+      "fault_games": 0,
+      "non_ok_status": {},
+      "fault_players": []
+    },
+    "4-grok-keeps": {
+      "games": 100,
+      "pairs": 50,
+      "n": 50,
+      "rate": 0.71,
+      "se": 0.04481253468959463,
+      "wins": 70,
+      "losses": 28,
+      "draws": 2,
+      "enemy_kills": [
+        3.67,
+        3.25
+      ],
+      "friendly_kills": [
+        0.7,
+        0.31
+      ],
+      "piers_scores": null,
+      "faults": [
+        {},
+        {}
+      ],
+      "fault_games": 0,
+      "non_ok_status": {},
+      "fault_players": []
+    },
+    "4-kimi-caldera": {
+      "games": 100,
+      "pairs": 50,
+      "n": 50,
+      "rate": 0.65,
+      "se": 0.04344830378784442,
+      "wins": 65,
+      "losses": 35,
+      "draws": 0,
+      "enemy_kills": [
+        3.95,
+        2.64
+      ],
+      "friendly_kills": [
+        0.66,
+        0.25
+      ],
+      "piers_scores": null,
+      "faults": [
+        {},
+        {}
+      ],
+      "fault_games": 0,
+      "non_ok_status": {},
+      "fault_players": []
+    },
+    "4-kimi-piers": {
+      "games": 100,
+      "pairs": 50,
+      "n": 50,
+      "rate": 0.75,
+      "se": 0.04573660169594892,
+      "wins": 75,
+      "losses": 25,
+      "draws": 0,
+      "enemy_kills": [
+        25.66,
+        24.68
+      ],
+      "friendly_kills": [
+        1.95,
+        0.47
+      ],
+      "piers_scores": [
+        1944.29,
+        1462.39
+      ],
+      "faults": [
+        {},
+        {}
+      ],
+      "fault_games": 0,
+      "non_ok_status": {},
+      "fault_players": []
+    },
+    "4-kimi-keeps": {
+      "games": 100,
+      "pairs": 50,
+      "n": 50,
+      "rate": 0.79,
+      "se": 0.04125579736626757,
+      "wins": 78,
+      "losses": 20,
+      "draws": 2,
+      "enemy_kills": [
+        4.07,
+        3.12
+      ],
+      "friendly_kills": [
+        0.63,
+        0.12
+      ],
+      "piers_scores": null,
+      "faults": [
+        {},
+        {}
+      ],
+      "fault_games": 0,
+      "non_ok_status": {},
+      "fault_players": []
+    },
+    "4-fable-caldera": {
+      "games": 100,
+      "pairs": 50,
+      "n": 50,
+      "rate": 0.35,
+      "se": 0.05200078492343227,
+      "wins": 35,
+      "losses": 65,
+      "draws": 0,
+      "enemy_kills": [
+        2.63,
+        3.64
+      ],
+      "friendly_kills": [
+        0.43,
+        0.52
+      ],
+      "piers_scores": null,
+      "faults": [
+        {},
+        {}
+      ],
+      "fault_games": 0,
+      "non_ok_status": {},
+      "fault_players": []
+    },
+    "4-fable-piers": {
+      "games": 100,
+      "pairs": 50,
+      "n": 50,
+      "rate": 0.05,
+      "se": 0.02142857142857143,
+      "wins": 5,
+      "losses": 95,
+      "draws": 0,
+      "enemy_kills": [
+        18.14,
+        28.83
+      ],
+      "friendly_kills": [
+        0.49,
+        2.23
+      ],
+      "piers_scores": [
+        1066.72,
+        2357.01
+      ],
+      "faults": [
+        {},
+        {}
+      ],
+      "fault_games": 0,
+      "non_ok_status": {},
+      "fault_players": []
+    },
+    "4-fable-keeps": {
+      "games": 100,
+      "pairs": 50,
+      "n": 50,
+      "rate": 0.09,
+      "se": 0.02744196101756935,
+      "wins": 9,
+      "losses": 91,
+      "draws": 0,
+      "enemy_kills": [
+        2.12,
+        2.72
+      ],
+      "friendly_kills": [
+        0.57,
+        0.52
+      ],
+      "piers_scores": null,
+      "faults": [
+        {},
+        {}
+      ],
+      "fault_games": 0,
+      "non_ok_status": {},
+      "fault_players": []
+    },
+    "4-opus-caldera": {
+      "games": 100,
+      "pairs": 50,
+      "n": 50,
+      "rate": 0.31,
+      "se": 0.04492624341004682,
+      "wins": 31,
+      "losses": 69,
+      "draws": 0,
+      "enemy_kills": [
+        2.73,
+        3.8
+      ],
+      "friendly_kills": [
+        0.29,
+        0.4
+      ],
+      "piers_scores": null,
+      "faults": [
+        {},
+        {}
+      ],
+      "fault_games": 0,
+      "non_ok_status": {},
+      "fault_players": []
+    },
+    "4-opus-piers": {
+      "games": 100,
+      "pairs": 50,
+      "n": 50,
+      "rate": 0.03,
+      "se": 0.016963345838625597,
+      "wins": 3,
+      "losses": 97,
+      "draws": 0,
+      "enemy_kills": [
+        23.43,
+        23.55
+      ],
+      "friendly_kills": [
+        0.47,
+        2.28
+      ],
+      "piers_scores": [
+        1105.41,
+        2307.71
+      ],
+      "faults": [
+        {},
+        {}
+      ],
+      "fault_games": 0,
+      "non_ok_status": {},
+      "fault_players": []
+    },
+    "4-opus-keeps": {
+      "games": 100,
+      "pairs": 50,
+      "n": 50,
+      "rate": 0.16,
+      "se": 0.036253078686998626,
+      "wins": 16,
+      "losses": 84,
+      "draws": 0,
+      "enemy_kills": [
+        2.64,
+        3.74
+      ],
+      "friendly_kills": [
+        0.39,
+        0.72
+      ],
+      "piers_scores": null,
+      "faults": [
+        {},
+        {}
+      ],
+      "fault_games": 0,
+      "non_ok_status": {},
+      "fault_players": []
+    },
+    "4-carbon-caldera": {
+      "games": 100,
+      "pairs": 50,
+      "n": 50,
+      "rate": 0.39,
+      "se": 0.05008156612273744,
+      "wins": 39,
+      "losses": 61,
+      "draws": 0,
+      "enemy_kills": [
+        2.66,
+        3.89
+      ],
+      "friendly_kills": [
+        0.18,
+        0.5
+      ],
+      "piers_scores": null,
+      "faults": [
+        {
+          "合计": 1,
+          "超时": 1,
+          "非法": 0
+        },
+        {}
+      ],
+      "fault_games": 1,
+      "non_ok_status": {},
+      "fault_players": [
+        {
+          "side": 0,
+          "name": "carbon",
+          "count": 1
+        }
+      ]
+    },
+    "4-carbon-piers": {
+      "games": 100,
+      "pairs": 50,
+      "n": 50,
+      "rate": 0.08,
+      "se": 0.029829447168315856,
+      "wins": 8,
+      "losses": 92,
+      "draws": 0,
+      "enemy_kills": [
+        21.38,
+        27.31
+      ],
+      "friendly_kills": [
+        0.85,
+        2.25
+      ],
+      "piers_scores": [
+        1067.56,
+        2313.06
+      ],
+      "faults": [
+        {},
+        {
+          "合计": 1,
+          "超时": 1,
+          "非法": 0
+        }
+      ],
+      "fault_games": 1,
+      "non_ok_status": {},
+      "fault_players": [
+        {
+          "side": 1,
+          "name": "sol",
+          "count": 1
+        }
+      ]
+    },
+    "4-carbon-keeps": {
+      "games": 100,
+      "pairs": 50,
+      "n": 50,
+      "rate": 0.19,
+      "se": 0.04012734830053754,
+      "wins": 19,
+      "losses": 81,
+      "draws": 0,
+      "enemy_kills": [
+        2.65,
+        3.49
+      ],
+      "friendly_kills": [
+        0.55,
+        0.7
+      ],
+      "piers_scores": null,
+      "faults": [
+        {},
+        {}
+      ],
+      "fault_games": 0,
+      "non_ok_status": {},
+      "fault_players": []
+    },
+    "4-glm-caldera": {
+      "games": 100,
+      "pairs": 50,
+      "n": 50,
+      "rate": 0.465,
+      "se": 0.05051267773782041,
+      "wins": 46,
+      "losses": 53,
+      "draws": 1,
+      "enemy_kills": [
+        2.84,
+        3.54
+      ],
+      "friendly_kills": [
+        0.21,
+        0.54
+      ],
+      "piers_scores": null,
+      "faults": [
+        {},
+        {}
+      ],
+      "fault_games": 0,
+      "non_ok_status": {},
+      "fault_players": []
+    },
+    "4-glm-piers": {
+      "games": 100,
+      "pairs": 50,
+      "n": 50,
+      "rate": 0.35,
+      "se": 0.05200078492343227,
+      "wins": 35,
+      "losses": 65,
+      "draws": 0,
+      "enemy_kills": [
+        26.85,
+        29.19
+      ],
+      "friendly_kills": [
+        1.01,
+        2.18
+      ],
+      "piers_scores": [
+        1570.75,
+        1834.31
+      ],
+      "faults": [
+        {},
+        {}
+      ],
+      "fault_games": 0,
+      "non_ok_status": {},
+      "fault_players": []
+    },
+    "4-glm-keeps": {
+      "games": 100,
+      "pairs": 50,
+      "n": 50,
+      "rate": 0.4,
+      "se": 0.04517539514526256,
+      "wins": 40,
+      "losses": 60,
+      "draws": 0,
+      "enemy_kills": [
+        3.27,
+        3.73
+      ],
+      "friendly_kills": [
+        0.17,
+        0.72
+      ],
+      "piers_scores": null,
+      "faults": [
+        {},
+        {
+          "合计": 1,
+          "超时": 1,
+          "非法": 0
+        }
+      ],
+      "fault_games": 1,
+      "non_ok_status": {},
+      "fault_players": [
+        {
+          "side": 1,
+          "name": "astra",
+          "count": 1
+        }
+      ]
+    },
+    "4-deepseek-caldera": {
+      "games": 100,
+      "pairs": 50,
+      "n": 50,
+      "rate": 0.49,
+      "se": 0.050487420134492256,
+      "wins": 49,
+      "losses": 51,
+      "draws": 0,
+      "enemy_kills": [
+        3.02,
+        3.54
+      ],
+      "friendly_kills": [
+        0.31,
+        0.55
+      ],
+      "piers_scores": null,
+      "faults": [
+        {},
+        {
+          "合计": 1,
+          "超时": 1,
+          "非法": 0
+        }
+      ],
+      "fault_games": 1,
+      "non_ok_status": {},
+      "fault_players": [
+        {
+          "side": 1,
+          "name": "kimi",
+          "count": 1
+        }
+      ]
+    },
+    "4-deepseek-piers": {
+      "games": 100,
+      "pairs": 50,
+      "n": 50,
+      "rate": 0.18,
+      "se": 0.03714285714285714,
+      "wins": 18,
+      "losses": 82,
+      "draws": 0,
+      "enemy_kills": [
+        23.44,
+        26.74
+      ],
+      "friendly_kills": [
+        0.71,
+        2.06
+      ],
+      "piers_scores": [
+        1237.96,
+        2166.95
+      ],
+      "faults": [
+        {
+          "合计": 1,
+          "超时": 1,
+          "非法": 0
+        },
+        {}
+      ],
+      "fault_games": 1,
+      "non_ok_status": {},
+      "fault_players": [
+        {
+          "side": 0,
+          "name": "fable",
+          "count": 1
+        }
+      ]
+    },
+    "4-deepseek-keeps": {
+      "games": 100,
+      "pairs": 50,
+      "n": 50,
+      "rate": 0.33,
+      "se": 0.048676357249716626,
+      "wins": 33,
+      "losses": 67,
+      "draws": 0,
+      "enemy_kills": [
+        3.12,
+        3.77
+      ],
+      "friendly_kills": [
+        0.38,
+        0.64
+      ],
+      "piers_scores": null,
+      "faults": [
+        {},
+        {}
+      ],
+      "fault_games": 0,
+      "non_ok_status": {},
+      "fault_players": []
+    },
+    "3a-r3-glm": {
+      "games": 400,
+      "pairs": 200,
+      "n": 200,
+      "rate": 0.3325,
+      "se": 0.02437085230785036,
+      "wins": 133,
+      "losses": 267,
+      "draws": 0,
+      "enemy_kills": [
+        27.06,
+        37.5075
+      ],
+      "friendly_kills": [
+        0.615,
+        2.265
+      ],
+      "piers_scores": [
+        1590.53,
+        1823.9225
+      ],
+      "faults": [
+        {
+          "合计": 1,
+          "超时": 1,
+          "非法": 0
+        },
+        {
+          "合计": 1,
+          "超时": 1,
+          "非法": 0
+        }
+      ],
+      "fault_games": 2,
+      "non_ok_status": {},
+      "fault_players": [
+        {
+          "side": 0,
+          "name": "glm",
+          "count": 1
+        },
+        {
+          "side": 1,
+          "name": "grok",
+          "count": 1
+        }
+      ]
+    },
+    "3b-r4-roam": {
+      "games": 400,
+      "pairs": 200,
+      "n": 200,
+      "rate": 0.9325,
+      "se": 0.012620026758168321,
+      "wins": 373,
+      "losses": 27,
+      "draws": 0,
+      "enemy_kills": [
+        34.7075,
+        26.13
+      ],
+      "friendly_kills": [
+        2.95,
+        1.3075
+      ],
+      "piers_scores": [
+        2025.8875,
+        1402.75
+      ],
+      "faults": [
+        {},
+        {}
+      ],
+      "fault_games": 0,
+      "non_ok_status": {},
+      "fault_players": []
+    }
+  },
+  "groups": {
+    "1-clones": {
+      "games": 600,
+      "pairs": 300,
+      "n": 100,
+      "rate": 0.535,
+      "se": 0.012089499761749358,
+      "wins": 320,
+      "losses": 278,
+      "draws": 2,
+      "enemy_kills": [
+        9.62,
+        3.5883333333333334
+      ],
+      "friendly_kills": [
+        1.7966666666666666,
+        0.7633333333333333
+      ],
+      "piers_scores": [
+        1139.08,
+        2300.88
+      ],
+      "faults": [
+        {},
+        {
+          "合计": 2,
+          "超时": 2,
+          "非法": 0
+        }
+      ],
+      "fault_games": 2,
+      "non_ok_status": {},
+      "fault_players": [
+        {
+          "side": 1,
+          "name": "fable2",
+          "count": 1
+        },
+        {
+          "side": 1,
+          "name": "fable4",
+          "count": 1
+        }
+      ]
+    },
+    "2-astra-f4": {
+      "games": 480,
+      "pairs": 240,
+      "n": 80,
+      "rate": 0.4239583333333333,
+      "se": 0.022047616108206623,
+      "wins": 203,
+      "losses": 276,
+      "draws": 1,
+      "enemy_kills": [
+        8.445833333333333,
+        8.252083333333333
+      ],
+      "friendly_kills": [
+        0.9770833333333333,
+        0.8166666666666667
+      ],
+      "piers_scores": [
+        1495.40625,
+        1936.775
+      ],
+      "faults": [
+        {},
+        {
+          "合计": 3,
+          "超时": 3,
+          "非法": 0
+        }
+      ],
+      "fault_games": 3,
+      "non_ok_status": {},
+      "fault_players": [
+        {
+          "side": 1,
+          "name": "grok",
+          "count": 1
+        },
+        {
+          "side": 1,
+          "name": "kimi",
+          "count": 2
+        }
+      ]
+    },
+    "2-base": {
+      "games": 480,
+      "pairs": 240,
+      "n": 80,
+      "rate": 0.6625,
+      "se": 0.023104095447379704,
+      "wins": 315,
+      "losses": 159,
+      "draws": 6,
+      "enemy_kills": [
+        11.029166666666667,
+        10.520833333333334
+      ],
+      "friendly_kills": [
+        1.1375,
+        0.25416666666666665
+      ],
+      "piers_scores": [
+        1991.81875,
+        1418.89375
+      ],
+      "faults": [
+        {
+          "合计": 4,
+          "超时": 4,
+          "非法": 0
+        },
+        {
+          "合计": 3,
+          "超时": 3,
+          "非法": 0
+        }
+      ],
+      "fault_games": 4,
+      "non_ok_status": {},
+      "fault_players": [
+        {
+          "side": 0,
+          "name": "astra",
+          "count": 1
+        },
+        {
+          "side": 0,
+          "name": "grok",
+          "count": 2
+        },
+        {
+          "side": 0,
+          "name": "hydrogen",
+          "count": 1
+        },
+        {
+          "side": 1,
+          "name": "fable",
+          "count": 2
+        },
+        {
+          "side": 1,
+          "name": "glm",
+          "count": 1
+        }
+      ]
+    },
+    "2-both-swapped": {
+      "games": 480,
+      "pairs": 240,
+      "n": 80,
+      "rate": 0.6770833333333334,
+      "se": 0.019349874253199357,
+      "wins": 324,
+      "losses": 154,
+      "draws": 2,
+      "enemy_kills": [
+        8.816666666666666,
+        6.797916666666667
+      ],
+      "friendly_kills": [
+        0.7770833333333333,
+        1.6895833333333334
+      ],
+      "piers_scores": [
+        1694.6875,
+        1731.19375
+      ],
+      "faults": [
+        {},
+        {}
+      ],
+      "fault_games": 0,
+      "non_ok_status": {},
+      "fault_players": []
+    },
+    "2-fable-a4": {
+      "games": 480,
+      "pairs": 240,
+      "n": 80,
+      "rate": 0.29583333333333334,
+      "se": 0.02015782489159126,
+      "wins": 139,
+      "losses": 335,
+      "draws": 6,
+      "enemy_kills": [
+        10.03125,
+        10.979166666666666
+      ],
+      "friendly_kills": [
+        2.08125,
+        0.2708333333333333
+      ],
+      "piers_scores": [
+        1431.15625,
+        1969.89375
+      ],
+      "faults": [
+        {},
+        {}
+      ],
+      "fault_games": 0,
+      "non_ok_status": {},
+      "fault_players": []
+    },
+    "4-astra": {
+      "games": 300,
+      "pairs": 150,
+      "n": 50,
+      "rate": 0.11,
+      "se": 0.01622545241657221,
+      "wins": 33,
+      "losses": 267,
+      "draws": 0,
+      "enemy_kills": [
+        8.52,
+        11.79
+      ],
+      "friendly_kills": [
+        1.03,
+        0.25666666666666665
+      ],
+      "piers_scores": [
+        1246.22,
+        2180.34
+      ],
+      "faults": [
+        {
+          "合计": 10,
+          "超时": 2,
+          "非法": 8
+        },
+        {}
+      ],
+      "fault_games": 3,
+      "non_ok_status": {},
+      "fault_players": [
+        {
+          "side": 0,
+          "name": "astra",
+          "count": 8
+        },
+        {
+          "side": 0,
+          "name": "hydrogen",
+          "count": 1
+        },
+        {
+          "side": 0,
+          "name": "kimi",
+          "count": 1
+        }
+      ]
+    },
+    "4-carbon": {
+      "games": 300,
+      "pairs": 150,
+      "n": 50,
+      "rate": 0.22,
+      "se": 0.022557560537765736,
+      "wins": 66,
+      "losses": 234,
+      "draws": 0,
+      "enemy_kills": [
+        8.896666666666667,
+        11.563333333333333
+      ],
+      "friendly_kills": [
+        0.5266666666666666,
+        1.15
+      ],
+      "piers_scores": [
+        1067.56,
+        2313.06
+      ],
+      "faults": [
+        {
+          "合计": 1,
+          "超时": 1,
+          "非法": 0
+        },
+        {
+          "合计": 1,
+          "超时": 1,
+          "非法": 0
+        }
+      ],
+      "fault_games": 2,
+      "non_ok_status": {},
+      "fault_players": [
+        {
+          "side": 0,
+          "name": "carbon",
+          "count": 1
+        },
+        {
+          "side": 1,
+          "name": "sol",
+          "count": 1
+        }
+      ]
+    },
+    "4-deepseek": {
+      "games": 300,
+      "pairs": 150,
+      "n": 50,
+      "rate": 0.3333333333333333,
+      "se": 0.02896553585856295,
+      "wins": 100,
+      "losses": 200,
+      "draws": 0,
+      "enemy_kills": [
+        9.86,
+        11.35
+      ],
+      "friendly_kills": [
+        0.4666666666666667,
+        1.0833333333333333
+      ],
+      "piers_scores": [
+        1237.96,
+        2166.95
+      ],
+      "faults": [
+        {
+          "合计": 1,
+          "超时": 1,
+          "非法": 0
+        },
+        {
+          "合计": 1,
+          "超时": 1,
+          "非法": 0
+        }
+      ],
+      "fault_games": 2,
+      "non_ok_status": {},
+      "fault_players": [
+        {
+          "side": 0,
+          "name": "fable",
+          "count": 1
+        },
+        {
+          "side": 1,
+          "name": "kimi",
+          "count": 1
+        }
+      ]
+    },
+    "4-fable": {
+      "games": 300,
+      "pairs": 150,
+      "n": 50,
+      "rate": 0.16333333333333333,
+      "se": 0.02155518151953576,
+      "wins": 49,
+      "losses": 251,
+      "draws": 0,
+      "enemy_kills": [
+        7.63,
+        11.73
+      ],
+      "friendly_kills": [
+        0.49666666666666665,
+        1.09
+      ],
+      "piers_scores": [
+        1066.72,
+        2357.01
+      ],
+      "faults": [
+        {},
+        {}
+      ],
+      "fault_games": 0,
+      "non_ok_status": {},
+      "fault_players": []
+    },
+    "4-glm": {
+      "games": 300,
+      "pairs": 150,
+      "n": 50,
+      "rate": 0.40499999999999997,
+      "se": 0.027562544830821052,
+      "wins": 121,
+      "losses": 178,
+      "draws": 1,
+      "enemy_kills": [
+        10.986666666666666,
+        12.153333333333334
+      ],
+      "friendly_kills": [
+        0.4633333333333333,
+        1.1466666666666667
+      ],
+      "piers_scores": [
+        1570.75,
+        1834.31
+      ],
+      "faults": [
+        {},
+        {
+          "合计": 1,
+          "超时": 1,
+          "非法": 0
+        }
+      ],
+      "fault_games": 1,
+      "non_ok_status": {},
+      "fault_players": [
+        {
+          "side": 1,
+          "name": "astra",
+          "count": 1
+        }
+      ]
+    },
+    "4-grok": {
+      "games": 300,
+      "pairs": 150,
+      "n": 50,
+      "rate": 0.5816666666666667,
+      "se": 0.028520788455960677,
+      "wins": 173,
+      "losses": 124,
+      "draws": 3,
+      "enemy_kills": [
+        10.31,
+        11.303333333333333
+      ],
+      "friendly_kills": [
+        1.1766666666666667,
+        0.30666666666666664
+      ],
+      "piers_scores": [
+        1842.82,
+        1571.92
+      ],
+      "faults": [
+        {},
+        {
+          "合计": 1,
+          "超时": 1,
+          "非法": 0
+        }
+      ],
+      "fault_games": 1,
+      "non_ok_status": {},
+      "fault_players": [
+        {
+          "side": 1,
+          "name": "fable",
+          "count": 1
+        }
+      ]
+    },
+    "4-hydrogen": {
+      "games": 300,
+      "pairs": 150,
+      "n": 50,
+      "rate": 0.5733333333333334,
+      "se": 0.027004660721443478,
+      "wins": 172,
+      "losses": 128,
+      "draws": 0,
+      "enemy_kills": [
+        10.433333333333334,
+        9.873333333333333
+      ],
+      "friendly_kills": [
+        1.2333333333333334,
+        0.27
+      ],
+      "piers_scores": [
+        1781.85,
+        1623.57
+      ],
+      "faults": [
+        {},
+        {}
+      ],
+      "fault_games": 0,
+      "non_ok_status": {},
+      "fault_players": []
+    },
+    "4-kimi": {
+      "games": 300,
+      "pairs": 150,
+      "n": 50,
+      "rate": 0.73,
+      "se": 0.027413024694522392,
+      "wins": 218,
+      "losses": 80,
+      "draws": 2,
+      "enemy_kills": [
+        11.226666666666667,
+        10.146666666666667
+      ],
+      "friendly_kills": [
+        1.08,
+        0.28
+      ],
+      "piers_scores": [
+        1944.29,
+        1462.39
+      ],
+      "faults": [
+        {},
+        {}
+      ],
+      "fault_games": 0,
+      "non_ok_status": {},
+      "fault_players": []
+    },
+    "4-opus": {
+      "games": 300,
+      "pairs": 150,
+      "n": 50,
+      "rate": 0.16666666666666666,
+      "se": 0.017817416127494955,
+      "wins": 50,
+      "losses": 250,
+      "draws": 0,
+      "enemy_kills": [
+        9.6,
+        10.363333333333333
+      ],
+      "friendly_kills": [
+        0.38333333333333336,
+        1.1333333333333333
+      ],
+      "piers_scores": [
+        1105.41,
+        2307.71
+      ],
+      "faults": [
+        {},
+        {}
+      ],
+      "fault_games": 0,
+      "non_ok_status": {},
+      "fault_players": []
+    },
+    "4-sol": {
+      "games": 300,
+      "pairs": 150,
+      "n": 50,
+      "rate": 0.5766666666666667,
+      "se": 0.02573632212737459,
+      "wins": 173,
+      "losses": 127,
+      "draws": 0,
+      "enemy_kills": [
+        9.823333333333334,
+        9.9
+      ],
+      "friendly_kills": [
+        1.0866666666666667,
+        0.33666666666666667
+      ],
+      "piers_scores": [
+        1821.93,
+        1591.97
+      ],
+      "faults": [
+        {},
+        {
+          "合计": 1,
+          "超时": 1,
+          "非法": 0
+        }
+      ],
+      "fault_games": 1,
+      "non_ok_status": {},
+      "fault_players": [
+        {
+          "side": 1,
+          "name": "fable",
+          "count": 1
+        }
+      ]
+    }
+  },
+  "duel_map_summaries": {
+    "1v1-final": {
+      "twinlakes": {
+        "games": 34,
+        "pairs": 17,
+        "n": 17,
+        "rate": 0.7794117647058824,
+        "se": 0.07389614427294772,
+        "wins": 26,
+        "losses": 7,
+        "draws": 1,
+        "enemy_kills": [
+          0.7941176470588235,
+          0.23529411764705882
+        ],
+        "friendly_kills": [
+          0.0,
+          0.0
+        ],
+        "piers_scores": null,
+        "faults": [
+          {},
+          {}
+        ],
+        "fault_games": 0,
+        "non_ok_status": {},
+        "fault_players": []
+      },
+      "yinyang": {
+        "games": 34,
+        "pairs": 17,
+        "n": 17,
+        "rate": 0.7647058823529411,
+        "se": 0.06239177481057771,
+        "wins": 26,
+        "losses": 8,
+        "draws": 0,
+        "enemy_kills": [
+          0.7647058823529411,
+          0.23529411764705882
+        ],
+        "friendly_kills": [
+          0.0,
+          0.0
+        ],
+        "piers_scores": null,
+        "faults": [
+          {},
+          {}
+        ],
+        "fault_games": 0,
+        "non_ok_status": {},
+        "fault_players": []
+      },
+      "icefloes": {
+        "games": 34,
+        "pairs": 17,
+        "n": 17,
+        "rate": 0.9117647058823529,
+        "se": 0.04765250513535191,
+        "wins": 31,
+        "losses": 3,
+        "draws": 0,
+        "enemy_kills": [
+          0.9117647058823529,
+          0.058823529411764705
+        ],
+        "friendly_kills": [
+          0.0,
+          0.0
+        ],
+        "piers_scores": null,
+        "faults": [
+          {},
+          {}
+        ],
+        "fault_games": 0,
+        "non_ok_status": {},
+        "fault_players": []
+      },
+      "ruins": {
+        "games": 34,
+        "pairs": 17,
+        "n": 17,
+        "rate": 0.8529411764705882,
+        "se": 0.05695563744422672,
+        "wins": 29,
+        "losses": 5,
+        "draws": 0,
+        "enemy_kills": [
+          0.8529411764705882,
+          0.14705882352941177
+        ],
+        "friendly_kills": [
+          0.0,
+          0.0
+        ],
+        "piers_scores": null,
+        "faults": [
+          {},
+          {}
+        ],
+        "fault_games": 0,
+        "non_ok_status": {},
+        "fault_players": []
+      },
+      "skybridge": {
+        "games": 32,
+        "pairs": 16,
+        "n": 16,
+        "rate": 0.78125,
+        "se": 0.09092980351164665,
+        "wins": 25,
+        "losses": 7,
+        "draws": 0,
+        "enemy_kills": [
+          0.75,
+          0.1875
+        ],
+        "friendly_kills": [
+          0.0,
+          0.0
+        ],
+        "piers_scores": null,
+        "faults": [
+          {},
+          {}
+        ],
+        "fault_games": 0,
+        "non_ok_status": {},
+        "fault_players": []
+      },
+      "stonecircle": {
+        "games": 32,
+        "pairs": 16,
+        "n": 16,
+        "rate": 0.78125,
+        "se": 0.07864410870073697,
+        "wins": 25,
+        "losses": 7,
+        "draws": 0,
+        "enemy_kills": [
+          0.78125,
+          0.21875
+        ],
+        "friendly_kills": [
+          0.0,
+          0.0
+        ],
+        "piers_scores": null,
+        "faults": [
+          {},
+          {}
+        ],
+        "fault_games": 0,
+        "non_ok_status": {},
+        "fault_players": []
+      }
+    },
+    "1v1-old-control": {
+      "twinlakes": {
+        "games": 34,
+        "pairs": 17,
+        "n": 17,
+        "rate": 0.8529411764705882,
+        "se": 0.05695563744422672,
+        "wins": 29,
+        "losses": 5,
+        "draws": 0,
+        "enemy_kills": [
+          0.8235294117647058,
+          0.14705882352941177
+        ],
+        "friendly_kills": [
+          0.0,
+          0.0
+        ],
+        "piers_scores": null,
+        "faults": [
+          {},
+          {}
+        ],
+        "fault_games": 0,
+        "non_ok_status": {},
+        "fault_players": []
+      },
+      "yinyang": {
+        "games": 34,
+        "pairs": 17,
+        "n": 17,
+        "rate": 0.7647058823529411,
+        "se": 0.075703162801375,
+        "wins": 26,
+        "losses": 8,
+        "draws": 0,
+        "enemy_kills": [
+          0.7647058823529411,
+          0.20588235294117646
+        ],
+        "friendly_kills": [
+          0.0,
+          0.0
+        ],
+        "piers_scores": null,
+        "faults": [
+          {},
+          {}
+        ],
+        "fault_games": 0,
+        "non_ok_status": {},
+        "fault_players": []
+      },
+      "icefloes": {
+        "games": 34,
+        "pairs": 17,
+        "n": 17,
+        "rate": 0.9117647058823529,
+        "se": 0.04765250513535191,
+        "wins": 31,
+        "losses": 3,
+        "draws": 0,
+        "enemy_kills": [
+          0.9117647058823529,
+          0.08823529411764706
+        ],
+        "friendly_kills": [
+          0.0,
+          0.0
+        ],
+        "piers_scores": null,
+        "faults": [
+          {},
+          {}
+        ],
+        "fault_games": 0,
+        "non_ok_status": {},
+        "fault_players": []
+      },
+      "ruins": {
+        "games": 34,
+        "pairs": 17,
+        "n": 17,
+        "rate": 0.8970588235294118,
+        "se": 0.048216459737514705,
+        "wins": 30,
+        "losses": 3,
+        "draws": 1,
+        "enemy_kills": [
+          0.9117647058823529,
+          0.11764705882352941
+        ],
+        "friendly_kills": [
+          0.0,
+          0.0
+        ],
+        "piers_scores": null,
+        "faults": [
+          {},
+          {}
+        ],
+        "fault_games": 0,
+        "non_ok_status": {},
+        "fault_players": []
+      },
+      "skybridge": {
+        "games": 32,
+        "pairs": 16,
+        "n": 16,
+        "rate": 0.703125,
+        "se": 0.07644016587065555,
+        "wins": 22,
+        "losses": 9,
+        "draws": 1,
+        "enemy_kills": [
+          0.6875,
+          0.3125
+        ],
+        "friendly_kills": [
+          0.0,
+          0.0
+        ],
+        "piers_scores": null,
+        "faults": [
+          {},
+          {}
+        ],
+        "fault_games": 0,
+        "non_ok_status": {},
+        "fault_players": []
+      },
+      "stonecircle": {
+        "games": 32,
+        "pairs": 16,
+        "n": 16,
+        "rate": 0.78125,
+        "se": 0.07864410870073697,
+        "wins": 25,
+        "losses": 7,
+        "draws": 0,
+        "enemy_kills": [
+          0.78125,
+          0.21875
+        ],
+        "friendly_kills": [
+          0.0,
+          0.0
+        ],
+        "piers_scores": null,
+        "faults": [
+          {},
+          {}
+        ],
+        "fault_games": 0,
+        "non_ok_status": {},
+        "fault_players": []
+      }
+    }
+  },
+  "legacy_historical": {
+    "games": 228,
+    "pairs": 114,
+    "wins": 182,
+    "losses": 45,
+    "draws": 1,
+    "faults": 0,
+    "n": 19,
+    "rate": 0.8004385964912281,
+    "se": 0.02220827124409841
+  },
+  "duel_delta": {
+    "n": 100,
+    "rate": -0.0075,
+    "se": 0.04165984792690594
+  },
+  "captain_delta": {
+    "caldera": {
+      "A4_replace_f_with_a": {
+        "n": 80,
+        "rate": 0.2625,
+        "se": 0.04869743189756233
+      },
+      "F4_replace_f_with_a": {
+        "n": 80,
+        "rate": 0.08125,
+        "se": 0.04573913891968151
+      }
+    },
+    "piers": {
+      "A4_replace_f_with_a": {
+        "n": 80,
+        "rate": 0.525,
+        "se": 0.04781623578935602
+      },
+      "F4_replace_f_with_a": {
+        "n": 80,
+        "rate": 0.01875,
+        "se": 0.05295369812930557
+      }
+    },
+    "keeps": {
+      "A4_replace_f_with_a": {
+        "n": 80,
+        "rate": 0.3125,
+        "se": 0.04800201077011965
+      },
+      "F4_replace_f_with_a": {
+        "n": 80,
+        "rate": 0.159375,
+        "se": 0.053597581583335246
+      }
+    },
+    "3map": {
+      "A4_replace_f_with_a": {
+        "n": 80,
+        "rate": 0.36666666666666664,
+        "se": 0.03061862178478972
+      },
+      "F4_replace_f_with_a": {
+        "n": 80,
+        "rate": 0.08645833333333333,
+        "se": 0.03235795224769104
+      }
+    }
+  },
+  "counterfactual": {
+    "3": {
+      "control": {
+        "games": 400,
+        "pairs": 200,
+        "n": 200,
+        "rate": 0.3,
+        "se": 0.0226952721262474,
+        "wins": 120,
+        "losses": 280,
+        "draws": 0,
+        "enemy_kills": [
+          26.4125,
+          36.2425
+        ],
+        "friendly_kills": [
+          1.9025,
+          2.1225
+        ],
+        "piers_scores": [
+          1560.5875,
+          1850.3925
+        ],
+        "faults": [
+          {},
+          {
+            "合计": 2,
+            "超时": 2,
+            "非法": 0
+          }
+        ],
+        "fault_games": 2,
+        "non_ok_status": {},
+        "fault_players": [
+          {
+            "side": 1,
+            "name": "grok",
+            "count": 1
+          },
+          {
+            "side": 1,
+            "name": "kimi",
+            "count": 1
+          }
+        ]
+      },
+      "delta": {
+        "n": 200,
+        "rate": 0.0325,
+        "se": 0.03171748325007192
+      },
+      "full_baseline": 0.3176923076923077,
+      "full_se": 0.012663208639822676,
+      "full_delta": 0.0148076923076923,
+      "player_before": {
+        "friendly": 1.2275,
+        "opponents": 1.3025,
+        "throws": 2.0075,
+        "faults": 0
+      },
+      "player_after": {
+        "friendly": 0.035,
+        "opponents": 1.0325,
+        "throws": 1.4575,
+        "faults": 1
+      }
+    },
+    "4": {
+      "control": {
+        "games": 400,
+        "pairs": 200,
+        "n": 200,
+        "rate": 0.51,
+        "se": 0.02603631016938039,
+        "wins": 204,
+        "losses": 196,
+        "draws": 0,
+        "enemy_kills": [
+          29.5075,
+          22.2375
+        ],
+        "friendly_kills": [
+          1.91,
+          1.27
+        ],
+        "piers_scores": [
+          1738.085,
+          1688.41
+        ],
+        "faults": [
+          {
+            "合计": 2,
+            "超时": 2,
+            "非法": 0
+          },
+          {}
+        ],
+        "fault_games": 2,
+        "non_ok_status": {},
+        "fault_players": [
+          {
+            "side": 0,
+            "name": "hydrogen",
+            "count": 1
+          },
+          {
+            "side": 0,
+            "name": "kimi",
+            "count": 1
+          }
+        ]
+      },
+      "delta": {
+        "n": 200,
+        "rate": 0.4225,
+        "se": 0.029675273533642153
+      },
+      "full_baseline": 0.5142307692307693,
+      "full_se": 0.013678686793926602,
+      "full_delta": 0.4182692307692307,
+      "player_before": {
+        "friendly": 0.025,
+        "opponents": 0.9725,
+        "throws": 4.135,
+        "faults": 1
+      },
+      "player_after": {
+        "friendly": 0.2175,
+        "opponents": 7.505,
+        "throws": 12.4075,
+        "faults": 0
+      }
+    }
+  },
+  "contribution": [
+    {
+      "name": "astra",
+      "team": "A",
+      "maps": {
+        "caldera": {
+          "n": 50,
+          "rate": 0.42,
+          "se": 0.057782138331876245
+        },
+        "piers": {
+          "n": 50,
+          "rate": 0.71,
+          "se": 0.045378229069338825
+        },
+        "keeps": {
+          "n": 50,
+          "rate": 0.565,
+          "se": 0.06300712625714391
+        }
+      },
+      "matched_baseline": {
+        "n": 50,
+        "rate": 0.675,
+        "se": 0.030607047933767718
+      },
+      "full_baseline": 0.6625,
+      "effect": {
+        "n": 50,
+        "rate": 0.565,
+        "se": 0.03318760662596944
+      },
+      "full_effect": 0.5525,
+      "result": {
+        "games": 300,
+        "pairs": 150,
+        "n": 50,
+        "rate": 0.11,
+        "se": 0.01622545241657221,
+        "wins": 33,
+        "losses": 267,
+        "draws": 0,
+        "enemy_kills": [
+          8.52,
+          11.79
+        ],
+        "friendly_kills": [
+          1.03,
+          0.25666666666666665
+        ],
+        "piers_scores": [
+          1246.22,
+          2180.34
+        ],
+        "faults": [
+          {
+            "合计": 10,
+            "超时": 2,
+            "非法": 8
+          },
+          {}
+        ],
+        "fault_games": 3,
+        "non_ok_status": {},
+        "fault_players": [
+          {
+            "side": 0,
+            "name": "astra",
+            "count": 8
+          },
+          {
+            "side": 0,
+            "name": "hydrogen",
+            "count": 1
+          },
+          {
+            "side": 0,
+            "name": "kimi",
+            "count": 1
+          }
+        ]
+      }
+    },
+    {
+      "name": "fable",
+      "team": "F",
+      "maps": {
+        "caldera": {
+          "n": 50,
+          "rate": 0.09,
+          "se": 0.07914079419694024
+        },
+        "piers": {
+          "n": 50,
+          "rate": 0.18,
+          "se": 0.04462999814803802
+        },
+        "keeps": {
+          "n": 50,
+          "rate": 0.215,
+          "se": 0.056699170349903245
+        }
+      },
+      "matched_baseline": {
+        "n": 50,
+        "rate": 0.325,
+        "se": 0.030607047933767718
+      },
+      "full_baseline": 0.3375,
+      "effect": {
+        "n": 50,
+        "rate": 0.16166666666666665,
+        "se": 0.041473019396572525
+      },
+      "full_effect": 0.1741666666666667,
+      "result": {
+        "games": 300,
+        "pairs": 150,
+        "n": 50,
+        "rate": 0.16333333333333333,
+        "se": 0.02155518151953576,
+        "wins": 49,
+        "losses": 251,
+        "draws": 0,
+        "enemy_kills": [
+          7.63,
+          11.73
+        ],
+        "friendly_kills": [
+          0.49666666666666665,
+          1.09
+        ],
+        "piers_scores": [
+          1066.72,
+          2357.01
+        ],
+        "faults": [
+          {},
+          {}
+        ],
+        "fault_games": 0,
+        "non_ok_status": {},
+        "fault_players": []
+      }
+    },
+    {
+      "name": "opus",
+      "team": "F",
+      "maps": {
+        "caldera": {
+          "n": 50,
+          "rate": 0.13,
+          "se": 0.06671596816477496
+        },
+        "piers": {
+          "n": 50,
+          "rate": 0.2,
+          "se": 0.04285714285714286
+        },
+        "keeps": {
+          "n": 50,
+          "rate": 0.145,
+          "se": 0.06271493654071669
+        }
+      },
+      "matched_baseline": {
+        "n": 50,
+        "rate": 0.325,
+        "se": 0.030607047933767718
+      },
+      "full_baseline": 0.3375,
+      "effect": {
+        "n": 50,
+        "rate": 0.15833333333333333,
+        "se": 0.036673623335117526
+      },
+      "full_effect": 0.17083333333333336,
+      "result": {
+        "games": 300,
+        "pairs": 150,
+        "n": 50,
+        "rate": 0.16666666666666666,
+        "se": 0.017817416127494955,
+        "wins": 50,
+        "losses": 250,
+        "draws": 0,
+        "enemy_kills": [
+          9.6,
+          10.363333333333333
+        ],
+        "friendly_kills": [
+          0.38333333333333336,
+          1.1333333333333333
+        ],
+        "piers_scores": [
+          1105.41,
+          2307.71
+        ],
+        "faults": [
+          {},
+          {}
+        ],
+        "fault_games": 0,
+        "non_ok_status": {},
+        "fault_players": []
+      }
+    },
+    {
+      "name": "carbon",
+      "team": "F",
+      "maps": {
+        "caldera": {
+          "n": 50,
+          "rate": 0.05,
+          "se": 0.0703489842985436
+        },
+        "piers": {
+          "n": 50,
+          "rate": 0.15,
+          "se": 0.05
+        },
+        "keeps": {
+          "n": 50,
+          "rate": 0.115,
+          "se": 0.0693298828288439
+        }
+      },
+      "matched_baseline": {
+        "n": 50,
+        "rate": 0.325,
+        "se": 0.030607047933767718
+      },
+      "full_baseline": 0.3375,
+      "effect": {
+        "n": 50,
+        "rate": 0.105,
+        "se": 0.04389032403864987
+      },
+      "full_effect": 0.11750000000000002,
+      "result": {
+        "games": 300,
+        "pairs": 150,
+        "n": 50,
+        "rate": 0.22,
+        "se": 0.022557560537765736,
+        "wins": 66,
+        "losses": 234,
+        "draws": 0,
+        "enemy_kills": [
+          8.896666666666667,
+          11.563333333333333
+        ],
+        "friendly_kills": [
+          0.5266666666666666,
+          1.15
+        ],
+        "piers_scores": [
+          1067.56,
+          2313.06
+        ],
+        "faults": [
+          {
+            "合计": 1,
+            "超时": 1,
+            "非法": 0
+          },
+          {
+            "合计": 1,
+            "超时": 1,
+            "非法": 0
+          }
+        ],
+        "fault_games": 2,
+        "non_ok_status": {},
+        "fault_players": [
+          {
+            "side": 0,
+            "name": "carbon",
+            "count": 1
+          },
+          {
+            "side": 1,
+            "name": "sol",
+            "count": 1
+          }
+        ]
+      }
+    },
+    {
+      "name": "hydrogen",
+      "team": "A",
+      "maps": {
+        "caldera": {
+          "n": 50,
+          "rate": 0.13,
+          "se": 0.0635834659550511
+        },
+        "piers": {
+          "n": 50,
+          "rate": 0.12,
+          "se": 0.06318098396427423
+        },
+        "keeps": {
+          "n": 50,
+          "rate": 0.055,
+          "se": 0.0615654620907614
+        }
+      },
+      "matched_baseline": {
+        "n": 50,
+        "rate": 0.675,
+        "se": 0.030607047933767718
+      },
+      "full_baseline": 0.6625,
+      "effect": {
+        "n": 50,
+        "rate": 0.10166666666666667,
+        "se": 0.042210062099025954
+      },
+      "full_effect": 0.08916666666666662,
+      "result": {
+        "games": 300,
+        "pairs": 150,
+        "n": 50,
+        "rate": 0.5733333333333334,
+        "se": 0.027004660721443478,
+        "wins": 172,
+        "losses": 128,
+        "draws": 0,
+        "enemy_kills": [
+          10.433333333333334,
+          9.873333333333333
+        ],
+        "friendly_kills": [
+          1.2333333333333334,
+          0.27
+        ],
+        "piers_scores": [
+          1781.85,
+          1623.57
+        ],
+        "faults": [
+          {},
+          {}
+        ],
+        "fault_games": 0,
+        "non_ok_status": {},
+        "fault_players": []
+      }
+    },
+    {
+      "name": "sol",
+      "team": "A",
+      "maps": {
+        "caldera": {
+          "n": 50,
+          "rate": 0.1,
+          "se": 0.06851187890446742
+        },
+        "piers": {
+          "n": 50,
+          "rate": 0.15,
+          "se": 0.06267831705280087
+        },
+        "keeps": {
+          "n": 50,
+          "rate": 0.045,
+          "se": 0.0680223552688859
+        }
+      },
+      "matched_baseline": {
+        "n": 50,
+        "rate": 0.675,
+        "se": 0.030607047933767718
+      },
+      "full_baseline": 0.6625,
+      "effect": {
+        "n": 50,
+        "rate": 0.09833333333333333,
+        "se": 0.038736419608446426
+      },
+      "full_effect": 0.08583333333333332,
+      "result": {
+        "games": 300,
+        "pairs": 150,
+        "n": 50,
+        "rate": 0.5766666666666667,
+        "se": 0.02573632212737459,
+        "wins": 173,
+        "losses": 127,
+        "draws": 0,
+        "enemy_kills": [
+          9.823333333333334,
+          9.9
+        ],
+        "friendly_kills": [
+          1.0866666666666667,
+          0.33666666666666667
+        ],
+        "piers_scores": [
+          1821.93,
+          1591.97
+        ],
+        "faults": [
+          {},
+          {
+            "合计": 1,
+            "超时": 1,
+            "非法": 0
+          }
+        ],
+        "fault_games": 1,
+        "non_ok_status": {},
+        "fault_players": [
+          {
+            "side": 1,
+            "name": "fable",
+            "count": 1
+          }
+        ]
+      }
+    },
+    {
+      "name": "grok",
+      "team": "A",
+      "maps": {
+        "caldera": {
+          "n": 50,
+          "rate": 0.125,
+          "se": 0.06318502147483619
+        },
+        "piers": {
+          "n": 50,
+          "rate": 0.17,
+          "se": 0.07229474816502854
+        },
+        "keeps": {
+          "n": 50,
+          "rate": -0.015,
+          "se": 0.067540615142872
+        }
+      },
+      "matched_baseline": {
+        "n": 50,
+        "rate": 0.675,
+        "se": 0.030607047933767718
+      },
+      "full_baseline": 0.6625,
+      "effect": {
+        "n": 50,
+        "rate": 0.09333333333333332,
+        "se": 0.04316293026142727
+      },
+      "full_effect": 0.08083333333333331,
+      "result": {
+        "games": 300,
+        "pairs": 150,
+        "n": 50,
+        "rate": 0.5816666666666667,
+        "se": 0.028520788455960677,
+        "wins": 173,
+        "losses": 124,
+        "draws": 3,
+        "enemy_kills": [
+          10.31,
+          11.303333333333333
+        ],
+        "friendly_kills": [
+          1.1766666666666667,
+          0.30666666666666664
+        ],
+        "piers_scores": [
+          1842.82,
+          1571.92
+        ],
+        "faults": [
+          {},
+          {
+            "合计": 1,
+            "超时": 1,
+            "非法": 0
+          }
+        ],
+        "fault_games": 1,
+        "non_ok_status": {},
+        "fault_players": [
+          {
+            "side": 1,
+            "name": "fable",
+            "count": 1
+          }
+        ]
+      }
+    },
+    {
+      "name": "deepseek",
+      "team": "F",
+      "maps": {
+        "caldera": {
+          "n": 50,
+          "rate": -0.05,
+          "se": 0.07319250547113998
+        },
+        "piers": {
+          "n": 50,
+          "rate": 0.05,
+          "se": 0.05758755534498964
+        },
+        "keeps": {
+          "n": 50,
+          "rate": -0.025,
+          "se": 0.07533936824903209
+        }
+      },
+      "matched_baseline": {
+        "n": 50,
+        "rate": 0.325,
+        "se": 0.030607047933767718
+      },
+      "full_baseline": 0.3375,
+      "effect": {
+        "n": 50,
+        "rate": -0.008333333333333333,
+        "se": 0.046245058570369126
+      },
+      "full_effect": 0.004166666666666707,
+      "result": {
+        "games": 300,
+        "pairs": 150,
+        "n": 50,
+        "rate": 0.3333333333333333,
+        "se": 0.02896553585856295,
+        "wins": 100,
+        "losses": 200,
+        "draws": 0,
+        "enemy_kills": [
+          9.86,
+          11.35
+        ],
+        "friendly_kills": [
+          0.4666666666666667,
+          1.0833333333333333
+        ],
+        "piers_scores": [
+          1237.96,
+          2166.95
+        ],
+        "faults": [
+          {
+            "合计": 1,
+            "超时": 1,
+            "非法": 0
+          },
+          {
+            "合计": 1,
+            "超时": 1,
+            "非法": 0
+          }
+        ],
+        "fault_games": 2,
+        "non_ok_status": {},
+        "fault_players": [
+          {
+            "side": 0,
+            "name": "fable",
+            "count": 1
+          },
+          {
+            "side": 1,
+            "name": "kimi",
+            "count": 1
+          }
+        ]
+      }
+    },
+    {
+      "name": "kimi",
+      "team": "A",
+      "maps": {
+        "caldera": {
+          "n": 50,
+          "rate": -0.09,
+          "se": 0.06339059352095369
+        },
+        "piers": {
+          "n": 50,
+          "rate": 0.02,
+          "se": 0.06694499722205703
+        },
+        "keeps": {
+          "n": 50,
+          "rate": -0.095,
+          "se": 0.07030908438415889
+        }
+      },
+      "matched_baseline": {
+        "n": 50,
+        "rate": 0.675,
+        "se": 0.030607047933767718
+      },
+      "full_baseline": 0.6625,
+      "effect": {
+        "n": 50,
+        "rate": -0.05499999999999999,
+        "se": 0.0438774060009205
+      },
+      "full_effect": -0.0675,
+      "result": {
+        "games": 300,
+        "pairs": 150,
+        "n": 50,
+        "rate": 0.73,
+        "se": 0.027413024694522392,
+        "wins": 218,
+        "losses": 80,
+        "draws": 2,
+        "enemy_kills": [
+          11.226666666666667,
+          10.146666666666667
+        ],
+        "friendly_kills": [
+          1.08,
+          0.28
+        ],
+        "piers_scores": [
+          1944.29,
+          1462.39
+        ],
+        "faults": [
+          {},
+          {}
+        ],
+        "fault_games": 0,
+        "non_ok_status": {},
+        "fault_players": []
+      }
+    },
+    {
+      "name": "glm",
+      "team": "F",
+      "maps": {
+        "caldera": {
+          "n": 50,
+          "rate": -0.025,
+          "se": 0.06477984695434662
+        },
+        "piers": {
+          "n": 50,
+          "rate": -0.12,
+          "se": 0.06318098396427423
+        },
+        "keeps": {
+          "n": 50,
+          "rate": -0.095,
+          "se": 0.058853848728898615
+        }
+      },
+      "matched_baseline": {
+        "n": 50,
+        "rate": 0.325,
+        "se": 0.030607047933767718
+      },
+      "full_baseline": 0.3375,
+      "effect": {
+        "n": 50,
+        "rate": -0.07999999999999999,
+        "se": 0.03786837209918294
+      },
+      "full_effect": -0.06749999999999995,
+      "result": {
+        "games": 300,
+        "pairs": 150,
+        "n": 50,
+        "rate": 0.40499999999999997,
+        "se": 0.027562544830821052,
+        "wins": 121,
+        "losses": 178,
+        "draws": 1,
+        "enemy_kills": [
+          10.986666666666666,
+          12.153333333333334
+        ],
+        "friendly_kills": [
+          0.4633333333333333,
+          1.1466666666666667
+        ],
+        "piers_scores": [
+          1570.75,
+          1834.31
+        ],
+        "faults": [
+          {},
+          {
+            "合计": 1,
+            "超时": 1,
+            "非法": 0
+          }
+        ],
+        "fault_games": 1,
+        "non_ok_status": {},
+        "fault_players": [
+          {
+            "side": 1,
+            "name": "astra",
+            "count": 1
+          }
+        ]
+      }
+    }
+  ],
+  "packet_audit": {
+    "metrics": {
+      "A 原队": {
+        "nonzero": 8316,
+        "format": 8316,
+        "position": 8316,
+        "samples": 12
+      },
+      "F 原队": {
+        "nonzero": 7075,
+        "F1": 6904,
+        "format": 7075,
+        "position": 6904,
+        "F2": 88,
+        "F3": 83,
+        "samples": 12
+      },
+      "Fable → A4": {
+        "nonzero": 14125,
+        "format": 2518,
+        "position": 2518,
+        "error_gt_1m": 2518,
+        "samples": 24
+      },
+      "Astra → F4": {
+        "nonzero": 14694,
+        "F1": 3675,
+        "format": 11014,
+        "position": 3675,
+        "error_gt_1m": 3675,
+        "F2": 3672,
+        "F3": 3667,
+        "samples": 24
+      }
+    },
+    "examples": {
+      "A 原队": [
+        {
+          "id": 1200,
+          "case": "2-base-caldera",
+          "seat": 0,
+          "replay": "main/replays-1795426037676856800/g1200.txt",
+          "counts": {
+            "nonzero": 519,
+            "format": 519,
+            "position": 519
+          }
+        },
+        {
+          "id": 1201,
+          "case": "2-base-caldera",
+          "seat": 5,
+          "replay": "main/replays-1795426037676856800/g1201.txt",
+          "counts": {
+            "nonzero": 538,
+            "format": 538,
+            "position": 538
+          }
+        },
+        {
+          "id": 1202,
+          "case": "2-base-caldera",
+          "seat": 0,
+          "replay": "main/replays-1795426037676856800/g1202.txt",
+          "counts": {
+            "nonzero": 509,
+            "format": 509,
+            "position": 509
+          }
+        },
+        {
+          "id": 1203,
+          "case": "2-base-caldera",
+          "seat": 5,
+          "replay": "main/replays-1795426037676856800/g1203.txt",
+          "counts": {
+            "nonzero": 558,
+            "format": 558,
+            "position": 558
+          }
+        },
+        {
+          "id": 1360,
+          "case": "2-base-piers",
+          "seat": 0,
+          "replay": "main/replays-1795426037676856800/g1360.txt",
+          "counts": {
+            "nonzero": 1020,
+            "format": 1020,
+            "position": 1020
+          }
+        },
+        {
+          "id": 1361,
+          "case": "2-base-piers",
+          "seat": 5,
+          "replay": "main/replays-1795426037676856800/g1361.txt",
+          "counts": {
+            "nonzero": 780,
+            "format": 780,
+            "position": 780
+          }
+        },
+        {
+          "id": 1362,
+          "case": "2-base-piers",
+          "seat": 0,
+          "replay": "main/replays-1795426037676856800/g1362.txt",
+          "counts": {
+            "nonzero": 931,
+            "format": 931,
+            "position": 931
+          }
+        },
+        {
+          "id": 1363,
+          "case": "2-base-piers",
+          "seat": 5,
+          "replay": "main/replays-1795426037676856800/g1363.txt",
+          "counts": {
+            "nonzero": 1140,
+            "format": 1140,
+            "position": 1140
+          }
+        },
+        {
+          "id": 1520,
+          "case": "2-base-keeps",
+          "seat": 0,
+          "replay": "main/replays-1795426037676856800/g1520.txt",
+          "counts": {
+            "nonzero": 498,
+            "format": 498,
+            "position": 498
+          }
+        },
+        {
+          "id": 1521,
+          "case": "2-base-keeps",
+          "seat": 5,
+          "replay": "main/replays-1795426037676856800/g1521.txt",
+          "counts": {
+            "nonzero": 631,
+            "format": 631,
+            "position": 631
+          }
+        },
+        {
+          "id": 1522,
+          "case": "2-base-keeps",
+          "seat": 0,
+          "replay": "main/replays-1795426037676856800/g1522.txt",
+          "counts": {
+            "nonzero": 543,
+            "format": 543,
+            "position": 543
+          }
+        },
+        {
+          "id": 1523,
+          "case": "2-base-keeps",
+          "seat": 5,
+          "replay": "main/replays-1795426037676856800/g1523.txt",
+          "counts": {
+            "nonzero": 649,
+            "format": 649,
+            "position": 649
+          }
+        }
+      ],
+      "F 原队": [
+        {
+          "id": 1200,
+          "case": "2-base-caldera",
+          "seat": 5,
+          "replay": "main/replays-1795426037676856800/g1200.txt",
+          "counts": {
+            "nonzero": 571,
+            "F1": 560,
+            "format": 571,
+            "position": 560,
+            "F2": 6,
+            "F3": 5
+          }
+        },
+        {
+          "id": 1201,
+          "case": "2-base-caldera",
+          "seat": 0,
+          "replay": "main/replays-1795426037676856800/g1201.txt",
+          "counts": {
+            "nonzero": 529,
+            "F1": 517,
+            "format": 529,
+            "position": 517,
+            "F2": 6,
+            "F3": 6
+          }
+        },
+        {
+          "id": 1202,
+          "case": "2-base-caldera",
+          "seat": 5,
+          "replay": "main/replays-1795426037676856800/g1202.txt",
+          "counts": {
+            "nonzero": 295,
+            "F1": 288,
+            "format": 295,
+            "position": 288,
+            "F3": 4,
+            "F2": 3
+          }
+        },
+        {
+          "id": 1203,
+          "case": "2-base-caldera",
+          "seat": 0,
+          "replay": "main/replays-1795426037676856800/g1203.txt",
+          "counts": {
+            "nonzero": 128,
+            "F1": 126,
+            "format": 128,
+            "position": 126,
+            "F2": 1,
+            "F3": 1
+          }
+        },
+        {
+          "id": 1360,
+          "case": "2-base-piers",
+          "seat": 5,
+          "replay": "main/replays-1795426037676856800/g1360.txt",
+          "counts": {
+            "nonzero": 1020,
+            "F3": 10,
+            "format": 1020,
+            "F1": 989,
+            "position": 989,
+            "F2": 21
+          }
+        },
+        {
+          "id": 1361,
+          "case": "2-base-piers",
+          "seat": 0,
+          "replay": "main/replays-1795426037676856800/g1361.txt",
+          "counts": {
+            "nonzero": 720,
+            "F1": 690,
+            "format": 720,
+            "position": 690,
+            "F3": 14,
+            "F2": 16
+          }
+        },
+        {
+          "id": 1362,
+          "case": "2-base-piers",
+          "seat": 5,
+          "replay": "main/replays-1795426037676856800/g1362.txt",
+          "counts": {
+            "nonzero": 720,
+            "F3": 14,
+            "format": 720,
+            "F1": 694,
+            "position": 694,
+            "F2": 12
+          }
+        },
+        {
+          "id": 1363,
+          "case": "2-base-piers",
+          "seat": 0,
+          "replay": "main/replays-1795426037676856800/g1363.txt",
+          "counts": {
+            "nonzero": 771,
+            "F1": 739,
+            "format": 771,
+            "position": 739,
+            "F3": 16,
+            "F2": 16
+          }
+        },
+        {
+          "id": 1520,
+          "case": "2-base-keeps",
+          "seat": 5,
+          "replay": "main/replays-1795426037676856800/g1520.txt",
+          "counts": {
+            "nonzero": 498,
+            "F1": 494,
+            "format": 498,
+            "position": 494,
+            "F3": 3,
+            "F2": 1
+          }
+        },
+        {
+          "id": 1521,
+          "case": "2-base-keeps",
+          "seat": 0,
+          "replay": "main/replays-1795426037676856800/g1521.txt",
+          "counts": {
+            "nonzero": 631,
+            "F1": 626,
+            "format": 631,
+            "position": 626,
+            "F3": 3,
+            "F2": 2
+          }
+        },
+        {
+          "id": 1522,
+          "case": "2-base-keeps",
+          "seat": 5,
+          "replay": "main/replays-1795426037676856800/g1522.txt",
+          "counts": {
+            "nonzero": 543,
+            "F1": 540,
+            "format": 543,
+            "position": 540,
+            "F3": 2,
+            "F2": 1
+          }
+        },
+        {
+          "id": 1523,
+          "case": "2-base-keeps",
+          "seat": 0,
+          "replay": "main/replays-1795426037676856800/g1523.txt",
+          "counts": {
+            "nonzero": 649,
+            "F1": 641,
+            "format": 649,
+            "position": 641,
+            "F3": 5,
+            "F2": 3
+          }
+        }
+      ],
+      "Fable → A4": [
+        {
+          "id": 1680,
+          "case": "2-fable-a4-caldera",
+          "seat": 0,
+          "replay": "main/replays-1795426037676856800/g1680.txt",
+          "counts": {
+            "nonzero": 300,
+            "format": 67,
+            "position": 67,
+            "error_gt_1m": 67
+          }
+        },
+        {
+          "id": 1681,
+          "case": "2-fable-a4-caldera",
+          "seat": 5,
+          "replay": "main/replays-1795426037676856800/g1681.txt",
+          "counts": {
+            "nonzero": 206,
+            "format": 26,
+            "position": 26,
+            "error_gt_1m": 26
+          }
+        },
+        {
+          "id": 1682,
+          "case": "2-fable-a4-caldera",
+          "seat": 0,
+          "replay": "main/replays-1795426037676856800/g1682.txt",
+          "counts": {
+            "nonzero": 259,
+            "format": 38,
+            "position": 38,
+            "error_gt_1m": 38
+          }
+        },
+        {
+          "id": 1683,
+          "case": "2-fable-a4-caldera",
+          "seat": 5,
+          "replay": "main/replays-1795426037676856800/g1683.txt",
+          "counts": {
+            "nonzero": 522,
+            "format": 28,
+            "position": 28,
+            "error_gt_1m": 28
+          }
+        },
+        {
+          "id": 1840,
+          "case": "2-fable-a4-piers",
+          "seat": 0,
+          "replay": "main/replays-1795426037676856800/g1840.txt",
+          "counts": {
+            "nonzero": 834,
+            "format": 207,
+            "position": 207,
+            "error_gt_1m": 207
+          }
+        },
+        {
+          "id": 1841,
+          "case": "2-fable-a4-piers",
+          "seat": 5,
+          "replay": "main/replays-1795426037676856800/g1841.txt",
+          "counts": {
+            "nonzero": 768,
+            "format": 153,
+            "position": 153,
+            "error_gt_1m": 153
+          }
+        },
+        {
+          "id": 1842,
+          "case": "2-fable-a4-piers",
+          "seat": 0,
+          "replay": "main/replays-1795426037676856800/g1842.txt",
+          "counts": {
+            "nonzero": 900,
+            "format": 229,
+            "position": 229,
+            "error_gt_1m": 229
+          }
+        },
+        {
+          "id": 1843,
+          "case": "2-fable-a4-piers",
+          "seat": 5,
+          "replay": "main/replays-1795426037676856800/g1843.txt",
+          "counts": {
+            "nonzero": 836,
+            "format": 174,
+            "position": 174,
+            "error_gt_1m": 174
+          }
+        },
+        {
+          "id": 2000,
+          "case": "2-fable-a4-keeps",
+          "seat": 0,
+          "replay": "main/replays-1795426037676856800/g2000.txt",
+          "counts": {
+            "nonzero": 569,
+            "format": 89,
+            "position": 89,
+            "error_gt_1m": 89
+          }
+        },
+        {
+          "id": 2001,
+          "case": "2-fable-a4-keeps",
+          "seat": 5,
+          "replay": "main/replays-1795426037676856800/g2001.txt",
+          "counts": {
+            "nonzero": 612,
+            "format": 40,
+            "position": 40,
+            "error_gt_1m": 40
+          }
+        },
+        {
+          "id": 2002,
+          "case": "2-fable-a4-keeps",
+          "seat": 0,
+          "replay": "main/replays-1795426037676856800/g2002.txt",
+          "counts": {
+            "nonzero": 634,
+            "format": 102,
+            "position": 102,
+            "error_gt_1m": 102
+          }
+        },
+        {
+          "id": 2003,
+          "case": "2-fable-a4-keeps",
+          "seat": 5,
+          "replay": "main/replays-1795426037676856800/g2003.txt",
+          "counts": {
+            "nonzero": 639,
+            "format": 70,
+            "position": 70,
+            "error_gt_1m": 70
+          }
+        },
+        {
+          "id": 2640,
+          "case": "2-both-swapped-caldera",
+          "seat": 5,
+          "replay": "main/replays-1795426037676856800/g2640.txt",
+          "counts": {
+            "nonzero": 481,
+            "format": 68,
+            "position": 68,
+            "error_gt_1m": 68
+          }
+        },
+        {
+          "id": 2641,
+          "case": "2-both-swapped-caldera",
+          "seat": 0,
+          "replay": "main/replays-1795426037676856800/g2641.txt",
+          "counts": {
+            "nonzero": 535,
+            "format": 70,
+            "position": 70,
+            "error_gt_1m": 70
+          }
+        },
+        {
+          "id": 2642,
+          "case": "2-both-swapped-caldera",
+          "seat": 5,
+          "replay": "main/replays-1795426037676856800/g2642.txt",
+          "counts": {
+            "nonzero": 547,
+            "format": 20,
+            "position": 20,
+            "error_gt_1m": 20
+          }
+        },
+        {
+          "id": 2643,
+          "case": "2-both-swapped-caldera",
+          "seat": 0,
+          "replay": "main/replays-1795426037676856800/g2643.txt",
+          "counts": {
+            "nonzero": 517,
+            "format": 97,
+            "position": 97,
+            "error_gt_1m": 97
+          }
+        },
+        {
+          "id": 2800,
+          "case": "2-both-swapped-piers",
+          "seat": 5,
+          "replay": "main/replays-1795426037676856800/g2800.txt",
+          "counts": {
+            "nonzero": 734,
+            "format": 172,
+            "position": 172,
+            "error_gt_1m": 172
+          }
+        },
+        {
+          "id": 2801,
+          "case": "2-both-swapped-piers",
+          "seat": 0,
+          "replay": "main/replays-1795426037676856800/g2801.txt",
+          "counts": {
+            "nonzero": 847,
+            "format": 215,
+            "position": 215,
+            "error_gt_1m": 215
+          }
+        },
+        {
+          "id": 2802,
+          "case": "2-both-swapped-piers",
+          "seat": 5,
+          "replay": "main/replays-1795426037676856800/g2802.txt",
+          "counts": {
+            "nonzero": 840,
+            "format": 197,
+            "position": 197,
+            "error_gt_1m": 197
+          }
+        },
+        {
+          "id": 2803,
+          "case": "2-both-swapped-piers",
+          "seat": 0,
+          "replay": "main/replays-1795426037676856800/g2803.txt",
+          "counts": {
+            "nonzero": 840,
+            "format": 216,
+            "position": 216,
+            "error_gt_1m": 216
+          }
+        },
+        {
+          "id": 2960,
+          "case": "2-both-swapped-keeps",
+          "seat": 5,
+          "replay": "main/replays-1795426037676856800/g2960.txt",
+          "counts": {
+            "nonzero": 394,
+            "format": 75,
+            "position": 75,
+            "error_gt_1m": 75
+          }
+        },
+        {
+          "id": 2961,
+          "case": "2-both-swapped-keeps",
+          "seat": 0,
+          "replay": "main/replays-1795426037676856800/g2961.txt",
+          "counts": {
+            "nonzero": 507,
+            "format": 53,
+            "position": 53,
+            "error_gt_1m": 53
+          }
+        },
+        {
+          "id": 2962,
+          "case": "2-both-swapped-keeps",
+          "seat": 5,
+          "replay": "main/replays-1795426037676856800/g2962.txt",
+          "counts": {
+            "nonzero": 240,
+            "format": 35,
+            "position": 35,
+            "error_gt_1m": 35
+          }
+        },
+        {
+          "id": 2963,
+          "case": "2-both-swapped-keeps",
+          "seat": 0,
+          "replay": "main/replays-1795426037676856800/g2963.txt",
+          "counts": {
+            "nonzero": 564,
+            "format": 77,
+            "position": 77,
+            "error_gt_1m": 77
+          }
+        }
+      ],
+      "Astra → F4": [
+        {
+          "id": 2160,
+          "case": "2-astra-f4-caldera",
+          "seat": 0,
+          "replay": "main/replays-1795426037676856800/g2160.txt",
+          "counts": {
+            "nonzero": 442,
+            "F1": 111,
+            "format": 331,
+            "position": 111,
+            "error_gt_1m": 111,
+            "F2": 110,
+            "F3": 110
+          }
+        },
+        {
+          "id": 2161,
+          "case": "2-astra-f4-caldera",
+          "seat": 5,
+          "replay": "main/replays-1795426037676856800/g2161.txt",
+          "counts": {
+            "nonzero": 510,
+            "F1": 128,
+            "format": 382,
+            "position": 128,
+            "error_gt_1m": 128,
+            "F2": 127,
+            "F3": 127
+          }
+        },
+        {
+          "id": 2162,
+          "case": "2-astra-f4-caldera",
+          "seat": 0,
+          "replay": "main/replays-1795426037676856800/g2162.txt",
+          "counts": {
+            "nonzero": 59,
+            "F1": 15,
+            "format": 44,
+            "position": 15,
+            "error_gt_1m": 15,
+            "F2": 15,
+            "F3": 14
+          }
+        },
+        {
+          "id": 2163,
+          "case": "2-astra-f4-caldera",
+          "seat": 5,
+          "replay": "main/replays-1795426037676856800/g2163.txt",
+          "counts": {
+            "nonzero": 197,
+            "F1": 49,
+            "format": 147,
+            "position": 49,
+            "error_gt_1m": 49,
+            "F2": 49,
+            "F3": 49
+          }
+        },
+        {
+          "id": 2320,
+          "case": "2-astra-f4-piers",
+          "seat": 0,
+          "replay": "main/replays-1795426037676856800/g2320.txt",
+          "counts": {
+            "nonzero": 1020,
+            "F1": 255,
+            "format": 765,
+            "position": 255,
+            "error_gt_1m": 255,
+            "F2": 255,
+            "F3": 255
+          }
+        },
+        {
+          "id": 2321,
+          "case": "2-astra-f4-piers",
+          "seat": 5,
+          "replay": "main/replays-1795426037676856800/g2321.txt",
+          "counts": {
+            "nonzero": 840,
+            "F1": 210,
+            "format": 630,
+            "position": 210,
+            "error_gt_1m": 210,
+            "F2": 210,
+            "F3": 210
+          }
+        },
+        {
+          "id": 2322,
+          "case": "2-astra-f4-piers",
+          "seat": 0,
+          "replay": "main/replays-1795426037676856800/g2322.txt",
+          "counts": {
+            "nonzero": 1020,
+            "F1": 255,
+            "format": 765,
+            "position": 255,
+            "error_gt_1m": 255,
+            "F2": 255,
+            "F3": 255
+          }
+        },
+        {
+          "id": 2323,
+          "case": "2-astra-f4-piers",
+          "seat": 5,
+          "replay": "main/replays-1795426037676856800/g2323.txt",
+          "counts": {
+            "nonzero": 1020,
+            "F1": 255,
+            "format": 765,
+            "position": 255,
+            "error_gt_1m": 255,
+            "F2": 255,
+            "F3": 255
+          }
+        },
+        {
+          "id": 2480,
+          "case": "2-astra-f4-keeps",
+          "seat": 0,
+          "replay": "main/replays-1795426037676856800/g2480.txt",
+          "counts": {
+            "nonzero": 417,
+            "F1": 104,
+            "format": 312,
+            "position": 104,
+            "error_gt_1m": 104,
+            "F2": 104,
+            "F3": 104
+          }
+        },
+        {
+          "id": 2481,
+          "case": "2-astra-f4-keeps",
+          "seat": 5,
+          "replay": "main/replays-1795426037676856800/g2481.txt",
+          "counts": {
+            "nonzero": 539,
+            "F1": 135,
+            "format": 404,
+            "position": 135,
+            "error_gt_1m": 135,
+            "F2": 135,
+            "F3": 134
+          }
+        },
+        {
+          "id": 2482,
+          "case": "2-astra-f4-keeps",
+          "seat": 0,
+          "replay": "main/replays-1795426037676856800/g2482.txt",
+          "counts": {
+            "nonzero": 548,
+            "F1": 137,
+            "format": 411,
+            "position": 137,
+            "error_gt_1m": 137,
+            "F2": 137,
+            "F3": 137
+          }
+        },
+        {
+          "id": 2483,
+          "case": "2-astra-f4-keeps",
+          "seat": 5,
+          "replay": "main/replays-1795426037676856800/g2483.txt",
+          "counts": {
+            "nonzero": 361,
+            "F1": 90,
+            "format": 270,
+            "position": 90,
+            "error_gt_1m": 90,
+            "F2": 90,
+            "F3": 90
+          }
+        },
+        {
+          "id": 2640,
+          "case": "2-both-swapped-caldera",
+          "seat": 0,
+          "replay": "main/replays-1795426037676856800/g2640.txt",
+          "counts": {
+            "nonzero": 481,
+            "F1": 120,
+            "format": 360,
+            "position": 120,
+            "error_gt_1m": 120,
+            "F2": 120,
+            "F3": 120
+          }
+        },
+        {
+          "id": 2641,
+          "case": "2-both-swapped-caldera",
+          "seat": 5,
+          "replay": "main/replays-1795426037676856800/g2641.txt",
+          "counts": {
+            "nonzero": 403,
+            "F1": 101,
+            "format": 302,
+            "position": 101,
+            "error_gt_1m": 101,
+            "F2": 101,
+            "F3": 100
+          }
+        },
+        {
+          "id": 2642,
+          "case": "2-both-swapped-caldera",
+          "seat": 0,
+          "replay": "main/replays-1795426037676856800/g2642.txt",
+          "counts": {
+            "nonzero": 175,
+            "F1": 44,
+            "format": 131,
+            "position": 44,
+            "error_gt_1m": 44,
+            "F2": 44,
+            "F3": 43
+          }
+        },
+        {
+          "id": 2643,
+          "case": "2-both-swapped-caldera",
+          "seat": 5,
+          "replay": "main/replays-1795426037676856800/g2643.txt",
+          "counts": {
+            "nonzero": 517,
+            "F1": 129,
+            "format": 387,
+            "position": 129,
+            "error_gt_1m": 129,
+            "F2": 129,
+            "F3": 129
+          }
+        },
+        {
+          "id": 2800,
+          "case": "2-both-swapped-piers",
+          "seat": 0,
+          "replay": "main/replays-1795426037676856800/g2800.txt",
+          "counts": {
+            "nonzero": 1140,
+            "F1": 285,
+            "format": 855,
+            "position": 285,
+            "error_gt_1m": 285,
+            "F2": 285,
+            "F3": 285
+          }
+        },
+        {
+          "id": 2801,
+          "case": "2-both-swapped-piers",
+          "seat": 5,
+          "replay": "main/replays-1795426037676856800/g2801.txt",
+          "counts": {
+            "nonzero": 1080,
+            "F1": 270,
+            "format": 810,
+            "position": 270,
+            "error_gt_1m": 270,
+            "F2": 270,
+            "F3": 270
+          }
+        },
+        {
+          "id": 2802,
+          "case": "2-both-swapped-piers",
+          "seat": 0,
+          "replay": "main/replays-1795426037676856800/g2802.txt",
+          "counts": {
+            "nonzero": 1140,
+            "F1": 285,
+            "format": 855,
+            "position": 285,
+            "error_gt_1m": 285,
+            "F2": 285,
+            "F3": 285
+          }
+        },
+        {
+          "id": 2803,
+          "case": "2-both-swapped-piers",
+          "seat": 5,
+          "replay": "main/replays-1795426037676856800/g2803.txt",
+          "counts": {
+            "nonzero": 1080,
+            "F1": 270,
+            "format": 810,
+            "position": 270,
+            "error_gt_1m": 270,
+            "F2": 270,
+            "F3": 270
+          }
+        },
+        {
+          "id": 2960,
+          "case": "2-both-swapped-keeps",
+          "seat": 0,
+          "replay": "main/replays-1795426037676856800/g2960.txt",
+          "counts": {
+            "nonzero": 394,
+            "F1": 99,
+            "format": 295,
+            "position": 99,
+            "error_gt_1m": 99,
+            "F2": 98,
+            "F3": 98
+          }
+        },
+        {
+          "id": 2961,
+          "case": "2-both-swapped-keeps",
+          "seat": 5,
+          "replay": "main/replays-1795426037676856800/g2961.txt",
+          "counts": {
+            "nonzero": 507,
+            "F1": 127,
+            "format": 380,
+            "position": 127,
+            "error_gt_1m": 127,
+            "F2": 127,
+            "F3": 126
+          }
+        },
+        {
+          "id": 2962,
+          "case": "2-both-swapped-keeps",
+          "seat": 0,
+          "replay": "main/replays-1795426037676856800/g2962.txt",
+          "counts": {
+            "nonzero": 240,
+            "F1": 60,
+            "format": 180,
+            "position": 60,
+            "error_gt_1m": 60,
+            "F2": 60,
+            "F3": 60
+          }
+        },
+        {
+          "id": 2963,
+          "case": "2-both-swapped-keeps",
+          "seat": 5,
+          "replay": "main/replays-1795426037676856800/g2963.txt",
+          "counts": {
+            "nonzero": 564,
+            "F1": 141,
+            "format": 423,
+            "position": 141,
+            "error_gt_1m": 141,
+            "F2": 141,
+            "F3": 141
+          }
+        }
+      ]
+    }
+  }
+}

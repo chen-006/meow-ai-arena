@@ -1,0 +1,2785 @@
+{
+  "smoke": {
+    "smoke9": {
+      "games": 120,
+      "faults": {
+        "events": {
+          "astra": 1
+        },
+        "bad_seats": {
+          "astra:crash": 1
+        }
+      },
+      "archive": {
+        "0.total": 20,
+        "0.exact": 14,
+        "1.total": 40,
+        "1.exact": 5
+      }
+    },
+    "smoke9b": {
+      "games": 120,
+      "faults": {
+        "events": {},
+        "bad_seats": {}
+      },
+      "archive": {
+        "0.total": 20,
+        "0.exact": 15,
+        "1.total": 40,
+        "1.exact": 4
+      }
+    }
+  },
+  "self": {
+    "people": {
+      "astra": {
+        "twinlakes": {
+          "points": {
+            "value": 0.55,
+            "se": 0.11666666666666667,
+            "blocks": 10,
+            "games": 20
+          },
+          "win": {
+            "value": 0.55,
+            "se": 0.11666666666666667,
+            "blocks": 10,
+            "games": 20
+          },
+          "wld": [
+            11,
+            9,
+            0
+          ]
+        },
+        "yinyang": {
+          "points": {
+            "value": 0.5,
+            "se": 0.14907119849998596,
+            "blocks": 10,
+            "games": 20
+          },
+          "win": {
+            "value": 0.5,
+            "se": 0.14907119849998596,
+            "blocks": 10,
+            "games": 20
+          },
+          "wld": [
+            10,
+            10,
+            0
+          ]
+        },
+        "icefloes": {
+          "points": {
+            "value": 0.35,
+            "se": 0.15,
+            "blocks": 10,
+            "games": 20
+          },
+          "win": {
+            "value": 0.35,
+            "se": 0.15,
+            "blocks": 10,
+            "games": 20
+          },
+          "wld": [
+            7,
+            13,
+            0
+          ]
+        },
+        "ruins": {
+          "points": {
+            "value": 0.4,
+            "se": 0.1452966314513558,
+            "blocks": 10,
+            "games": 20
+          },
+          "win": {
+            "value": 0.4,
+            "se": 0.1452966314513558,
+            "blocks": 10,
+            "games": 20
+          },
+          "wld": [
+            8,
+            12,
+            0
+          ]
+        },
+        "skybridge": {
+          "points": {
+            "value": 0.4,
+            "se": 0.1632993161855452,
+            "blocks": 10,
+            "games": 20
+          },
+          "win": {
+            "value": 0.4,
+            "se": 0.1632993161855452,
+            "blocks": 10,
+            "games": 20
+          },
+          "wld": [
+            8,
+            12,
+            0
+          ]
+        },
+        "stonecircle": {
+          "points": {
+            "value": 0.6,
+            "se": 0.1,
+            "blocks": 10,
+            "games": 20
+          },
+          "win": {
+            "value": 0.6,
+            "se": 0.1,
+            "blocks": 10,
+            "games": 20
+          },
+          "wld": [
+            12,
+            8,
+            0
+          ]
+        },
+        "total": {
+          "points": {
+            "value": 0.4666666666666667,
+            "se": 0.05679180083405798,
+            "blocks": 60,
+            "games": 120
+          },
+          "win": {
+            "value": 0.4666666666666667,
+            "se": 0.05679180083405798,
+            "blocks": 60,
+            "games": 120
+          },
+          "wld": [
+            56,
+            64,
+            0
+          ]
+        }
+      },
+      "sol": {
+        "twinlakes": {
+          "points": {
+            "value": 0.4,
+            "se": 0.1,
+            "blocks": 10,
+            "games": 20
+          },
+          "win": {
+            "value": 0.25,
+            "se": 0.11180339887498948,
+            "blocks": 10,
+            "games": 20
+          },
+          "wld": [
+            5,
+            9,
+            6
+          ]
+        },
+        "yinyang": {
+          "points": {
+            "value": 0.65,
+            "se": 0.07637626158259733,
+            "blocks": 10,
+            "games": 20
+          },
+          "win": {
+            "value": 0.65,
+            "se": 0.07637626158259733,
+            "blocks": 10,
+            "games": 20
+          },
+          "wld": [
+            13,
+            7,
+            0
+          ]
+        },
+        "icefloes": {
+          "points": {
+            "value": 0.575,
+            "se": 0.075,
+            "blocks": 10,
+            "games": 20
+          },
+          "win": {
+            "value": 0.2,
+            "se": 0.13333333333333333,
+            "blocks": 10,
+            "games": 20
+          },
+          "wld": [
+            4,
+            1,
+            15
+          ]
+        },
+        "ruins": {
+          "points": {
+            "value": 0.45,
+            "se": 0.08975274678557507,
+            "blocks": 10,
+            "games": 20
+          },
+          "win": {
+            "value": 0.2,
+            "se": 0.11055415967851333,
+            "blocks": 10,
+            "games": 20
+          },
+          "wld": [
+            4,
+            6,
+            10
+          ]
+        },
+        "skybridge": {
+          "points": {
+            "value": 0.5,
+            "se": 0.0,
+            "blocks": 10,
+            "games": 20
+          },
+          "win": {
+            "value": 0,
+            "se": 0.0,
+            "blocks": 10,
+            "games": 20
+          },
+          "wld": [
+            0,
+            0,
+            20
+          ]
+        },
+        "stonecircle": {
+          "points": {
+            "value": 0.5,
+            "se": 0.12909944487358055,
+            "blocks": 10,
+            "games": 20
+          },
+          "win": {
+            "value": 0.35,
+            "se": 0.15,
+            "blocks": 10,
+            "games": 20
+          },
+          "wld": [
+            7,
+            7,
+            6
+          ]
+        },
+        "total": {
+          "points": {
+            "value": 0.5125,
+            "se": 0.035816102661743406,
+            "blocks": 60,
+            "games": 120
+          },
+          "win": {
+            "value": 0.275,
+            "se": 0.044357553951864755,
+            "blocks": 60,
+            "games": 120
+          },
+          "wld": [
+            33,
+            30,
+            57
+          ]
+        }
+      },
+      "hydrogen": {
+        "twinlakes": {
+          "points": {
+            "value": 0.7,
+            "se": 0.13333333333333333,
+            "blocks": 10,
+            "games": 20
+          },
+          "win": {
+            "value": 0.7,
+            "se": 0.13333333333333333,
+            "blocks": 10,
+            "games": 20
+          },
+          "wld": [
+            14,
+            6,
+            0
+          ]
+        },
+        "yinyang": {
+          "points": {
+            "value": 0.225,
+            "se": 0.10833333333333332,
+            "blocks": 10,
+            "games": 20
+          },
+          "win": {
+            "value": 0.2,
+            "se": 0.11055415967851333,
+            "blocks": 10,
+            "games": 20
+          },
+          "wld": [
+            4,
+            15,
+            1
+          ]
+        },
+        "icefloes": {
+          "points": {
+            "value": 0.5,
+            "se": 0.10540925533894598,
+            "blocks": 10,
+            "games": 20
+          },
+          "win": {
+            "value": 0.5,
+            "se": 0.10540925533894598,
+            "blocks": 10,
+            "games": 20
+          },
+          "wld": [
+            10,
+            10,
+            0
+          ]
+        },
+        "ruins": {
+          "points": {
+            "value": 0.6,
+            "se": 0.1,
+            "blocks": 10,
+            "games": 20
+          },
+          "win": {
+            "value": 0.6,
+            "se": 0.1,
+            "blocks": 10,
+            "games": 20
+          },
+          "wld": [
+            12,
+            8,
+            0
+          ]
+        },
+        "skybridge": {
+          "points": {
+            "value": 0.55,
+            "se": 0.11666666666666667,
+            "blocks": 10,
+            "games": 20
+          },
+          "win": {
+            "value": 0.55,
+            "se": 0.11666666666666667,
+            "blocks": 10,
+            "games": 20
+          },
+          "wld": [
+            11,
+            9,
+            0
+          ]
+        },
+        "stonecircle": {
+          "points": {
+            "value": 0.6,
+            "se": 0.11902380714238082,
+            "blocks": 10,
+            "games": 20
+          },
+          "win": {
+            "value": 0.55,
+            "se": 0.11666666666666667,
+            "blocks": 10,
+            "games": 20
+          },
+          "wld": [
+            11,
+            7,
+            2
+          ]
+        },
+        "total": {
+          "points": {
+            "value": 0.5291666666666667,
+            "se": 0.04666749337892067,
+            "blocks": 60,
+            "games": 120
+          },
+          "win": {
+            "value": 0.5166666666666667,
+            "se": 0.04664682117707407,
+            "blocks": 60,
+            "games": 120
+          },
+          "wld": [
+            62,
+            55,
+            3
+          ]
+        }
+      },
+      "grok": {
+        "twinlakes": {
+          "points": {
+            "value": 0.55,
+            "se": 0.05,
+            "blocks": 10,
+            "games": 20
+          },
+          "win": {
+            "value": 0.55,
+            "se": 0.05,
+            "blocks": 10,
+            "games": 20
+          },
+          "wld": [
+            11,
+            9,
+            0
+          ]
+        },
+        "yinyang": {
+          "points": {
+            "value": 0.5,
+            "se": 0.07453559924999298,
+            "blocks": 10,
+            "games": 20
+          },
+          "win": {
+            "value": 0.5,
+            "se": 0.07453559924999298,
+            "blocks": 10,
+            "games": 20
+          },
+          "wld": [
+            10,
+            10,
+            0
+          ]
+        },
+        "icefloes": {
+          "points": {
+            "value": 0.5,
+            "se": 0.10540925533894598,
+            "blocks": 10,
+            "games": 20
+          },
+          "win": {
+            "value": 0.5,
+            "se": 0.10540925533894598,
+            "blocks": 10,
+            "games": 20
+          },
+          "wld": [
+            10,
+            10,
+            0
+          ]
+        },
+        "ruins": {
+          "points": {
+            "value": 0.55,
+            "se": 0.08975274678557507,
+            "blocks": 10,
+            "games": 20
+          },
+          "win": {
+            "value": 0.55,
+            "se": 0.08975274678557507,
+            "blocks": 10,
+            "games": 20
+          },
+          "wld": [
+            11,
+            9,
+            0
+          ]
+        },
+        "skybridge": {
+          "points": {
+            "value": 0.45,
+            "se": 0.05,
+            "blocks": 10,
+            "games": 20
+          },
+          "win": {
+            "value": 0.45,
+            "se": 0.05,
+            "blocks": 10,
+            "games": 20
+          },
+          "wld": [
+            9,
+            11,
+            0
+          ]
+        },
+        "stonecircle": {
+          "points": {
+            "value": 0.375,
+            "se": 0.1356568383008309,
+            "blocks": 10,
+            "games": 20
+          },
+          "win": {
+            "value": 0.35,
+            "se": 0.1301708279317776,
+            "blocks": 10,
+            "games": 20
+          },
+          "wld": [
+            7,
+            12,
+            1
+          ]
+        },
+        "total": {
+          "points": {
+            "value": 0.4875,
+            "se": 0.03656235161413384,
+            "blocks": 60,
+            "games": 120
+          },
+          "win": {
+            "value": 0.48333333333333334,
+            "se": 0.03600411499115478,
+            "blocks": 60,
+            "games": 120
+          },
+          "wld": [
+            58,
+            61,
+            1
+          ]
+        }
+      },
+      "kimi": {
+        "twinlakes": {
+          "points": {
+            "value": 0.325,
+            "se": 0.09166666666666667,
+            "blocks": 10,
+            "games": 20
+          },
+          "win": {
+            "value": 0.3,
+            "se": 0.0816496580927726,
+            "blocks": 10,
+            "games": 20
+          },
+          "wld": [
+            6,
+            13,
+            1
+          ]
+        },
+        "yinyang": {
+          "points": {
+            "value": 0.5,
+            "se": 0.10540925533894598,
+            "blocks": 10,
+            "games": 20
+          },
+          "win": {
+            "value": 0.5,
+            "se": 0.10540925533894598,
+            "blocks": 10,
+            "games": 20
+          },
+          "wld": [
+            10,
+            10,
+            0
+          ]
+        },
+        "icefloes": {
+          "points": {
+            "value": 0.225,
+            "se": 0.10833333333333332,
+            "blocks": 10,
+            "games": 20
+          },
+          "win": {
+            "value": 0.2,
+            "se": 0.11055415967851333,
+            "blocks": 10,
+            "games": 20
+          },
+          "wld": [
+            4,
+            15,
+            1
+          ]
+        },
+        "ruins": {
+          "points": {
+            "value": 0.5,
+            "se": 0.10540925533894598,
+            "blocks": 10,
+            "games": 20
+          },
+          "win": {
+            "value": 0.5,
+            "se": 0.10540925533894598,
+            "blocks": 10,
+            "games": 20
+          },
+          "wld": [
+            10,
+            10,
+            0
+          ]
+        },
+        "skybridge": {
+          "points": {
+            "value": 0.525,
+            "se": 0.08700255424092125,
+            "blocks": 10,
+            "games": 20
+          },
+          "win": {
+            "value": 0.45,
+            "se": 0.08975274678557507,
+            "blocks": 10,
+            "games": 20
+          },
+          "wld": [
+            9,
+            8,
+            3
+          ]
+        },
+        "stonecircle": {
+          "points": {
+            "value": 0.4,
+            "se": 0.12472191289246472,
+            "blocks": 10,
+            "games": 20
+          },
+          "win": {
+            "value": 0.4,
+            "se": 0.12472191289246472,
+            "blocks": 10,
+            "games": 20
+          },
+          "wld": [
+            8,
+            12,
+            0
+          ]
+        },
+        "total": {
+          "points": {
+            "value": 0.4125,
+            "se": 0.04265042370217802,
+            "blocks": 60,
+            "games": 120
+          },
+          "win": {
+            "value": 0.39166666666666666,
+            "se": 0.04240093756242708,
+            "blocks": 60,
+            "games": 120
+          },
+          "wld": [
+            47,
+            68,
+            5
+          ]
+        }
+      },
+      "fable": {
+        "twinlakes": {
+          "points": {
+            "value": 0.55,
+            "se": 0.08975274678557507,
+            "blocks": 10,
+            "games": 20
+          },
+          "win": {
+            "value": 0.55,
+            "se": 0.08975274678557507,
+            "blocks": 10,
+            "games": 20
+          },
+          "wld": [
+            11,
+            9,
+            0
+          ]
+        },
+        "yinyang": {
+          "points": {
+            "value": 0.3,
+            "se": 0.13333333333333333,
+            "blocks": 10,
+            "games": 20
+          },
+          "win": {
+            "value": 0.3,
+            "se": 0.13333333333333333,
+            "blocks": 10,
+            "games": 20
+          },
+          "wld": [
+            6,
+            14,
+            0
+          ]
+        },
+        "icefloes": {
+          "points": {
+            "value": 0.4,
+            "se": 0.1,
+            "blocks": 10,
+            "games": 20
+          },
+          "win": {
+            "value": 0.4,
+            "se": 0.1,
+            "blocks": 10,
+            "games": 20
+          },
+          "wld": [
+            8,
+            12,
+            0
+          ]
+        },
+        "ruins": {
+          "points": {
+            "value": 0.55,
+            "se": 0.11666666666666667,
+            "blocks": 10,
+            "games": 20
+          },
+          "win": {
+            "value": 0.55,
+            "se": 0.11666666666666667,
+            "blocks": 10,
+            "games": 20
+          },
+          "wld": [
+            11,
+            9,
+            0
+          ]
+        },
+        "skybridge": {
+          "points": {
+            "value": 0.4,
+            "se": 0.06666666666666667,
+            "blocks": 10,
+            "games": 20
+          },
+          "win": {
+            "value": 0.4,
+            "se": 0.06666666666666667,
+            "blocks": 10,
+            "games": 20
+          },
+          "wld": [
+            8,
+            12,
+            0
+          ]
+        },
+        "stonecircle": {
+          "points": {
+            "value": 0.55,
+            "se": 0.11666666666666667,
+            "blocks": 10,
+            "games": 20
+          },
+          "win": {
+            "value": 0.55,
+            "se": 0.11666666666666667,
+            "blocks": 10,
+            "games": 20
+          },
+          "wld": [
+            11,
+            9,
+            0
+          ]
+        },
+        "total": {
+          "points": {
+            "value": 0.4583333333333333,
+            "se": 0.04330127018922193,
+            "blocks": 60,
+            "games": 120
+          },
+          "win": {
+            "value": 0.4583333333333333,
+            "se": 0.04330127018922193,
+            "blocks": 60,
+            "games": 120
+          },
+          "wld": [
+            55,
+            65,
+            0
+          ]
+        }
+      },
+      "opus": {
+        "twinlakes": {
+          "points": {
+            "value": 0.525,
+            "se": 0.10833333333333332,
+            "blocks": 10,
+            "games": 20
+          },
+          "win": {
+            "value": 0.5,
+            "se": 0.10540925533894598,
+            "blocks": 10,
+            "games": 20
+          },
+          "wld": [
+            10,
+            9,
+            1
+          ]
+        },
+        "yinyang": {
+          "points": {
+            "value": 0.3,
+            "se": 0.13333333333333333,
+            "blocks": 10,
+            "games": 20
+          },
+          "win": {
+            "value": 0.3,
+            "se": 0.13333333333333333,
+            "blocks": 10,
+            "games": 20
+          },
+          "wld": [
+            6,
+            14,
+            0
+          ]
+        },
+        "icefloes": {
+          "points": {
+            "value": 0.55,
+            "se": 0.11666666666666667,
+            "blocks": 10,
+            "games": 20
+          },
+          "win": {
+            "value": 0.55,
+            "se": 0.11666666666666667,
+            "blocks": 10,
+            "games": 20
+          },
+          "wld": [
+            11,
+            9,
+            0
+          ]
+        },
+        "ruins": {
+          "points": {
+            "value": 0.45,
+            "se": 0.11666666666666667,
+            "blocks": 10,
+            "games": 20
+          },
+          "win": {
+            "value": 0.45,
+            "se": 0.11666666666666667,
+            "blocks": 10,
+            "games": 20
+          },
+          "wld": [
+            9,
+            11,
+            0
+          ]
+        },
+        "skybridge": {
+          "points": {
+            "value": 0.5,
+            "se": 0.12909944487358055,
+            "blocks": 10,
+            "games": 20
+          },
+          "win": {
+            "value": 0.5,
+            "se": 0.12909944487358055,
+            "blocks": 10,
+            "games": 20
+          },
+          "wld": [
+            10,
+            10,
+            0
+          ]
+        },
+        "stonecircle": {
+          "points": {
+            "value": 0.5,
+            "se": 0.10540925533894598,
+            "blocks": 10,
+            "games": 20
+          },
+          "win": {
+            "value": 0.5,
+            "se": 0.10540925533894598,
+            "blocks": 10,
+            "games": 20
+          },
+          "wld": [
+            10,
+            10,
+            0
+          ]
+        },
+        "total": {
+          "points": {
+            "value": 0.4708333333333333,
+            "se": 0.04845212095142335,
+            "blocks": 60,
+            "games": 120
+          },
+          "win": {
+            "value": 0.4666666666666667,
+            "se": 0.048272631102729904,
+            "blocks": 60,
+            "games": 120
+          },
+          "wld": [
+            56,
+            63,
+            1
+          ]
+        }
+      },
+      "carbon": {
+        "twinlakes": {
+          "points": {
+            "value": 0.55,
+            "se": 0.11666666666666667,
+            "blocks": 10,
+            "games": 20
+          },
+          "win": {
+            "value": 0.55,
+            "se": 0.11666666666666667,
+            "blocks": 10,
+            "games": 20
+          },
+          "wld": [
+            11,
+            9,
+            0
+          ]
+        },
+        "yinyang": {
+          "points": {
+            "value": 0.625,
+            "se": 0.1003466214899358,
+            "blocks": 10,
+            "games": 20
+          },
+          "win": {
+            "value": 0.6,
+            "se": 0.1,
+            "blocks": 10,
+            "games": 20
+          },
+          "wld": [
+            12,
+            7,
+            1
+          ]
+        },
+        "icefloes": {
+          "points": {
+            "value": 0.35,
+            "se": 0.10671873729054748,
+            "blocks": 10,
+            "games": 20
+          },
+          "win": {
+            "value": 0.35,
+            "se": 0.10671873729054748,
+            "blocks": 10,
+            "games": 20
+          },
+          "wld": [
+            7,
+            13,
+            0
+          ]
+        },
+        "ruins": {
+          "points": {
+            "value": 0.5,
+            "se": 0.12909944487358055,
+            "blocks": 10,
+            "games": 20
+          },
+          "win": {
+            "value": 0.5,
+            "se": 0.12909944487358055,
+            "blocks": 10,
+            "games": 20
+          },
+          "wld": [
+            10,
+            10,
+            0
+          ]
+        },
+        "skybridge": {
+          "points": {
+            "value": 0.55,
+            "se": 0.08975274678557507,
+            "blocks": 10,
+            "games": 20
+          },
+          "win": {
+            "value": 0.55,
+            "se": 0.08975274678557507,
+            "blocks": 10,
+            "games": 20
+          },
+          "wld": [
+            11,
+            9,
+            0
+          ]
+        },
+        "stonecircle": {
+          "points": {
+            "value": 0.55,
+            "se": 0.11666666666666667,
+            "blocks": 10,
+            "games": 20
+          },
+          "win": {
+            "value": 0.55,
+            "se": 0.11666666666666667,
+            "blocks": 10,
+            "games": 20
+          },
+          "wld": [
+            11,
+            9,
+            0
+          ]
+        },
+        "total": {
+          "points": {
+            "value": 0.5208333333333334,
+            "se": 0.04515491168613572,
+            "blocks": 60,
+            "games": 120
+          },
+          "win": {
+            "value": 0.5166666666666667,
+            "se": 0.045133546692422,
+            "blocks": 60,
+            "games": 120
+          },
+          "wld": [
+            62,
+            57,
+            1
+          ]
+        }
+      },
+      "glm": {
+        "twinlakes": {
+          "points": {
+            "value": 0.75,
+            "se": 0.11180339887498948,
+            "blocks": 10,
+            "games": 20
+          },
+          "win": {
+            "value": 0.75,
+            "se": 0.11180339887498948,
+            "blocks": 10,
+            "games": 20
+          },
+          "wld": [
+            15,
+            5,
+            0
+          ]
+        },
+        "yinyang": {
+          "points": {
+            "value": 0.8,
+            "se": 0.0816496580927726,
+            "blocks": 10,
+            "games": 20
+          },
+          "win": {
+            "value": 0.8,
+            "se": 0.0816496580927726,
+            "blocks": 10,
+            "games": 20
+          },
+          "wld": [
+            16,
+            4,
+            0
+          ]
+        },
+        "icefloes": {
+          "points": {
+            "value": 0.55,
+            "se": 0.1224744871391589,
+            "blocks": 10,
+            "games": 20
+          },
+          "win": {
+            "value": 0.5,
+            "se": 0.12909944487358055,
+            "blocks": 10,
+            "games": 20
+          },
+          "wld": [
+            10,
+            8,
+            2
+          ]
+        },
+        "ruins": {
+          "points": {
+            "value": 0.25,
+            "se": 0.07453559924999298,
+            "blocks": 10,
+            "games": 20
+          },
+          "win": {
+            "value": 0.2,
+            "se": 0.0816496580927726,
+            "blocks": 10,
+            "games": 20
+          },
+          "wld": [
+            4,
+            14,
+            2
+          ]
+        },
+        "skybridge": {
+          "points": {
+            "value": 0.55,
+            "se": 0.11055415967851333,
+            "blocks": 10,
+            "games": 20
+          },
+          "win": {
+            "value": 0.5,
+            "se": 0.10540925533894598,
+            "blocks": 10,
+            "games": 20
+          },
+          "wld": [
+            10,
+            8,
+            2
+          ]
+        },
+        "stonecircle": {
+          "points": {
+            "value": 0.675,
+            "se": 0.10573814617041268,
+            "blocks": 10,
+            "games": 20
+          },
+          "win": {
+            "value": 0.65,
+            "se": 0.10671873729054748,
+            "blocks": 10,
+            "games": 20
+          },
+          "wld": [
+            13,
+            6,
+            1
+          ]
+        },
+        "total": {
+          "points": {
+            "value": 0.5958333333333333,
+            "se": 0.04187448175467037,
+            "blocks": 60,
+            "games": 120
+          },
+          "win": {
+            "value": 0.5666666666666667,
+            "se": 0.04249182927993987,
+            "blocks": 60,
+            "games": 120
+          },
+          "wld": [
+            68,
+            45,
+            7
+          ]
+        }
+      },
+      "deepseek": {
+        "twinlakes": {
+          "points": {
+            "value": 0.6,
+            "se": 0.1,
+            "blocks": 10,
+            "games": 20
+          },
+          "win": {
+            "value": 0.6,
+            "se": 0.1,
+            "blocks": 10,
+            "games": 20
+          },
+          "wld": [
+            12,
+            8,
+            0
+          ]
+        },
+        "yinyang": {
+          "points": {
+            "value": 0.7,
+            "se": 0.11055415967851333,
+            "blocks": 10,
+            "games": 20
+          },
+          "win": {
+            "value": 0.7,
+            "se": 0.11055415967851333,
+            "blocks": 10,
+            "games": 20
+          },
+          "wld": [
+            14,
+            6,
+            0
+          ]
+        },
+        "icefloes": {
+          "points": {
+            "value": 0.4,
+            "se": 0.1452966314513558,
+            "blocks": 10,
+            "games": 20
+          },
+          "win": {
+            "value": 0.4,
+            "se": 0.1452966314513558,
+            "blocks": 10,
+            "games": 20
+          },
+          "wld": [
+            8,
+            12,
+            0
+          ]
+        },
+        "ruins": {
+          "points": {
+            "value": 0.35,
+            "se": 0.10671873729054748,
+            "blocks": 10,
+            "games": 20
+          },
+          "win": {
+            "value": 0.35,
+            "se": 0.10671873729054748,
+            "blocks": 10,
+            "games": 20
+          },
+          "wld": [
+            7,
+            13,
+            0
+          ]
+        },
+        "skybridge": {
+          "points": {
+            "value": 0.475,
+            "se": 0.13149778198382917,
+            "blocks": 10,
+            "games": 20
+          },
+          "win": {
+            "value": 0.45,
+            "se": 0.13844373104863458,
+            "blocks": 10,
+            "games": 20
+          },
+          "wld": [
+            9,
+            10,
+            1
+          ]
+        },
+        "stonecircle": {
+          "points": {
+            "value": 0.65,
+            "se": 0.10671873729054748,
+            "blocks": 10,
+            "games": 20
+          },
+          "win": {
+            "value": 0.65,
+            "se": 0.10671873729054748,
+            "blocks": 10,
+            "games": 20
+          },
+          "wld": [
+            13,
+            7,
+            0
+          ]
+        },
+        "total": {
+          "points": {
+            "value": 0.5291666666666667,
+            "se": 0.04813256514212071,
+            "blocks": 60,
+            "games": 120
+          },
+          "win": {
+            "value": 0.525,
+            "se": 0.04867059852204231,
+            "blocks": 60,
+            "games": 120
+          },
+          "wld": [
+            63,
+            56,
+            1
+          ]
+        }
+      }
+    },
+    "faults": {
+      "events": {},
+      "bad_seats": {}
+    }
+  },
+  "pool": {
+    "people": {
+      "astra": {
+        "duel": {
+          "official": 345.17719750393536,
+          "sample_old": 278.86682434473187,
+          "sample_final": 306.36082647833973,
+          "calibrated": 372.67119963754317,
+          "delta": 27.494002133607864,
+          "bootstrap_se": 37.86365712882461,
+          "old_points": {
+            "value": 0.8472222222222222,
+            "se": 0.023054864374716107,
+            "blocks": 144,
+            "games": 288
+          },
+          "final_points": {
+            "value": 0.8680555555555556,
+            "se": 0.021665882789610492,
+            "blocks": 144,
+            "games": 288
+          },
+          "points_delta": {
+            "value": 0.020833333333333332,
+            "se": 0.030712807642322263,
+            "blocks": 144,
+            "games": 288
+          },
+          "old_win": {
+            "value": 0.8472222222222222,
+            "se": 0.023054864374716107,
+            "blocks": 144,
+            "games": 288
+          },
+          "final_win": {
+            "value": 0.8645833333333334,
+            "se": 0.021972193212266403,
+            "blocks": 144,
+            "games": 288
+          },
+          "win_delta": {
+            "value": 0.017361111111111112,
+            "se": 0.031048059274326526,
+            "blocks": 144,
+            "games": 288
+          },
+          "seen": [
+            "carbon",
+            "deepseek",
+            "doubao",
+            "fable",
+            "glm",
+            "grok",
+            "hydrogen",
+            "kimi",
+            "mimo",
+            "opus",
+            "qwen",
+            "sol"
+          ],
+          "blocks": 144
+        },
+        "ffa": {
+          "official": 267.0600228409801,
+          "sample_old": 259.6569642191753,
+          "sample_final": 211.12158556934446,
+          "calibrated": 218.52464419114926,
+          "delta": -48.53537864983082,
+          "bootstrap_se": 16.433752465172873,
+          "old_points": {
+            "value": 0.825925925925926,
+            "se": 0.01592350326103689,
+            "blocks": 30,
+            "games": 360
+          },
+          "final_points": {
+            "value": 0.7824074074074074,
+            "se": 0.018457654610416274,
+            "blocks": 30,
+            "games": 360
+          },
+          "points_delta": {
+            "value": -0.04351851851851852,
+            "se": 0.020538030567424845,
+            "blocks": 30,
+            "games": 360
+          },
+          "old_win": {
+            "value": 0.8018518518518518,
+            "se": 0.01676923173729151,
+            "blocks": 30,
+            "games": 360
+          },
+          "final_win": {
+            "value": 0.7583333333333333,
+            "se": 0.020030840419244387,
+            "blocks": 30,
+            "games": 360
+          },
+          "win_delta": {
+            "value": -0.04351851851851852,
+            "se": 0.023138887036295925,
+            "blocks": 30,
+            "games": 360
+          },
+          "seen": [
+            "carbon",
+            "deepseek",
+            "doubao",
+            "fable",
+            "glm",
+            "grok",
+            "hydrogen",
+            "kimi",
+            "mimo",
+            "opus",
+            "qwen",
+            "sol"
+          ],
+          "blocks": 30
+        },
+        "combined": {
+          "official": 306.1186101724577,
+          "calibrated": 295.5979219143462,
+          "delta": -10.520688258111477
+        },
+        "combined_bootstrap_se": 20.63810039257348
+      },
+      "sol": {
+        "duel": {
+          "official": 81.48570163235419,
+          "sample_old": 65.83635660354048,
+          "sample_final": 51.887450157664716,
+          "calibrated": 67.53679518647843,
+          "delta": -13.948906445875764,
+          "bootstrap_se": 16.381984025302962,
+          "old_points": {
+            "value": 0.5920138888888888,
+            "se": 0.03401876482726929,
+            "blocks": 144,
+            "games": 288
+          },
+          "final_points": {
+            "value": 0.5746527777777778,
+            "se": 0.03458419122289257,
+            "blocks": 144,
+            "games": 288
+          },
+          "points_delta": {
+            "value": -0.017361111111111112,
+            "se": 0.025837058520566326,
+            "blocks": 144,
+            "games": 288
+          },
+          "old_win": {
+            "value": 0.5868055555555556,
+            "se": 0.03422806578113277,
+            "blocks": 144,
+            "games": 288
+          },
+          "final_win": {
+            "value": 0.5729166666666666,
+            "se": 0.03477502024458465,
+            "blocks": 144,
+            "games": 288
+          },
+          "win_delta": {
+            "value": -0.013888888888888888,
+            "se": 0.02624467970009134,
+            "blocks": 144,
+            "games": 288
+          },
+          "seen": [
+            "astra",
+            "carbon",
+            "deepseek",
+            "doubao",
+            "fable",
+            "glm",
+            "grok",
+            "hydrogen",
+            "kimi",
+            "mimo",
+            "opus",
+            "qwen"
+          ],
+          "blocks": 144
+        },
+        "ffa": {
+          "official": -15.33392780856707,
+          "sample_old": -34.797741449438035,
+          "sample_final": -24.00602155830711,
+          "calibrated": -4.542207917436144,
+          "delta": 10.791719891130924,
+          "bootstrap_se": 12.109318805857189,
+          "old_points": {
+            "value": 0.4708333333333333,
+            "se": 0.027238200777926862,
+            "blocks": 30,
+            "games": 360
+          },
+          "final_points": {
+            "value": 0.48518518518518516,
+            "se": 0.026781917230381015,
+            "blocks": 30,
+            "games": 360
+          },
+          "points_delta": {
+            "value": 0.014351851851851853,
+            "se": 0.016154024372562872,
+            "blocks": 30,
+            "games": 360
+          },
+          "old_win": {
+            "value": 0.4472222222222222,
+            "se": 0.02731873794802209,
+            "blocks": 30,
+            "games": 360
+          },
+          "final_win": {
+            "value": 0.4611111111111111,
+            "se": 0.026530645892397044,
+            "blocks": 30,
+            "games": 360
+          },
+          "win_delta": {
+            "value": 0.01388888888888889,
+            "se": 0.015916771701547303,
+            "blocks": 30,
+            "games": 360
+          },
+          "seen": [
+            "astra",
+            "carbon",
+            "deepseek",
+            "doubao",
+            "fable",
+            "glm",
+            "grok",
+            "hydrogen",
+            "kimi",
+            "mimo",
+            "opus",
+            "qwen"
+          ],
+          "blocks": 30
+        },
+        "combined": {
+          "official": 33.07588691189356,
+          "calibrated": 31.497293634521142,
+          "delta": -1.5785932773724198
+        },
+        "combined_bootstrap_se": 10.185835784892275
+      },
+      "hydrogen": {
+        "duel": {
+          "official": 51.14063920337204,
+          "sample_old": -13.748502708040178,
+          "sample_final": 35.54107702802867,
+          "calibrated": 100.43021893944089,
+          "delta": 49.289579736068845,
+          "bootstrap_se": 19.013455361042652,
+          "old_points": {
+            "value": 0.4878472222222222,
+            "se": 0.031829618637120694,
+            "blocks": 144,
+            "games": 288
+          },
+          "final_points": {
+            "value": 0.5503472222222222,
+            "se": 0.03440944572905971,
+            "blocks": 144,
+            "games": 288
+          },
+          "points_delta": {
+            "value": 0.0625,
+            "se": 0.041404798072306556,
+            "blocks": 144,
+            "games": 288
+          },
+          "old_win": {
+            "value": 0.4791666666666667,
+            "se": 0.03197134448150267,
+            "blocks": 144,
+            "games": 288
+          },
+          "final_win": {
+            "value": 0.5416666666666666,
+            "se": 0.03458608577991954,
+            "blocks": 144,
+            "games": 288
+          },
+          "win_delta": {
+            "value": 0.0625,
+            "se": 0.04181736034721725,
+            "blocks": 144,
+            "games": 288
+          },
+          "seen": [
+            "astra",
+            "carbon",
+            "deepseek",
+            "doubao",
+            "fable",
+            "glm",
+            "grok",
+            "kimi",
+            "mimo",
+            "opus",
+            "qwen",
+            "sol"
+          ],
+          "blocks": 144
+        },
+        "ffa": {
+          "official": 8.552144857387894,
+          "sample_old": 4.704405902884901,
+          "sample_final": -36.96125966962427,
+          "calibrated": -33.113520715121275,
+          "delta": -41.66566557250917,
+          "bootstrap_se": 20.408310665940693,
+          "old_points": {
+            "value": 0.5097222222222222,
+            "se": 0.03012462682406933,
+            "blocks": 30,
+            "games": 360
+          },
+          "final_points": {
+            "value": 0.4546296296296296,
+            "se": 0.031158129703806544,
+            "blocks": 30,
+            "games": 360
+          },
+          "points_delta": {
+            "value": -0.05509259259259259,
+            "se": 0.03774922895496147,
+            "blocks": 30,
+            "games": 360
+          },
+          "old_win": {
+            "value": 0.48055555555555557,
+            "se": 0.029946225238511537,
+            "blocks": 30,
+            "games": 360
+          },
+          "final_win": {
+            "value": 0.42962962962962964,
+            "se": 0.029737938616206896,
+            "blocks": 30,
+            "games": 360
+          },
+          "win_delta": {
+            "value": -0.05092592592592592,
+            "se": 0.036128912990975315,
+            "blocks": 30,
+            "games": 360
+          },
+          "seen": [
+            "astra",
+            "carbon",
+            "deepseek",
+            "doubao",
+            "fable",
+            "glm",
+            "grok",
+            "kimi",
+            "mimo",
+            "opus",
+            "qwen",
+            "sol"
+          ],
+          "blocks": 30
+        },
+        "combined": {
+          "official": 29.846392030379967,
+          "calibrated": 33.65834911215981,
+          "delta": 3.8119570817798376
+        },
+        "combined_bootstrap_se": 13.94642094771908
+      },
+      "grok": {
+        "duel": {
+          "official": 4.549034187487069,
+          "sample_old": 23.650697781704366,
+          "sample_final": 16.795971081592143,
+          "calibrated": -2.3056925126251535,
+          "delta": -6.854726700112224,
+          "bootstrap_se": 19.894772724131986,
+          "old_points": {
+            "value": 0.5295138888888888,
+            "se": 0.03187076345605177,
+            "blocks": 144,
+            "games": 288
+          },
+          "final_points": {
+            "value": 0.5208333333333334,
+            "se": 0.031157606302289323,
+            "blocks": 144,
+            "games": 288
+          },
+          "points_delta": {
+            "value": -0.008680555555555556,
+            "se": 0.030076862837405374,
+            "blocks": 144,
+            "games": 288
+          },
+          "old_win": {
+            "value": 0.5277777777777778,
+            "se": 0.032036859600376145,
+            "blocks": 144,
+            "games": 288
+          },
+          "final_win": {
+            "value": 0.5208333333333334,
+            "se": 0.031157606302289323,
+            "blocks": 144,
+            "games": 288
+          },
+          "win_delta": {
+            "value": -0.006944444444444444,
+            "se": 0.030026714711236278,
+            "blocks": 144,
+            "games": 288
+          },
+          "seen": [
+            "astra",
+            "carbon",
+            "deepseek",
+            "doubao",
+            "fable",
+            "glm",
+            "hydrogen",
+            "kimi",
+            "mimo",
+            "opus",
+            "qwen",
+            "sol"
+          ],
+          "blocks": 144
+        },
+        "ffa": {
+          "official": -6.38372908324366,
+          "sample_old": 0.5308632971718907,
+          "sample_final": -7.821168168447912,
+          "calibrated": -14.735760548863462,
+          "delta": -8.352031465619802,
+          "bootstrap_se": 23.925953700309407,
+          "old_points": {
+            "value": 0.4949074074074074,
+            "se": 0.028473163188305468,
+            "blocks": 30,
+            "games": 360
+          },
+          "final_points": {
+            "value": 0.4837962962962963,
+            "se": 0.024593749972765602,
+            "blocks": 30,
+            "games": 360
+          },
+          "points_delta": {
+            "value": -0.01111111111111111,
+            "se": 0.021291263495494293,
+            "blocks": 30,
+            "games": 360
+          },
+          "old_win": {
+            "value": 0.4685185185185185,
+            "se": 0.028785725105018173,
+            "blocks": 30,
+            "games": 360
+          },
+          "final_win": {
+            "value": 0.4546296296296296,
+            "se": 0.024462675580783157,
+            "blocks": 30,
+            "games": 360
+          },
+          "win_delta": {
+            "value": -0.013888888888888888,
+            "se": 0.02038088953986587,
+            "blocks": 30,
+            "games": 360
+          },
+          "seen": [
+            "astra",
+            "carbon",
+            "deepseek",
+            "doubao",
+            "fable",
+            "glm",
+            "hydrogen",
+            "kimi",
+            "mimo",
+            "opus",
+            "qwen",
+            "sol"
+          ],
+          "blocks": 30
+        },
+        "combined": {
+          "official": -0.9173474478782953,
+          "calibrated": -8.520726530744309,
+          "delta": -7.603379082866013
+        },
+        "combined_bootstrap_se": 15.558383931294209
+      },
+      "kimi": {
+        "duel": {
+          "official": -84.12415694002054,
+          "sample_old": -58.51784616243094,
+          "sample_final": -126.93546724040061,
+          "calibrated": -152.54177801799023,
+          "delta": -68.41762107796967,
+          "bootstrap_se": 32.995360200687685,
+          "old_points": {
+            "value": 0.4149305555555556,
+            "se": 0.02931786994859275,
+            "blocks": 144,
+            "games": 288
+          },
+          "final_points": {
+            "value": 0.3333333333333333,
+            "se": 0.02951610889633036,
+            "blocks": 144,
+            "games": 288
+          },
+          "points_delta": {
+            "value": -0.08159722222222222,
+            "se": 0.03742325020802685,
+            "blocks": 144,
+            "games": 288
+          },
+          "old_win": {
+            "value": 0.4131944444444444,
+            "se": 0.029203665858425806,
+            "blocks": 144,
+            "games": 288
+          },
+          "final_win": {
+            "value": 0.3333333333333333,
+            "se": 0.02951610889633036,
+            "blocks": 144,
+            "games": 288
+          },
+          "win_delta": {
+            "value": -0.0798611111111111,
+            "se": 0.037375946626206615,
+            "blocks": 144,
+            "games": 288
+          },
+          "seen": [
+            "astra",
+            "carbon",
+            "deepseek",
+            "doubao",
+            "fable",
+            "glm",
+            "grok",
+            "hydrogen",
+            "mimo",
+            "opus",
+            "qwen",
+            "sol"
+          ],
+          "blocks": 144
+        },
+        "ffa": {
+          "official": -82.96382270191705,
+          "sample_old": -96.32261015940458,
+          "sample_final": -143.8070290023461,
+          "calibrated": -130.44824154485858,
+          "delta": -47.48441884294152,
+          "bootstrap_se": 16.437254137123247,
+          "old_points": {
+            "value": 0.3731481481481481,
+            "se": 0.02371979343972129,
+            "blocks": 30,
+            "games": 360
+          },
+          "final_points": {
+            "value": 0.3148148148148148,
+            "se": 0.02643149581831145,
+            "blocks": 30,
+            "games": 360
+          },
+          "points_delta": {
+            "value": -0.058333333333333334,
+            "se": 0.03390709893259362,
+            "blocks": 30,
+            "games": 360
+          },
+          "old_win": {
+            "value": 0.35,
+            "se": 0.022595248781319313,
+            "blocks": 30,
+            "games": 360
+          },
+          "final_win": {
+            "value": 0.29074074074074074,
+            "se": 0.025289815340273452,
+            "blocks": 30,
+            "games": 360
+          },
+          "win_delta": {
+            "value": -0.05925925925925926,
+            "se": 0.032782224013149036,
+            "blocks": 30,
+            "games": 360
+          },
+          "seen": [
+            "astra",
+            "carbon",
+            "deepseek",
+            "doubao",
+            "fable",
+            "glm",
+            "grok",
+            "hydrogen",
+            "mimo",
+            "opus",
+            "qwen",
+            "sol"
+          ],
+          "blocks": 30
+        },
+        "combined": {
+          "official": -83.54398982096879,
+          "calibrated": -141.49500978142441,
+          "delta": -57.951019960455596
+        },
+        "combined_bootstrap_se": 18.43147524169932
+      },
+      "fable": {
+        "duel": {
+          "official": 139.99574142863588,
+          "sample_old": 162.04723727423698,
+          "sample_final": 111.44370364490896,
+          "calibrated": 89.39220779930787,
+          "delta": -50.60353362932801,
+          "bootstrap_se": 27.180731501849795,
+          "old_points": {
+            "value": 0.7118055555555556,
+            "se": 0.028774210033352406,
+            "blocks": 144,
+            "games": 288
+          },
+          "final_points": {
+            "value": 0.6545138888888888,
+            "se": 0.029496122814208197,
+            "blocks": 144,
+            "games": 288
+          },
+          "points_delta": {
+            "value": -0.057291666666666664,
+            "se": 0.034739201766283596,
+            "blocks": 144,
+            "games": 288
+          },
+          "old_win": {
+            "value": 0.7083333333333334,
+            "se": 0.028815169783671858,
+            "blocks": 144,
+            "games": 288
+          },
+          "final_win": {
+            "value": 0.6527777777777778,
+            "se": 0.02948056871619645,
+            "blocks": 144,
+            "games": 288
+          },
+          "win_delta": {
+            "value": -0.05555555555555555,
+            "se": 0.0345557604029531,
+            "blocks": 144,
+            "games": 288
+          },
+          "seen": [
+            "astra",
+            "carbon",
+            "deepseek",
+            "doubao",
+            "glm",
+            "grok",
+            "hydrogen",
+            "kimi",
+            "mimo",
+            "opus",
+            "qwen",
+            "sol"
+          ],
+          "blocks": 144
+        },
+        "ffa": {
+          "official": 123.97470938982846,
+          "sample_old": 125.06015284452587,
+          "sample_final": 130.65877452027053,
+          "calibrated": 129.57333106557311,
+          "delta": 5.598621675744653,
+          "bootstrap_se": 13.90080396150142,
+          "old_points": {
+            "value": 0.6699074074074074,
+            "se": 0.022050357785388625,
+            "blocks": 30,
+            "games": 360
+          },
+          "final_points": {
+            "value": 0.6763888888888888,
+            "se": 0.02247159462872518,
+            "blocks": 30,
+            "games": 360
+          },
+          "points_delta": {
+            "value": 0.0064814814814814796,
+            "se": 0.025183653275850273,
+            "blocks": 30,
+            "games": 360
+          },
+          "old_win": {
+            "value": 0.6314814814814814,
+            "se": 0.022251138593885028,
+            "blocks": 30,
+            "games": 360
+          },
+          "final_win": {
+            "value": 0.6518518518518518,
+            "se": 0.02335096335725647,
+            "blocks": 30,
+            "games": 360
+          },
+          "win_delta": {
+            "value": 0.020370370370370372,
+            "se": 0.024819305840148537,
+            "blocks": 30,
+            "games": 360
+          },
+          "seen": [
+            "astra",
+            "carbon",
+            "deepseek",
+            "doubao",
+            "glm",
+            "grok",
+            "hydrogen",
+            "kimi",
+            "mimo",
+            "opus",
+            "qwen",
+            "sol"
+          ],
+          "blocks": 30
+        },
+        "combined": {
+          "official": 131.98522540923216,
+          "calibrated": 109.48276943244049,
+          "delta": -22.50245597679168
+        },
+        "combined_bootstrap_se": 15.264538281190683
+      },
+      "opus": {
+        "duel": {
+          "official": 82.33122674378093,
+          "sample_old": 67.15427327435464,
+          "sample_final": 113.12421609181911,
+          "calibrated": 128.3011695612454,
+          "delta": 45.96994281746447,
+          "bootstrap_se": 18.636187191052333,
+          "old_points": {
+            "value": 0.59375,
+            "se": 0.03045141729186343,
+            "blocks": 144,
+            "games": 288
+          },
+          "final_points": {
+            "value": 0.6493055555555556,
+            "se": 0.029790107697687637,
+            "blocks": 144,
+            "games": 288
+          },
+          "points_delta": {
+            "value": 0.05555555555555555,
+            "se": 0.03731278189800823,
+            "blocks": 144,
+            "games": 288
+          },
+          "old_win": {
+            "value": 0.59375,
+            "se": 0.03045141729186343,
+            "blocks": 144,
+            "games": 288
+          },
+          "final_win": {
+            "value": 0.6493055555555556,
+            "se": 0.029790107697687637,
+            "blocks": 144,
+            "games": 288
+          },
+          "win_delta": {
+            "value": 0.05555555555555555,
+            "se": 0.03731278189800823,
+            "blocks": 144,
+            "games": 288
+          },
+          "seen": [
+            "astra",
+            "carbon",
+            "deepseek",
+            "doubao",
+            "fable",
+            "glm",
+            "grok",
+            "hydrogen",
+            "kimi",
+            "mimo",
+            "qwen",
+            "sol"
+          ],
+          "blocks": 144
+        },
+        "ffa": {
+          "official": 70.26070064057869,
+          "sample_old": 102.47342067304999,
+          "sample_final": 75.80925396177918,
+          "calibrated": 43.596533929307896,
+          "delta": -26.66416671127081,
+          "bootstrap_se": 9.793415985925272,
+          "old_points": {
+            "value": 0.6407407407407407,
+            "se": 0.018097055820085244,
+            "blocks": 30,
+            "games": 360
+          },
+          "final_points": {
+            "value": 0.6078703703703704,
+            "se": 0.019603625333092713,
+            "blocks": 30,
+            "games": 360
+          },
+          "points_delta": {
+            "value": -0.03287037037037037,
+            "se": 0.02111943468140193,
+            "blocks": 30,
+            "games": 360
+          },
+          "old_win": {
+            "value": 0.6101851851851852,
+            "se": 0.018203336343831016,
+            "blocks": 30,
+            "games": 360
+          },
+          "final_win": {
+            "value": 0.5777777777777777,
+            "se": 0.021154925294066408,
+            "blocks": 30,
+            "games": 360
+          },
+          "win_delta": {
+            "value": -0.03240740740740741,
+            "se": 0.020807597272448363,
+            "blocks": 30,
+            "games": 360
+          },
+          "seen": [
+            "astra",
+            "carbon",
+            "deepseek",
+            "doubao",
+            "fable",
+            "glm",
+            "grok",
+            "hydrogen",
+            "kimi",
+            "mimo",
+            "qwen",
+            "sol"
+          ],
+          "blocks": 30
+        },
+        "combined": {
+          "official": 76.29596369217981,
+          "calibrated": 85.94885174527664,
+          "delta": 9.65288805309683
+        },
+        "combined_bootstrap_se": 10.526377222165749
+      },
+      "carbon": {
+        "duel": {
+          "official": 36.722803645276514,
+          "sample_old": 8.15345358569175,
+          "sample_final": 63.33709659520537,
+          "calibrated": 91.90644665479013,
+          "delta": 55.18364300951362,
+          "bootstrap_se": 32.84433494048512,
+          "old_points": {
+            "value": 0.5138888888888888,
+            "se": 0.03150476532512327,
+            "blocks": 144,
+            "games": 288
+          },
+          "final_points": {
+            "value": 0.5833333333333334,
+            "se": 0.03255220913824321,
+            "blocks": 144,
+            "games": 288
+          },
+          "points_delta": {
+            "value": 0.06944444444444445,
+            "se": 0.036452941285188285,
+            "blocks": 144,
+            "games": 288
+          },
+          "old_win": {
+            "value": 0.5104166666666666,
+            "se": 0.031583698730460796,
+            "blocks": 144,
+            "games": 288
+          },
+          "final_win": {
+            "value": 0.5798611111111112,
+            "se": 0.032676769055551114,
+            "blocks": 144,
+            "games": 288
+          },
+          "win_delta": {
+            "value": 0.06944444444444445,
+            "se": 0.03703074624513824,
+            "blocks": 144,
+            "games": 288
+          },
+          "seen": [
+            "astra",
+            "deepseek",
+            "doubao",
+            "fable",
+            "glm",
+            "grok",
+            "hydrogen",
+            "kimi",
+            "mimo",
+            "opus",
+            "qwen",
+            "sol"
+          ],
+          "blocks": 144
+        },
+        "ffa": {
+          "official": 65.2480282415528,
+          "sample_old": 82.14975346345454,
+          "sample_final": 135.08745131548494,
+          "calibrated": 118.18572609358318,
+          "delta": 52.9376978520304,
+          "bootstrap_se": 24.112915752526014,
+          "old_points": {
+            "value": 0.6185185185185185,
+            "se": 0.025234666805391933,
+            "blocks": 30,
+            "games": 360
+          },
+          "final_points": {
+            "value": 0.6824074074074074,
+            "se": 0.021386684189724253,
+            "blocks": 30,
+            "games": 360
+          },
+          "points_delta": {
+            "value": 0.06388888888888888,
+            "se": 0.023917761764980536,
+            "blocks": 30,
+            "games": 360
+          },
+          "old_win": {
+            "value": 0.5907407407407407,
+            "se": 0.024497697324672135,
+            "blocks": 30,
+            "games": 360
+          },
+          "final_win": {
+            "value": 0.6509259259259259,
+            "se": 0.022906142364542557,
+            "blocks": 30,
+            "games": 360
+          },
+          "win_delta": {
+            "value": 0.06018518518518519,
+            "se": 0.02392224200511817,
+            "blocks": 30,
+            "games": 360
+          },
+          "seen": [
+            "astra",
+            "deepseek",
+            "doubao",
+            "fable",
+            "glm",
+            "grok",
+            "hydrogen",
+            "kimi",
+            "mimo",
+            "opus",
+            "qwen",
+            "sol"
+          ],
+          "blocks": 30
+        },
+        "combined": {
+          "official": 50.98541594341466,
+          "calibrated": 105.04608637418666,
+          "delta": 54.06067043077201
+        },
+        "combined_bootstrap_se": 20.372671914670327
+      },
+      "glm": {
+        "duel": {
+          "official": 16.933671655533466,
+          "sample_old": 1.883173710666597,
+          "sample_final": 108.06759784463793,
+          "calibrated": 123.11809578950479,
+          "delta": 106.18442413397133,
+          "bootstrap_se": 28.047906314202766,
+          "old_points": {
+            "value": 0.5034722222222222,
+            "se": 0.03232598106681941,
+            "blocks": 144,
+            "games": 288
+          },
+          "final_points": {
+            "value": 0.6354166666666666,
+            "se": 0.029149767936402313,
+            "blocks": 144,
+            "games": 288
+          },
+          "points_delta": {
+            "value": 0.13194444444444445,
+            "se": 0.03500413934383135,
+            "blocks": 144,
+            "games": 288
+          },
+          "old_win": {
+            "value": 0.5,
+            "se": 0.032620575086100695,
+            "blocks": 144,
+            "games": 288
+          },
+          "final_win": {
+            "value": 0.6319444444444444,
+            "se": 0.029355839247185597,
+            "blocks": 144,
+            "games": 288
+          },
+          "win_delta": {
+            "value": 0.13194444444444445,
+            "se": 0.03548379779653646,
+            "blocks": 144,
+            "games": 288
+          },
+          "seen": [
+            "astra",
+            "carbon",
+            "deepseek",
+            "doubao",
+            "fable",
+            "grok",
+            "hydrogen",
+            "kimi",
+            "mimo",
+            "opus",
+            "qwen",
+            "sol"
+          ],
+          "blocks": 144
+        },
+        "ffa": {
+          "official": -35.8193884036765,
+          "sample_old": -56.97017989587039,
+          "sample_final": -21.10843255650252,
+          "calibrated": 0.04235893569136806,
+          "delta": 35.86174733936787,
+          "bootstrap_se": 4.139133849553384,
+          "old_points": {
+            "value": 0.4412037037037037,
+            "se": 0.024849512778369706,
+            "blocks": 30,
+            "games": 360
+          },
+          "final_points": {
+            "value": 0.4898148148148148,
+            "se": 0.031068574867657996,
+            "blocks": 30,
+            "games": 360
+          },
+          "points_delta": {
+            "value": 0.04861111111111111,
+            "se": 0.025540706233327208,
+            "blocks": 30,
+            "games": 360
+          },
+          "old_win": {
+            "value": 0.41944444444444445,
+            "se": 0.02467206036013746,
+            "blocks": 30,
+            "games": 360
+          },
+          "final_win": {
+            "value": 0.4648148148148148,
+            "se": 0.030301978096210318,
+            "blocks": 30,
+            "games": 360
+          },
+          "win_delta": {
+            "value": 0.04537037037037037,
+            "se": 0.024383692744932763,
+            "blocks": 30,
+            "games": 360
+          },
+          "seen": [
+            "astra",
+            "carbon",
+            "deepseek",
+            "doubao",
+            "fable",
+            "grok",
+            "hydrogen",
+            "kimi",
+            "mimo",
+            "opus",
+            "qwen",
+            "sol"
+          ],
+          "blocks": 30
+        },
+        "combined": {
+          "official": -9.442858374071516,
+          "calibrated": 61.58022736259808,
+          "delta": 71.0230857366696
+        },
+        "combined_bootstrap_se": 14.175837520538373
+      },
+      "deepseek": {
+        "duel": {
+          "official": -33.65448030339613,
+          "sample_old": -69.26494895014912,
+          "sample_final": -124.65372506994754,
+          "calibrated": -89.04325642319455,
+          "delta": -55.38877611979842,
+          "bootstrap_se": 26.81313596735899,
+          "old_points": {
+            "value": 0.4079861111111111,
+            "se": 0.03301787816901957,
+            "blocks": 144,
+            "games": 288
+          },
+          "final_points": {
+            "value": 0.3420138888888889,
+            "se": 0.032034814281026516,
+            "blocks": 144,
+            "games": 288
+          },
+          "points_delta": {
+            "value": -0.06597222222222222,
+            "se": 0.03706965338693619,
+            "blocks": 144,
+            "games": 288
+          },
+          "old_win": {
+            "value": 0.40625,
+            "se": 0.033107059599579554,
+            "blocks": 144,
+            "games": 288
+          },
+          "final_win": {
+            "value": 0.3402777777777778,
+            "se": 0.032151189822119994,
+            "blocks": 144,
+            "games": 288
+          },
+          "win_delta": {
+            "value": -0.06597222222222222,
+            "se": 0.0374739912489826,
+            "blocks": 144,
+            "games": 288
+          },
+          "seen": [
+            "astra",
+            "carbon",
+            "doubao",
+            "fable",
+            "glm",
+            "grok",
+            "hydrogen",
+            "kimi",
+            "mimo",
+            "opus",
+            "qwen",
+            "sol"
+          ],
+          "blocks": 144
+        },
+        "ffa": {
+          "official": -26.327633436138562,
+          "sample_old": -39.860471966676414,
+          "sample_final": 1.5964059857651591,
+          "calibrated": 15.129244516303011,
+          "delta": 41.45687795244157,
+          "bootstrap_se": 28.661010789887744,
+          "old_points": {
+            "value": 0.4444444444444444,
+            "se": 0.027831737713313216,
+            "blocks": 30,
+            "games": 360
+          },
+          "final_points": {
+            "value": 0.5,
+            "se": 0.02260710296018489,
+            "blocks": 30,
+            "games": 360
+          },
+          "points_delta": {
+            "value": 0.05555555555555555,
+            "se": 0.027634662186895163,
+            "blocks": 30,
+            "games": 360
+          },
+          "old_win": {
+            "value": 0.425,
+            "se": 0.028252122782208067,
+            "blocks": 30,
+            "games": 360
+          },
+          "final_win": {
+            "value": 0.4703703703703704,
+            "se": 0.02284054885841483,
+            "blocks": 30,
+            "games": 360
+          },
+          "win_delta": {
+            "value": 0.045370370370370366,
+            "se": 0.029302300737864183,
+            "blocks": 30,
+            "games": 360
+          },
+          "seen": [
+            "astra",
+            "carbon",
+            "doubao",
+            "fable",
+            "glm",
+            "grok",
+            "hydrogen",
+            "kimi",
+            "mimo",
+            "opus",
+            "qwen",
+            "sol"
+          ],
+          "blocks": 30
+        },
+        "combined": {
+          "official": -29.991056869767345,
+          "calibrated": -36.95700595344577,
+          "delta": -6.965949083678424
+        },
+        "combined_bootstrap_se": 19.623950926751103
+      }
+    },
+    "archive": {
+      "0.games": 2880,
+      "0.matches": 1322,
+      "0.focal_equivalent": 2206,
+      "1.games": 3600,
+      "1.matches": 326,
+      "1.focal_equivalent": 1342
+    },
+    "joint": {
+      "astra": {
+        "duel": 345.54255555939255,
+        "ffa": 268.19110541822,
+        "combined": 306.8668304888063
+      },
+      "fable": {
+        "duel": 137.91751853919715,
+        "ffa": 124.52603606966666,
+        "combined": 131.2217773044319
+      },
+      "opus": {
+        "duel": 81.53157606483887,
+        "ffa": 69.3871545953976,
+        "combined": 75.45936533011823
+      },
+      "carbon": {
+        "duel": 37.496020387907244,
+        "ffa": 64.75332363215342,
+        "combined": 51.12467201003034
+      },
+      "sol": {
+        "duel": 80.15084770885392,
+        "ffa": -14.532399092693455,
+        "combined": 32.80922430808023
+      },
+      "hydrogen": {
+        "duel": 49.69353120689196,
+        "ffa": 8.775428506439333,
+        "combined": 29.234479856665647
+      },
+      "grok": {
+        "duel": 5.067181808326211,
+        "ffa": -6.476953741336439,
+        "combined": -0.7048859665051141
+      },
+      "glm": {
+        "duel": 19.779424906288774,
+        "ffa": -35.89391095109654,
+        "combined": -8.057243022403881
+      },
+      "deepseek": {
+        "duel": -33.05371426794269,
+        "ffa": -27.16085161397028,
+        "combined": -30.107282940956484
+      },
+      "kimi": {
+        "duel": -82.01960992185454,
+        "ffa": -84.01437772089744,
+        "combined": -83.01699382137599
+      },
+      "qwen": {
+        "duel": -98.59752115638787,
+        "ffa": -75.69404810636966,
+        "combined": -87.14578463137877
+      },
+      "mimo": {
+        "duel": -212.1538323730329,
+        "ffa": -120.96296133799905,
+        "combined": -166.55839685551598
+      },
+      "doubao": {
+        "duel": -331.3539784624787,
+        "ffa": -170.89754565751417,
+        "combined": -251.12576205999645
+      },
+      "astra-final": {
+        "duel": 306.18424144567206,
+        "ffa": 211.0405087673947,
+        "combined": 258.61237510653336
+      },
+      "sol-final": {
+        "duel": 52.0546131972945,
+        "ffa": -24.11540604969128,
+        "combined": 13.96960357380161
+      },
+      "hydrogen-final": {
+        "duel": 35.73007087649787,
+        "ffa": -37.029690774033014,
+        "combined": -0.6498099487675724
+      },
+      "grok-final": {
+        "duel": 16.80309626830744,
+        "ffa": -7.8771394991926496,
+        "combined": 4.4629783845573945
+      },
+      "kimi-final": {
+        "duel": -127.04486332343993,
+        "ffa": -143.8273759899458,
+        "combined": -135.43611965669288
+      },
+      "fable-final": {
+        "duel": 111.6553430427544,
+        "ffa": 130.66818489622526,
+        "combined": 121.16176396948983
+      },
+      "opus-final": {
+        "duel": 113.20009526635786,
+        "ffa": 75.8064616769887,
+        "combined": 94.50327847167328
+      },
+      "carbon-final": {
+        "duel": 63.28666247607444,
+        "ffa": 135.08831921901765,
+        "combined": 99.18749084754604
+      },
+      "glm-final": {
+        "duel": 107.78370928634058,
+        "ffa": -21.1689355504641,
+        "combined": 43.30738686793824
+      },
+      "deepseek-final": {
+        "duel": -124.59805899630493,
+        "ffa": 1.6338085503672524,
+        "combined": -61.48212522296884
+      }
+    },
+    "faults": {
+      "events": {},
+      "bad_seats": {}
+    }
+  }
+}

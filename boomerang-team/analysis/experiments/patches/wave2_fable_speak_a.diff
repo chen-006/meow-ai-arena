@@ -1,0 +1,79 @@
+--- evidence/fable.cpp
++++ patches/fable_speak_a.cpp
+@@ -98,6 +98,8 @@
+     unsigned char mrf[MAXP][MAXT] = {};
+     i64 simWork = 0, nAct = 10;
+     std::string myName;
++    int aIntent[MAXP] = {};
++    i64 aTime[MAXP] = {};
+ 
+     void applyKey(const GameInfo& gi, const std::string& k, const std::string& v) {
+         if (k == "pt") { const int i = gi.point_index(v); if (i >= 0) planPt = i; }
+@@ -920,26 +922,15 @@
+         const Player& M0 = o.me();
+         a.msg = 0;
+         if (M0.alive) {
+-            i64 px = M0.x, py = M0.y;
+-            int F = 1;
+-            if (a.act == A_THROW && M0.st == S_FREE && o.my_dart().st == D_HAND && (a.ax || a.ay)) {
+-                i64 ux, uy;
+-                if (scale_to(a.ax, a.ay, 1000, ux, uy)) {
+-                    const i64 W = info().M().width(), H = info().M().height();
+-                    for (i64 L = cf.range; L > 0; L -= 100) {
+-                        const i64 qx = M0.x + ux * L / 1000, qy = M0.y + uy * L / 1000;
+-                        if (qx >= 300 && qy >= 300 && qx <= W - 300 && qy <= H - 300) { px = qx; py = qy; F = 2; break; }
+-                    }
+-                }
+-            }
+-            if (a.act == A_DASH && M0.st == S_FREE && M0.cd == 0 && (a.ax || a.ay)) {
+-                i64 ux, uy;
+-                if (scale_to(a.ax, a.ay, 1000, ux, uy)) {
+-                    const i64 L = cf.dash_v * cf.dash_t;
+-                    px = M0.x + ux * L / 1000; py = M0.y + uy * L / 1000; F = 3;
+-                }
+-            }
+-            a.msg = iclamp(px / 250, 0, 127) + 128 * iclamp(py / 250, 0, 127) + 16384 * F;
++            int intent = 0;
++            if (a.act == A_THROW) intent = 1;
++            else if (a.act == A_MELEE) intent = 2;
++            else if (a.act == A_DASH) intent = 3;
++            else if (M0.st == S_THROW) intent = 1;
++            else if (M0.st == S_SLASH || M0.st == S_KICK) intent = 2;
++            else if (M0.st == S_DASH) intent = 3;
++            const i64 x = iclamp(cell_index(M0.x), 0, 63), y = iclamp(cell_index(M0.y), 0, 63);
++            a.msg = x + 64*y + 4096*intent + 16384*(o.t%4);
+         }
+         return a;
+     }
+@@ -955,11 +946,26 @@
+                 mrf[k][T - 1] = 0;
+                 if (k == me || !is_mate(info(), k) || !o.p[k].alive) continue;
+                 const i64 m = o.p[k].msg;
+-                const int F = int(m >> 14);
+-                if (F >= 1) {
+-                    mrx[k][T - 1] = (m & 127) * 250 + 125; mry[k][T - 1] = ((m >> 7) & 127) * 250 + 125;
+-                    mrf[k][T - 1] = (unsigned char)F;
+-                }
++                const i64 sent = T - 1;
++                const int x = m & 63, y = (m >> 6) & 63, intent = (m >> 12) & 3;
++                if (m <= 0 || m >> 14 != sent % 4 || !info().M().inside(x,y)) continue;
++                i64 px = cell_center(x), py = cell_center(y);
++                int kind = 1;
++                // A gives a position and intent, but no aim. Estimate new event endpoints from observed facing.
++                if ((intent == 1 || intent == 3) && (T == 1 || aTime[k] != sent || aIntent[k] != intent)) {
++                    const i64 length = intent == 1 ? cf.range : cf.dash_v * cf.dash_t;
++                    px += Game::icos_face(o.p[k].face) * length / 1000;
++                    py += Game::isin_face(o.p[k].face) * length / 1000;
++                    px = iclamp(px, 0, info().M().width() - 1);
++                    py = iclamp(py, 0, info().M().height() - 1);
++                    kind = intent == 1 ? 2 : 3;
++                    px = (px / 250) * 250 + 125;
++                    py = (py / 250) * 250 + 125;
++                }
++                aTime[k] = T;
++                aIntent[k] = intent;
++                mrx[k][T - 1] = px; mry[k][T - 1] = py;
++                mrf[k][T - 1] = (unsigned char)kind;
+             }
+         hp[T] = o.me(); hd[T] = o.my_dart(); ha[T] = out;
+         const Player M0 = o.me();
