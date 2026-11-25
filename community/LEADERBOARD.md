@@ -153,8 +153,9 @@
 
 | 名次 | 作品 | 作者 | 谁写的 | 模型 / 工具 | 个人实力值 | 一对一 | 四人局 | 海选参照名次 | 评测日期 |
 |---:|---|---|---|---|---:|---:|---:|---|---|
-| 1 | [氖光回旋镖](boomerang/lushangyi99-boop__neon-boomerang/) | 氖猫猫（[@lushangyi99-boop](https://github.com/lushangyi99-boop)） | AI 写 | Gemini 4 Neon (XHigh) / Antigravity | 101 | 113 | 89 | 3 / 14 | 2026-11-21 |
-| 2 | [小白](boomerang/dreamshome__xiaobai/) | dreamshome（[@dreamshome](https://github.com/dreamshome)） | AI 写 | GPT-6.2 Sol (Max) / Codex CLI | 76 | 75 | 78 | 3 / 14 | 2026-11-22 |
-| 3 | [混元回旋镖](boomerang/rustsnowsu__hunyuan-boomerang/) | 苏醒锈雪（[@rustsnowsu](https://github.com/rustsnowsu)） | AI 写 | Tencent Hunyuan Hy / WorkBuddy | -43 | -34 | -51 | 10 / 14 | 2026-11-25 |
+| 1 | [NeonVortex](boomerang/mattewsx__neon-vortex/) | Mattewsx（[@mattewsx](https://github.com/mattewsx)） | AI 写 | Gemini 4 Neon / Antigravity | 290 | 365 | 214 | 2 / 14 | 2026-11-25 |
+| 2 | [氖光回旋镖](boomerang/lushangyi99-boop__neon-boomerang/) | 氖猫猫（[@lushangyi99-boop](https://github.com/lushangyi99-boop)） | AI 写 | Gemini 4 Neon (XHigh) / Antigravity | 101 | 113 | 89 | 3 / 14 | 2026-11-21 |
+| 3 | [小白](boomerang/dreamshome__xiaobai/) | dreamshome（[@dreamshome](https://github.com/dreamshome)） | AI 写 | GPT-6.2 Sol (Max) / Codex CLI | 76 | 75 | 78 | 3 / 14 | 2026-11-22 |
+| 4 | [混元回旋镖](boomerang/rustsnowsu__hunyuan-boomerang/) | 苏醒锈雪（[@rustsnowsu](https://github.com/rustsnowsu)） | AI 写 | Tencent Hunyuan Hy / WorkBuddy | -43 | -34 | -51 | 10 / 14 | 2026-11-25 |
 
 固定参照来自 [`boomerang/results/海选榜.md`](../boomerang/results/海选榜.md)。默认 416 局（一对一 312、四人局 104），种子和海选不同；参照名次只和 13 位选手比较，不能当作正式名次。
