@@ -296,14 +296,6 @@ struct NeonVortex {
 
     mutable i64 workCount = 0;
     double hitRad = 720.0;
-    i64 tCpu0 = -1;
-
-    // Pure thread CPU elapsed time (immune to OS wall-clock preemption under parallel workers)
-    double cpuElapsedMs() const {
-        if (tCpu0 < 0) return 0.0;
-        const i64 cur = thread_cpu_100ns();
-        return (cur > tCpu0) ? double(cur - tCpu0) * 0.0001 : 0.0;
-    }
 
     int phaseOf(int t) const {
         if (phases.empty()) return 0;
@@ -2822,15 +2814,11 @@ struct NeonVortex {
         if (wSum <= 1e-9) return;
         for (double& w : polW) w /= wSum;
 
-        // Roll out highest-ranked Stage-1 candidates first with pure CPU-time safety guard
-        std::sort(pool.begin(), pool.end(), [](const Candidate& a, const Candidate& b) { return a.score > b.score; });
+        // Roll out each candidate in the pool across all 4 policies
         const bool ffaMulti = (aliveEnemies > 1);
         Candidate newBest;
         newBest.score = -1e18;
-        int evaluated = 0;
         for (auto& c : pool) {
-            if (now > 0 && evaluated >= 4 && cpuElapsedMs() > 7.5) break;
-            ++evaluated;
             double s2Exp = 0.0;
             for (int pol = 0; pol < nPol; ++pol) {
                 Game g = baseAtNow[size_t(pol)];
@@ -2925,7 +2913,6 @@ struct NeonVortex {
 
     // ---------------------------------------------------------------- Main Decision Loop
     Action decide(const Obs& o) {
-        tCpu0 = thread_cpu_100ns();
         curObs = &o;
         now = int(o.t);
         lag = std::min(now, int(cf.delay));
@@ -3224,7 +3211,7 @@ struct NeonVortex {
         }
 
         // Two-segment dodge-then-recover trajectories
-        if (canMove && N <= 4 && workCount < workCap - 24 && (now == 0 || cpuElapsedMs() < 6.0)) {
+        if (canMove && N <= 4 && workCount < workCap - 24) {
             for (int b = 0; b < 5; ++b) {
                 if (beam[size_t(b)].score < -1e15) continue;
                 const V2 m0 = beam[size_t(b)].move;
@@ -3237,7 +3224,7 @@ struct NeonVortex {
         }
 
         // Stage 2: Exact dart::Game close-quarters micro-exchange refinement!
-        if (collectPool && s2Pool.size() >= 2 && (now == 0 || cpuElapsedMs() < 7.0)) {
+        if (collectPool && s2Pool.size() >= 2) {
             // Prune candidates far below best Stage-1 score before running exact engine rollouts
             std::vector<Candidate> pruned;
             pruned.reserve(s2Pool.size());
