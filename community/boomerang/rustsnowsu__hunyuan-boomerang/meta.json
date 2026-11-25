@@ -1,0 +1,11 @@
+{
+  "author": "苏醒锈雪",
+  "github": "RustSnowSu",
+  "name": "混元回旋镖",
+  "description": "从零实现的原创 bot：用裁判引擎做 4 步延迟补偿，盲区幻影镖 + 12 步多世界候选推演 + 解析式覆盖瞄准。",
+  "written_by": "ai",
+  "model": "Tencent Hunyuan Hy",
+  "tool": "WorkBuddy",
+  "based_on": "",
+  "license": "MIT"
+}
