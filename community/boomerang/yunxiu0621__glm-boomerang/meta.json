@@ -1,0 +1,11 @@
+{
+  "author": "yunxiu0621",
+  "github": "yunxiu0621",
+  "name": "GLM 回旋镖",
+  "description": "按 4 步延迟把观察推到现在，对对手的几种打法分别用裁判引擎推演后加权打分；不对 3.8 米外自由的对手先出手，等对方扔完再贴近反击。",
+  "written_by": "ai",
+  "model": "GLM-5.4",
+  "tool": "ZCode",
+  "based_on": "boomerang/workspace/template.cpp",
+  "license": "MIT"
+}
