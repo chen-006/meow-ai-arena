@@ -1,0 +1,11 @@
+{
+  "author": "Mattewsx",
+  "github": "Mattewsx",
+  "name": "NeonVortex",
+  "description": "从零编写的双阶段回旋镖 AI：延迟重构、多模型预测、主动格挡窃镖与近距精确裁判引擎推演。",
+  "written_by": "ai",
+  "model": "Gemini 4 Neon",
+  "tool": "Antigravity",
+  "based_on": "",
+  "license": "MIT"
+}
