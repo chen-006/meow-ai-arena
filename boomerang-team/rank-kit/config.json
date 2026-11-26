@@ -1,0 +1,40 @@
+{
+  "maps": [
+    "twinlakes",
+    "yinyang",
+    "stonecircle",
+    "skybridge",
+    "ruins",
+    "icefloes"
+  ],
+  "levels": [
+    "weak",
+    "mid",
+    "strong"
+  ],
+  "compile_flags": [
+    "-std=c++17",
+    "-O2",
+    "-static",
+    "-s",
+    "-ftemplate-depth=128",
+    "-fconstexpr-depth=128",
+    "-fconstexpr-ops-limit=10000000",
+    "-fmax-errors=20",
+    "-fno-diagnostics-show-caret",
+    "-Werror=return-type"
+  ],
+  "limits": {
+    "max_source_chars": 262144,
+    "max_source_bytes": 1048576,
+    "compile_cpu_sec": 20,
+    "compile_wall_sec": 30,
+    "step_cpu_ms": 10,
+    "first_cpu_ms": 1000,
+    "match_cpu_limit_sec": 10.0,
+    "match_wall_limit_sec": 35.0,
+    "mem_mb": 512,
+    "stack_mb": 64,
+    "stderr_max_bytes": 16384
+  }
+}
