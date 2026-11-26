@@ -6,9 +6,9 @@ PAL（这个角色用到的全部颜色）和 build(team=None) -> voxkit.Model�
 import importlib
 
 KEYS = ["astra", "sol", "fable", "opus", "gemini", "grok", "kimi", "deepseek", "doubao", "qwen", "mimo", "glm"]
-# 不在正赛 12 人名单里、但能用 --roster 点名上场 / 出预览的角色（11-17 加小 Gemini；要不要进 KEYS 由用户定）
+# 不在正赛 12 人名单里、但能用 --roster 点名上场 / 出预览的扩展角色
 EXTRA = ["gemini_s"]
-# 演示用的示范小人（第 11 集 P5 规则演示，11-18）：不是选手，不进信息栏、阵容图；--roster 能点名
+# 规则演示用的示范小人：不是选手，不进信息栏、阵容图；--roster 能点名
 DEMO = ["demo_red", "demo_blue"]
 ALL = KEYS + EXTRA + DEMO
 _MODS = {}

@@ -1,4 +1,4 @@
-/* 第 11–12 期《回旋镖大作战》对局页（11-24 重做）：大画幅战场优先，侧栏是一眼看懂的配置卡片 */
+/* 第 11–12 期《回旋镖大作战》对局页：大画幅战场优先，侧栏是一眼看懂的配置卡片 */
 @import '../../common/tokens.css';
 
 body.bm-page [hidden] { display: none !important; }

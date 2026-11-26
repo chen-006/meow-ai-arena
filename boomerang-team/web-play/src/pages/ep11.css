@@ -8,7 +8,7 @@
   .hero.ep11-hero .wrap{padding-top:clamp(44px,5vw,72px);padding-bottom:clamp(32px,4vw,56px)}
 }
 
-/* 队伍色小圆点与队名（11-24 定案：Astra 队永远在左、蓝 #2E8CFF；Fable 队永远在右、红 #FF5B4D） */
+/* 队伍色小圆点与队名（Astra 队永远在左、蓝 #2E8CFF；Fable 队永远在右、红 #FF5B4D） */
 .tdot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:6px;vertical-align:1px}
 .tdot.t0{background:#2E8CFF}
 .tdot.t1{background:#FF5B4D}

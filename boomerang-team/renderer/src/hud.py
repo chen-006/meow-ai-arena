@@ -35,7 +35,7 @@ for _k in cast.ORDER12 + cast.EXTRA:    # 正赛 12 位（+ 名单外可点名�
     if _k not in COLOR or cast.style() == "voxel":
         COLOR[_k] = voxchars.color(_k)
 LABEL.update(cast.LABEL12)              # 第 12 集：Carbon / Hydrogen 的显示名
-# 显示名临时覆盖（11-18 第 11 集对局渲染加）：环境变量 DART_LABELS="gemini=Carbon,gemini_s=Hydrogen"；不设时和原来完全一样
+# 显示名覆盖：环境变量 DART_LABELS="gemini=Carbon,gemini_s=Hydrogen"；不设时使用默认名
 for _kv in os.environ.get("DART_LABELS", "").split(","):
     if "=" in _kv:
         _k, _v = _kv.split("=", 1)

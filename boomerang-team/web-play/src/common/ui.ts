@@ -29,7 +29,7 @@ export function pictureHtml(variants: [string, number][], opts: { sizes?: string
   const dim = w && h ? ` width="${w}" height="${h}"` : '';
   return `<picture><source type="image/avif" srcset="${set('avif')}"${sz}><img${cls ? ` class="${cls}"` : ''} src="${asset(variants[variants.length - 1][0] + '.webp')}"${multi ? ` srcset="${set('webp')}"${sz}` : ''} alt="${esc(alt)}"${dim} ${load} decoding="async"></picture>`;
 }
-/** 第 1/2/3/7 期的视频封面上印着中文大字：英文版改用同一张图的无字版（文件名多一段 -en，站长 10-23） */
+/** 第 1/2/3/7 期的视频封面上印着中文大字：英文版改用同一张图的无字版（文件名多一段 -en） */
 const enArt = (id: string) => EN && /^ep[1237]$/.test(id);
 /** 首页卡片封面的路径前缀（不带扩展名）：英文版第 1/2/3/7 期换成无字版 */
 export const coverBase = (id: string, base: string) => (enArt(id) ? base + '-en' : base);

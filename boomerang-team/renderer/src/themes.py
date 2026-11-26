@@ -25,7 +25,7 @@ BASE = dict(
 
 THEMES = {
     "meadow": {},
-    # 第 11 集 P4 素材（11-18）：草甸原样，只把天、云、雾、阳光换成黄昏（低角度的橙色斜阳）。只用 --theme meadow_dusk 点名。
+    # 草甸黄昏变体：场地原样，只把天、云、雾、阳光换成低角度橙色斜阳；用 --theme meadow_dusk 点名。
     "meadow_dusk": dict(
         title="草甸·黄昏", line="草甸的地形和摆设不变，天和光换成黄昏",
         pal=dict(cloud="#FFE6D2", cloud_shade="#E89A9A", sky="#FFC59A", sky_deep="#E0708A", ambient="#B48CD0",

@@ -13,7 +13,7 @@ TO_SMOOTH = {"opus": "claude", "astra": "gpt"}      # 新名字在旧造型里�
 ART12 = {"astra": "GPT_大_Astra.png", "sol": "GPT_小_Sol.png", "fable": "Fable.png", "opus": "Claude_大_Opus.png",
          "gemini": "Gemini.png", "grok": "Grok.png", "kimi": "Kimi.png", "deepseek": "DeepSeek.png", "doubao": "豆包.png",
          "qwen": "Qwen_千问.png", "mimo": "小米MiMo.png", "glm": "GLM.png", "gemini_s": "Gemini_小.png"}
-# 头像裁切微调（11-17 按正式形象v2 重调 deepseek、qwen、mimo）：(横向偏移, 纵向偏移, 缩放)，单位是自动估出来的头的大小
+# 头像裁切微调：(横向偏移, 纵向偏移, 缩放)，单位是自动估出来的头的大小
 ART_TWEAK12 = {"astra": (0.05, 0.08, 0.8), "sol": (0.0, 0.17, 0.95), "fable": (0.0, 0.1, 0.84), "opus": (0.03, 0.04, 0.84),
                "gemini": (0.0, 0.08, 0.82), "grok": (0.0, 0.07, 0.82), "kimi": (0.0, 0.07, 0.82),
                "deepseek": (0.3, 0.16, 0.82), "doubao": (0.0, 0.0, 0.9), "qwen": (0.22, 0.08, 0.84),

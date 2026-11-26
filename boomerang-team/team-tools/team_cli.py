@@ -1,17 +1,17 @@
 r"""透明的固定 CLI 入口。不会导入任何模型 SDK。
 
-第 12 集团队赛版（复制自 公共\赛事运营\组队\team_cli.py 后修改）：
+第 12 集团队赛版：
 - 多支持 kimi（Kimi Code）、dsh（DeepSeek）、agy（反重力 / Gemini）三家命令行，以及演练用的 fake。
 - OpenCode 改走 opencode_runtime.py 私有服务（第 11 集正式赛的做法），不再用 --standalone。
 - 配置里有 match_config 时，派活前经过 team12.before_ask：加队员前言、查任务书里有没有夹代码、加"队长亲手改过"的提醒。
-- 队员进程的环境去掉调用方（队长）会话的 CLAUDE*/CODEX_* 变量（例如 Astra 的 CODEX_HOME 会把 Sol 带到别的渠道），代理按配置的 proxy 设。
+- 队员进程的环境去掉调用方（队长）会话的 CLAUDE*/CODEX_* 变量（避免父进程的会话目录或认证环境串入队员进程），代理按配置的 proxy 设。
 - 日志里的工具输出去掉思考类事件和字段。
 """
 import argparse
 import hashlib
 import json
 import os
-# 11-16：子进程里的 Python 一律用 UTF-8 模式。不设的话，包装脚本按系统编码（GBK）读主办方传来的 UTF-8 提示词，中文全乱、直接报错；以前能跑是因为启动它的终端碰巧带着这个环境变量。
+# 子进程里的 Python 一律用 UTF-8 模式，避免包装脚本按系统默认编码（GBK）读取 UTF-8 提示词时乱码报错。
 os.environ['PYTHONUTF8']='1'
 import re
 import subprocess
