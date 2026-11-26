@@ -88,3 +88,5 @@ npm run build:data
 本目录源码与自制素材采用仓库统一的 [MIT 许可](../../LICENSE)。第三方前端依赖（`three`、`vite`、`typescript` 等）由 `npm install` 按各自开源许可安装，不打包入库。
 
 角色形象署名：**角色形象设计参考：小叶子XIYZ；美术和制作：喵了个猫了个咪了个猫**。
+
+例外：`public/img/avatars/ep11/doubao.webp`（豆包）是照豆包官方公开形象做的写实风角色，官方形象本身的权利属于其权利人，这张图不适用本仓库的 MIT 许可（与 [`../../boomerang/renderer/assets/avatars/NOTICE.md`](../../boomerang/renderer/assets/avatars/NOTICE.md) 的说明一致）。角色名里的模型名和公司名属于各自的权利人，只用来说明角色对应哪个模型。

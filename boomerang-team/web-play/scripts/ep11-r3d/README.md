@@ -6,7 +6,7 @@
 |---|---|---|
 | `../data/ep11_r3d/scenes/<图>.json + .bin.br + .webp`（第 11 集 10 张图） | `../../../../boomerang/renderer/`（Blender 无界面跑 `env.build_env`） | `export_scene.py` → `pack_scenes.py` → `br_bins.mjs` |
 | `../data/ep11_r3d/scenes/<图>.*`（第 12 集 `caldera` / `piers` / `keeps`） | `../../../renderer/`（含岩浆/海水液面、发光地缝、双堡队旗与队色占位） | `export_scene12.py` → `pack_scenes.py` → `br_bins.mjs` |
-| `../data/ep11_r3d/vox/<角色>.json`（13 位体素小人，已入库） | `../../../renderer/src/voxchars.py`（`voxkit.Model.to_json()`） | `../../../renderer/src/export_voxchars.py` |
+| `../data/ep11_r3d/vox/<角色>.json`（13 位体素小人，已入库） | `../../../renderer/src/voxchars/`（`voxkit.Model.to_json()`） | `../../../renderer/src/export_voxchars.py` |
 | `../../public/img/ep11/maps/<图>.webp`（13 张选图缩略图，已入库） | 网站自己的 3D 画面截图 | `thumbs.mjs`（需先启动 `npm run dev` 或 `npm run preview`） |
 | 第 11 集 4v4 精选回放 | 同份 WASM 引擎 + 海选原版程序现场跑 | `gen_4v4.mjs`（依赖 `node-arena.mjs`） |
 

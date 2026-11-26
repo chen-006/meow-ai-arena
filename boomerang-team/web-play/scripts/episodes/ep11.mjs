@@ -95,6 +95,7 @@ export default {
   game: 'boomerang',
   title: '第 11–12 期 · 回旋镖大作战（OA 争霸）',
   root: ARENA_REPO,
+  include: 'boomerang-team/engine/sparring',   // 三档陪练共用的 objective.hpp
   stageCopy: {
     'include/dart.hpp': 'boomerang-team/workspace/dart.hpp',
   },

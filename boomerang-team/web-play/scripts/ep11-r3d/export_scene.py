@@ -3,8 +3,8 @@
 
   blender -b --factory-startup -P export_scene.py -- <输出目录> [图名 ...]
 
-正片渲染器 src\\ 只读引用；地图用 地图定稿\\<图名>.txt（mapfile.to_replay 转成只有开局状态的回放，和出静帧同一条路）。
-地形缓存（prep.py 的产物）在 C:\\bench\\_ep10_render\\cache。
+正片渲染器 src\\ 只读引用；地图用渲染器的 maps\\<图名>.txt（mapfile.to_replay 转成只有开局状态的回放，和出静帧同一条路）。
+地形缓存（prep.py 的产物）用渲染器的 ENV.CACHE（环境变量 DART_CACHE，默认 renderer\\work\\cache）。
 
 每张图输出 <图名>.json + <图名>.bin（未压缩，pack_scenes.py 再压缩、配地面贴图）：
   json：地图尺寸、调色板 PAL、灯光、材质表、物体表、地面贴图路径和覆盖范围
