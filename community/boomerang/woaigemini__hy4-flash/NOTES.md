@@ -13,7 +13,7 @@
 
 ## 来源
 
-源码基于正式选手 `bots/qwen4-max/player.cpp` 改造。qwen4-max 同时也是开发过程中的强陪练。
+源码基于正式选手 `boomerang/bots/qwen4-max` 改造。qwen4-max 同时也是开发过程中的强陪练。
 
 ## 测试
 

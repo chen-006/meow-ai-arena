@@ -117,6 +117,7 @@ struct Bot {
                     g.p[k].vx = g.p[k].vy = 0;
                     g.p[k].cause = K_NONE; g.p[k].killer = -1; g.p[k].dead_t = -1;
                     if (g.d[k].st == D_GONE) { g.d[k].st = D_HAND; g.d[k].x = g.p[k].x; g.d[k].y = g.p[k].y; }
+                    g.over = false; g.winner = -2;
                 }
             }
             g.t = o.t;
@@ -177,7 +178,7 @@ struct Bot {
                     if (F.f[size_t(cy) * nx + a] < 0 || F.f[size_t(b) * nx + cx] < 0) continue;
                 }
                 const int cost = v + ((ddx && ddy) ? 14 : 10);
-                if (cost < best) { best = cost; bx = a; by = b; }
+                if (cost <= best) { best = cost; bx = a; by = b; }
             }
         if (bx < 0) { dx = dy = 0; return false; }
         dx = cell_center(bx) - x; dy = cell_center(by) - y;
@@ -254,7 +255,7 @@ struct Bot {
                 int tgt = -1;
                 i64 bd = 2600;
                 for (int j = 0; j < g.n; ++j) {
-                    if (j == k || !g.p[j].alive || g.p[j].unknown || is_mate(gi, j)) continue;
+                    if (j == k || !g.p[j].alive || g.p[j].unknown || gi.team[j] == gi.team[k]) continue;
                     i64 d = ilen(g.p[j].x - P.x, g.p[j].y - P.y);
                     if (d < bd) { bd = d; tgt = j; }
                 }
@@ -318,7 +319,7 @@ struct Bot {
         {
             int tk = -1; i64 td = 5500;
             for (int j = 0; j < g.n; ++j) {
-                if (j == k || !g.p[j].alive || g.p[j].unknown || g.d[j].st != D_HAND) continue;
+                if (j == k || !g.p[j].alive || g.p[j].unknown || gi.team[j] == gi.team[k] || g.d[j].st != D_HAND) continue;
                 i64 d = ilen(g.p[j].x - P.x, g.p[j].y - P.y);
                 if (d < td) { td = d; tk = j; }
             }
@@ -351,10 +352,10 @@ struct Bot {
             }
             if (safe) { a.mx = ux * 1000; a.my = uy * 1000; }
         }
-        // 找最近的别人
+        // 找最近的敌人（相对模拟敌人 k）
         int tgt = -1; i64 bd = 1000000;
         for (int j = 0; j < g.n; ++j) {
-            if (j == k || !g.p[j].alive || g.p[j].unknown) continue;
+            if (j == k || !g.p[j].alive || g.p[j].unknown || gi.team[j] == gi.team[k]) continue;
             i64 d = ilen(g.p[j].x - P.x, g.p[j].y - P.y);
             if (d < bd) { bd = d; tgt = j; }
         }
@@ -395,7 +396,7 @@ struct Bot {
         if (md.st == D_BACK && ilen(md.x - P.x, md.y - P.y) > 1400) { tx = md.x; ty = md.y; return; }
         int tgt = -1; i64 bd = 1000000;
         for (int j = 0; j < g.n; ++j) {
-            if (j == k || !g.p[j].alive || g.p[j].unknown) continue;
+            if (j == k || !g.p[j].alive || g.p[j].unknown || gi.team[j] == gi.team[k]) continue;
             i64 w = ilen(g.p[j].x - P.x, g.p[j].y - P.y);
             if (g.d[j].st != D_HAND) w -= 900;
             if (g.p[j].st == S_STUN) w -= 1500;

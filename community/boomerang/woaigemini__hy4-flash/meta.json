@@ -6,6 +6,6 @@
   "written_by": "ai",
   "model": "Tencent Hunyuan Hy",
   "tool": "CodeBuddy",
-  "based_on": "bots/qwen4-max/player.cpp",
+  "based_on": "boomerang/bots/qwen4-max",
   "license": "MIT"
 }
