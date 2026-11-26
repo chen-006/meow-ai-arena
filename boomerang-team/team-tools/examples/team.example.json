@@ -1,0 +1,33 @@
+{
+  "说明": "脱敏后的单队派活配置样例（team.json）。请将所有 <...> 占位替换为本机绝对路径；如本地零依赖体验，可将 tool 设为 fake、exe 指向 team-tools/fake_member.py。",
+  "captain": "captain",
+  "team": "Demo队",
+  "captain_dir": "<绝对路径>/Demo队/captain",
+  "state_dir": "<绝对路径>/_host/teams/Demo队/state",
+  "log_dir": "<绝对路径>/_host/teams/Demo队/logs",
+  "clock_file": "clock.json",
+  "proxy": null,
+  "match_config": "<可选：绝对路径>/match.json",
+  "members": [
+    {
+      "name": "member1",
+      "tool": "fake",
+      "exe": "<绝对路径>/team-tools/fake_member.py",
+      "cwd": "<绝对路径>/Demo队/member1",
+      "model": "demo-model",
+      "effort": "default",
+      "timeout": 600,
+      "env": {}
+    },
+    {
+      "name": "member2",
+      "tool": "codex",
+      "exe": "<绝对路径>/codex.exe",
+      "cwd": "<绝对路径>/Demo队/member2",
+      "model": "gpt-6.2-sol",
+      "effort": "max",
+      "timeout": 1800,
+      "env": {}
+    }
+  ]
+}

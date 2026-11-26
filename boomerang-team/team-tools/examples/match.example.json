@@ -1,0 +1,39 @@
+{
+  "说明": "脱敏后的赛事配置样例（match.json，供 team12.py 的阶段窗口、禁代码检查与亲手改使用）。请将 <...> 占位替换为本机绝对路径。",
+  "root": "<绝对路径>/demo_match",
+  "kit": "<绝对路径>/boomerang-team/workspace",
+  "python": "python",
+  "proxy": null,
+  "dev_minutes": 120,
+  "round_minutes": 15,
+  "member_timeout": 1800,
+  "hand_edit": {
+    "times": 3,
+    "lines": 30
+  },
+  "teams": [
+    {
+      "name": "Demo队",
+      "captain": "captain",
+      "players": [
+        {
+          "name": "captain"
+        },
+        {
+          "name": "member1",
+          "tool": "fake",
+          "exe": "<绝对路径>/team-tools/fake_member.py",
+          "model": "demo-model",
+          "effort": "default"
+        },
+        {
+          "name": "member2",
+          "tool": "claude",
+          "exe": "<绝对路径>/claude.exe",
+          "model": "claude-opus-5-5",
+          "effort": "max"
+        }
+      ]
+    }
+  ]
+}
