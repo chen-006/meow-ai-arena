@@ -1,0 +1,21 @@
+{
+  "name": "boomerang-web-play",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "AI 算法对抗大赛 第 11–12 期（回旋镖大作战 / OA 争霸）浏览器可玩版前端",
+  "scripts": {
+    "dev": "vite",
+    "build:data": "node scripts/data/ep11.mjs",
+    "build:wasm": "node scripts/build-wasm.mjs ep11",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --port 4374 --strictPort"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0",
+    "vite": "^6.0.0"
+  },
+  "dependencies": {
+    "three": "0.170.0"
+  }
+}

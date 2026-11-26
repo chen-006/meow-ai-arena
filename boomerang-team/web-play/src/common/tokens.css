@@ -1,0 +1,78 @@
+/* 本站的设计变量：全部指向 meowllm 共用变量（/mw/meow.<hash>.css 的 --mw-*，见 shared\DESIGN.md），只留本站特有的几项。
+   主题由 meow-shell.js 管（<html data-theme>，默认跟随系统）；对局区写 data-theme="dark" 局部固定深色。
+   注意：别名写在 ":root,[data-theme]" 上，这样在 data-theme="dark" 的子树里会按深色重新取值（自定义属性在声明处求值）。
+   深浅两套不同的本站颜色用 light-dark()，跟着 color-scheme 走，不再写两份浅色块。 */
+:root,[data-theme]{
+  /* 字体：界面、标题统一用 meow 字体栈；数字仍用等宽 */
+  --font-ui:var(--mw-font);--font-display:var(--mw-font);
+  --font-num:"Cascadia Mono","JetBrains Mono",ui-monospace,Consolas,"SF Mono",Menlo,monospace;
+  /* 字号 / 间距 / 圆角 → meow 刻度（3xl 36px、sp-8 64px、大圆角 14px） */
+  --fs-xs:var(--mw-fs-xs);--fs-sm:var(--mw-fs-sm);--fs-md:var(--mw-fs-md);--fs-lg:var(--mw-fs-lg);--fs-xl:var(--mw-fs-xl);--fs-2xl:var(--mw-fs-2xl);--fs-3xl:var(--mw-fs-3xl);
+  --fs-hero:clamp(2.2rem,5vw,3.4rem);
+  --sp-1:var(--mw-sp-1);--sp-2:var(--mw-sp-2);--sp-3:var(--mw-sp-3);--sp-4:var(--mw-sp-4);--sp-5:var(--mw-sp-5);--sp-6:var(--mw-sp-6);--sp-7:var(--mw-sp-7);--sp-8:var(--mw-sp-8);
+  --r-sm:var(--mw-r-1);--r:var(--mw-r-2);--r-lg:var(--mw-r-3);--r-xl:var(--mw-r-3);--r-pill:var(--mw-r-pill);
+  --ease:var(--mw-ease);--t-fast:var(--mw-t);--t:.2s;
+
+  /* 颜色 → meow */
+  --bg:var(--mw-bg);--bg-2:var(--mw-sunken);
+  --surface:var(--mw-surface);--surface-2:var(--mw-sunken);--surface-3:var(--mw-line);
+  --line:var(--mw-line);--line-2:var(--mw-line-2);
+  --ink:var(--mw-text);--ink-2:var(--mw-text-2);--muted:var(--mw-muted);
+  --accent:var(--mw-accent-bg);--accent-ink:var(--mw-on-accent);--link:var(--mw-accent);
+  --focus:0 0 0 3px var(--mw-ring);
+  --shadow-1:var(--mw-shadow-1);--shadow-2:var(--mw-shadow-2);--shadow-3:var(--mw-shadow-3);
+  --glass:color-mix(in srgb,var(--mw-bg) 88%,transparent);
+  /* 查看器（改编自各期仓库）原来的变量名 */
+  --panel:var(--surface);--panel2:var(--surface-2);--ink2:var(--ink-2);
+
+  /* ---- 本站特有（保留）：两方的颜色、金色、游戏内状态色 ---- */
+  --c0:#e8822a;--c1:#3d8fe8;
+  --c0l:light-dark(#b0500c,#ffb06b);--c1l:light-dark(#1e62b8,#9ccbff);
+  --gold:#ffcf4a;--gold-ink:light-dark(#8a5f12,#ffcf4a);
+  --bad:light-dark(#b0412f,#ff6a5d);--warn:light-dark(#8a5f12,#f5b942);--good:light-dark(#41703a,#5fcf8a);
+  --brand-blue:#3d8fe8;--brand-orange:#ff8a3d;
+
+  /* ---- 质感：层级阴影（发丝线边框 + 很淡的投影；深色下多一道顶部高光，让面板从暖炭黑里浮起来） ----
+     --elev-1 静止的卡片、面板；--elev-2 悬停的可点卡片；--elev-btn 按钮 */
+  --elev-1:inset 0 1px 0 light-dark(#fff0,#ffffff08),0 1px 2px light-dark(#2426210a,#00000038),0 2px 8px -3px light-dark(#2426210d,#00000040);
+  --elev-2:inset 0 1px 0 light-dark(#fff0,#ffffff0d),0 2px 4px light-dark(#2426210d,#00000040),0 14px 30px -10px light-dark(#24262129,#0000008c);
+  --elev-btn:0 1px 2px light-dark(#2426210f,#00000040);
+  --t-ui:.18s;
+}
+
+/* ---- 通用控件：按钮、下拉框、输入框、徽标、加载（外观对齐 .mw-btn / .mw-input） ---- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.45em;font:inherit;font-size:var(--fs-sm);font-weight:600;line-height:1.2;
+  min-height:var(--mw-tap);padding:0 16px;border-radius:var(--r);border:1px solid var(--line-2);background:var(--surface);color:var(--ink);cursor:pointer;text-decoration:none;
+  box-shadow:var(--elev-btn);
+  transition:background var(--t-fast) var(--ease),border-color var(--t-fast) var(--ease),box-shadow var(--t-fast) var(--ease),opacity var(--t-fast) var(--ease),transform var(--t-fast) var(--ease);white-space:nowrap;user-select:none}
+.btn:hover{background:var(--mw-hover);border-color:var(--mw-line-strong);color:var(--ink);text-decoration:none}
+.btn:active{transform:translateY(1px);box-shadow:none}
+.btn:focus-visible{outline:2px solid var(--mw-brand);outline-offset:2px}
+.btn[disabled],.btn.is-disabled{opacity:.45;cursor:not-allowed;pointer-events:none;box-shadow:none}
+/* 主按钮：顶部一道细高光 + 同色系的淡投影；悬停往正文色方向压一点（浅色变深、深色变亮），不再靠半透明 */
+.btn-primary{background:var(--accent);border-color:transparent;color:var(--accent-ink);
+  box-shadow:inset 0 1px 0 #ffffff26,0 1px 2px light-dark(#7a2e1240,#00000059)}
+.btn-primary:hover{background:color-mix(in srgb,var(--accent) 88%,var(--ink));border-color:transparent;color:var(--accent-ink);
+  box-shadow:inset 0 1px 0 #ffffff26,0 4px 12px -4px light-dark(#b5481c80,#00000099)}
+.btn-ghost{background:transparent;border-color:transparent;color:var(--ink-2);box-shadow:none}
+.btn-ghost:hover{background:var(--mw-hover);border-color:transparent}
+.btn-lg{font-size:var(--fs-md);min-height:48px;padding:0 22px}
+@media (pointer:fine){.btn-sm{font-size:var(--fs-xs);min-height:32px;padding:0 12px}}
+.select,.input{font:inherit;font-size:var(--fs-md);color:var(--ink);background:var(--surface);border:1px solid var(--mw-line-strong);border-radius:var(--r);min-height:var(--mw-tap);padding:0 .7em;
+  transition:border-color var(--t-fast),box-shadow var(--t-fast);min-width:0}
+.select:hover,.input:hover{border-color:var(--ink-2)}
+.select:focus-visible,.input:focus-visible{outline:none;box-shadow:var(--focus);border-color:var(--mw-brand)}
+.badge{display:inline-flex;align-items:center;gap:.3em;font-size:var(--fs-xs);font-weight:600;padding:.15em .6em;border-radius:var(--r-sm);background:var(--surface-2);color:var(--ink-2);white-space:nowrap;box-shadow:inset 0 0 0 1px var(--line)}
+.badge-gold{background:var(--gold);color:#241a00;box-shadow:inset 0 -1px 0 #0000001f}
+.badge-accent{background:var(--mw-accent-soft);color:var(--mw-accent);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--mw-brand) 22%,transparent)}
+.spinner{width:1.1em;height:1.1em;border-radius:50%;border:2px solid currentColor;border-right-color:transparent;animation:spin .7s linear infinite;display:inline-block;vertical-align:-.15em}
+@keyframes spin{to{transform:rotate(360deg)}}
+.avatar{border-radius:50%;object-fit:cover;flex:none;background:var(--surface-3)}
+.avatar-mono{display:inline-flex;align-items:center;justify-content:center;border-radius:50%;flex:none;font-weight:800;color:#fff;background:linear-gradient(135deg,#6f6a5f,#45423b)}
+/* 跨站联动：选手名 → 幽默榜（拿不到数据时整块不显示） */
+.bench-link:empty{display:none}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation-duration:.01ms!important}}
+/* 语言切换按钮（页头右侧、主题按钮左边；样式照共用外壳的 .mw-theme。以后可回收到 shared/meow.css） */
+.mw-lang{display:inline-grid;place-items:center;min-width:var(--mw-tap);height:var(--mw-tap);padding:0 8px;border-radius:var(--mw-r-2);color:var(--mw-text-2);font-size:var(--mw-fs-sm);font-weight:600;text-decoration:none;white-space:nowrap}
+.mw-lang:hover{background:var(--mw-hover);color:var(--mw-text)}
+.mw-lang:focus-visible{outline:2px solid var(--mw-accent);outline-offset:-2px}

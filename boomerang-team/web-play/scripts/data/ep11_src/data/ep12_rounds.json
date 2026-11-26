@@ -1,0 +1,2168 @@
+{
+ "rounds": [
+  {
+   "r": 1,
+   "map": "caldera",
+   "mode": 3,
+   "modeCn": "歼灭",
+   "mapCn": "火山口",
+   "highlight": "双岸开局首战告捷；Fable队正式战术缺交置空，Astra队 53.5% 险胜拿首分。",
+   "seeds": 1000,
+   "wld": [
+    1063,
+    922,
+    15
+   ],
+   "wr": [
+    53.52,
+    46.48
+   ],
+   "se": 1.09,
+   "pts": [
+    1,
+    0
+   ],
+   "cumPts": [
+    1,
+    0
+   ],
+   "faults": 7,
+   "notes": [
+    "Fable队 正式战术置空（缺交 战术.txt）"
+   ],
+   "matrix": [
+    [
+     {
+      "wr": 53.05,
+      "se": 1.57
+     },
+     {
+      "wr": 76.4,
+      "se": 1.31
+     },
+     {
+      "wr": 67.7,
+      "se": 1.43
+     }
+    ],
+    [
+     {
+      "wr": 45,
+      "se": 1.58
+     },
+     {
+      "wr": 71.55,
+      "se": 1.43
+     },
+     {
+      "wr": 66.05,
+      "se": 1.49
+     }
+    ],
+    [
+     {
+      "wr": 48,
+      "se": 1.61
+     },
+     {
+      "wr": 76.15,
+      "se": 1.38
+     },
+     {
+      "wr": 66.65,
+      "se": 1.4
+     }
+    ]
+   ],
+   "plans": {
+    "astra": {
+     "正式": {
+      "formation": {
+       "站位": {
+        "astra": [
+         6,
+         5.6
+        ],
+        "sol": [
+         6,
+         13.6
+        ],
+        "hydrogen": [
+         5.9,
+         8.3
+        ],
+        "grok": [
+         5.8,
+         15
+        ],
+        "kimi": [
+         5.9,
+         11.7
+        ]
+       }
+      },
+      "plan": "wing astra N\r\nwing sol S\r\nwing hydrogen N\r\nwing grok S\r\nwing kimi S\r\nisland astra SCREEN\r\npace ALL BAL\r\nrally hydrogen 0,210,6.9,8.3\r\nrally kimi 0,210,6.9,11.7"
+     },
+     "备选1": {
+      "formation": {
+       "站位": {
+        "astra": [
+         6,
+         5.6
+        ],
+        "sol": [
+         6,
+         13.6
+        ],
+        "hydrogen": [
+         4.7,
+         14.9
+        ],
+        "grok": [
+         5.9,
+         14.9
+        ],
+        "kimi": [
+         4.1,
+         13.4
+        ]
+       }
+      },
+      "plan": "wing astra N\r\nwing sol S\r\nwing hydrogen S\r\nwing grok S\r\nwing kimi S\r\nisland astra SCREEN\r\npace ALL BAL"
+     },
+     "备选2": {
+      "formation": {
+       "站位": {
+        "astra": [
+         5.7,
+         5.3
+        ],
+        "sol": [
+         6,
+         13.6
+        ],
+        "hydrogen": [
+         4.7,
+         14.9
+        ],
+        "grok": [
+         5.9,
+         12.2
+        ],
+        "kimi": [
+         4.1,
+         9
+        ]
+       }
+      },
+      "plan": "wing astra N\nwing sol S\nwing hydrogen S\nwing grok S\nwing kimi N\nrole astra SCREEN\nrole sol GUARD\nrole hydrogen GUARD\nrole grok FLEX\nrole kimi FLEX\npace ALL BAL\nflex astra ROAM\nflex sol HOLD\nflex hydrogen HOLD\nflex grok ROAM\nflex kimi ROAM\nrally astra 0,55,6,3.5"
+     }
+    },
+    "fable": {
+     "正式": {
+      "formation": {
+       "站位": {
+        "fable": [
+         2.5,
+         7
+        ],
+        "opus": [
+         4,
+         10
+        ],
+        "carbon": [
+         2.5,
+         13
+        ],
+        "glm": [
+         5.5,
+         6.5
+        ],
+        "deepseek": [
+         5.5,
+         13.5
+        ]
+       }
+      },
+      "plan": ""
+     },
+     "备选1": {
+      "formation": {
+       "站位": {
+        "fable": [
+         2.5,
+         7
+        ],
+        "opus": [
+         4,
+         10
+        ],
+        "carbon": [
+         2.5,
+         13
+        ],
+        "glm": [
+         5.5,
+         6.5
+        ],
+        "deepseek": [
+         5.5,
+         13.5
+        ]
+       }
+      },
+      "plan": "fable go=14.9,10.8 until=720\nopus go=13.1,10.8 until=720\ncarbon go=14.0,9.0 until=720"
+     },
+     "备选2": {
+      "formation": {
+       "站位": {
+        "fable": [
+         2.5,
+         7
+        ],
+        "opus": [
+         4,
+         10
+        ],
+        "carbon": [
+         2.5,
+         13
+        ],
+        "glm": [
+         5.5,
+         6.5
+        ],
+        "deepseek": [
+         5.5,
+         13.5
+        ]
+       }
+      },
+      "plan": "fable go=14.8,10.6 until=720\nopus go=13.2,9.2 until=720"
+     }
+    }
+   },
+   "playerStats": {
+    "astra": {
+     "kills": 1.496,
+     "deaths": 0.496,
+     "ff": 0.182,
+     "tk": 0.182,
+     "capSec": 0,
+     "kingHits": 0,
+     "survive": 50.4
+    },
+    "sol": {
+     "kills": 0.923,
+     "deaths": 0.96,
+     "ff": 0.01,
+     "tk": 0.01,
+     "capSec": 0,
+     "kingHits": 0,
+     "survive": 4.05
+    },
+    "hydrogen": {
+     "kills": 0.742,
+     "deaths": 0.896,
+     "ff": 0.026,
+     "tk": 0.026,
+     "capSec": 0,
+     "kingHits": 0,
+     "survive": 10.4
+    },
+    "grok": {
+     "kills": 0.512,
+     "deaths": 0.803,
+     "ff": 0.045,
+     "tk": 0.045,
+     "capSec": 0,
+     "kingHits": 0,
+     "survive": 19.65
+    },
+    "kimi": {
+     "kills": 0.396,
+     "deaths": 0.772,
+     "ff": 0.126,
+     "tk": 0.126,
+     "capSec": 0,
+     "kingHits": 0,
+     "survive": 22.75
+    },
+    "fable": {
+     "kills": 0.938,
+     "deaths": 0.734,
+     "ff": 0.057,
+     "tk": 0.057,
+     "capSec": 0,
+     "kingHits": 0,
+     "survive": 26.65
+    },
+    "opus": {
+     "kills": 0.649,
+     "deaths": 0.628,
+     "ff": 0.052,
+     "tk": 0.052,
+     "capSec": 0,
+     "kingHits": 0,
+     "survive": 37.2
+    },
+    "carbon": {
+     "kills": 0.903,
+     "deaths": 0.811,
+     "ff": 0.042,
+     "tk": 0.042,
+     "capSec": 0,
+     "kingHits": 0,
+     "survive": 18.85
+    },
+    "glm": {
+     "kills": 0.686,
+     "deaths": 0.982,
+     "ff": 0.035,
+     "tk": 0.035,
+     "capSec": 0,
+     "kingHits": 0,
+     "survive": 1.85
+    },
+    "deepseek": {
+     "kills": 0.307,
+     "deaths": 0.761,
+     "ff": 0.006,
+     "tk": 0.006,
+     "capSec": 0,
+     "kingHits": 0,
+     "survive": 23.85
+    }
+   }
+  },
+  {
+   "r": 2,
+   "map": "caldera",
+   "mode": 3,
+   "modeCn": "歼灭",
+   "mapCn": "火山口",
+   "highlight": "Fable队改为三人上岛阵型正撞火力网，Astra队轰出 78.6% 胜率，诞生全场唯一“一镖四穿”。",
+   "seeds": 1000,
+   "wld": [
+    1571,
+    429,
+    0
+   ],
+   "wr": [
+    78.55,
+    21.45
+   ],
+   "se": 0.94,
+   "pts": [
+    1,
+    0
+   ],
+   "cumPts": [
+    2,
+    0
+   ],
+   "faults": 18,
+   "notes": [],
+   "matrix": [
+    [
+     {
+      "wr": 80.15,
+      "se": 1.21
+     },
+     {
+      "wr": 52.75,
+      "se": 1.55
+     },
+     {
+      "wr": 71.55,
+      "se": 1.4
+     }
+    ],
+    [
+     {
+      "wr": 80.75,
+      "se": 1.25
+     },
+     {
+      "wr": 53.35,
+      "se": 1.56
+     },
+     {
+      "wr": 72,
+      "se": 1.4
+     }
+    ],
+    [
+     {
+      "wr": 79.1,
+      "se": 1.29
+     },
+     {
+      "wr": 53.05,
+      "se": 1.55
+     },
+     {
+      "wr": 74.75,
+      "se": 1.36
+     }
+    ]
+   ],
+   "plans": {
+    "astra": {
+     "正式": {
+      "formation": {
+       "站位": {
+        "astra": [
+         6,
+         5.6
+        ],
+        "sol": [
+         6,
+         13.6
+        ],
+        "hydrogen": [
+         5.9,
+         8.3
+        ],
+        "grok": [
+         5.8,
+         15
+        ],
+        "kimi": [
+         5.9,
+         11.7
+        ]
+       }
+      },
+      "plan": "wing astra N\r\nwing sol S\r\nwing hydrogen N\r\nwing grok S\r\nwing kimi S\r\nisland astra SCREEN\r\npace ALL BAL\r\nrally hydrogen 0,210,6.9,8.3\r\nrally kimi 0,210,6.9,11.7\r\nrally sol 0,70,11.0,16.5"
+     },
+     "备选1": {
+      "formation": {
+       "站位": {
+        "astra": [
+         6,
+         5.6
+        ],
+        "sol": [
+         6,
+         13.6
+        ],
+        "hydrogen": [
+         5.9,
+         8.3
+        ],
+        "grok": [
+         5.8,
+         15
+        ],
+        "kimi": [
+         5.9,
+         11.7
+        ]
+       }
+      },
+      "plan": "wing astra N\r\nwing sol S\r\nwing hydrogen N\r\nwing grok S\r\nwing kimi S\r\nisland astra SCREEN\r\npace ALL BAL\r\nrally hydrogen 0,210,6.9,8.3\r\nrally kimi 0,210,6.9,11.7"
+     },
+     "备选2": {
+      "formation": {
+       "站位": {
+        "astra": [
+         6,
+         5.6
+        ],
+        "sol": [
+         4.2,
+         13.2
+        ],
+        "hydrogen": [
+         5.9,
+         8.3
+        ],
+        "grok": [
+         5.9,
+         14.9
+        ],
+        "kimi": [
+         5.9,
+         11.7
+        ]
+       }
+      },
+      "plan": "wing astra N\r\nwing sol S\r\nwing hydrogen N\r\nwing grok S\r\nwing kimi S\r\nisland astra SCREEN\r\npace ALL BAL\r\nrally hydrogen 0,210,6.9,8.3\r\nrally kimi 0,210,6.9,11.7\r\nrally sol 0,62,9.0,14.3\r\nrally grok 0,70,10.9,16.6"
+     }
+    },
+    "fable": {
+     "正式": {
+      "formation": {
+       "站位": {
+        "fable": [
+         5.5,
+         5.6
+        ],
+        "opus": [
+         4,
+         6.6
+        ],
+        "carbon": [
+         5.5,
+         7.4
+        ],
+        "glm": [
+         3,
+         11
+        ],
+        "deepseek": [
+         5,
+         12.5
+        ]
+       }
+      },
+      "plan": "fable go=13.1,9.3 until=720\nopus go=13.1,10.9 until=720\ncarbon go=14.7,9.2 until=720\nglm go=4.0,9.0 until=400\ndeepseek go=4.0,11.5 until=400"
+     },
+     "备选1": {
+      "formation": {
+       "站位": {
+        "fable": [
+         2.5,
+         7
+        ],
+        "opus": [
+         4,
+         10
+        ],
+        "carbon": [
+         2.5,
+         13
+        ],
+        "glm": [
+         5.5,
+         6.5
+        ],
+        "deepseek": [
+         5.5,
+         13.5
+        ]
+       }
+      },
+      "plan": ""
+     },
+     "备选2": {
+      "formation": {
+       "站位": {
+        "fable": [
+         2.5,
+         7
+        ],
+        "opus": [
+         4,
+         10
+        ],
+        "carbon": [
+         2.5,
+         13
+        ],
+        "glm": [
+         5.5,
+         6.5
+        ],
+        "deepseek": [
+         5.5,
+         13.5
+        ]
+       }
+      },
+      "plan": "fable go=14.9,10.8 until=720\nopus go=13.1,10.8 until=720\ncarbon go=14.0,9.0 until=720\nglm go=4.5,8.5 until=220\ndeepseek go=4.5,11.5 until=220"
+     }
+    }
+   },
+   "playerStats": {
+    "astra": {
+     "kills": 1.845,
+     "deaths": 0.265,
+     "ff": 0.12,
+     "tk": 0.12,
+     "capSec": 0,
+     "kingHits": 0,
+     "survive": 73.55
+    },
+    "sol": {
+     "kills": 1.022,
+     "deaths": 0.891,
+     "ff": 0.019,
+     "tk": 0.019,
+     "capSec": 0,
+     "kingHits": 0,
+     "survive": 10.9
+    },
+    "hydrogen": {
+     "kills": 0.737,
+     "deaths": 0.612,
+     "ff": 0.023,
+     "tk": 0.023,
+     "capSec": 0,
+     "kingHits": 0,
+     "survive": 38.85
+    },
+    "grok": {
+     "kills": 0.587,
+     "deaths": 0.631,
+     "ff": 0.081,
+     "tk": 0.081,
+     "capSec": 0,
+     "kingHits": 0,
+     "survive": 36.85
+    },
+    "kimi": {
+     "kills": 0.4,
+     "deaths": 0.485,
+     "ff": 0.097,
+     "tk": 0.097,
+     "capSec": 0,
+     "kingHits": 0,
+     "survive": 51.45
+    },
+    "fable": {
+     "kills": 0.839,
+     "deaths": 0.884,
+     "ff": 0.075,
+     "tk": 0.075,
+     "capSec": 0,
+     "kingHits": 0,
+     "survive": 11.55
+    },
+    "opus": {
+     "kills": 0.34,
+     "deaths": 0.94,
+     "ff": 0.047,
+     "tk": 0.047,
+     "capSec": 0,
+     "kingHits": 0,
+     "survive": 6.05
+    },
+    "carbon": {
+     "kills": 0.342,
+     "deaths": 0.958,
+     "ff": 0.02,
+     "tk": 0.02,
+     "capSec": 0,
+     "kingHits": 0,
+     "survive": 4.2
+    },
+    "glm": {
+     "kills": 0.785,
+     "deaths": 0.965,
+     "ff": 0.086,
+     "tk": 0.086,
+     "capSec": 0,
+     "kingHits": 0,
+     "survive": 3.55
+    },
+    "deepseek": {
+     "kills": 0.258,
+     "deaths": 0.833,
+     "ff": 0.001,
+     "tk": 0.001,
+     "capSec": 0,
+     "kingHits": 0,
+     "survive": 16.75
+    }
+   }
+  },
+  {
+   "r": 3,
+   "map": "piers",
+   "mode": 4,
+   "modeCn": "占点",
+   "mapCn": "三座栈桥",
+   "highlight": "三线栈桥占点拉锯，Astra/Hydrogen 疯狂卡复活节拍，Astra队 68.2% 再下一城。",
+   "seeds": 650,
+   "wld": [
+    887,
+    413,
+    0
+   ],
+   "wr": [
+    68.23,
+    31.77
+   ],
+   "se": 1.27,
+   "pts": [
+    1,
+    0
+   ],
+   "cumPts": [
+    3,
+    0
+   ],
+   "faults": 6,
+   "notes": [],
+   "matrix": [
+    [
+     {
+      "wr": 67.65,
+      "se": 1.4
+     },
+     {
+      "wr": 69.2,
+      "se": 1.47
+     },
+     {
+      "wr": 69.45,
+      "se": 1.46
+     }
+    ],
+    [
+     {
+      "wr": 88.45,
+      "se": 0.98
+     },
+     {
+      "wr": 88.9,
+      "se": 0.99
+     },
+     {
+      "wr": 92.05,
+      "se": 0.85
+     }
+    ],
+    [
+     {
+      "wr": 79.4,
+      "se": 1.33
+     },
+     {
+      "wr": 80.5,
+      "se": 1.27
+     },
+     {
+      "wr": 92,
+      "se": 0.86
+     }
+    ]
+   ],
+   "plans": {
+    "astra": {
+     "正式": {
+      "formation": {
+       "站位": {
+        "astra": [
+         6.5,
+         9
+        ],
+        "sol": [
+         6.5,
+         16.2
+        ],
+        "hydrogen": [
+         6.5,
+         11
+        ],
+        "grok": [
+         6.5,
+         17.4
+        ],
+        "kimi": [
+         6.5,
+         3.8
+        ]
+       }
+      },
+      "plan": "lane astra B\r\nlane sol C\r\nlane hydrogen B\r\nlane grok C\r\nlane kimi A\r\nflex astra HOLD\r\nflex sol HOLD\r\nflex hydrogen ROAM\r\nflex grok HOLD\r\nflex kimi HOLD\r\nscreen astra SMART\r\npace ALL BAL\r\nrally kimi 0,1200,14.7,3.7"
+     },
+     "备选1": {
+      "formation": {
+       "站位": {
+        "astra": [
+         6.5,
+         3.9
+        ],
+        "sol": [
+         6.5,
+         16.1
+        ],
+        "hydrogen": [
+         6.5,
+         9.2
+        ],
+        "grok": [
+         6.4,
+         17.6
+        ],
+        "kimi": [
+         6.4,
+         10.8
+        ]
+       }
+      },
+      "plan": "lane astra A\r\nlane sol C\r\nlane hydrogen B\r\nlane grok C\r\nlane kimi B\r\nflex astra HOLD\r\nflex sol HOLD\r\nflex hydrogen HOLD\r\nflex grok HOLD\r\nflex kimi HOLD\r\nscreen astra SMART\r\npace ALL BAL"
+     },
+     "备选2": {
+      "formation": {
+       "站位": {
+        "astra": [
+         6.4,
+         3.3
+        ],
+        "sol": [
+         6.4,
+         10.9
+        ],
+        "hydrogen": [
+         6.4,
+         16
+        ],
+        "grok": [
+         6.4,
+         9.1
+        ],
+        "kimi": [
+         6.4,
+         17.6
+        ]
+       }
+      },
+      "plan": "lane astra A\r\nlane sol B\r\nlane hydrogen C\r\nlane grok B\r\nlane kimi C\r\nflex sol HOLD\r\npace ALL BAL"
+     }
+    },
+    "fable": {
+     "正式": {
+      "formation": {
+       "站位": {
+        "fable": [
+         6.5,
+         10
+        ],
+        "opus": [
+         6.5,
+         3.3
+        ],
+        "carbon": [
+         6.5,
+         16.7
+        ],
+        "glm": [
+         6.5,
+         15.4
+        ],
+        "deepseek": [
+         6.5,
+         4.6
+        ]
+       }
+      },
+      "plan": "fable pt=B\nopus pt=A\ndeepseek pt=A\ncarbon pt=C\nglm pt=C job=sit"
+     },
+     "备选1": {
+      "formation": {
+       "站位": {
+        "fable": [
+         6.5,
+         10
+        ],
+        "opus": [
+         6.5,
+         3.3
+        ],
+        "carbon": [
+         6.5,
+         16.7
+        ],
+        "glm": [
+         6.5,
+         15.4
+        ],
+        "deepseek": [
+         6.5,
+         4.6
+        ]
+       }
+      },
+      "plan": "fable pt=B job=roam\nopus pt=A\ndeepseek pt=A\ncarbon pt=C\nglm pt=C job=sit"
+     },
+     "备选2": {
+      "formation": {
+       "站位": {
+        "fable": [
+         6.5,
+         3.3
+        ],
+        "opus": [
+         6.5,
+         10
+        ],
+        "carbon": [
+         6.5,
+         16.7
+        ],
+        "glm": [
+         6.5,
+         15.4
+        ],
+        "deepseek": [
+         6.5,
+         4.6
+        ]
+       }
+      },
+      "plan": "opus pt=B\nfable pt=A\ndeepseek pt=A\ncarbon pt=C\nglm pt=C job=sit"
+     }
+    }
+   },
+   "playerStats": {
+    "astra": {
+     "kills": 13.125,
+     "deaths": 2.334,
+     "ff": 0.427,
+     "tk": 0.427,
+     "capSec": 23.107,
+     "kingHits": 0,
+     "survive": 88.923
+    },
+    "sol": {
+     "kills": 7.232,
+     "deaths": 7.198,
+     "ff": 0.795,
+     "tk": 0.795,
+     "capSec": 25.739,
+     "kingHits": 0,
+     "survive": 64.308
+    },
+    "hydrogen": {
+     "kills": 4.775,
+     "deaths": 3.463,
+     "ff": 0.18,
+     "tk": 0.18,
+     "capSec": 34.449,
+     "kingHits": 0,
+     "survive": 85.846
+    },
+    "grok": {
+     "kills": 6.639,
+     "deaths": 5.877,
+     "ff": 0.703,
+     "tk": 0.703,
+     "capSec": 21.202,
+     "kingHits": 0,
+     "survive": 73.077
+    },
+    "kimi": {
+     "kills": 6.782,
+     "deaths": 10.772,
+     "ff": 0.001,
+     "tk": 0.001,
+     "capSec": 8.241,
+     "kingHits": 0,
+     "survive": 45.154
+    },
+    "fable": {
+     "kills": 5.182,
+     "deaths": 10.778,
+     "ff": 0.022,
+     "tk": 0.022,
+     "capSec": 6.747,
+     "kingHits": 0,
+     "survive": 42.923
+    },
+    "opus": {
+     "kills": 6.218,
+     "deaths": 6.38,
+     "ff": 0.222,
+     "tk": 0.222,
+     "capSec": 17.933,
+     "kingHits": 0,
+     "survive": 68.385
+    },
+    "carbon": {
+     "kills": 9.246,
+     "deaths": 4.303,
+     "ff": 0.192,
+     "tk": 0.192,
+     "capSec": 39.984,
+     "kingHits": 0,
+     "survive": 80.154
+    },
+    "glm": {
+     "kills": 2.599,
+     "deaths": 8.605,
+     "ff": 1.204,
+     "tk": 1.204,
+     "capSec": 21.422,
+     "kingHits": 0,
+     "survive": 56.538
+    },
+    "deepseek": {
+     "kills": 5.212,
+     "deaths": 8.344,
+     "ff": 0.228,
+     "tk": 0.228,
+     "capSec": 18.418,
+     "kingHits": 0,
+     "survive": 57.077
+    }
+   }
+  },
+  {
+   "r": 4,
+   "map": "piers",
+   "mode": 4,
+   "modeCn": "占点",
+   "mapCn": "三座栈桥",
+   "highlight": "Fable 队放空 B 点打 3A-2C；GLM 场均误杀从 R3 的 1.20 次降到 0.08 次（两轮布阵战术也都换了）；双方 51.4% 战平，回合各得 0.5；赛后矩阵里只互换 Astra 与 Hydrogen 的分工就差 60.10pp。",
+   "seeds": 650,
+   "wld": [
+    668,
+    631,
+    1
+   ],
+   "wr": [
+    51.42,
+    48.58
+   ],
+   "se": 1.37,
+   "pts": [
+    0.5,
+    0.5
+   ],
+   "cumPts": [
+    3.5,
+    0.5
+   ],
+   "faults": 14,
+   "notes": [],
+   "matrix": [
+    [
+     {
+      "wr": 52.5,
+      "se": 1.63
+     },
+     {
+      "wr": 78.55,
+      "se": 1.31
+     },
+     {
+      "wr": 65.45,
+      "se": 1.49
+     }
+    ],
+    [
+     {
+      "wr": 36.3,
+      "se": 1.56
+     },
+     {
+      "wr": 67.3,
+      "se": 1.48
+     },
+     {
+      "wr": 62.9,
+      "se": 1.53
+     }
+    ],
+    [
+     {
+      "wr": 96.4,
+      "se": 0.61
+     },
+     {
+      "wr": 65.3,
+      "se": 1.5
+     },
+     {
+      "wr": 96.2,
+      "se": 0.59
+     }
+    ]
+   ],
+   "plans": {
+    "astra": {
+     "正式": {
+      "formation": {
+       "站位": {
+        "astra": [
+         6.5,
+         9
+        ],
+        "sol": [
+         6.5,
+         16.2
+        ],
+        "hydrogen": [
+         6.5,
+         11
+        ],
+        "grok": [
+         6.5,
+         17.4
+        ],
+        "kimi": [
+         6,
+         2.4
+        ]
+       }
+      },
+      "plan": "lane astra B\r\nlane sol C\r\nlane hydrogen B\r\nlane grok C\r\nlane kimi A\r\nflex astra HOLD\r\nflex sol HOLD\r\nflex hydrogen ROAM\r\nflex grok HOLD\r\nflex kimi HOLD\r\nscreen astra SMART\r\npace ALL BAL\r\nrally kimi 0,1200,14.5,2.2"
+     },
+     "备选1": {
+      "formation": {
+       "站位": {
+        "astra": [
+         6.5,
+         9
+        ],
+        "sol": [
+         6.5,
+         16.2
+        ],
+        "hydrogen": [
+         6.5,
+         11
+        ],
+        "grok": [
+         6.5,
+         17.4
+        ],
+        "kimi": [
+         6.5,
+         3.8
+        ]
+       }
+      },
+      "plan": "lane astra B\r\nlane sol C\r\nlane hydrogen B\r\nlane grok C\r\nlane kimi A\r\nflex astra HOLD\r\nflex sol HOLD\r\nflex hydrogen ROAM\r\nflex grok HOLD\r\nflex kimi HOLD\r\nscreen astra SMART\r\npace ALL BAL\r\nrally kimi 0,1200,14.7,3.7"
+     },
+     "备选2": {
+      "formation": {
+       "站位": {
+        "astra": [
+         6.5,
+         9
+        ],
+        "sol": [
+         6.5,
+         16.2
+        ],
+        "hydrogen": [
+         6.5,
+         11
+        ],
+        "grok": [
+         6.5,
+         17.4
+        ],
+        "kimi": [
+         6.5,
+         3.8
+        ]
+       }
+      },
+      "plan": "lane astra B\r\nlane sol C\r\nlane hydrogen B\r\nlane grok C\r\nlane kimi A\r\nflex astra ROAM\r\nflex sol HOLD\r\nflex hydrogen HOLD\r\nflex grok HOLD\r\nflex kimi HOLD\r\nscreen astra SMART\r\npace ALL BAL\r\nrally kimi 0,1200,14.7,3.7"
+     }
+    },
+    "fable": {
+     "正式": {
+      "formation": {
+       "站位": {
+        "fable": [
+         6.5,
+         3.3
+        ],
+        "opus": [
+         6.5,
+         4.6
+        ],
+        "carbon": [
+         6.5,
+         16.7
+        ],
+        "glm": [
+         6.5,
+         15.4
+        ],
+        "deepseek": [
+         6.5,
+         2
+        ]
+       }
+      },
+      "plan": "fable pt=A\nopus pt=A\ndeepseek pt=A\ncarbon pt=C\nglm pt=C job=sit"
+     },
+     "备选1": {
+      "formation": {
+       "站位": {
+        "fable": [
+         6.5,
+         10
+        ],
+        "opus": [
+         6.5,
+         3.3
+        ],
+        "carbon": [
+         6.5,
+         16.7
+        ],
+        "glm": [
+         6.5,
+         15.4
+        ],
+        "deepseek": [
+         6.5,
+         4.6
+        ]
+       }
+      },
+      "plan": "fable pt=B\nopus pt=A\ndeepseek pt=A\ncarbon pt=C\nglm pt=C job=sit"
+     },
+     "备选2": {
+      "formation": {
+       "站位": {
+        "fable": [
+         6.5,
+         3.3
+        ],
+        "opus": [
+         6.5,
+         4.6
+        ],
+        "carbon": [
+         6.5,
+         16.7
+        ],
+        "glm": [
+         6.5,
+         15.4
+        ],
+        "deepseek": [
+         6.5,
+         18
+        ]
+       }
+      },
+      "plan": "fable pt=A\nopus pt=A\ndeepseek pt=C\ncarbon pt=C\nglm pt=C job=sit"
+     }
+    }
+   },
+   "playerStats": {
+    "astra": {
+     "kills": 8.152,
+     "deaths": 0.002,
+     "ff": 0.362,
+     "tk": 0.362,
+     "capSec": 58.526,
+     "kingHits": 0,
+     "survive": 100
+    },
+    "sol": {
+     "kills": 8.742,
+     "deaths": 9.184,
+     "ff": 0.857,
+     "tk": 0.857,
+     "capSec": 14.966,
+     "kingHits": 0,
+     "survive": 56.231
+    },
+    "hydrogen": {
+     "kills": 0.995,
+     "deaths": 0.222,
+     "ff": 0.023,
+     "tk": 0.023,
+     "capSec": 1.664,
+     "kingHits": 0,
+     "survive": 99.077
+    },
+    "grok": {
+     "kills": 6.893,
+     "deaths": 8.092,
+     "ff": 0.668,
+     "tk": 0.668,
+     "capSec": 11.913,
+     "kingHits": 0,
+     "survive": 59.769
+    },
+    "kimi": {
+     "kills": 6.541,
+     "deaths": 7.53,
+     "ff": 0.003,
+     "tk": 0.003,
+     "capSec": 11.504,
+     "kingHits": 0,
+     "survive": 58.154
+    },
+    "fable": {
+     "kills": 7.374,
+     "deaths": 5.942,
+     "ff": 0.33,
+     "tk": 0.33,
+     "capSec": 26.935,
+     "kingHits": 0,
+     "survive": 69.308
+    },
+    "opus": {
+     "kills": 5.231,
+     "deaths": 4.989,
+     "ff": 0.447,
+     "tk": 0.447,
+     "capSec": 23.673,
+     "kingHits": 0,
+     "survive": 76.615
+    },
+    "carbon": {
+     "kills": 6.018,
+     "deaths": 4.482,
+     "ff": 0.063,
+     "tk": 0.063,
+     "capSec": 38.913,
+     "kingHits": 0,
+     "survive": 77.538
+    },
+    "glm": {
+     "kills": 1.395,
+     "deaths": 8.648,
+     "ff": 0.082,
+     "tk": 0.082,
+     "capSec": 19.127,
+     "kingHits": 0,
+     "survive": 56.462
+    },
+    "deepseek": {
+     "kills": 3.594,
+     "deaths": 6.732,
+     "ff": 0.382,
+     "tk": 0.382,
+     "capSec": 23.393,
+     "kingHits": 0,
+     "survive": 68.385
+    }
+   }
+  },
+  {
+   "r": 5,
+   "map": "keeps",
+   "mode": 5,
+   "modeCn": "刺王",
+   "mapCn": "双堡",
+   "highlight": "Astra 与 Fable 各自挂帅出征，Astra 队分翼包夹与踢王入坑狂揽 71.7% 胜率拿到赛点。",
+   "seeds": 1000,
+   "wld": [
+    1419,
+    553,
+    28
+   ],
+   "wr": [
+    71.65,
+    28.35
+   ],
+   "se": 0.99,
+   "pts": [
+    1,
+    0
+   ],
+   "cumPts": [
+    4.5,
+    0.5
+   ],
+   "faults": 63,
+   "notes": [],
+   "matrix": [
+    [
+     {
+      "wr": 68.7,
+      "se": 1.44
+     },
+     {
+      "wr": 72.75,
+      "se": 1.39
+     },
+     {
+      "wr": 58.45,
+      "se": 1.59
+     }
+    ],
+    [
+     {
+      "wr": 78.05,
+      "se": 1.32
+     },
+     {
+      "wr": 77.15,
+      "se": 1.35
+     },
+     {
+      "wr": 64.95,
+      "se": 1.49
+     }
+    ],
+    [
+     {
+      "wr": 70.45,
+      "se": 1.34
+     },
+     {
+      "wr": 74.8,
+      "se": 1.34
+     },
+     {
+      "wr": 58.1,
+      "se": 1.56
+     }
+    ]
+   ],
+   "plans": {
+    "astra": {
+     "正式": {
+      "formation": {
+       "站位": {
+        "astra": [
+         4,
+         8.5
+        ],
+        "sol": [
+         5,
+         14
+        ],
+        "hydrogen": [
+         7.5,
+         12
+        ],
+        "grok": [
+         5,
+         3
+        ],
+        "kimi": [
+         7.5,
+         5
+        ]
+       },
+       "国王": "astra"
+      },
+      "plan": "role astra HUNT\r\nrole sol HUNT\r\nrole hydrogen GUARD\r\nrole grok HUNT\r\nrole kimi GUARD\r\nwing astra N\r\nwing sol S\r\nwing hydrogen S\r\nwing grok N\r\nwing kimi N\r\nkingstyle astra COUNTER\r\npace ALL BAL\r\nmark ALL KING\r\nrally astra 0,85,4.1,8.4\r\nrally sol 0,90,7.4,10.7\r\nrally grok 0,90,7.6,6.8\r\nrally hydrogen 0,110,8.1,9.7\r\nrally kimi 0,110,8.2,7.5"
+     },
+     "备选1": {
+      "formation": {
+       "站位": {
+        "astra": [
+         7.8,
+         8.5
+        ],
+        "sol": [
+         7.1,
+         6.4
+        ],
+        "hydrogen": [
+         7,
+         10.2
+        ],
+        "grok": [
+         6,
+         12
+        ],
+        "kimi": [
+         5.6,
+         5.1
+        ]
+       },
+       "国王": "astra"
+      },
+      "plan": "role astra HUNT\r\nrole sol HUNT\r\nrole hydrogen GUARD\r\nrole grok HUNT\r\nrole kimi GUARD\r\nwing astra N\r\nwing sol S\r\nwing hydrogen S\r\nwing grok N\r\nwing kimi N\r\nkingstyle astra COUNTER\r\npace ALL BAL\r\nmark ALL KING\r\nrally sol 0,75,8.0,7.0\r\nrally grok 0,75,8.2,10.3\r\nrally hydrogen 0,115,9.7,7.4\r\nrally kimi 0,115,9.8,9.8"
+     },
+     "备选2": {
+      "formation": {
+       "站位": {
+        "astra": [
+         8,
+         8.5
+        ],
+        "sol": [
+         8,
+         6
+        ],
+        "hydrogen": [
+         4,
+         8.5
+        ],
+        "grok": [
+         7.8,
+         11.1
+        ],
+        "kimi": [
+         5,
+         12.5
+        ]
+       },
+       "国王": "hydrogen"
+      },
+      "plan": "role astra HUNT\r\nrole sol HUNT\r\nrole hydrogen GUARD\r\nrole grok HUNT\r\nrole kimi GUARD\r\nwing astra N\r\nwing sol S\r\nwing hydrogen S\r\nwing grok N\r\nwing kimi N\r\nkingstyle astra COUNTER\r\npace ALL BAL\r\nmark ALL KING\r\nrally hydrogen 0,150,4.1,8.5\r\npace astra PRESS"
+     }
+    },
+    "fable": {
+     "正式": {
+      "formation": {
+       "站位": {
+        "fable": [
+         4,
+         8.5
+        ],
+        "opus": [
+         5.2,
+         7.3
+        ],
+        "carbon": [
+         5.2,
+         9.7
+        ],
+        "glm": [
+         2.8,
+         7.3
+        ],
+        "deepseek": [
+         2.8,
+         9.7
+        ]
+       },
+       "国王": "fable"
+      },
+      "plan": "fable job=safe go=4,8.5 until=380\nopus job=guard go=5.2,7.3 until=380\ncarbon job=guard go=5.2,9.7 until=380\nglm job=guard go=2.8,7.3 until=380\ndeepseek job=guard go=2.8,9.7 until=380"
+     },
+     "备选1": {
+      "formation": {
+       "站位": {
+        "fable": [
+         5.3,
+         8.5
+        ],
+        "opus": [
+         5.2,
+         7
+        ],
+        "carbon": [
+         5.2,
+         10
+        ],
+        "glm": [
+         2.8,
+         7.5
+        ],
+        "deepseek": [
+         2.8,
+         9.5
+        ]
+       },
+       "国王": "fable"
+      },
+      "plan": "fable job=safe go=5.3,8.5 until=380\nopus job=guard go=5.2,7.0 until=380\ncarbon job=guard go=5.2,10.0 until=380\nglm job=guard go=2.8,7.5 until=380\ndeepseek job=guard go=2.8,9.5 until=380"
+     },
+     "备选2": {
+      "formation": {
+       "站位": {
+        "fable": [
+         4,
+         8.5
+        ],
+        "opus": [
+         7.5,
+         5
+        ],
+        "carbon": [
+         7.5,
+         12
+        ],
+        "glm": [
+         5,
+         3
+        ],
+        "deepseek": [
+         5,
+         14
+        ]
+       },
+       "国王": "fable"
+      },
+      "plan": "opus job=hunt\ncarbon job=hunt\nglm job=hunt\ndeepseek job=hunt\nfable job=safe"
+     }
+    }
+   },
+   "playerStats": {
+    "astra": {
+     "kills": 1.863,
+     "deaths": 0.29,
+     "ff": 0.301,
+     "tk": 0.301,
+     "capSec": 0,
+     "kingHits": 1.171,
+     "survive": 70.95
+    },
+    "sol": {
+     "kills": 1.19,
+     "deaths": 0.96,
+     "ff": 0.127,
+     "tk": 0.124,
+     "capSec": 0,
+     "kingHits": 0,
+     "survive": 4.05
+    },
+    "hydrogen": {
+     "kills": 0.558,
+     "deaths": 0.908,
+     "ff": 0.063,
+     "tk": 0.056,
+     "capSec": 0,
+     "kingHits": 0,
+     "survive": 9.15
+    },
+    "grok": {
+     "kills": 0.401,
+     "deaths": 0.716,
+     "ff": 0.125,
+     "tk": 0.086,
+     "capSec": 0,
+     "kingHits": 0,
+     "survive": 28.4
+    },
+    "kimi": {
+     "kills": 0.457,
+     "deaths": 0.839,
+     "ff": 0.212,
+     "tk": 0.167,
+     "capSec": 0,
+     "kingHits": 0,
+     "survive": 16.1
+    },
+    "fable": {
+     "kills": 1.008,
+     "deaths": 0.724,
+     "ff": 0.086,
+     "tk": 0.086,
+     "capSec": 0,
+     "kingHits": 1.092,
+     "survive": 27.65
+    },
+    "opus": {
+     "kills": 0.683,
+     "deaths": 0.676,
+     "ff": 0.062,
+     "tk": 0.034,
+     "capSec": 0,
+     "kingHits": 0,
+     "survive": 32.4
+    },
+    "carbon": {
+     "kills": 0.586,
+     "deaths": 0.675,
+     "ff": 0.047,
+     "tk": 0.032,
+     "capSec": 0,
+     "kingHits": 0,
+     "survive": 32.5
+    },
+    "glm": {
+     "kills": 0.336,
+     "deaths": 0.99,
+     "ff": 0.017,
+     "tk": 0.009,
+     "capSec": 0,
+     "kingHits": 0,
+     "survive": 1
+    },
+    "deepseek": {
+     "kills": 0.146,
+     "deaths": 0.895,
+     "ff": 0.005,
+     "tk": 0.003,
+     "capSec": 0,
+     "kingHits": 0,
+     "survive": 10.5
+    }
+   }
+  },
+  {
+   "r": 6,
+   "map": "keeps",
+   "mode": 5,
+   "modeCn": "刺王",
+   "mapCn": "双堡",
+   "highlight": "收官战 Astra 队启用两段推进，65.6% 锁定 5.5 : 0.5 总比分，诞生双王 2.25cm 贴身决战。",
+   "seeds": 1000,
+   "wld": [
+    1307,
+    682,
+    11
+   ],
+   "wr": [
+    65.63,
+    34.38
+   ],
+   "se": 1.08,
+   "pts": [
+    1,
+    0
+   ],
+   "cumPts": [
+    5.5,
+    0.5
+   ],
+   "faults": 8,
+   "notes": [],
+   "matrix": [
+    [
+     {
+      "wr": 65.65,
+      "se": 1.5
+     },
+     {
+      "wr": 74,
+      "se": 1.39
+     },
+     {
+      "wr": 78.4,
+      "se": 1.3
+     }
+    ],
+    [
+     {
+      "wr": 59.15,
+      "se": 1.58
+     },
+     {
+      "wr": 68.45,
+      "se": 1.46
+     },
+     {
+      "wr": 71.75,
+      "se": 1.4
+     }
+    ],
+    [
+     {
+      "wr": 63.15,
+      "se": 1.49
+     },
+     {
+      "wr": 76.3,
+      "se": 1.33
+     },
+     {
+      "wr": 74.95,
+      "se": 1.44
+     }
+    ]
+   ],
+   "plans": {
+    "astra": {
+     "正式": {
+      "formation": {
+       "站位": {
+        "astra": [
+         4,
+         8.5
+        ],
+        "sol": [
+         5,
+         14
+        ],
+        "hydrogen": [
+         7.5,
+         12
+        ],
+        "grok": [
+         5,
+         3
+        ],
+        "kimi": [
+         7.5,
+         5
+        ]
+       },
+       "国王": "astra"
+      },
+      "plan": "role astra HUNT\r\nrole sol HUNT\r\nrole hydrogen GUARD\r\nrole grok HUNT\r\nrole kimi GUARD\r\nwing astra N\r\nwing sol S\r\nwing hydrogen S\r\nwing grok N\r\nwing kimi N\r\nkingstyle astra COUNTER\r\npace ALL BAL\r\nmark ALL KING\r\nrally astra 0,85,4.1,8.4\r\nrally sol 0,85,8.2,13.7\r\nrally grok 0,85,8.0,4.7\r\nrally hydrogen 0,115,7.6,9.3\r\nrally kimi 0,115,7.7,7.7\r\nrally sol 95,335,15.1,10.7\r\nrally grok 95,335,14.9,6.1\r\nrally hydrogen 120,395,12.4,9.6\r\nrally kimi 120,395,12.1,7.0\r\nrally astra 495,735,15.0,8.5"
+     },
+     "备选1": {
+      "formation": {
+       "站位": {
+        "astra": [
+         4,
+         8.5
+        ],
+        "sol": [
+         5,
+         14
+        ],
+        "hydrogen": [
+         7.5,
+         12
+        ],
+        "grok": [
+         5,
+         3
+        ],
+        "kimi": [
+         7.5,
+         5
+        ]
+       },
+       "国王": "astra"
+      },
+      "plan": "role astra HUNT\r\nrole sol HUNT\r\nrole hydrogen GUARD\r\nrole grok HUNT\r\nrole kimi GUARD\r\nwing astra N\r\nwing sol S\r\nwing hydrogen S\r\nwing grok N\r\nwing kimi N\r\nkingstyle astra COUNTER\r\npace ALL BAL\r\nmark ALL KING\r\nrally astra 0,85,4.1,8.4\r\nrally sol 0,90,7.4,10.7\r\nrally grok 0,90,7.6,6.8\r\nrally hydrogen 0,110,8.1,9.7\r\nrally kimi 0,110,8.2,7.5\r\nrim astra INNER"
+     },
+     "备选2": {
+      "formation": {
+       "站位": {
+        "astra": [
+         4,
+         8.5
+        ],
+        "sol": [
+         5,
+         14
+        ],
+        "hydrogen": [
+         7.5,
+         12
+        ],
+        "grok": [
+         5,
+         3
+        ],
+        "kimi": [
+         7.5,
+         5
+        ]
+       },
+       "国王": "astra"
+      },
+      "plan": "role astra HUNT\r\nrole sol HUNT\r\nrole hydrogen FLEX\r\nrole grok HUNT\r\nrole kimi GUARD\r\nwing astra N\r\nwing sol S\r\nwing hydrogen S\r\nwing grok N\r\nwing kimi N\r\nkingstyle astra COUNTER\r\npace ALL BAL\r\nmark ALL KING\r\nrally astra 0,110,3.6,8.5\r\nrally astra 110,165,7.0,9.8\r\nrally sol 0,75,7.4,10.7\r\nrally grok 0,85,7.6,6.8\r\nrally hydrogen 0,110,8.1,9.7\r\nrally kimi 0,110,8.2,7.5\r\nrim astra INNER"
+     }
+    },
+    "fable": {
+     "正式": {
+      "formation": {
+       "站位": {
+        "fable": [
+         8,
+         8.5
+        ],
+        "opus": [
+         8.5,
+         6.6
+        ],
+        "carbon": [
+         8.5,
+         10.4
+        ],
+        "glm": [
+         6.9,
+         7.4
+        ],
+        "deepseek": [
+         6.9,
+         9.6
+        ]
+       },
+       "国王": "fable"
+      },
+      "plan": "fable job=safe\nopus job=hunt\ncarbon job=hunt\nglm job=hunt\ndeepseek job=hunt"
+     },
+     "备选1": {
+      "formation": {
+       "站位": {
+        "fable": [
+         8,
+         8.5
+        ],
+        "opus": [
+         8.5,
+         6.6
+        ],
+        "carbon": [
+         8.5,
+         10.4
+        ],
+        "glm": [
+         6.9,
+         7.4
+        ],
+        "deepseek": [
+         6.9,
+         9.6
+        ]
+       },
+       "国王": "fable"
+      },
+      "plan": "fable job=safe go=15,8.5 until=720\nopus job=guard\ncarbon job=guard\nglm job=guard\ndeepseek job=guard"
+     },
+     "备选2": {
+      "formation": {
+       "站位": {
+        "fable": [
+         4,
+         8.5
+        ],
+        "opus": [
+         5.2,
+         7.3
+        ],
+        "carbon": [
+         5.2,
+         9.7
+        ],
+        "glm": [
+         2.8,
+         7.3
+        ],
+        "deepseek": [
+         2.8,
+         9.7
+        ]
+       },
+       "国王": "fable"
+      },
+      "plan": "fable job=safe go=4,8.5 until=380\nopus job=guard go=5.2,7.3 until=380\ncarbon job=guard go=5.2,9.7 until=380\nglm job=guard go=2.8,7.3 until=380\ndeepseek job=guard go=2.8,9.7 until=380"
+     }
+    }
+   },
+   "playerStats": {
+    "astra": {
+     "kills": 2.079,
+     "deaths": 0.346,
+     "ff": 0.238,
+     "tk": 0.238,
+     "capSec": 0,
+     "kingHits": 1.474,
+     "survive": 65.35
+    },
+    "sol": {
+     "kills": 0.637,
+     "deaths": 0.89,
+     "ff": 0.086,
+     "tk": 0.07,
+     "capSec": 0,
+     "kingHits": 0,
+     "survive": 10.95
+    },
+    "hydrogen": {
+     "kills": 0.687,
+     "deaths": 0.887,
+     "ff": 0.1,
+     "tk": 0.086,
+     "capSec": 0,
+     "kingHits": 0,
+     "survive": 11.25
+    },
+    "grok": {
+     "kills": 0.19,
+     "deaths": 0.84,
+     "ff": 0.028,
+     "tk": 0.019,
+     "capSec": 0,
+     "kingHits": 0,
+     "survive": 16.05
+    },
+    "kimi": {
+     "kills": 0.452,
+     "deaths": 0.88,
+     "ff": 0.138,
+     "tk": 0.113,
+     "capSec": 0,
+     "kingHits": 0,
+     "survive": 11.95
+    },
+    "fable": {
+     "kills": 1.242,
+     "deaths": 0.659,
+     "ff": 0.116,
+     "tk": 0.116,
+     "capSec": 0,
+     "kingHits": 1.294,
+     "survive": 34.1
+    },
+    "opus": {
+     "kills": 0.722,
+     "deaths": 0.769,
+     "ff": 0.063,
+     "tk": 0.049,
+     "capSec": 0,
+     "kingHits": 0,
+     "survive": 23.05
+    },
+    "carbon": {
+     "kills": 0.735,
+     "deaths": 0.804,
+     "ff": 0.063,
+     "tk": 0.053,
+     "capSec": 0,
+     "kingHits": 0,
+     "survive": 19.55
+    },
+    "glm": {
+     "kills": 0.632,
+     "deaths": 0.958,
+     "ff": 0.131,
+     "tk": 0.122,
+     "capSec": 0,
+     "kingHits": 0,
+     "survive": 4.25
+    },
+    "deepseek": {
+     "kills": 0.249,
+     "deaths": 0.709,
+     "ff": 0.015,
+     "tk": 0.011,
+     "capSec": 0,
+     "kingHits": 0,
+     "survive": 29.1
+    }
+   }
+  }
+ ],
+ "contrib": [
+  {
+   "id": "astra",
+   "team": 0,
+   "games": 10600,
+   "totalKills": 42224,
+   "totalDeaths": 5831,
+   "totalTK": 2708,
+   "avgKills": 3.98,
+   "avgDeaths": 0.55,
+   "kd": 7.24,
+   "avgTK": 0.255,
+   "avgCapSec": 40.8,
+   "avgSurvive": 72.3,
+   "faults": 6
+  },
+  {
+   "id": "sol",
+   "team": 0,
+   "games": 10600,
+   "totalKills": 28309,
+   "totalDeaths": 28697,
+   "totalTK": 2594,
+   "avgKills": 2.67,
+   "avgDeaths": 2.71,
+   "kd": 0.99,
+   "avgTK": 0.245,
+   "avgCapSec": 20.4,
+   "avgSurvive": 20.4,
+   "faults": 3
+  },
+  {
+   "id": "hydrogen",
+   "team": 0,
+   "games": 10600,
+   "totalKills": 12946,
+   "totalDeaths": 11398,
+   "totalTK": 646,
+   "avgKills": 1.22,
+   "avgDeaths": 1.08,
+   "kd": 1.14,
+   "avgTK": 0.061,
+   "avgCapSec": 18.1,
+   "avgSurvive": 35.8,
+   "faults": 14
+  },
+  {
+   "id": "grok",
+   "team": 0,
+   "games": 10600,
+   "totalKills": 20970,
+   "totalDeaths": 24140,
+   "totalTK": 2244,
+   "avgKills": 1.98,
+   "avgDeaths": 2.28,
+   "kd": 0.87,
+   "avgTK": 0.212,
+   "avgCapSec": 16.6,
+   "avgSurvive": 35.3,
+   "faults": 16
+  },
+  {
+   "id": "kimi",
+   "team": 0,
+   "games": 10600,
+   "totalKills": 20726,
+   "totalDeaths": 29748,
+   "totalTK": 1011,
+   "avgKills": 1.96,
+   "avgDeaths": 2.81,
+   "kd": 0.7,
+   "avgTK": 0.095,
+   "avgCapSec": 9.9,
+   "avgSurvive": 32,
+   "faults": 18
+  },
+  {
+   "id": "fable",
+   "team": 1,
+   "games": 10600,
+   "totalKills": 24376,
+   "totalDeaths": 27737,
+   "totalTK": 1126,
+   "avgKills": 2.3,
+   "avgDeaths": 2.62,
+   "kd": 0.88,
+   "avgTK": 0.106,
+   "avgCapSec": 16.8,
+   "avgSurvive": 32.6,
+   "faults": 13
+  },
+  {
+   "id": "opus",
+   "team": 1,
+   "games": 10600,
+   "totalKills": 19671,
+   "totalDeaths": 20806,
+   "totalTK": 1234,
+   "avgKills": 1.86,
+   "avgDeaths": 1.96,
+   "kd": 0.95,
+   "avgTK": 0.116,
+   "avgCapSec": 20.8,
+   "avgSurvive": 36.4,
+   "faults": 11
+  },
+  {
+   "id": "carbon",
+   "team": 1,
+   "games": 10600,
+   "totalKills": 24972,
+   "totalDeaths": 17918,
+   "totalTK": 626,
+   "avgKills": 2.36,
+   "avgDeaths": 1.69,
+   "kd": 1.39,
+   "avgTK": 0.059,
+   "avgCapSec": 39.4,
+   "avgSurvive": 33.5,
+   "faults": 7
+  },
+  {
+   "id": "glm",
+   "team": 1,
+   "games": 10600,
+   "totalKills": 10072,
+   "totalDeaths": 30215,
+   "totalTK": 2176,
+   "avgKills": 0.95,
+   "avgDeaths": 2.85,
+   "kd": 0.33,
+   "avgTK": 0.205,
+   "avgCapSec": 20.3,
+   "avgSurvive": 15.9,
+   "faults": 14
+  },
+  {
+   "id": "deepseek",
+   "team": 1,
+   "games": 10600,
+   "totalKills": 13368,
+   "totalDeaths": 25995,
+   "totalTK": 835,
+   "avgKills": 1.26,
+   "avgDeaths": 2.45,
+   "kd": 0.51,
+   "avgTK": 0.079,
+   "avgCapSec": 20.9,
+   "avgSurvive": 30.5,
+   "faults": 14
+  }
+ ]
+}

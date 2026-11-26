@@ -1,0 +1,5 @@
+node_modules/
+dist/
+public/gen/
+_scene_raw/
+test-results/

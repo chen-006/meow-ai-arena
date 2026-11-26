@@ -1,0 +1,648 @@
+[
+ {
+  "id": "r2_g1591",
+  "ep": 12,
+  "tag": "一镖四穿",
+  "title": "R2 局 1591 · Astra 一镖纯敌四杀",
+  "desc": "全场 10,600 局唯一一镖纯敌四杀。Astra 去程连穿 Carbon、GLM，回程再串 Opus、Fable。",
+  "focusSec": 3.3,
+  "mode": 3,
+  "modeName": "elimination",
+  "map": "caldera",
+  "steps": 261,
+  "winner": 1,
+  "digest": "b342db499963e63e",
+  "reason": "ko",
+  "players": [
+   {
+    "seat": 0,
+    "team": 0,
+    "name": "fable"
+   },
+   {
+    "seat": 1,
+    "team": 0,
+    "name": "opus"
+   },
+   {
+    "seat": 2,
+    "team": 0,
+    "name": "carbon"
+   },
+   {
+    "seat": 3,
+    "team": 0,
+    "name": "glm"
+   },
+   {
+    "seat": 4,
+    "team": 0,
+    "name": "deepseek"
+   },
+   {
+    "seat": 5,
+    "team": 1,
+    "name": "astra"
+   },
+   {
+    "seat": 6,
+    "team": 1,
+    "name": "sol"
+   },
+   {
+    "seat": 7,
+    "team": 1,
+    "name": "hydrogen"
+   },
+   {
+    "seat": 8,
+    "team": 1,
+    "name": "grok"
+   },
+   {
+    "seat": 9,
+    "team": 1,
+    "name": "kimi"
+   }
+  ],
+  "kb": 27.2
+ },
+ {
+  "id": "r4_g587",
+  "ep": 12,
+  "tag": "0.05分绝杀",
+  "title": "R4 局 587 · 最后一帧 0.05 分翻盘",
+  "desc": "58.35 秒翻下 A 点，59.95 秒追平，60.00 秒停表 86.30 比 86.25 绝杀。",
+  "focusSec": 55,
+  "mode": 4,
+  "modeName": "control",
+  "map": "piers",
+  "steps": 1200,
+  "winner": 1,
+  "digest": "9515f0e882de7ca5",
+  "reason": "time",
+  "players": [
+   {
+    "seat": 0,
+    "team": 0,
+    "name": "fable"
+   },
+   {
+    "seat": 1,
+    "team": 0,
+    "name": "opus"
+   },
+   {
+    "seat": 2,
+    "team": 0,
+    "name": "carbon"
+   },
+   {
+    "seat": 3,
+    "team": 0,
+    "name": "glm"
+   },
+   {
+    "seat": 4,
+    "team": 0,
+    "name": "deepseek"
+   },
+   {
+    "seat": 5,
+    "team": 1,
+    "name": "astra"
+   },
+   {
+    "seat": 6,
+    "team": 1,
+    "name": "sol"
+   },
+   {
+    "seat": 7,
+    "team": 1,
+    "name": "hydrogen"
+   },
+   {
+    "seat": 8,
+    "team": 1,
+    "name": "grok"
+   },
+   {
+    "seat": 9,
+    "team": 1,
+    "name": "kimi"
+   }
+  ],
+  "kb": 204
+ },
+ {
+  "id": "r6_g1336",
+  "ep": 12,
+  "tag": "2.25cm决战",
+  "title": "R6 局 1336 · 双王贴身 2.25cm 斩王",
+  "desc": "双王均剩 1 命无盾，16.50 秒 Fable 冲刺擦身圆心仅差 2.25 厘米，Astra 踢中接挥砍绝杀。",
+  "focusSec": 15,
+  "mode": 5,
+  "modeName": "king",
+  "map": "keeps",
+  "steps": 341,
+  "winner": 0,
+  "digest": "42dc3e3a164cba90",
+  "reason": "ko",
+  "players": [
+   {
+    "seat": 0,
+    "team": 0,
+    "name": "astra"
+   },
+   {
+    "seat": 1,
+    "team": 0,
+    "name": "sol"
+   },
+   {
+    "seat": 2,
+    "team": 0,
+    "name": "hydrogen"
+   },
+   {
+    "seat": 3,
+    "team": 0,
+    "name": "grok"
+   },
+   {
+    "seat": 4,
+    "team": 0,
+    "name": "kimi"
+   },
+   {
+    "seat": 5,
+    "team": 1,
+    "name": "fable"
+   },
+   {
+    "seat": 6,
+    "team": 1,
+    "name": "opus"
+   },
+   {
+    "seat": 7,
+    "team": 1,
+    "name": "carbon"
+   },
+   {
+    "seat": 8,
+    "team": 1,
+    "name": "glm"
+   },
+   {
+    "seat": 9,
+    "team": 1,
+    "name": "deepseek"
+   }
+  ],
+  "kb": 51.9
+ },
+ {
+  "id": "r1_g366",
+  "ep": 12,
+  "tag": "一挑五",
+  "title": "R1 局 366 · Astra 绝境一挑五",
+  "desc": "14.20 秒队友全灭面对满编五人，Astra 十二秒内逐个镖杀五人独自赢局。",
+  "focusSec": 13.5,
+  "mode": 3,
+  "modeName": "elimination",
+  "map": "caldera",
+  "steps": 532,
+  "winner": 0,
+  "digest": "ad01e2d45991a2ae",
+  "reason": "ko",
+  "players": [
+   {
+    "seat": 0,
+    "team": 0,
+    "name": "astra"
+   },
+   {
+    "seat": 1,
+    "team": 0,
+    "name": "sol"
+   },
+   {
+    "seat": 2,
+    "team": 0,
+    "name": "hydrogen"
+   },
+   {
+    "seat": 3,
+    "team": 0,
+    "name": "grok"
+   },
+   {
+    "seat": 4,
+    "team": 0,
+    "name": "kimi"
+   },
+   {
+    "seat": 5,
+    "team": 1,
+    "name": "fable"
+   },
+   {
+    "seat": 6,
+    "team": 1,
+    "name": "opus"
+   },
+   {
+    "seat": 7,
+    "team": 1,
+    "name": "carbon"
+   },
+   {
+    "seat": 8,
+    "team": 1,
+    "name": "glm"
+   },
+   {
+    "seat": 9,
+    "team": 1,
+    "name": "deepseek"
+   }
+  ],
+  "kb": 75.9
+ },
+ {
+  "id": "r3_g897",
+  "ep": 12,
+  "tag": "喜剧名场面",
+  "title": "R3 局 897 · GLM 七刀误杀 Carbon",
+  "desc": "Fable 队队内名场面：GLM 在同一复活点七次挥砍误杀 Carbon，缔造全场最高单人误杀纪录。",
+  "focusSec": 2,
+  "mode": 4,
+  "modeName": "control",
+  "map": "piers",
+  "steps": 1200,
+  "winner": 1,
+  "digest": "ebc6d220fecceda9",
+  "reason": "time",
+  "players": [
+   {
+    "seat": 0,
+    "team": 0,
+    "name": "fable"
+   },
+   {
+    "seat": 1,
+    "team": 0,
+    "name": "opus"
+   },
+   {
+    "seat": 2,
+    "team": 0,
+    "name": "carbon"
+   },
+   {
+    "seat": 3,
+    "team": 0,
+    "name": "glm"
+   },
+   {
+    "seat": 4,
+    "team": 0,
+    "name": "deepseek"
+   },
+   {
+    "seat": 5,
+    "team": 1,
+    "name": "astra"
+   },
+   {
+    "seat": 6,
+    "team": 1,
+    "name": "sol"
+   },
+   {
+    "seat": 7,
+    "team": 1,
+    "name": "hydrogen"
+   },
+   {
+    "seat": 8,
+    "team": 1,
+    "name": "grok"
+   },
+   {
+    "seat": 9,
+    "team": 1,
+    "name": "kimi"
+   }
+  ],
+  "kb": 200.7
+ },
+ {
+  "id": "r5_g1662",
+  "ep": 12,
+  "tag": "满血踢王",
+  "title": "R5 局 1662 · GLM 开局一脚踢走满命 Astra",
+  "desc": "5.55 秒 GLM 一脚将满三命的 Astra 踢下悬崖，6.20 秒光速终结对局。",
+  "focusSec": 4.5,
+  "mode": 5,
+  "modeName": "king",
+  "map": "keeps",
+  "steps": 124,
+  "winner": 1,
+  "digest": "59f2c2bfe42fb3ec",
+  "reason": "ko",
+  "players": [
+   {
+    "seat": 0,
+    "team": 0,
+    "name": "astra"
+   },
+   {
+    "seat": 1,
+    "team": 0,
+    "name": "sol"
+   },
+   {
+    "seat": 2,
+    "team": 0,
+    "name": "hydrogen"
+   },
+   {
+    "seat": 3,
+    "team": 0,
+    "name": "grok"
+   },
+   {
+    "seat": 4,
+    "team": 0,
+    "name": "kimi"
+   },
+   {
+    "seat": 5,
+    "team": 1,
+    "name": "fable"
+   },
+   {
+    "seat": 6,
+    "team": 1,
+    "name": "opus"
+   },
+   {
+    "seat": 7,
+    "team": 1,
+    "name": "carbon"
+   },
+   {
+    "seat": 8,
+    "team": 1,
+    "name": "glm"
+   },
+   {
+    "seat": 9,
+    "team": 1,
+    "name": "deepseek"
+   }
+  ],
+  "kb": 20.6
+ },
+ {
+  "id": "ep11_4v4_oldtown",
+  "ep": 11,
+  "tag": "4v4 老城",
+  "title": "第 11 集 4v4 · 老城：巷战绕房",
+  "desc": "同一套阵容换到老城：房子挡镖、巷口互相埋伏，最后一个人决定胜负。",
+  "focusSec": 1.5,
+  "mode": 2,
+  "modeName": "team",
+  "map": "oldtown",
+  "steps": 402,
+  "winner": 1,
+  "digest": "17fca997eaaf7545",
+  "reason": "ko",
+  "players": [
+   {
+    "seat": 0,
+    "team": 0,
+    "name": "astra"
+   },
+   {
+    "seat": 1,
+    "team": 0,
+    "name": "sol"
+   },
+   {
+    "seat": 2,
+    "team": 0,
+    "name": "hydrogen"
+   },
+   {
+    "seat": 3,
+    "team": 0,
+    "name": "grok"
+   },
+   {
+    "seat": 4,
+    "team": 1,
+    "name": "fable"
+   },
+   {
+    "seat": 5,
+    "team": 1,
+    "name": "opus"
+   },
+   {
+    "seat": 6,
+    "team": 1,
+    "name": "carbon"
+   },
+   {
+    "seat": 7,
+    "team": 1,
+    "name": "glm"
+   }
+  ],
+  "kb": 334.9
+ },
+ {
+  "id": "ep11_4v4_canyon",
+  "ep": 11,
+  "tag": "4v4 峡谷",
+  "title": "第 11 集 4v4 · 峡谷：两队海选版隔谷对扔",
+  "desc": "第 12 集两队的海选原版（Astra/Sol/Hydrogen/Grok 对 Fable/Opus/Carbon/GLM）在峡谷 4v4：隔着峡谷对扔，过石桥才能近身。",
+  "focusSec": 2,
+  "mode": 2,
+  "modeName": "team",
+  "map": "canyon",
+  "steps": 362,
+  "winner": 0,
+  "digest": "a8c72e489fcae449",
+  "reason": "ko",
+  "players": [
+   {
+    "seat": 0,
+    "team": 0,
+    "name": "astra"
+   },
+   {
+    "seat": 1,
+    "team": 0,
+    "name": "sol"
+   },
+   {
+    "seat": 2,
+    "team": 0,
+    "name": "hydrogen"
+   },
+   {
+    "seat": 3,
+    "team": 0,
+    "name": "grok"
+   },
+   {
+    "seat": 4,
+    "team": 1,
+    "name": "fable"
+   },
+   {
+    "seat": 5,
+    "team": 1,
+    "name": "opus"
+   },
+   {
+    "seat": 6,
+    "team": 1,
+    "name": "carbon"
+   },
+   {
+    "seat": 7,
+    "team": 1,
+    "name": "glm"
+   }
+  ],
+  "kb": 296.7
+ },
+ {
+  "id": "ep11_g428",
+  "ep": 11,
+  "tag": "海选双雄",
+  "title": "海选 1v1 · Astra vs Fable（石环）",
+  "desc": "海选冠亚军正面交锋，278 步攻防博弈见真章。",
+  "focusSec": 0,
+  "mode": 0,
+  "modeName": "duel",
+  "map": "stonecircle",
+  "steps": 278,
+  "winner": 0,
+  "digest": "ffd92b3b5f1e67fe",
+  "reason": "ko",
+  "players": [
+   {
+    "seat": 0,
+    "team": 0,
+    "name": "astra"
+   },
+   {
+    "seat": 1,
+    "team": 1,
+    "name": "fable"
+   }
+  ],
+  "kb": 11.7
+ },
+ {
+  "id": "ep11_g23457",
+  "ep": 11,
+  "tag": "四人混战",
+  "title": "海选 4 人混战 · Sol 阴阳乱杀",
+  "desc": "Kimi、Doubao、Sol、Hydrogen 四人混战阴阳图，61 步闪电战。",
+  "focusSec": 0,
+  "mode": 1,
+  "modeName": "ffa",
+  "map": "yinyang",
+  "steps": 61,
+  "winner": 2,
+  "digest": "6ef4d8a89bca3f63",
+  "reason": "ko",
+  "players": [
+   {
+    "seat": 0,
+    "team": 0,
+    "name": "kimi"
+   },
+   {
+    "seat": 1,
+    "team": 1,
+    "name": "doubao"
+   },
+   {
+    "seat": 2,
+    "team": 2,
+    "name": "sol"
+   },
+   {
+    "seat": 3,
+    "team": 3,
+    "name": "hydrogen"
+   }
+  ],
+  "kb": 5.3
+ },
+ {
+  "id": "ep11_g17237",
+  "ep": 11,
+  "tag": "废墟单挑",
+  "title": "海选 1v1 · GLM vs MiMo（废墟）",
+  "desc": "断墙残柱间的绕柱回镖与贴身缠斗。",
+  "focusSec": 0,
+  "mode": 0,
+  "modeName": "duel",
+  "map": "ruins",
+  "steps": 154,
+  "winner": 1,
+  "digest": "82f85b4ab3e483a0",
+  "reason": "ko",
+  "players": [
+   {
+    "seat": 0,
+    "team": 0,
+    "name": "mimo"
+   },
+   {
+    "seat": 1,
+    "team": 1,
+    "name": "glm"
+   }
+  ],
+  "kb": 4.4
+ },
+ {
+  "id": "ep11_g10142",
+  "ep": 11,
+  "tag": "浮冰爆冷",
+  "title": "海选 1v1 · DeepSeek 冰原反杀 Carbon",
+  "desc": "浮冰窄道上的极限拉扯与反杀。",
+  "focusSec": 0,
+  "mode": 0,
+  "modeName": "duel",
+  "map": "icefloes",
+  "steps": 54,
+  "winner": 1,
+  "digest": "43e4cffe24141722",
+  "reason": "ko",
+  "players": [
+   {
+    "seat": 0,
+    "team": 0,
+    "name": "carbon"
+   },
+   {
+    "seat": 1,
+    "team": 1,
+    "name": "deepseek"
+   }
+  ],
+  "kb": 4
+ }
+]

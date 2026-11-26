@@ -1,0 +1,126 @@
+{
+ "retest": {
+  "astra": {
+   "solo": 306.1,
+   "final": 295.6,
+   "delta": -10.5,
+   "se": 20.6,
+   "duelDelta": 27.5,
+   "ffaDelta": -48.5,
+   "selfWr": 46.7
+  },
+  "sol": {
+   "solo": 33.1,
+   "final": 31.5,
+   "delta": -1.6,
+   "se": 10.2,
+   "duelDelta": -13.9,
+   "ffaDelta": 10.8,
+   "selfWr": 51.2
+  },
+  "hydrogen": {
+   "solo": 29.8,
+   "final": 33.7,
+   "delta": 3.8,
+   "se": 13.9,
+   "duelDelta": 49.3,
+   "ffaDelta": -41.7,
+   "selfWr": 52.9
+  },
+  "grok": {
+   "solo": -0.9,
+   "final": -8.5,
+   "delta": -7.6,
+   "se": 15.6,
+   "duelDelta": -6.9,
+   "ffaDelta": -8.4,
+   "selfWr": 48.8
+  },
+  "kimi": {
+   "solo": -83.5,
+   "final": -141.5,
+   "delta": -58,
+   "se": 18.4,
+   "duelDelta": -68.4,
+   "ffaDelta": -47.5,
+   "selfWr": 41.2
+  },
+  "fable": {
+   "solo": 132,
+   "final": 109.5,
+   "delta": -22.5,
+   "se": 15.3,
+   "duelDelta": -50.6,
+   "ffaDelta": 5.6,
+   "selfWr": 45.8
+  },
+  "opus": {
+   "solo": 76.3,
+   "final": 85.9,
+   "delta": 9.7,
+   "se": 10.5,
+   "duelDelta": 46,
+   "ffaDelta": -26.7,
+   "selfWr": 47.1
+  },
+  "carbon": {
+   "solo": 51,
+   "final": 105,
+   "delta": 54.1,
+   "se": 20.4,
+   "duelDelta": 55.2,
+   "ffaDelta": 52.9,
+   "selfWr": 52.1
+  },
+  "glm": {
+   "solo": -9.4,
+   "final": 61.6,
+   "delta": 71,
+   "se": 14.2,
+   "duelDelta": 106.2,
+   "ffaDelta": 35.9,
+   "selfWr": 59.6
+  },
+  "deepseek": {
+   "solo": -30,
+   "final": -37,
+   "delta": -7,
+   "se": 19.6,
+   "duelDelta": -55.4,
+   "ffaDelta": 41.5,
+   "selfWr": 52.9
+  }
+ },
+ "experiments": [
+  {
+   "id": "allstar_vs_5astra",
+   "title": "非 Astra 全明星 vs 5×Astra",
+   "subtitle": "Fable+Opus+Carbon+Hydrogen+Sol 对战五个克隆 Astra",
+   "result": "11.4% vs 88.3%",
+   "detail": "火山口 20.0% · 栈桥 3.3% · 双堡 10.8%（360 局）"
+  },
+  {
+   "id": "kimi_carbon_swap",
+   "title": "拍卖平行宇宙：¥1 Kimi ↔ ¥599 Carbon",
+   "subtitle": "把两队最贵与最便宜的队员互换",
+   "result": "62.8% → 87.2% (+24.4pp)",
+   "detail": "火山口 +20.0pp · 栈桥 +34.2pp · 双堡 +19.2pp（720 局）"
+  },
+  {
+   "id": "no_friendly_fire",
+   "title": "关闭友军伤害对照",
+   "subtitle": "友伤 606 次归零，谁更受益？",
+   "result": "65.3% → 68.6% (+3.3pp)",
+   "detail": "火山口 +9.2pp · 栈桥 +6.7pp · 双堡 -5.8pp（720 局）"
+  },
+  {
+   "id": "carry_1v4",
+   "title": "一拖四极限承压",
+   "subtitle": "单队长带 4 名陪练挑战完整对手队",
+   "result": "Astra+4×weak 33.0% · 双堡 66.0%",
+   "detail": "Astra+4×strong 33.3% · Fable+4×strong 11.0%（900 局）"
+  }
+ ],
+ "hasRawInd": true,
+ "hasRawTeam": true
+}
