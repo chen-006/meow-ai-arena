@@ -1,0 +1,11 @@
+{
+  "author": "fdsfds",
+  "github": "assdbdbdgghyu-alt",
+  "name": "sword（纯手刀bot）",
+  "description": "用四帧延迟预判来镖与走位，以冲刺切入、持镖手刀和格挡作战，并避开即将塌陷的地块。",
+  "written_by": "human+ai",
+  "model": "GPT-6.2 Sol",
+  "tool": "Codex",
+  "based_on": "自有 Bot「伏黑甚尔」实战优化版（同一份源码）",
+  "license": "MIT"
+}
