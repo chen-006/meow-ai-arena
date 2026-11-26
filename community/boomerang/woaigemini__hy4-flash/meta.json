@@ -1,0 +1,11 @@
+{
+  "author": "woaigemini",
+  "github": "woaigemini",
+  "name": "hy4-flash",
+  "description": "基于真实规则引擎推演的回旋镖对战 AI",
+  "written_by": "ai",
+  "model": "Tencent Hunyuan Hy",
+  "tool": "CodeBuddy",
+  "based_on": "bots/qwen4-max/player.cpp",
+  "license": "MIT"
+}
