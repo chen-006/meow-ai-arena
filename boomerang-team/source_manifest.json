@@ -7,7 +7,7 @@
     "workspace/bots/mid.exe": "0088ae09a750eb872a565a598798bbbd03a3ef7a7677e29bcf14ad89416678e1",
     "workspace/bots/strong.exe": "e1b6a977c37546ab110c2b29b2642a88b7892cc3fa42199c710c9b0d26aacbd5"
   },
-  "file_count": 479,
+  "file_count": 492,
   "files": {
     "CONDITIONS.md": {
       "sha256": "720ba4c1263d0b42ddcfb2686b66f603fa1e1de0ff3d863eca208de2aac004fd",
@@ -18,8 +18,8 @@
       "bytes": 5974
     },
     "MANIFEST.md": {
-      "sha256": "68c104068e2476b8de12849aeaf87a5ccdc2a67421b1405c05621a60740a611c",
-      "bytes": 6206
+      "sha256": "92be8fed4adb8be936f5bb416ae813875709926e9089ca00c1bb1c45917519fc",
+      "bytes": 6353
     },
     "README.md": {
       "sha256": "b816fd02958a28117d323064f47f5029c8cb9ae45c9f188d129c400b831025d0",
@@ -174,8 +174,8 @@
       "bytes": 18568
     },
     "analysis/比赛全景.md": {
-      "sha256": "b40d01a582360981b018848f889c6b7f78daca485dd6677d1775b5db5a8820b5",
-      "bytes": 66573
+      "sha256": "e38b13d8db19af050ecaa5d843e4da100765897610f81d3d4b97a24bf33c50b5",
+      "bytes": 66510
     },
     "analysis/硬数据总账.md": {
       "sha256": "85c48768339e5313afae9c6b8418a24235ca326768d38a42a1fc3f4badcb8aaf",
@@ -534,8 +534,8 @@
       "bytes": 1792
     },
     "renderer/src/cast.py": {
-      "sha256": "7838555b12c3e71696d191e289397d2029af64b5343a5754cfecae4820cd511b",
-      "bytes": 5042
+      "sha256": "c28c0ad543c22031cf3e7754320367ed75e059ec4f2fbd6829776f24972314c3",
+      "bytes": 4983
     },
     "renderer/src/chars.py": {
       "sha256": "cd310a84a5c6f1196d1292adfc1081bf701d226df90474485ce201dea0e2ecf1",
@@ -570,8 +570,8 @@
       "bytes": 41752
     },
     "renderer/src/hud.py": {
-      "sha256": "29a7022f414d7cb694dfb8f37a18ef71f908113f06f4c29c243779c8bf2e36a6",
-      "bytes": 41062
+      "sha256": "d639aec009a01c807746e2aee1ec69de405d85a33ab62bfb0d3afb66be276e8b",
+      "bytes": 41013
     },
     "renderer/src/liquid.py": {
       "sha256": "45c5ca5cc8354f77e4a35056a54229899a72e20ff65560dc0cb62fb8dfa8a0e8",
@@ -634,16 +634,16 @@
       "bytes": 9047
     },
     "renderer/src/themes.py": {
-      "sha256": "bb4bc7757f5fcda15b17119420a65aff24ceb84d6c8ad69f0482eca1a896b1af",
-      "bytes": 26451
+      "sha256": "55b566112af5273a7ce0f15071d1be85bc3f9eec51e7f1fb6b98ed206fabe7e0",
+      "bytes": 26420
     },
     "renderer/src/timeline.py": {
       "sha256": "fde3f85fefdcd23a6869cd5c46c57625d63a6d14efb79939322292d759aa5797",
       "bytes": 17474
     },
     "renderer/src/voxchars/__init__.py": {
-      "sha256": "f1636f758aa381489270d7f452013b15e6b620225741c13d7a82e3ac694e3a91",
-      "bytes": 1309
+      "sha256": "3815b4590251e21adc356a529c0866f554c4d40589ab86f13626bf03c447a046",
+      "bytes": 1223
     },
     "renderer/src/voxchars/astra.py": {
       "sha256": "fa7032d8186ed1ba5f70499047f28adcd710c0eb20ff6d74906024503c614d55",
@@ -953,6 +953,10 @@
       "sha256": "56899b6830ad22f385a09d35b5702a337384e65660b01cf071fd42698694660c",
       "bytes": 262
     },
+    "rounds/R1/Astra队/提交说明.md": {
+      "sha256": "feb4b3153a8baf0bdb403b689305ec21d34234611b54e04124f7a0373a3d8c4e",
+      "bytes": 833
+    },
     "rounds/R1/Astra队/正式/布阵.json": {
       "sha256": "2f4e49035643c77bb5a07102eccee48fc9613431edf92ebe51b4f318197f9227",
       "bytes": 258
@@ -976,6 +980,10 @@
     "rounds/R1/Fable队/备选2/战术.txt": {
       "sha256": "eb0f7525f60644b61e1f9052ceca58aaf6727cff8df2068579f081c70ca1e7c0",
       "bytes": 56
+    },
+    "rounds/R1/Fable队/提交说明.md": {
+      "sha256": "dfec61181941d04a8b794d0844bfab4b12c5d4e4c8955f3f46411f5c99929d53",
+      "bytes": 1271
     },
     "rounds/R1/Fable队/正式/布阵.json": {
       "sha256": "a9b97f2991ec9d80a03da4112f918f68ea62df9e9d07df3d6ab8f45f648d936d",
@@ -1001,6 +1009,10 @@
       "sha256": "915498b4816576d1fc491a7cb322139f0dc55dcfd4846090f7c5fbbb1918d8cc",
       "bytes": 213
     },
+    "rounds/R2/Astra队/提交说明.md": {
+      "sha256": "8c379b1665863b6b77c5c3a573fa5e4e905cdc5d70a66440d20fa5c4f1fd7458",
+      "bytes": 860
+    },
     "rounds/R2/Astra队/正式/布阵.json": {
       "sha256": "2f4e49035643c77bb5a07102eccee48fc9613431edf92ebe51b4f318197f9227",
       "bytes": 258
@@ -1024,6 +1036,10 @@
     "rounds/R2/Fable队/备选2/战术.txt": {
       "sha256": "45cff333cd93d271d0f1e70a4892b5adebab912fec041a696de28795f2048220",
       "bytes": 142
+    },
+    "rounds/R2/Fable队/提交说明.md": {
+      "sha256": "8904b2fedc994d884100475bff61470bc491aa8067c97d545079352ac48cc60c",
+      "bytes": 1945
     },
     "rounds/R2/Fable队/正式/布阵.json": {
       "sha256": "cc11959ae6961e26ca6e598ecbf8b206c84b5ce31ea7eb73a60d6add5663d503",
@@ -1049,6 +1065,10 @@
       "sha256": "6ece32a06fe7cdbf8f94d716b3132074ec447a645ff749c93a8c5ea6759191ca",
       "bytes": 98
     },
+    "rounds/R3/Astra队/提交说明.md": {
+      "sha256": "8253947e27f3d7a5d553051b66a5c10fcf01f7afe92660c66382f879dfbd54aa",
+      "bytes": 893
+    },
     "rounds/R3/Astra队/正式/布阵.json": {
       "sha256": "a0ad2e362f48984e60287bdfa36ea845f07c3996bf045bc9b7844fff0f8f01be",
       "bytes": 262
@@ -1072,6 +1092,10 @@
     "rounds/R3/Fable队/备选2/战术.txt": {
       "sha256": "8fc2fdc366e380cd04d0409ce7838b77d73ec1b86f0dcce175e027312d09fa4e",
       "bytes": 64
+    },
+    "rounds/R3/Fable队/提交说明.md": {
+      "sha256": "fdd93a66994a7139ab7fa0ef5489514e006b3a1a33339271e72c9ae3b27c065f",
+      "bytes": 1611
     },
     "rounds/R3/Fable队/正式/布阵.json": {
       "sha256": "4ccb09e02c15f13230e52c8afb337e050e49c813f367d9a5451561c3145b66be",
@@ -1097,6 +1121,10 @@
       "sha256": "0e5ee6361f280d0361dac748e3373a8f66d46ceba95860b3f5e76299ef04da57",
       "bytes": 215
     },
+    "rounds/R4/Astra队/提交说明.md": {
+      "sha256": "8e8e8afd4d1531b33937f8b2fd6958f67007349f44d758dfb7925e1e8576add1",
+      "bytes": 953
+    },
     "rounds/R4/Astra队/正式/布阵.json": {
       "sha256": "74b60022bf4d5ff929602d0f58851a51f44738f2482a412d26274f4492c74d1c",
       "bytes": 262
@@ -1120,6 +1148,10 @@
     "rounds/R4/Fable队/备选2/战术.txt": {
       "sha256": "e19137d643d70a1e0f373633bffc5104855d87f112d6c48894bde9c527ab9eca",
       "bytes": 64
+    },
+    "rounds/R4/Fable队/提交说明.md": {
+      "sha256": "59dd147af3d3b4f452d127741d51d23c5024f4e79d9835c09f5b10f0d8111a01",
+      "bytes": 2016
     },
     "rounds/R4/Fable队/正式/布阵.json": {
       "sha256": "d0eecc5d9c4727e3916edab67144228b0dc3893387bb97690e8f1e619199e741",
@@ -1145,6 +1177,10 @@
       "sha256": "1a73353770dbf1d677bbe2b3761b8ba252adb19b32525e4f186736f07a85c8ce",
       "bytes": 257
     },
+    "rounds/R5/Astra队/提交说明.md": {
+      "sha256": "5f6c1042e40fcf5a1ddfbf32c4c749b2c9fb6956937ba261b15ff92c7ff94d1d",
+      "bytes": 1005
+    },
     "rounds/R5/Astra队/正式/布阵.json": {
       "sha256": "b2a4f67e4bfbb3f171068163b57ec88d3c68740eb91b051a6b6f75dc3f69e901",
       "bytes": 269
@@ -1168,6 +1204,10 @@
     "rounds/R5/Fable队/备选2/战术.txt": {
       "sha256": "62db3d192d4d4a0ca629281c2b44da3d2c39b0286c85ef6333d8fc4e118f53a2",
       "bytes": 76
+    },
+    "rounds/R5/Fable队/提交说明.md": {
+      "sha256": "f41ec6bb753548931694b901a3aea1c0959ec9936aa038223c56af70ad2271c2",
+      "bytes": 2191
     },
     "rounds/R5/Fable队/正式/布阵.json": {
       "sha256": "a76887bd29be2be1f266d9c2ae61124367efe4896261cbf07d4ef97c858d516d",
@@ -1193,6 +1233,10 @@
       "sha256": "3c9df26c169cc539c56e1c20dafd70ecdbd83a59483fd4dc30f2750b9f6ec104",
       "bytes": 387
     },
+    "rounds/R6/Astra队/提交说明.md": {
+      "sha256": "b3ebd2ff9efcc9c93baf267e2218efc3b2e6a47db98990576b182c5978c3eeba",
+      "bytes": 1254
+    },
     "rounds/R6/Astra队/正式/布阵.json": {
       "sha256": "b2a4f67e4bfbb3f171068163b57ec88d3c68740eb91b051a6b6f75dc3f69e901",
       "bytes": 269
@@ -1217,6 +1261,10 @@
       "sha256": "78bde2cff6a7c5f966013b5945f6766a7756b14d78ddb940fbf53762b4429289",
       "bytes": 183
     },
+    "rounds/R6/Fable队/提交说明.md": {
+      "sha256": "db130b888fe1d8c34c605648c26450b23fbf5959a82b1701ad796faed98557c0",
+      "bytes": 2146
+    },
     "rounds/R6/Fable队/正式/布阵.json": {
       "sha256": "ede0aed7b7c44ed31db673e5522b1a233a6555f8be724e725cae1181789d55bd",
       "bytes": 284
@@ -1226,8 +1274,8 @@
       "bytes": 76
     },
     "rounds/README.md": {
-      "sha256": "8ffde5bf953627e1b30bb20ff6f9ee5aae2d4880ca3bbafb4143c10cf1f08f8e",
-      "bytes": 1219
+      "sha256": "7f1460ceefead188f54fef3bd2e7af06ebb1b7bafe97fe0d3fe4c4db23b66958",
+      "bytes": 1355
     },
     "team-tools/README.md": {
       "sha256": "d4384a4881a3e2e2378c321f0644c82fc17cf98c95dd9b23eec149b0e66c57e1",
@@ -1266,8 +1314,8 @@
       "bytes": 23855
     },
     "team-tools/team_cli.py": {
-      "sha256": "3925e4508527857afd3304de3b9fbacb58e1762c974a7fb8b4b2ece35fbbeb6d",
-      "bytes": 39533
+      "sha256": "e205e8a3ce0d83fb883975c78a5895a17bd212bc218606f21dd12825078f2a8c",
+      "bytes": 39362
     },
     "team-tools/templates/ask.cmd": {
       "sha256": "c682c8c2c5e83e8b5eb2d84db04e7605f1a8528700231ab2d231a8cbf45d5397",
@@ -1348,6 +1396,10 @@
     "web-play/native/common/stdio_bot.js": {
       "sha256": "24e589753a3138f462d0620ecc501dabade3fe2dfb08d9ed9c9772ace739e97c",
       "bytes": 1786
+    },
+    "web-play/package-lock.json": {
+      "sha256": "16749aed1d5f72d36f7adf77ba7a7e618d4d19e0f5a7e0402aacc0732bd228a0",
+      "bytes": 36133
     },
     "web-play/package.json": {
       "sha256": "b3ac75dec91acdb10dedcb42c51de62560278106c42c72816deb28549e4085dd",
@@ -1730,24 +1782,24 @@
       "bytes": 7209
     },
     "web-play/src/common/ui.ts": {
-      "sha256": "ca97362d7eb52b615469b488bce4e3429b7dde15ecb5d101510408be3e88247d",
-      "bytes": 3564
+      "sha256": "2066c21fd7a9517d2a0b4135ce933f3e890a3b08a4658040a4f1a4502361e267",
+      "bytes": 3549
     },
     "web-play/src/common/wasm.ts": {
       "sha256": "b0138451057a2d042d71be82969ba4d96fae2d188b33ce4256cbe8c267df2588",
       "bytes": 1086
     },
     "web-play/src/episodes/ep11.ts": {
-      "sha256": "865b1ecf174b2179d0ff426f7a5665629103704324c48870df7eb2050a591939",
-      "bytes": 503
+      "sha256": "8f55926933770739f1e7bc1584e5f06192b050219e5b358cd18febf69e87f73a",
+      "bytes": 488
     },
     "web-play/src/games/boomerang/arena-page.ts": {
-      "sha256": "4ed3a8c0d1cd1221596bc9bb426dc2f627acf3d1604dcab3adc0147174776d7f",
-      "bytes": 73760
+      "sha256": "a94c73e79a9dd5746ff63406559508eecf16cdf5593cea8f582596a55330c138",
+      "bytes": 73736
     },
     "web-play/src/games/boomerang/arena.css": {
-      "sha256": "897964ef380ead76aca75df387fcad8e40c6f760661ea1e54e2d12316d505c5d",
-      "bytes": 22966
+      "sha256": "f1eb13f3a5069d09fdd01eba76c78b23e24ed00e6036637cab4992e4df2d649b",
+      "bytes": 22948
     },
     "web-play/src/games/boomerang/bt.ts": {
       "sha256": "518a4cdb7a8f9faa373ca8af850502bb30863b6f321ca486fdd9ef5db7f8e9a3",
@@ -1814,8 +1866,8 @@
       "bytes": 4772
     },
     "web-play/src/games/boomerang/teams.ts": {
-      "sha256": "6db7e69d3d7b73e1b484840c3339dd978a034bf2968d66d727904079f3f077cc",
-      "bytes": 2663
+      "sha256": "4cb2be6495d619671305549aa4e284f8b511ada3966755d91435d8a487ad2ae0",
+      "bytes": 2638
     },
     "web-play/src/games/boomerang/types.ts": {
       "sha256": "dd291bbb6560375d7860764c27f5b7c04c515f19bcf36aa22f1796b216e1663f",
@@ -1830,8 +1882,8 @@
       "bytes": 11456
     },
     "web-play/src/i18n/zh/common.ts": {
-      "sha256": "c401705dee58c9241d76249172c77a8346c508a8256b8bfee60420853e3b01e8",
-      "bytes": 2911
+      "sha256": "f752bdb61ada99496a656795284d8e26206508c7d38d0841d892228ee4227952",
+      "bytes": 2783
     },
     "web-play/src/i18n/zh/episodes.ts": {
       "sha256": "9392600eb6ba51c6eab503d2963537863f42d7e38c8c2161626cb2fab0268dfc",
@@ -1846,8 +1898,8 @@
       "bytes": 5496
     },
     "web-play/src/pages/ep11.css": {
-      "sha256": "46ba512d9a4147d69394577c32f7b06ecdc2c15c683f2616078df4fddf61f385",
-      "bytes": 10900
+      "sha256": "13164b808a14271fe69fbd7a17e499be1c6b8e1d5e63fb2350832bde0bdc64f8",
+      "bytes": 10885
     },
     "web-play/src/pages/ep11.ts": {
       "sha256": "7077e856c892b529e3acc0c39c2761ea336f0f30aecf453652f912ed65800f68",
