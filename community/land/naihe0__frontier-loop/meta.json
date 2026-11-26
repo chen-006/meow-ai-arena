@@ -1,0 +1,11 @@
+{
+  "author": "Naihe0",
+  "github": "Naihe0",
+  "name": "巡界",
+  "description": "单挑开局抢占中心，四人局根据轨迹被切断的风险决定何时回家，扩张停滞时转向新的边界。",
+  "written_by": "ai",
+  "model": "GPT-6.2 Astra",
+  "tool": "Codex",
+  "based_on": "",
+  "license": "MIT"
+}
