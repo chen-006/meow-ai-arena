@@ -1,0 +1,400 @@
+{
+ "commit": "42366251f2ed496b876d44835249a30838d2c160",
+ "detail": {
+  "budget": {
+   "budget_kind": "cpu",
+   "first_ms": 1000,
+   "max_timeouts": 20,
+   "step_ms": 10
+  },
+  "complete": true,
+  "field": [
+   {
+    "is_entry": false,
+    "name": "GPT-6.2 Astra",
+    "score": 306.1
+   },
+   {
+    "is_entry": false,
+    "name": "Claude Fable 5.2",
+    "score": 132.0
+   },
+   {
+    "is_entry": false,
+    "name": "Claude Opus 5.5",
+    "score": 76.3
+   },
+   {
+    "is_entry": false,
+    "name": "Gemini 4 Carbon",
+    "score": 51.0
+   },
+   {
+    "is_entry": false,
+    "name": "GPT-6.2 Sol",
+    "score": 33.1
+   },
+   {
+    "is_entry": false,
+    "name": "Gemini 4 Hydrogen",
+    "score": 29.8
+   },
+   {
+    "is_entry": false,
+    "name": "Grok 4.7",
+    "score": -0.9
+   },
+   {
+    "is_entry": false,
+    "name": "GLM 5.3",
+    "score": -9.4
+   },
+   {
+    "is_entry": false,
+    "name": "DeepSeek-V4.1-Flash",
+    "score": -30.0
+   },
+   {
+    "is_entry": false,
+    "name": "Kimi K3.1 Pro",
+    "score": -83.5
+   },
+   {
+    "is_entry": false,
+    "name": "千问 Qwen4-Max",
+    "score": -87.1
+   },
+   {
+    "is_entry": false,
+    "name": "MiMo V2.6 Pro",
+    "score": -166.6
+   },
+   {
+    "is_entry": false,
+    "name": "豆包 Seed-Evolving",
+    "score": -250.7
+   },
+   {
+    "is_entry": true,
+    "name": "你的 bot",
+    "score": 146.4
+   }
+  ],
+  "field_size": 14,
+  "full": false,
+  "games": 416,
+  "games_by_mode": {
+   "duel": 312,
+   "ffa": 104
+  },
+  "games_note": "416 局（一对一 312、四人局 104）",
+  "mode": "formal",
+  "opponents": [
+   {
+    "display": "GPT-6.2 Astra",
+    "name": "astra",
+    "rating": 306.1186101724577,
+    "ratings": {
+     "duel": 345.17719750393536,
+     "ffa": 267.0600228409801
+    },
+    "tally": {
+     "duel": [
+      10,
+      0,
+      14
+     ],
+     "ffa": [
+      7,
+      3,
+      14
+     ]
+    }
+   },
+   {
+    "display": "Claude Fable 5.2",
+    "name": "fable",
+    "rating": 131.98522540923216,
+    "ratings": {
+     "duel": 139.99574142863588,
+     "ffa": 123.97470938982846
+    },
+    "tally": {
+     "duel": [
+      13,
+      0,
+      11
+     ],
+     "ffa": [
+      15,
+      1,
+      8
+     ]
+    }
+   },
+   {
+    "display": "Claude Opus 5.5",
+    "name": "opus",
+    "rating": 76.29596369217981,
+    "ratings": {
+     "duel": 82.33122674378093,
+     "ffa": 70.26070064057869
+    },
+    "tally": {
+     "duel": [
+      17,
+      0,
+      7
+     ],
+     "ffa": [
+      19,
+      1,
+      4
+     ]
+    }
+   },
+   {
+    "display": "Gemini 4 Carbon",
+    "name": "carbon",
+    "rating": 50.98541594341466,
+    "ratings": {
+     "duel": 36.722803645276514,
+     "ffa": 65.2480282415528
+    },
+    "tally": {
+     "duel": [
+      16,
+      0,
+      8
+     ],
+     "ffa": [
+      13,
+      0,
+      11
+     ]
+    }
+   },
+   {
+    "display": "GPT-6.2 Sol",
+    "name": "sol",
+    "rating": 33.07588691189356,
+    "ratings": {
+     "duel": 81.48570163235419,
+     "ffa": -15.33392780856707
+    },
+    "tally": {
+     "duel": [
+      9,
+      1,
+      14
+     ],
+     "ffa": [
+      19,
+      0,
+      5
+     ]
+    }
+   },
+   {
+    "display": "Gemini 4 Hydrogen",
+    "name": "hydrogen",
+    "rating": 29.846392030379967,
+    "ratings": {
+     "duel": 51.14063920337204,
+     "ffa": 8.552144857387894
+    },
+    "tally": {
+     "duel": [
+      18,
+      0,
+      6
+     ],
+     "ffa": [
+      12,
+      4,
+      8
+     ]
+    }
+   },
+   {
+    "display": "Grok 4.7",
+    "name": "grok",
+    "rating": -0.9173474478782953,
+    "ratings": {
+     "duel": 4.549034187487069,
+     "ffa": -6.38372908324366
+    },
+    "tally": {
+     "duel": [
+      16,
+      0,
+      8
+     ],
+     "ffa": [
+      15,
+      4,
+      5
+     ]
+    }
+   },
+   {
+    "display": "GLM 5.3",
+    "name": "glm",
+    "rating": -9.442858374071516,
+    "ratings": {
+     "duel": 16.933671655533466,
+     "ffa": -35.8193884036765
+    },
+    "tally": {
+     "duel": [
+      16,
+      0,
+      8
+     ],
+     "ffa": [
+      16,
+      4,
+      4
+     ]
+    }
+   },
+   {
+    "display": "DeepSeek-V4.1-Flash",
+    "name": "deepseek",
+    "rating": -29.991056869767345,
+    "ratings": {
+     "duel": -33.65448030339613,
+     "ffa": -26.327633436138562
+    },
+    "tally": {
+     "duel": [
+      16,
+      0,
+      8
+     ],
+     "ffa": [
+      14,
+      1,
+      9
+     ]
+    }
+   },
+   {
+    "display": "Kimi K3.1 Pro",
+    "name": "kimi",
+    "rating": -83.54398982096879,
+    "ratings": {
+     "duel": -84.12415694002054,
+     "ffa": -82.96382270191705
+    },
+    "tally": {
+     "duel": [
+      20,
+      0,
+      4
+     ],
+     "ffa": [
+      15,
+      3,
+      6
+     ]
+    }
+   },
+   {
+    "display": "千问 Qwen4-Max",
+    "name": "qwen",
+    "rating": -87.08246315826797,
+    "ratings": {
+     "duel": -98.03313469578632,
+     "ffa": -76.13179162074962
+    },
+    "tally": {
+     "duel": [
+      14,
+      0,
+      10
+     ],
+     "ffa": [
+      17,
+      2,
+      5
+     ]
+    }
+   },
+   {
+    "display": "MiMo V2.6 Pro",
+    "name": "mimo",
+    "rating": -166.592781437526,
+    "ratings": {
+     "duel": -212.22780963422713,
+     "ffa": -120.95775324082491
+    },
+    "tally": {
+     "duel": [
+      24,
+      0,
+      0
+     ],
+     "ffa": [
+      20,
+      2,
+      2
+     ]
+    }
+   },
+   {
+    "display": "豆包 Seed-Evolving",
+    "name": "doubao",
+    "rating": -250.73699705107794,
+    "ratings": {
+     "duel": -330.2964344269453,
+     "ffa": -171.17755967521055
+    },
+    "tally": {
+     "duel": [
+      23,
+      0,
+      1
+     ],
+     "ffa": [
+      22,
+      0,
+      2
+     ]
+    }
+   }
+  ],
+  "rank": 2,
+  "rating": 146.44787060436875,
+  "rating_method": "fixed-haixuan",
+  "ratings": {
+   "duel": 147.01190912895612,
+   "ffa": 145.88383207978137
+  },
+  "reference": {
+   "anchor": "13 位选手平均 = 0",
+   "board": "海选个人榜",
+   "path": "boomerang/results/海选成绩.json"
+  },
+  "schema": 1,
+  "seed": 61001,
+  "source_sha256": "a55b976ab477b0fb4615ad9b3cd44d45b2e47ddb0265adfce4715656c58cbd2a"
+ },
+ "entry": "assdbdbdgghyu-alt__sword",
+ "env": {
+  "compiler": "g++.exe (x86_64-posix-seh-rev1, Built by MinGW-Builds project) 15.2.0",
+  "cpus": 4,
+  "platform": "Windows-2025Server-10.0.26100-SP0",
+  "python": "3.12.10"
+ },
+ "episode": "boomerang",
+ "errors": [],
+ "files": {
+  "bot.cpp": "a55b976ab477b0fb4615ad9b3cd44d45b2e47ddb0265adfce4715656c58cbd2a"
+ },
+ "mode": "quick",
+ "schema": 1,
+ "score": 146.4,
+ "status": "pass",
+ "time": "2026-11-26T23:56:35Z"
+}
