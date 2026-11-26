@@ -1,0 +1,11 @@
+{
+  "author": "woaigemini",
+  "github": "woaigemini",
+  "name": "hy4",
+  "description": "在盲窗出手假想世界上加权迭代的回旋镖对战 AI",
+  "written_by": "ai",
+  "model": "Tencent Hunyuan Hy",
+  "tool": "CodeBuddy",
+  "based_on": "bots/qwen4-max/player.cpp；在 hy4-flash 基础上继续迭代",
+  "license": "MIT"
+}
