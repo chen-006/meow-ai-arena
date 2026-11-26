@@ -1,0 +1,66 @@
+{
+ "seed": 263,
+ "seeds_tried": 263,
+ "per_round": 12,
+ "n": 72,
+ "est_game_sec": 3294.3,
+ "rounds": {
+  "1": {
+   "map": "caldera",
+   "true_blue": 53.52,
+   "sample_blue": 50.0,
+   "sample_score": 6.0,
+   "n": 12,
+   "swapped": 6,
+   "est_sec": 419.5
+  },
+  "2": {
+   "map": "caldera",
+   "true_blue": 78.55,
+   "sample_blue": 75.0,
+   "sample_score": 9.0,
+   "n": 12,
+   "swapped": 6,
+   "est_sec": 338.3
+  },
+  "3": {
+   "map": "piers",
+   "true_blue": 68.23,
+   "sample_blue": 66.67,
+   "sample_score": 8.0,
+   "n": 12,
+   "swapped": 6,
+   "est_sec": 828.0
+  },
+  "4": {
+   "map": "piers",
+   "true_blue": 51.42,
+   "sample_blue": 50.0,
+   "sample_score": 6.0,
+   "n": 12,
+   "swapped": 6,
+   "est_sec": 828.0
+  },
+  "5": {
+   "map": "keeps",
+   "true_blue": 71.65,
+   "sample_blue": 75.0,
+   "sample_score": 9.0,
+   "n": 12,
+   "swapped": 6,
+   "est_sec": 467.8
+  },
+  "6": {
+   "map": "keeps",
+   "true_blue": 65.62,
+   "sample_blue": 66.67,
+   "sample_score": 8.0,
+   "n": 12,
+   "swapped": 6,
+   "est_sec": 412.6
+  }
+ },
+ "sample_blue_all": 63.89,
+ "true_blue_all_round_avg": 64.83,
+ "true_blue_all_games": 65.5
+}
