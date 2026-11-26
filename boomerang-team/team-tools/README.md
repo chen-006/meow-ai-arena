@@ -60,7 +60,7 @@
 1. 准备一个临时演示目录（例如 `/tmp/team-demo` 或 `D:\tmp\team-demo`），按 [`examples/team.example.json`](examples/team.example.json) 写一份 `team.json`：
    - 将 `captain_dir`、`state_dir`、`log_dir` 和队员的 `cwd` 改为该临时目录中的绝对路径；
    - 将队员的 `tool` 设为 `"fake"`，`exe` 设为本目录 `fake_member.py` 的绝对路径；
-   - 如不测试赛事阶段锁和亲手改，可先省略 `match_config`。
+   - 如不测试赛事阶段锁和亲手改，可先省略 `match_config`，同时删掉 `clock_file`（否则会去队员目录读 `clock.json` 的截止时刻，读不到就报"启动或文件操作失败"）；也可以在队员目录放一个 `{"deadline": 4102444800}` 的 `clock.json`。
 2. 命令行直接体验派活、会话续接与并发等待：
 
 ```bash
@@ -81,7 +81,8 @@ python team_cli.py wait --config /path/to/team.json member1 --timeout 30
 
 3. 若要同时体验 **代码禁发检查** 与 **30 行亲手改**：
    - 参考 [`examples/match.example.json`](examples/match.example.json) 配置 `match.json`，在 `<root>/_主办方/阶段.json` 写入 `{"phase": "dev", "deadline": 4102444800}`，并在 `<root>/_主办方/kit/` 放一份 [`../workspace/`](../workspace/) 的选手包；
-   - 在 `team.json` 中加上 `"match_config": "/path/to/match.json"` 和 `"team": "Demo队"`；
+   - 在 `team.json` 中加上 `"match_config": "/path/to/match.json"` 和 `"team": "Demo队"`，并把这份 `team.json` 另存一份到 `<root>/_主办方/队伍/Demo队/team.json`（亲手改查"队员是否正忙"时从这里读）；
+   - 队员目录 `<root>/Demo队/member1/` 里放一份 [`../workspace/`](../workspace/) 的选手包和他的 `player.cpp`（例如复制 `template.cpp`）；
    - 试发包含 ```` ``` ```` 或连续 3 行 C++ 代码的任务书，会收到退出码 `67` 的拒发提示；
    - 修改一份 `改_member1.cpp` 后运行 `python -c "import team12, sys; raise SystemExit(team12.hand_edit_cli('/path/to/match.json', 'Demo队', sys.argv[1:]))" member1 改_member1.cpp`（或通过 `templates/亲手改.cmd`），即可体验行数统计、编译检查、diff 留档与下次派活自动提醒。
 
