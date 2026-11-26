@@ -7,7 +7,7 @@
     "workspace/bots/mid.exe": "0088ae09a750eb872a565a598798bbbd03a3ef7a7677e29bcf14ad89416678e1",
     "workspace/bots/strong.exe": "e1b6a977c37546ab110c2b29b2642a88b7892cc3fa42199c710c9b0d26aacbd5"
   },
-  "file_count": 488,
+  "file_count": 479,
   "files": {
     "CONDITIONS.md": {
       "sha256": "720ba4c1263d0b42ddcfb2686b66f603fa1e1de0ff3d863eca208de2aac004fd",
@@ -174,8 +174,8 @@
       "bytes": 18568
     },
     "analysis/比赛全景.md": {
-      "sha256": "b2f4dc5645fc2ad9cd79ac8e9dd945f703f7f3610b287aa3042187966f285307",
-      "bytes": 66305
+      "sha256": "b40d01a582360981b018848f889c6b7f78daca485dd6677d1775b5db5a8820b5",
+      "bytes": 66573
     },
     "analysis/硬数据总账.md": {
       "sha256": "85c48768339e5313afae9c6b8418a24235ca326768d38a42a1fc3f4badcb8aaf",
@@ -533,26 +533,6 @@
       "sha256": "94d405f01512d7183c66a5bb833b74fdebb8d9e14ab9294c637dc1c5fa23ab10",
       "bytes": 1792
     },
-    "renderer/src/__pycache__/cast.cpython-312.pyc": {
-      "sha256": "5bad6518b95b0cf14c519ca01f3e420f697adfb15b7afd6058261bdf9f0ce46b",
-      "bytes": 5840
-    },
-    "renderer/src/__pycache__/liquid.cpython-312.pyc": {
-      "sha256": "245ef274e73af50ac6b005e089ff0023544c55c1c63498f763b163f9b0996fdd",
-      "bytes": 4476
-    },
-    "renderer/src/__pycache__/pose.cpython-312.pyc": {
-      "sha256": "b27f7b325a5b8c8383939e7ee821199ca963a92bcc86eb7c8367a3d984a53507",
-      "bytes": 68643
-    },
-    "renderer/src/__pycache__/replay.cpython-312.pyc": {
-      "sha256": "65086cc2ee72e858d8f9ad032d1eca2c3546c9b2ac897f8d3f47db82b4cbfcae",
-      "bytes": 27262
-    },
-    "renderer/src/__pycache__/timeline.cpython-312.pyc": {
-      "sha256": "5658bad7c89514a32b95aaf1ee8ed60be01b1e52f2c8bc8c02cc9cfbafbfc715",
-      "bytes": 27213
-    },
     "renderer/src/cast.py": {
       "sha256": "7838555b12c3e71696d191e289397d2029af64b5343a5754cfecae4820cd511b",
       "bytes": 5042
@@ -664,10 +644,6 @@
     "renderer/src/voxchars/__init__.py": {
       "sha256": "f1636f758aa381489270d7f452013b15e6b620225741c13d7a82e3ac694e3a91",
       "bytes": 1309
-    },
-    "renderer/src/voxchars/__pycache__/__init__.cpython-312.pyc": {
-      "sha256": "f2147dbbde7dd29202030afe9653962f200dd39dcd370885d0863f784ab3a7d6",
-      "bytes": 1794
     },
     "renderer/src/voxchars/astra.py": {
       "sha256": "fa7032d8186ed1ba5f70499047f28adcd710c0eb20ff6d74906024503c614d55",
@@ -1254,20 +1230,8 @@
       "bytes": 1219
     },
     "team-tools/README.md": {
-      "sha256": "ab0d02c1eb0aadba30d268f5e0782440284aab90919233da27eeda9836b6960d",
-      "bytes": 7884
-    },
-    "team-tools/__pycache__/common.cpython-312.pyc": {
-      "sha256": "26b732ca473916a8f48bd6faf4d5bd3da54d49a16ec4a65a676e05477dac6545",
-      "bytes": 8524
-    },
-    "team-tools/__pycache__/session_lookup.cpython-312.pyc": {
-      "sha256": "e81f02374859875423c7a9f4759bf8adab34e4070359700f5b5ec2c159ab80ca",
-      "bytes": 11990
-    },
-    "team-tools/__pycache__/team12.cpython-312.pyc": {
-      "sha256": "1184dbb2b9f044f1cf24d826ce8e668df32e219b99b22389133e4143981026ac",
-      "bytes": 36969
+      "sha256": "d4384a4881a3e2e2378c321f0644c82fc17cf98c95dd9b23eec149b0e66c57e1",
+      "bytes": 8403
     },
     "team-tools/common.py": {
       "sha256": "9d19f7976a843d5e882de48d39be3060bb9462b9677f0b1156193b61ae9db072",
@@ -1346,8 +1310,8 @@
       "bytes": 58
     },
     "web-play/README.md": {
-      "sha256": "c7168f2f128d852e48bc165e409381260112bca9187221bc642fc57e8d3a3f06",
-      "bytes": 6524
+      "sha256": "86d18f5d8319e08dc11cd033f3b4298c64c73e56b88e015e5cad88e263d88f43",
+      "bytes": 6965
     },
     "web-play/ep11/index.html": {
       "sha256": "c4bdf56406a488a9301efb9a8a24cdf6ae79e51dd9d6c4ffeeab5467e614c2eb",
@@ -1686,20 +1650,20 @@
       "bytes": 53178
     },
     "web-play/scripts/ep11-r3d/README.md": {
-      "sha256": "a0a9d2c5479c8703a4bee7346b803abf2c6ed4567f8ff991b19c062b9cc4cb66",
-      "bytes": 2114
+      "sha256": "9cb0fa4dab8902f81c57401ef0125e98fc9cc5f9dce82da009114820cda7a3f6",
+      "bytes": 2112
     },
     "web-play/scripts/ep11-r3d/br_bins.mjs": {
       "sha256": "90b2bd61cf9ae3d939132254f1d594bb7482266a6ac690ff128b7c87356bca5b",
       "bytes": 1085
     },
     "web-play/scripts/ep11-r3d/export_scene.py": {
-      "sha256": "b5a91ed4db4e72c598ebd2ad26dac95a5a2733a9442acdbff593303c051586c9",
-      "bytes": 16216
+      "sha256": "872a019daa6e229adbc31a0042daee9687003845c284ca5b366e308630f20d1f",
+      "bytes": 16271
     },
     "web-play/scripts/ep11-r3d/export_scene12.py": {
-      "sha256": "8b59b1547c657302c436f4a1b0b8db4b449a5606464b0f3cae4710bee889e03d",
-      "bytes": 17867
+      "sha256": "3f8a4696c570031b84d5cbe5bdf33a11fbee568b67df5fe76c4f4dd33ddb4a8a",
+      "bytes": 17905
     },
     "web-play/scripts/ep11-r3d/gen_4v4.mjs": {
       "sha256": "40739ea78994a94de077b06838b007e28387466f07eae040f03bce7423c03bc8",
@@ -1718,8 +1682,8 @@
       "bytes": 1808
     },
     "web-play/scripts/episodes/ep11.mjs": {
-      "sha256": "0e4ba24b3596c40c6fc34536aeb89fe9d1fe804f32549b74c1b76172127eb873",
-      "bytes": 5758
+      "sha256": "45c2179e186bd8cb8246684f50dd3175b3112c92ad295c6594c17e9625eb2143",
+      "bytes": 5844
     },
     "web-play/src/common/arena-kit.ts": {
       "sha256": "f4ee9b01e377279f6cda48dc5a5a82f7f2b1c3e9d039f77c4c3fc06f0f13dfba",
