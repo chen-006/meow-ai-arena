@@ -1,0 +1,11 @@
+{
+  "author": "Saner",
+  "github": "Saner123321",
+  "name": "Crosscurrent（交叉火线）",
+  "description": "校验对手联合指令，容忍高置信策略的单车偶发偏差，并按持续炮线与可截击性调配防守。",
+  "written_by": "ai",
+  "model": "GPT-6",
+  "tool": "Codex",
+  "based_on": "community/tank/genshinkleenahida__overmatch/bot.cpp（MIT）",
+  "license": "MIT"
+}
