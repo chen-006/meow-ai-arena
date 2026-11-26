@@ -1,0 +1,11 @@
+{
+  "author": "Saner",
+  "github": "Saner123321",
+  "name": "Undertow（回流）",
+  "description": "从官方模板开发的回旋镖 Bot，按延迟状态推演对手与飞镖，比较走位、截镖和攻防动作。",
+  "written_by": "ai",
+  "model": "GPT-6",
+  "tool": "Codex",
+  "based_on": "boomerang/workspace/template.cpp（接口骨架，MIT）",
+  "license": "MIT"
+}
