@@ -1,0 +1,10 @@
+{
+  "author": "Yick",
+  "github": "yick-1",
+  "name": "归城",
+  "description": "《归城》是一台圈地对战机器人，它算准回家的时机，把轨迹围成领地，也会主动撞墙回城，抢在对手收线前截断它的轨迹。",
+  "written_by": "ai",
+  "model": "GPT-6.2 Astra",
+  "tool": "codex",
+  "license": "MIT"
+}
