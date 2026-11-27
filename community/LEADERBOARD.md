@@ -10,36 +10,33 @@
 
 | 名次 | 作品 | 作者 | 谁写的 | 模型 / 工具 | 实力值 | 小比赛名次 | 评测日期 |
 |---:|---|---|---|---|---:|---|---|
-| 1 | [原点圈地](land/owo9891__origin-loop/) | OWO9891（[@owo9891](https://github.com/owo9891)） | AI 写 | deepseek-flash / Proma | 404 | 1 / 13 | 2026-10-24 |
-| 2 | [追獵](land/2018pces30619-cloud__hunter/) | coldzera（[@2018pces30619-cloud](https://github.com/2018pces30619-cloud)） | AI 写 | GPT-6 Astra / Codex | 371 | 1 / 13 | 2026-11-08 |
-| 3 | [墨痕喵](land/mohen2006__land-gpt-61-sol/) | mohen2006（[@mohen2006](https://github.com/mohen2006)） | AI 写 | gpt-6.1-sol / Codex | 337 | 1 / 13 | 2026-10-17 |
-| 4 | [皇家圈地](land/owo9891__royal-loop/) | OWO9891（[@owo9891](https://github.com/owo9891)） | AI 写 | deepseek-flash / DeepSeek Harness | 319 | 2 / 13 | 2026-10-22 |
-| 5 | [环路猎手](land/mohen2006__loop-hunter/) | mohen2006（[@mohen2006](https://github.com/mohen2006)） | AI 写 | Step-5-Preview / WorkBuddy | 307 | 3 / 13 | 2026-10-25 |
-| 6 | [大方框](land/light-yuncai__big-loop/) | Light-YunCai（[@light-yuncai](https://github.com/light-yuncai)） | AI 写 | deepseek-flash / DeepSeek Harness | 156 | 6 / 13 | 2026-10-25 |
-| 7 | [ring-weaver](land/laisy25__ring-weaver/) | laisy25（[@laisy25](https://github.com/laisy25)） | AI 写 | DeepSeek-V4.1-Flash / WorkBuddy | 58 | 7 / 13 | 2026-11-10 |
-| 8 | [Margin Loop](land/chiiiiiiing__margin-loop/) | LatticeFinch（[@chiiiiiiing](https://github.com/chiiiiiiing)） | AI 写 | GPT-6 / Codex | 14 | 8 / 13 | 2026-11-23 |
-| 9 | [洪泛圈地](land/spicae__flood-claim/) | spicae（[@spicae](https://github.com/spicae)） | AI 写 | deepseek-V4-pro / WorkBuddy | -38 | 10 / 13 | 2026-10-20 |
+| 1 | [巡界](land/naihe0__frontier-loop/) | Naihe0（[@naihe0](https://github.com/naihe0)） | AI 写 | GPT-6.2 Astra / Codex | 435 | 1 / 13 | 2026-11-27 |
+| 2 | [原点圈地](land/owo9891__origin-loop/) | OWO9891（[@owo9891](https://github.com/owo9891)） | AI 写 | deepseek-flash / Proma | 404 | 1 / 13 | 2026-10-24 |
+| 3 | [追獵](land/2018pces30619-cloud__hunter/) | coldzera（[@2018pces30619-cloud](https://github.com/2018pces30619-cloud)） | AI 写 | GPT-6 Astra / Codex | 371 | 1 / 13 | 2026-11-08 |
+| 4 | [墨痕喵](land/mohen2006__land-gpt-61-sol/) | mohen2006（[@mohen2006](https://github.com/mohen2006)） | AI 写 | gpt-6.1-sol / Codex | 337 | 1 / 13 | 2026-10-17 |
+| 5 | [皇家圈地](land/owo9891__royal-loop/) | OWO9891（[@owo9891](https://github.com/owo9891)） | AI 写 | deepseek-flash / DeepSeek Harness | 319 | 2 / 13 | 2026-10-22 |
+| 6 | [环路猎手](land/mohen2006__loop-hunter/) | mohen2006（[@mohen2006](https://github.com/mohen2006)） | AI 写 | Step-5-Preview / WorkBuddy | 307 | 3 / 13 | 2026-10-25 |
+| 7 | [大方框](land/light-yuncai__big-loop/) | Light-YunCai（[@light-yuncai](https://github.com/light-yuncai)） | AI 写 | deepseek-flash / DeepSeek Harness | 156 | 6 / 13 | 2026-10-25 |
+| 8 | [ring-weaver](land/laisy25__ring-weaver/) | laisy25（[@laisy25](https://github.com/laisy25)） | AI 写 | DeepSeek-V4.1-Flash / WorkBuddy | 58 | 7 / 13 | 2026-11-10 |
+| 9 | [Margin Loop](land/chiiiiiiing__margin-loop/) | LatticeFinch（[@chiiiiiiing](https://github.com/chiiiiiiing)） | AI 写 | GPT-6 / Codex | 14 | 8 / 13 | 2026-11-23 |
+| 10 | [洪泛圈地](land/spicae__flood-claim/) | spicae（[@spicae](https://github.com/spicae)） | AI 写 | deepseek-V4-pro / WorkBuddy | -38 | 10 / 13 | 2026-10-20 |
 
 官方选手参照：每份投稿评测时，官方选手和基准也在同一台虚拟机上打了同一轮小比赛。下表是它们在各次评测里实力值的中位数。
 
 | 官方选手 | 实力值（中位数） | 出现在几次评测里 |
 |---|---:|---:|
-| sonnet-5@claude-code | 330 | 9 |
-| gpt-6-astra@codex | 284 | 9 |
-| anchor-sparring | 265 | 9 |
-| opus-5.5@claude-code | 262 | 9 |
-| gpt-6-sol@codex | 184 | 9 |
-| mimo-2.6-pro@zcode | 164 | 9 |
-| kimi-k3@workbuddy | 38 | 9 |
-| anchor-greedy | 0 | 9 |
-| glm-5.3@workbuddy | -19 | 9 |
-| mystery-model@zcode | -97 | 9 |
-| deepseek-4.1f@workbuddy | -118 | 9 |
-| anchor-random | -329 | 9 |
-
-没有成绩的投稿：
-
-- [巡界](land/naihe0__frontier-loop/)（@naihe0）：还没有评测
+| sonnet-5@claude-code | 330 | 10 |
+| gpt-6-astra@codex | 284 | 10 |
+| anchor-sparring | 267 | 10 |
+| opus-5.5@claude-code | 261 | 10 |
+| gpt-6-sol@codex | 183 | 10 |
+| mimo-2.6-pro@zcode | 157 | 10 |
+| kimi-k3@workbuddy | 34 | 10 |
+| anchor-greedy | 0 | 10 |
+| glm-5.3@workbuddy | -25 | 10 |
+| mystery-model@zcode | -112 | 10 |
+| deepseek-4.1f@workbuddy | -119 | 10 |
+| anchor-random | -331 | 10 |
 
 ## 第 2 集 · 炸弹人（`bomberman/`）
 
