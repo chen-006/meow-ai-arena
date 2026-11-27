@@ -56,7 +56,7 @@ Action order(Vec move, int kind = A_NONE, Vec aim = {}) {
 
 constexpr int Horizon = 14;
 constexpr int Forecast = 24;
-constexpr int Models = 7;
+constexpr int Models = 8;
 constexpr int History = 64;
 constexpr int Angles = 24;
 constexpr int Grid = CELL / 2;
@@ -75,6 +75,47 @@ constexpr bool ImpactInference = true;
 constexpr bool LockPenalty = true;
 constexpr bool CoupledCombat = true;
 constexpr bool CatchAwareness = true;
+
+constexpr float hiddenWeights[32][18] = {
+    {-5.56284375e-03f, -3.23812693e-01f, -5.18219136e-02f, -1.69147968e-01f, 2.68024236e-01f, 6.68239415e-01f, 5.70917800e-02f, 5.14021255e-02f, -2.32215092e-01f, -2.67825395e-01f, -2.32754201e-01f, 5.29235005e-01f, -1.81411266e-01f, -5.74853756e-02f, -2.36218482e-01f, 5.27037820e-03f, 2.89534420e-01f, 8.34823251e-02f},
+    {7.30163902e-02f, -2.36194909e-01f, 7.33023286e-02f, -2.39638969e-01f, -9.91781428e-02f, 2.06468567e-01f, 5.15772849e-02f, 3.80447030e-01f, 4.41802800e-01f, 1.92903116e-01f, -2.30770096e-01f, -7.32140169e-02f, 2.84527361e-01f, 2.81340163e-02f, -5.95421195e-02f, -1.66283831e-01f, 5.46527386e-01f, -3.92096378e-02f},
+    {-1.72354281e-02f, -2.99372464e-01f, -5.91224320e-02f, -3.60174268e-01f, 4.97778095e-02f, 2.27108806e-01f, -5.42133898e-02f, -3.20135243e-02f, 4.04812545e-01f, 1.96517229e-01f, 2.15160757e-01f, 8.51163417e-02f, -6.70779049e-01f, -4.65161234e-01f, -7.10068792e-02f, -9.46231112e-02f, 9.03105617e-01f, 8.71941149e-02f},
+    {-3.44314784e-01f, 5.43396883e-02f, -1.46011412e-01f, 4.16215658e-01f, 3.65182221e-01f, 1.66429803e-01f, 2.07987782e-02f, -2.54962184e-02f, 1.39206111e-01f, 2.26484075e-01f, -9.15779918e-02f, 1.93317652e-01f, 1.70444567e-02f, -1.09342381e-01f, 3.66378054e-02f, -1.20363235e-01f, -3.34810227e-01f, 7.99263641e-02f},
+    {-3.18342149e-01f, -2.90149152e-01f, -2.21080974e-01f, 3.51211093e-02f, 2.82550424e-01f, -1.72818571e-01f, 2.94067740e-01f, -1.98127359e-01f, -9.83502492e-02f, 2.52295017e-01f, 4.11058754e-01f, 1.15488008e-01f, -1.85049810e-02f, 3.06313872e-01f, 1.07957728e-01f, -3.14682305e-01f, 2.65516281e-01f, 7.77275860e-02f},
+    {-8.77329558e-02f, 3.46480608e-01f, -4.79610711e-02f, 1.62265033e-01f, 3.39223653e-01f, -5.76988757e-01f, -1.21306060e-02f, -1.74851324e-02f, -4.93755549e-01f, -9.85147178e-01f, -8.96664783e-02f, 4.67769325e-01f, -2.18960881e-01f, -8.05190653e-02f, 2.73567677e-01f, -1.53026925e-02f, 2.00839326e-01f, 5.59007116e-02f},
+    {2.97874719e-01f, 4.56300139e-01f, 1.74782246e-01f, -2.55710661e-01f, 1.18967161e-01f, 2.09031522e-01f, -1.18574880e-01f, -1.97521299e-01f, 6.30544424e-02f, 5.16499043e-01f, -3.57860506e-01f, 1.39479265e-01f, 9.32059437e-02f, 6.68133870e-02f, 3.88712808e-02f, 1.14504777e-01f, 2.36216798e-01f, -1.95379764e-01f},
+    {-6.98435062e-04f, -1.01276889e-01f, 1.32760722e-02f, -5.04937805e-02f, -2.92609893e-02f, -2.51812547e-01f, 6.49467707e-02f, -2.02639718e-02f, -2.68902123e-01f, 4.26072776e-01f, 4.67986614e-03f, -1.75285544e-02f, 4.45276380e-01f, 8.17888901e-02f, 1.10786624e-01f, -4.59076643e-01f, 5.27337380e-02f, -6.15286119e-02f},
+    {-2.47082815e-01f, 1.77179240e-02f, -1.59707159e-01f, -2.77553946e-02f, -7.14757144e-01f, -3.36912163e-02f, 3.44342515e-02f, -1.60810631e-02f, -3.78580898e-01f, 5.83675146e-01f, 2.60772780e-02f, 8.05373788e-02f, 6.25531673e-02f, -1.88287757e-02f, -8.45940113e-02f, -3.68403713e-03f, 4.42134410e-01f, 7.34913647e-02f},
+    {-6.85260817e-02f, 2.65854388e-01f, -6.48302808e-02f, 1.31033704e-01f, -5.21671250e-02f, 2.98037112e-01f, -3.19836065e-02f, -2.23483127e-02f, -2.25577369e-01f, 1.33254111e+00f, -5.06938361e-02f, 4.30271208e-01f, 4.62143496e-02f, -2.47550845e-01f, 3.98469716e-02f, -4.63480838e-02f, 1.25436066e-02f, 1.10469878e-01f},
+    {7.40252584e-02f, 4.92056310e-02f, 3.06036443e-01f, -5.83659522e-02f, -2.61992842e-01f, 1.14229135e-01f, 3.80861044e-01f, 2.75432020e-02f, 3.33412021e-01f, -5.78806937e-01f, -9.33080725e-03f, 7.32295513e-02f, -2.16030385e-02f, 3.41255851e-02f, 1.78078890e-01f, 9.86312404e-02f, 4.24151808e-01f, -9.96700898e-02f},
+    {-4.67856497e-01f, 4.44123834e-01f, -3.80762219e-02f, -1.67074010e-01f, -2.57299524e-02f, -3.04800332e-01f, -9.19217616e-02f, 6.39469996e-02f, 2.80903608e-01f, -2.35630050e-02f, -1.31047189e-01f, 5.23848087e-02f, -2.13334531e-01f, 5.04823364e-02f, 2.58909967e-02f, 2.89117917e-02f, -2.98085719e-01f, 6.55537248e-02f},
+    {-6.49695158e-01f, 3.01568776e-01f, 9.19165537e-02f, -1.84877813e-01f, -1.07070096e-01f, 2.33127959e-02f, 2.22841397e-01f, 3.48311812e-02f, 3.91080588e-01f, 3.43802929e-01f, -1.33924797e-01f, -6.33960515e-02f, 7.13120550e-02f, -1.06672756e-01f, 8.83280113e-03f, -1.56881604e-02f, -5.54546490e-02f, 3.82546335e-02f},
+    {5.75702414e-02f, 8.23507249e-01f, 8.59237835e-02f, -7.00260222e-01f, -1.63981840e-01f, -6.59082413e-01f, -1.35722216e-02f, -2.82526482e-02f, -3.18018287e-01f, 1.98833439e-02f, 2.10029725e-02f, 1.52582720e-01f, -1.25883594e-01f, -1.54949948e-02f, -5.90469241e-01f, -1.16474524e-01f, -4.18624163e-01f, -3.75660323e-02f},
+    {7.16275036e-01f, -2.48474404e-02f, -3.03565919e-01f, -5.28894402e-02f, -6.19207740e-01f, 1.24386415e-01f, -7.34804422e-02f, 3.42220776e-02f, -2.27604955e-01f, 1.14511758e-01f, 2.03517992e-02f, -2.53156153e-03f, 3.28310281e-01f, 8.24824646e-02f, 2.09507927e-01f, 4.53369133e-02f, 3.65476087e-02f, -1.29297957e-01f},
+    {-4.16868895e-01f, 5.95700741e-02f, 9.19658303e-01f, -4.91181284e-01f, 1.96347311e-01f, 1.75529569e-01f, -5.45578934e-02f, 7.52952090e-03f, -2.49373779e-01f, 1.66197687e-01f, -5.31845614e-02f, 9.82091054e-02f, -4.96103875e-02f, 9.61648747e-02f, 6.62254021e-02f, -1.31455705e-01f, 5.41218758e-01f, -6.92031160e-02f},
+    {-2.41333805e-02f, 1.36219412e-01f, -9.19191632e-03f, 1.87424526e-01f, 5.05327806e-02f, 1.54604586e-02f, -1.27169052e-02f, -8.28533471e-02f, -3.54601234e-01f, 4.73347485e-01f, 5.50183654e-01f, -3.34267281e-02f, 4.72029522e-02f, 4.05622348e-02f, 2.58151412e-01f, 3.41599621e-02f, 1.71444956e-02f, 2.61481762e-01f},
+    {-4.10056636e-02f, 1.30878106e-01f, 3.66561085e-01f, -1.27918925e-02f, 7.75731325e-01f, -4.73467648e-01f, 6.77069742e-03f, -1.78784300e-02f, 2.86720961e-01f, 7.09956348e-01f, 5.10645211e-02f, -1.30348861e-01f, -1.86423644e-01f, 1.07878961e-01f, -6.19033016e-02f, -1.79629073e-01f, -8.75633880e-02f, -1.00893438e-01f},
+    {-2.14826256e-01f, -2.97678173e-01f, -6.39840290e-02f, -3.62744540e-01f, -3.70945156e-01f, -1.87150598e-01f, -4.19997387e-02f, 1.67242866e-02f, -1.26078904e-01f, 9.87530947e-01f, -1.88005179e-01f, 2.13098362e-01f, 4.72046584e-02f, -3.39379571e-02f, -1.16291113e-01f, -1.48874342e-01f, 9.44135115e-02f, 1.14750907e-01f},
+    {1.91078663e-01f, -3.35103163e-04f, 1.44063577e-01f, -2.54601538e-01f, -6.32058501e-01f, -3.24034840e-02f, 7.57136121e-02f, -1.73711926e-01f, 1.57622233e-01f, -1.97055236e-01f, 1.35536268e-01f, -2.26641133e-01f, 3.55995119e-01f, -9.09744799e-02f, 2.84071028e-01f, 3.20451826e-01f, 4.26474921e-02f, 2.13984028e-01f},
+    {1.28121793e-01f, -8.76373112e-01f, 2.06786189e-02f, 7.20863461e-01f, -9.04950872e-02f, 5.95078230e-01f, 2.16407385e-02f, 2.42717937e-02f, -9.44042578e-02f, -7.31561333e-02f, -4.14117090e-02f, 1.17956825e-01f, -1.45652086e-01f, -3.32660489e-02f, 1.26427328e-02f, -1.09370299e-01f, 5.12754023e-01f, -3.21312509e-02f},
+    {4.71270293e-01f, 8.59382302e-02f, -3.89878839e-01f, 5.43988109e-01f, 2.44540367e-02f, -2.55439989e-02f, -6.51042024e-03f, 1.81797873e-02f, 4.30406667e-02f, -3.09936702e-01f, 3.15634161e-01f, -3.12128775e-02f, 7.80628696e-02f, -1.01477467e-01f, 2.33641230e-02f, 1.08318582e-01f, 4.02021706e-01f, -6.32633492e-02f},
+    {7.10378230e-01f, -2.45592386e-01f, -2.62157828e-01f, -6.58690231e-03f, -7.76529908e-02f, 2.77550936e-01f, -5.30137718e-02f, -2.09728256e-02f, 7.41427094e-02f, 1.00375032e+00f, -1.91448092e-01f, 1.45390451e-01f, 9.58833378e-03f, 1.78213380e-02f, 1.19900163e-02f, -6.56424388e-02f, -3.57122928e-01f, -8.12053606e-02f},
+    {3.03031541e-02f, 2.22182795e-02f, 1.49368420e-01f, 1.49386570e-01f, -2.97182381e-01f, -5.14340758e-01f, -3.73671041e-03f, 1.55252576e-01f, -1.08065403e+00f, -8.83402526e-01f, -9.05123472e-01f, 7.67268986e-02f, -1.21893860e-01f, 5.34930713e-02f, 8.00670907e-02f, -6.20940812e-02f, 2.28510853e-02f, 1.91371012e-02f},
+    {-3.78993332e-01f, -4.40196812e-01f, 3.42991203e-01f, 9.88611951e-02f, -8.59717950e-02f, -6.65626600e-02f, -1.09845996e-01f, 2.60650277e-01f, 2.58088171e-01f, -5.56894839e-02f, -3.35235596e-01f, 2.72421747e-01f, -1.55784234e-01f, 4.72513847e-02f, 1.57546252e-01f, -8.56195018e-02f, 1.99624509e-01f, -4.36626337e-02f},
+    {1.94245487e-01f, 5.12200832e-01f, -9.86526236e-02f, 7.20070675e-02f, -4.01069224e-01f, -2.52232075e-01f, 1.49602845e-01f, -1.21111467e-01f, 4.39282179e-01f, 1.93168685e-01f, -4.14743274e-01f, 1.15373306e-01f, -1.95672717e-02f, -3.87898320e-03f, 3.84258926e-02f, -1.92688461e-02f, -2.39397451e-01f, 1.05492420e-01f},
+    {2.28487551e-01f, 1.68688729e-01f, 1.21841900e-01f, 6.23615980e-02f, -4.82925892e-01f, -1.89753383e-01f, 8.27984810e-02f, 5.83843477e-02f, 5.73009491e-01f, 4.75858688e-01f, 2.70811766e-01f, -2.66852051e-01f, -8.63514543e-01f, -6.72544166e-02f, -3.74189079e-01f, -4.36104499e-02f, 6.11577630e-01f, -8.43758062e-02f},
+    {-6.65502483e-03f, 4.33409452e-01f, 9.56072733e-02f, -1.03075609e-01f, -6.75300732e-02f, 1.39181241e-01f, -1.90252036e-01f, -9.81437694e-03f, -1.09775126e+00f, -1.41829669e-01f, 1.56695932e-01f, 3.64917070e-01f, -1.35105267e-01f, -7.42136389e-02f, 1.07820049e-01f, 4.21657339e-02f, 2.25634485e-01f, -8.07321072e-03f},
+    {2.48771787e-01f, 4.10638154e-02f, 1.86099544e-01f, -7.75795355e-02f, -7.55816281e-01f, 4.45948005e-01f, -3.94281819e-02f, -5.84723242e-02f, -9.70099270e-01f, -4.50478345e-01f, -4.67992187e-01f, 9.52481255e-02f, -3.54517885e-02f, 3.02826911e-02f, 2.26793215e-02f, -4.99572270e-02f, 2.88669467e-01f, -3.63399275e-02f},
+    {8.71839747e-02f, 1.40110224e-01f, -3.51535268e-02f, -3.66156287e-02f, -1.82969779e-01f, -4.52987254e-01f, -1.03414856e-01f, -1.17138609e-01f, -3.10990006e-01f, -5.86729944e-01f, -4.87074763e-01f, 1.63841859e-01f, -3.60976346e-02f, -2.25162208e-02f, -2.74766684e-01f, 8.05211961e-02f, 1.14693865e-01f, 2.60476470e-01f},
+    {-2.14201078e-01f, 7.70784467e-02f, -7.39554316e-02f, -1.05633168e-02f, 4.40467805e-01f, -5.65298572e-02f, -2.34723208e-03f, -2.48758979e-02f, -7.01430719e-03f, -1.08803138e-01f, 3.52912515e-01f, -5.33604085e-01f, -3.91757756e-01f, 2.50213295e-01f, -7.74641111e-02f, 4.88446876e-02f, -8.29941213e-01f, 3.15468371e-01f},
+    {3.83613050e-01f, 2.22595841e-01f, 2.58614779e-01f, 2.44389012e-01f, 2.74460793e-01f, 1.15720935e-01f, -2.63977945e-02f, 4.80551831e-02f, 3.72973800e-01f, 1.78647816e-01f, -2.00869635e-01f, 1.19989753e-01f, -3.64768833e-01f, -3.02366093e-02f, -4.72777784e-02f, -1.24431752e-01f, -1.54445231e-01f, 5.08543514e-02f}
+};
+constexpr float hiddenBias[32] = {-2.30516717e-02f, -1.57205731e-01f, -2.70528376e-01f, 2.70893961e-01f, -4.23665904e-03f, 1.81930229e-01f, 2.06791237e-01f, 1.66331641e-02f, -3.61741483e-01f, -5.61992705e-01f, 1.65607765e-01f, 1.38794675e-01f, 1.13698572e-01f, -3.36731672e-01f, 2.31658682e-01f, -3.97111714e-01f, 1.21038996e-01f, -2.37714112e-01f, -4.12711352e-01f, 1.65690079e-01f, -4.70281631e-01f, 3.05126160e-01f, 1.93475172e-01f, 5.41742921e-01f, 2.85279125e-01f, -8.98681730e-02f, -3.98853749e-01f, 9.58392844e-02f, 3.65877301e-01f, 3.25638205e-01f, -5.15245855e-01f, -5.18564820e-01f};
+constexpr float moveWeights[2][32] = {
+    {-1.68101694e-02f, 2.01646313e-01f, -2.36327704e-02f, -1.92320630e-01f, -3.49722914e-02f, -4.21150103e-02f, 3.82617936e-02f, -9.61759165e-02f, -3.63306522e-01f, -2.99481340e-02f, 1.27387360e-01f, -4.29855436e-02f, -2.44547099e-01f, 4.85607572e-02f, -2.45471880e-01f, -3.88329387e-01f, -2.45737620e-02f, 1.72018349e-01f, -8.05925280e-02f, 1.48297682e-01f, 1.27618194e-01f, 1.50047585e-01f, 2.13599816e-01f, 1.25868738e-01f, -8.64017829e-02f, 1.90902129e-01f, 5.35586238e-01f, 1.72519043e-01f, -1.42269537e-01f, -5.03871478e-02f, 7.10947096e-01f, 1.53155867e-02f},
+    {-4.72793430e-01f, 3.52535583e-02f, -2.66563296e-01f, -1.20833321e-02f, -1.48335263e-01f, 5.78476846e-01f, 2.06493318e-01f, 1.68916285e-01f, -3.07425335e-02f, 4.16583449e-01f, 7.87503645e-02f, 2.22378850e-01f, 4.85546477e-02f, 7.63560236e-01f, -3.88438217e-02f, 3.36479455e-01f, 2.26344377e-01f, -2.23252475e-01f, -3.66536200e-01f, -1.66713610e-01f, -8.68142009e-01f, 9.37571973e-02f, -1.23044260e-01f, -6.46342993e-01f, -1.79167926e-01f, 1.28569543e-01f, 4.65003371e-01f, -6.80850625e-01f, 7.70623267e-01f, 1.73275605e-01f, -1.56258307e-02f, 3.11742872e-01f}
+};
+constexpr float moveBias[2] = {-3.98736522e-02f, -8.96862745e-02f};
 
 struct Segment {
     Vec from, to;
@@ -99,7 +140,7 @@ struct WorldMap {
 struct Track {
     Player last{};
     int seen = -1000;
-    Vec trend{};
+    Vec trend{}, learned{};
     std::array<double, Models> error{};
     std::array<std::array<double, Models>, 4> contextError{};
     std::array<double, Models> weight{};
@@ -112,6 +153,7 @@ struct Track {
     bool visible = false;
     bool armed = false;
     int readyAt = 0;
+    std::array<double, Forecast + MAX_DELAY + 1> groundPickup{};
     int clashTick = -1000;
     int blockTick = -1000;
     Vec impact{};
@@ -144,6 +186,8 @@ struct RoutePath {
 struct Exchange {
     std::array<Segment, Horizon> projectile{};
     std::array<std::array<double, Horizon + 1>, MAXP> incapacitated{};
+    std::array<std::array<double, Horizon>, MAXP> clashBefore{};
+    bool hasClash = false;
     int catchAt = Horizon + 1;
 };
 
@@ -388,6 +432,7 @@ struct Bot {
         Vec delta = historicalSelf(t) - point(p);
         if (m == 0) return base;
         if (m == 1) return e.trend;
+        if (m == 7) return e.learned;
         if (m == 2) return {};
         if (m == 3) return delta.unit(1000);
         if (m == 4) {
@@ -403,6 +448,43 @@ struct Bot {
         if (d.st == D_GROUND || d.st == D_RISE) return 2;
         if (d.st == D_HAND && (point(p) - here).sq() < 4500. * 4500.) return 1;
         return 0;
+    }
+
+
+    Vec learnedIntent(const Player& p, const Track& e, int k, int ref) const {
+        const Player& viewer = self[ref % History];
+        const Vec offset = point(viewer) - point(p);
+        if (p.st != S_FREE || offset.sq() <= 450. * 450. || offset.sq() >= 8000. * 8000.)
+            return e.trend;
+        const double distance = offset.len();
+        const Vec radial = offset * (1. / distance);
+        const Vec side = radial.left();
+        const Vec v = speed(p) * (1. / cf->run_v);
+        const Vec prev = e.seen == ref - 1 && e.last.st == S_FREE
+            ? speed(e.last) * (1. / cf->run_v) : v;
+        const Vec trend = e.trend * 0.001;
+        const Vec viewerV = speed(viewer) * (1. / cf->run_v);
+        const float features[] = {
+            float(v.dot(radial)), float(v.dot(side)),
+            float(prev.dot(radial)), float(prev.dot(side)),
+            float(trend.dot(radial)), float(trend.dot(side)),
+            float(viewerV.dot(radial)), float(viewerV.dot(side)),
+            float(std::min(1.40, distance / 6500.)), float(p.cd / double(std::max<i64>(1, cf->dash_cd))),
+            float(obs->d[k].st == D_HAND), float(own[ref % History].st == D_HAND),
+            float(cf->mode == M_FFA), float(p.expose > 0),
+            float(dart_flying(own[ref % History].st)), float(ref >= cf->col_start - 20),
+            float(p.timer > 0), float(viewer.st == S_FREE),
+        };
+        float output[] = {moveBias[0], moveBias[1]};
+        for (int m = 0; m < 32; ++m) {
+            float hidden = hiddenBias[m];
+            for (int f = 0; f < 18; ++f) hidden += features[f] * hiddenWeights[m][f];
+            const float activation = std::max(0.f, hidden);
+            output[0] += activation * moveWeights[0][m];
+            output[1] += activation * moveWeights[1][m];
+        }
+        const Vec motion = radial * output[0] + side * output[1];
+        return motion.sq() > 1. ? motion.unit(1000) : motion * 1000.;
     }
 
     void track() {
@@ -437,6 +519,7 @@ struct Bot {
                 }
                 const Vec measured = speed(seen) * (1000. / cf->run_v);
                 if (seen.st == S_FREE) e.trend = (ref - e.seen == 1 ? e.trend * 0.57 + measured * 0.43 : measured);
+                e.learned = learnedIntent(seen, e, k, ref);
                 e.last = seen; e.seen = ref;
             }
             Player basePlayer = seen.vis ? seen : e.last;
@@ -454,30 +537,50 @@ struct Bot {
             if (!seen.alive) base = {};
             int unseen = seen.vis ? 0 : std::clamp(ref - e.seen, 0, 10);
             double sum = 0;
-            const double prior[Models] = {3.7, 2.1, 1.12, 1.05, 0.95, 0.95, 0.95};
+            const double prior[Models] = {3.7, 2.1, 1.12, 1.05, 0.95, 0.95, 0.95, 1.65};
             const int context = motionContext(basePlayer, obs->d[k]);
+            const bool ground = e.visible && obs->d[k].st == D_GROUND;
+            const Vec drop = point(obs->d[k]);
+            e.groundPickup.fill(0.);
             for (int m = 0; m < Models; ++m) {
                 Player p = basePlayer;
+                int pickup = Forecast + 1;
+                const auto checkPickup = [&](int t) {
+                    // Pickup follows movement. Only the next input can use the dart.
+                    if (ground && pickup > Forecast && (point(p) - drop).sq() <= cf->pick_r * cf->pick_r &&
+                        !pit(point(p), now + t - 1)) pickup = t;
+                };
                 for (int j = -unseen; j < lag; ++j) {
                     int t = ref + j;
                     if (seen.alive) enemyStep(p, j < 2 && j >= 0 && m >= 3 ? base : intent(m, k, p, base, t), t);
+                    if (ground) checkPickup(t + 1 - now);
                 }
                 e.path[m][0] = p;
                 for (int j = 0; j < Forecast; ++j) {
                     if (seen.alive) enemyStep(p, intent(m, k, p, base, now + j), now + j);
                     e.path[m][j + 1] = p;
+                    if (ground) checkPickup(j + 1);
                 }
                 const double loss = ContextualTracking ? 0.55 * e.error[m] + 0.45 * e.contextError[context][m] : e.error[m];
                 double modelPrior = prior[m];
                 if (ContextualTracking && context == 2 && m == 4) modelPrior *= 2.25;
                 e.weight[m] = modelPrior / (0.25 + loss);
                 sum += e.weight[m];
+                if (pickup <= Forecast) e.groundPickup[pickup + MAX_DELAY] += e.weight[m];
                 if (lag <= 5) e.past[ref % History][m] = e.path[m][5 - lag].alive ?
                     point(e.path[m][5 - lag]) : point(basePlayer);
             }
             e.stamp[ref % History] = ref;
             e.context[ref % History] = context;
             for (double& w : e.weight) w /= sum;
+            if (ground) {
+                // Sum mutually exclusive movement hypotheses into a possession curve.
+                double cumulative = 0;
+                for (double& p : e.groundPickup) {
+                    cumulative += p / sum;
+                    p = clip(cumulative);
+                }
+            }
             e.reach = e.visible ? 1 : (ref - e.seen < 7 ? 0.48 : 0.14);
             if (!e.present) continue;
             const double d = (point(e.path[0][0]) - here).len() + (e.visible ? 0 : 1600);
@@ -642,21 +745,25 @@ struct Bot {
 
     void blindThreats(int k, int ref) {
         const auto& e = enemy[k];
-        const bool picked = ImpactInference && e.clashTick > ref && e.readyAt < 5;
+        const bool ground = obs->d[k].st == D_GROUND;
+        const bool picked = !ground && ImpactInference && e.clashTick > ref && e.readyAt < 5;
         const auto& p = picked ? e.path[0][0] : obs->p[k];
-        if (!e.present || (!e.armed && !picked) || !e.visible || p.st == S_THROW ||
+        if (!e.present || (!e.armed && !picked && !ground) || !e.visible || p.st == S_THROW ||
             (point(e.path[0][0]) - here).sq() > 7900. * 7900.) return;
         if (ImpactInference && e.blockTick > ref) return;
         const int originTime = picked ? now : ref;
         for (int start = picked ? now + e.readyAt - 1 : ref; start <= now + 1; ++start) {
             if (p.st != S_FREE && p.timer > start - ref) continue;
             if (start < now - 4) continue;
+            const double held = ground ? e.groundPickup[start - now + MAX_DELAY] : 1.;
+            if (held < 0.12) continue;
             const int releaseAt = start + cf->throw_pre - 1;
             Player origin = p;
             Vec m = speed(p) * (1000. / cf->run_v);
             for (int t = originTime; t <= releaseAt; ++t) {
                 if (t == start) begin(origin, A_THROW, {1000, 0}, true, m);
-                enemyStep(origin, m, t);
+                const Vec move = ground && t < start ? intent(4, k, origin, m, t) : m;
+                enemyStep(origin, move, t);
             }
             const int view = int(imax(0, start - cf->delay));
             const Player& prior = self[view % History];
@@ -669,7 +776,7 @@ struct Bot {
                 Hazard h;
                 h.owner = k;
                 h.launch = start - now;
-                h.weight = (start < now ? 0.043 : 0.050) / (1 + 10 * e.aimError[style]);
+                h.weight = held * (start < now ? 0.043 : 0.050) / (1 + 10 * e.aimError[style]);
                 bool possible = true;
                 for (int t = releaseAt + 1; t < now + Horizon; ++t) {
                     Segment s = fly(d, point(origin), point(origin), t);
@@ -687,13 +794,16 @@ struct Bot {
 
     void crossingThreats(int k) {
         const auto& shooter = enemy[k];
-        if (!(Crossfire && live > 1 && shooter.present && shooter.visible && shooter.armed)) return;
+        const bool ground = obs->d[k].st == D_GROUND;
+        if (!(Crossfire && live > 1 && shooter.present && shooter.visible && (shooter.armed || ground))) return;
         if ((point(shooter.path[0][0]) - here).sq() > 7900. * 7900.) return;
         for (int target = 0; target < obs->n; ++target) {
             if (target == k || !enemy[target].present || !enemy[target].visible) continue;
             const auto& victim = enemy[target];
             for (int start : {-2, 1, 4}) {
                 if (start < -now) continue;
+                const double held = ground ? shooter.groundPickup[start + MAX_DELAY] : 1.;
+                if (held < 0.12) continue;
                 int releaseAt = start + int(cf->throw_pre);
                 int originTick = imax(0, releaseAt);
                 const Vec origin = point(shooter.path[0][originTick]);
@@ -705,7 +815,7 @@ struct Bot {
                 if (shooter.path[0][imax(0, start)].st != S_FREE || wall(origin, targetPos, now + originTick)) continue;
                 Dart d = release(origin, (targetPos - origin).unit(1000));
                 Hazard h;
-                h.owner = k; h.weight = 0.09;
+                h.owner = k; h.weight = 0.09 * held;
                 h.launch = start;
                 for (int j = releaseAt; j < Horizon; ++j) {
                     Segment s = fly(d, origin, origin, now + j);
@@ -846,6 +956,7 @@ struct Bot {
         double distance = map.core[i] < 10000 ? map.core[i] * Grid : 10500;
         double coreWeight = now < 180 ? 0.065 + 0.0012 * now : 0.31;
         if (now + j > cf->col_start) coreWeight += 0.09;
+        if (live > 1) coreWeight *= 1.45;
         double value = -coreWeight * distance / 1000 - future;
         double nearest = Infinity, second = Infinity;
         double surround = 0;
@@ -866,9 +977,13 @@ struct Bot {
         if (focus >= 0) {
             const auto& e = enemy[focus];
             const bool enemyReady = e.armed || (WeaponClock && e.readyAt < j + 5);
-            const double desired = withDart ? (enemyReady ? (live > 1 ? 5100 : 3850) : 1900) : (live > 1 ? 5600 : 4150);
+            double desired = withDart ? (enemyReady ? (live > 1 ? 5100 : 3850) : 1900) : (live > 1 ? 5600 : 4150);
             const double d = (q - point(e.path[0][j])).len();
             double farCost = withDart ? (enemyReady ? 0.30 : 0.64) : 0.08;
+            if (live > 1) {
+                desired += withDart ? (enemyReady ? 700 : 1500) : 1100;
+                farCost *= 0.58;
+            }
             value -= std::max(0., d - desired) * farCost / 1000;
             value -= std::max(0., desired - d) * (withDart && !enemyReady ? 0.10 : 0.41) / 1000;
             if (withDart && d < 6500 && wall(q, point(e.path[0][j]), now + j)) value -= 0.29;
@@ -881,8 +996,12 @@ struct Bot {
                         0.44 * clip((theirs - guard) / 2100.));
             }
         }
-        if (live > 1 && second < 5200) value -= FfaSeparation * (5200 - second) / 1700;
-        value -= FfaSeparation * (surround - threats.len()) * 1.30;
+        if (live > 1 && second < 5200) value -= FfaSeparation * (5200 - second) / 1130;
+        value -= FfaSeparation * (surround - threats.len()) * 2.2;
+        if (live > 1 && nearest > cf->see_r + 150) {
+            const int cover = cell_of_point(*cf, map.map, roundInt(q.x), roundInt(q.y), -1);
+            if (cover == C_GRASS) value += 0.35;
+        }
         const auto& d = obs->my_dart();
         if (!withDart && (d.st == D_GROUND || d.st == D_RISE) && !pit(point(d), now + j + 4)) {
             value -= 0.75 * std::min((q - point(d)).len() / 1000, 9.);
@@ -900,6 +1019,44 @@ struct Bot {
                 if (pit(q + delta, now + j)) value -= 0.18;
         }
         return value;
+    }
+
+    double clashPoint(const Segment& own, const Segment& hostile) const {
+        if (!own.active) return -1;
+        const Vec start = own.from - hostile.from;
+        const Vec finish = own.to - hostile.to;
+        const Vec velocity = finish - start;
+        const double radius = 2 * cf->dart_r;
+        if (start.sq() <= radius * radius || velocity.sq() <= 0.01) return -1;
+        const double at = clip(-start.dot(velocity) / velocity.sq());
+        return (start + velocity * at).sq() <= radius * radius ? at : -1;
+    }
+
+    bool blocksAt(const RoutePath& path, Vec aim, const Segment& s, int j) const {
+        return cf->block && path.armedSwing && path.hit == j &&
+            cone(point(path.body[j + 1]), s.from, aim, cf->slash_reach, cf->block_cos / 1000., 1, now + j);
+    }
+
+    void predictClashes(Exchange& ex, const RoutePath& path, Vec aim) const {
+        if (!cf->clash ||
+            std::none_of(ex.projectile.begin(), ex.projectile.end(), [](const Segment& s) { return s.active; })) return;
+        for (const auto& h : hazards) {
+            if (!h.observed) continue;
+            for (int j = 0; j + 1 < Horizon; ++j) {
+                const Segment& s = h.ray[j];
+                if (!s.active) continue;
+                if (blocksAt(path, aim, s, j)) break;
+                if (clashPoint(ex.projectile[j], s) < 0) continue;
+                // The referee resolves every clash on this step before grounding darts.
+                ex.clashBefore[h.owner][j + 1] += h.weight;
+                ex.hasClash = true;
+                break;
+            }
+        }
+        if (!ex.hasClash) return;
+        for (auto& before : ex.clashBefore) {
+            for (int j = 1; j < Horizon; ++j) before[j] = clip(before[j] + before[j - 1]);
+        }
     }
 
     Exchange exchange(const RoutePath& path, const Route& route, Vec aim) const {
@@ -925,6 +1082,12 @@ struct Bot {
                 if (d.st == D_HAND) out.catchAt = j + 1;
             }
         }
+        predictClashes(out, path, aim);
+        std::array<double, Horizon> ownFlight;
+        ownFlight.fill(1.);
+        if (out.hasClash) for (const auto& before : out.clashBefore) {
+            for (int j = 1; j < Horizon; ++j) ownFlight[j] *= 1. - before[j];
+        }
         for (int k = 0; k < obs->n; ++k) {
             const auto& target = enemy[k];
             if (!target.present || (point(target.path[0][0]) - here).sq() > 10300. * 10300.) continue;
@@ -943,7 +1106,7 @@ struct Bot {
                         if (miss2 < (hitRadius + 120) * (hitRadius + 120)) {
                             const double margin = (hitRadius + 120 - std::sqrt(miss2)) / 380.;
                             const bool reacts = j >= cf->delay + 1 && before.st == S_FREE;
-                            chance = std::max(chance, (reacts ? 0.46 : 0.94) * clip(margin));
+                            chance = std::max(chance, ownFlight[j] * (reacts ? 0.46 : 0.94) * clip(margin));
                         }
                     }
                     if (path.hit == j && (path.armedSwing || (before.st != S_STUN &&
@@ -966,15 +1129,15 @@ struct Bot {
     double risk(const RoutePath& path, Vec aim, bool committed, bool allowFutureBlock, const Exchange& expected) const {
         double cost = 0, disarm = 0;
         std::array<double, MAXP> seenRisk{}, blindRisk{}, blocks{};
-        Vec origin = path.hit >= 0 ? point(path.body[path.hit + 1]) : Vec{};
         for (const auto& h : hazards) {
             double hit = 0;
+            double hitBeforeClash = 0;
+            double clashProbability = -1;
             for (int j = 0; j < Horizon; ++j) {
                 const Segment& s = h.ray[j];
                 if (!s.active) continue;
-                if (cf->block && path.armedSwing && path.hit == j &&
-                    cone(origin, s.from, aim, cf->slash_reach, cf->block_cos / 1000., 1, now + j)) {
-                    if (h.observed) {
+                if (blocksAt(path, aim, s, j)) {
+                    if (h.observed && clashProbability < 0) {
                         const double separation = (s.from - point(enemy[h.owner].path[0][j])).len();
                         blocks[h.owner] += h.weight * (0.63 + 0.37 * clip(separation / 3400)) / (1 + 0.19 * j);
                     }
@@ -983,37 +1146,46 @@ struct Bot {
                 const Segment& own = expected.projectile[j];
                 Vec end = s.to;
                 bool clash = false;
-                if (CoupledCombat && cf->clash && own.active) {
-                    const Vec delta = own.from - s.from;
-                    const Vec dv = (own.to - end) - delta;
-                    const double radius = 2 * cf->dart_r;
-                    if (delta.sq() > radius * radius && dv.sq() > 0.01) {
-                        const double at = clip(-delta.dot(dv) / dv.sq());
-                        clash = (delta + dv * at).sq() <= radius * radius;
-                        if (clash) end = s.from + (end - s.from) * at;
+                if (CoupledCombat && cf->clash && clashProbability < 0) {
+                    const double at = clashPoint(own, s);
+                    if (at >= 0) {
+                        clash = true;
+                        end = s.from + (end - s.from) * at;
+                        if (expected.hasClash && h.observed) {
+                            clashProbability = 1.;
+                            // The same owner's paths are alternatives to this incoming path.
+                            for (int k = 0; k < obs->n; ++k) if (k != h.owner)
+                                clashProbability *= 1. - expected.clashBefore[k][j];
+                        }
                     }
                 }
-                double dd = segmentDistance2(s.from - point(path.body[j]), end - point(path.body[j + 1]));
+                const Vec from = s.from - point(path.body[j]);
+                const Vec after = point(path.body[j + 1]);
                 const double margin = hitRadius + (h.observed ? 180 : 250);
-                if (dd >= margin * margin) {
-                    if (clash && h.observed) break;
-                    continue;
-                }
-                double chance = dd <= hitRadius * hitRadius ? 1 : clip((margin - std::sqrt(dd)) / (margin - hitRadius)) * 0.45;
+                double weight = 1.;
                 if (h.observed) {
-                    if (j > 5) chance *= committed ? 0.70 : 0.43;
-                    if (allowFutureBlock && j >= 2 && armed) chance *= 0.83;
+                    if (j > 5) weight *= committed ? 0.70 : 0.43;
+                    if (allowFutureBlock && j >= 2 && armed) weight *= 0.83;
                 } else {
-                    double temp = j < 4 ? 0.95 : j < 8 ? 0.64 : 0.34;
-                    chance *= temp;
+                    weight *= j < 4 ? 0.95 : j < 8 ? 0.64 : 0.34;
                 }
                 if (CoupledCombat) {
                     const int when = live == 1 ? j : (h.observed ? 0 : std::max(0, h.launch));
-                    chance *= 1 - 0.83 * expected.incapacitated[h.owner][when];
+                    weight *= 1 - 0.83 * expected.incapacitated[h.owner][when];
                 }
-                hit = std::max(hit, chance);
-                if (clash && h.observed) break;
+                const auto chance = [&](Vec to) {
+                    double dd = segmentDistance2(from, to - after);
+                    if (dd >= margin * margin) return 0.;
+                    return weight * (dd <= hitRadius * hitRadius ? 1. : (margin - std::sqrt(dd)) / (margin - hitRadius) * 0.45);
+                };
+                if (clash && clashProbability >= 0) hitBeforeClash = std::max(hit, chance(end));
+                hit = std::max(hit, chance(clashProbability >= 0 ? s.to : end));
+                if (clash && h.observed && (clashProbability < 0 || clashProbability >= 1. - 1e-9)) {
+                    if (clashProbability >= 0) hit = hitBeforeClash;
+                    break;
+                }
             }
+            if (clashProbability >= 0) hit += clashProbability * (hitBeforeClash - hit);
             if (h.observed) seenRisk[h.owner] += h.weight * hit;
             else blindRisk[h.owner] += h.weight * hit;
         }
@@ -1103,7 +1275,8 @@ struct Bot {
         double value = 0.35 * position(point(p.body[4]), 4, holdingAt(4)) +
                        0.37 * position(point(p.body[8]), 8, holdingAt(8)) +
                        0.28 * position(point(p.body[Horizon]), Horizon, holdingAt(Horizon));
-        value += risk(p, aim, committed, r.kind == A_NONE && r.swingAt < 0, expected);
+        value += risk(p, aim, committed, r.kind == A_NONE && r.swingAt < 0, expected) *
+            (live > 1 ? 1.30 : 1.);
         value += returnValue(p, r);
         value -= contactRisk(p, r);
         if (p.hit >= 0) value += melee(p, aim);
@@ -1217,6 +1390,7 @@ struct Bot {
                 double reserve = hasWeapon ? (live > 1 ? 0.33 : 0.45) : 0.26;
                 int state = e.path[0][std::max(0, std::min(j, 8) - 3)].st;
                 bool vulnerable = state == S_DASH || state == S_STUN || state == S_RECALL || state == S_SLASHED || state == S_KICKED;
+                if (live > 1 && !vulnerable) reserve += 0.10;
                 if (vulnerable && dist < 5900) reserve -= 0.062;
                 if (obs->me().expose == 0 && dist > cf->see_r &&
                     cell_of_point(*cf, field(now).map, obs->me().x, obs->me().y, -1) == C_GRASS) reserve -= 0.055;
@@ -1253,6 +1427,13 @@ struct Bot {
             enemy[k].readyAt = enemy[k].armed ? 0 : Horizon + 8;
             knownThreats(k, ref);
             auto& e = enemy[k];
+            if (e.visible && o.d[k].st == D_GROUND) {
+                const auto pickup = std::find_if(e.groundPickup.begin(), e.groundPickup.end(), [](double p) { return p >= 0.55; });
+                if (pickup != e.groundPickup.end()) {
+                    e.readyAt = int(pickup - e.groundPickup.begin()) - MAX_DELAY;
+                    armedPressure |= e.readyAt <= 2 && (point(e.path[0][0]) - here).sq() < 7600. * 7600.;
+                }
+            }
             if (ImpactInference && e.clashTick > ref) {
                 double dist = (point(e.path[0][0]) - e.impact).len();
                 int pickup = int(std::max(0., dist - cf->pick_r - 220) / cf->run_v);
