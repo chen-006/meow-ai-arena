@@ -1,0 +1,11 @@
+{
+  "author": "Naihe0",
+  "github": "Naihe0",
+  "name": "回弧",
+  "description": "按本局相似的走位片段预判目标，用自己飞镖的落点识别格挡，再争夺对手收招的窗口。",
+  "written_by": "ai",
+  "model": "GPT-6.2 Astra",
+  "tool": "Codex",
+  "based_on": "boomerang/bots/gpt-6.2-astra/player.cpp",
+  "license": "MIT"
+}
