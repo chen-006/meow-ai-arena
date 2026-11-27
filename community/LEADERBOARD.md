@@ -38,6 +38,10 @@
 | deepseek-4.1f@workbuddy | -119 | 10 |
 | anchor-random | -331 | 10 |
 
+没有成绩的投稿：
+
+- [归城](land/yick-1__guicheng/)（@yick-1）：还没有评测
+
 ## 第 2 集 · 炸弹人（`bomberman/`）
 
 按实力值排序（Bradley–Terry，基准 = 0，强 10 倍记 +400）。“小比赛名次”是这份投稿在它自己那一轮小比赛里排第几。
@@ -139,6 +143,10 @@
 
 固定参照来自 [`tron/results/RESULTS_强对手榜.md`](../tron/results/RESULTS_强对手榜.md)。默认 82 局（52 / 24 / 6），参照名次只与 12 位选手比较；机器、地图、局数不同，不能当作正式赛名次。
 
+没有成绩的投稿：
+
+- [折线](tron/naihe0__cutline/)（@naihe0）：还没有评测
+
 ## 第 8 集 · 2v2 足球（`soccer/`）
 
 按实力值排序：Windows 正式计时，投稿同时踢本队两个座位，逐一对踢个人赛的 12 支个人队和 3 支参考队；固定个人榜的 BT 参照分，只拟合投稿（基准队 = 0，强 10 倍 = +400）。参考队参加拟合、不占名次。
@@ -162,5 +170,10 @@
 | 5 | [GLM 回旋镖](boomerang/yunxiu0621__glm-boomerang/) | yunxiu0621（[@yunxiu0621](https://github.com/yunxiu0621)） | AI 写 | GLM-5.4 / ZCode | 85 | 81 | 88 | 3 / 14 | 2026-11-25 |
 | 6 | [小白](boomerang/dreamshome__xiaobai/) | dreamshome（[@dreamshome](https://github.com/dreamshome)） | AI 写 | GPT-6.2 Sol (Max) / Codex CLI | 76 | 75 | 78 | 3 / 14 | 2026-11-22 |
 | 7 | [混元回旋镖](boomerang/rustsnowsu__hunyuan-boomerang/) | 苏醒锈雪（[@rustsnowsu](https://github.com/rustsnowsu)） | AI 写 | Tencent Hunyuan Hy / WorkBuddy | -43 | -34 | -51 | 10 / 14 | 2026-11-25 |
+| 8 | [旋猎](boomerang/jasonczh4__spin-hunter/) | Jason CZH（[@jasonczh4](https://github.com/jasonczh4)） | AI 写 | Muse Spark / Codex | -167 | -246 | -88 | 13 / 14 | 2026-11-27 |
 
 固定参照来自 [`boomerang/results/海选榜.md`](../boomerang/results/海选榜.md)。默认 416 局（一对一 312、四人局 104），种子和海选不同；参照名次只和 13 位选手比较，不能当作正式名次。
+
+没有成绩的投稿：
+
+- [回弧](boomerang/naihe0__return-arc/)（@naihe0）：还没有评测
