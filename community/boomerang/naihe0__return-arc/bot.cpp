@@ -15,6 +15,27 @@ using std::array;
 using std::vector;
 
 namespace {
+// Both policies run on this thread and share the referee's per-turn clock.
+struct TurnClock {
+    using Clock = std::chrono::steady_clock;
+    const Clock::time_point started = Clock::now();
+    const i64 initialCpu = thread_cpu_100ns();
+    mutable i64 lastCpu = initialCpu, lastChangeUs = 0;
+
+    bool spent(i64 limitUs) const {
+        const i64 wallUs = std::chrono::duration_cast<std::chrono::microseconds>(Clock::now()-started).count();
+        if (wallUs < 3*limitUs/4) return false;
+        const i64 cpu = thread_cpu_100ns();
+        if (initialCpu >= 0 && cpu >= initialCpu) {
+            if (cpu != lastCpu) { lastCpu = cpu; lastChangeUs = wallUs; }
+            if (cpu-initialCpu >= 10*limitUs) return true;
+            // Windows thread time can stay constant across a short turn.
+            if (wallUs-lastChangeUs < 2000) return false;
+        }
+        return wallUs >= limitUs+650;
+    }
+};
+
 struct Vec {
     double x = 0, y = 0;
     Vec operator+(Vec b) const { return {x+b.x,y+b.y}; }
@@ -164,10 +185,10 @@ struct Reflection {
     array<Body,FUTURE+1> path{};
     Dart dart;
     int release=-1, swing=-1;
-    Vec aim;
+    Vec throwAim, swingAim;
 };
 struct Bot {
-    bool observer=false;
+    bool observer=false, searched=false;
     Route lastRoute;
     array<Reflection,MAXP> mirror{};
     const GameInfo* gi=nullptr;
@@ -861,37 +882,41 @@ struct Bot {
     // A parry drops our dart exactly where it started that tick. The player's
     // own dart arrives without the visual delay, so it can identify a recovery
     // window before the opponent's swing animation reaches the observation.
+    bool possibleParry(const Dart& prev,const Dart& next,Vec owner,Vec oldOwner,int t) const {
+        if(!dart_flying(prev.st) || next.st!=D_GROUND || prev.x!=next.x || prev.y!=next.y) return false;
+        Dart natural=prev;
+        Line sweep=fly(natural,owner,oldOwner,t);
+        // During return hang, another dart can clash with ours without moving
+        // our drop point. Delayed enemy weapon observations cannot exclude it.
+        return natural.st!=D_GROUND && (!c->clash || (sweep.b-sweep.a).sq()>0);
+    }
     void observeParry() {
         if(now<1 || !c->block) return;
         const Dart& prev=history[(now-1)%HIST].dart;
         const Dart& next=obs->my_dart();
-        if(dart_flying(prev.st) && next.st==D_GROUND && prev.x==next.x && prev.y==next.y) {
-            Dart natural=prev;
-            fly(natural,here,selfAt(now-1),now-1);
-            if(natural.st!=D_GROUND) {
-                int owner=-1;
-                double highest=0, second=0;
-                Vec drop=pos(next);
-                for(int k=0;k<n;++k) {
-                    const Person& e=people[k];
-                    if(!e.active || !e.hand) continue;
-                    double mass=0;
-                    for(int i=0;i<activeModels();++i) {
+        if(possibleParry(prev,next,here,selfAt(now-1),now-1)) {
+            int owner=-1;
+            double highest=0, second=0;
+            Vec drop=pos(next);
+            for(int k=0;k<n;++k) {
+                const Person& e=people[k];
+                if(!e.active || !e.hand) continue;
+                double mass=0;
+                for(int i=0;i<activeModels();++i) {
                     const Model& m=e.model[i];
-                        Vec body=m.b[0].point();
-                        if(wall(drop,body,now-1)) continue;
-                        double dist=(drop-body).len();
-                        mass+=m.w*sat((c->slash_reach+1300-dist)/1300.);
-                    }
-                    if(mass>highest) { second=highest; highest=mass; owner=k; }
-                    else second=std::max(second,mass);
+                    Vec body=m.b[0].point();
+                    if(wall(drop,body,now-1)) continue;
+                    double dist=(drop-body).len();
+                    mass+=m.w*sat((c->slash_reach+1300-dist)/1300.);
                 }
-                if(owner>=0 && highest>0.20 && highest>2.4*second) {
-                    parryStep[owner]=now;
-                    parryPoint[owner]=drop;
-                    ++learned[owner].parries;
-                    learned[owner].lastParry=now;
-                }
+                if(mass>highest) { second=highest; highest=mass; owner=k; }
+                else second=std::max(second,mass);
+            }
+            if(owner>=0 && highest>0.20 && highest>2.4*second) {
+                parryStep[owner]=now;
+                parryPoint[owner]=drop;
+                ++learned[owner].parries;
+                learned[owner].lastParry=now;
             }
         }
         for(int k=0;k<n;++k) {
@@ -932,7 +957,7 @@ struct Bot {
         }
     }
     // Trace closed swept segments, including the stationary part of a returning dart.
-    Line fly(Dart& d,Vec owner,Vec oldOwner,int t) const {
+    Line fly(Dart& d,Vec owner,Vec oldOwner,int t,bool ownerAlive=true) const {
         if(!dart_flying(d.st)) return {};
         i64 speed=dart_step_len(*c,d);
         i64 x=d.x,y=d.y,st=d.st; Vec a=pos(d);
@@ -951,9 +976,13 @@ struct Bot {
         if(hitWall) { x=hx; y=hy; }
         d.x=x; d.y=y; d.age++;
         Vec end=pos(d);
-        if(hitWall) d.st=D_GROUND;
+        if(st!=D_OUT) { d.vx=x-ir(a.x); d.vy=y-ir(a.y); }
+        if(hitWall) { d.st=D_GROUND; d.age=d.left=d.vx=d.vy=0; }
         else if(st==D_OUT && d.left<=0) { d.st=D_BACK; d.age=0; d.vx=d.vy=0; }
-        else if(st!=D_OUT && (caught || segmentSq(a-oldOwner,end-owner)<=c->catch_r*c->catch_r)) d.st=D_HAND;
+        else if(st!=D_OUT && (caught || (ownerAlive && segmentSq(a-oldOwner,end-owner)<=c->catch_r*c->catch_r))) {
+            d.st=ownerAlive ? D_HAND : D_GONE;
+            if(ownerAlive) { d.x=ir(owner.x); d.y=ir(owner.y); }
+        }
         return {a,end,true};
     }
     void knownDart(int k,int model,double weight) {
@@ -972,7 +1001,7 @@ struct Bot {
                 continue;
             }
             if(j+lag+1==p.timer && p.st==S_RECALL && d.st==D_RISE) { d.st=D_CALL; d.age=0; }
-            Line s=fly(d,b,a,now+j);
+            Line s=fly(d,b,a,now+j,p.alive!=0);
             if(s.on && d.st==D_HAND) people[k].ready=std::min(people[k].ready,j+1);
             if(j>=0 && s.on) { h.s[j]=s; any=true; }
             if(j<0 && s.on) {
@@ -1181,7 +1210,7 @@ struct Bot {
         }
         return sum;
     }
-    Shot aimShot(Vec origin) const {
+    Shot aimShot(Vec origin,const TurnClock& clock,int limitUs) const {
         Shot result;
         for(int k=0;k<n;++k) {
             const Person& e=people[k];
@@ -1218,6 +1247,7 @@ struct Bot {
                 add(at);
             }
             for(int i=0;i<count;++i) {
+                if((i&3)==0 && clock.spent(limitUs)) return result;
                 Vec aim=dirs[i],end=origin+aim*double(c->range);
                 i64 hx,hy;
                 double cutoff=c->range;
@@ -1373,6 +1403,11 @@ struct Bot {
         Vec aim=sum.unit();
         return aim.sq()>0.5?aim:(prediction(focus,0).point()-here).unit();
     }
+    Vec strikeDirection(const Route& r,const Path& path,int hit) const {
+        if(r.parry>=0 && hit>=1 && hit<=HORIZON)
+            return (threats[r.parry].s[hit-1].a-path.p[hit]).unit();
+        return r.follow>=0 && hit>=1 && hit<=HORIZON ? meleeAim(path,hit) : r.aim;
+    }
     double evaluate(Route r,const Shot& shot) const {
         Path path=routePath(r);
         double value=-path.terrainCost;
@@ -1383,8 +1418,7 @@ struct Bot {
         bool strike=r.action==A_MELEE || r.follow>=0;
         bool slash=strike && armed;
         int hit=(armed?int(c->slash_pre):int(c->kick_pre))+std::max(0,r.follow);
-        Vec strikeAim=r.follow>=0?meleeAim(path,hit):r.aim;
-        if(r.parry>=0) strikeAim=(threats[r.parry].s[hit-1].a-path.p[hit]).unit();
+        Vec strikeAim=strikeDirection(r,path,hit);
         double melee=0;
         if(strike) {
             melee=meleeValue(path,strikeAim,hit,armed);
@@ -1630,7 +1664,7 @@ struct Bot {
             model.w=share;
             if(guess.swing>=0 && guess.swing<HORIZON) {
                 int t=guess.swing;
-                rushes.push_back({guess.path[t+1].point(),guess.aim,{},1.45*guess.confidence,k,t});
+                rushes.push_back({guess.path[t+1].point(),guess.swingAim,{},1.45*guess.confidence,k,t});
             }
             if(obs->d[k].st!=D_HAND || obs->p[k].st==S_THROW) continue;
             Dart d=guess.dart;
@@ -1642,27 +1676,33 @@ struct Bot {
                 if(t==release && d.st==D_HAND) {
                     Vec point=guess.path[t].point();
                     d.st=D_OUT; d.x=ir(point.x); d.y=ir(point.y); d.left=c->range; d.age=0;
-                    d.vx=ir(1000*guess.aim.x); d.vy=ir(1000*guess.aim.y);
+                    d.vx=ir(1000*guess.throwAim.x); d.vy=ir(1000*guess.throwAim.y);
                 }
                 if(dart_flying(d.st)) h.s[t]=fly(d,guess.path[t+1].point(),guess.path[t].point(),now+t);
             }
             threats.push_back(h);
         }
     }
-    Action decide(const Obs& o) {
+    Action decide(const Obs& o,const TurnClock& clock,int limitUs) {
+        searched=false;
         lastRoute=Route();
         wallSlides=0; obs=&o; now=int(o.t); lag=std::min(now,int(c->delay)); seat=o.seat;
         here=pos(o.me()); history[now%HIST].me=o.me(); history[now%HIST].dart=o.my_dart();
         Action result;
         if(!o.me().alive) return result;
-        const auto started=std::chrono::steady_clock::now();
-        const i64 cpuStart=thread_cpu_100ns();
+        auto carry=[&]() {
+            result.mx=ir(previousMove.x*1000); result.my=ir(previousMove.y*1000);
+            history[now%HIST].action=result;
+            return result;
+        };
+        if(clock.spent(limitUs)) return carry();
         trackPeople();
         contactObservation();
         if(n==2 && !observer) observeParry();
         threats.clear(); rushes.clear();
         if(!observer) incorporateReflection();
         for(int k=0;k<n;++k) if(k!=seat) {
+            if(clock.spent(limitUs)) return carry();
             bool multi=people[k].active && (obs->d[k].st==D_BACK || obs->d[k].st==D_CALL || obs->d[k].st==D_RISE
                 || (obs->d[k].st==D_OUT && obs->d[k].left<4000));
             if(multi) {
@@ -1685,6 +1725,7 @@ struct Bot {
             }
             if(pit(item,now+3)) recovery*=0.62;
         }
+        if(clock.spent(limitUs)) return carry();
         updateStrategy();
         pressure=0;
         if(focus>=0 && o.my_dart().st==D_HAND) {
@@ -1697,7 +1738,7 @@ struct Bot {
         bool free=o.me().st==S_FREE || o.me().st==S_RECALL;
         bool cancel=c->dash_slash && o.me().st==S_DASH && o.me().timer>c->dash_post && o.me().timer<=c->dash_t+c->dash_post;
         bool canMove=free || o.me().st==S_THROW || o.me().st==S_THROWN;
-        if(!canMove && !cancel) { history[now%HIST].action=result; return result; }
+        if(!canMove && !cancel) { searched=true; history[now%HIST].action=result; return result; }
         Route best;
         Shot shot;
         if(armed && free && focus>=0 && nearest<c->range+3500) {
@@ -1707,24 +1748,21 @@ struct Bot {
                 flight[j+1]=std::min(double(c->range),flight[j]+speed);
             }
             for(int k=0;k<n;++k) if(people[k].active && people[k].dist<c->range+3500) prepareEvasion(k);
-            shot=aimShot(here+vel(o.me())*(c->throw_move*0.01*c->throw_pre));
+            shot=aimShot(here+vel(o.me())*(c->throw_move*0.01*c->throw_pre),clock,limitUs-450);
         }
         array<Route,5> beam{};
         int evaluated=0;
         bool budgetSpent=false;
         auto consider=[&](Vec move,int action=A_NONE,Vec aim=Vec{},int follow=-1,int parry=-1,int turn=-1,Vec after=Vec{}) {
             if(budgetSpent) return;
-            if(++evaluated%12==0 && cpuStart>=0) {
-                i64 used=thread_cpu_100ns()-cpuStart;
-                // Some systems report thread time in coarse ticks. A single thread cannot
-                // spend six milliseconds of CPU in less than five milliseconds of real time.
-                if(used>=62000 && std::chrono::steady_clock::now()-started>=std::chrono::milliseconds(5)) {
-                    budgetSpent=true; return;
-                }
+            if((evaluated++ & 3)==0 && clock.spent(limitUs)) {
+                budgetSpent=true;
+                return;
             }
             Route r{move,aim,action};
             r.follow=follow; r.parry=parry; r.turn=turn; r.after=after;
             r.value=evaluate(r,shot);
+            searched=true;
             if(r.value>best.value) best=r;
             if(turn<0 && follow<0 && (action==A_NONE || action==A_THROW)) {
                 for(int j=0;j<(int)beam.size();++j) {
@@ -1819,9 +1857,10 @@ struct Bot {
             if(o.me().st==S_RECALL && o.me().timer<HORIZON-2)
                 for(int i=0;i<32;i+=4) consider(compass[i],A_RECALL);
         }
-        if(best.action==A_THROW && !budgetSpent) {
+        if(!searched) return carry();
+        if(best.action==A_THROW && !budgetSpent && !clock.spent(limitUs-300)) {
             Vec release=routePath(best).p[c->throw_pre];
-            Shot corrected=aimShot(release);
+            Shot corrected=aimShot(release,clock,limitUs);
             if(corrected.target>=0) best.aim=corrected.dir;
         }
         if(best.action!=A_RECALL) { result.mx=ir(best.move.x*1000); result.my=ir(best.move.y*1000); }
@@ -1877,11 +1916,28 @@ struct ReturnArc {
             ++samples[k];
         }
     }
+    static void projectMelee(Bot& policy,Reflection& guess,Body b,const Route& plan,
+                             Vec followAim,Vec direction,bool hand,int t) {
+        for(int j=0;j<FUTURE;++j) {
+            if(j==plan.turn) direction=plan.after;
+            if(j==plan.follow) policy.begin(b,A_MELEE,followAim,hand);
+            guess.path[j]=b;
+            if(guess.swing<0 && (b.st==S_SLASH || b.st==S_KICK) && b.timer==1) {
+                guess.swing=j;
+                guess.swingAim=vec(b.ax,b.ay).unit();
+            }
+            policy.predictStep(b,direction,t+j);
+        }
+        guess.path[FUTURE]=b;
+    }
     Action decide(const Obs& o) {
+        const TurnClock clock;
+        const int modelLimit=o.t==0 ? 6200 : 2200;
+        const int playerLimit=o.t==0 ? 14000 : 7800;
         int n=o.n, seat=o.seat, t=int(o.t), r=std::max(0,t-int(info->cfg.delay));
         own[t%HIST].me=o.me();
         own[t%HIST].dart=o.my_dart();
-        if(!o.me().alive || n>4) return player.decide(o);
+        if(!o.me().alive || n>4) return player.decide(o,clock,playerLimit);
         Obs old=o;
         old.t=r;
         old.p[seat]=own[r%HIST].me;
@@ -1924,7 +1980,7 @@ struct ReturnArc {
             Bot& policy=*policies[k];
             auto& cmd=actions[t%HIST][k]; cmd=Action();
             tested[t%HIST][k]=false;
-            if(target!=k || !view.p[k].alive) {
+            if(target!=k || !view.p[k].alive || clock.spent(modelLimit)) {
                 policy.history[t%HIST].me=view.p[k];
                 policy.history[t%HIST].dart=view.d[k];
                 Vec carry=vel(view.p[k])*(1000./std::max<i64>(1,info->cfg.run_v));
@@ -1932,7 +1988,8 @@ struct ReturnArc {
                 policy.history[t%HIST].action=cmd;
                 continue;
             }
-            cmd=policy.decide(view);
+            cmd=policy.decide(view,clock,modelLimit);
+            if(!policy.searched) continue;
             tested[t%HIST][k]=true;
             double trust=sat((accuracy[k]-0.37)/0.50)*sat(samples[k]/10.);
             if(trust<0.15) continue;
@@ -1944,19 +2001,15 @@ struct ReturnArc {
             bool hand=view.d[k].st==D_HAND;
             if(b.st==S_RECALL && (cmd.mx || cmd.my || (cmd.act && cmd.act!=A_RECALL))) { b.st=S_FREE; b.timer=0; }
             policy.begin(b,int(cmd.act),vec(cmd.ax,cmd.ay),hand);
-            guess.aim=vec(b.ax,b.ay).unit();
-            if(b.st==S_THROW) guess.release=b.timer;
-            if(b.st==S_SLASH || b.st==S_KICK) guess.swing=b.timer-1;
-            Vec direction=vec(cmd.mx,cmd.my)*0.001;
-            for(int j=0;j<FUTURE;++j) {
-                guess.path[j]=b;
-                if(j==plan.turn) direction=plan.after;
-                if(j==plan.follow) policy.begin(b,A_MELEE,(pos(o.me())-b.point()).unit(),hand);
-                policy.predictStep(b,direction,t+j);
+            if(b.st==S_THROW) { guess.release=b.timer; guess.throwAim=vec(b.ax,b.ay).unit(); }
+            Vec followAim{};
+            if(plan.follow>=0) {
+                int hit=plan.follow+int(hand?info->cfg.slash_pre:info->cfg.kick_pre);
+                followAim=policy.strikeDirection(plan,policy.routePath(plan),hit);
             }
-            guess.path[FUTURE]=b;
+            projectMelee(policy,guess,b,plan,followAim,vec(cmd.mx,cmd.my)*0.001,hand,t);
         }
-        Action chosen=player.decide(o);
+        Action chosen=player.decide(o,clock,playerLimit);
         actions[t%HIST][seat]=chosen;
         return chosen;
     }
