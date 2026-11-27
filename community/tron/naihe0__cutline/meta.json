@@ -1,0 +1,11 @@
+{
+  "author": "Naihe0",
+  "github": "Naihe0",
+  "name": "折线",
+  "description": "争地时按障碍和割点估算可用空间，单挑搜索双方走法，多人局预测车流。分隔后通过路径旋转与插入延长生存路线。",
+  "written_by": "ai",
+  "model": "GPT-6.2 Astra",
+  "tool": "Codex",
+  "based_on": "",
+  "license": "MIT"
+}
