@@ -158,7 +158,18 @@ struct Route {
     Vec after{};
 };
 
+struct Reflection {
+    bool active=false;
+    double confidence=0;
+    array<Body,FUTURE+1> path{};
+    Dart dart;
+    int release=-1, swing=-1;
+    Vec aim;
+};
 struct Bot {
+    bool observer=false;
+    Route lastRoute;
+    array<Reflection,MAXP> mirror{};
     const GameInfo* gi=nullptr;
     const Config* c=nullptr;
     const Obs* obs=nullptr;
@@ -192,7 +203,7 @@ struct Bot {
     array<Vec,MAXP> contactPos{};
     double dartRadius=0;
 
-    int activeModels() const { return n==2?MODES:11; }
+    int activeModels() const { return n==2 && !observer?MODES:11; }
     int phase(int t) const {
         if(t<c->col_start) return 0;
         return std::min(int(terrain.size())-1,1+int((t-c->col_start)/c->col_every));
@@ -737,7 +748,7 @@ struct Bot {
             array<Vec,MODES> dir={carry,Vec{},chase,side,side*(-1),chase*(-1),item,(carry+chase*0.6).unit(),smooth,radial,chase};
             array<double,MODES> w={0.24,0.12,0.10,0.055,0.055,0.045,0.045,0.07,0.16,0.07,0.04};
             TraceForecast motif;
-            if(obs->p[k].vis && n==2) motif=traceForecast(k,r,p,target);
+            if(obs->p[k].vis && n==2 && !observer) motif=traceForecast(k,r,p,target);
             w[11]=0.11*motif.confidence;
             w[12]=0.17*motif.confidence;
             if(still) { w[0]=0.15; w[1]=0.24; }
@@ -1604,7 +1615,42 @@ struct Bot {
         if(r.turn>=0) value-=0.14;
         return value;
     }
+    void incorporateReflection() {
+        for(int k=0;k<n;++k) {
+            const Reflection& guess=mirror[k];
+            Person& e=people[k];
+            if(!guess.active || !e.active || !e.enemy) continue;
+            double share=0.52*guess.confidence;
+            // Allocate one of the prior branches to the action sequence predicted by self play.
+            Model& model=e.model[10];
+            double sum=1.-model.w;
+            if(sum<=0) continue;
+            for(int m=0;m<activeModels();++m) e.model[m].w*=(1.-share)/sum;
+            model.b=guess.path;
+            model.w=share;
+            if(guess.swing>=0 && guess.swing<HORIZON) {
+                int t=guess.swing;
+                rushes.push_back({guess.path[t+1].point(),guess.aim,{},1.45*guess.confidence,k,t});
+            }
+            if(obs->d[k].st!=D_HAND || obs->p[k].st==S_THROW) continue;
+            Dart d=guess.dart;
+            int release=guess.release;
+            if(!dart_flying(d.st) && release<0) continue;
+            Threat h; h.owner=k; h.known=false; h.signal=std::max(1,release+int(c->delay)-int(c->throw_pre)+1);
+            h.weight=0.95*guess.confidence;
+            for(int t=0;t<HORIZON;++t) {
+                if(t==release && d.st==D_HAND) {
+                    Vec point=guess.path[t].point();
+                    d.st=D_OUT; d.x=ir(point.x); d.y=ir(point.y); d.left=c->range; d.age=0;
+                    d.vx=ir(1000*guess.aim.x); d.vy=ir(1000*guess.aim.y);
+                }
+                if(dart_flying(d.st)) h.s[t]=fly(d,guess.path[t+1].point(),guess.path[t].point(),now+t);
+            }
+            threats.push_back(h);
+        }
+    }
     Action decide(const Obs& o) {
+        lastRoute=Route();
         wallSlides=0; obs=&o; now=int(o.t); lag=std::min(now,int(c->delay)); seat=o.seat;
         here=pos(o.me()); history[now%HIST].me=o.me(); history[now%HIST].dart=o.my_dart();
         Action result;
@@ -1613,8 +1659,9 @@ struct Bot {
         const i64 cpuStart=thread_cpu_100ns();
         trackPeople();
         contactObservation();
-        if(n==2) observeParry();
+        if(n==2 && !observer) observeParry();
         threats.clear(); rushes.clear();
+        if(!observer) incorporateReflection();
         for(int k=0;k<n;++k) if(k!=seat) {
             bool multi=people[k].active && (obs->d[k].st==D_BACK || obs->d[k].st==D_CALL || obs->d[k].st==D_RISE
                 || (obs->d[k].st==D_OUT && obs->d[k].left<4000));
@@ -1779,12 +1826,141 @@ struct Bot {
         }
         if(best.action!=A_RECALL) { result.mx=ir(best.move.x*1000); result.my=ir(best.move.y*1000); }
         result.ax=ir(best.aim.x*1000); result.ay=ir(best.aim.y*1000); result.act=best.action;
+        lastRoute=best;
         previousMove=best.move;
         history[now%HIST].action=result;
         return result;
     }
 };
+// Roll the delayed public position forward with a locally modelled opponent.
+// The same model is offered to every opponent. One-step discrepancies on observations
+// which subsequently arrive determine how much of its prediction enters the policy.
+struct ReturnArc {
+    Bot player;
+    array<std::unique_ptr<Bot>,MAXP> policies;
+    array<GameInfo,MAXP> perspectives;
+    array<Past,HIST> own{};
+    array<array<Action,MAXP>,HIST> actions{};
+    array<array<bool,MAXP>,HIST> tested{};
+    array<double,MAXP> accuracy{};
+    array<int,MAXP> samples{};
+    Obs previous;
+    int previousTime=-1;
+    const GameInfo* info=nullptr;
+    void init(const GameInfo& gi) {
+        info=&gi;
+        player.init(gi);
+        accuracy.fill(0.4);
+        if(gi.n>4) return;
+        for(int k=0;k<gi.n;++k) if(k!=gi.seat) {
+            perspectives[k]=gi;
+            perspectives[k].seat=k;
+            policies[k]=std::make_unique<Bot>();
+            policies[k]->observer=true;
+            policies[k]->init(perspectives[k]);
+        }
+    }
+    void assess(const Obs& old,int r) {
+        if(r!=previousTime+1 || previousTime<0) return;
+        Game before(*info,previous);
+        before.t=previousTime;
+        auto& cmd=actions[previousTime%HIST];
+        before.step(cmd.data());
+        for(int k=0;k<info->n;++k) {
+            if(k==info->seat || !tested[previousTime%HIST][k] || !previous.p[k].vis || !old.p[k].vis ||
+               !old.p[k].alive || previous.p[k].st!=S_FREE) continue;
+            const Player& predicted=before.p[k];
+            const Player& actual=old.p[k];
+            double err=(pos(predicted)-pos(actual)).len()+0.45*(vel(predicted)-vel(actual)).len();
+            double quality=(predicted.st==actual.st && before.d[k].st==old.d[k].st)?std::exp(-err/175.):0.;
+            accuracy[k]+=0.12*(quality-accuracy[k]);
+            ++samples[k];
+        }
+    }
+    Action decide(const Obs& o) {
+        int n=o.n, seat=o.seat, t=int(o.t), r=std::max(0,t-int(info->cfg.delay));
+        own[t%HIST].me=o.me();
+        own[t%HIST].dart=o.my_dart();
+        if(!o.me().alive || n>4) return player.decide(o);
+        Obs old=o;
+        old.t=r;
+        old.p[seat]=own[r%HIST].me;
+        old.d[seat]=own[r%HIST].dart;
+        if(r!=previousTime) {
+            assess(old,r);
+            previous=old;
+            previousTime=r;
+        }
+        Game base(*info,old);
+        Game now=base;
+        for(int j=r;j<t;++j) {
+            now.p[seat]=own[j%HIST].me;
+            now.p[seat].team=info->team[seat];
+            now.d[seat]=own[j%HIST].dart;
+            now.over=false;
+            now.step(actions[j%HIST].data());
+        }
+        now.p[seat]=o.me();
+        now.d[seat]=o.my_dart();
+        int target=-1;
+        double best=-1;
+        for(int k=0;k<n;++k) {
+            player.mirror[k].active=false;
+            if(k==seat || !now.p[k].alive || !old.p[k].vis || !old.p[k].alive || is_mate(*info,k)) continue;
+            double distance=(pos(now.p[k])-pos(o.me())).len();
+            double priority=10000.-distance+1200.*accuracy[k];
+            if(priority>best) { best=priority; target=k; }
+        }
+        for(int k=0;k<n;++k) {
+            if(k==seat) continue;
+            Obs view=old;
+            view.t=t; view.seat=k;
+            view.p[k]=now.p[k]; view.p[k].vis=1; view.d[k]=now.d[k];
+            for(int j=0;j<n;++j) if(j!=k && (!old.p[j].vis || !base.can_see(k,j))) {
+                const Player& p=old.p[j]; auto& q=view.p[j];
+                q=Player(); q.vis=0; q.alive=p.alive; q.kills=p.kills;
+                if(view.d[j].st==D_HAND) view.d[j].x=view.d[j].y=0;
+            }
+            Bot& policy=*policies[k];
+            auto& cmd=actions[t%HIST][k]; cmd=Action();
+            tested[t%HIST][k]=false;
+            if(target!=k || !view.p[k].alive) {
+                policy.history[t%HIST].me=view.p[k];
+                policy.history[t%HIST].dart=view.d[k];
+                Vec carry=vel(view.p[k])*(1000./std::max<i64>(1,info->cfg.run_v));
+                cmd.mx=ir(carry.x); cmd.my=ir(carry.y);
+                policy.history[t%HIST].action=cmd;
+                continue;
+            }
+            cmd=policy.decide(view);
+            tested[t%HIST][k]=true;
+            double trust=sat((accuracy[k]-0.37)/0.50)*sat(samples[k]/10.);
+            if(trust<0.15) continue;
+            auto& guess=player.mirror[k];
+            guess.active=true; guess.confidence=trust;
+            guess.dart=view.d[k]; guess.release=-1; guess.swing=-1;
+            Route plan=policy.lastRoute;
+            Body b(view.p[k]);
+            bool hand=view.d[k].st==D_HAND;
+            if(b.st==S_RECALL && (cmd.mx || cmd.my || (cmd.act && cmd.act!=A_RECALL))) { b.st=S_FREE; b.timer=0; }
+            policy.begin(b,int(cmd.act),vec(cmd.ax,cmd.ay),hand);
+            guess.aim=vec(b.ax,b.ay).unit();
+            if(b.st==S_THROW) guess.release=b.timer;
+            if(b.st==S_SLASH || b.st==S_KICK) guess.swing=b.timer-1;
+            Vec direction=vec(cmd.mx,cmd.my)*0.001;
+            for(int j=0;j<FUTURE;++j) {
+                guess.path[j]=b;
+                if(j==plan.turn) direction=plan.after;
+                if(j==plan.follow) policy.begin(b,A_MELEE,(pos(o.me())-b.point()).unit(),hand);
+                policy.predictStep(b,direction,t+j);
+            }
+            guess.path[FUTURE]=b;
+        }
+        Action chosen=player.decide(o);
+        actions[t%HIST][seat]=chosen;
+        return chosen;
+    }
+};
 }
 
-DART_MAIN(Bot)
-
+DART_MAIN(ReturnArc)
