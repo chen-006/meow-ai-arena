@@ -1,0 +1,11 @@
+{
+  "author": "Naihe0",
+  "github": "Naihe0",
+  "name": "巡界",
+  "description": "单挑终盘推演切线、回家与同时圈地。四人局根据出生点附近的可用空间和对手的扩张节奏选择首圈大小，并估算切线后的复活威胁。",
+  "written_by": "ai",
+  "model": "GPT-6.2 Astra",
+  "tool": "Codex",
+  "based_on": "",
+  "license": "MIT"
+}
