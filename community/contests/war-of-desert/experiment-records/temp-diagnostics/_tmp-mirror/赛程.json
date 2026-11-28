@@ -1,0 +1,154 @@
+{
+  "version": 1,
+  "createdBy": "cmd/arena plan",
+  "rulesVersion": "1.7",
+  "rulesHash": "789bd978",
+  "engine": "native",
+  "mirror": true,
+  "entries": [
+    {
+      "name": "VanguardA",
+      "author": "同 Bot 镜像校验",
+      "source": "workspace/bots/vanguard",
+      "bin": "bots/bin/vanguard.exe"
+    },
+    {
+      "name": "VanguardB",
+      "author": "同 Bot 镜像校验",
+      "source": "workspace/bots/vanguard",
+      "bin": "bots/bin/vanguard.exe"
+    }
+  ],
+  "matches": [
+    {
+      "id": 0,
+      "seed": 20261109,
+      "a": "VanguardA",
+      "b": "VanguardB",
+      "mirror": true
+    },
+    {
+      "id": 1,
+      "seed": 20261117,
+      "a": "VanguardA",
+      "b": "VanguardB",
+      "mirror": true
+    },
+    {
+      "id": 2,
+      "seed": 20261125,
+      "a": "VanguardA",
+      "b": "VanguardB",
+      "mirror": true
+    },
+    {
+      "id": 3,
+      "seed": 20261133,
+      "a": "VanguardA",
+      "b": "VanguardB",
+      "mirror": true
+    },
+    {
+      "id": 4,
+      "seed": 20261141,
+      "a": "VanguardA",
+      "b": "VanguardB",
+      "mirror": true
+    },
+    {
+      "id": 5,
+      "seed": 20261149,
+      "a": "VanguardA",
+      "b": "VanguardB",
+      "mirror": true
+    },
+    {
+      "id": 6,
+      "seed": 20261157,
+      "a": "VanguardA",
+      "b": "VanguardB",
+      "mirror": true
+    },
+    {
+      "id": 7,
+      "seed": 20261165,
+      "a": "VanguardA",
+      "b": "VanguardB",
+      "mirror": true
+    },
+    {
+      "id": 8,
+      "seed": 20261173,
+      "a": "VanguardA",
+      "b": "VanguardB",
+      "mirror": true
+    },
+    {
+      "id": 9,
+      "seed": 20261181,
+      "a": "VanguardA",
+      "b": "VanguardB",
+      "mirror": true
+    },
+    {
+      "id": 10,
+      "seed": 20261189,
+      "a": "VanguardA",
+      "b": "VanguardB",
+      "mirror": true
+    },
+    {
+      "id": 11,
+      "seed": 20261197,
+      "a": "VanguardA",
+      "b": "VanguardB",
+      "mirror": true
+    },
+    {
+      "id": 12,
+      "seed": 20261205,
+      "a": "VanguardA",
+      "b": "VanguardB",
+      "mirror": true
+    },
+    {
+      "id": 13,
+      "seed": 20261213,
+      "a": "VanguardA",
+      "b": "VanguardB",
+      "mirror": true
+    },
+    {
+      "id": 14,
+      "seed": 20261221,
+      "a": "VanguardA",
+      "b": "VanguardB",
+      "mirror": true
+    },
+    {
+      "id": 15,
+      "seed": 20261229,
+      "a": "VanguardA",
+      "b": "VanguardB",
+      "mirror": true
+    },
+    {
+      "id": 16,
+      "seed": 20261237,
+      "a": "VanguardA",
+      "b": "VanguardB",
+      "mirror": true
+    }
+  ],
+  "config": {
+    "tickLimit": 1500,
+    "tickMs": 1,
+    "decideMs": 120,
+    "initMs": 2000,
+    "maxStrikes": 3,
+    "strikeMode": "consecutive",
+    "generator": "minecraft",
+    "vision": false,
+    "ruleset": "v15"
+  }
+}

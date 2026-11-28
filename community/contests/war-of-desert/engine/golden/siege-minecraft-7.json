@@ -1,0 +1,12873 @@
+{
+ "name": "siege-minecraft-7",
+ "mode": "siege",
+ "seed": 7,
+ "generator": "minecraft",
+ "tickLimit": 1260,
+ "ticksRun": 300,
+ "mapAttempt": 0,
+ "orderLog": [
+  {
+   "t": 1,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "produce",
+      "kind": "LAV"
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 813,
+      "y": 447
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 2,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 1215,
+      "y": 537
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 3,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 321,
+      "y": 999
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 4,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "produce",
+      "kind": "SALVAGER"
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 723,
+      "y": 1089
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 5,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 813,
+      "y": 447
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 6,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "weapon"
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 1215,
+      "y": 537
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 7,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 321,
+      "y": 999
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 8,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "produce",
+      "kind": "LAV"
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 723,
+      "y": 1089
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 9,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 813,
+      "y": 447
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 10,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 1215,
+      "y": 537
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 11,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 321,
+      "y": 999
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 12,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "mode",
+      "mode": "aggressive"
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 723,
+      "y": 1089
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 13,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 813,
+      "y": 447
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 14,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 1215,
+      "y": 537
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 15,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "produce",
+      "kind": "LAV"
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 321,
+      "y": 999
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 16,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 723,
+      "y": 1089
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 17,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 813,
+      "y": 447
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 18,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 1215,
+      "y": 537
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 19,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 321,
+      "y": 999
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 20,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 723,
+      "y": 1089
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 21,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 813,
+      "y": 447
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 22,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "produce",
+      "kind": "LAV"
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 1215,
+      "y": 537
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 23,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 321,
+      "y": 999
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 24,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 723,
+      "y": 1089
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 25,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 813,
+      "y": 447
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 26,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 1215,
+      "y": 537
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 27,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "produce",
+      "kind": "SALVAGER"
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 321,
+      "y": 999
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 28,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 723,
+      "y": 1089
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 29,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "produce",
+      "kind": "LAV"
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 813,
+      "y": 447
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 30,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 1215,
+      "y": 537
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 31,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 321,
+      "y": 999
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 32,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 723,
+      "y": 1089
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 33,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 813,
+      "y": 447
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 34,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 1215,
+      "y": 537
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 35,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 321,
+      "y": 999
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 36,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "produce",
+      "kind": "LAV"
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 723,
+      "y": 1089
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 37,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "weapon"
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 813,
+      "y": 447
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 38,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 1215,
+      "y": 537
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 39,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 321,
+      "y": 999
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 40,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 723,
+      "y": 1089
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 41,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 813,
+      "y": 447
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 42,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 1215,
+      "y": 537
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 43,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "produce",
+      "kind": "LAV"
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 321,
+      "y": 999
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 44,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 723,
+      "y": 1089
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 45,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 813,
+      "y": 447
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 46,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 1215,
+      "y": 537
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 47,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 321,
+      "y": 999
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 48,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 723,
+      "y": 1089
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 49,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 813,
+      "y": 447
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 50,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "produce",
+      "kind": "LAV"
+     },
+     {
+      "type": "produce",
+      "kind": "SALVAGER"
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 1215,
+      "y": 537
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 51,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 321,
+      "y": 999
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 52,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 723,
+      "y": 1089
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 53,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 813,
+      "y": 447
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 54,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 1215,
+      "y": 537
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 55,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 321,
+      "y": 999
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 56,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 723,
+      "y": 1089
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 57,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "produce",
+      "kind": "LAV"
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 813,
+      "y": 447
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 58,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 1215,
+      "y": 537
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 59,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 321,
+      "y": 999
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 60,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 723,
+      "y": 1089
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 61,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 813,
+      "y": 447
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 62,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 1215,
+      "y": 537
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 63,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 321,
+      "y": 999
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 64,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "produce",
+      "kind": "LAV"
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 723,
+      "y": 1089
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 65,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 813,
+      "y": 447
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 66,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 1215,
+      "y": 537
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 67,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 321,
+      "y": 999
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 68,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "weapon"
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 723,
+      "y": 1089
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 69,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 813,
+      "y": 447
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 70,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 1215,
+      "y": 537
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 71,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "produce",
+      "kind": "LAV"
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 321,
+      "y": 999
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 72,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 723,
+      "y": 1089
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 73,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "produce",
+      "kind": "SALVAGER"
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 813,
+      "y": 447
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 74,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 1215,
+      "y": 537
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 75,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 321,
+      "y": 999
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 76,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 723,
+      "y": 1089
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 77,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 813,
+      "y": 447
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 78,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "produce",
+      "kind": "LAV"
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 1215,
+      "y": 537
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 79,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 321,
+      "y": 999
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 80,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 723,
+      "y": 1089
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 81,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 813,
+      "y": 447
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 82,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 1215,
+      "y": 537
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 83,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 321,
+      "y": 999
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 84,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 723,
+      "y": 1089
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 85,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "produce",
+      "kind": "LAV"
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 813,
+      "y": 447
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 86,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 1215,
+      "y": 537
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 87,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 321,
+      "y": 999
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 88,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 723,
+      "y": 1089
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 89,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 813,
+      "y": 447
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 90,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 1215,
+      "y": 537
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 91,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 321,
+      "y": 999
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 92,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "produce",
+      "kind": "LAV"
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 723,
+      "y": 1089
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 93,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 813,
+      "y": 447
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 94,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 1215,
+      "y": 537
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 95,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 321,
+      "y": 999
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 96,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "produce",
+      "kind": "SALVAGER"
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 723,
+      "y": 1089
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 97,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 813,
+      "y": 447
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 98,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 1215,
+      "y": 537
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 99,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "produce",
+      "kind": "LAV"
+     },
+     {
+      "type": "weapon"
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 321,
+      "y": 999
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 100,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 723,
+      "y": 1089
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 101,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 813,
+      "y": 447
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 102,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 1215,
+      "y": 537
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 103,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 321,
+      "y": 999
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 104,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 723,
+      "y": 1089
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 105,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 813,
+      "y": 447
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 106,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "produce",
+      "kind": "LAV"
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 1215,
+      "y": 537
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 107,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 321,
+      "y": 999
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 108,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 723,
+      "y": 1089
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 109,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 813,
+      "y": 447
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 110,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 1215,
+      "y": 537
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 111,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 321,
+      "y": 999
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 112,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 723,
+      "y": 1089
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 113,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "produce",
+      "kind": "LAV"
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 813,
+      "y": 447
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 114,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 1215,
+      "y": 537
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 115,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 321,
+      "y": 999
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 116,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 723,
+      "y": 1089
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 117,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 813,
+      "y": 447
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 118,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 1215,
+      "y": 537
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 119,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "produce",
+      "kind": "SALVAGER"
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 321,
+      "y": 999
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 120,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "produce",
+      "kind": "LAV"
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 723,
+      "y": 1089
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 121,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 813,
+      "y": 447
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 122,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 1215,
+      "y": 537
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 123,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 321,
+      "y": 999
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 124,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 723,
+      "y": 1089
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 125,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 813,
+      "y": 447
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 126,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 1215,
+      "y": 537
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 127,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "produce",
+      "kind": "LAV"
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 321,
+      "y": 999
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 128,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 723,
+      "y": 1089
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 129,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 813,
+      "y": 447
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 130,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "weapon"
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 1215,
+      "y": 537
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 131,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 321,
+      "y": 999
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 132,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 723,
+      "y": 1089
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 133,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 813,
+      "y": 447
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 134,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "produce",
+      "kind": "LAV"
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 1215,
+      "y": 537
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 135,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 321,
+      "y": 999
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 136,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 723,
+      "y": 1089
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 137,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 813,
+      "y": 447
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 138,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 1215,
+      "y": 537
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 139,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 321,
+      "y": 999
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 140,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 723,
+      "y": 1089
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 141,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "produce",
+      "kind": "LAV"
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 813,
+      "y": 447
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 142,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "produce",
+      "kind": "SALVAGER"
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 1215,
+      "y": 537
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 143,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 321,
+      "y": 999
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 144,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 723,
+      "y": 1089
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 145,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 813,
+      "y": 447
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 146,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 1215,
+      "y": 537
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 147,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 321,
+      "y": 999
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 148,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "produce",
+      "kind": "LAV"
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 723,
+      "y": 1089
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 149,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 813,
+      "y": 447
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 150,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 1215,
+      "y": 537
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 151,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 321,
+      "y": 999
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 152,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 723,
+      "y": 1089
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 153,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 813,
+      "y": 447
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 154,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 1215,
+      "y": 537
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 155,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "produce",
+      "kind": "LAV"
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 321,
+      "y": 999
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 156,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 723,
+      "y": 1089
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 157,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 813,
+      "y": 447
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 158,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 1215,
+      "y": 537
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 159,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 321,
+      "y": 999
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 160,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 723,
+      "y": 1089
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 161,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "weapon"
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 813,
+      "y": 447
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 162,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "produce",
+      "kind": "LAV"
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 1215,
+      "y": 537
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 163,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 321,
+      "y": 999
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 164,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 723,
+      "y": 1089
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 165,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "produce",
+      "kind": "SALVAGER"
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 813,
+      "y": 447
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 166,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 1215,
+      "y": 537
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 167,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 321,
+      "y": 999
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 168,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 723,
+      "y": 1089
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 169,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "produce",
+      "kind": "LAV"
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 813,
+      "y": 447
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 170,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 1215,
+      "y": 537
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 171,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 321,
+      "y": 999
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 172,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 723,
+      "y": 1089
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 173,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 813,
+      "y": 447
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 174,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 1215,
+      "y": 537
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 175,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 321,
+      "y": 999
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 176,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "produce",
+      "kind": "LAV"
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 723,
+      "y": 1089
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 177,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 813,
+      "y": 447
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 178,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 1215,
+      "y": 537
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 179,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 321,
+      "y": 999
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 180,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 723,
+      "y": 1089
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 181,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 813,
+      "y": 447
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 182,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 1215,
+      "y": 537
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 183,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "produce",
+      "kind": "LAV"
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 321,
+      "y": 999
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 184,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 723,
+      "y": 1089
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 185,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 813,
+      "y": 447
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 186,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 1215,
+      "y": 537
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 187,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 321,
+      "y": 999
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 188,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "produce",
+      "kind": "SALVAGER"
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 723,
+      "y": 1089
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 189,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 813,
+      "y": 447
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 190,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "produce",
+      "kind": "LAV"
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 1215,
+      "y": 537
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 191,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 321,
+      "y": 999
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 192,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "weapon"
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 723,
+      "y": 1089
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 193,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 813,
+      "y": 447
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 194,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 1215,
+      "y": 537
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 195,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 321,
+      "y": 999
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 196,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 723,
+      "y": 1089
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 197,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "produce",
+      "kind": "LAV"
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 813,
+      "y": 447
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 198,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 1215,
+      "y": 537
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 199,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 321,
+      "y": 999
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 200,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 723,
+      "y": 1089
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 201,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 813,
+      "y": 447
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 202,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 1215,
+      "y": 537
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 203,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 321,
+      "y": 999
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 204,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "produce",
+      "kind": "LAV"
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 723,
+      "y": 1089
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 205,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 813,
+      "y": 447
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 206,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 1215,
+      "y": 537
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 207,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 321,
+      "y": 999
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 208,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 723,
+      "y": 1089
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 209,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 813,
+      "y": 447
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 210,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 1215,
+      "y": 537
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 211,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "produce",
+      "kind": "LAV"
+     },
+     {
+      "type": "produce",
+      "kind": "SALVAGER"
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 321,
+      "y": 999
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 212,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 723,
+      "y": 1089
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 213,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 813,
+      "y": 447
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 214,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 1215,
+      "y": 537
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 215,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 321,
+      "y": 999
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 216,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 723,
+      "y": 1089
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 217,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 813,
+      "y": 447
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 218,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "produce",
+      "kind": "LAV"
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 1215,
+      "y": 537
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 219,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 321,
+      "y": 999
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 220,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 723,
+      "y": 1089
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 221,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 813,
+      "y": 447
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 222,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 1215,
+      "y": 537
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 223,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "weapon"
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 321,
+      "y": 999
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 224,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 723,
+      "y": 1089
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 225,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "produce",
+      "kind": "LAV"
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 813,
+      "y": 447
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 226,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 1215,
+      "y": 537
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 227,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 321,
+      "y": 999
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 228,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 723,
+      "y": 1089
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 229,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 813,
+      "y": 447
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 230,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 1215,
+      "y": 537
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 231,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 321,
+      "y": 999
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 232,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "produce",
+      "kind": "LAV"
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 723,
+      "y": 1089
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 233,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 813,
+      "y": 447
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 234,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "produce",
+      "kind": "SALVAGER"
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 1215,
+      "y": 537
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 235,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 321,
+      "y": 999
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 236,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 723,
+      "y": 1089
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 237,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 813,
+      "y": 447
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 238,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 1215,
+      "y": 537
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 239,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "produce",
+      "kind": "LAV"
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 321,
+      "y": 999
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 240,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 723,
+      "y": 1089
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 241,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 813,
+      "y": 447
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 242,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 1215,
+      "y": 537
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 243,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 321,
+      "y": 999
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 244,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 723,
+      "y": 1089
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 245,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 813,
+      "y": 447
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 246,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "produce",
+      "kind": "LAV"
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 1215,
+      "y": 537
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 247,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 321,
+      "y": 999
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 248,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 723,
+      "y": 1089
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 249,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 813,
+      "y": 447
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 250,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 1215,
+      "y": 537
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 251,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 321,
+      "y": 999
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 252,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 723,
+      "y": 1089
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 253,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "produce",
+      "kind": "LAV"
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 813,
+      "y": 447
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 254,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "weapon"
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 1215,
+      "y": 537
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 255,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 321,
+      "y": 999
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 256,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 723,
+      "y": 1089
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 257,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "produce",
+      "kind": "SALVAGER"
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 813,
+      "y": 447
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 258,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 1215,
+      "y": 537
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 259,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 321,
+      "y": 999
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 260,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "produce",
+      "kind": "LAV"
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 723,
+      "y": 1089
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 261,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 813,
+      "y": 447
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 262,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 1215,
+      "y": 537
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 263,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 321,
+      "y": 999
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 264,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 723,
+      "y": 1089
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 265,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 813,
+      "y": 447
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 266,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 1215,
+      "y": 537
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 267,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "produce",
+      "kind": "LAV"
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 321,
+      "y": 999
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 268,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 723,
+      "y": 1089
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 269,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 813,
+      "y": 447
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 270,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 1215,
+      "y": 537
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 271,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 321,
+      "y": 999
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 272,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 723,
+      "y": 1089
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 273,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 813,
+      "y": 447
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 274,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "produce",
+      "kind": "LAV"
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 1215,
+      "y": 537
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 275,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 321,
+      "y": 999
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 276,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 723,
+      "y": 1089
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 277,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 813,
+      "y": 447
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 278,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 1215,
+      "y": 537
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 279,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 321,
+      "y": 999
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 280,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "produce",
+      "kind": "SALVAGER"
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 723,
+      "y": 1089
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 281,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "produce",
+      "kind": "LAV"
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 813,
+      "y": 447
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 282,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 1215,
+      "y": 537
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 283,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 321,
+      "y": 999
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 284,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 723,
+      "y": 1089
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 285,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "weapon"
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 813,
+      "y": 447
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 286,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 1215,
+      "y": 537
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 287,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 321,
+      "y": 999
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 288,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "produce",
+      "kind": "LAV"
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 723,
+      "y": 1089
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 289,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 813,
+      "y": 447
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 290,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 1215,
+      "y": 537
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 291,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 321,
+      "y": 999
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 292,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 723,
+      "y": 1089
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 293,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 813,
+      "y": 447
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 294,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 1215,
+      "y": 537
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 295,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "produce",
+      "kind": "LAV"
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 321,
+      "y": 999
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 296,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 723,
+      "y": 1089
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 297,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 813,
+      "y": 447
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 813,
+      "y": 447
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 298,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 1215,
+      "y": 537
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 1215,
+      "y": 537
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 299,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 321,
+      "y": 999
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 321,
+      "y": 999
+     }
+    ],
+    []
+   ]
+  },
+  {
+   "t": 300,
+   "o": [
+    [
+     {
+      "type": "alloc",
+      "siegeAlloc": {
+       "produce": 30,
+       "attack": 35,
+       "research": 15,
+       "move": 20
+      }
+     },
+     {
+      "type": "move",
+      "id": 7,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 8,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 9,
+      "x": 723,
+      "y": 1089
+     },
+     {
+      "type": "move",
+      "id": 10,
+      "x": 723,
+      "y": 1089
+     }
+    ],
+    []
+   ]
+  }
+ ],
+ "frameHashes": [
+  "886e1ec4",
+  "6e357c7d",
+  "8b5cadb5",
+  "63a5bbd1",
+  "b12fbc1e",
+  "a2884c79",
+  "208f8768",
+  "c4d1201b",
+  "a95760de",
+  "3dace61d",
+  "1de747ad",
+  "573737e6",
+  "ef963e1a",
+  "273efac1",
+  "8af3bac4",
+  "cb715f7b",
+  "81f8b01e",
+  "26edc39d",
+  "c4b0d270",
+  "99534f3f",
+  "1e70fad3",
+  "346c8b60",
+  "8874943d",
+  "4eaef85c",
+  "0de9cb5f",
+  "70c3c8f0",
+  "b1888a1b",
+  "dcac46ea",
+  "aecff985",
+  "a207f268",
+  "3ea5254e",
+  "cb6fcac3",
+  "f3c9f4c6",
+  "cfa7ad4b",
+  "50ec4242",
+  "ab18e239",
+  "ea62354c",
+  "342b448b",
+  "92185202",
+  "abcd8b49",
+  "47732b15",
+  "5cd7f7e2",
+  "af048777",
+  "61df0fc4",
+  "70d685d9",
+  "b3f7df3e",
+  "098f0123",
+  "fce89908",
+  "57e3c626",
+  "3732e389",
+  "cfb0ea63",
+  "48b451de",
+  "41f41147",
+  "f5d1528e",
+  "bc6f0b01",
+  "72cced64",
+  "7101cd47",
+  "7501168a",
+  "31b2fe9d",
+  "6a581db8",
+  "df452788",
+  "4d2ba3f1",
+  "0a242cc6",
+  "d4167f3f",
+  "3acf06c0",
+  "8660e789",
+  "76431316",
+  "c9d5ded5",
+  "592db876",
+  "cc707f01",
+  "b4f34981",
+  "671839ae",
+  "53311321",
+  "6270b178",
+  "5d6ede17",
+  "36cdb810",
+  "5b63cbc7",
+  "0432afc0",
+  "86bc375f",
+  "75c3f16c",
+  "289b92d6",
+  "b3b9283d",
+  "c0bd064e",
+  "50c3f499",
+  "cf164ac6",
+  "102967a1",
+  "fb693d42",
+  "93679bcb",
+  "3ecfa00a",
+  "5bbf5fff",
+  "43f378e3",
+  "77631e26",
+  "894eda7b",
+  "b07794bc",
+  "a8f74309",
+  "fa4f0b7c",
+  "429e07f9",
+  "28774594",
+  "e7d12901",
+  "423c3bb8",
+  "72c62ab9",
+  "dbb09028",
+  "dd6e4019",
+  "1627cc6c",
+  "890cfa78",
+  "47ec17a1",
+  "0a463080",
+  "23b15c0f",
+  "5a31294a",
+  "5a3f4f9b",
+  "cfd8200f",
+  "42092f36",
+  "10f75ad7",
+  "caf3c1ac",
+  "19ee4861",
+  "709d18a4",
+  "636afe21",
+  "3380fd2c",
+  "135150f1",
+  "548aa718",
+  "f12eca4c",
+  "3098f095",
+  "e25f6c84",
+  "17071c71",
+  "f8fa848c",
+  "a6c36639",
+  "3294b3c8",
+  "62d0bbd7",
+  "e5b9383e",
+  "3b2a828f",
+  "1c652e7b",
+  "0234b182",
+  "a8b971df",
+  "ae842343",
+  "918e18de",
+  "42f91bcb",
+  "906a8926",
+  "7d31157b",
+  "3ad82586",
+  "2c544747",
+  "02cccd4b",
+  "b75a04a6",
+  "99fadcfb",
+  "88af2e3a",
+  "19656b23",
+  "202ccb4a",
+  "067faf3f",
+  "eb2cb4a8",
+  "8f3b9ec9",
+  "b3951c10",
+  "4c395c88",
+  "2df27619",
+  "0ac2561c",
+  "af99b9ad",
+  "4cbfdc9a",
+  "9996093d",
+  "5da6411a",
+  "bcd7621d",
+  "cc67d0fa",
+  "111a0f81",
+  "3c93630d",
+  "f029d22e",
+  "309bd0dd",
+  "0c29500a",
+  "5d38710d",
+  "fd0f0122",
+  "f22590a1",
+  "7d8d0b54",
+  "3b149fdb",
+  "8f3f3254",
+  "717552c8",
+  "11ed2bb0",
+  "8dfecc33",
+  "d2291d86",
+  "4a1cf48d",
+  "8c6df10a",
+  "ebe6934d",
+  "00c2a56a",
+  "47d1e331",
+  "de560782",
+  "1755d40a",
+  "c971cfa5",
+  "24e05c56",
+  "d77cfebd",
+  "65b5950e",
+  "2e733a2d",
+  "a5a716b6",
+  "9889ddeb",
+  "70aec1d4",
+  "b5b0b96b",
+  "f14a831b",
+  "767ae0d4",
+  "598ff71f",
+  "998a4d4e",
+  "03282799",
+  "8b52bf8e",
+  "d10a816d",
+  "1e4562da",
+  "1568f775",
+  "f046b51e",
+  "1802e844",
+  "317ee24f",
+  "0e1e8278",
+  "1587d3f7",
+  "b9e34784",
+  "30552643",
+  "5c16cb5c",
+  "9746927d",
+  "c7555f46",
+  "ffe986a1",
+  "8faa011d",
+  "c7e6effa",
+  "e2fbbf0d",
+  "1f49c8ff",
+  "b279b145",
+  "d88d615a",
+  "025a4e9d",
+  "19b20fb2",
+  "ff0b0925",
+  "0d94a08e",
+  "a7e72aac",
+  "b9c19d01",
+  "2c23f068",
+  "1ea359f1",
+  "d84910e4",
+  "9e2898d5",
+  "e3c02d2c",
+  "05d81cdf",
+  "dd5cea6a",
+  "da75e5bb",
+  "56583033",
+  "1251a7ba",
+  "3f613f9b",
+  "69f45284",
+  "72b71739",
+  "51411e0c",
+  "bd6c3bb1",
+  "79382034",
+  "ee6d1839",
+  "a59915ec",
+  "4168bc7c",
+  "23865df9",
+  "9beb59d4",
+  "23e01a6d",
+  "d35a9ab4",
+  "b63d5305",
+  "c1c74600",
+  "a3c507bf",
+  "1d2d12a2",
+  "4bd12537",
+  "434460cf",
+  "137450da",
+  "7c1a8813",
+  "10e40aac",
+  "0b6d2a45",
+  "337b8cd8",
+  "5fc54539",
+  "a8e0f484",
+  "d4e071bd",
+  "fdea8b04",
+  "876fe53c",
+  "599a6191",
+  "77445a38",
+  "99258591",
+  "3436af04",
+  "4ea02785",
+  "e963a92c",
+  "042c1f80",
+  "771ad28d",
+  "84d82a60",
+  "02d548dc",
+  "cfdacb01",
+  "19286c80",
+  "feb92fab",
+  "0186712e",
+  "9b301677",
+  "ab450142",
+  "99d49a33",
+  "dcac0346",
+  "7d457403",
+  "f2d1fe5f",
+  "7d1dd366",
+  "e04dbbab",
+  "272d9356",
+  "97c917a7",
+  "6f9fb96a",
+  "5b4eb29f",
+  "4ffc22f0",
+  "795ba6b3",
+  "295c8638",
+  "f8e1dfa8",
+  "6b7e9bbb",
+  "eb435b14",
+  "4685bf4d",
+  "c63d151e",
+  "be0b81c1",
+  "bbc554f2",
+  "f44e8bc5",
+  "767c6cb6",
+  "4427716d",
+  "42a5c190"
+ ],
+ "result": null
+}

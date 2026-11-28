@@ -1,0 +1,24 @@
+{
+  "oracleCommit": "288db07f164bc6c680a2d878c47153804d3fdcab",
+  "source": "../Dev/MVP/referee/",
+  "note": "只读字节快照：war_of_desert 只读本目录，不得就地修改；规则语义争议以本快照为准。源仓库 Dev/MVP 已于 2026-11-13 解冻（v1.0 锚点为 tag baseline/288db07），其后续改动不回灌本快照；新规则须新出快照 + 新 rulesHash 后再进正式赛。",
+  "files": {
+    "rules.js": {
+      "sha256": "21ca3be7c5d12d2f3120ea62a0cc797ca9d36822098b97933a43759469e827c5",
+      "bytes": 101609
+    },
+    "mapgen.js": {
+      "sha256": "f11be4e86369cf98b373eb1df29f70ed9317697445441a29955048b14540a20d",
+      "bytes": 69173
+    },
+    "mapgen_mc.js": {
+      "sha256": "e18c57edbd330e27cdb8134a410479e3e3b0edb49f4d558cc1fc00fa4f6d000e",
+      "bytes": 22606
+    },
+    "ballistics.js": {
+      "sha256": "d178c78082b08d3784a9520278c7b2c20577fa356f4d115377b140cb88c33b48",
+      "bytes": 14637
+    }
+  },
+  "verify": "python -X utf8 war_of_desert/scripts/verify_oracle.py"
+}

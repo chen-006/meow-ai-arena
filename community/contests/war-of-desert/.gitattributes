@@ -1,0 +1,12 @@
+# 规则快照、golden trace 与成绩按字节留档，禁止任何 EOL 转换。
+# engine/oracle/MANIFEST.json 与 golden trace 记录的是文件内容的 SHA-256，
+# 换行被改写会让哈希失配，复现性就没了。
+engine/oracle/* -text
+engine/golden/* -text
+results/** -text
+
+# 选手工作区统一 LF，保证不同机器上源码哈希一致。
+workspace/** text eol=lf
+
+# 批处理脚本必须 CRLF。
+*.bat text eol=crlf

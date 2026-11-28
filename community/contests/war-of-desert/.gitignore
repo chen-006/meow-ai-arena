@@ -1,0 +1,22 @@
+# 本目录是社区比赛材料，下面这些是本地产物，不入库。
+# 编译输出
+__pycache__/
+*.pyc
+.bin/
+bots/bin/
+bots/seal-records/
+bots/封存记录.json
+*.exe
+# 可由 arena run 重建的回放
+results/*/replays/
+experiment-records/*/*/replays/
+# 本地运行缓存、诊断与裁判台工作区
+results/desk/
+results/_tmp-*/
+experiment-records/reference-bots-archive/bin/
+experiment-records/offense-defense-experiments/bin/
+workspace/_contestants/
+tournament/_desk_*.json
+tournament/_tmp_*.json
+# 本机智能体工作数据
+.mimosa/

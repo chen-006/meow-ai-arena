@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>Desert Arena · 回放查看器</title>
+<style>
+  :root { --bg:#141414; --panel:#1e1e1e; --line:#333; --fg:#ddd; --dim:#888; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg); font:14px/1.5 "Microsoft YaHei",system-ui,sans-serif; }
+  header { padding:10px 16px; border-bottom:1px solid var(--line); display:flex; align-items:center; gap:14px; }
+  header h1 { font-size:16px; margin:0; color:#eee; }
+  header .hint { color:var(--dim); font-size:12px; }
+  main { display:flex; gap:14px; padding:14px; align-items:flex-start; }
+  #drop { border:2px dashed #555; border-radius:10px; padding:60px 40px; text-align:center; color:var(--dim);
+          margin:40px auto; width:560px; cursor:pointer; }
+  #drop.over { border-color:#7aa7ff; color:#aac4ff; }
+  #stage { display:none; }
+  canvas { image-rendering: pixelated; border:1px solid var(--line); background:#000; }
+  #right { width:330px; display:flex; flex-direction:column; gap:10px; }
+  .panel { background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+  .panel h2 { margin:0 0 8px; font-size:13px; color:#bbb; font-weight:600; }
+  .score-row { display:flex; justify-content:space-between; margin:3px 0; font-variant-numeric:tabular-nums; }
+  .side0 { color:#ff7b6b; } .side1 { color:#6fa8ff; }
+  .bar { height:6px; border-radius:3px; background:#000; overflow:hidden; margin:4px 0 8px; }
+  .bar i { display:block; height:100%; }
+  .controls { display:flex; gap:8px; align-items:center; flex-wrap:wrap; }
+  button { background:#2a2a2a; color:#ddd; border:1px solid #444; border-radius:6px; padding:5px 12px; cursor:pointer; }
+  button:hover { background:#3a3a3a; }
+  input[type=range] { flex:1; min-width:160px; }
+  select { background:#2a2a2a; color:#ddd; border:1px solid #444; border-radius:6px; padding:4px 6px; }
+  #turnLabel { font-variant-numeric:tabular-nums; color:#eee; min-width:110px; }
+  .tabs { display:flex; gap:6px; }
+  .tabs button { padding:4px 14px; }
+  .tabs button.on { background:#3d5a9e; border-color:#5a7bd0; color:#fff; }
+  #banner { padding:10px 14px; border-radius:8px; font-weight:600; display:none; }
+  .legend { display:flex; flex-wrap:wrap; gap:8px; font-size:12px; color:var(--dim); }
+  .legend span { display:inline-flex; align-items:center; gap:4px; }
+  .legend i { width:10px; height:10px; border-radius:2px; display:inline-block; }
+  #faults { max-height:140px; overflow:auto; font-size:12px; color:#e8a; white-space:pre-wrap; }
+  #verify { font-size:12px; }
+  kbd { background:#2a2a2a; border:1px solid #444; border-radius:3px; padding:0 5px; font-size:12px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Desert Arena · 回放查看器</h1>
+  <span class="hint">把 <code>results/*/replays/match-NNN.json</code> 拖进来 ｜ <kbd>空格</kbd> 播放/暂停 ｜ <kbd>←</kbd><kbd>→</kbd> 逐帧</span>
+  <span style="flex:1"></span>
+  <a href="回放查看器3D.html" style="color:#9fc4cd;font-size:12px;text-decoration:none;border:1px solid #444;border-radius:6px;padding:5px 10px">3D 回放 ↗</a>
+  <button id="pick">选择回放文件…</button>
+  <input id="file" type="file" accept=".json" style="display:none">
+</header>
+
+<div id="drop">把回放 JSON 拖到这里，或点击选择<br><small>results/formal-v11/replays/match-001.json</small></div>
+
+<main id="stage">
+  <div>
+    <canvas id="cv" width="768" height="768"></canvas>
+    <div class="controls" style="margin-top:10px">
+      <button id="play">▶ 播放</button>
+      <button id="prev">⟨</button>
+      <button id="next">⟩</button>
+      <input id="seek" type="range" min="0" max="100" value="0">
+      <span id="turnLabel">tick 0 / 0</span>
+      <select id="speed">
+        <option value="2">0.5×</option>
+        <option value="4" selected>1×</option>
+        <option value="8">2×</option>
+        <option value="16">4×</option>
+        <option value="40">10×</option>
+      </select>
+    </div>
+  </div>
+  <div id="right">
+    <div class="tabs" id="gameTabs"></div>
+    <div class="panel" id="scorePanel">
+      <h2>记分</h2>
+      <div id="scoreBody"></div>
+    </div>
+    <div class="panel"><h2>图例</h2>
+      <div class="legend">
+        <span><i style="background:#d64541"></i><b class="side0" id="n0">座位0</b></span>
+        <span><i style="background:#3f7fd6"></i><b class="side1" id="n1">座位1</b></span>
+        <span><i style="background:#e8c34a"></i>VP</span>
+        <span><i style="background:#59c98f"></i>CU 矿</span>
+        <span><i style="background:#b07fe0"></i>RU 矿</span>
+        <span><i style="background:#7a6a58"></i>岩壁</span>
+        <span><i style="background:#9aa3a8"></i>平台</span>
+      </div>
+    </div>
+    <div class="panel"><h2>对局信息</h2><div id="meta"></div></div>
+    <div class="panel" id="faultPanel" style="display:none"><h2>故障</h2><div id="faults"></div></div>
+    <div id="banner"></div>
+  </div>
+</main>
+
+<script>
+'use strict';
+/* 回放查看器 · 零依赖单文件
+ * 数据源：arena run 产出的 replays/match-NNN.json（hello 头 + 逐局 frames）
+ * 地图层解码与 mapgen.js rle+b64/1 同构：(值, 计数-1) 字节对；elev 原样字节。
+ */
+const SURF_COLORS = ['#d8c08a','#c2a272','#e6d29a','#7a6a58','#b09468','#e8e2d0','#cbb27f','#9aa3a8'];
+const SIDE = ['#d64541','#3f7fd6'];
+const SIDE_NAME = ['红方','蓝方'];
+
+let data = null, game = null, mapImg = null;
+let frameIdx = 0, playing = false, timer = null;
+const cv = document.getElementById('cv'), ctx = cv.getContext('2d');
+const VIEW = cv.width, WORLD = 1536, K = VIEW / WORLD;
+
+/* ---------- 编解码 ---------- */
+function b64bytes(s) {
+  const clean = String(s).replace(/[^A-Za-z0-9+/]/g, '');
+  const bin = atob(clean);
+  const out = new Uint8Array(bin.length);
+  for (let i = 0; i < bin.length; i++) out[i] = bin.charCodeAt(i);
+  return out;
+}
+function rleDecode(bytes, n) {
+  const out = new Uint8Array(n);
+  let p = 0;
+  for (let i = 0; i + 1 < bytes.length && p < n; i += 2) {
+    const v = bytes[i], c = bytes[i + 1] + 1;
+    for (let k = 0; k < c && p < n; k++) out[p++] = v;
+  }
+  return out;
+}
+function decodeMap(enc) {
+  const n = enc.w * enc.h;
+  return {
+    w: enc.w, h: enc.h,
+    base: rleDecode(b64bytes(enc.base), n),
+    surf: rleDecode(b64bytes(enc.surf), n),
+    elev: b64bytes(enc.elev).slice(0, n),
+  };
+}
+
+/* ---------- 地图渲染（一次性） ---------- */
+function renderMap(m) {
+  const off = document.createElement('canvas');
+  off.width = m.w; off.height = m.h;
+  const c = off.getContext('2d');
+  const img = c.createImageData(m.w, m.h);
+  for (let i = 0; i < m.w * m.h; i++) {
+    const hex = SURF_COLORS[m.surf[i]] || '#000';
+    const r = parseInt(hex.slice(1,3),16), g = parseInt(hex.slice(3,5),16), b = parseInt(hex.slice(5,7),16);
+    const shade = 0.72 + (m.elev[i] / 255) * 0.5;             // 高程明暗
+    const o = i * 4;
+    img.data[o]   = Math.min(255, r * shade);
+    img.data[o+1] = Math.min(255, g * shade);
+    img.data[o+2] = Math.min(255, b * shade);
+    img.data[o+3] = 255;
+  }
+  c.putImageData(img, 0, 0);
+  return off;
+}
+
+/* ---------- 加载 ---------- */
+function loadFile(f) {
+  const rd = new FileReader();
+  rd.onload = () => {
+    try { load(JSON.parse(rd.result)); }
+    catch (e) { alert('回放解析失败：' + e.message); }
+  };
+  rd.readAsText(f);
+}
+function load(d) {
+  data = d;
+  document.getElementById('drop').style.display = 'none';
+  document.getElementById('stage').style.display = 'flex';
+  const tabs = document.getElementById('gameTabs');
+  tabs.innerHTML = '';
+  d.games.forEach((g, i) => {
+    const b = document.createElement('button');
+    b.textContent = '第 ' + (i + 1) + ' 局' + (g.swap ? '（换边）' : '');
+    b.onclick = () => selectGame(i);
+    tabs.appendChild(b);
+  });
+  selectGame(0);
+}
+function selectGame(i) {
+  game = data.games[i];
+  const h = data.header;
+  const m = decodeMap(h.map);
+  mapImg = renderMap(m);
+  [...document.getElementById('gameTabs').children].forEach((b, j) => b.classList.toggle('on', j === i));
+  document.getElementById('n0').textContent = game.seats[0];
+  document.getElementById('n1').textContent = game.seats[1];
+  document.getElementById('seek').max = game.frames.length - 1;
+  frameIdx = 0;
+  showMeta();
+  showFaults();
+  draw();
+  update();
+}
+
+/* ---------- 面板 ---------- */
+function showMeta() {
+  const r = game.result;
+  document.getElementById('meta').innerHTML =
+    'seed ' + game.seed + ' ｜ 指纹 <code>' + game.rulesHash + '</code> ｜ tickLimit ' + r.turns +
+    ' ｜ 抽帧 每5 tick<br>胜负判定：<b>' + (r.reason || '—') + '</b>（层级 L' + r.level + '）';
+}
+function showFaults() {
+  const fl = (game.faults || []).filter(a => a && a.length);
+  const p = document.getElementById('faultPanel');
+  if (!fl.length) { p.style.display = 'none'; return; }
+  p.style.display = 'block';
+  document.getElementById('faults').textContent = fl.map((a, s) => SIDE_NAME[s] + '：' + JSON.stringify(a)).join('\n');
+}
+function update() {
+  const fr = game.frames[Math.min(frameIdx, game.frames.length - 1)];
+  if (!fr) return;
+  document.getElementById('turnLabel').textContent = 'tick ' + fr.turn + ' / ' + game.result.turns;
+  const sc = fr.score;
+  const names = [game.seats[0], game.seats[1]];
+  const totalVP = sc.reduce((a, s) => a + s.vp, 0) || 1;
+  let html = '';
+  for (let s = 0; s < 2; s++) {
+    html += '<div class="score-row"><span class="side' + s + '">' + names[s] + '</span><span>VP ' + sc[s].vp +
+            ' ｜ 击 ' + sc[s].kills + ' / 损 ' + sc[s].losses + '</span></div>' +
+            '<div class="bar"><i style="width:' + (sc[s].vp / totalVP * 100).toFixed(1) + '%;background:' + SIDE[s] + '"></i></div>';
+  }
+  html += '<div class="score-row"><span>资源</span><span>CU ' + fr.cu.join(' : ') + ' ｜ RU ' + fr.ru.join(' : ') + '</span></div>';
+  if (fr.techs) html += '<div class="score-row"><span>科技</span><span>' + fr.techs.map(t => (t||[]).length).join(' : ') + '</span></div>';
+  /* 生产队列三态：造中（queue=生产中）+ 等待（waitingQueue）+ 堵塞标记（queueBlocked）。
+   * v1.2 观测增强；旧赛季回放没有 waitingQueue 字段，自动降级为只显示造中。 */
+  for (let s = 0; s < 2; s++) {
+    const act = (fr.queue && fr.queue[s]) || [];
+    const wait = (fr.waitingQueue && fr.waitingQueue[s]) || [];
+    if (!act.length && !wait.length) continue;
+    const blocked = fr.queueBlocked && fr.queueBlocked[s];
+    html += '<div class="score-row"><span class="side' + s + '">' + names[s] + ' 生产线</span><span>' +
+            '造中 ' + (act.length ? act.join('·') : '—') +
+            ' ｜ 等待 ' + (wait.length ? wait.join('·') : '—') +
+            (blocked ? ' <b style="color:#ff7b72">⛔队首堵</b>' : '') + '</span></div>';
+  }
+  document.getElementById('scoreBody').innerHTML = html;
+
+  const r = game.result;
+  const banner = document.getElementById('banner');
+  if (frameIdx >= game.frames.length - 1 && r) {
+    const w = r.winner;
+    banner.style.display = 'block';
+    banner.style.background = '#26324a';
+    banner.style.color = w >= 0 ? SIDE[w] : '#ccc';
+    banner.textContent = w >= 0 ? '终局：' + (w === 0 ? names[0] : names[1]) + ' 胜 · ' + r.reason
+                                : '终局：平局 · ' + r.reason;
+    banner.textContent += '（复核 ' + (game.verify && game.verify.ok ? '✓ 通过' : '✗ 异常') + '）';
+  } else banner.style.display = 'none';
+}
+
+/* ---------- 绘制 ---------- */
+function draw() {
+  const fr = game.frames[Math.min(frameIdx, game.frames.length - 1)];
+  if (!fr || !mapImg) return;
+  ctx.imageSmoothingEnabled = false;
+  ctx.drawImage(mapImg, 0, 0, VIEW, VIEW);
+
+  const h = data.header;
+  // VP 点（占领染色）
+  for (const vp of h.vp) {
+    const own = (fr.vp.find(v => v.id === vp.id) || {}).owner;
+    ctx.beginPath();
+    ctx.arc(vp.x * K, vp.y * K, 2.4 * 6 * K, 0, 7);
+    ctx.fillStyle = own >= 0 ? SIDE[own] + '55' : '#e8c34a33';
+    ctx.fill();
+    ctx.lineWidth = 2;
+    ctx.strokeStyle = own >= 0 ? SIDE[own] : '#e8c34a';
+    ctx.stroke();
+  }
+  // 资源点
+  for (const r of h.res || []) {
+    const x = r.x * K, y = r.y * K, s = 4 * K;
+    ctx.save(); ctx.translate(x, y); ctx.rotate(Math.PI / 4);
+    ctx.fillStyle = r.kind === 'cu' ? '#59c98f' : '#b07fe0';
+    ctx.fillRect(-s/2, -s/2, s, s);
+    ctx.restore();
+  }
+  // 出生点
+  (h.spawns || []).forEach((sp, s) => {
+    ctx.beginPath();
+    ctx.arc(sp[0] * 6 * K, sp[1] * 6 * K, 2.2 * 6 * K, 0, 7);
+    ctx.strokeStyle = SIDE[s]; ctx.setLineDash([4,3]); ctx.lineWidth = 1.5; ctx.stroke();
+    ctx.setLineDash([]);
+  });
+  // 单位
+  for (const u of fr.units || []) {
+    const x = u.x * K, y = u.y * K;
+    const ms = u.kind === 'MOTHERSHIP';
+    const rad = (ms ? 3.4 : 1.6) * 6 * K;
+    ctx.beginPath(); ctx.arc(x, y, rad, 0, 7);
+    ctx.fillStyle = SIDE[u.side]; ctx.fill();
+    if (ms) {
+      ctx.lineWidth = 2; ctx.strokeStyle = '#fff'; ctx.stroke();
+      // 血条
+      const w = 7 * 6 * K, hp = Math.max(0, u.hp / u.maxHp);
+      ctx.fillStyle = '#0009'; ctx.fillRect(x - w/2, y - rad - 8, w, 5);
+      ctx.fillStyle = hp > 0.5 ? '#59c98f' : hp > 0.25 ? '#e8c34a' : '#d64541';
+      ctx.fillRect(x - w/2, y - rad - 8, w * hp, 5);
+    } else if (u.hp < u.maxHp) {
+      ctx.beginPath(); ctx.arc(x, y, rad, -Math.PI/2, -Math.PI/2 + (u.hp/u.maxHp) * Math.PI * 2);
+      ctx.strokeStyle = '#0f0'; ctx.lineWidth = 1.5; ctx.stroke();
+    }
+  }
+}
+
+/* ---------- 播放控制 ---------- */
+function setPlay(p) {
+  playing = p;
+  document.getElementById('play').textContent = p ? '⏸ 暂停' : '▶ 播放';
+  if (timer) { clearInterval(timer); timer = null; }
+  if (p) {
+    const fps = Number(document.getElementById('speed').value);
+    timer = setInterval(() => {
+      if (frameIdx >= game.frames.length - 1) { setPlay(false); return; }
+      frameIdx++;
+      document.getElementById('seek').value = frameIdx;
+      draw(); update();
+    }, 1000 / fps);
+  }
+}
+document.getElementById('play').onclick = () => {
+  if (frameIdx >= game.frames.length - 1) frameIdx = 0;
+  setPlay(!playing);
+};
+document.getElementById('prev').onclick = () => { setPlay(false); frameIdx = Math.max(0, frameIdx - 1); document.getElementById('seek').value = frameIdx; draw(); update(); };
+document.getElementById('next').onclick = () => { setPlay(false); frameIdx = Math.min(game.frames.length - 1, frameIdx + 1); document.getElementById('seek').value = frameIdx; draw(); update(); };
+document.getElementById('seek').oninput = e => { setPlay(false); frameIdx = Number(e.target.value); draw(); update(); };
+document.getElementById('speed').onchange = () => { if (playing) setPlay(true); };
+
+document.addEventListener('keydown', e => {
+  if (!game) return;
+  if (e.code === 'Space') { e.preventDefault(); document.getElementById('play').click(); }
+  if (e.code === 'ArrowLeft') document.getElementById('prev').click();
+  if (e.code === 'ArrowRight') document.getElementById('next').click();
+});
+
+/* 拖放与选择 */
+const drop = document.getElementById('drop');
+drop.onclick = () => document.getElementById('file').click();
+document.getElementById('pick').onclick = () => document.getElementById('file').click();
+document.getElementById('file').onchange = e => { if (e.target.files[0]) loadFile(e.target.files[0]); };
+['dragover','dragenter'].forEach(ev => document.addEventListener(ev, e => { e.preventDefault(); drop.classList.add('over'); }));
+['dragleave','drop'].forEach(ev => document.addEventListener(ev, e => { e.preventDefault(); drop.classList.remove('over'); }));
+document.addEventListener('drop', e => { e.preventDefault(); if (e.dataTransfer.files[0]) loadFile(e.dataTransfer.files[0]); });
+</script>
+</body>
+</html>

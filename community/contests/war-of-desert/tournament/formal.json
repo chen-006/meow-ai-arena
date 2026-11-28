@@ -1,0 +1,63 @@
+{
+  "name": "Desert Arena · 沙漠遭遇战",
+  "season": "第 1 季 · 基准赛",
+  "version": "1.0",
+  "engine": {
+    "kind": "oracle-host",
+    "host": "engine/oracle_host.js",
+    "snapshot": "engine/oracle",
+    "oracleCommit": "288db07f164bc6c680a2d878c47153804d3fdcab"
+  },
+  "rules": {
+    "tickLimit": 600,
+    "tickMs": 50,
+    "decideMs": 120,
+    "initMs": 2000,
+    "maxStrikes": 3,
+    "strikeMode": "consecutive",
+    "generator": "minecraft",
+    "vision": false
+  },
+  "schedule": {
+    "seeds": [
+      20261109,
+      20261110
+    ],
+    "mirror": true,
+    "bootstrap": 200
+  },
+  "entries": [
+    {
+      "name": "Vanguard",
+      "author": "官方参考 Bot",
+      "source": "workspace/bots/vanguard",
+      "bin": "bots/bin/vanguard.exe"
+    },
+    {
+      "name": "Bulwark",
+      "author": "官方参考 Bot",
+      "source": "workspace/bots/bulwark",
+      "bin": "bots/bin/bulwark.exe"
+    },
+    {
+      "name": "Swarm",
+      "author": "官方参考 Bot",
+      "source": "workspace/bots/swarm",
+      "bin": "bots/bin/swarm.exe"
+    },
+    {
+      "name": "Nomad",
+      "author": "官方参考 Bot",
+      "source": "workspace/bots/nomad",
+      "bin": "bots/bin/nomad.exe"
+    },
+    {
+      "name": "Starter",
+      "author": "选手提交模板",
+      "source": "workspace/submission",
+      "bin": "bots/bin/submission.exe"
+    }
+  ],
+  "output": "results/formal",
+  "verify": true
+}

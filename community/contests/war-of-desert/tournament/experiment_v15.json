@@ -1,0 +1,70 @@
+{
+  "name": "Desert Arena · v1.7 实验",
+  "season": "v1.7 实验：遗产上限 / 研究舰 / 遗产科技 / 旗分转移 / 击杀校准 / tie-break",
+  "version": "1.7",
+  "engine": {
+    "kind": "native",
+    "host": "bots/bin/enginehost.exe",
+    "snapshot": "engine/golden"
+  },
+  "rules": {
+    "tickLimit": 1500,
+    "tickMs": 50,
+    "decideMs": 120,
+    "initMs": 2000,
+    "maxStrikes": 3,
+    "strikeMode": "consecutive",
+    "generator": "minecraft",
+    "vision": false,
+    "ruleset": "v15"
+  },
+  "schedule": {
+    "seeds": [
+      20261109,
+      20261110,
+      20261111
+    ],
+    "mirror": true,
+    "bootstrap": 200
+  },
+  "entries": [
+    {
+      "name": "Vanguard",
+      "author": "官方参考 Bot",
+      "source": "workspace/bots/vanguard",
+      "bin": "bots/bin/vanguard.exe"
+    },
+    {
+      "name": "Nomad",
+      "author": "官方参考 Bot",
+      "source": "workspace/bots/nomad",
+      "bin": "bots/bin/nomad.exe"
+    },
+    {
+      "name": "Swarm",
+      "author": "官方参考 Bot",
+      "source": "workspace/bots/swarm",
+      "bin": "bots/bin/swarm.exe"
+    },
+    {
+      "name": "Sapper",
+      "author": "官方参考 Bot",
+      "source": "workspace/bots/sapper",
+      "bin": "bots/bin/sapper.exe"
+    },
+    {
+      "name": "Bulwark",
+      "author": "官方参考 Bot",
+      "source": "workspace/bots/bulwark",
+      "bin": "bots/bin/bulwark.exe"
+    },
+    {
+      "name": "Hunter",
+      "author": "v1.5 实验 Bot",
+      "source": "workspace/bots/hunter",
+      "bin": "bots/bin/hunter.exe"
+    }
+  ],
+  "output": "results/exp-v15",
+  "verify": true
+}

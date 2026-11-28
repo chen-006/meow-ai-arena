@@ -1,0 +1,315 @@
+{
+  "version": 1,
+  "createdBy": "cmd/arena plan",
+  "rulesVersion": "1.7.1",
+  "rulesHash": "8cc42f0b",
+  "engine": "native",
+  "mirror": true,
+  "entries": [
+    {
+      "name": "VanguardA",
+      "author": "同 Bot 镜像校验",
+      "source": "workspace/bots/vanguard",
+      "bin": "bots/bin/vanguard.exe"
+    },
+    {
+      "name": "VanguardB",
+      "author": "同 Bot 镜像校验",
+      "source": "workspace/bots/vanguard",
+      "bin": "bots/bin/vanguard.exe"
+    }
+  ],
+  "matches": [
+    {
+      "id": 0,
+      "seed": 20261109,
+      "a": "VanguardA",
+      "b": "VanguardB",
+      "mirror": true
+    },
+    {
+      "id": 1,
+      "seed": 20261117,
+      "a": "VanguardA",
+      "b": "VanguardB",
+      "mirror": true
+    },
+    {
+      "id": 2,
+      "seed": 20261125,
+      "a": "VanguardA",
+      "b": "VanguardB",
+      "mirror": true
+    },
+    {
+      "id": 3,
+      "seed": 20261133,
+      "a": "VanguardA",
+      "b": "VanguardB",
+      "mirror": true
+    },
+    {
+      "id": 4,
+      "seed": 20261141,
+      "a": "VanguardA",
+      "b": "VanguardB",
+      "mirror": true
+    },
+    {
+      "id": 5,
+      "seed": 20261149,
+      "a": "VanguardA",
+      "b": "VanguardB",
+      "mirror": true
+    },
+    {
+      "id": 6,
+      "seed": 20261157,
+      "a": "VanguardA",
+      "b": "VanguardB",
+      "mirror": true
+    },
+    {
+      "id": 7,
+      "seed": 20261165,
+      "a": "VanguardA",
+      "b": "VanguardB",
+      "mirror": true
+    },
+    {
+      "id": 8,
+      "seed": 20261173,
+      "a": "VanguardA",
+      "b": "VanguardB",
+      "mirror": true
+    },
+    {
+      "id": 9,
+      "seed": 20261181,
+      "a": "VanguardA",
+      "b": "VanguardB",
+      "mirror": true
+    },
+    {
+      "id": 10,
+      "seed": 20261189,
+      "a": "VanguardA",
+      "b": "VanguardB",
+      "mirror": true
+    },
+    {
+      "id": 11,
+      "seed": 20261197,
+      "a": "VanguardA",
+      "b": "VanguardB",
+      "mirror": true
+    },
+    {
+      "id": 12,
+      "seed": 20261205,
+      "a": "VanguardA",
+      "b": "VanguardB",
+      "mirror": true
+    },
+    {
+      "id": 13,
+      "seed": 20261213,
+      "a": "VanguardA",
+      "b": "VanguardB",
+      "mirror": true
+    },
+    {
+      "id": 14,
+      "seed": 20261221,
+      "a": "VanguardA",
+      "b": "VanguardB",
+      "mirror": true
+    },
+    {
+      "id": 15,
+      "seed": 20261229,
+      "a": "VanguardA",
+      "b": "VanguardB",
+      "mirror": true
+    },
+    {
+      "id": 16,
+      "seed": 20261237,
+      "a": "VanguardA",
+      "b": "VanguardB",
+      "mirror": true
+    },
+    {
+      "id": 17,
+      "seed": 20261245,
+      "a": "VanguardA",
+      "b": "VanguardB",
+      "mirror": true
+    },
+    {
+      "id": 18,
+      "seed": 20261253,
+      "a": "VanguardA",
+      "b": "VanguardB",
+      "mirror": true
+    },
+    {
+      "id": 19,
+      "seed": 20261261,
+      "a": "VanguardA",
+      "b": "VanguardB",
+      "mirror": true
+    },
+    {
+      "id": 20,
+      "seed": 20261269,
+      "a": "VanguardA",
+      "b": "VanguardB",
+      "mirror": true
+    },
+    {
+      "id": 21,
+      "seed": 20261277,
+      "a": "VanguardA",
+      "b": "VanguardB",
+      "mirror": true
+    },
+    {
+      "id": 22,
+      "seed": 20261285,
+      "a": "VanguardA",
+      "b": "VanguardB",
+      "mirror": true
+    },
+    {
+      "id": 23,
+      "seed": 20261293,
+      "a": "VanguardA",
+      "b": "VanguardB",
+      "mirror": true
+    },
+    {
+      "id": 24,
+      "seed": 20261301,
+      "a": "VanguardA",
+      "b": "VanguardB",
+      "mirror": true
+    },
+    {
+      "id": 25,
+      "seed": 20261309,
+      "a": "VanguardA",
+      "b": "VanguardB",
+      "mirror": true
+    },
+    {
+      "id": 26,
+      "seed": 20261317,
+      "a": "VanguardA",
+      "b": "VanguardB",
+      "mirror": true
+    },
+    {
+      "id": 27,
+      "seed": 20261325,
+      "a": "VanguardA",
+      "b": "VanguardB",
+      "mirror": true
+    },
+    {
+      "id": 28,
+      "seed": 20261333,
+      "a": "VanguardA",
+      "b": "VanguardB",
+      "mirror": true
+    },
+    {
+      "id": 29,
+      "seed": 20261341,
+      "a": "VanguardA",
+      "b": "VanguardB",
+      "mirror": true
+    },
+    {
+      "id": 30,
+      "seed": 20261349,
+      "a": "VanguardA",
+      "b": "VanguardB",
+      "mirror": true
+    },
+    {
+      "id": 31,
+      "seed": 20261357,
+      "a": "VanguardA",
+      "b": "VanguardB",
+      "mirror": true
+    },
+    {
+      "id": 32,
+      "seed": 20261365,
+      "a": "VanguardA",
+      "b": "VanguardB",
+      "mirror": true
+    },
+    {
+      "id": 33,
+      "seed": 20261373,
+      "a": "VanguardA",
+      "b": "VanguardB",
+      "mirror": true
+    },
+    {
+      "id": 34,
+      "seed": 20261381,
+      "a": "VanguardA",
+      "b": "VanguardB",
+      "mirror": true
+    },
+    {
+      "id": 35,
+      "seed": 20261389,
+      "a": "VanguardA",
+      "b": "VanguardB",
+      "mirror": true
+    },
+    {
+      "id": 36,
+      "seed": 20261397,
+      "a": "VanguardA",
+      "b": "VanguardB",
+      "mirror": true
+    },
+    {
+      "id": 37,
+      "seed": 20261405,
+      "a": "VanguardA",
+      "b": "VanguardB",
+      "mirror": true
+    },
+    {
+      "id": 38,
+      "seed": 20261413,
+      "a": "VanguardA",
+      "b": "VanguardB",
+      "mirror": true
+    },
+    {
+      "id": 39,
+      "seed": 20261421,
+      "a": "VanguardA",
+      "b": "VanguardB",
+      "mirror": true
+    }
+  ],
+  "config": {
+    "tickLimit": 1500,
+    "tickMs": 1,
+    "decideMs": 120,
+    "initMs": 2000,
+    "maxStrikes": 3,
+    "strikeMode": "consecutive",
+    "generator": "minecraft",
+    "vision": false,
+    "ruleset": "v15"
+  }
+}
