@@ -154,6 +154,7 @@ struct Track {
     bool armed = false;
     int readyAt = 0;
     std::array<double, Forecast + MAX_DELAY + 1> groundPickup{};
+    std::array<double, Horizon + MAX_DELAY + 1> recaught{};
     int clashTick = -1000;
     int blockTick = -1000;
     Vec impact{};
@@ -163,6 +164,7 @@ struct Track {
 struct Hazard {
     int owner = -1;
     int launch = -1000;
+    int releaseTick = -1000;
     double weight = 0;
     bool observed = false;
     std::array<Segment, Horizon> ray{};
@@ -186,6 +188,7 @@ struct RoutePath {
 struct Exchange {
     std::array<Segment, Horizon> projectile{};
     std::array<std::array<double, Horizon + 1>, MAXP> incapacitated{};
+    std::array<std::array<double, Horizon + 1>, MAXP> eliminated{};
     std::array<std::array<double, Horizon>, MAXP> clashBefore{};
     bool hasClash = false;
     int catchAt = Horizon + 1;
@@ -707,8 +710,7 @@ struct Bot {
         const Dart original = obs->d[k];
         if (!(dart_flying(original.st) || original.st == D_RISE || (original.st == D_HAND && seen.st == S_THROW))) return;
         if (!seen.vis && !dart_flying(original.st)) return;
-        const auto& e = enemy[k];
-        enemy[k].readyAt = original.st == D_HAND && seen.st != S_THROW ? 0 : Horizon + 8;
+        auto& e = enemy[k];
         int branches = 3;
         for (int m = 0; m < branches; ++m) {
             int model = m == 2 ? 3 : m;
@@ -725,46 +727,63 @@ struct Bot {
                 if (t < now) {
                     if (seen.alive && seen.vis) enemyStep(p, intent(model, k, p, base, t), t);
                 } else p = e.path[model][t - now + 1];
-                if (fresh) d = release(point(p), heading(seen));
+                if (fresh) {
+                    d = release(point(p), heading(seen));
+                    h.releaseTick = t - now;
+                }
                 if (d.st == D_RISE && --d.left <= 0) { d.st = D_CALL; d.age = 0; }
                 Segment ray = fresh ? Segment{} : fly(d, old, point(p), t);
-                if (m == 0 && d.st == D_HAND && !fresh && p.st != S_THROW && !dart_flying(d.st))
-                    enemy[k].readyAt = imax(0, t - now + 1);
                 if (t < now && ray.active && segmentDistance2(ray.from - historicalSelf(t),
                     ray.to - historicalSelf(t + 1)) < (hitRadius - 80) * (hitRadius - 80)) {
                     // This branch cannot explain survival. A clash or block may already have happened.
                     break;
                 }
                 if (t >= now) h.ray[t - now] = ray;
+                if (seen.alive && seen.vis && d.st == D_HAND && ray.active)
+                    e.recaught[t + 1 - now + MAX_DELAY] += h.weight;
                 if (!dart_flying(d.st) && d.st != D_RISE && !fresh && !(d.st == D_HAND && p.st == S_THROW)) break;
             }
             if (std::any_of(h.ray.begin(), h.ray.end(), [](const Segment& s) { return s.active; }))
                 hazards.push_back(h);
+        }
+        double mass = 0;
+        for (int i = 0; i < int(e.recaught.size()); ++i) {
+            mass = clip(mass + e.recaught[i]);
+            e.recaught[i] = mass;
+            if (mass >= 0.55) e.readyAt = std::min(e.readyAt, i - MAX_DELAY);
         }
     }
 
     void blindThreats(int k, int ref) {
         const auto& e = enemy[k];
         const bool ground = obs->d[k].st == D_GROUND;
-        const bool picked = !ground && ImpactInference && e.clashTick > ref && e.readyAt < 5;
+        const bool recovered = e.recaught[MAX_DELAY + 1] >= 0.12;
+        const bool picked = !ground && !recovered && ImpactInference && e.clashTick > ref && e.readyAt < 5;
         const auto& p = picked ? e.path[0][0] : obs->p[k];
-        if (!e.present || (!e.armed && !picked && !ground) || !e.visible || p.st == S_THROW ||
+        if (!e.present || (!e.armed && !picked && !ground && !recovered) || !e.visible ||
+            (p.st == S_THROW && !recovered) ||
             (point(e.path[0][0]) - here).sq() > 7900. * 7900.) return;
         if (ImpactInference && e.blockTick > ref) return;
         const int originTime = picked ? now : ref;
-        for (int start = picked ? now + e.readyAt - 1 : ref; start <= now + 1; ++start) {
+        for (int start = picked ? now + std::max(0, e.readyAt) : ref; start <= now + 1; ++start) {
             if (p.st != S_FREE && p.timer > start - ref) continue;
             if (start < now - 4) continue;
-            const double held = ground ? e.groundPickup[start - now + MAX_DELAY] : 1.;
+            const int pickupTick = start - now + MAX_DELAY;
+            const double held = ground ? e.groundPickup[pickupTick] : recovered ? e.recaught[pickupTick] : 1.;
             if (held < 0.12) continue;
             const int releaseAt = start + cf->throw_pre - 1;
             Player origin = p;
             Vec m = speed(p) * (1000. / cf->run_v);
+            bool thrown = false;
             for (int t = originTime; t <= releaseAt; ++t) {
-                if (t == start) begin(origin, A_THROW, {1000, 0}, true, m);
+                if (t == start) {
+                    begin(origin, A_THROW, {1000, 0}, true, m);
+                    thrown = origin.st == S_THROW && origin.timer == cf->throw_pre;
+                }
                 const Vec move = ground && t < start ? intent(4, k, origin, m, t) : m;
                 enemyStep(origin, move, t);
             }
+            if (!thrown) continue;
             const int view = int(imax(0, start - cf->delay));
             const Player& prior = self[view % History];
             if (prior.expose <= 0 && (point(prior) - point(p)).sq() > cf->see_r * cf->see_r &&
@@ -795,14 +814,16 @@ struct Bot {
     void crossingThreats(int k) {
         const auto& shooter = enemy[k];
         const bool ground = obs->d[k].st == D_GROUND;
-        if (!(Crossfire && live > 1 && shooter.present && shooter.visible && (shooter.armed || ground))) return;
+        const bool recovered = shooter.recaught[MAX_DELAY + 4] >= 0.12;
+        if (!(Crossfire && live > 1 && shooter.present && shooter.visible && (shooter.armed || ground || recovered))) return;
         if ((point(shooter.path[0][0]) - here).sq() > 7900. * 7900.) return;
         for (int target = 0; target < obs->n; ++target) {
             if (target == k || !enemy[target].present || !enemy[target].visible) continue;
             const auto& victim = enemy[target];
             for (int start : {-2, 1, 4}) {
                 if (start < -now) continue;
-                const double held = ground ? shooter.groundPickup[start + MAX_DELAY] : 1.;
+                const double held = ground ? shooter.groundPickup[start + MAX_DELAY] :
+                    recovered ? shooter.recaught[start + MAX_DELAY] : 1.;
                 if (held < 0.12) continue;
                 int releaseAt = start + int(cf->throw_pre);
                 int originTick = imax(0, releaseAt);
@@ -1091,22 +1112,28 @@ struct Bot {
         for (int k = 0; k < obs->n; ++k) {
             const auto& target = enemy[k];
             if (!target.present || (point(target.path[0][0]) - here).sq() > 10300. * 10300.) continue;
-            std::array<double, Models> chances{};
+            std::array<double, Models> chances{}, lethal{};
             for (int j = 0; j < Horizon; ++j) {
                 const Segment& own = out.projectile[j];
                 double stopMass = out.incapacitated[k][j];
-                if (!own.active && path.hit != j) { out.incapacitated[k][j + 1] = stopMass; continue; }
+                double lethalMass = out.eliminated[k][j];
+                if (!own.active && path.hit != j) {
+                    out.incapacitated[k][j + 1] = stopMass;
+                    out.eliminated[k][j + 1] = lethalMass;
+                    continue;
+                }
                 for (int m = 0; m < Models; ++m) {
-                    if (chances[m] >= 0.99) continue;
+                    if (lethal[m] >= 0.99) continue;
                     const Player& before = target.path[m][j];
                     const Vec q = point(target.path[m][j + 1]);
-                    double chance = chances[m];
+                    double kill = lethal[m];
+                    double kick = 0;
                     if (own.active) {
                         const double miss2 = segmentDistance2(own.from - point(before), own.to - q);
                         if (miss2 < (hitRadius + 120) * (hitRadius + 120)) {
                             const double margin = (hitRadius + 120 - std::sqrt(miss2)) / 380.;
                             const bool reacts = j >= cf->delay + 1 && before.st == S_FREE;
-                            chance = std::max(chance, ownFlight[j] * (reacts ? 0.46 : 0.94) * clip(margin));
+                            kill = std::max(kill, ownFlight[j] * (reacts ? 0.46 : 0.94) * clip(margin));
                         }
                     }
                     if (path.hit == j && (path.armedSwing || (before.st != S_STUN &&
@@ -1114,13 +1141,20 @@ struct Bot {
                         const double reach = path.armedSwing ? cf->slash_reach : cf->kick_reach;
                         const double cosine = double(path.armedSwing ? cf->slash_cos : cf->kick_cos) / 1000;
                         const Vec pos = point(path.body[j + 1]);
-                        if (cone(pos, q, aim, reach, cosine, cf->body_r, now + j))
-                            chance = std::max(chance, (path.armedSwing ? 0.96 : 0.65) * clip((reach + 150 - (q - pos).len()) / 310));
+                        if (cone(pos, q, aim, reach, cosine, cf->body_r, now + j)) {
+                            const double contact = clip((reach + 150 - (q - pos).len()) / 310);
+                            if (path.armedSwing) kill = std::max(kill, 0.96 * contact);
+                            else kick = 0.65 * contact;
+                        }
                     }
+                    const double chance = std::max(chances[m], std::max(kill, kick));
+                    lethalMass += target.weight[m] * (kill - lethal[m]) * target.reach;
                     stopMass += target.weight[m] * (chance - chances[m]) * target.reach;
                     chances[m] = chance;
+                    lethal[m] = kill;
                 }
                 out.incapacitated[k][j + 1] = stopMass;
+                out.eliminated[k][j + 1] = lethalMass;
             }
         }
         return out;
@@ -1170,8 +1204,11 @@ struct Bot {
                     weight *= j < 4 ? 0.95 : j < 8 ? 0.64 : 0.34;
                 }
                 if (CoupledCombat) {
-                    const int when = live == 1 ? j : (h.observed ? 0 : std::max(0, h.launch));
-                    weight *= 1 - 0.83 * expected.incapacitated[h.owner][when];
+                    // A kick can prevent a release. An airborne dart keeps flying.
+                    const int beforeLaunch = std::clamp(h.observed ? h.releaseTick : h.launch, 0, j);
+                    const double interrupted = expected.incapacitated[h.owner][beforeLaunch];
+                    const double duelEnded = cf->mode == M_DUEL ? expected.eliminated[h.owner][j] : 0.;
+                    weight *= 1 - 0.83 * std::max(interrupted, duelEnded);
                 }
                 const auto chance = [&](Vec to) {
                     double dd = segmentDistance2(from, to - after);
@@ -1425,6 +1462,7 @@ struct Bot {
         hazards.clear();
         for (int k = 0; k < o.n; ++k) if (k != seat) {
             enemy[k].readyAt = enemy[k].armed ? 0 : Horizon + 8;
+            enemy[k].recaught.fill(0.);
             knownThreats(k, ref);
             auto& e = enemy[k];
             if (e.visible && o.d[k].st == D_GROUND) {
