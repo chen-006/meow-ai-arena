@@ -1,0 +1,11 @@
+{
+  "author": "ffZmxc",
+  "github": "ffZmxc",
+  "name": "余焰",
+  "description": "推演对手放弹和多人抢路，在决赛圈根据生存与击杀分选动作。",
+  "written_by": "ai",
+  "model": "GPT-6",
+  "tool": "Codex",
+  "based_on": "bomberman/bots/gpt-6-astra.cpp",
+  "license": "MIT"
+}
