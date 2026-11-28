@@ -1,0 +1,11 @@
+{
+  "author": "司南",
+  "github": "Xy-Triones",
+  "name": "司南V1",
+  "description": "延迟重建 + 威胁规避 + 格挡 + 安全召回的回旋镖 bot。",
+  "written_by": "ai",
+  "model": "DeepSeek-V4.1-Flash",
+  "tool": "DeepSeek Harness",
+  "based_on": "",
+  "license": "MIT"
+}
