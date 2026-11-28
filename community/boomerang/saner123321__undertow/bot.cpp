@@ -1,1585 +1,2128 @@
+// Undertow. Changes by Saner and GPT-6.2 Sol (Codex).
+// Derived from community/boomerang/naihe0__return-arc (MIT).
+// Return Arc. Based on the published GPT-6.2 Astra player.
+// Copyright (c) 2026 meow-ai-arena contributors and Naihe0. MIT license.
 #include "dart.hpp"
 #include <algorithm>
 #include <array>
 #include <chrono>
 #include <cmath>
+#include <limits>
 #include <queue>
+#include <utility>
+#include <vector>
 
 using namespace dart;
+using std::array;
+using std::vector;
 
 namespace {
+// Both policies run on this thread and share the referee's per-turn clock.
+struct TurnClock {
+    using Clock = std::chrono::steady_clock;
+    const Clock::time_point started = Clock::now();
+    const i64 initialCpu = thread_cpu_100ns();
+    mutable i64 lastCpu = initialCpu, lastChangeUs = 0;
+
+    bool spent(i64 limitUs) const {
+        const i64 wallUs = std::chrono::duration_cast<std::chrono::microseconds>(Clock::now()-started).count();
+        // Keep a margin when Windows' short-interval CPU samples are coarse.
+        if (wallUs >= limitUs+180) return true;
+        if (wallUs < 3*limitUs/4) return false;
+        const i64 cpu = thread_cpu_100ns();
+        if (initialCpu >= 0 && cpu >= initialCpu) {
+            if (cpu != lastCpu) { lastCpu = cpu; lastChangeUs = wallUs; }
+            if (cpu-initialCpu >= 10*limitUs) return true;
+            // Windows thread time can stay constant across a short turn.
+            if (wallUs-lastChangeUs < 2000) return false;
+        }
+        return wallUs >= limitUs+650;
+    }
+};
 
 struct Vec {
     double x = 0, y = 0;
-    Vec operator+(Vec b) const { return {x + b.x, y + b.y}; }
-    Vec operator-(Vec b) const { return {x - b.x, y - b.y}; }
-    Vec operator*(double k) const { return {x * k, y * k}; }
-    double dot(Vec b) const { return x * b.x + y * b.y; }
+    Vec operator+(Vec b) const { return {x+b.x,y+b.y}; }
+    Vec operator-(Vec b) const { return {x-b.x,y-b.y}; }
+    Vec operator*(double k) const { return {x*k,y*k}; }
+    double dot(Vec b) const { return x*b.x+y*b.y; }
     double sq() const { return dot(*this); }
     double len() const { return std::sqrt(sq()); }
-    Vec unit(double n = 1) const { double length = len(); return length > 0.01 ? *this * (n / length) : Vec{}; }
-    Vec left() const { return {-y, x}; }
+    Vec unit(double length = 1) const { double l=len(); return l>0.00001 ? *this*(length/l) : Vec{}; }
+    Vec left() const { return {-y,x}; }
 };
-
-i64 roundInt(double x) { return i64(x >= 0 ? x + 0.5 : x - 0.5); }
-Vec point(const Player& p) { return {double(p.x), double(p.y)}; }
-Vec speed(const Player& p) { return {double(p.vx), double(p.vy)}; }
-Vec point(const Dart& d) { return {double(d.x), double(d.y)}; }
-Vec heading(const Player& p) { return {double(p.ax), double(p.ay)}; }
-double clip(double x) { return std::clamp(x, 0., 1.); }
-
+Vec vec(i64 x,i64 y) { return {double(x),double(y)}; }
+Vec pos(const Player& p) { return vec(p.x,p.y); }
+Vec vel(const Player& p) { return vec(p.vx,p.vy); }
+Vec pos(const Dart& d) { return vec(d.x,d.y); }
+double sat(double a) { return std::clamp(a,0.0,1.0); }
+i64 ir(double x) { return (i64)std::round(x); }
+double segmentSq(Vec a,Vec b) {
+    Vec d=b-a;
+    double u=-a.dot(d);
+    if(u<=0) return a.sq();
+    double dd=d.sq();
+    if(u>=dd) return b.sq();
+    return (a+d*(u/dd)).sq();
+}
+constexpr int FUTURE=22, HORIZON=13, MODES=13, HIST=80;
+constexpr int TRACE_STEPS=192;
+constexpr double PI=3.14159265358979323846;
 struct Body {
-    i64 x = 0, y = 0, vx = 0, vy = 0;
-    i64 st = S_FREE, timer = 0, ax = 0, ay = 0, cd = 0;
-
-    Body() = default;
-    explicit Body(const Player& p)
-        : x(p.x), y(p.y), vx(p.vx), vy(p.vy), st(p.st), timer(p.timer),
-          ax(p.ax), ay(p.ay), cd(p.cd) {}
+    i64 x=0,y=0,vx=0,vy=0,ax=0,ay=0;
+    int st=S_FREE, timer=0;
+    Body()=default;
+    explicit Body(const Player& p):x(p.x),y(p.y),vx(p.vx),vy(p.vy),ax(p.ax),ay(p.ay),st((int)p.st),timer((int)p.timer){}
+    Vec point() const { return vec(x,y); }
+    Vec speed() const { return vec(vx,vy); }
 };
-
-Vec point(const Body& p) { return {double(p.x), double(p.y)}; }
-
-double segmentDistance2(Vec from, Vec to) {
-    Vec d = to - from;
-    double n = d.sq();
-    return n < 0.01 ? from.sq() : (from + d * clip(-from.dot(d) / n)).sq();
-}
-
-Action order(Vec move, int kind = A_NONE, Vec aim = {}) {
-    Action a;
-    a.mx = roundInt(move.x); a.my = roundInt(move.y);
-    a.act = kind;
-    a.ax = roundInt(aim.x); a.ay = roundInt(aim.y);
-    return a;
-}
-
-constexpr int Horizon = 14;
-constexpr int Forecast = 24;
-constexpr int Models = 8;
-constexpr int History = 64;
-constexpr int Angles = 24;
-constexpr int Grid = CELL / 2;
-constexpr double Infinity = 1e12;
-constexpr double BlindPenalty = 13.0;
-constexpr double DashPenalty = 2.25;
-constexpr bool ApproachParry = true;
-constexpr bool Crossfire = true;
-constexpr bool WeaponClock = true;
-constexpr double FfaSeparation = 1.0;
-constexpr bool ContextualTracking = true;
-constexpr bool ContactInference = true;
-constexpr bool CurvedRoutes = true;
-constexpr double WeaponDenial = 1.0;
-constexpr bool ImpactInference = true;
-constexpr bool LockPenalty = true;
-constexpr bool CoupledCombat = true;
-constexpr bool CatchAwareness = true;
-
-constexpr float hiddenWeights[32][18] = {
-    {-5.56284375e-03f, -3.23812693e-01f, -5.18219136e-02f, -1.69147968e-01f, 2.68024236e-01f, 6.68239415e-01f, 5.70917800e-02f, 5.14021255e-02f, -2.32215092e-01f, -2.67825395e-01f, -2.32754201e-01f, 5.29235005e-01f, -1.81411266e-01f, -5.74853756e-02f, -2.36218482e-01f, 5.27037820e-03f, 2.89534420e-01f, 8.34823251e-02f},
-    {7.30163902e-02f, -2.36194909e-01f, 7.33023286e-02f, -2.39638969e-01f, -9.91781428e-02f, 2.06468567e-01f, 5.15772849e-02f, 3.80447030e-01f, 4.41802800e-01f, 1.92903116e-01f, -2.30770096e-01f, -7.32140169e-02f, 2.84527361e-01f, 2.81340163e-02f, -5.95421195e-02f, -1.66283831e-01f, 5.46527386e-01f, -3.92096378e-02f},
-    {-1.72354281e-02f, -2.99372464e-01f, -5.91224320e-02f, -3.60174268e-01f, 4.97778095e-02f, 2.27108806e-01f, -5.42133898e-02f, -3.20135243e-02f, 4.04812545e-01f, 1.96517229e-01f, 2.15160757e-01f, 8.51163417e-02f, -6.70779049e-01f, -4.65161234e-01f, -7.10068792e-02f, -9.46231112e-02f, 9.03105617e-01f, 8.71941149e-02f},
-    {-3.44314784e-01f, 5.43396883e-02f, -1.46011412e-01f, 4.16215658e-01f, 3.65182221e-01f, 1.66429803e-01f, 2.07987782e-02f, -2.54962184e-02f, 1.39206111e-01f, 2.26484075e-01f, -9.15779918e-02f, 1.93317652e-01f, 1.70444567e-02f, -1.09342381e-01f, 3.66378054e-02f, -1.20363235e-01f, -3.34810227e-01f, 7.99263641e-02f},
-    {-3.18342149e-01f, -2.90149152e-01f, -2.21080974e-01f, 3.51211093e-02f, 2.82550424e-01f, -1.72818571e-01f, 2.94067740e-01f, -1.98127359e-01f, -9.83502492e-02f, 2.52295017e-01f, 4.11058754e-01f, 1.15488008e-01f, -1.85049810e-02f, 3.06313872e-01f, 1.07957728e-01f, -3.14682305e-01f, 2.65516281e-01f, 7.77275860e-02f},
-    {-8.77329558e-02f, 3.46480608e-01f, -4.79610711e-02f, 1.62265033e-01f, 3.39223653e-01f, -5.76988757e-01f, -1.21306060e-02f, -1.74851324e-02f, -4.93755549e-01f, -9.85147178e-01f, -8.96664783e-02f, 4.67769325e-01f, -2.18960881e-01f, -8.05190653e-02f, 2.73567677e-01f, -1.53026925e-02f, 2.00839326e-01f, 5.59007116e-02f},
-    {2.97874719e-01f, 4.56300139e-01f, 1.74782246e-01f, -2.55710661e-01f, 1.18967161e-01f, 2.09031522e-01f, -1.18574880e-01f, -1.97521299e-01f, 6.30544424e-02f, 5.16499043e-01f, -3.57860506e-01f, 1.39479265e-01f, 9.32059437e-02f, 6.68133870e-02f, 3.88712808e-02f, 1.14504777e-01f, 2.36216798e-01f, -1.95379764e-01f},
-    {-6.98435062e-04f, -1.01276889e-01f, 1.32760722e-02f, -5.04937805e-02f, -2.92609893e-02f, -2.51812547e-01f, 6.49467707e-02f, -2.02639718e-02f, -2.68902123e-01f, 4.26072776e-01f, 4.67986614e-03f, -1.75285544e-02f, 4.45276380e-01f, 8.17888901e-02f, 1.10786624e-01f, -4.59076643e-01f, 5.27337380e-02f, -6.15286119e-02f},
-    {-2.47082815e-01f, 1.77179240e-02f, -1.59707159e-01f, -2.77553946e-02f, -7.14757144e-01f, -3.36912163e-02f, 3.44342515e-02f, -1.60810631e-02f, -3.78580898e-01f, 5.83675146e-01f, 2.60772780e-02f, 8.05373788e-02f, 6.25531673e-02f, -1.88287757e-02f, -8.45940113e-02f, -3.68403713e-03f, 4.42134410e-01f, 7.34913647e-02f},
-    {-6.85260817e-02f, 2.65854388e-01f, -6.48302808e-02f, 1.31033704e-01f, -5.21671250e-02f, 2.98037112e-01f, -3.19836065e-02f, -2.23483127e-02f, -2.25577369e-01f, 1.33254111e+00f, -5.06938361e-02f, 4.30271208e-01f, 4.62143496e-02f, -2.47550845e-01f, 3.98469716e-02f, -4.63480838e-02f, 1.25436066e-02f, 1.10469878e-01f},
-    {7.40252584e-02f, 4.92056310e-02f, 3.06036443e-01f, -5.83659522e-02f, -2.61992842e-01f, 1.14229135e-01f, 3.80861044e-01f, 2.75432020e-02f, 3.33412021e-01f, -5.78806937e-01f, -9.33080725e-03f, 7.32295513e-02f, -2.16030385e-02f, 3.41255851e-02f, 1.78078890e-01f, 9.86312404e-02f, 4.24151808e-01f, -9.96700898e-02f},
-    {-4.67856497e-01f, 4.44123834e-01f, -3.80762219e-02f, -1.67074010e-01f, -2.57299524e-02f, -3.04800332e-01f, -9.19217616e-02f, 6.39469996e-02f, 2.80903608e-01f, -2.35630050e-02f, -1.31047189e-01f, 5.23848087e-02f, -2.13334531e-01f, 5.04823364e-02f, 2.58909967e-02f, 2.89117917e-02f, -2.98085719e-01f, 6.55537248e-02f},
-    {-6.49695158e-01f, 3.01568776e-01f, 9.19165537e-02f, -1.84877813e-01f, -1.07070096e-01f, 2.33127959e-02f, 2.22841397e-01f, 3.48311812e-02f, 3.91080588e-01f, 3.43802929e-01f, -1.33924797e-01f, -6.33960515e-02f, 7.13120550e-02f, -1.06672756e-01f, 8.83280113e-03f, -1.56881604e-02f, -5.54546490e-02f, 3.82546335e-02f},
-    {5.75702414e-02f, 8.23507249e-01f, 8.59237835e-02f, -7.00260222e-01f, -1.63981840e-01f, -6.59082413e-01f, -1.35722216e-02f, -2.82526482e-02f, -3.18018287e-01f, 1.98833439e-02f, 2.10029725e-02f, 1.52582720e-01f, -1.25883594e-01f, -1.54949948e-02f, -5.90469241e-01f, -1.16474524e-01f, -4.18624163e-01f, -3.75660323e-02f},
-    {7.16275036e-01f, -2.48474404e-02f, -3.03565919e-01f, -5.28894402e-02f, -6.19207740e-01f, 1.24386415e-01f, -7.34804422e-02f, 3.42220776e-02f, -2.27604955e-01f, 1.14511758e-01f, 2.03517992e-02f, -2.53156153e-03f, 3.28310281e-01f, 8.24824646e-02f, 2.09507927e-01f, 4.53369133e-02f, 3.65476087e-02f, -1.29297957e-01f},
-    {-4.16868895e-01f, 5.95700741e-02f, 9.19658303e-01f, -4.91181284e-01f, 1.96347311e-01f, 1.75529569e-01f, -5.45578934e-02f, 7.52952090e-03f, -2.49373779e-01f, 1.66197687e-01f, -5.31845614e-02f, 9.82091054e-02f, -4.96103875e-02f, 9.61648747e-02f, 6.62254021e-02f, -1.31455705e-01f, 5.41218758e-01f, -6.92031160e-02f},
-    {-2.41333805e-02f, 1.36219412e-01f, -9.19191632e-03f, 1.87424526e-01f, 5.05327806e-02f, 1.54604586e-02f, -1.27169052e-02f, -8.28533471e-02f, -3.54601234e-01f, 4.73347485e-01f, 5.50183654e-01f, -3.34267281e-02f, 4.72029522e-02f, 4.05622348e-02f, 2.58151412e-01f, 3.41599621e-02f, 1.71444956e-02f, 2.61481762e-01f},
-    {-4.10056636e-02f, 1.30878106e-01f, 3.66561085e-01f, -1.27918925e-02f, 7.75731325e-01f, -4.73467648e-01f, 6.77069742e-03f, -1.78784300e-02f, 2.86720961e-01f, 7.09956348e-01f, 5.10645211e-02f, -1.30348861e-01f, -1.86423644e-01f, 1.07878961e-01f, -6.19033016e-02f, -1.79629073e-01f, -8.75633880e-02f, -1.00893438e-01f},
-    {-2.14826256e-01f, -2.97678173e-01f, -6.39840290e-02f, -3.62744540e-01f, -3.70945156e-01f, -1.87150598e-01f, -4.19997387e-02f, 1.67242866e-02f, -1.26078904e-01f, 9.87530947e-01f, -1.88005179e-01f, 2.13098362e-01f, 4.72046584e-02f, -3.39379571e-02f, -1.16291113e-01f, -1.48874342e-01f, 9.44135115e-02f, 1.14750907e-01f},
-    {1.91078663e-01f, -3.35103163e-04f, 1.44063577e-01f, -2.54601538e-01f, -6.32058501e-01f, -3.24034840e-02f, 7.57136121e-02f, -1.73711926e-01f, 1.57622233e-01f, -1.97055236e-01f, 1.35536268e-01f, -2.26641133e-01f, 3.55995119e-01f, -9.09744799e-02f, 2.84071028e-01f, 3.20451826e-01f, 4.26474921e-02f, 2.13984028e-01f},
-    {1.28121793e-01f, -8.76373112e-01f, 2.06786189e-02f, 7.20863461e-01f, -9.04950872e-02f, 5.95078230e-01f, 2.16407385e-02f, 2.42717937e-02f, -9.44042578e-02f, -7.31561333e-02f, -4.14117090e-02f, 1.17956825e-01f, -1.45652086e-01f, -3.32660489e-02f, 1.26427328e-02f, -1.09370299e-01f, 5.12754023e-01f, -3.21312509e-02f},
-    {4.71270293e-01f, 8.59382302e-02f, -3.89878839e-01f, 5.43988109e-01f, 2.44540367e-02f, -2.55439989e-02f, -6.51042024e-03f, 1.81797873e-02f, 4.30406667e-02f, -3.09936702e-01f, 3.15634161e-01f, -3.12128775e-02f, 7.80628696e-02f, -1.01477467e-01f, 2.33641230e-02f, 1.08318582e-01f, 4.02021706e-01f, -6.32633492e-02f},
-    {7.10378230e-01f, -2.45592386e-01f, -2.62157828e-01f, -6.58690231e-03f, -7.76529908e-02f, 2.77550936e-01f, -5.30137718e-02f, -2.09728256e-02f, 7.41427094e-02f, 1.00375032e+00f, -1.91448092e-01f, 1.45390451e-01f, 9.58833378e-03f, 1.78213380e-02f, 1.19900163e-02f, -6.56424388e-02f, -3.57122928e-01f, -8.12053606e-02f},
-    {3.03031541e-02f, 2.22182795e-02f, 1.49368420e-01f, 1.49386570e-01f, -2.97182381e-01f, -5.14340758e-01f, -3.73671041e-03f, 1.55252576e-01f, -1.08065403e+00f, -8.83402526e-01f, -9.05123472e-01f, 7.67268986e-02f, -1.21893860e-01f, 5.34930713e-02f, 8.00670907e-02f, -6.20940812e-02f, 2.28510853e-02f, 1.91371012e-02f},
-    {-3.78993332e-01f, -4.40196812e-01f, 3.42991203e-01f, 9.88611951e-02f, -8.59717950e-02f, -6.65626600e-02f, -1.09845996e-01f, 2.60650277e-01f, 2.58088171e-01f, -5.56894839e-02f, -3.35235596e-01f, 2.72421747e-01f, -1.55784234e-01f, 4.72513847e-02f, 1.57546252e-01f, -8.56195018e-02f, 1.99624509e-01f, -4.36626337e-02f},
-    {1.94245487e-01f, 5.12200832e-01f, -9.86526236e-02f, 7.20070675e-02f, -4.01069224e-01f, -2.52232075e-01f, 1.49602845e-01f, -1.21111467e-01f, 4.39282179e-01f, 1.93168685e-01f, -4.14743274e-01f, 1.15373306e-01f, -1.95672717e-02f, -3.87898320e-03f, 3.84258926e-02f, -1.92688461e-02f, -2.39397451e-01f, 1.05492420e-01f},
-    {2.28487551e-01f, 1.68688729e-01f, 1.21841900e-01f, 6.23615980e-02f, -4.82925892e-01f, -1.89753383e-01f, 8.27984810e-02f, 5.83843477e-02f, 5.73009491e-01f, 4.75858688e-01f, 2.70811766e-01f, -2.66852051e-01f, -8.63514543e-01f, -6.72544166e-02f, -3.74189079e-01f, -4.36104499e-02f, 6.11577630e-01f, -8.43758062e-02f},
-    {-6.65502483e-03f, 4.33409452e-01f, 9.56072733e-02f, -1.03075609e-01f, -6.75300732e-02f, 1.39181241e-01f, -1.90252036e-01f, -9.81437694e-03f, -1.09775126e+00f, -1.41829669e-01f, 1.56695932e-01f, 3.64917070e-01f, -1.35105267e-01f, -7.42136389e-02f, 1.07820049e-01f, 4.21657339e-02f, 2.25634485e-01f, -8.07321072e-03f},
-    {2.48771787e-01f, 4.10638154e-02f, 1.86099544e-01f, -7.75795355e-02f, -7.55816281e-01f, 4.45948005e-01f, -3.94281819e-02f, -5.84723242e-02f, -9.70099270e-01f, -4.50478345e-01f, -4.67992187e-01f, 9.52481255e-02f, -3.54517885e-02f, 3.02826911e-02f, 2.26793215e-02f, -4.99572270e-02f, 2.88669467e-01f, -3.63399275e-02f},
-    {8.71839747e-02f, 1.40110224e-01f, -3.51535268e-02f, -3.66156287e-02f, -1.82969779e-01f, -4.52987254e-01f, -1.03414856e-01f, -1.17138609e-01f, -3.10990006e-01f, -5.86729944e-01f, -4.87074763e-01f, 1.63841859e-01f, -3.60976346e-02f, -2.25162208e-02f, -2.74766684e-01f, 8.05211961e-02f, 1.14693865e-01f, 2.60476470e-01f},
-    {-2.14201078e-01f, 7.70784467e-02f, -7.39554316e-02f, -1.05633168e-02f, 4.40467805e-01f, -5.65298572e-02f, -2.34723208e-03f, -2.48758979e-02f, -7.01430719e-03f, -1.08803138e-01f, 3.52912515e-01f, -5.33604085e-01f, -3.91757756e-01f, 2.50213295e-01f, -7.74641111e-02f, 4.88446876e-02f, -8.29941213e-01f, 3.15468371e-01f},
-    {3.83613050e-01f, 2.22595841e-01f, 2.58614779e-01f, 2.44389012e-01f, 2.74460793e-01f, 1.15720935e-01f, -2.63977945e-02f, 4.80551831e-02f, 3.72973800e-01f, 1.78647816e-01f, -2.00869635e-01f, 1.19989753e-01f, -3.64768833e-01f, -3.02366093e-02f, -4.72777784e-02f, -1.24431752e-01f, -1.54445231e-01f, 5.08543514e-02f}
-};
-constexpr float hiddenBias[32] = {-2.30516717e-02f, -1.57205731e-01f, -2.70528376e-01f, 2.70893961e-01f, -4.23665904e-03f, 1.81930229e-01f, 2.06791237e-01f, 1.66331641e-02f, -3.61741483e-01f, -5.61992705e-01f, 1.65607765e-01f, 1.38794675e-01f, 1.13698572e-01f, -3.36731672e-01f, 2.31658682e-01f, -3.97111714e-01f, 1.21038996e-01f, -2.37714112e-01f, -4.12711352e-01f, 1.65690079e-01f, -4.70281631e-01f, 3.05126160e-01f, 1.93475172e-01f, 5.41742921e-01f, 2.85279125e-01f, -8.98681730e-02f, -3.98853749e-01f, 9.58392844e-02f, 3.65877301e-01f, 3.25638205e-01f, -5.15245855e-01f, -5.18564820e-01f};
-constexpr float moveWeights[2][32] = {
-    {-1.68101694e-02f, 2.01646313e-01f, -2.36327704e-02f, -1.92320630e-01f, -3.49722914e-02f, -4.21150103e-02f, 3.82617936e-02f, -9.61759165e-02f, -3.63306522e-01f, -2.99481340e-02f, 1.27387360e-01f, -4.29855436e-02f, -2.44547099e-01f, 4.85607572e-02f, -2.45471880e-01f, -3.88329387e-01f, -2.45737620e-02f, 1.72018349e-01f, -8.05925280e-02f, 1.48297682e-01f, 1.27618194e-01f, 1.50047585e-01f, 2.13599816e-01f, 1.25868738e-01f, -8.64017829e-02f, 1.90902129e-01f, 5.35586238e-01f, 1.72519043e-01f, -1.42269537e-01f, -5.03871478e-02f, 7.10947096e-01f, 1.53155867e-02f},
-    {-4.72793430e-01f, 3.52535583e-02f, -2.66563296e-01f, -1.20833321e-02f, -1.48335263e-01f, 5.78476846e-01f, 2.06493318e-01f, 1.68916285e-01f, -3.07425335e-02f, 4.16583449e-01f, 7.87503645e-02f, 2.22378850e-01f, 4.85546477e-02f, 7.63560236e-01f, -3.88438217e-02f, 3.36479455e-01f, 2.26344377e-01f, -2.23252475e-01f, -3.66536200e-01f, -1.66713610e-01f, -8.68142009e-01f, 9.37571973e-02f, -1.23044260e-01f, -6.46342993e-01f, -1.79167926e-01f, 1.28569543e-01f, 4.65003371e-01f, -6.80850625e-01f, 7.70623267e-01f, 1.73275605e-01f, -1.56258307e-02f, 3.11742872e-01f}
-};
-constexpr float moveBias[2] = {-3.98736522e-02f, -8.96862745e-02f};
-
-struct Segment {
-    Vec from, to;
-    bool active = false;
-};
-
-struct WorldMap {
+struct Terrain {
     Map map;
-    std::vector<int> walls;
-    std::vector<float> core;
-    std::vector<unsigned char> legal;
-
-    bool wallBox(int x0, int y0, int x1, int y1) const {
-        const int width = map.nx + 1;
-        x0 = std::clamp(x0, 0, map.nx); x1 = std::clamp(x1 + 1, 0, map.nx);
-        y0 = std::clamp(y0, 0, map.ny); y1 = std::clamp(y1 + 1, 0, map.ny);
-        return walls[y1 * width + x1] - walls[y1 * width + x0] -
-               walls[y0 * width + x1] + walls[y0 * width + x0] > 0;
+    vector<float> room, core;
+    vector<char> wallNear;
+    vector<int> wallPrefix;
+    bool wallsInBox(int x0,int y0,int x1,int y1) const {
+        int stride=map.nx+1;
+        x0=std::clamp(x0,0,map.nx); y0=std::clamp(y0,0,map.ny);
+        x1=std::clamp(x1+1,0,map.nx); y1=std::clamp(y1+1,0,map.ny);
+        return wallPrefix[y1*stride+x1]-wallPrefix[y1*stride+x0]
+             - wallPrefix[y0*stride+x1]+wallPrefix[y0*stride+x0] > 0;
+    }
+    struct Edge { int to; float meters; };
+    vector<vector<Edge>> edges;
+    vector<float> brush;
+    vector<char> usable;
+    int index(int x,int y) const { return y*map.nx+x; }
+    int index(Vec p) const {
+        return index(std::clamp(int(p.x/CELL),0,map.nx-1),std::clamp(int(p.y/CELL),0,map.ny-1));
+    }
+    double sample(const vector<float>& values,Vec p) const {
+        double gx=std::clamp(p.x/CELL-0.5,0.0,double(map.nx-1));
+        double gy=std::clamp(p.y/CELL-0.5,0.0,double(map.ny-1));
+        int x=int(gx),y=int(gy), xx=std::min(x+1,map.nx-1), yy=std::min(y+1,map.ny-1);
+        double a=gx-x,b=gy-y;
+        return (1-a)*((1-b)*values[index(x,y)]+b*values[index(x,yy)])
+            + a*((1-b)*values[index(xx,y)]+b*values[index(xx,yy)]);
     }
 };
-
-struct Track {
-    Player last{};
-    int seen = -1000;
-    Vec trend{}, learned{};
-    std::array<double, Models> error{};
-    std::array<std::array<double, Models>, 4> contextError{};
-    std::array<double, Models> weight{};
-    std::array<double, 5> aimError{};
-    std::array<std::array<Player, Forecast + 1>, Models> path{};
-    std::array<std::array<Vec, Models>, History> past{};
-    std::array<int, History> stamp{};
-    std::array<int, History> context{};
-    bool present = false;
-    bool visible = false;
-    bool armed = false;
-    int readyAt = 0;
-    std::array<double, Forecast + MAX_DELAY + 1> groundPickup{};
-    int clashTick = -1000;
-    int blockTick = -1000;
-    Vec impact{};
-    double reach = 0;
+struct Past {
+    Player me;
+    Dart dart;
+    Action action;
 };
-
-struct Hazard {
-    int owner = -1;
-    int launch = -1000;
-    double weight = 0;
-    bool observed = false;
-    std::array<Segment, Horizon> ray{};
+struct Line {
+    Vec a,b;
+    bool on=false;
 };
-
+struct Threat {
+    array<Line,HORIZON> s{};
+    double weight=0;
+    bool known=false, returning=false;
+    int owner=-1;
+    int signal=0;
+};
+struct Model {
+    array<Body,FUTURE+1> b{};
+    array<Body,MAX_DELAY+1> history{};
+    double w=0;
+};
+struct Forecast {
+    int time=-1000, context=0;
+    Vec location;
+    array<array<Vec,3>,MODES> point{};
+};
+struct Learning {
+    array<Forecast,HIST> record{};
+    double success[5][MODES]{};
+    array<double,6> aimSkill{};
+    int shots=0, lastShot=-1000;
+    int parries=0,lastParry=-1000;
+};
+// Match an opponent against earlier approaches from this game. Express old movement
+// in coordinates along/across the line to its target so mirrored encounters transfer.
+struct TraceFrame {
+    int time=-10000, state=0, loadout=0;
+    Vec location, velocity, recent, radial, localVelocity, localRecent;
+    double distance=0;
+};
+struct TraceForecast {
+    array<Vec, MAX_DELAY+FUTURE> nearest{}, mean{};
+    double confidence=0;
+};
+struct Fog {
+    int entry=-10000,phase=-1;
+    vector<float> reach;
+    array<Vec,4> center{};
+    array<double,4> weight{};
+    double spread=0;
+};
+struct Evasion {
+    array<Vec,FUTURE+1> point{};
+};
+struct Person {
+    Player observed;
+    array<Model,MODES> model;
+    double confidence=1, dist=0;
+    double occupied=0;
+    bool enemy=false, active=false, hand=false;
+    int ready=100;
+    array<array<Evasion,4>,MODES> evade{};
+};
+struct Rush {
+    Vec center,aim,heading;
+    double weight;
+    int owner, time;
+};
 struct Route {
-    Vec move{}, follow{}, aim{};
-    int kind = A_NONE;
-    int switchAt = Horizon;
-    int swingAt = -1;
+    Vec move, aim;
+    int action=A_NONE;
+    double value=-1e20;
+    int follow=-1;
+    int parry=-1;
+    int turn=-1;
+    Vec after{};
 };
 
-struct RoutePath {
-    std::array<Body, Horizon + 1> body{};
-    int hit = -1;
-    bool fell = false;
-    bool picked = false;
-    bool armedSwing = false;
+struct Reflection {
+    bool active=false;
+    double confidence=0;
+    array<Body,FUTURE+1> path{};
+    Dart dart;
+    int release=-1, swing=-1;
+    Vec throwAim, swingAim;
 };
+struct TacticalPolicy {
+    bool observer=false, searched=false;
+    Route lastRoute;
+    array<Reflection,MAXP> mirror{};
+    const GameInfo* gi=nullptr;
+    const Config* c=nullptr;
+    const Obs* obs=nullptr;
+    vector<Terrain> terrain;
+    array<Vec,32> compass{};
+    array<Past,HIST> history{};
+    array<Player,MAXP> last{};
+    array<int,MAXP> lastSeen{};
+    array<Person,MAXP> people{};
+    array<Learning,MAXP> learned{};
+    array<array<TraceFrame,TRACE_STEPS>,MAXP> trace{};
+    array<int,MAXP> parryStep{};
+    array<Vec,MAXP> parryPoint{};
+    array<Fog,MAXP> fog{};
+    vector<Threat> threats;
+    vector<Rush> rushes;
+    int now=0, lag=0, seat=0, n=0, enemies=0, focus=-1;
+    Vec here, home, previousMove;
+    double nearest=30000;
+    double recovery=1;
+    double pressure=0;
+    vector<float> strategy;
+    int strategyPhase=-1, strategyTime=-100, strategyDart=-1;
+    vector<i64> kickDisplacement;
+    struct Landing { int x=0, y=0, vx=0, vy=0, first=-1; bool fatal=false; };
+    mutable array<Landing,4096> kickCache{};
+    mutable int wallSlides=0;
+    double flank=0;
+    int blockedRun=0;
+    array<int,MAXP> contactTime{};
+    array<Vec,MAXP> contactPos{};
+    double dartRadius=0;
 
-struct Exchange {
-    std::array<Segment, Horizon> projectile{};
-    std::array<std::array<double, Horizon + 1>, MAXP> incapacitated{};
-    std::array<std::array<double, Horizon>, MAXP> clashBefore{};
-    bool hasClash = false;
-    int catchAt = Horizon + 1;
-};
-
-struct Shot {
-    Vec move{}, aim{};
-    double value = 0;
-};
-
-struct Bot {
-    const GameInfo* gi = nullptr;
-    const Config* cf = nullptr;
-    const Obs* obs = nullptr;
-    std::vector<WorldMap> maps;
-    std::array<Vec, Angles> dirs{};
-    std::array<Track, MAXP> enemy{};
-    std::array<Player, History> self{};
-    std::array<Dart, History> own{};
-    std::array<Action, History> moves{};
-    std::vector<Hazard> hazards;
-    std::vector<float> flow;
-    int flowPhase = -1, flowTarget = -1, flowTime = -1000;
-    int nx = 0, ny = 0, now = 0, seat = 0, live = 0;
-    Vec here{}, goal{}, carry{};
-    Vec routeGuide{};
-    bool hasGuide = false;
-    double closest = Infinity;
-    int focus = -1;
-    bool armed = false;
-    bool armedPressure = false;
-    double hitRadius = 0;
-
-    std::array<Vec, 5> aimTargets(Vec origin, int view, Vec fallback) const {
-        const Player& p = self[imax(0, view) % History];
-        const Vec start = point(p), v = speed(p);
-        const double flight = (start - origin).len() / (0.82 * cf->dart_v);
-        const double lead = cf->delay + cf->throw_pre + flight;
-        Player extrapolated = p;
-        Vec keep = (p.st == S_FREE || p.st == S_THROW || p.st == S_THROWN) ?
-            v * (1000. / (p.st == S_FREE ? cf->run_v : cf->run_v * cf->throw_move / 100.)) : fallback;
-        for (int t = 0; t < int(lead); ++t) {
-            advance(extrapolated, keep, view + t);
-        }
-        Vec trend = (start - historicalSelf(view - 3)) * (1. / 3);
-        return {start, start + v * lead, start + v * (lead * 0.55),
-            point(extrapolated), start + trend * lead};
+    int activeModels() const { return n==2 && !observer?MODES:11; }
+    int phase(int t) const {
+        if(t<c->col_start) return 0;
+        return std::min(int(terrain.size())-1,1+int((t-c->col_start)/c->col_every));
     }
-
-    int phase(int tick) const {
-        if (tick < cf->col_start) return 0;
-        return imin(int(maps.size()) - 1, 1 + (tick - cf->col_start) / cf->col_every);
+    const Terrain& land(int t) const { return terrain[phase(t)]; }
+    bool pit(Vec p,int t) const { return cell_of_point(*c,gi->M(),ir(p.x),ir(p.y),t)==C_PIT; }
+    bool wall(Vec a,Vec b,int t) const {
+        return wall_between(land(t).map,ir(a.x),ir(a.y),ir(b.x),ir(b.y));
     }
-
-    const WorldMap& field(int t) const { return maps[phase(t)]; }
-    int id(int x, int y) const { return y * nx + x; }
-    int id(Vec p) const {
-        int x = std::clamp(int(roundInt(p.x / Grid)), 0, nx - 1);
-        int y = std::clamp(int(roundInt(p.y / Grid)), 0, ny - 1);
-        return id(x, y);
+    bool pitBehind(Vec victim,Vec direction,int first) const {
+        Vec v=direction.unit(c->kick_v);
+        int vx=int(ir(v.x)),vy=int(ir(v.y)),x=int(ir(victim.x)),y=int(ir(victim.y));
+        int last=first+int(c->kick_stun)-1;
+        i64 ex=x+(vx<0?-1:1)*kickDisplacement[std::abs(vx)];
+        i64 ey=y+(vy<0?-1:1)*kickDisplacement[std::abs(vy)];
+        i64 pad=c->body_r+2;
+        const Terrain& z=land(first);
+        if(!z.wallsInBox(cell_index(std::min<i64>(x,ex)-pad),cell_index(std::min<i64>(y,ey)-pad),
+                         cell_index(std::max<i64>(x,ex)+pad),cell_index(std::max<i64>(y,ey)+pad)))
+            return cell_of_point(*c,gi->M(),ex,ey,last)==C_PIT;
+        // Adjacent hypotheses share a landing estimate. Keep exact phase transitions distinct.
+        int tx=int(rdiv(x,40)),ty=int(rdiv(y,40)),ux=int(rdiv(vx,8)),uy=int(rdiv(vy,8));
+        int terrainKey=phase(first)==phase(last)?phase(first):-1-first;
+        unsigned key=unsigned(tx)*23981u+unsigned(ty)*17077u+unsigned(ux)*1031u+unsigned(uy)*733u+unsigned(terrainKey);
+        Landing& cached=kickCache[(key^(key>>13))%kickCache.size()];
+        if(cached.first==terrainKey && cached.x==tx && cached.y==ty && cached.vx==ux && cached.vy==uy) return cached.fatal;
+        if(wallSlides>=70) return cell_of_point(*c,gi->M(),ex,ey,last)==C_PIT && !wall(victim,vec(ex,ey),first);
+        ++wallSlides;
+        Body b; b.x=x; b.y=y; b.vx=vx; b.vy=vy; b.st=S_STUN; b.timer=int(c->kick_stun);
+        for(int t=first;t<=last;++t) advance(b,{},t);
+        cached={tx,ty,ux,uy,terrainKey,pit(b.point(),last)};
+        return cached.fatal;
     }
-    Vec gridPoint(int i) const { return {double((i % nx) * Grid), double((i / nx) * Grid)}; }
-
-    bool pit(Vec p, int t) const {
-        return cell_of_point(*cf, field(t).map, roundInt(p.x), roundInt(p.y), -1) == C_PIT;
+    bool kickProtected(const Body& b) const {
+        return b.st==S_STUN || (b.st==S_FREE && b.timer>0);
     }
-    bool wall(Vec a, Vec b, int t) const {
-        const WorldMap& f = field(t);
-        const i64 x0 = roundInt(a.x), y0 = roundInt(a.y), x1 = roundInt(b.x), y1 = roundInt(b.y);
-        return f.wallBox(cell_index(imin(x0, x1) - 1), cell_index(imin(y0, y1) - 1),
-                         cell_index(imax(x0, x1)), cell_index(imax(y0, y1))) &&
-               wall_between(f.map, x0, y0, x1, y1);
-    }
-    bool walkable(Vec a, Vec b, int t) const {
-        Vec delta = b - a;
-        for (int n = 1, steps = int(delta.len() / Grid) + 1; n <= steps; ++n) {
-            Vec p = a + delta * (double(n) / steps);
-            if (pit(p, t) || circle_hits_wall(field(t).map, cf->body_r, roundInt(p.x), roundInt(p.y))) return false;
-        }
-        return true;
-    }
-
-    void distanceField(const WorldMap& f, const std::vector<int>& sources, std::vector<float>& dest) const {
-        using Node = std::pair<float, int>;
-        std::priority_queue<Node, std::vector<Node>, std::greater<Node>> queue;
-        dest.assign(nx * ny, 10000);
-        for (int i : sources) {
-            if (f.legal[i]) {
-                dest[i] = 0;
-                queue.emplace(0, i);
-            }
-        }
-        while (!queue.empty()) {
-            auto [dist, u] = queue.top();
-            queue.pop();
-            if (dist != dest[u]) continue;
-            int x = u % nx, y = u / nx;
-            for (int dy = -1; dy <= 1; ++dy) for (int dx = -1; dx <= 1; ++dx) {
-                if ((!dx && !dy) || x + dx < 0 || x + dx >= nx || y + dy < 0 || y + dy >= ny) continue;
-                int v = u + dy * nx + dx;
-                if (!f.legal[v] || (dx && dy && (!f.legal[u + dx] || !f.legal[u + dy * nx]))) continue;
-                float nd = dist + (dx && dy ? 1.414214f : 1.f);
-                if (nd >= dest[v]) continue;
-                dest[v] = nd;
-                queue.emplace(nd, v);
-            }
-        }
-    }
-
     void init(const GameInfo& game) {
-        gi = &game;
-        cf = &game.cfg;
-        seat = game.seat;
-        nx = int(game.M().width() / Grid) + 1;
-        ny = int(game.M().height() / Grid) + 1;
-        hitRadius = cf->body_r + cf->dart_r;
-        int last = 0;
-        for (int y = 0; y < game.M().ny; ++y) for (int x = 0; x < game.M().nx; ++x)
-            last = imax(last, 1 + game.M().wave(x, y));
-        maps.reserve(last + 1);
-        for (int p = 0; p <= last; ++p) {
-            WorldMap f;
-            f.map = live_map(*cf, game.M(), p == 0 ? -1 : cf->col_start + (p - 1) * cf->col_every);
-            const int w = f.map.nx + 1, h = f.map.ny + 1;
-            f.walls.assign(w * h, 0);
-            for (int y = 1; y < h; ++y) for (int x = 1; x < w; ++x) {
-                int i = y * w + x;
-                f.walls[i] = f.walls[i - 1] + f.walls[i - w] - f.walls[i - w - 1] + (f.map.at(x - 1, y - 1) == C_WALL);
+        gi=&game; c=&gi->cfg; seat=gi->seat; n=gi->n;
+        dartRadius=c->body_r+c->dart_r;
+        kickDisplacement.resize(c->kick_v+1);
+        for(int initial=0;initial<=c->kick_v;++initial) {
+            i64 speed=initial, distance=0;
+            for(int j=0;j<c->kick_stun && speed;++j) {
+                distance+=speed;
+                speed=rdiv(speed*c->kick_keep,1000);
             }
-            f.legal.resize(nx * ny);
-            for (int i = 0; i < nx * ny; ++i) {
-                Vec q = gridPoint(i);
-                f.legal[i] = cell_of_point(*cf, f.map, roundInt(q.x), roundInt(q.y), -1) != C_PIT &&
-                    !circle_hits_wall(f.map, cf->body_r, roundInt(q.x), roundInt(q.y));
+            kickDisplacement[initial]=distance;
+        }
+        for(int i=0;i<32;++i) compass[i]={std::cos(2*PI*i/32),std::sin(2*PI*i/32)};
+        const Map& base=gi->M();
+        terrain.resize(base.nwave+1);
+        Vec sum{}; double total=0;
+        for(int y=0;y<base.ny;++y) for(int x=0;x<base.nx;++x) {
+            if(base.wave(x,y)<0 && (base.at(x,y)==C_GRASS || base.at(x,y)==C_FLOOR)) {
+                sum=sum+vec(cell_center(x),cell_center(y)); total++;
             }
-            maps.push_back(std::move(f));
         }
-        std::vector<int> core;
-        for (int i = 0; i < nx * ny; ++i) if (maps.back().legal[i]) core.push_back(i);
-        for (WorldMap& f : maps) distanceField(f, core, f.core);
-        for (int k = 0; k < Angles; ++k) {
-            double a = k * 6.283185307179586 / Angles;
-            dirs[k] = {1000 * std::cos(a), 1000 * std::sin(a)};
+        home=total?sum*(1/total):vec(base.width()/2,base.height()/2);
+        for(int f=0;f<=base.nwave;++f) makeTerrain(f);
+        lastSeen.fill(-1000); contactTime.fill(-1000); parryStep.fill(-1000);
+        for(int k=0;k<n;++k) {
+            last[k].x=gi->spx[k]; last[k].y=gi->spy[k]; lastSeen[k]=0;
         }
-        for (auto& e : enemy) e.stamp.fill(-1000);
-        hazards.reserve(128);
+        threats.reserve(140);
+    }
+    void makeTerrain(int f) {
+        Terrain& z=terrain[f];
+        const Map& base=gi->M();
+        int t=f?int(c->col_start+(f-1)*c->col_every):0;
+        z.map=live_map(*c,base,t);
+        int nx=base.nx,ny=base.ny,N=nx*ny;
+        z.room.resize(N); z.core.assign(N,1e5f); z.wallNear.resize(N);
+        z.wallPrefix.assign((nx+1)*(ny+1),0);
+        for(int y=0;y<ny;++y) {
+            int row=0;
+            for(int x=0;x<nx;++x) {
+                row+=z.map.at(x,y)==C_WALL;
+                z.wallPrefix[(y+1)*(nx+1)+x+1]=z.wallPrefix[y*(nx+1)+x+1]+row;
+            }
+        }
+        vector<char> okay(N);
+        using Node=std::pair<float,int>;
+        std::priority_queue<Node,vector<Node>,std::greater<Node>> pq;
+        for(int y=0;y<ny;++y) for(int x=0;x<nx;++x) {
+            int j=y*nx+x;
+            Vec p=vec(cell_center(x),cell_center(y));
+            int near=0;
+            double minSq=3500*3500;
+            for(int dy=-5;dy<=5;++dy) for(int dx=-5;dx<=5;++dx) {
+                int cell=z.map.at(x+dx,y+dy);
+                if(cell==C_WALL && std::abs(dx)<=2 && std::abs(dy)<=2) near=1;
+                if(cell!=C_PIT && cell!=C_WALL) continue;
+                double a=std::max(0.0,std::abs(dx)*double(CELL)-CELL*0.5);
+                double b=std::max(0.0,std::abs(dy)*double(CELL)-CELL*0.5);
+                minSq=std::min(minSq,a*a+b*b);
+            }
+            z.wallNear[j]=char(near); z.room[j]=float(std::sqrt(minSq));
+            int cell=z.map.at(x,y);
+            okay[j]=(cell==C_GRASS || cell==C_FLOOR);
+            if(!okay[j]) continue;
+            if(base.wave(x,y)<0) {
+                float priority=float(0.13*(p-home).len() + 0.33*std::max(0.0,1300-z.room[j]*1.0));
+                z.core[j]=priority; pq.push({priority,j});
+            }
+        }
+        while(!pq.empty()) {
+            auto [value,j]=pq.top(); pq.pop();
+            if(value!=z.core[j]) continue;
+            int x=j%nx,y=j/nx;
+            for(int dy=-1;dy<=1;++dy) for(int dx=-1;dx<=1;++dx) {
+                if((!dx&&!dy)||!base.inside(x+dx,y+dy)) continue;
+                int k=(y+dy)*nx+x+dx;
+                if(!okay[k]) continue;
+                float cost=dx&&dy?707.f:float(CELL);
+                if(dx&&dy && (!okay[y*nx+x+dx] || !okay[(y+dy)*nx+x])) cost+=500;
+                float nv=value+cost+(z.room[k]<300?85:0);
+                if(nv<z.core[k]) { z.core[k]=nv; pq.push({nv,k}); }
+            }
+        }
+        for(int j=0;j<N;++j) {
+            if(z.core[j]>50000) {
+                Vec p=vec(cell_center(j%nx),cell_center(j/nx));
+                z.core[j]=float((p-home).len()+650);
+            }
+        }
+        z.edges.resize(N); z.brush.resize(N); z.usable=okay;
+        for(int y=0;y<ny;++y) for(int x=0;x<nx;++x) {
+            int j=y*nx+x;
+            if(!okay[j]) continue;
+            Vec from=vec(cell_center(x),cell_center(y));
+            if(z.map.at(x,y)==C_GRASS) {
+                int count=0;
+                for(int dy=-2;dy<=2;++dy) for(int dx=-2;dx<=2;++dx) count+=z.map.at(x+dx,y+dy)==C_GRASS;
+                z.brush[j]=0.7f+0.3f*count/25.f;
+            }
+            for(int dy=-1;dy<=1;++dy) for(int dx=-1;dx<=1;++dx) {
+                if((!dx&&!dy)||!base.inside(x+dx,y+dy)) continue;
+                int q=(y+dy)*nx+x+dx;
+                if(!okay[q]) continue;
+                float cost=(dx&&dy?1.4142f:1.f)*CELL/1000.f;
+                if(dx&&dy && (!okay[y*nx+x+dx] || !okay[(y+dy)*nx+x])) cost+=0.28f;
+                if(z.wallNear[q] && circle_hits_wall(z.map,c->body_r,cell_center(x+dx),cell_center(y+dy))) cost+=0.52f;
+                z.edges[j].push_back({q,cost});
+            }
+            double jump=c->dash_t*c->dash_v;
+            for(int u=0;u<32;u+=2) {
+                Vec end=from+compass[u]*jump;
+                int xx=cell_index(ir(end.x)),yy=cell_index(ir(end.y));
+                if(!base.inside(xx,yy) || !okay[yy*nx+xx]) continue;
+                bool crosses=false,clear=true;
+                for(int p=1;p<=6;++p) {
+                    Vec v=from+compass[u]*(jump*p/6);
+                    int tx=cell_index(ir(v.x)), ty=cell_index(ir(v.y));
+                    crosses|=z.map.at(tx,ty)==C_PIT;
+                    if(circle_hits_wall(z.map,c->body_r,ir(v.x),ir(v.y))) { clear=false; break; }
+                }
+                if(clear && crosses) z.edges[j].push_back({yy*nx+xx,2.45f});
+            }
+        }
     }
 
-    template<class Pose>
-    void bodyMove(Pose& p, int t) const {
-        const WorldMap& f = field(t);
-        i64 r = cf->body_r, x = p.x + p.vx, y = p.y + p.vy;
-        if (f.wallBox(cell_index(imin(x, p.x) - r), cell_index(imin(y, p.y) - r),
-                      cell_index(imax(x, p.x) + r), cell_index(imax(y, p.y) + r))) {
-            move_body(f.map, r, p.x, p.y, p.vx, p.vy);
+    void updateStrategy() {
+        int f=phase(now), ds=int(obs->my_dart().st);
+        if(focus>=0 && wall(here,prediction(focus,0).point(),now)) blockedRun=std::min(100,blockedRun+1);
+        else blockedRun=std::max(0,blockedRun-6);
+        flank=sat((blockedRun-24)/40.);
+        if(strategyPhase==f && strategyDart==ds && now-strategyTime<7) return;
+        strategyPhase=f; strategyDart=ds; strategyTime=now;
+        const Terrain& z=terrain[f];
+        int nx=z.map.nx,ny=z.map.ny,N=nx*ny;
+        strategy.assign(N,-100);
+        using Node=std::pair<float,int>;
+        std::priority_queue<Node> pq;
+        bool hand=ds==D_HAND;
+        double late=sat((now-c->col_start+70)/110.);
+        for(int i=0;i<N;++i) {
+            if(!z.usable[i]) continue;
+            int x=i%nx,y=i/nx; Vec p=vec(cell_center(x),cell_center(y));
+            double q=-(0.25+0.64*late)*z.core[i]/1000+0.53*std::min(2.,z.room[i]/1000.);
+            i64 fall=cell_fall_step(*gi,x,y);
+            if(fall>=0) q-=12*sat((now+48+std::min(22.,(p-here).len()/c->run_v)-fall)/42.);
+            double closest=100,second=100;
+            for(int k=0;k<n;++k) if(people[k].active && people[k].enemy) {
+                double d=(p-prediction(k,2).point()).len()/1000.;
+                if(d<closest) { second=closest; closest=d; } else second=std::min(second,d);
+                if(people[k].ready<7) q-=(hand?0.75:1.35)*std::max(0.,3.9-d);
+            }
+            if(closest<90) {
+                q-=(hand?0.46:0.17)*std::max(0.,closest-5.1);
+                if(closest>c->see_r/1000.+0.15) q+=z.brush[i]*(hand?5.2:2.4);
+            }
+            if(focus>=0 && closest<9.1 && flank>0.10) {
+                bool blocked=wall(p,prediction(focus,2).point(),now);
+                if(hand && !blocked) q+=4.9*flank*sat((8.4-closest)/3.0);
+                if(!hand && blocked && people[focus].ready<6) q+=2.7*flank*sat((8.6-closest)/3.0);
+            }
+            q-=0.86*std::max(0.,5.4-second);
+            if(ds==D_GROUND || ds==D_RISE) q-=recovery*0.63*std::min(6.,(pos(obs->my_dart())-p).len()/1000.);
+            strategy[i]=float(q); pq.push({float(q),i});
+        }
+        while(!pq.empty()) {
+            auto [value,i]=pq.top(); pq.pop();
+            if(value!=strategy[i]) continue;
+            for(auto e:z.edges[i]) {
+                float candidate=value-e.meters*0.54f;
+                if(candidate>strategy[e.to]) { strategy[e.to]=candidate; pq.push({candidate,e.to}); }
+            }
+        }
+        for(int i=0;i<N;++i) if(!z.usable[i]) {
+            float v=-99;
+            for(int dy=-1;dy<=1;++dy) for(int dx=-1;dx<=1;++dx) {
+                int x=i%nx+dx,y=i/nx+dy;
+                if(z.map.inside(x,y) && z.usable[y*nx+x]) v=std::max(v,strategy[y*nx+x]);
+            }
+            strategy[i]=v-0.6f;
+        }
+    }
+    void begin(Body& b,int act,Vec aim,bool hand) const {
+        bool cancel=b.st==S_DASH && c->dash_slash && b.timer>c->dash_post && b.timer<=c->dash_post+c->dash_t && act==A_MELEE;
+        if(b.st!=S_FREE && !cancel && b.st!=S_RECALL) return;
+        if(act==A_NONE) return;
+        Vec dir=aim.unit(1000);
+        b.ax=ir(dir.x); b.ay=ir(dir.y);
+        if(act==A_DASH) { b.st=S_DASH; b.timer=int(c->dash_pre+c->dash_t+c->dash_post); }
+        else if(act==A_THROW) { b.st=S_THROW; b.timer=int(c->throw_pre); }
+        else if(act==A_MELEE) { b.st=hand?S_SLASH:S_KICK; b.timer=int(hand?c->slash_pre:c->kick_pre); }
+        else if(act==A_RECALL && b.st!=S_RECALL) { b.st=S_RECALL; b.timer=int(c->recall_pre); }
+    }
+    // Simulate a single body with the same speed cap and wall slide as the referee.
+    bool advance(Body& b,Vec move,int t) const {
+        const Terrain& z=land(t);
+        bool dash=b.st==S_DASH && b.timer>c->dash_post && b.timer<=c->dash_post+c->dash_t;
+        bool airborne=(dash && b.timer>c->dash_post+1) || (b.st==S_STUN && b.timer>1);
+        i64 vx,vy;
+        if(dash) {
+            vx=rdiv(b.ax*c->dash_v,1000); vy=rdiv(b.ay*c->dash_v,1000);
+        } else if(b.st==S_STUN) {
+            vx=b.vx; vy=b.vy;
         } else {
-            p.x = x; p.y = y;
-        }
-    }
-
-    template<class Pose>
-    bool dashMoves(const Pose& p) const {
-        return p.st == S_DASH && cf->dash_post < p.timer && p.timer <= cf->dash_post + cf->dash_t;
-    }
-
-    template<class Pose>
-    void begin(Pose& p, int kind, Vec aim, bool hasDart, Vec move) const {
-        if (p.st == S_RECALL && (kind == A_THROW || kind == A_DASH || kind == A_MELEE || move.sq() > 0)) {
-            p.st = S_FREE; p.timer = 0;
-        }
-        if (kind == A_MELEE && cf->dash_slash && dashMoves(p)) {
-            p.st = S_FREE; p.timer = 0;
-        }
-        if (p.st != S_FREE || kind == A_NONE) return;
-        scale_to(roundInt(aim.x), roundInt(aim.y), UNIT, p.ax, p.ay);
-        if (kind == A_DASH) {
-            p.st = S_DASH; p.timer = cf->dash_pre + cf->dash_t + cf->dash_post; p.cd = cf->dash_cd;
-        } else if (kind == A_MELEE) {
-            p.st = hasDart ? S_SLASH : S_KICK; p.timer = hasDart ? cf->slash_pre : cf->kick_pre;
-        } else if (kind == A_THROW) {
-            p.st = S_THROW; p.timer = cf->throw_pre;
-        } else {
-            p.st = S_RECALL; p.timer = cf->recall_pre;
-        }
-    }
-
-    template<class Pose>
-    bool advance(Pose& p, Vec move, int t) const {
-        const bool dashing = dashMoves(p);
-        bool overPit = dashing && p.timer > cf->dash_post + 1;
-        if (dashing) {
-            p.vx = rdiv(p.ax * cf->dash_v, UNIT); p.vy = rdiv(p.ay * cf->dash_v, UNIT);
-            bodyMove(p, t);
-            if (!overPit) {
-                p.vx = rdiv(p.vx * cf->run_v, cf->dash_v); p.vy = rdiv(p.vy * cf->run_v, cf->dash_v);
-            }
-        } else if (p.st == S_STUN) {
-            overPit = p.timer > 1;
-            bodyMove(p, t);
-            p.vx = rdiv(p.vx * cf->kick_keep, 1000); p.vy = rdiv(p.vy * cf->kick_keep, 1000);
-        } else {
-            i64 percent = p.st == S_FREE ? 100 : (p.st == S_THROW || p.st == S_THROWN ? cf->throw_move : 0);
-            i64 mx = roundInt(move.x), my = roundInt(move.y), vx = 0, vy = 0;
-            if (percent && (mx || my)) {
-                i64 requested = imin(ilen(mx, my), UNIT);
-                scale_to(mx, my, rdiv(cf->run_v * percent * requested, 100 * UNIT), vx, vy);
-            }
-            vx -= p.vx; vy -= p.vy;
-            cap_len(vx, vy, cf->acc);
-            p.vx += vx; p.vy += vy;
-            bodyMove(p, t);
-        }
-        if (p.cd > 0) --p.cd;
-        if (p.st == S_FREE) {
-            if (p.timer > 0) --p.timer;
-        } else if (--p.timer <= 0) {
-            switch (p.st) {
-                case S_THROW: p.st = S_THROWN; p.timer = cf->throw_post; break;
-                case S_SLASH: p.st = S_SLASHED; p.timer = cf->slash_post; break;
-                case S_KICK: p.st = S_KICKED; p.timer = cf->kick_post; break;
-                case S_STUN: p.st = S_FREE; p.timer = 1; break;
-                default: p.st = S_FREE; p.timer = 0; break;
+            double speed=b.st==S_FREE?c->run_v:(b.st==S_THROW || b.st==S_THROWN)?c->run_v*c->throw_move/100.:0;
+            Vec target=move*speed;
+            vx=ir(target.x); vy=ir(target.y);
+            i64 dx=vx-b.vx,dy=vy-b.vy;
+            i64 q=dx*dx+dy*dy;
+            if(q>=(c->acc+1)*(c->acc+1)) {
+                i64 l=(i64)std::sqrt(double(q));
+                vx=b.vx+rdiv(dx*c->acc,l); vy=b.vy+rdiv(dy*c->acc,l);
             }
         }
-        return overPit || !pit(point(p), t);
-    }
-
-    void enemyStep(Player& p, Vec move, int t) const {
-        Player next = p;
-        if (advance(next, move, t)) { p = next; return; }
-        if (p.st != S_FREE && p.st != S_THROW && p.st != S_THROWN) { p = next; return; }
-        // A free opponent is unlikely to knowingly run into a hole.
-        for (Vec alt : {Vec{move.x, 0}, Vec{0, move.y}, Vec{}}) {
-            next = p;
-            if (advance(next, alt, t)) { p = next; return; }
+        if(z.wallNear[z.index(b.point())] || z.wallNear[z.index(vec(b.x+vx,b.y+vy))])
+            move_body(z.map,c->body_r,b.x,b.y,vx,vy);
+        else { b.x+=vx; b.y+=vy; }
+        b.vx=vx; b.vy=vy;
+        if(dash && b.timer==c->dash_post+1) {
+            b.vx=rdiv(vx*c->run_v,c->dash_v); b.vy=rdiv(vy*c->run_v,c->dash_v);
+        } else if(b.st==S_STUN) {
+            b.vx=rdiv(vx*c->kick_keep,1000); b.vy=rdiv(vy*c->kick_keep,1000);
         }
-        p = next;
+        if(b.st!=S_FREE && b.st!=S_DEAD && --b.timer<=0) {
+            if(b.st==S_THROW) { b.st=S_THROWN; b.timer=int(c->throw_post); }
+            else if(b.st==S_SLASH) { b.st=S_SLASHED; b.timer=int(c->slash_post); }
+            else if(b.st==S_KICK) { b.st=S_KICKED; b.timer=int(c->kick_post); }
+            else { b.timer=b.st==S_STUN?1:0; b.st=S_FREE; }
+        } else if(b.st==S_FREE && b.timer>0) --b.timer;
+        return airborne || !pit(b.point(),t);
     }
-
-    Vec historicalSelf(int t) const { return t >= now ? here : point(self[imax(0, t) % History]); }
-
-    Vec intent(int m, int k, const Player& p, Vec base, int t) const {
-        const auto& e = enemy[k];
-        Vec delta = historicalSelf(t) - point(p);
-        if (m == 0) return base;
-        if (m == 1) return e.trend;
-        if (m == 7) return e.learned;
-        if (m == 2) return {};
-        if (m == 3) return delta.unit(1000);
-        if (m == 4) {
-            if (obs->d[k].st == D_GROUND) return (point(obs->d[k]) - point(p)).unit(1000);
-            return delta.unit(-1000);
+    void predictStep(Body& b,Vec intent,int t) const {
+        Body old=b;
+        if(advance(b,intent,t)) return;
+        // At a pit rim most opponents turn or stop. Preserve lock timers.
+        if(old.st==S_FREE || old.st==S_THROW || old.st==S_THROWN) {
+            Body bx=old,by=old;
+            bool x=advance(bx,{intent.x,0},t), y=advance(by,{0,intent.y},t);
+            if(x && (!y || (bx.point()-old.point()).sq()>(by.point()-old.point()).sq())) b=bx;
+            else if(y) b=by;
+            else { b.x=old.x; b.y=old.y; b.vx=b.vy=0; }
+        } else { b.x=old.x; b.y=old.y; }
+    }
+    Vec selfAt(int t) const { return t>=now?here:pos(history[std::max(0,t)%HIST].me); }
+    Player hiddenPlayer(int k,int t) {
+        Player p=last[k];
+        Vec old=pos(p),myPast=selfAt(t);
+        int age=std::max(0,t-lastSeen[k]);
+        Vec estimate=old+vel(p)*std::min(4,age);
+        const Terrain& z=land(t); const Map& m=z.map; int N=m.nx*m.ny;
+        Fog& f=fog[k];
+        if(f.entry!=lastSeen[k] || f.phase!=phase(t)) {
+            f.entry=lastSeen[k]; f.phase=phase(t); f.reach.assign(N,1e7f);
+            using Node=std::pair<float,int>;
+            std::priority_queue<Node,vector<Node>,std::greater<Node>> pq;
+            double closest=1e20;
+            for(int i=0;i<N;++i) if(m.c[i]==C_GRASS) {
+                Vec pt=vec(cell_center(i%m.nx),cell_center(i/m.nx));
+                closest=std::min(closest,(pt-old).len());
+            }
+            for(int i=0;i<N;++i) if(m.c[i]==C_GRASS) {
+                Vec pt=vec(cell_center(i%m.nx),cell_center(i/m.nx)); double dist=(pt-old).len();
+                if(dist<=std::max(closest+180.,double(c->run_v)+CELL*0.72)) {
+                    f.reach[i]=float(dist); pq.push({float(dist),i});
+                }
+            }
+            while(!pq.empty()) {
+                auto [d,i]=pq.top(); pq.pop();
+                if(d!=f.reach[i]) continue;
+                for(auto edge:z.edges[i]) if(m.c[edge.to]==C_GRASS && edge.meters<1.35) {
+                    float nd=d+edge.meters*1000;
+                    if(nd<f.reach[edge.to]) { f.reach[edge.to]=nd; pq.push({nd,edge.to}); }
+                }
+            }
         }
-        Vec side = delta.left().unit(m == 5 ? 1000 : -1000);
-        return (side + base * 0.23).unit(1000);
-    }
-
-    int motionContext(const Player& p, const Dart& d) const {
-        if (p.st != S_FREE && p.st != S_THROWN) return 3;
-        if (d.st == D_GROUND || d.st == D_RISE) return 2;
-        if (d.st == D_HAND && (point(p) - here).sq() < 4500. * 4500.) return 1;
-        return 0;
-    }
-
-
-    Vec learnedIntent(const Player& p, const Track& e, int k, int ref) const {
-        const Player& viewer = self[ref % History];
-        const Vec offset = point(viewer) - point(p);
-        if (p.st != S_FREE || offset.sq() <= 450. * 450. || offset.sq() >= 8000. * 8000.)
-            return e.trend;
-        const double distance = offset.len();
-        const Vec radial = offset * (1. / distance);
-        const Vec side = radial.left();
-        const Vec v = speed(p) * (1. / cf->run_v);
-        const Vec prev = e.seen == ref - 1 && e.last.st == S_FREE
-            ? speed(e.last) * (1. / cf->run_v) : v;
-        const Vec trend = e.trend * 0.001;
-        const Vec viewerV = speed(viewer) * (1. / cf->run_v);
-        const float features[] = {
-            float(v.dot(radial)), float(v.dot(side)),
-            float(prev.dot(radial)), float(prev.dot(side)),
-            float(trend.dot(radial)), float(trend.dot(side)),
-            float(viewerV.dot(radial)), float(viewerV.dot(side)),
-            float(std::min(1.40, distance / 6500.)), float(p.cd / double(std::max<i64>(1, cf->dash_cd))),
-            float(obs->d[k].st == D_HAND), float(own[ref % History].st == D_HAND),
-            float(cf->mode == M_FFA), float(p.expose > 0),
-            float(dart_flying(own[ref % History].st)), float(ref >= cf->col_start - 20),
-            float(p.timer > 0), float(viewer.st == S_FREE),
-        };
-        float output[] = {moveBias[0], moveBias[1]};
-        for (int m = 0; m < 32; ++m) {
-            float hidden = hiddenBias[m];
-            for (int f = 0; f < 18; ++f) hidden += features[f] * hiddenWeights[m][f];
-            const float activation = std::max(0.f, hidden);
-            output[0] += activation * moveWeights[0][m];
-            output[1] += activation * moveWeights[1][m];
+        vector<std::pair<Vec,double>> locations;
+        double minD=1e30,bestWeight=-1,reach=age*c->run_v+CELL*0.82;
+        Vec likely=estimate,danger=estimate;
+        for(int i=0;i<N;++i) {
+            if(m.c[i]!=C_GRASS || f.reach[i]>reach) continue;
+            Vec q=vec(cell_center(i%m.nx),cell_center(i/m.nx));
+            double dist=(q-myPast).len();
+            if(dist<c->see_r-CELL*0.59) continue;
+            double stay=(q-estimate).len(), sigma=410+std::min(35,age)*47.;
+            double w=0.20+0.78*std::exp(-stay/sigma)+0.85*std::exp(-std::abs(dist-4200)/2500)
+                +0.48*std::exp(-z.core[i]/3300.);
+            w*=0.12+0.88*sat((dist-c->see_r+CELL*0.65)/CELL);
+            if(w>bestWeight) { bestWeight=w; likely=q; }
+            if(dist<minD) { minD=dist; danger=q; }
+            locations.push_back({q,w});
         }
-        const Vec motion = radial * output[0] + side * output[1];
-        return motion.sq() > 1. ? motion.unit(1000) : motion * 1000.;
+        if(locations.empty()) {
+            double err=1e30; Vec best=estimate;
+            for(int i=0;i<N;++i) if(m.c[i]==C_GRASS) {
+                Vec q=vec(cell_center(i%m.nx),cell_center(i/m.nx));
+                double v=(q-estimate).len()+5*std::max(0.,c->see_r-(q-myPast).len());
+                if(v<err) {err=v; best=q;}
+            }
+            locations.push_back({best,1}); likely=danger=best;
+        }
+        f.center[0]=likely; f.center[1]=danger;
+        for(int j=2;j<4;++j) {
+            double best=-1;
+            for(auto [q,w]:locations) {
+                double d=1e30;
+                for(int u=0;u<j;++u) d=std::min(d,(q-f.center[u]).sq());
+                if(d*w>best) {best=d*w; f.center[j]=q;}
+            }
+        }
+        for(int iter=0;iter<3;++iter) {
+            array<Vec,4> sums{}; f.weight.fill(0);
+            for(auto [q,w]:locations) {
+                int idx=0;
+                for(int j=1;j<4;++j) if((q-f.center[j]).sq()<(q-f.center[idx]).sq()) idx=j;
+                sums[idx]=sums[idx]+q*w; f.weight[idx]+=w;
+            }
+            for(int i=0;i<4;++i) if(f.weight[i]) {
+                Vec mean=sums[i]*(1/f.weight[i]); double best=1e30;
+                for(auto [q,w]:locations) if((q-mean).sq()<best) {best=(q-mean).sq(); f.center[i]=q;}
+            }
+        }
+        double total=0; for(double w:f.weight) total+=w;
+        for(double& w:f.weight) w/=total;
+        int central=0;
+        for(int j=1;j<4;++j) if(f.weight[j]>f.weight[central]) central=j;
+        std::swap(f.center[0],f.center[central]); std::swap(f.weight[0],f.weight[central]);
+        f.spread=0;
+        for(auto [q,w]:locations) f.spread+=(q-f.center[0]).len()*w/total;
+        Vec h=f.center[0];
+        p.x=ir(h.x); p.y=ir(h.y); p.vx=p.vy=0; p.st=S_FREE; p.timer=0; p.expose=0; p.cd=0;
+        return p;
     }
-
-    void track() {
-        const int ref = imax(0, now - cf->delay);
-        const auto lag = now - ref;
-        closest = Infinity; focus = -1; live = 0; armedPressure = false;
-        for (int i = 1; i < obs->n; ++i) {
-            int k = (seat + i) % obs->n;
-            auto& e = enemy[k];
-            const Player& seen = obs->p[k];
-            e.present = seen.alive && !is_mate(*gi, k);
-            e.visible = e.present && seen.vis;
-            e.armed = obs->d[k].st == D_HAND;
-            if (e.present) ++live;
-            if (!seen.alive && !dart_flying(obs->d[k].st)) continue;
-            if (seen.vis && e.seen != ref) {
-                if (seen.st == S_THROW && (e.last.st != S_THROW || e.seen != ref - 1)) {
-                    int when = imax(0, ref - (cf->throw_pre - seen.timer));
-                    auto aimed = aimTargets(point(seen), imax(0, when - cf->delay), {});
-                    Vec actual = heading(seen).unit();
-                    for (int a = 0; a < int(aimed.size()); ++a) {
-                        double error = 1 - actual.dot((aimed[a] - point(seen)).unit());
-                        e.aimError[a] = 0.78 * e.aimError[a] + 0.22 * std::min(error, 0.7);
+    Vec priorAim(int policy,int seen,double travel) const {
+        Vec base=selfAt(seen);
+        const Player& self=history[seen%HIST].me;
+        double lead=policy==0?0:policy==1?double(c->delay):policy==2?double(c->delay+c->throw_pre)+0.5*travel:
+            double(c->delay+c->throw_pre)+travel;
+        Vec v=vel(self);
+        if(policy==4 && seen>=3) v=(base-selfAt(seen-3))*(1./3);
+        if(v.len()>c->run_v) v=v.unit(c->run_v);
+        if(self.st==S_DASH || self.st==S_STUN) {
+            Body b(self);
+            for(int j=0;j<int(lead+0.5) && b.st!=S_FREE;++j) predictStep(b,{},seen+j);
+            return b.point();
+        }
+        return base+v*lead;
+    }
+    Vec modeledAim(Vec origin,int seen,double travel) const {
+        const Past& own=history[seen%HIST];
+        Vec start=pos(own.me),toward=(origin-start).unit();
+        Vec drift=vel(own.me)*(1./c->run_v);
+        if(drift.sq()>1) drift=drift.unit();
+        Vec smooth=seen>=4?(start-selfAt(seen-4))*(1./(4*c->run_v)):drift;
+        if(smooth.sq()>1) smooth=smooth.unit();
+        Vec goal=own.dart.st==D_GROUND?(pos(own.dart)-start).unit():(home-start).unit();
+        const array<Vec,7> motion={drift,Vec{},smooth,goal,toward,toward.left(),toward.left()*(-1)};
+        const array<double,7> weight={0.22,0.18,0.19,0.13,0.12,0.08,0.08};
+        array<Vec,7> positions{};
+        Vec mean{};
+        int len=std::clamp(int(std::round(c->delay+c->throw_pre+travel)),3,20);
+        for(int m=0;m<7;++m) {
+            Body b(own.me);
+            for(int j=0;j<len;++j) {
+                if(b.st==S_FREE && !motion[m].sq() && !b.vx && !b.vy) break;
+                predictStep(b,motion[m],seen+j);
+            }
+            positions[m]=b.point(); mean=mean+b.point()*weight[m];
+        }
+        double best=-1; Vec result=mean;
+        for(int m=-1;m<7;++m) {
+            Vec target=m<0?mean:positions[m]; Vec axis=(target-origin).unit();
+            double score=0;
+            for(int i=0;i<7;++i) {
+                double error=std::abs((positions[i]-origin).dot(axis.left()));
+                score+=weight[i]*sat((dartRadius+325-error)/(dartRadius+180));
+            }
+            if(score>best) { best=score; result=target; }
+        }
+        return result;
+    }
+    void learnAim(int k,int r,const Player& p) {
+        int when=r-int(c->throw_pre-p.timer);
+        Learning& l=learned[k];
+        if(p.st!=S_THROW || when<0 || l.lastShot==when) return;
+        l.lastShot=when;
+        int seen=std::max(0,when-int(c->delay));
+        Vec origin=pos(p),dir=vec(p.ax,p.ay).unit(), personal=selfAt(seen);
+        if((personal-origin).dot(dir)<0 || (personal-origin).len()>c->range+2200) return;
+        double travel=(personal-origin).len()/(0.81*c->dart_v);
+        array<double,6> errors{};
+        for(int j=0;j<5;++j) errors[j]=std::abs((priorAim(j,seen,travel)-origin).dot(dir.left()));
+        errors[5]=std::abs((modeledAim(origin,seen,travel)-origin).dot(dir.left()));
+        if(*std::min_element(errors.begin(),errors.end())>1450) return;
+        ++l.shots;
+        for(int j=0;j<6;++j) {
+            double likelihood=std::exp(-errors[j]/600);
+            l.aimSkill[j]=0.65*l.aimSkill[j]+0.35*likelihood;
+        }
+    }
+    TraceForecast traceForecast(int k,int t,const Player& p,Vec target) {
+        auto& samples=trace[k];
+        TraceFrame current;
+        current.time=t;
+        current.location=pos(p);
+        current.velocity=vel(p)*(1./c->run_v);
+        current.state=int(p.st);
+        current.loadout=(obs->d[k].st==D_HAND?1:0)+(history[t%HIST].dart.st==D_HAND?2:0);
+        Vec delta=target-current.location;
+        current.radial=delta.unit();
+        current.distance=delta.len();
+        const auto& past=samples[(t+TRACE_STEPS-4)%TRACE_STEPS];
+        current.recent=t>=4 && past.time==t-4?
+            (current.location-past.location)*(1./(4*c->run_v)):current.velocity;
+        auto local=[&](Vec v) { return Vec{v.dot(current.radial),v.dot(current.radial.left())}; };
+        current.localVelocity=local(current.velocity);
+        current.localRecent=local(current.recent);
+        samples[t%TRACE_STEPS]=current;
+        TraceForecast result;
+        if(t<14 || (p.st!=S_FREE && p.st!=S_THROWN)) return result;
+        struct Match { double loss=1e9; int time=-1; };
+        array<Match,4> matches{};
+        for(int dt=9;dt<std::min(t+1,TRACE_STEPS-1);++dt) {
+            int u=t-dt;
+            const TraceFrame& old=samples[u%TRACE_STEPS];
+            if(old.time!=u || samples[(u+6)%TRACE_STEPS].time!=u+6) continue;
+            if(old.state!=current.state || old.loadout!=current.loadout) continue;
+            double gap=std::abs(old.distance-current.distance)/2200.;
+            double loss=(old.localVelocity-current.localVelocity).sq()*1.8+
+                (old.localRecent-current.localRecent).sq()*1.5+gap*gap+
+                std::min(2.0,(old.location-current.location).sq()/16000000.);
+            if(loss>=matches.back().loss) continue;
+            int slot=0;
+            while(slot<3 && matches[slot].loss<=loss) ++slot;
+            for(int i=3;i>slot;--i) matches[i]=matches[i-1];
+            matches[slot]={loss,u};
+        }
+        if(matches[0].time<0) return result;
+        result.confidence=1./(1.+matches[0].loss);
+        int horizon=lag+FUTURE;
+        for(int j=0;j<horizon;++j) {
+            Vec single=current.velocity, sum{};
+            double mass=0;
+            for(const Match& found:matches) {
+                int u=found.time;
+                if(u<0 || u+j+1>=t) continue;
+                const auto& next=samples[(u+j+1)%TRACE_STEPS];
+                if(next.time!=u+j+1) continue;
+                const Vec axis=samples[u%TRACE_STEPS].radial;
+                Vec move=current.radial*next.velocity.dot(axis)+current.radial.left()*next.velocity.dot(axis.left());
+                if(move.sq()>1.) move=move.unit();
+                if(mass==0) single=move;
+                double w=1./((0.25+found.loss)*(0.25+found.loss));
+                sum=sum+move*w;
+                mass+=w;
+            }
+            result.nearest[j]=single;
+            result.mean[j]=mass>0?sum*(1./mass):current.recent;
+        }
+        return result;
+    }
+    void trackPeople() {
+        const int r=now-lag;
+        enemies=0; nearest=1e9; focus=-1;
+        double minCost=1e30;
+        for(int k=0;k<n;++k) {
+            Person& e=people[k];
+            e.active=k!=seat && obs->p[k].alive;
+            e.enemy=!is_mate(*gi,k) && k!=seat;
+            if(!e.active) continue;
+            if(obs->p[k].vis) { e.observed=obs->p[k]; last[k]=e.observed; lastSeen[k]=r; }
+            else e.observed=hiddenPlayer(k,r);
+            e.confidence=obs->p[k].vis?1:0.93/(1+fog[k].spread/3600);
+            e.hand=obs->d[k].st==D_HAND && e.observed.st!=S_THROW;
+            e.ready=e.hand ? -lag : 100;
+            Player& p=e.observed;
+            Learning& learning=learned[k];
+            if(obs->p[k].vis) learnAim(k,r,p);
+            if(obs->p[k].vis && (p.st==S_SLASH || p.st==S_SLASHED) && r-learning.lastParry>c->slash_post+c->slash_pre) {
+                const Dart& ours=history[r%HIST].dart;
+                if(dart_flying(ours.st) && (pos(ours)-pos(p)).len()<c->slash_reach+2*c->dart_v) {
+                    ++learning.parries; learning.lastParry=r;
+                }
+            }
+            Vec target=here;
+            for(int j=0;j<n;++j) if(j!=seat && j!=k && gi->team[j]!=gi->team[k] && obs->p[j].alive && obs->p[j].vis &&
+                (pos(obs->p[j])-pos(p)).sq()<(target-pos(p)).sq()) target=pos(obs->p[j]);
+            Vec v=vel(p);
+            Vec carry=v*(1.0/c->run_v);
+            if(carry.sq()>1) carry=carry.unit();
+            if((p.st==S_THROW || p.st==S_THROWN) && v.sq()>100) carry=v.unit();
+            if(p.st==S_DASH) carry=vec(p.ax,p.ay).unit();
+            Vec chase=(target-pos(p)).unit(), side=chase.left();
+            Vec item=chase;
+            if(obs->d[k].st==D_GROUND) item=(pos(obs->d[k])-pos(p)).unit();
+            bool still=v.sq()<1600;
+            Vec smooth=carry;
+            if(r>=4 && learning.record[(r-4)%HIST].time==r-4) {
+                smooth=(pos(p)-learning.record[(r-4)%HIST].location)*(1./(4*c->run_v));
+                if(smooth.sq()>1) smooth=smooth.unit();
+            }
+            Vec radial=(home-pos(p)).unit();
+            array<Vec,MODES> dir={carry,Vec{},chase,side,side*(-1),chase*(-1),item,(carry+chase*0.6).unit(),smooth,radial,chase};
+            array<double,MODES> w={0.24,0.12,0.10,0.055,0.055,0.045,0.045,0.07,0.16,0.07,0.04};
+            TraceForecast motif;
+            if(obs->p[k].vis && n==2 && !observer) motif=traceForecast(k,r,p,target);
+            w[11]=0.11*motif.confidence;
+            w[12]=0.17*motif.confidence;
+            if(still) { w[0]=0.15; w[1]=0.24; }
+            if(obs->d[k].st==D_GROUND) { w[6]+=0.24; w[0]*=0.75; w[2]*=0.5; }
+            const int times[3]={4,8,13};
+            int context=p.st==S_DASH || p.st==S_STUN ? 4:e.hand ? ((here-pos(p)).len()>7700?0:1):obs->d[k].st==D_GROUND?3:2;
+            Forecast& forecast=learning.record[r%HIST];
+            if(obs->p[k].vis && forecast.time!=r) {
+                for(int u=0;u<3;++u) {
+                    if(r<times[u]) continue;
+                    const Forecast& old=learning.record[(r-times[u])%HIST];
+                    if(old.time!=r-times[u]) continue;
+                    for(int m=0;m<activeModels();++m) {
+                        double score=std::exp(-(old.point[m][u]-pos(p)).len()/(380+times[u]*46));
+                        double& q=learning.success[old.context][m];
+                        q+=0.04*(score-q);
                     }
                 }
-                int old = (ref + History - 5) % History;
-                if (e.stamp[old] == ref - 5 && seen.st == S_FREE) for (int m = 0; m < Models; ++m) {
-                    double miss = (point(seen) - e.past[old][m]).sq() / 900000;
-                    e.error[m] = 0.86 * e.error[m] + 0.14 * std::min(miss, 5.);
-                    auto& score = e.contextError[e.context[old]][m];
-                    score = 0.85 * score + 0.15 * std::min(miss, 5.);
-                }
-                const Vec measured = speed(seen) * (1000. / cf->run_v);
-                if (seen.st == S_FREE) e.trend = (ref - e.seen == 1 ? e.trend * 0.57 + measured * 0.43 : measured);
-                e.learned = learnedIntent(seen, e, k, ref);
-                e.last = seen; e.seen = ref;
+                forecast.time=r; forecast.context=context; forecast.location=pos(p);
             }
-            Player basePlayer = seen.vis ? seen : e.last;
-            if (e.seen < 0 || (!seen.vis && ref - e.seen > 24)) {
-                basePlayer.x = gi->spx[k]; basePlayer.y = gi->spy[k];
-                if (dart_flying(obs->d[k].st)) {
-                    basePlayer.x = obs->d[k].x; basePlayer.y = obs->d[k].y;
-                }
-                basePlayer.vx = 0; basePlayer.vy = 0; basePlayer.st = S_FREE; basePlayer.timer = 0;
+            for(int m=0;m<activeModels();++m) w[m]*=std::exp(4.8*learning.success[context][m]);
+            if(!obs->p[k].vis) {
+                array<double,4> group{};
+                for(int m=0;m<activeModels();++m) group[m%4]+=w[m];
+                for(int m=0;m<activeModels();++m) w[m]*=fog[k].weight[m%4]/group[m%4];
             }
-            Vec base = speed(basePlayer) * (1000. / cf->run_v);
-            if (basePlayer.st == S_THROW || basePlayer.st == S_THROWN)
-                base = base * (100. / cf->throw_move);
-            if (basePlayer.st == S_DASH) base = heading(basePlayer);
-            if (!seen.alive) base = {};
-            int unseen = seen.vis ? 0 : std::clamp(ref - e.seen, 0, 10);
-            double sum = 0;
-            const double prior[Models] = {3.7, 2.1, 1.12, 1.05, 0.95, 0.95, 0.95, 1.65};
-            const int context = motionContext(basePlayer, obs->d[k]);
-            const bool ground = e.visible && obs->d[k].st == D_GROUND;
-            const Vec drop = point(obs->d[k]);
-            e.groundPickup.fill(0.);
-            for (int m = 0; m < Models; ++m) {
-                Player p = basePlayer;
-                int pickup = Forecast + 1;
-                const auto checkPickup = [&](int t) {
-                    // Pickup follows movement. Only the next input can use the dart.
-                    if (ground && pickup > Forecast && (point(p) - drop).sq() <= cf->pick_r * cf->pick_r &&
-                        !pit(point(p), now + t - 1)) pickup = t;
-                };
-                for (int j = -unseen; j < lag; ++j) {
-                    int t = ref + j;
-                    if (seen.alive) enemyStep(p, j < 2 && j >= 0 && m >= 3 ? base : intent(m, k, p, base, t), t);
-                    if (ground) checkPickup(t + 1 - now);
-                }
-                e.path[m][0] = p;
-                for (int j = 0; j < Forecast; ++j) {
-                    if (seen.alive) enemyStep(p, intent(m, k, p, base, now + j), now + j);
-                    e.path[m][j + 1] = p;
-                    if (ground) checkPickup(j + 1);
-                }
-                const double loss = ContextualTracking ? 0.55 * e.error[m] + 0.45 * e.contextError[context][m] : e.error[m];
-                double modelPrior = prior[m];
-                if (ContextualTracking && context == 2 && m == 4) modelPrior *= 2.25;
-                e.weight[m] = modelPrior / (0.25 + loss);
-                sum += e.weight[m];
-                if (pickup <= Forecast) e.groundPickup[pickup + MAX_DELAY] += e.weight[m];
-                if (lag <= 5) e.past[ref % History][m] = e.path[m][5 - lag].alive ?
-                    point(e.path[m][5 - lag]) : point(basePlayer);
-            }
-            e.stamp[ref % History] = ref;
-            e.context[ref % History] = context;
-            for (double& w : e.weight) w /= sum;
-            if (ground) {
-                // Sum mutually exclusive movement hypotheses into a possession curve.
-                double cumulative = 0;
-                for (double& p : e.groundPickup) {
-                    cumulative += p / sum;
-                    p = clip(cumulative);
+            double sum=0; for(double a:w) sum+=a;
+            for(int m=0;m<activeModels();++m) {
+                Model& model=e.model[m]; model.w=w[m]/sum;
+                Body b(p);
+                if(!obs->p[k].vis) { Vec q=fog[k].center[m%4]; b.x=ir(q.x); b.y=ir(q.y); }
+                model.history[0]=b;
+                for(int j=0;j<lag+FUTURE;++j) {
+                    if(j==lag) model.b[0]=b;
+                    Vec intent=dir[m];
+                    if(m!=0 && m!=1 && j<2 && !still) intent=carry;
+                    if(m==11) intent=motif.nearest[j];
+                    if(m==12) intent=motif.mean[j];
+                    if(m==6 && obs->d[k].st==D_GROUND) intent=(pos(obs->d[k])-b.point()).unit();
+                    if(m==10 && !j && p.st==S_FREE && !p.cd && (target-pos(p)).len()<6300)
+                        begin(b,A_DASH,(e.hand?chase:item),e.hand);
+                    if((m==10 || m==2) && p.st==S_DASH && b.st==S_DASH && b.timer<=c->dash_post+c->dash_t-1 &&
+                        b.timer>c->dash_post && (b.point()+b.speed()-target).len()<c->slash_reach) begin(b,A_MELEE,chase,e.hand);
+                    predictStep(b,intent,r+j);
+                    if(obs->p[k].vis) for(int u=0;u<3;++u) if(j+1==times[u]) forecast.point[m][u]=b.point();
+                    if(j<lag) model.history[j+1]=b;
+                    if(j>=lag) model.b[j-lag+1]=b;
                 }
             }
-            e.reach = e.visible ? 1 : (ref - e.seen < 7 ? 0.48 : 0.14);
-            if (!e.present) continue;
-            const double d = (point(e.path[0][0]) - here).len() + (e.visible ? 0 : 1600);
-            armedPressure |= e.visible && d < 7600 && (e.armed || obs->d[k].st == D_BACK || obs->d[k].st == D_CALL);
-            if (d < closest) { closest = d; focus = k; }
-        }
-    }
-
-    void inferContact() {
-        if (!ContactInference || now == 0 || closest > 1900) return;
-        Player previous = self[(now - 1) % History];
-        const Action& a = moves[(now - 1) % History];
-        Vec mv{double(a.mx), double(a.my)};
-        const Vec start = point(previous);
-        begin(previous, int(a.act), {double(a.ax), double(a.ay)}, own[(now - 1) % History].st == D_HAND, mv);
-        if (!advance(previous, mv, now - 1)) return;
-        const Vec expected = point(previous), push = here - expected;
-        const double delta = push.len();
-        if (delta < 28 || delta > cf->body_r || (expected - start).sq() > cf->run_v * cf->run_v * 1.12) return;
-        const auto& f = field(now);
-        const int x = cell_index(roundInt(here.x)), y = cell_index(roundInt(here.y));
-        if (f.wallBox(x - 1, y - 1, x + 1, y + 1)) return;
-        const Vec contact = here - push.unit(2 * cf->body_r);
-        int match = -1;
-        for (int k = 0; k < obs->n; ++k) {
-            if (!enemy[k].present || (point(enemy[k].path[0][0]) - contact).sq() > 1380. * 1380.) continue;
-            if (match >= 0) return;
-            match = k;
-        }
-        if (match < 0) return;
-        auto& e = enemy[match];
-        for (int m = 0; m < Models; ++m) {
-            Player p = e.path[m][0];
-            Vec inferred = contact * 0.82 + point(p) * 0.18;
-            p.x = roundInt(inferred.x); p.y = roundInt(inferred.y);
-            e.path[m][0] = p;
-            Vec base = speed(p) * (1000. / cf->run_v);
-            for (int j = 0; j < Forecast; ++j) {
-                enemyStep(p, intent(m, match, p, base, now + j), now + j);
-                e.path[m][j + 1] = p;
-            }
-        }
-        e.reach = std::max(e.reach, 0.91);
-        closest = (point(e.path[0][0]) - here).len();
-    }
-
-    Segment fly(Dart& d, Vec ownerFrom, Vec ownerTo, int t) const {
-        if (!dart_flying(d.st)) return {};
-        Segment s{point(d), point(d), true};
-        const i64 length = dart_step_len(*cf, d);
-        ++d.age;
-        bool reaches = false;
-        if (d.st == D_OUT) {
-            i64 step = imin(length, d.left);
-            d.x += rdiv(d.vx * step, UNIT); d.y += rdiv(d.vy * step, UNIT);
-            d.left -= step;
-        } else if (length > 0) {
-            i64 dx = roundInt(ownerTo.x) - d.x, dy = roundInt(ownerTo.y) - d.y;
-            i64 dist = ilen(dx, dy);
-            reaches = dist <= length;
-            d.x += reaches ? dx : rdiv(dx * length, dist);
-            d.y += reaches ? dy : rdiv(dy * length, dist);
-        }
-        const auto& f = field(t);
-        const i64 x0 = roundInt(s.from.x), y0 = roundInt(s.from.y);
-        i64 hx, hy;
-        if (!(d.st == D_CALL && cf->recall_wall) &&
-            f.wallBox(cell_index(imin(x0, d.x) - 1), cell_index(imin(y0, d.y) - 1),
-                      cell_index(imax(x0, d.x)), cell_index(imax(y0, d.y))) &&
-            seg_wall(f.map, x0, y0, d.x, d.y, hx, hy)) {
-            d.x = hx; d.y = hy; d.st = D_GROUND;
-        }
-        s.to = point(d);
-        if (d.st == D_OUT && d.left == 0) { d.st = D_BACK; d.age = 0; }
-        else if ((d.st == D_BACK || d.st == D_CALL) &&
-                 (reaches || segmentDistance2(s.from - ownerFrom, s.to - ownerTo) <= cf->catch_r * cf->catch_r)) {
-            d.st = D_HAND;
-        }
-        return s;
-    }
-
-    Dart release(Vec origin, Vec aim) const {
-        Dart d;
-        d.st = D_OUT; d.left = cf->range; d.x = roundInt(origin.x); d.y = roundInt(origin.y);
-        scale_to(roundInt(aim.x), roundInt(aim.y), UNIT, d.vx, d.vy);
-        return d;
-    }
-
-    void inferImpact() {
-        if (!ImpactInference || now == 0 || obs->my_dart().st != D_GROUND) return;
-        const Dart& old = own[(now - 1) % History];
-        if (!dart_flying(old.st)) return;
-        Dart natural = old;
-        Segment s = fly(natural, historicalSelf(now - 1), here, now - 1);
-        Vec impact = point(obs->my_dart());
-        if (natural.st == D_GROUND && (point(natural) - impact).sq() < 16 * 16) return;
-        const bool parry = (impact - s.from).sq() < 4;
-        int candidate = -1;
-        double best = Infinity, next = Infinity;
-        for (int k = 0; k < obs->n; ++k) {
-            auto& e = enemy[k];
-            const Dart& ed = obs->d[k];
-            if (!e.present || !e.visible || (parry && ed.st == D_GROUND)) continue;
-            const Vec location = point(e.path[0][0]);
-            double cost = (location - impact).len();
-            if (!parry && dart_flying(ed.st)) {
-                Dart advanced = ed;
-                const int ref = int(imax(0, now - cf->delay));
-                for (int t = ref; t < now; ++t) fly(advanced, location, location, t);
-                cost = (point(advanced) - impact).len();
-            }
-            if (cost < best) { next = best; best = cost; candidate = k; }
-            else if (cost < next) next = cost;
-        }
-        if (candidate < 0 || best > (parry ? 1720 : 3600) || next - best < 750) return;
-        auto& e = enemy[candidate];
-        e.impact = impact;
-        if (parry) e.blockTick = now;
-        else e.clashTick = now;
-    }
-
-    void knownThreats(int k, int ref) {
-        const Player& seen = obs->p[k];
-        const Dart original = obs->d[k];
-        if (!(dart_flying(original.st) || original.st == D_RISE || (original.st == D_HAND && seen.st == S_THROW))) return;
-        if (!seen.vis && !dart_flying(original.st)) return;
-        const auto& e = enemy[k];
-        enemy[k].readyAt = original.st == D_HAND && seen.st != S_THROW ? 0 : Horizon + 8;
-        int branches = 3;
-        for (int m = 0; m < branches; ++m) {
-            int model = m == 2 ? 3 : m;
-            Dart d = original;
-            Player p = seen.vis ? seen : e.last;
-            Vec base = speed(p) * (1000. / cf->run_v);
-            if (p.st == S_THROW || p.st == S_THROWN) base = base * (100. / cf->throw_move);
-            Hazard h;
-            h.owner = k; h.observed = true;
-            h.weight = m == 0 ? (branches == 1 ? 1. : 0.56) : 0.22;
-            for (int t = ref; t < now + Horizon; ++t) {
-                Vec old = point(p);
-                bool fresh = p.st == S_THROW && p.timer == 1 && d.st == D_HAND;
-                if (t < now) {
-                    if (seen.alive && seen.vis) enemyStep(p, intent(model, k, p, base, t), t);
-                } else p = e.path[model][t - now + 1];
-                if (fresh) d = release(point(p), heading(seen));
-                if (d.st == D_RISE && --d.left <= 0) { d.st = D_CALL; d.age = 0; }
-                Segment ray = fresh ? Segment{} : fly(d, old, point(p), t);
-                if (m == 0 && d.st == D_HAND && !fresh && p.st != S_THROW && !dart_flying(d.st))
-                    enemy[k].readyAt = imax(0, t - now + 1);
-                if (t < now && ray.active && segmentDistance2(ray.from - historicalSelf(t),
-                    ray.to - historicalSelf(t + 1)) < (hitRadius - 80) * (hitRadius - 80)) {
-                    // This branch cannot explain survival. A clash or block may already have happened.
-                    break;
-                }
-                if (t >= now) h.ray[t - now] = ray;
-                if (!dart_flying(d.st) && d.st != D_RISE && !fresh && !(d.st == D_HAND && p.st == S_THROW)) break;
-            }
-            if (std::any_of(h.ray.begin(), h.ray.end(), [](const Segment& s) { return s.active; }))
-                hazards.push_back(h);
-        }
-    }
-
-    void blindThreats(int k, int ref) {
-        const auto& e = enemy[k];
-        const bool ground = obs->d[k].st == D_GROUND;
-        const bool picked = !ground && ImpactInference && e.clashTick > ref && e.readyAt < 5;
-        const auto& p = picked ? e.path[0][0] : obs->p[k];
-        if (!e.present || (!e.armed && !picked && !ground) || !e.visible || p.st == S_THROW ||
-            (point(e.path[0][0]) - here).sq() > 7900. * 7900.) return;
-        if (ImpactInference && e.blockTick > ref) return;
-        const int originTime = picked ? now : ref;
-        for (int start = picked ? now + e.readyAt - 1 : ref; start <= now + 1; ++start) {
-            if (p.st != S_FREE && p.timer > start - ref) continue;
-            if (start < now - 4) continue;
-            const double held = ground ? e.groundPickup[start - now + MAX_DELAY] : 1.;
-            if (held < 0.12) continue;
-            const int releaseAt = start + cf->throw_pre - 1;
-            Player origin = p;
-            Vec m = speed(p) * (1000. / cf->run_v);
-            for (int t = originTime; t <= releaseAt; ++t) {
-                if (t == start) begin(origin, A_THROW, {1000, 0}, true, m);
-                const Vec move = ground && t < start ? intent(4, k, origin, m, t) : m;
-                enemyStep(origin, move, t);
-            }
-            const int view = int(imax(0, start - cf->delay));
-            const Player& prior = self[view % History];
-            if (prior.expose <= 0 && (point(prior) - point(p)).sq() > cf->see_r * cf->see_r &&
-                cell_of_point(*cf, field(view).map, prior.x, prior.y, -1) == C_GRASS) continue;
-            auto targets = aimTargets(point(origin), view, carry);
-            for (int style = 0; style < int(targets.size()); ++style) {
-                Vec aim = (targets[style] - point(origin)).unit(1000);
-                Dart d = release(point(origin), aim);
-                Hazard h;
-                h.owner = k;
-                h.launch = start - now;
-                h.weight = held * (start < now ? 0.043 : 0.050) / (1 + 10 * e.aimError[style]);
-                bool possible = true;
-                for (int t = releaseAt + 1; t < now + Horizon; ++t) {
-                    Segment s = fly(d, point(origin), point(origin), t);
-                    if (t < now && segmentDistance2(s.from - historicalSelf(t),
-                        s.to - historicalSelf(t + 1)) <= hitRadius * hitRadius) {
-                        possible = false; break;
+            if(obs->d[k].st==D_GROUND) {
+                const Vec item=pos(obs->d[k]);
+                const double pickSq=c->pick_r*c->pick_r;
+                array<double,HORIZON+HIST> pickupMass{};
+                for(int m=0;m<activeModels();++m) {
+                    for(int j=-lag+1;j<HORIZON-2;++j) {
+                        const Body& b=prediction(k,j,m);
+                        if((b.point()-item).sq()>pickSq || pit(b.point(),now+j-1)) continue;
+                        pickupMass[j+lag]+=e.model[m].w;
+                        break;
                     }
-                    if (t >= now && t < now + Horizon) h.ray[t - now] = s;
-                    if (d.st != D_OUT) break;
                 }
-                if (possible) hazards.push_back(h);
-            }
-        }
-    }
-
-    void crossingThreats(int k) {
-        const auto& shooter = enemy[k];
-        const bool ground = obs->d[k].st == D_GROUND;
-        if (!(Crossfire && live > 1 && shooter.present && shooter.visible && (shooter.armed || ground))) return;
-        if ((point(shooter.path[0][0]) - here).sq() > 7900. * 7900.) return;
-        for (int target = 0; target < obs->n; ++target) {
-            if (target == k || !enemy[target].present || !enemy[target].visible) continue;
-            const auto& victim = enemy[target];
-            for (int start : {-2, 1, 4}) {
-                if (start < -now) continue;
-                const double held = ground ? shooter.groundPickup[start + MAX_DELAY] : 1.;
-                if (held < 0.12) continue;
-                int releaseAt = start + int(cf->throw_pre);
-                int originTick = imax(0, releaseAt);
-                const Vec origin = point(shooter.path[0][originTick]);
-                Vec bearing = point(victim.path[0][0]) - origin;
-                const double distance = bearing.len();
-                if (distance < 1250 || distance > 7900) continue;
-                Vec targetPos = point(victim.path[0][std::clamp(originTick + int(distance / cf->dart_v), 0, Forecast)]);
-                if (segmentDistance2(origin - here, targetPos - here) > 2800. * 2800.) continue;
-                if (shooter.path[0][imax(0, start)].st != S_FREE || wall(origin, targetPos, now + originTick)) continue;
-                Dart d = release(origin, (targetPos - origin).unit(1000));
-                Hazard h;
-                h.owner = k; h.weight = 0.09 * held;
-                h.launch = start;
-                for (int j = releaseAt; j < Horizon; ++j) {
-                    Segment s = fly(d, origin, origin, now + j);
-                    if (j >= 0) h.ray[j] = s;
-                    if (d.st != D_OUT) break;
+                double prob=0;
+                for(int j=-lag+1;j<HORIZON-2;++j) {
+                    prob+=pickupMass[j+lag];
+                    if(prob>=0.18) { e.ready=j; break; }
                 }
-                hazards.push_back(h);
+            }
+            e.dist=(e.model[0].b[0].point()-here).len();
+            e.occupied=(target-here).sq()>500*500 ? sat((e.dist-(pos(p)-target).len()+350)/3500.) : 0;
+            if(e.enemy) {
+                enemies++;
+                nearest=std::min(nearest,e.dist);
+                double cost=e.dist+1000*(1-e.confidence)+(wall(here,e.model[0].b[0].point(),now)?1300:0);
+                if(cost<minCost) { minCost=cost; focus=k; }
+            }
+        }
+    }
+    const Body& prediction(int k,int dt,int m=0) const {
+        return dt<0 ? people[k].model[m].history[std::max(0,lag+dt)] : people[k].model[m].b[std::min(FUTURE,dt)];
+    }
+    // Own movement is current. A body push can locate a nearby opponent before vision catches up.
+    void contactObservation() {
+        if(now<=0) return;
+        const Past& prev=history[(now-1)%HIST];
+        const Action& a=prev.action;
+        Body solo(prev.me);
+        if(solo.st==S_RECALL && (a.mx || a.my || (a.act!=A_RECALL && a.act!=A_NONE))) {solo.st=S_FREE; solo.timer=0;}
+        if(a.act) begin(solo,int(a.act),vec(a.ax,a.ay),prev.dart.st==D_HAND);
+        Vec motion=vec(a.mx,a.my)*0.001;
+        if(motion.sq()>1) motion=motion.unit();
+        advance(solo,motion,now-1);
+        Vec push=here-solo.point();
+        double len=push.len();
+        if(len>12 && len<c->body_r+36 && !circle_hits_wall(land(now-1).map,c->body_r+34,ir(here.x),ir(here.y))) {
+            Vec other=here-push.unit(2*c->body_r);
+            int owner=-1; double first=1e30,second=1e30;
+            for(int k=0;k<n;++k) if(people[k].active) {
+                double nearestModel=1e30;
+                for(int i=0;i<activeModels();++i) nearestModel=std::min(nearestModel,(people[k].model[i].b[0].point()-other).sq());
+                if(nearestModel<first) {second=first;first=nearestModel;owner=k;}
+                else second=std::min(second,nearestModel);
+            }
+            if(owner>=0 && first<3450*3450 && (second>2400*2400 || first<0.18*second)) {
+                contactTime[owner]=now; contactPos[owner]=other;
+            }
+        }
+        for(int k=0;k<n;++k) {
+            Person& e=people[k];
+            int age=now-contactTime[k];
+            if(!e.active || age>=lag) continue;
+            for(int i=0;i<activeModels();++i) {
+                Model& m=e.model[i];
+                Body base=age?m.history[lag-age]:m.b[0];
+                base.x=ir(contactPos[k].x); base.y=ir(contactPos[k].y);
+                for(int j=-age;j<FUTURE;++j) {
+                    Body& current=j<0?m.history[lag+j]:m.b[j];
+                    const Body& next=j+1<0?m.history[lag+j+1]:m.b[j+1];
+                    Vec intent=next.speed()*(1./c->run_v);
+                    if(intent.sq()>1) intent=intent.unit();
+                    current=base; predictStep(base,intent,now+j);
+                }
+                m.b[FUTURE]=base;
+            }
+            e.dist=(e.model[0].b[0].point()-here).len(); e.confidence=1;
+            if(e.enemy && (focus<0 || e.dist<nearest+300)) { nearest=e.dist; focus=k; }
+        }
+    }
+    // A parry drops our dart exactly where it started that tick. The player's
+    // own dart arrives without the visual delay, so it can identify a recovery
+    // window before the opponent's swing animation reaches the observation.
+    bool possibleParry(const Dart& prev,const Dart& next,Vec owner,Vec oldOwner,int t) const {
+        if(!dart_flying(prev.st) || next.st!=D_GROUND || prev.x!=next.x || prev.y!=next.y) return false;
+        Dart natural=prev;
+        Line sweep=fly(natural,owner,oldOwner,t);
+        // During return hang, another dart can clash with ours without moving
+        // our drop point. Delayed enemy weapon observations cannot exclude it.
+        return natural.st!=D_GROUND && (!c->clash || (sweep.b-sweep.a).sq()>0);
+    }
+    void observeParry() {
+        if(now<1 || !c->block) return;
+        const Dart& prev=history[(now-1)%HIST].dart;
+        const Dart& next=obs->my_dart();
+        if(possibleParry(prev,next,here,selfAt(now-1),now-1)) {
+            int owner=-1;
+            double highest=0, second=0;
+            Vec drop=pos(next);
+            for(int k=0;k<n;++k) {
+                const Person& e=people[k];
+                if(!e.active || !e.hand) continue;
+                double mass=0;
+                for(int i=0;i<activeModels();++i) {
+                    const Model& m=e.model[i];
+                    Vec body=m.b[0].point();
+                    if(wall(drop,body,now-1)) continue;
+                    double dist=(drop-body).len();
+                    mass+=m.w*sat((c->slash_reach+1300-dist)/1300.);
+                }
+                if(mass>highest) { second=highest; highest=mass; owner=k; }
+                else second=std::max(second,mass);
+            }
+            if(owner>=0 && highest>0.20 && highest>2.4*second) {
+                parryStep[owner]=now;
+                parryPoint[owner]=drop;
+                ++learned[owner].parries;
+                learned[owner].lastParry=now;
+            }
+        }
+        for(int k=0;k<n;++k) {
+            Person& e=people[k];
+            int age=now-parryStep[k];
+            if(!e.active || age>=lag || age>=c->slash_post) continue;
+            double total=0;
+            for(int i=0;i<activeModels();++i) {
+                Model& m=e.model[i];
+                Body body=age?m.history[lag-age]:m.b[0];
+                Vec offset=body.point()-parryPoint[k];
+                double dist=offset.len();
+                m.w*=0.10+0.90*sat((c->slash_reach+700-dist)/700.);
+                if(dist>c->slash_reach) {
+                    Vec corrected=parryPoint[k]+offset.unit(c->slash_reach-25);
+                    if(!pit(corrected,now-age) && !circle_hits_wall(land(now-age).map,c->body_r,ir(corrected.x),ir(corrected.y))) {
+                        body.x=ir(corrected.x);
+                        body.y=ir(corrected.y);
+                    }
+                }
+                body.st=S_SLASHED;
+                body.timer=int(c->slash_post);
+                body.vx=body.vy=0;
+                for(int j=-age;j<FUTURE;++j) {
+                    Body& slot=j<0?m.history[lag+j]:m.b[j];
+                    const Body& upcoming=j+1<0?m.history[lag+j+1]:m.b[j+1];
+                    Vec intent=upcoming.speed()*(1./c->run_v);
+                    if(intent.sq()>1.) intent=intent.unit();
+                    slot=body;
+                    predictStep(body,intent,now+j);
+                }
+                m.b[FUTURE]=body;
+                total+=m.w;
+            }
+            if(total>0) for(Model& m:e.model) m.w/=total;
+            e.ready=std::max(e.ready,int(c->slash_post)-age);
+            e.dist=(e.model[0].b[0].point()-here).len();
+        }
+    }
+    // Trace closed swept segments, including the stationary part of a returning dart.
+    Line fly(Dart& d,Vec owner,Vec oldOwner,int t,bool ownerAlive=true) const {
+        if(!dart_flying(d.st)) return {};
+        i64 speed=dart_step_len(*c,d);
+        i64 x=d.x,y=d.y,st=d.st; Vec a=pos(d);
+        bool caught=false;
+        if(st==D_OUT) {
+            speed=imin(speed,d.left); d.left-=speed;
+            x+=rdiv(d.vx*speed,1000); y+=rdiv(d.vy*speed,1000);
+        } else if(speed) {
+            i64 dx=ir(owner.x)-x,dy=ir(owner.y)-y;
+            i64 len=(i64)std::sqrt(double(dx*dx+dy*dy));
+            if(len<=speed) { x=ir(owner.x); y=ir(owner.y); caught=true; }
+            else { x+=rdiv(dx*speed,len); y+=rdiv(dy*speed,len); }
+        }
+        i64 hx,hy;
+        bool hitWall=(st!=D_CALL || !c->recall_wall) && seg_wall(land(t).map,d.x,d.y,x,y,hx,hy);
+        if(hitWall) { x=hx; y=hy; }
+        d.x=x; d.y=y; d.age++;
+        Vec end=pos(d);
+        if(st!=D_OUT) { d.vx=x-ir(a.x); d.vy=y-ir(a.y); }
+        if(hitWall) { d.st=D_GROUND; d.age=d.left=d.vx=d.vy=0; }
+        else if(st==D_OUT && d.left<=0) { d.st=D_BACK; d.age=0; d.vx=d.vy=0; }
+        else if(st!=D_OUT && (caught || (ownerAlive && segmentSq(a-oldOwner,end-owner)<=c->catch_r*c->catch_r))) {
+            d.st=ownerAlive ? D_HAND : D_GONE;
+            if(ownerAlive) { d.x=ir(owner.x); d.y=ir(owner.y); }
+        }
+        return {a,end,true};
+    }
+    void knownDart(int k,int model,double weight) {
+        Dart d=obs->d[k];
+        const Player& p=obs->p[k];
+        if(!dart_flying(d.st) && p.st!=S_THROW && p.st!=S_RECALL) return;
+        Threat h; h.known=true; h.weight=weight; h.owner=k;
+        h.returning=d.st==D_BACK || d.st==D_CALL || d.st==D_RISE;
+        bool any=false;
+        for(int j=-lag;j<HORIZON;++j) {
+            Vec a,b;
+            if(people[k].active) { a=prediction(k,j,model).point(); b=prediction(k,j+1,model).point(); }
+            else a=b=pos(p);
+            if(j+lag+1==p.timer && p.st==S_THROW && d.st==D_HAND) {
+                d.st=D_OUT; d.left=c->range; d.age=0; d.x=ir(b.x); d.y=ir(b.y); d.vx=p.ax; d.vy=p.ay;
+                continue;
+            }
+            if(j+lag+1==p.timer && p.st==S_RECALL && d.st==D_RISE) { d.st=D_CALL; d.age=0; }
+            const int previousDart=int(d.st);
+            Line s=fly(d,b,a,now+j,p.alive!=0);
+            if(d.st==D_GROUND && people[k].active && p.alive &&
+                (pos(d)-b).sq()<=c->pick_r*c->pick_r && !pit(b,now+j)) d.st=D_HAND;
+            const bool recovered=d.st==D_HAND && (s.on || previousDart==D_GROUND);
+            if(j>=0 && s.on) { h.s[j]=s; any=true; }
+            if(j<0 && s.on) {
+                const auto& old=history[(now+j)%HIST];
+                const auto& next=history[(now+j+1)%HIST];
+                if(next.me.alive && segmentSq(s.a-pos(old.me),s.b-pos(next.me))<
+                    (dartRadius-85)*(dartRadius-85)) {
+                    // This flight path would have ended our game before this observation.
+                    return;
+                }
+                if(old.me.st==S_SLASH && old.me.timer==1 && c->block) {
+                    Vec delta=s.a-pos(next.me);
+                    if(delta.len()<=c->slash_reach && delta.dot(vec(old.me.ax,old.me.ay))>=c->block_cos*delta.len() && !wall(pos(next.me),s.a,now+j)) return;
+                }
+                if(dart_flying(old.dart.st) && next.dart.st==D_GROUND && (pos(next.dart)-s.b).len()<c->dart_v+2*c->dart_r) {
+                    int pickup=int(std::ceil(std::max(0.,(b-pos(next.dart)).len()-c->pick_r-350)/c->run_v));
+                    people[k].ready=std::min(people[k].ready,j+1+pickup);
+                    return;
+                }
+            }
+            if(recovered) {
+                people[k].ready=std::min(people[k].ready,j+1);
+                break;
+            }
+            if(d.st==D_GONE) break;
+        }
+        if(any) threats.push_back(h);
+    }
+    bool hiddenFrom(int k,int t) const {
+        const Player& p=history[std::clamp(t,0,now)%HIST].me;
+        if(p.expose || dart_flying(history[std::clamp(t,0,now)%HIST].dart.st)) return false;
+        return cell_of_point(*c,gi->M(),p.x,p.y,t)==C_GRASS && (pos(p)-prediction(k,std::clamp(t-now,-lag,FUTURE)).point()).len()>c->see_r;
+    }
+    void imagined(int k) {
+        const Person& e=people[k];
+        if(e.ready>=HORIZON-3 || !e.enemy || e.dist>c->range+3800) return;
+        int start=std::max(e.ready,-lag);
+        if(e.observed.st!=S_FREE) start=std::max(start,int(e.observed.timer)-lag);
+        if(start>=HORIZON-3) return;
+        double interest=1;
+        for(int q=0;q<n;++q) if(q!=k && q!=seat && people[q].active && gi->team[q]!=gi->team[k]) {
+            double dist=(prediction(q,0).point()-prediction(k,0).point()).len();
+            if(dist<e.dist-700) interest=std::min(interest,0.48);
+        }
+        const int shots[4]={start,start+2,start+5,start+9};
+        const array<double,6> prior={0.19,0.12,0.14,0.15,0.12,0.28};
+        array<double,6> weights{};
+        double total=0;
+        for(int a=0;a<6;++a) {
+            weights[a]=prior[a]*std::exp(5.5*learned[k].aimSkill[a]); total+=weights[a];
+        }
+        for(int u=0;u<4;++u) for(int m=0;m<(obs->p[k].vis?1:n>4?2:4);++m) {
+            double place=obs->p[k].vis?1:fog[k].weight[m];
+            if(place<0.055) continue;
+            int at=shots[u], seen=std::clamp(now+at-int(c->delay),0,now);
+            if(at+c->throw_pre>=HORIZON) continue;
+            Vec origin=prediction(k,at,m).point();
+            Vec self=selfAt(seen);
+            double distance=(self-origin).len();
+            if(distance>c->range+2400) continue;
+            bool hidden=hiddenFrom(k,seen);
+            array<Vec,6> dirs{}; array<double,6> mass{}; int count=0;
+            for(int a=0;a<6;++a) {
+                Vec target=a==5 && n<=4 && (m==0 || place>0.25)?modeledAim(origin,seen,distance/(0.81*c->dart_v)):
+                    priorAim(std::min(a,4),seen,distance/(0.81*c->dart_v));
+                Vec dir=(target-origin).unit();
+                int i=0; while(i<count && dirs[i].dot(dir)<0.9987) ++i;
+                if(i==count) dirs[count++]=dir;
+                mass[i]+=weights[a]/total;
+            }
+            for(int a=0;a<count;++a) {
+                Vec dir=dirs[a]*1000;
+                Vec release=origin+prediction(k,at,m).speed()*(0.40*c->throw_pre);
+                Dart d; d.st=D_OUT; d.x=ir(release.x); d.y=ir(release.y); d.vx=ir(dir.x); d.vy=ir(dir.y); d.left=c->range;
+                Threat h; h.owner=k;
+                h.signal=at+int(c->delay)+1;
+                h.weight=interest*place*(hidden?0.14:1.0)*(u==0?0.34:u==1?0.26:u==2?0.23:0.17)*mass[a];
+                bool any=false;
+                for(int j=at+int(c->throw_pre);j<HORIZON && d.st==D_OUT;++j) {
+                    Line line=fly(d,origin,origin,now+j);
+                    double possible=c->run_v*(j+1)+c->dash_t*(c->dash_v-c->run_v)+dartRadius+600;
+                    if(j>=0 && segmentSq(line.a-here,line.b-here)<possible*possible) { h.s[j]=line; any=true; }
+                }
+                if(any) threats.push_back(h);
             }
         }
     }
 
-    void navigation() {
-        const Dart& d = obs->my_dart();
-        hasGuide = false;
-        bool pickup = d.st == D_GROUND || d.st == D_RISE;
-        goal = pickup ? point(d) : focus >= 0 ? point(enemy[focus].path[0][0]) :
-            Vec{gi->M().width() * 0.5, gi->M().height() * 0.5};
-        if (pickup && pit(goal, now + 10)) pickup = false;
-        if (!pickup && (d.st == D_GROUND || d.st == D_RISE) && focus >= 0) goal = point(enemy[focus].path[0][0]);
-        if ((goal - here).sq() < 40000) return;
-        const int f = phase(now);
-        const auto& map = maps[f];
-        int target = id(goal);
-        if (map.legal[target] && walkable(here, goal, now + 5)) {
-            routeGuide = (goal - here).unit(1000); hasGuide = true; return;
-        }
-        if (goal.x < 0 || goal.y < 0 || goal.x > gi->M().width() || goal.y > gi->M().height()) return;
-        if (!map.legal[target]) {
-            double best = Infinity;
-            int x = target % nx, y = target / nx;
-            for (int dy = -4; dy <= 4; ++dy) for (int dx = -4; dx <= 4; ++dx) {
-                if (x + dx < 0 || x + dx >= nx || y + dy < 0 || y + dy >= ny) continue;
-                int i = id(x + dx, y + dy);
-                if (!map.legal[i]) continue;
-                double cost = (gridPoint(i) - goal).sq();
-                if (cost < best) { best = cost; target = i; }
+    void crossfire(int k) {
+        const Person& shooter=people[k];
+        if(n!=4 || !shooter.active || shooter.ready>=6 || shooter.occupied<0.15) return;
+        int first=std::max(-lag,shooter.ready);
+        if(shooter.observed.st!=S_FREE) first=std::max(first,int(shooter.observed.timer)-lag);
+        for(int q=0;q<n;++q) if(q!=k && q!=seat && people[q].active && gi->team[q]!=gi->team[k]) {
+            for(int at: {first,first+3,first+6}) {
+                if(at+c->throw_pre>=HORIZON) continue;
+                Vec origin=prediction(k,at).point(),target=prediction(q,at+3).point();
+                Vec v=target-origin;
+                if(v.len()>c->range+1300 || (here-origin).dot(v)<0 || std::abs((here-origin).dot(v.unit().left()))>3400) continue;
+                Vec dir=v.unit(1000);
+                Dart d; d.st=D_OUT; d.x=ir(origin.x); d.y=ir(origin.y); d.vx=ir(dir.x); d.vy=ir(dir.y); d.left=c->range;
+                Threat h; h.owner=k; h.signal=at+int(c->delay)+1; h.weight=0.18*shooter.occupied;
+                bool any=false;
+                for(int j=at+int(c->throw_pre);j<HORIZON && d.st==D_OUT;++j) {
+                    Line s=fly(d,origin,origin,now+j);
+                    if(j>=0) { h.s[j]=s; any=true; }
+                }
+                if(any) threats.push_back(h);
             }
-        }
-        if (flowPhase != f || (flowTarget != target && now - flowTime >= 7)) {
-            distanceField(map, {target}, flow);
-            flowPhase = f; flowTarget = target; flowTime = now;
-        }
-        int start = id(here);
-        int x = start % nx, y = start / nx;
-        double best = Infinity;
-        for (int dy = -4; dy <= 4; ++dy) for (int dx = -4; dx <= 4; ++dx) {
-            if (x + dx < 0 || x + dx >= nx || y + dy < 0 || y + dy >= ny) continue;
-            int i = id(x + dx, y + dy);
-            Vec q = gridPoint(i);
-            if (flow[i] >= 10000 || (q - here).sq() < 105 * 105 || !walkable(here, q, now + 5)) continue;
-            double score = flow[i] + (q - here).len() / (Grid * 2.1);
-            if (score < best) { best = score; routeGuide = (q - here).unit(1000); hasGuide = true; }
         }
     }
 
-    RoutePath simulate(const Route& route) const {
-        RoutePath path;
-        Body p(obs->me());
-        path.body[0] = p;
-        bool holding = armed;
-        for (int j = 0; j < Horizon; ++j) {
-            Vec move = j < route.switchAt ? route.move : route.follow;
-            int kind = j == 0 ? route.kind : j == route.swingAt ? A_MELEE : A_NONE;
-            if (route.kind == A_RECALL || (route.kind == A_NONE && obs->me().st == S_RECALL && route.move.sq() == 0))
-                move = {};
-            if (kind != A_NONE || p.st == S_RECALL) begin(p, kind, kind == A_DASH && route.swingAt >= 0 ? route.follow : route.aim, holding, move);
-            if ((p.st == S_SLASH || p.st == S_KICK) && p.timer == 1) {
-                path.hit = j; path.armedSwing = p.st == S_SLASH;
+    void prepareRush(int k) {
+        const Person& e=people[k];
+        if(!e.active || !e.enemy || e.dist>7600) return;
+        const Player& p=e.observed;
+        int pre=int(c->dash_pre), travel=int(c->dash_t);
+        int total=int(c->dash_pre+c->dash_t+c->dash_post);
+        bool known=p.st==S_DASH;
+        for(int seed=0;seed<(known?1:3);++seed) {
+            int at=known? -lag-(total-int(p.timer)) : -lag+int(p.cd)+seed*4;
+            if(!known && p.st!=S_FREE) at=std::max(at,int(p.timer)-lag);
+            if(at+pre+3>=HORIZON) continue;
+            int seen=std::clamp(now+at-int(c->delay),0,now);
+            Vec origin=known?pos(p):prediction(k,at).point();
+            if(known) {
+                int moved=std::clamp(total-int(p.timer)-pre,0,travel);
+                origin=origin-vec(p.ax,p.ay)*(double(moved)*c->dash_v/1000);
             }
-            if (!advance(p, move, now + j)) { path.fell = true; return path; }
-            const Dart& md = obs->my_dart();
-            if (!holding && md.st == D_GROUND && p.st != S_RECALL &&
-                (point(p) - point(md)).sq() <= cf->pick_r * cf->pick_r) {
-                holding = true; path.picked = true;
+            if(!known && (origin-selfAt(seen)).len()>5700) continue;
+            for(int m=0;m<(known?1:2);++m) {
+                Vec d=known?vec(p.ax,p.ay).unit():(selfAt(seen)+vel(history[seen%HIST].me)*(m?5.:0.)-origin).unit();
+                for(int move=1;move<travel;++move) {
+                    int hit=at+pre+move+int(c->slash_pre)-1;
+                    if(hit<0 || hit>=HORIZON) continue;
+                    Vec point=origin+d*((move+1)*c->dash_v);
+                    if(pit(point,now+hit) || wall(origin,point,now+hit)) continue;
+                    int sight=std::clamp(now+hit-int(c->slash_pre)-int(c->delay)+1,0,now);
+                    Vec aim=(selfAt(sight)-point).unit();
+                    double w=known?1.0:(m?0.38:0.62)*(seed?0.32:0.36);
+                    if(!known && hiddenFrom(k,seen)) w*=0.28;
+                    rushes.push_back({point,aim,d,w,k,hit});
+                }
             }
-            path.body[j + 1] = p;
+        }
+    }
+
+    array<double,FUTURE+1> flight{};
+    struct Shot { Vec dir; double quality=0; int target=-1; };
+    void prepareEvasion(int k) {
+        Person& e=people[k];
+        int react=std::min(FUTURE-1,int(c->delay)+1);
+        for(int m=0;m<activeModels();++m) {
+            Vec side=(e.model[m].b[react].point()-here).unit().left();
+            for(int option=0;option<4;++option) {
+                Body b=e.model[m].b[react];
+                if(b.st==S_RECALL) { b.st=S_FREE; b.timer=0; }
+                Evasion& ev=e.evade[m][option];
+                Vec move=option%2?side:side*(-1);
+                ev.point[react]=b.point();
+                bool canDash=option>=2 && e.observed.cd<=lag+react;
+                for(int j=react;j<FUTURE;++j) {
+                    if(canDash && b.st==S_FREE) {
+                        begin(b,A_DASH,move,e.hand); canDash=false;
+                    }
+                    predictStep(b,move,now+j);
+                    ev.point[j+1]=b.point();
+                }
+            }
+        }
+    }
+    double testAim(int k,Vec origin,Vec aim,double cutoff) const {
+        const Person& e=people[k];
+        double sum=0;
+        int begin=int(c->throw_pre);
+        const int react=int(c->delay)+1;
+        for(int m=0;m<activeModels();++m) {
+            const Model& model=e.model[m];
+            double natural=0,early=0,parry=0;
+            array<double,4> evasive{};
+            auto contact=[&](Vec a,Vec b) {
+                double d2=segmentSq(a,b);
+                if(d2>(dartRadius+180)*(dartRadius+180)) return 0.;
+                return sat((dartRadius+180-std::sqrt(d2))/340);
+            };
+            for(int j=begin;j<FUTURE;++j) {
+                double a=flight[j],b=std::min(cutoff,flight[j+1]);
+                if(a>cutoff || b<a || a>=c->range) break;
+                Vec from=origin+aim*a, to=origin+aim*b;
+                const Body& p=model.b[j];
+                double cover=contact(from-p.point(),to-model.b[j+1].point());
+                natural=std::max(natural,cover);
+                if(j<react) early=std::max(early,cover);
+                else {
+                    for(int u=0;u<4;++u) {
+                        const auto& ep=e.evade[m][u].point;
+                        evasive[u]=std::max(evasive[u],contact(from-ep[j],to-ep[j+1]));
+                    }
+                    int canStart=j+1-int(c->slash_pre);
+                    if(c->block && canStart>=react && e.ready<=canStart && model.b[canStart].st==S_FREE) {
+                        Vec base=model.b[canStart].point();
+                        double sep=(from-base).len();
+                        if(sep<=c->slash_reach+200) {
+                            double chance=sat((c->slash_reach+200-sep)/420);
+                            parry=std::max(parry,chance);
+                        }
+                    }
+                }
+            }
+            double average=0,least=1;
+            for(double q:evasive) { average+=q*0.25; least=std::min(q,least); }
+            double distracted=e.occupied*0.19;
+            double late=((0.44+distracted)*natural+(0.29-0.4*distracted)*average+(0.27-0.6*distracted)*least)
+                *(1-(0.58-0.18*e.occupied)*parry);
+            sum+=model.w*(e.enemy?std::max(early,late):std::max(natural,average));
+        }
+        return sum;
+    }
+    Shot aimShot(Vec origin,const TurnClock& clock,int limitUs) const {
+        Shot result;
+        for(int k=0;k<n;++k) {
+            const Person& e=people[k];
+            if(!e.active || !e.enemy || e.dist>c->range+3500 || e.confidence<0.17) continue;
+            array<Vec,30> dirs{};
+            int count=0;
+            auto add=[&](Vec v) {
+                v=v.unit();
+                if(v.sq()<0.5) return;
+                for(int i=0;i<count;++i) if(dirs[i].dot(v)>0.99985) return;
+                if(count<(int)dirs.size()) dirs[count++]=v;
+            };
+            Vec average{};
+            for(int m=0;m<activeModels();++m) {
+                const Model& model=e.model[m];
+                double error=1e30; Vec best;
+                for(int j=int(c->throw_pre)+1;j<=FUTURE && flight[j-1]<c->range;++j) {
+                    Vec delta=model.b[j].point()-origin;
+                    double dd=std::abs(flight[j]-delta.len());
+                    if(dd<error) { error=dd; best=delta; }
+                }
+                add(best); average=average+best.unit()*model.w;
+            }
+            add(average);
+            add(e.model[0].b[0].point()-origin);
+            add(average+average.left()*0.085); add(average-average.left()*0.085);
+            for(int m: {0,1,8}) for(int u=0;u<2;++u) {
+                Vec at{}; double err=1e30;
+                for(int j=int(c->delay)+2;j<=FUTURE && flight[j-1]<c->range;++j) {
+                    Vec d=e.evade[m][u].point[j]-origin;
+                    double delta=std::abs(d.len()-flight[j]);
+                    if(delta<err) {err=delta; at=d;}
+                }
+                add(at);
+            }
+            for(int i=0;i<count;++i) {
+                if((i&3)==0 && clock.spent(limitUs)) return result;
+                Vec aim=dirs[i],end=origin+aim*double(c->range);
+                i64 hx,hy;
+                double cutoff=c->range;
+                if(seg_wall(land(now).map,ir(origin.x),ir(origin.y),ir(end.x),ir(end.y),hx,hy))
+                    cutoff=std::min(cutoff,(vec(hx,hy)-origin).len());
+                if(cutoff<100) continue;
+                double v=testAim(k,origin,aim,cutoff)*e.confidence;
+                for(int q=0;q<n;++q) {
+                    if(q==k || !people[q].active || people[q].dist>c->range+2200) continue;
+                    Vec rel=prediction(q,0).point()-origin;
+                    double along=rel.dot(aim);
+                    if(along < -600 || along>cutoff+2000 || std::abs(rel.dot(aim.left()))>3400) continue;
+                    v+=testAim(q,origin,aim,cutoff)*(people[q].enemy?0.30:-1.8)*people[q].confidence;
+                }
+                // A distant wall impact strands the dart outside immediate pickup range.
+                if(cutoff<c->range-10 && cutoff>c->pick_r+200) v-=0.042;
+                if(v>result.quality) result={aim,v,k};
+            }
+        }
+        return result;
+    }
+    double positionValue(Vec q,int dt,bool picked=false) const {
+        const Terrain& z=land(now+dt);
+        double room=z.sample(z.room,q)/1000;
+        double center=z.sample(z.core,q)/1000;
+        double late=sat((now-c->col_start+75)/110.);
+        double v=-(0.72+0.92*late)*center + 0.9*std::min(1.7,room);
+        v+=(1.0+2.4*flank)*terrain[strategyPhase].sample(strategy,q);
+        if(room<0.38) v-=1.65*(0.38-room);
+        int cell=cell_of_point(*c,gi->M(),ir(q.x),ir(q.y),now+dt);
+        int wave=gi->M().wave(cell_index(ir(q.x)),cell_index(ir(q.y)));
+        i64 fall=wave_fall_step(*c,wave);
+        if(fall>=0) v-=17*sat(1-(fall-now-dt)/36.);
+        bool armed=obs->my_dart().st==D_HAND || picked;
+        double near=100,second=100, distFocus=0;
+        for(int k=0;k<n;++k) {
+            if(!people[k].active) continue;
+            Vec en=prediction(k,dt).point();
+            double dist=(q-en).len()/1000.;
+            if(!people[k].enemy) { v-=1.5*std::max(0.,1.8-dist); continue; }
+            if(dist<near) { second=near; near=dist; } else second=std::min(second,dist);
+            if(k==focus) distFocus=dist;
+            if(people[k].ready<=dt+1) v-=(armed?1.55:2.65)*std::max(0.,(armed?2.55:4.65)-dist);
+            if(n==2 && armed && k==focus && obs->d[k].st==D_GROUND && dist<8.0) {
+                Vec item=pos(obs->d[k]);
+                double enemyWalk=(en-item).len()/1000.;
+                double myWalk=(q-item).len()/1000.;
+                double open=!wall(q,item,now+dt) && !wall(q,en,now+dt)?1.:0.35;
+                double guard=sat((enemyWalk-1.2)/2.6)*sat((7.-enemyWalk)/2.);
+                v+=2.3*open*guard*sat((enemyWalk+0.6-myWalk)/2.2);
+            }
+            if(people[k].ready>dt-1 && dist<5.15) {
+                Vec dir=q-en;
+                double danger=pitBehind(q,dir,now+dt);
+                double nearKick=sat((5.15-dist)/2.9);
+                double cost=n==2?3.1+7.3*late:2.4+5.8*late;
+                v-=cost*danger*nearKick;
+                if(!armed && dist<4.6) v+=(1.7+2.3*late)*pitBehind(en,dir*(-1),now+dt)*nearKick;
+            }
+        }
+        if(focus>=0) {
+            double range=people[focus].ready<dt+3?4.0:2.6-1.2*pressure;
+            if(armed) v-=(enemies>1?0.67+0.95*pressure:1.38+2.35*pressure)*std::max(0.,distFocus-range);
+            if(!armed && obs->my_dart().st!=D_GROUND && obs->my_dart().st!=D_RISE)
+                v-=0.38*std::max(0.,distFocus-6.0);
+        }
+
+        if(c->mode==M_FFA && enemies>1 && !observer) {
+            Vec exposed{};
+            double pressureSum=0., cleanChance=0.;
+            for(int k=0;k<n;++k) {
+                const Person& e=people[k];
+                if(!e.active || !e.enemy) continue;
+                const Vec delta=prediction(k,dt).point()-q;
+                const double d=delta.len();
+                if(d>=7300 || wall(q,q+delta,now+dt)) continue;
+                const double weight=e.ready<=dt+4 ? (1.-0.28*e.occupied)*sat((7300-d)/4600.) : 0.;
+                pressureSum+=weight;
+                exposed=exposed+delta.unit(weight);
+                const Body& body=prediction(k,dt);
+                const bool locked=body.st==S_STUN || body.st==S_RECALL || body.st==S_SLASHED || body.st==S_KICKED;
+                if(armed && (locked || e.ready>dt+8)) {
+                    const double opportunity=sat((5350-d)/2900.)*sat((d-1200)/1300.);
+                    cleanChance=std::max(cleanChance,opportunity*(locked?1.0:0.8)*e.confidence);
+                }
+            }
+            // Approach a vulnerable opponent from a side with an open retreat.
+            const double cross=pressureSum-exposed.len();
+            v-=4.8*cross;
+            if(!armed) v-=1.9*pressureSum;
+            v+=3.2*cleanChance*sat(1.-0.78*pressureSum);
+        }
+        if(enemies>1) v-=1.55*std::max(0.,5.8-second);
+        if(cell==C_GRASS && near>c->see_r/1000.) {
+            v+=armed?1.7:0.55;
+            if(obs->me().expose<=dt && armed) v+=0.8;
+        }
+        const Dart& d=obs->my_dart();
+        if(!picked && (d.st==D_GROUND || d.st==D_RISE)) {
+            double dist=(pos(d)-q).len()/1000.;
+            v-=recovery*1.42*std::min(6.0,std::max(0.,dist-c->pick_r/1000.));
+        }
+        return v;
+    }
+
+    struct Path {
+        array<Vec,HORIZON+1> p{};
+        array<int,HORIZON+1> st{};
+        double terrainCost=0;
+        int pickup=99;
+    };
+    Path routePath(const Route& r) const {
+        Path path;
+        Body b(obs->me());
+        bool hand=obs->my_dart().st==D_HAND;
+        if(b.st==S_RECALL && r.action!=A_RECALL && (r.move.sq()>0 || r.action)) { b.st=S_FREE; b.timer=0; }
+        begin(b,r.action,r.aim,hand);
+        Vec move=r.move;
+        path.p[0]=here; path.st[0]=b.st;
+        for(int j=0;j<HORIZON;++j) {
+            if(r.turn==j) move=r.after;
+            if(r.follow==j) begin(b,A_MELEE,{1,0},hand);
+            Body old=b;
+            if(!advance(b,move,now+j)) {
+                bool locked=(old.st!=S_FREE && old.st!=S_THROW && old.st!=S_THROWN);
+                if(j==0 || locked) path.terrainCost=std::max(path.terrainCost,280.0-4*j);
+                else path.terrainCost=std::max(path.terrainCost, std::max(0.,(6.0-j)*0.73));
+                b=old; move={};
+                if(!advance(b,move,now+j)) { b.x=old.x; b.y=old.y; b.vx=b.vy=0; }
+            }
+            path.p[j+1]=b.point(); path.st[j+1]=b.st;
+            if(obs->my_dart().st==D_GROUND && path.pickup>j && (b.point()-pos(obs->my_dart())).sq()<=c->pick_r*c->pick_r)
+                path.pickup=j;
         }
         return path;
     }
-
-    bool cone(Vec a, Vec b, Vec aim, double reach, double cosine, double close, int t) const {
-        Vec delta = b - a;
-        double ds = delta.sq();
-        if (ds > reach * reach) return false;
-        if (ds > close * close && aim.dot(delta) < cosine * std::sqrt(ds)) return false;
-        return !wall(a, b, t);
+    double meleeValue(const Path& p,Vec aim,int hit,bool armed) const {
+        if(hit<1 || hit>HORIZON) return 0;
+        Vec self=p.p[hit];
+        double result=0;
+        for(int k=0;k<n;++k) {
+            const Person& e=people[k];
+            if(!e.active || e.dist>7500) continue;
+            double score=0;
+            for(int m=0;m<activeModels();++m) {
+                const Body& b=e.model[m].b[hit];
+                Vec delta=b.point()-self;
+                double d=delta.len();
+                double reach=armed?c->slash_reach:c->kick_reach;
+                if(d>reach+270 || (!armed && kickProtected(e.model[m].b[hit-1]))) continue;
+                if(d>c->body_r && delta.dot(aim)<d*(armed?c->slash_cos:c->kick_cos)/1000.) continue;
+                if(wall(self,b.point(),now+hit-1)) continue;
+                double late=sat((now-c->col_start+10)/90.);
+                double strength=armed?32.0+13.0*pressure:12.2+5.0*late;
+                if(!armed) {
+                    strength+=(15+6*late)*pitBehind(b.point(),delta,now+hit);
+                    if(b.st==S_DASH || b.st==S_RECALL || b.st==S_SLASHED || b.st==S_KICKED) strength+=2.2;
+                }
+                score+=strength*sat((reach+220-d)/440)*e.model[m].w;
+            }
+            result+=score*(e.enemy?e.confidence:-1.8);
+        }
+        return result;
+    }
+    Vec meleeAim(const Path& p,int hit) const {
+        if(focus<0) return {1,0};
+        Vec sum{}; double best=-1;
+        for(int k=0;k<n;++k) if(people[k].active && people[k].enemy) {
+            Vec v{}; double w=0;
+            for(int i=0;i<activeModels();++i) {
+                const Model& m=people[k].model[i];
+                Vec d=m.b[hit].point()-p.p[hit];
+                double factor=m.w*sat((c->slash_reach+750-d.len())/800);
+                v=v+d.unit()*factor; w+=factor;
+            }
+            w*=people[k].confidence;
+            if(w>best) { best=w; sum=v; }
+        }
+        Vec aim=sum.unit();
+        return aim.sq()>0.5?aim:(prediction(focus,0).point()-here).unit();
+    }
+    Vec strikeDirection(const Route& r,const Path& path,int hit) const {
+        if(r.parry>=0 && hit>=1 && hit<=HORIZON)
+            return (threats[r.parry].s[hit-1].a-path.p[hit]).unit();
+        return r.follow>=0 && hit>=1 && hit<=HORIZON ? meleeAim(path,hit) : r.aim;
     }
 
-    Vec kickedLanding(Vec victim, Vec source, int t) const {
-        Player p;
-        p.x = roundInt(victim.x); p.y = roundInt(victim.y);
-        Vec v = (victim - source).unit(cf->kick_v);
-        p.vx = roundInt(v.x); p.vy = roundInt(v.y);
-        p.st = S_STUN; p.timer = cf->kick_stun;
-        for (int j = 1; j <= cf->kick_stun; ++j) advance(p, {}, t + j);
-        return point(p);
+    double clashFraction(const Line& own,const Line& hostile) const {
+        if(!c->clash || !own.on || !hostile.on) return -1;
+        const double radiusSq=4.*c->dart_r*c->dart_r;
+        const Vec start=own.a-hostile.a;
+        if(start.sq()<=radiusSq) return -1;
+        const Vec velocity=own.b-hostile.b-start;
+        const double length=velocity.sq();
+        if(length<1.) return -1;
+        const double at=sat(-start.dot(velocity)/length);
+        return (start+velocity*at).sq()<=radiusSq ? at : -1;
     }
 
-    double melee(const RoutePath& path, Vec aim) const {
-        const int j = path.hit;
-        if (j < 0) return 0;
-        const bool slash = path.armedSwing;
-        const Vec a = point(path.body[j + 1]);
-        const double reach = slash ? cf->slash_reach : cf->kick_reach;
-        double value = 0;
-        for (int k = 0; k < obs->n; ++k) {
-            const auto& e = enemy[k];
-            if (!e.present || (point(e.path[0][0]) - a).sq() > (reach + 3100.) * (reach + 3100.)) continue;
-            double hit = 0, land = 0, advantage = 0;
-            for (int m = 0; m < Models; ++m) {
-                const Player& q = e.path[m][j + 1];
-                const Player& before = e.path[m][j];
-                if (!slash && (before.st == S_STUN || (before.st == S_FREE && before.timer > 0))) continue;
-                if (!cone(a, point(q), aim, reach, (slash ? cf->slash_cos : cf->kick_cos) / 1000.,
-                          cf->body_r, now + j)) continue;
-                hit += e.weight[m];
-                if (slash) continue;
-                Vec p = kickedLanding(point(q), a, now + j);
-                land += e.weight[m] * (pit(p, now + j + cf->kick_stun) ? 1 : 0);
-                if (before.st == S_RECALL || before.st == S_THROW || before.st == S_DASH)
-                    advantage += e.weight[m];
-            }
-            if (slash) value += 10.4 * hit * e.reach;
-            else value += (8.5 * land + 0.7 * hit + 1.2 * advantage) * e.reach;
-        }
-        return value / (1 + 0.13 * j);
+    bool parries(const Line& ray,const Path& path,Vec aim,int j,int hit,bool slash) const {
+        if(!slash || j+1!=hit || !c->block) return false;
+        const Vec v=ray.a-path.p[j+1];
+        const double d=v.len();
+        return d<=c->slash_reach && v.dot(aim)>=d*c->block_cos/1000. &&
+            !wall(ray.a,path.p[j+1],now+j);
     }
 
-    double position(Vec q, int j, bool withDart) const {
-        const WorldMap& map = field(now + j);
-        const int i = id(q);
-        double future = field(now + j + 12).legal[i] ? 0 : 1.3;
-        const int fall = cell_fall_step(*gi, cell_index(roundInt(q.x)), cell_index(roundInt(q.y)));
-        if (fall >= 0) {
-            double slack = fall - now - j;
-            if (slack < 45) future += (45 - slack) * 0.027;
+    double evaluate(Route r,const Shot& shot) const {
+        Path path=routePath(r);
+        double value=-path.terrainCost;
+        value+=0.20*positionValue(path.p[3],3,path.pickup<3)+0.40*positionValue(path.p[7],7,path.pickup<7)
+            +0.40*positionValue(path.p[HORIZON],HORIZON,path.pickup<HORIZON);
+        bool armed=obs->my_dart().st==D_HAND;
+        if(path.pickup<99 && r.action!=A_RECALL) value+=4.3-0.19*path.pickup;
+        bool strike=r.action==A_MELEE || r.follow>=0;
+        bool slash=strike && armed;
+        int hit=(armed?int(c->slash_pre):int(c->kick_pre))+std::max(0,r.follow);
+        Vec strikeAim=strikeDirection(r,path,hit);
+        double melee=0;
+        if(strike) {
+            melee=meleeValue(path,strikeAim,hit,armed);
+            double discount=1/(1+0.085*std::max(0,r.follow));
+            value+=discount*melee-(armed?4.1:3.7);
         }
-        double distance = map.core[i] < 10000 ? map.core[i] * Grid : 10500;
-        double coreWeight = now < 180 ? 0.065 + 0.0012 * now : 0.31;
-        if (now + j > cf->col_start) coreWeight += 0.09;
-        if (live > 1) coreWeight *= 1.45;
-        double value = -coreWeight * distance / 1000 - future;
-        double nearest = Infinity, second = Infinity;
-        double surround = 0;
-        Vec threats{};
-        for (int k = 0; k < obs->n; ++k) {
-            if (!enemy[k].present) continue;
-            const Vec delta = point(enemy[k].path[0][j]) - q;
-            double d = delta.len();
-            if (d < nearest) { second = nearest; nearest = d; }
-            else if (d < second) second = d;
-            if (live > 1 && enemy[k].readyAt < j + 5 && d < 6500 &&
-                !wall(q, point(enemy[k].path[0][j]), now + j)) {
-                double w = clip((6500 - d) / 3300);
-                threats = threats + delta.unit(w);
-                surround += w;
+        if(r.action==A_THROW) {
+            double need=n==2?0.29:enemies>1?0.235:0.27;
+            if(shot.target>=0) {
+                const Person& target=people[shot.target];
+                if(target.ready>4) need-=n==2?0.083:0.065;
+                else need+=0.20*sat((target.dist-3700)/2200);
+                if(target.hand && learned[shot.target].parries) need+=0.13*sat((target.dist-3400)/1750.);
+                need-=0.075*target.occupied;
+                if(target.observed.st!=S_STUN) need+=0.12*sat((now-c->col_start)/90.);
+                if(shot.target==focus && target.observed.st!=S_STUN)
+                    need+=0.15*pressure*sat((target.dist-2100)/1900);
             }
+            value+=24*(shot.quality-(n==2?1.32:1.28)*need);
         }
-        if (focus >= 0) {
-            const auto& e = enemy[focus];
-            const bool enemyReady = e.armed || (WeaponClock && e.readyAt < j + 5);
-            double desired = withDart ? (enemyReady ? (live > 1 ? 5100 : 3850) : 1900) : (live > 1 ? 5600 : 4150);
-            const double d = (q - point(e.path[0][j])).len();
-            double farCost = withDart ? (enemyReady ? 0.30 : 0.64) : 0.08;
-            if (live > 1) {
-                desired += withDart ? (enemyReady ? 700 : 1500) : 1100;
-                farCost *= 0.58;
+        if(r.action==A_DASH) {
+            value-=1.85-1.1*pressure;
+            if(focus>=0 && people[focus].ready<7 && nearest<7900 && !hiddenFrom(focus,now)) value-=4.8;
+        }
+        if(r.action==A_RECALL) {
+            double dist=(pos(obs->my_dart())-here).len()/1000.;
+            value+=std::min(6.4,1.2+0.85*dist)+1.6*(1-recovery);
+            if(obs->me().st==S_RECALL) value+=(c->recall_pre-obs->me().timer)*0.55;
+            if(focus>=0 && people[focus].hand && nearest<6500 && !wall(here,prediction(focus,0).point(),now))
+                value-=1.5;
+        }
+        array<Line,HORIZON> own{};
+        {
+            Dart d=obs->my_dart();
+            int start=0;
+            if(r.action==A_THROW || obs->me().st==S_THROW) {
+                start=int(r.action==A_THROW?c->throw_pre:obs->me().timer);
+                d.x=ir(path.p[start].x); d.y=ir(path.p[start].y);
+                d.st=D_OUT; d.left=c->range; d.age=0;
+                Vec aim=r.action==A_THROW?r.aim:vec(obs->me().ax,obs->me().ay)*0.001;
+                d.vx=ir(aim.x*1000); d.vy=ir(aim.y*1000);
+            } else if(r.action==A_RECALL) {
+                start=int((obs->me().st==S_RECALL?obs->me().timer:c->recall_pre)-1);
+                d.st=D_CALL; d.age=0;
             }
-            value -= std::max(0., d - desired) * farCost / 1000;
-            value -= std::max(0., desired - d) * (withDart && !enemyReady ? 0.10 : 0.41) / 1000;
-            if (withDart && d < 6500 && wall(q, point(e.path[0][j]), now + j)) value -= 0.29;
-            const Dart& ed = obs->d[focus];
-            if (live == 1 && withDart && (ed.st == D_GROUND || ed.st == D_RISE) && d < 7500) {
-                double guard = (q - point(ed)).len();
-                double theirs = (point(e.path[0][j]) - point(ed)).len();
-                if (theirs > 1800 && guard < theirs + 600)
-                    value += WeaponDenial * (0.75 * clip((4100 - guard) / 2700.) +
-                        0.44 * clip((theirs - guard) / 2100.));
-            }
-        }
-        if (live > 1 && second < 5200) value -= FfaSeparation * (5200 - second) / 1130;
-        value -= FfaSeparation * (surround - threats.len()) * 2.2;
-        if (live > 1 && nearest > cf->see_r + 150) {
-            const int cover = cell_of_point(*cf, map.map, roundInt(q.x), roundInt(q.y), -1);
-            if (cover == C_GRASS) value += 0.35;
-        }
-        const auto& d = obs->my_dart();
-        if (!withDart && (d.st == D_GROUND || d.st == D_RISE) && !pit(point(d), now + j + 4)) {
-            value -= 0.75 * std::min((q - point(d)).len() / 1000, 9.);
-            if (flowPhase == phase(now) && flowTarget >= 0 && (gridPoint(flowTarget) - point(d)).sq() < CELL * CELL)
-                value -= 0.54 * std::min(double(flow[i] * Grid / 1000), 11.);
-        }
-        if (hasGuide && (withDart || d.st == D_GROUND || d.st == D_RISE) &&
-            (goal - here).sq() > 2500. * 2500.) {
-            value += 0.29 * (q - here).dot(routeGuide) / 1000000;
-        }
-        if (obs->me().expose <= j && cell_of_point(*cf, map.map, roundInt(q.x), roundInt(q.y), -1) == C_GRASS &&
-            nearest > cf->see_r + 250) value += withDart ? 0.40 : 0.26;
-        if (nearest < 4500) {
-            for (Vec delta : {Vec{270, 0}, Vec{-270, 0}, Vec{0, 270}, Vec{0, -270}})
-                if (pit(q + delta, now + j)) value -= 0.18;
-        }
-        return value;
-    }
-
-    double clashPoint(const Segment& own, const Segment& hostile) const {
-        if (!own.active) return -1;
-        const Vec start = own.from - hostile.from;
-        const Vec finish = own.to - hostile.to;
-        const Vec velocity = finish - start;
-        const double radius = 2 * cf->dart_r;
-        if (start.sq() <= radius * radius || velocity.sq() <= 0.01) return -1;
-        const double at = clip(-start.dot(velocity) / velocity.sq());
-        return (start + velocity * at).sq() <= radius * radius ? at : -1;
-    }
-
-    bool blocksAt(const RoutePath& path, Vec aim, const Segment& s, int j) const {
-        return cf->block && path.armedSwing && path.hit == j &&
-            cone(point(path.body[j + 1]), s.from, aim, cf->slash_reach, cf->block_cos / 1000., 1, now + j);
-    }
-
-    void predictClashes(Exchange& ex, const RoutePath& path, Vec aim) const {
-        if (!cf->clash ||
-            std::none_of(ex.projectile.begin(), ex.projectile.end(), [](const Segment& s) { return s.active; })) return;
-        for (const auto& h : hazards) {
-            if (!h.observed) continue;
-            for (int j = 0; j + 1 < Horizon; ++j) {
-                const Segment& s = h.ray[j];
-                if (!s.active) continue;
-                if (blocksAt(path, aim, s, j)) break;
-                if (clashPoint(ex.projectile[j], s) < 0) continue;
-                // The referee resolves every clash on this step before grounding darts.
-                ex.clashBefore[h.owner][j + 1] += h.weight;
-                ex.hasClash = true;
-                break;
-            }
-        }
-        if (!ex.hasClash) return;
-        for (auto& before : ex.clashBefore) {
-            for (int j = 1; j < Horizon; ++j) before[j] = clip(before[j] + before[j - 1]);
-        }
-    }
-
-    Exchange exchange(const RoutePath& path, const Route& route, Vec aim) const {
-        Exchange out;
-        if (!CoupledCombat) return out;
-        Dart d = obs->my_dart();
-        int shot = -1;
-        if (route.kind == A_THROW) shot = int(cf->throw_pre);
-        else if (obs->me().st == S_THROW) shot = int(obs->me().timer);
-        if (route.kind == A_RECALL) {
-            d.st = D_RISE; d.left = obs->me().st == S_RECALL ? obs->me().timer : cf->recall_pre;
-        } else if (d.st == D_RISE && route.move.sq() > 0) {
-            d.st = D_GROUND;
-        }
-        for (int j = 0; j < Horizon; ++j) {
-            if (j == shot) {
-                const Vec a = route.kind == A_THROW ? route.aim : heading(obs->me());
-                d = release(point(path.body[j]), a);
-            }
-            if (d.st == D_RISE && --d.left <= 0) { d.st = D_CALL; d.age = 0; }
-            if (dart_flying(d.st)) {
-                out.projectile[j] = fly(d, point(path.body[j]), point(path.body[j + 1]), now + j);
-                if (d.st == D_HAND) out.catchAt = j + 1;
-            }
-        }
-        predictClashes(out, path, aim);
-        std::array<double, Horizon> ownFlight;
-        ownFlight.fill(1.);
-        if (out.hasClash) for (const auto& before : out.clashBefore) {
-            for (int j = 1; j < Horizon; ++j) ownFlight[j] *= 1. - before[j];
-        }
-        for (int k = 0; k < obs->n; ++k) {
-            const auto& target = enemy[k];
-            if (!target.present || (point(target.path[0][0]) - here).sq() > 10300. * 10300.) continue;
-            std::array<double, Models> chances{};
-            for (int j = 0; j < Horizon; ++j) {
-                const Segment& own = out.projectile[j];
-                double stopMass = out.incapacitated[k][j];
-                if (!own.active && path.hit != j) { out.incapacitated[k][j + 1] = stopMass; continue; }
-                for (int m = 0; m < Models; ++m) {
-                    if (chances[m] >= 0.99) continue;
-                    const Player& before = target.path[m][j];
-                    const Vec q = point(target.path[m][j + 1]);
-                    double chance = chances[m];
-                    if (own.active) {
-                        const double miss2 = segmentDistance2(own.from - point(before), own.to - q);
-                        if (miss2 < (hitRadius + 120) * (hitRadius + 120)) {
-                            const double margin = (hitRadius + 120 - std::sqrt(miss2)) / 380.;
-                            const bool reacts = j >= cf->delay + 1 && before.st == S_FREE;
-                            chance = std::max(chance, ownFlight[j] * (reacts ? 0.46 : 0.94) * clip(margin));
+            array<double,MAXP> returnHit{};
+            for(int j=start;j<HORIZON && dart_flying(d.st);++j) {
+                bool back=d.st==D_BACK || d.st==D_CALL;
+                own[j]=fly(d,path.p[j+1],path.p[j],now+j);
+                if(back) {
+                    for(int k=0;k<n;++k) if(people[k].active) {
+                        double hitProb=0;
+                        for(int m: {0,1,2,3,4}) {
+                            const Model& model=people[k].model[m];
+                            double d2=segmentSq(own[j].a-model.b[j].point(),own[j].b-model.b[j+1].point());
+                            if(d2<(dartRadius+320)*(dartRadius+320))
+                                hitProb+=model.w*sat((dartRadius+320-std::sqrt(d2))/460);
                         }
+                        returnHit[k]=std::max(returnHit[k],hitProb/(1+0.04*j));
                     }
-                    if (path.hit == j && (path.armedSwing || (before.st != S_STUN &&
-                        !(before.st == S_FREE && before.timer > 0)))) {
-                        const double reach = path.armedSwing ? cf->slash_reach : cf->kick_reach;
-                        const double cosine = double(path.armedSwing ? cf->slash_cos : cf->kick_cos) / 1000;
-                        const Vec pos = point(path.body[j + 1]);
-                        if (cone(pos, q, aim, reach, cosine, cf->body_r, now + j))
-                            chance = std::max(chance, (path.armedSwing ? 0.96 : 0.65) * clip((reach + 150 - (q - pos).len()) / 310));
-                    }
-                    stopMass += target.weight[m] * (chance - chances[m]) * target.reach;
-                    chances[m] = chance;
+                    if(d.st==D_HAND) value+=1.4*(1-j/double(HORIZON));
                 }
-                out.incapacitated[k][j + 1] = stopMass;
             }
+            for(int k=0;k<n;++k) value+=returnHit[k]*(people[k].enemy?12.0:-24.0);
         }
-        return out;
-    }
 
-    double risk(const RoutePath& path, Vec aim, bool committed, bool allowFutureBlock, const Exchange& expected) const {
-        double cost = 0, disarm = 0;
-        std::array<double, MAXP> seenRisk{}, blindRisk{}, blocks{};
-        for (const auto& h : hazards) {
-            double hit = 0;
-            double hitBeforeClash = 0;
-            double clashProbability = -1;
-            for (int j = 0; j < Horizon; ++j) {
-                const Segment& s = h.ray[j];
-                if (!s.active) continue;
-                if (blocksAt(path, aim, s, j)) {
-                    if (h.observed && clashProbability < 0) {
-                        const double separation = (s.from - point(enemy[h.owner].path[0][j])).len();
-                        blocks[h.owner] += h.weight * (0.63 + 0.37 * clip(separation / 3400)) / (1 + 0.19 * j);
-                    }
-                    break;
-                }
-                const Segment& own = expected.projectile[j];
-                Vec end = s.to;
-                bool clash = false;
-                if (CoupledCombat && cf->clash && clashProbability < 0) {
-                    const double at = clashPoint(own, s);
-                    if (at >= 0) {
-                        clash = true;
-                        end = s.from + (end - s.from) * at;
-                        if (expected.hasClash && h.observed) {
-                            clashProbability = 1.;
-                            // The same owner's paths are alternatives to this incoming path.
-                            for (int k = 0; k < obs->n; ++k) if (k != h.owner)
-                                clashProbability *= 1. - expected.clashBefore[k][j];
-                        }
-                    }
-                }
-                const Vec from = s.from - point(path.body[j]);
-                const Vec after = point(path.body[j + 1]);
-                const double margin = hitRadius + (h.observed ? 180 : 250);
-                double weight = 1.;
-                if (h.observed) {
-                    if (j > 5) weight *= committed ? 0.70 : 0.43;
-                    if (allowFutureBlock && j >= 2 && armed) weight *= 0.83;
-                } else {
-                    weight *= j < 4 ? 0.95 : j < 8 ? 0.64 : 0.34;
-                }
-                if (CoupledCombat) {
-                    const int when = live == 1 ? j : (h.observed ? 0 : std::max(0, h.launch));
-                    weight *= 1 - 0.83 * expected.incapacitated[h.owner][when];
-                }
-                const auto chance = [&](Vec to) {
-                    double dd = segmentDistance2(from, to - after);
-                    if (dd >= margin * margin) return 0.;
-                    return weight * (dd <= hitRadius * hitRadius ? 1. : (margin - std::sqrt(dd)) / (margin - hitRadius) * 0.45);
-                };
-                if (clash && clashProbability >= 0) hitBeforeClash = std::max(hit, chance(end));
-                hit = std::max(hit, chance(clashProbability >= 0 ? s.to : end));
-                if (clash && h.observed && (clashProbability < 0 || clashProbability >= 1. - 1e-9)) {
-                    if (clashProbability >= 0) hit = hitBeforeClash;
+        // Branches of the same player's trajectory are mutually exclusive.
+        array<array<double,HORIZON+1>,MAXP> clashMass{};
+        array<double,HORIZON> flightMass;
+        flightMass.fill(1.);
+        const bool orderedClashes=c->mode==M_FFA && !observer;
+        if(orderedClashes && c->clash && std::any_of(own.begin(),own.end(),[](const Line& s){return s.on;})) {
+            for(const Threat& threat:threats) {
+                if(!threat.known) continue;
+                for(int j=0;j<HORIZON;++j) {
+                    const Line& ray=threat.s[j];
+                    if(!ray.on) continue;
+                    if(parries(ray,path,strikeAim,j,hit,slash)) break;
+                    if(clashFraction(own[j],ray)<0) continue;
+                    clashMass[threat.owner][j+1]+=threat.weight;
                     break;
                 }
             }
-            if (clashProbability >= 0) hit += clashProbability * (hitBeforeClash - hit);
-            if (h.observed) seenRisk[h.owner] += h.weight * hit;
-            else blindRisk[h.owner] += h.weight * hit;
-        }
-        for (int k = 0; k < obs->n; ++k) {
-            cost += 23.0 * std::min(1., seenRisk[k]) + BlindPenalty * (committed ? 1.25 : 1.) * std::min(0.75, blindRisk[k]);
-            disarm += std::min(1., blocks[k]) * (enemy[k].present ? 5.5 : 1.3);
-        }
-        return disarm - cost;
-    }
-
-    double contactRisk(const RoutePath& path, const Route& route) const {
-        double loss = 0;
-        for (int k = 0; k < obs->n; ++k) {
-            const auto& e = enemy[k];
-            if (!e.present || (point(e.path[0][0]) - here).sq() > 6800. * 6800.) continue;
-            const Player& old = obs->p[k];
-            double worst = 0;
-            for (int j = 0; j <= 7; ++j) {
-                Vec p = point(path.body[j + 1]);
-                const Player& en = e.path[0][j + 1];
-                double d = (point(en) - p).len();
-                if (d > 3250 || wall(p, point(en), now + j)) continue;
-                bool trade = path.armedSwing && path.hit >= 0 && path.hit <= j &&
-                    cone(point(path.body[path.hit + 1]), point(e.path[0][path.hit + 1]), route.aim.unit(),
-                         cf->slash_reach, cf->slash_cos / 1000., cf->body_r, now + path.hit);
-                if (old.st == S_SLASH && old.timer == now - imax(0, now - cf->delay) + j + 1 &&
-                    cone(point(en), p, heading(old).unit(), cf->slash_reach, cf->slash_cos / 1000., cf->body_r, now + j))
-                    worst = std::max(worst, trade ? 5.5 : 12.);
-                if (en.st != S_FREE && en.st != S_DASH && en.st != S_RECALL) continue;
-                if (e.armed || (WeaponClock && e.readyAt <= j + 1)) {
-                    double canSwing = clip((1980 - d) / 700);
-                    double canDash = en.cd <= 2 ? clip((3020 - d) / 1400) : 0;
-                    double pressure = trade ? 0.86 : route.kind == A_THROW ? 3.7 : armed ? 2.25 : 4.1;
-                    worst = std::max(worst, pressure * std::max(canSwing, 0.46 * canDash) / (1 + 0.23 * j));
-                } else if (d < 1680 && (path.body[j].st == S_FREE || path.body[j].st == S_DASH || path.body[j].st == S_RECALL)) {
-                    Vec kickDirection = (p - point(en)).unit(2800);
-                    if (pit(p + kickDirection, now + j + cf->kick_stun))
-                        worst = std::max(worst, (trade ? 0.4 : 2.2) * clip((1750 - d) / 430));
-                }
-            }
-            loss += worst * e.reach;
-        }
-        return loss;
-    }
-
-    double returnValue(const RoutePath& path, const Route& r) const {
-        Dart d = obs->my_dart();
-        if (!(dart_flying(d.st) || d.st == D_RISE || r.kind == A_RECALL)) return 0;
-        if (r.kind == A_RECALL) { d.st = D_RISE; d.left = cf->recall_pre; }
-        if (d.st == D_RISE && r.move.sq() > 0) return 0;
-        double value = 0;
-        std::array<std::array<bool, Models>, MAXP> credited{};
-        for (int j = 0; j < Horizon; ++j) {
-            if (d.st == D_RISE && --d.left <= 0) { d.st = D_CALL; d.age = 0; }
-            Segment line = fly(d, point(path.body[j]), point(path.body[j + 1]), now + j);
-            if (line.active) for (int k = 0; k < obs->n; ++k) {
-                const auto& e = enemy[k];
-                if (!e.present || (point(e.path[0][j]) - line.from).sq() > 4200. * 4200.) continue;
-                for (int m : {0, 1, 3, 4}) {
-                    if (credited[k][m]) continue;
-                    double miss = segmentDistance2(line.from - point(e.path[m][j]), line.to - point(e.path[m][j + 1]));
-                    if (miss <= hitRadius * hitRadius) {
-                        credited[k][m] = true;
-                        value += 4.8 * e.weight[m] * e.reach / (1 + 0.10 * j);
-                    }
-                }
-            }
-            if (d.st == D_HAND) return value + 1.4 / (1 + 0.045 * j);
-            if (d.st == D_GROUND) return value - 0.55;
-        }
-        if (r.kind == A_RECALL || d.st == D_RISE) {
-            double danger = live > 1 ? 0.95 : 0.8;
-            if (focus >= 0 && wall(here, point(enemy[focus].path[0][0]), now)) danger *= 0.53;
-            value += std::clamp((closest - 2300) / 1300, -2., 2.5) - danger;
-        }
-        return value;
-    }
-
-    double evaluate(const Route& r, double attack = 0) const {
-        RoutePath p = simulate(r);
-        if (p.fell) return -1000;
-        bool committed = r.kind != A_NONE || obs->me().st == S_DASH || obs->me().st == S_RECALL;
-        Vec aim = p.hit >= 0 && r.kind != A_MELEE && r.swingAt < 0 ? heading(obs->me()).unit() : r.aim.unit();
-        const Exchange expected = exchange(p, r, aim);
-        const bool hold = (armed && r.kind != A_THROW) || p.picked;
-        const auto holdingAt = [&](int j) { return hold || (CatchAwareness && expected.catchAt <= j - 1); };
-        double value = 0.35 * position(point(p.body[4]), 4, holdingAt(4)) +
-                       0.37 * position(point(p.body[8]), 8, holdingAt(8)) +
-                       0.28 * position(point(p.body[Horizon]), Horizon, holdingAt(Horizon));
-        value += risk(p, aim, committed, r.kind == A_NONE && r.swingAt < 0, expected) *
-            (live > 1 ? 1.30 : 1.);
-        value += returnValue(p, r);
-        value -= contactRisk(p, r);
-        if (p.hit >= 0) value += melee(p, aim);
-        if (r.kind == A_THROW) value += attack - (armed && live <= 1 ? 1.25 : 0.65);
-        if (r.kind == A_MELEE || r.swingAt >= 0) value -= p.armedSwing ? 1.14 : 0.75;
-        if (r.kind == A_DASH) {
-            value -= 0.38;
-            if (armedPressure) {
-                const Vec landing = point(p.body[imin(Horizon, cf->dash_pre + cf->dash_t)]);
-                for (int k = 0; k < obs->n; ++k) if (enemy[k].present && enemy[k].armed) {
-                    Vec threat = point(enemy[k].path[0][7]);
-                    if ((landing - threat).sq() < 6200. * 6200. && !wall(landing, threat, now + 7)) {
-                        value -= DashPenalty;
-                        break;
-                    }
-                }
+            for(int k=0;k<n;++k) for(int j=1;j<HORIZON;++j) {
+                clashMass[k][j]=sat(clashMass[k][j]+clashMass[k][j-1]);
+                flightMass[j]*=1.-clashMass[k][j];
             }
         }
-        if (LockPenalty && (r.kind == A_DASH || r.kind == A_RECALL) && closest < 8000) {
-            const int seen = int(cf->delay) + 1;
-            const int shot = seen + int(cf->throw_pre);
-            const Vec lock = point(p.body[std::min(Horizon, shot + 2)]);
-            for (int k = 0; k < obs->n; ++k) {
-                const auto& e = enemy[k];
-                if (!e.present || !e.visible || (e.readyAt > seen && !e.armed)) continue;
-                const Vec origin = point(e.path[0][std::min(shot, Forecast)]);
-                const double d2 = (origin - lock).sq();
-                if (d2 > 6800. * 6800. || wall(origin, lock, now + shot)) continue;
-                const bool unable = p.body[std::min(Horizon, shot + 2)].st != S_FREE;
-                const double hold = r.kind == A_RECALL ? 2.2 : unable ? 1.85 : 0.70;
-                value -= hold * clip((6800 - std::sqrt(d2)) / 3600);
-            }
-        }
-        if (p.picked) value += 2.0;
-        if (r.kind == A_NONE) value += 0.105 * r.move.dot(carry) / 1000000;
-        return value;
-    }
-
-    Vec swingAim(Vec source, int tick) const {
-        double score = -1;
-        Vec aim{1000, 0};
-        for (int k = 0; k < obs->n; ++k) {
-            const auto& e = enemy[k];
-            if (!e.present) continue;
-            Vec target{};
-            for (int m = 0; m < Models; ++m) target = target + point(e.path[m][tick]) * e.weight[m];
-            double d = (target - source).len();
-            double value = e.reach * (3800 - d);
-            if (value > score) { score = value; aim = (target - source).unit(1000); }
-        }
-        return aim;
-    }
-
-    double shotScore(Vec origin, Vec aim, int k) const {
-        Dart d = release(origin, aim);
-        const auto& e = enemy[k];
-        std::array<double, Models> scores{};
-        int ready = cf->throw_pre;
-        const int canReact = int(cf->delay) + 1;
-        if (cf->throw_pre <= 1) --ready;
-        for (int j = ready; j < 17; ++j) {
-            Segment s = fly(d, origin, origin, now + j);
-            for (int m = 0; m < Models; ++m) {
-                if (scores[m] >= 0.99) continue;
-                const Player& before = e.path[m][j];
-                const Player& q = e.path[m][j + 1];
-                if ((s.from - point(before)).sq() > 3200. * 3200.) continue;
-                double miss = segmentDistance2(s.from - point(before), s.to - point(q));
-                if (miss > hitRadius * hitRadius) continue;
-                double chance = 1.0;
-                if (j >= canReact && (before.st == S_FREE || before.st == S_DASH)) {
-                    chance = e.armed ? 0.20 : 0.44;
-                    if (j == canReact) chance += 0.27;
-                    if (std::sqrt(miss) < 300 && j == canReact) chance += 0.10;
-                }
-                if (m == 0 && (q.st == S_FREE || q.st == S_THROWN))
-                    chance *= 1 - 0.27 * clip(std::sqrt(miss) / hitRadius);
-                scores[m] = std::max(chance, scores[m]);
-            }
-            if (d.st != D_OUT) break;
-        }
-        double total = 0;
-        for (int m = 0; m < Models; ++m) total += e.weight[m] * scores[m];
-        if (d.st == D_GROUND && total < 0.55) total *= 0.79;
-        return total * e.reach;
-    }
-
-    Shot bestShot(Vec movement) const {
-        Shot best{movement, {}, 0};
-        Player releaseBody = obs->me();
-        begin(releaseBody, A_THROW, {1000, 0}, true, movement);
-        for (int j = 0; j < cf->throw_pre; ++j) if (!advance(releaseBody, movement, now + j)) return best;
-        const Vec origin = point(releaseBody);
-        for (int k = 0; k < obs->n; ++k) {
-            const auto& e = enemy[k];
-            if (!e.present || !e.visible || (point(e.path[0][0]) - origin).sq() > 7300. * 7300.) continue;
-            Vec lastAim{};
-            for (int m = 0; m < Models; ++m) {
-                double travelled = 0;
-                int j = int(cf->throw_pre);
-                for (; j < 15; ++j) {
-                    travelled += std::max(cf->dart_vmin, cf->dart_v - (j - cf->throw_pre) * cf->dart_dec);
-                    if ((point(e.path[m][j + 1]) - origin).len() <= travelled + 0.2 * hitRadius) break;
-                }
-                Vec aim = (point(e.path[m][j + 1]) - origin).unit(1000);
-                if ((aim - lastAim).sq() < 32 * 32) continue;
-                lastAim = aim;
-                double probability = shotScore(origin, aim, k);
-                const double dist = (point(e.path[0][0]) - origin).len();
-                const bool hasWeapon = e.armed || (WeaponClock && e.readyAt <= j + 1);
-                double reserve = hasWeapon ? (live > 1 ? 0.33 : 0.45) : 0.26;
-                int state = e.path[0][std::max(0, std::min(j, 8) - 3)].st;
-                bool vulnerable = state == S_DASH || state == S_STUN || state == S_RECALL || state == S_SLASHED || state == S_KICKED;
-                if (live > 1 && !vulnerable) reserve += 0.10;
-                if (vulnerable && dist < 5900) reserve -= 0.062;
-                if (obs->me().expose == 0 && dist > cf->see_r &&
-                    cell_of_point(*cf, field(now).map, obs->me().x, obs->me().y, -1) == C_GRASS) reserve -= 0.055;
-                if (live == 1 && !hasWeapon && !vulnerable && dist > 3600) reserve += 0.070;
-                double value = (probability - reserve) * 11.4;
-                if (dist < 2200 && e.armed) value -= 0.65;
-                if (value > best.value) best = Shot{movement, aim, value};
-            }
-        }
-        return best;
-    }
-
-    Action decide(const Obs& o) {
-        const auto started = std::chrono::steady_clock::now();
-        obs = &o; now = int(o.t); here = point(o.me());
-        if (!o.me().alive) return {};
-        self[now % History] = o.me();
-        own[now % History] = o.my_dart();
-        armed = o.my_dart().st == D_HAND;
-        const int ref = int(imax(0, now - cf->delay));
-        track();
-        inferContact();
-        inferImpact();
-        const bool moving = o.me().st == S_FREE || o.me().st == S_THROW ||
-            o.me().st == S_THROWN || o.me().st == S_RECALL;
-        const bool ready = o.me().st == S_FREE || o.me().st == S_RECALL;
-        if (!moving && !(cf->dash_slash && dashMoves(o.me()))) {
-            carry = {};
-            moves[now % History] = {};
-            return {};
-        }
-        hazards.clear();
-        for (int k = 0; k < o.n; ++k) if (k != seat) {
-            enemy[k].readyAt = enemy[k].armed ? 0 : Horizon + 8;
-            knownThreats(k, ref);
-            auto& e = enemy[k];
-            if (e.visible && o.d[k].st == D_GROUND) {
-                const auto pickup = std::find_if(e.groundPickup.begin(), e.groundPickup.end(), [](double p) { return p >= 0.55; });
-                if (pickup != e.groundPickup.end()) {
-                    e.readyAt = int(pickup - e.groundPickup.begin()) - MAX_DELAY;
-                    armedPressure |= e.readyAt <= 2 && (point(e.path[0][0]) - here).sq() < 7600. * 7600.;
-                }
-            }
-            if (ImpactInference && e.clashTick > ref) {
-                double dist = (point(e.path[0][0]) - e.impact).len();
-                int pickup = int(std::max(0., dist - cf->pick_r - 220) / cf->run_v);
-                if (pickup < 8) e.readyAt = std::min(e.readyAt, pickup);
-            }
-            if (ImpactInference && e.blockTick > ref)
-                e.readyAt = std::max(e.readyAt, int(cf->slash_post - (now - e.blockTick)));
-            blindThreats(k, ref);
-            crossingThreats(k);
-        }
-        navigation();
-        Route best{};
-        double bestValue = -Infinity;
-        bool budgetSpent = false;
-        int tried = 0;
-        auto consider = [&](Route r, double attack = 0.) {
-            // One decision may be preempted on a busy host. Return the best completed
-            // candidate once the wall-time cap leaves insufficient CPU headroom.
-            if (budgetSpent) return -Infinity;
-            if (++tried % 12 == 0 && std::chrono::steady_clock::now() - started >= std::chrono::milliseconds(4)) {
-                budgetSpent = true;
-                return -Infinity;
-            }
-            double value = evaluate(r, attack);
-            if (value > bestValue) { best = r; bestValue = value; }
-            return value;
-        };
-        consider({});
-        Vec toGoal = (goal - here).unit(1000);
-        if (moving) {
-            std::array<Route, 3> walk{};
-            std::array<double, 3> walkValue{};
-            walkValue.fill(-Infinity);
-            for (Vec d : dirs) {
-                double v = consider({d});
-                if (bestValue < -0.7 || armedPressure) consider({d, {}, {}, A_NONE, 5});
-                if (CurvedRoutes && (armedPressure || !hazards.empty()) && closest < 6500) {
-                    for (int i = 0; i < int(walk.size()); ++i) if (v > walkValue[i]) {
-                        for (int j = int(walk.size()) - 1; j > i; --j) {
-                            walk[j] = walk[j - 1]; walkValue[j] = walkValue[j - 1];
-                        }
-                        walk[i] = {d}; walkValue[i] = v;
-                        break;
-                    }
-                }
-            }
-            consider({carry});
-            consider({toGoal});
-            if (hasGuide) { consider({routeGuide}); consider({routeGuide * 0.47}); }
-            const Route bestWalk = best;
-            if (!hazards.empty() || closest < 4000) {
-                for (int i = 0; i < Angles; i += 3)
-                    consider({dirs[i], bestWalk.move, {}, A_NONE, 4});
-                if (hasGuide)
-                    consider({bestWalk.move, routeGuide, {}, A_NONE, 4});
-            }
-            if (CurvedRoutes && walkValue[0] > -900) {
-                const Vec radial = focus >= 0 ? (point(enemy[focus].path[0][0]) - here).unit(1000) : toGoal;
-                for (int i = 0; i < int(walk.size()); ++i) if (walkValue[i] > -900) {
-                    for (Vec second : {radial.left(), radial.left() * -1, bestWalk.move, Vec{}})
-                        consider({walk[i].move, second, {}, A_NONE, 3 + i});
-                }
-            }
-        }
-        if (ready && o.me().cd == 0) {
-            const Vec follow = hasGuide ? routeGuide : toGoal;
-            for (int i = 0; i < Angles; i += 2) {
-                Vec dir = dirs[i];
-                consider({follow, {}, dir, A_DASH});
-                if (cf->dash_slash && closest < 5100) {
-                    for (int dashSteps : {1, 3}) {
-                        int hit = int(cf->dash_pre) + dashSteps + int(armed ? cf->slash_pre : cf->kick_pre);
-                        Vec landing = here + dir * (cf->dash_v * (dashSteps + 1) / 1000.);
-                        Vec aim = swingAim(landing, hit);
-                        Route r{{}, {}, aim, A_DASH, Horizon, int(cf->dash_pre) + dashSteps};
-                        // A combined route starts the dash along dir and uses its swing aim at cancellation.
-                        r.follow = dir;
-                        consider(r);
-                    }
-                }
-            }
-            if (hasGuide) consider({routeGuide, {}, routeGuide, A_DASH});
-        }
-        if (ready || (cf->dash_slash && dashMoves(o.me()))) {
-            const int hit = int(armed ? cf->slash_pre : cf->kick_pre) - 1;
-            Route r{{}, {}, {1000, 0}, A_MELEE};
-            if (closest < 3650 || (armed && !hazards.empty())) {
-                auto p = simulate(r);
-                if (!p.fell) {
-                    const Vec balance = point(p.body[hit + 1]);
-                    r.aim = swingAim(balance, hit + 1);
-                    if (closest < 3650) {
-                        consider(r);
-                        for (int k = 0; k < o.n; ++k) if (enemy[k].present) {
-                            for (int m : {0, 3, 4}) {
-                                Vec delta = point(enemy[k].path[m][hit + 1]) - balance;
-                                if (delta.sq() < 2500. * 2500.) {
-                                    r.aim = delta.unit(1000);
-                                    consider(r);
-                                }
+        array<array<double,HORIZON+1>,MAXP> defeated{};
+        array<double,MAXP> interrupted{};
+        if(strike || dart_flying(obs->my_dart().st) || r.action==A_THROW || r.action==A_RECALL) {
+            for(int k=0;k<n;++k) {
+                const Person& e=people[k];
+                if(!e.active || !e.enemy || e.dist>c->range+2100) continue;
+                for(int i=0;i<activeModels();++i) {
+                    const Model& m=e.model[i];
+                    double prev=0;
+                    for(int j=0;j<HORIZON;++j) {
+                        double chance=0;
+                        if(own[j].on) {
+                            double d2=segmentSq(own[j].a-m.b[j].point(),own[j].b-m.b[j+1].point());
+                            if(d2<(dartRadius+110)*(dartRadius+110)) {
+                                double react=(j<=c->delay || m.b[j].st==S_STUN)?0.92:0.55;
+                                chance=flightMass[j]*react*sat((dartRadius+110-std::sqrt(d2))/270);
                             }
                         }
-                    }
-                    if (armed && cf->block) for (const auto& h : hazards) {
-                        const auto& s = h.ray[hit];
-                        if (!h.observed || !s.active || (s.from - balance).sq() > cf->slash_reach * cf->slash_reach) continue;
-                        r.aim = (s.from - balance).unit(1000);
-                        consider(r);
-                    }
-                }
-            }
-        }
-        if (ApproachParry && ready && armed && cf->block) {
-            for (int j = 2; j <= 5; ++j) {
-                const int hit = j + int(cf->slash_pre) - 1;
-                for (const auto& h : hazards) {
-                    const auto& s = h.ray[hit];
-                    if (!h.observed || !s.active || (s.from - here).sq() > 3150. * 3150.) continue;
-                    for (Vec mv : {(s.from - here).unit(1000), best.move}) {
-                        Player p = o.me();
-                        for (int step = 0; step < j; ++step) advance(p, mv, now + step);
-                        if ((s.from - point(p)).sq() > cf->slash_reach * cf->slash_reach) continue;
-                        Route r{mv, {}, (s.from - point(p)).unit(1000), A_NONE, Horizon, j};
-                        consider(r);
+                        if(slash && j+1==hit) {
+                            Vec d=m.b[hit].point()-path.p[hit];
+                            double len=d.len();
+                            if(len<c->slash_reach+170 && (len<c->body_r || d.dot(strikeAim)>=len*c->slash_cos/1000.) &&
+                                !wall(path.p[hit],m.b[hit].point(),now+j))
+                                chance=std::max(chance,0.98*sat((c->slash_reach+170-len)/320));
+                        }
+                        if(strike && !armed && j+1==hit && !kickProtected(m.b[j])) {
+                            Vec d=m.b[hit].point()-path.p[hit];
+                            double len=d.len();
+                            if(len<c->kick_reach+170 && (len<c->body_r || d.dot(strikeAim)>=len*c->kick_cos/1000.) &&
+                                !wall(path.p[hit],m.b[hit].point(),now+j))
+                                interrupted[k]+=m.w*sat((c->kick_reach+170-len)/320);
+                        }
+                        prev=std::max(prev,chance);
+                        defeated[k][j+1]+=m.w*prev;
                     }
                 }
             }
         }
-        if (!budgetSpent && ready && armed && closest < 7250) {
-            const Vec movement = best.kind == A_NONE ? best.move : carry;
-            for (Vec d : {movement, Vec{}, toGoal.left(), toGoal.left() * -1}) {
-                if (budgetSpent) break;
-                Shot shot = bestShot(d);
-                if (shot.value > 0) consider({shot.move, {}, shot.aim, A_THROW}, shot.value);
+        double speculative=0;
+        array<double,MAXP> maxKnown{},meanKnown{},blockReward{};
+        for(const Threat& h:threats) {
+            double worst=0, clippedWorst=0, interception=-1;
+            for(int j=0;j<HORIZON;++j) {
+                const Line& line=h.s[j];
+                if(!line.on) continue;
+                if(slash && j+1==hit && c->block) {
+                    Vec delta=line.a-path.p[j+1];
+                    double d=delta.len();
+                    if(d<=c->slash_reach && delta.dot(strikeAim)>=d*c->block_cos/1000. && !wall(line.a,path.p[j+1],now+j)) {
+                        if(h.known) {
+                            double retrieve=people[h.owner].active?(prediction(h.owner,j).point()-line.a).len():0.;
+                            double reward=(9.5+8.9*sat((retrieve-900)/3500))/(1+0.095*std::max(0,r.follow));
+                            blockReward[h.owner]+=reward*h.weight;
+                        }
+                        break;
+                    }
+                }
+                const double clash=interception<0 ? clashFraction(own[j],line) : -1;
+                if(!orderedClashes && clash>=0 && (line.a-path.p[j]).len()>dartRadius+c->dart_v*0.72)
+                    break;
+                if(orderedClashes && clash>=0) {
+                    clippedWorst=worst;
+                    interception=1.;
+                    for(int k=0;k<n;++k) if(k!=h.owner) interception*=1.-clashMass[k][j];
+                }
+                const auto exposure=[&](Vec to) {
+                const double d2=segmentSq(line.a-path.p[j],to-path.p[j+1]);
+                double pad=h.known?(h.returning?620:300):430;
+                if(d2<(dartRadius+pad)*(dartRadius+pad)) {
+                    double d=std::sqrt(d2);
+                    double risk;
+                    if(h.known) {
+                        risk=d<=dartRadius ? 1+0.30*sat((dartRadius-d)/350) : 0.65*sat((dartRadius+pad-d)/pad);
+                        risk*=118./(1+0.15*j);
+                    } else {
+                        int freeTicks=0;
+                        for(int u=std::max(0,h.signal);u<=j;++u)
+                            if(path.st[u]==S_FREE || path.st[u]==S_RECALL) ++freeTicks;
+                        double reaction=freeTicks<=1?1.:freeTicks==2?0.85:freeTicks==3?0.54:0.31;
+                        risk=(enemies>1?48.:46.)*reaction*sat((dartRadius+pad-d)/(pad+250))/(1+0.055*j);
+                    }
+                    if(enemies==1 && !h.known) risk*=1-0.92*defeated[h.owner][j];
+                    else if(!h.known) risk*=1-0.8*defeated[h.owner][std::clamp(h.signal-int(c->delay)-1,0,HORIZON)];
+                    if(!h.known && h.signal-c->delay-1>=hit) risk*=1-0.96*interrupted[h.owner];
+                    return risk;
+                }
+                return 0.;
+                };
+                if(orderedClashes && clash>=0) clippedWorst=std::max(clippedWorst,exposure(line.a+(line.b-line.a)*clash));
+                worst=std::max(worst,exposure(line.b));
+                if(interception>=1.-1e-9 || (!orderedClashes && clash>=0)) break;
+            }
+            if(interception>=0) worst+=(clippedWorst-worst)*interception;
+            if(h.known) { maxKnown[h.owner]=std::max(maxKnown[h.owner],worst); meanKnown[h.owner]+=h.weight*worst; }
+            else speculative+=h.weight*worst;
+        }
+        for(int k=0;k<n;++k) value+=blockReward[k]-0.48*maxKnown[k]-0.52*meanKnown[k];
+        value-=speculative;
+        array<double,MAXP> rushRisk{};
+        for(const Rush& x:rushes) {
+            Vec d=path.p[x.time+1]-x.center;
+            if(d.sq()>(c->slash_reach+450)*(c->slash_reach+450)) continue;
+            double len=d.len();
+            double cone=x.aim.dot(d)/std::max(1.,len);
+            double aimFactor=0.35+0.65*sat((cone+0.15)/0.65);
+            double risk=sat((c->slash_reach+420-len)/830)*aimFactor/(1+0.09*x.time);
+            bool blade=people[x.owner].ready<=x.time;
+            if(!blade) {
+                bool lethal=pitBehind(path.p[x.time+1],d,now+x.time+1);
+                risk*=lethal?1.65:people[x.owner].ready<x.time+c->kick_stun?1.05:0.55;
+            }
+            risk*=1-0.9*defeated[x.owner][x.time];
+            if(x.time>=hit) risk*=1-0.94*interrupted[x.owner];
+            if(!blade && (r.action==A_RECALL || path.st[x.time]==S_RECALL)) risk*=1.55;
+            if(slash && hit<=x.time+1 && hit>=x.time-2) {
+                int ahead=x.time+1-hit;
+                double slide=ahead==0?0:ahead==1?c->dash_v-2*c->acc:ahead==2?2*c->dash_v-3*c->acc:3*c->dash_v-3*c->acc;
+                Vec counter=x.center-x.heading*std::max(0.,slide)-path.p[hit];
+                double l=counter.len();
+                if(counter.dot(strikeAim)>=l*c->slash_cos/1000. && l<c->slash_reach) risk*=blade&&ahead==0?0.58:0.13;
+            }
+            rushRisk[x.owner]=std::max(rushRisk[x.owner],risk*x.weight);
+        }
+        for(int k=0;k<n;++k) value-=rushRisk[k]*25.;
+        for(int k=0;k<n;++k) {
+            const Person& e=people[k];
+            if(!e.active || !e.enemy || e.dist>8000) continue;
+            double risk=0;
+            for(int m: {0,1,2}) {
+                const Model& model=e.model[m];
+                double worst=0;
+                for(int j=1;j<=HORIZON;++j) {
+                    const Body& opponent=model.b[j];
+                    if(opponent.st==S_STUN || opponent.st==S_SLASHED || opponent.st==S_KICKED) continue;
+                    bool blade=e.ready<=j-int(c->slash_pre);
+                    Vec d=path.p[j]-opponent.point();
+                    double d2=d.sq(); double reach=c->slash_reach;
+                    if(d2>(reach+550)*(reach+550)) continue;
+                    if(wall(path.p[j],opponent.point(),now+j-1)) continue;
+                    double strength=blade?29.:10.;
+                    if(!blade) {
+                        if(pitBehind(path.p[j],d,now+j)) strength=31.;
+                        else if(e.ready<j+c->kick_stun) strength=22.;
+                    }
+                    double danger=sat((reach+550-std::sqrt(d2))/720)*strength/(1+0.09*j);
+                    if(strike && j>=hit) {
+                        Vec target=model.b[hit].point()-path.p[hit];
+                        double l=target.len();
+                        if(l<reach+150 && strikeAim.dot(target)>=0.48*l) {
+                            danger*=1-0.86*sat((reach+150-l)/340);
+                        }
+                    }
+                    if(r.action==A_THROW && j>=c->throw_pre+1) {
+                        bool connected=false;
+                        for(int i=int(c->throw_pre);i<j;++i) if(own[i].on &&
+                            segmentSq(own[i].a-model.b[i].point(),own[i].b-model.b[i+1].point())<dartRadius*dartRadius) { connected=true; break; }
+                        if(connected) danger*=0.22;
+                    }
+                    danger*=1-0.90*defeated[k][j-1];
+                    if(j>hit) danger*=1-0.95*interrupted[k];
+                    worst=std::max(worst,danger);
+                }
+                risk+=(m==0?0.46:m==1?0.25:0.29)*worst;
+            }
+            value-=risk*e.confidence;
+        }
+        if(focus>=0 && people[focus].ready<4 && nearest<7300 && !hiddenFrom(focus,now)) {
+            Vec radial=(prediction(focus,0).point()-here).unit();
+            value+=2.2*std::abs((path.p[4]-here).dot(radial.left()))/1000;
+        }
+        if(r.move.sq()>0) value+=0.08*r.move.dot(previousMove);
+        if(r.turn>=0) value-=0.14;
+        return value;
+    }
+    void incorporateReflection() {
+        for(int k=0;k<n;++k) {
+            const Reflection& guess=mirror[k];
+            Person& e=people[k];
+            if(!guess.active || !e.active || !e.enemy) continue;
+            double share=0.52*guess.confidence;
+            // Allocate one of the prior branches to the action sequence predicted by self play.
+            Model& model=e.model[10];
+            double sum=1.-model.w;
+            if(sum<=0) continue;
+            for(int m=0;m<activeModels();++m) e.model[m].w*=(1.-share)/sum;
+            model.b=guess.path;
+            model.w=share;
+            if(guess.swing>=0 && guess.swing<HORIZON) {
+                int t=guess.swing;
+                rushes.push_back({guess.path[t+1].point(),guess.swingAim,{},1.45*guess.confidence,k,t});
+            }
+            if(obs->d[k].st!=D_HAND || obs->p[k].st==S_THROW) continue;
+            Dart d=guess.dart;
+            int release=guess.release;
+            if(!dart_flying(d.st) && release<0) continue;
+            Threat h; h.owner=k; h.known=false; h.signal=std::max(1,release+int(c->delay)-int(c->throw_pre)+1);
+            h.weight=0.95*guess.confidence;
+            for(int t=0;t<HORIZON;++t) {
+                if(t==release && d.st==D_HAND) {
+                    Vec point=guess.path[t].point();
+                    d.st=D_OUT; d.x=ir(point.x); d.y=ir(point.y); d.left=c->range; d.age=0;
+                    d.vx=ir(1000*guess.throwAim.x); d.vy=ir(1000*guess.throwAim.y);
+                }
+                if(dart_flying(d.st)) h.s[t]=fly(d,guess.path[t+1].point(),guess.path[t].point(),now+t);
+            }
+            threats.push_back(h);
+        }
+    }
+    Action decide(const Obs& o,const TurnClock& clock,int limitUs) {
+        searched=false;
+        lastRoute=Route();
+        wallSlides=0; obs=&o; now=int(o.t); lag=std::min(now,int(c->delay)); seat=o.seat;
+        here=pos(o.me()); history[now%HIST].me=o.me(); history[now%HIST].dart=o.my_dart();
+        Action result;
+        if(!o.me().alive) return result;
+        auto carry=[&]() {
+            result.mx=ir(previousMove.x*1000); result.my=ir(previousMove.y*1000);
+            history[now%HIST].action=result;
+            return result;
+        };
+        if(clock.spent(limitUs)) return carry();
+        trackPeople();
+        contactObservation();
+        if(n==2 && !observer) observeParry();
+        threats.clear(); rushes.clear();
+        if(!observer) incorporateReflection();
+        for(int k=0;k<n;++k) if(k!=seat) {
+            if(clock.spent(limitUs)) return carry();
+            bool multi=people[k].active && (obs->d[k].st==D_BACK || obs->d[k].st==D_CALL || obs->d[k].st==D_RISE
+                || (obs->d[k].st==D_OUT && obs->d[k].left<4000));
+            if(multi) {
+                knownDart(k,0,0.37); knownDart(k,1,0.20); knownDart(k,2,0.16);
+                knownDart(k,3,0.095); knownDart(k,4,0.095); knownDart(k,5,0.08);
+            } else knownDart(k,0,1);
+            if(people[k].active) {
+                imagined(k);
+                if(now-parryStep[k]>=lag) prepareRush(k);
+                crossfire(k);
             }
         }
-        if (ready && cf->recall && o.my_dart().st == D_GROUND) consider({{}, {}, {}, A_RECALL});
-        Vec aim = best.kind == A_DASH && best.swingAt >= 0 ? best.follow : best.aim;
-        Action a = order(best.move, best.kind, aim);
-        if (bestValue < -900) a = {};
-        carry = {double(a.mx), double(a.my)};
-        moves[now % History] = a;
-        return a;
+        recovery=1;
+        if(o.my_dart().st==D_GROUND || o.my_dart().st==D_RISE) {
+            Vec item=pos(o.my_dart()); double myDist=(item-here).len();
+            recovery=1-0.64*sat((myDist-1900)/3200);
+            for(int k=0;k<n;++k) if(people[k].active && people[k].enemy && people[k].ready<7) {
+                double enDist=(item-prediction(k,1).point()).len();
+                if(enDist<myDist+500 && enDist<3300) recovery*=0.45;
+            }
+            if(pit(item,now+3)) recovery*=0.62;
+        }
+        if(clock.spent(limitUs)) return carry();
+        updateStrategy();
+        pressure=0;
+        if(focus>=0 && o.my_dart().st==D_HAND) {
+            const Person& target=people[focus];
+            pressure=sat((target.ready-3)/9.)*target.confidence;
+            for(int k=0;k<n;++k) if(k!=focus && people[k].active && people[k].enemy && people[k].ready<7 &&
+                people[k].dist<5900) pressure*=0.39;
+        }
+        bool armed=o.my_dart().st==D_HAND;
+        bool free=o.me().st==S_FREE || o.me().st==S_RECALL;
+        bool cancel=c->dash_slash && o.me().st==S_DASH && o.me().timer>c->dash_post && o.me().timer<=c->dash_t+c->dash_post;
+        bool canMove=free || o.me().st==S_THROW || o.me().st==S_THROWN;
+        if(!canMove && !cancel) { searched=true; history[now%HIST].action=result; return result; }
+        Route best;
+        Shot shot;
+        if(armed && free && focus>=0 && nearest<c->range+3500) {
+            flight[0]=0;
+            for(int j=0;j<FUTURE;++j) {
+                i64 speed=j<c->throw_pre ? 0 : imax(c->dart_vmin,c->dart_v-(j-c->throw_pre)*c->dart_dec);
+                flight[j+1]=std::min(double(c->range),flight[j]+speed);
+            }
+            for(int k=0;k<n;++k) if(people[k].active && people[k].dist<c->range+3500) prepareEvasion(k);
+            shot=aimShot(here+vel(o.me())*(c->throw_move*0.01*c->throw_pre),clock,limitUs-450);
+        }
+        array<Route,5> beam{};
+        int evaluated=0;
+        bool budgetSpent=false;
+        auto consider=[&](Vec move,int action=A_NONE,Vec aim=Vec{},int follow=-1,int parry=-1,int turn=-1,Vec after=Vec{}) {
+            if(budgetSpent) return;
+            if((evaluated++ & 1)==0 && clock.spent(limitUs)) {
+                budgetSpent=true;
+                return;
+            }
+            Route r{move,aim,action};
+            r.follow=follow; r.parry=parry; r.turn=turn; r.after=after;
+            r.value=evaluate(r,shot);
+            searched=true;
+            if(r.value>best.value) best=r;
+            if(turn<0 && follow<0 && (action==A_NONE || action==A_THROW)) {
+                for(int j=0;j<(int)beam.size();++j) {
+                    if(beam[j].value>=r.value) continue;
+                    for(int u=int(beam.size())-1;u>j;--u) beam[u]=beam[u-1];
+                    beam[j]=r; break;
+                }
+            }
+        };
+        vector<Vec> dirs;
+        dirs.reserve(40); dirs.push_back({});
+        int stride=n>4?4:2;
+        for(int i=0;i<32;i+=stride) dirs.push_back(compass[i]);
+        if(focus>=0) {
+            Vec toward=(prediction(focus,2).point()-here).unit();
+            dirs.push_back(toward); dirs.push_back(toward.left()); dirs.push_back(toward.left()*(-1));
+            if(pressure>0.2) {
+                dirs.push_back((prediction(focus,6,8).point()-here).unit());
+                dirs.push_back((prediction(focus,7,2).point()-here).unit());
+            }
+        }
+        dirs.push_back((home-here).unit());
+        if(o.my_dart().st==D_GROUND) dirs.push_back((pos(o.my_dart())-here).unit());
+        if(canMove && n<=4 && (flank>0.18 || (now>=c->col_start && land(now).wallNear[land(now).index(here)] &&
+            land(now).room[land(now).index(here)]<600))) {
+            for(int j=0;j<32;j+=4) {
+                Vec d=compass[j]*0.52;
+                consider(d);
+                if(shot.target>=0) consider(d,A_THROW,shot.dir);
+            }
+        }
+        for(size_t i=0;i<dirs.size();++i) {
+            Vec d=dirs[i];
+            if(canMove || !i || (cancel && i%2==0)) consider(d);
+            if(free && focus>=0 && nearest<(armed?4700:3200) && n<=4 && i) {
+                for(int delay: {2,4,6}) {
+                    Vec at=here+d*(c->run_v*delay);
+                    int impact=delay+int(armed?c->slash_pre:c->kick_pre);
+                    if((at-prediction(focus,impact).point()).sq()<2200*2200) consider(d,A_NONE,{},delay);
+                }
+            }
+            if(armed && free && c->block) {
+                int slot=-1,frame=-1; double priority=-1;
+                for(int u=0;u<(int)threats.size();++u) {
+                    const Threat& h=threats[u];
+                    if(!h.known || h.weight<0.30) continue;
+                    for(int wait=1;wait<=6;++wait) {
+                        int j=wait+int(c->slash_pre)-1;
+                        if(j>=HORIZON || !h.s[j].on) continue;
+                        Vec intercept=here+d*(wait*c->run_v);
+                        double dist=(h.s[j].a-intercept).len();
+                        if(dist>c->slash_reach+120 || dist<dartRadius-260) continue;
+                        double score=1.0-std::abs(dist-0.78*c->slash_reach)/c->slash_reach-0.06*wait;
+                        if(score>priority) { priority=score; slot=u; frame=wait; }
+                    }
+                }
+                if(slot>=0) consider(d,A_NONE,{},frame,slot);
+            }
+            if(shot.target>=0 && (i<=1 || n<=4 || i%2==0)) consider(d,A_THROW,shot.dir);
+            if(free && !o.me().cd && i) {
+                consider(d,A_DASH,d);
+                if(c->dash_slash && focus>=0 && nearest<6600 && (armed || people[focus].ready>2 || now>=c->col_start)) {
+                    for(int moved=1;moved<c->dash_t;++moved) {
+                        int follow=int(c->dash_pre)+moved;
+                        Vec expected=here+d*((moved+1)*c->dash_v);
+                        if((prediction(focus,follow).point()-expected).sq()<2700*2700)
+                            consider(d,A_DASH,d,follow);
+                    }
+                }
+            }
+        }
+        if((free||cancel) && (nearest<5000 || !threats.empty())) {
+            Route r{{},{1,0},A_MELEE};
+            Path p=routePath(r);
+            int hit=int(armed?c->slash_pre:c->kick_pre);
+            if(focus>=0) consider({},A_MELEE,meleeAim(p,hit));
+            if(armed && c->block && hit>=1 && hit<=HORIZON) for(const Threat& h:threats)
+                if(h.known && h.s[hit-1].on) consider({},A_MELEE,(h.s[hit-1].a-p.p[hit]).unit());
+        }
+        if(cancel && focus>=0 && nearest<6600) {
+            int remaining=int(o.me().timer-c->dash_post);
+            for(int delay=1;delay<remaining;++delay) consider({},A_NONE,{},delay);
+        }
+        if(!budgetSpent && canMove && n<=4 && nearest<9400) {
+            auto shortlist=beam;
+            for(const Route& r:shortlist) if(r.value>-1e15 && r.value>best.value-18) {
+                for(int u=0;u<32;u+=4) consider(r.move,r.action,r.aim,-1,-1,4,compass[u]);
+            }
+        }
+        if(free && c->recall && (o.my_dart().st==D_GROUND || o.my_dart().st==D_RISE)) {
+            consider({},A_RECALL);
+            if(o.me().st==S_RECALL && o.me().timer<HORIZON-2)
+                for(int i=0;i<32;i+=4) consider(compass[i],A_RECALL);
+        }
+        if(!searched) return carry();
+        if(best.action==A_THROW && !budgetSpent && !clock.spent(limitUs-300)) {
+            Vec release=routePath(best).p[c->throw_pre];
+            Shot corrected=aimShot(release,clock,limitUs);
+            if(corrected.target>=0) best.aim=corrected.dir;
+        }
+        if(best.action!=A_RECALL) { result.mx=ir(best.move.x*1000); result.my=ir(best.move.y*1000); }
+        result.ax=ir(best.aim.x*1000); result.ay=ir(best.aim.y*1000); result.act=best.action;
+        lastRoute=best;
+        previousMove=best.move;
+        history[now%HIST].action=result;
+        return result;
     }
 };
-
-} // namespace
+// Roll the delayed public position forward with a locally modelled opponent.
+// The same model is offered to every opponent. One-step discrepancies on observations
+// which subsequently arrive determine how much of its prediction enters the policy.
+struct Bot {
+    TacticalPolicy player;
+    array<std::unique_ptr<TacticalPolicy>,MAXP> policies;
+    array<GameInfo,MAXP> perspectives;
+    array<Past,HIST> own{};
+    array<array<Action,MAXP>,HIST> actions{};
+    array<array<bool,MAXP>,HIST> tested{};
+    array<double,MAXP> accuracy{};
+    array<int,MAXP> samples{};
+    Obs previous;
+    int previousTime=-1;
+    const GameInfo* info=nullptr;
+    void init(const GameInfo& gi) {
+        info=&gi;
+        player.init(gi);
+        accuracy.fill(0.4);
+        if(gi.n>4) return;
+        for(int k=0;k<gi.n;++k) if(k!=gi.seat) {
+            perspectives[k]=gi;
+            perspectives[k].seat=k;
+            policies[k]=std::make_unique<TacticalPolicy>();
+            policies[k]->observer=true;
+            policies[k]->init(perspectives[k]);
+        }
+    }
+    void assess(const Obs& old,int r) {
+        if(r!=previousTime+1 || previousTime<0) return;
+        Game before(*info,previous);
+        before.t=previousTime;
+        auto& cmd=actions[previousTime%HIST];
+        before.step(cmd.data());
+        for(int k=0;k<info->n;++k) {
+            if(k==info->seat || !tested[previousTime%HIST][k] || !previous.p[k].vis || !old.p[k].vis ||
+               !old.p[k].alive || previous.p[k].st!=S_FREE) continue;
+            const Player& predicted=before.p[k];
+            const Player& actual=old.p[k];
+            double err=(pos(predicted)-pos(actual)).len()+0.45*(vel(predicted)-vel(actual)).len();
+            double quality=(predicted.st==actual.st && before.d[k].st==old.d[k].st)?std::exp(-err/175.):0.;
+            accuracy[k]+=0.12*(quality-accuracy[k]);
+            ++samples[k];
+        }
+    }
+    static void projectMelee(TacticalPolicy& policy,Reflection& guess,Body b,const Route& plan,
+                             Vec followAim,Vec direction,bool hand,int t) {
+        for(int j=0;j<FUTURE;++j) {
+            if(j==plan.turn) direction=plan.after;
+            if(j==plan.follow) policy.begin(b,A_MELEE,followAim,hand);
+            guess.path[j]=b;
+            if(guess.swing<0 && (b.st==S_SLASH || b.st==S_KICK) && b.timer==1) {
+                guess.swing=j;
+                guess.swingAim=vec(b.ax,b.ay).unit();
+            }
+            policy.predictStep(b,direction,t+j);
+        }
+        guess.path[FUTURE]=b;
+    }
+    Action decide(const Obs& o) {
+        const TurnClock clock;
+        const int modelLimit=o.t==0 ? 6200 : 2200;
+        const int playerLimit=o.t==0 ? 14000 : 7050;
+        int n=o.n, seat=o.seat, t=int(o.t), r=std::max(0,t-int(info->cfg.delay));
+        own[t%HIST].me=o.me();
+        own[t%HIST].dart=o.my_dart();
+        if(!o.me().alive || n>4) return player.decide(o,clock,playerLimit);
+        Obs old=o;
+        old.t=r;
+        old.p[seat]=own[r%HIST].me;
+        old.d[seat]=own[r%HIST].dart;
+        if(r!=previousTime) {
+            assess(old,r);
+            previous=old;
+            previousTime=r;
+        }
+        Game base(*info,old);
+        Game now=base;
+        for(int j=r;j<t;++j) {
+            now.p[seat]=own[j%HIST].me;
+            now.p[seat].team=info->team[seat];
+            now.d[seat]=own[j%HIST].dart;
+            now.over=false;
+            now.step(actions[j%HIST].data());
+        }
+        now.p[seat]=o.me();
+        now.d[seat]=o.my_dart();
+        int target=-1;
+        double best=-1;
+        for(int k=0;k<n;++k) {
+            player.mirror[k].active=false;
+            if(k==seat || !now.p[k].alive || !old.p[k].vis || !old.p[k].alive || is_mate(*info,k)) continue;
+            double distance=(pos(now.p[k])-pos(o.me())).len();
+            double priority=10000.-distance+1200.*accuracy[k];
+            if(priority>best) { best=priority; target=k; }
+        }
+        for(int k=0;k<n;++k) {
+            if(k==seat) continue;
+            Obs view=old;
+            view.t=t; view.seat=k;
+            view.p[k]=now.p[k]; view.p[k].vis=1; view.d[k]=now.d[k];
+            for(int j=0;j<n;++j) if(j!=k && (!old.p[j].vis || !base.can_see(k,j))) {
+                const Player& p=old.p[j]; auto& q=view.p[j];
+                q=Player(); q.vis=0; q.alive=p.alive; q.kills=p.kills;
+                if(view.d[j].st==D_HAND) view.d[j].x=view.d[j].y=0;
+            }
+            TacticalPolicy& policy=*policies[k];
+            auto& cmd=actions[t%HIST][k]; cmd=Action();
+            tested[t%HIST][k]=false;
+            if(target!=k || !view.p[k].alive || clock.spent(modelLimit)) {
+                policy.history[t%HIST].me=view.p[k];
+                policy.history[t%HIST].dart=view.d[k];
+                Vec carry=vel(view.p[k])*(1000./std::max<i64>(1,info->cfg.run_v));
+                cmd.mx=ir(carry.x); cmd.my=ir(carry.y);
+                policy.history[t%HIST].action=cmd;
+                continue;
+            }
+            cmd=policy.decide(view,clock,modelLimit);
+            if(!policy.searched) continue;
+            tested[t%HIST][k]=true;
+            double trust=sat((accuracy[k]-0.37)/0.50)*sat(samples[k]/10.);
+            if(trust<0.15) continue;
+            auto& guess=player.mirror[k];
+            guess.active=true; guess.confidence=trust;
+            guess.dart=view.d[k]; guess.release=-1; guess.swing=-1;
+            Route plan=policy.lastRoute;
+            Body b(view.p[k]);
+            bool hand=view.d[k].st==D_HAND;
+            if(b.st==S_RECALL && (cmd.mx || cmd.my || (cmd.act && cmd.act!=A_RECALL))) { b.st=S_FREE; b.timer=0; }
+            policy.begin(b,int(cmd.act),vec(cmd.ax,cmd.ay),hand);
+            if(b.st==S_THROW) { guess.release=b.timer; guess.throwAim=vec(b.ax,b.ay).unit(); }
+            Vec followAim{};
+            if(plan.follow>=0) {
+                int hit=plan.follow+int(hand?info->cfg.slash_pre:info->cfg.kick_pre);
+                followAim=policy.strikeDirection(plan,policy.routePath(plan),hit);
+            }
+            projectMelee(policy,guess,b,plan,followAim,vec(cmd.mx,cmd.my)*0.001,hand,t);
+        }
+        Action chosen=player.decide(o,clock,playerLimit);
+        actions[t%HIST][seat]=chosen;
+        return chosen;
+    }
+};
+}
 
 DART_MAIN(Bot)
