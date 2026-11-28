@@ -117,20 +117,17 @@
 
 | 名次 | 作品 | 作者 | 谁写的 | 模型 / 工具 | 实力值 | 终场赛参照名次 | 评测日期 |
 |---:|---|---|---|---|---:|---|---|
-| 1 | [Overmatch（超越火力）](tank/genshinkleenahida__overmatch/) | genshinkleenahida（[@genshinkleenahida](https://github.com/genshinkleenahida)） | AI 写 | GPT-6.1 Sol / Codex | 887 | 1 / 15 | 2026-10-26 |
-| 2 | [Crosscurrent（交叉火线）](tank/saner123321__crosscurrent/) | Saner（[@saner123321](https://github.com/saner123321)） | AI 写 | GPT-6 / Codex | 850 | 1 / 15 | 2026-11-26 |
-| 3 | [MCTS Vanguard](tank/lite0812__mcts-vanguard/) | Lite0812（[@lite0812](https://github.com/lite0812)） | AI 写 | GPT-6.1 Sol / Codex | 818 | 1 / 15 | 2026-10-27 |
-| 4 | [NNUE Vanguard](tank/lite0812__nnue-vanguard/) | Lite0812（[@lite0812](https://github.com/lite0812)） | AI 写 | GPT-6.1 Sol / Codex | 818 | 1 / 15 | 2026-10-27 |
-| 5 | [value-based PUCT](tank/slzhta__value-based-puct/) | slzhta（[@slzhta](https://github.com/slzhta)） | 人和 AI 合写 | GPT-6 Astra / Codex | 765 | 1 / 15 | 2026-10-21 |
-| 6 | [神经网络搜索 (自适应预算版)](tank/mbfcasper__neural-search/) | mbfcasper（[@mbfcasper](https://github.com/mbfcasper)） | AI 写 | GPT-6.1 Sol + Gemini 4 Argon + Gemini 3.8 Flash + Claude Opus 5.5 / Codex / Antigravity / Claude Code | 670 | 1 / 15 | 2026-10-20 |
-| 7 | [Astra6.2](tank/swe-et__astra6-2/) | Swe-et（[@swe-et](https://github.com/swe-et)） | AI 写 | Astra6.2 / Codex | 633 | 1 / 15 | 2026-11-10 |
-| 8 | [GPT-6.2 Sol](tank/t66sun__gpt-6-2-sol/) | t66sun（[@t66sun](https://github.com/t66sun)） | AI 写 | GPT-6.2 Sol / Codex | 619 | 1 / 15 | 2026-11-11 |
+| 1 | [NNUE Vanguard·联合出招版](tank/owo9891__nnue-avx2-tuned/) | DeepSeek-V4.1-Flash（[@owo9891](https://github.com/owo9891)） | AI 写 | DeepSeek-V4.1-Flash + Claude-5-5-opus + GPT-6-2-sol / DeepSeek Harness | 898 | 1 / 15 | 2026-11-28 |
+| 2 | [Overmatch（超越火力）](tank/genshinkleenahida__overmatch/) | genshinkleenahida（[@genshinkleenahida](https://github.com/genshinkleenahida)） | AI 写 | GPT-6.1 Sol / Codex | 887 | 1 / 15 | 2026-10-26 |
+| 3 | [Crosscurrent（交叉火线）](tank/saner123321__crosscurrent/) | Saner（[@saner123321](https://github.com/saner123321)） | AI 写 | GPT-6 / Codex | 850 | 1 / 15 | 2026-11-26 |
+| 4 | [MCTS Vanguard](tank/lite0812__mcts-vanguard/) | Lite0812（[@lite0812](https://github.com/lite0812)） | AI 写 | GPT-6.1 Sol / Codex | 818 | 1 / 15 | 2026-10-27 |
+| 5 | [NNUE Vanguard](tank/lite0812__nnue-vanguard/) | Lite0812（[@lite0812](https://github.com/lite0812)） | AI 写 | GPT-6.1 Sol / Codex | 818 | 1 / 15 | 2026-10-27 |
+| 6 | [value-based PUCT](tank/slzhta__value-based-puct/) | slzhta（[@slzhta](https://github.com/slzhta)） | 人和 AI 合写 | GPT-6 Astra / Codex | 765 | 1 / 15 | 2026-10-21 |
+| 7 | [神经网络搜索 (自适应预算版)](tank/mbfcasper__neural-search/) | mbfcasper（[@mbfcasper](https://github.com/mbfcasper)） | AI 写 | GPT-6.1 Sol + Gemini 4 Argon + Gemini 3.8 Flash + Claude Opus 5.5 / Codex / Antigravity / Claude Code | 670 | 1 / 15 | 2026-10-20 |
+| 8 | [Astra6.2](tank/swe-et__astra6-2/) | Swe-et（[@swe-et](https://github.com/swe-et)） | AI 写 | Astra6.2 / Codex | 633 | 1 / 15 | 2026-11-10 |
+| 9 | [GPT-6.2 Sol](tank/t66sun__gpt-6-2-sol/) | t66sun（[@t66sun](https://github.com/t66sun)） | AI 写 | GPT-6.2 Sol / Codex | 619 | 1 / 15 | 2026-11-11 |
 
 固定参照来自 [`tank/results/final/成绩.md`](../tank/results/final/成绩.md)。社区对局使用新地图，在不同机器上运行，局数较少；参照分数不是本次在虚拟机上重新测出的官方成绩。
-
-没有成绩的投稿：
-
-- [NNUE Vanguard·联合出招版](tank/owo9891__nnue-avx2-tuned/)（@owo9891）：代码有更新，等待重新评测
 
 ## 第 7 集 · 光轮对战（`tron/`）
 

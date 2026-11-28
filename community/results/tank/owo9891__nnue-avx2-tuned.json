@@ -1,5 +1,5 @@
 {
- "commit": "a4af56367d69d6df26418cdbc9d38c951a35ecce",
+ "commit": "e75fe88c3dd3edcb4b255587d63e42da1cc842d4",
  "detail": {
   "budget": {
    "budget_kind": "cpu",
@@ -71,11 +71,11 @@
   "opponents": [
    {
     "display": "GPT-6 Astra",
-    "draws": 0,
+    "draws": 1,
     "losses": 0,
     "name": "Astra",
     "rating": 506.9454874458487,
-    "wins": 20
+    "wins": 19
    },
    {
     "display": "GPT-6.1 Sol Ultrafast（Codex CLI）",
@@ -88,26 +88,26 @@
    {
     "display": "Gemini 4 Argon Contributor（OpenCode Go）",
     "draws": 0,
-    "losses": 2,
+    "losses": 0,
     "name": "Gemini",
     "rating": 355.4298340699916,
-    "wins": 18
+    "wins": 20
    },
    {
     "display": "GPT-6.1 Sol",
     "draws": 0,
-    "losses": 1,
+    "losses": 0,
     "name": "Sol",
     "rating": 318.7995999432353,
-    "wins": 19
+    "wins": 20
    },
    {
     "display": "Claude Opus 5.5",
     "draws": 0,
-    "losses": 1,
+    "losses": 0,
     "name": "Opus",
     "rating": 258.78757366446996,
-    "wins": 19
+    "wins": 20
    },
    {
     "display": "Muse Wonder Full",
@@ -120,10 +120,10 @@
    {
     "display": "小米 MiMo V2.6 Pro",
     "draws": 0,
-    "losses": 1,
+    "losses": 0,
     "name": "MiMo",
     "rating": 28.926589497795632,
-    "wins": 19
+    "wins": 20
    },
    {
     "display": "Grok 4.7",
@@ -205,17 +205,17 @@
  "env": {
   "compiler": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
   "cpus": 4,
-  "platform": "Linux-7.0.0-1017-azure-x86_64-with-glibc2.39",
+  "platform": "Linux-7.0.0-1020-azure-x86_64-with-glibc2.39",
   "python": "3.12.3"
  },
  "episode": "tank",
  "errors": [],
  "files": {
-  "bot.cpp": "2a9f411a1942abf61b39c51c5c9dc78c454f6563197fbc8fb75aa14f0331f7bf"
+  "bot.cpp": "ad3888f9ae35e220c692efd8835661544ec6835edd5b1f2ae3ad6b05ed92caf9"
  },
  "mode": "quick",
  "schema": 1,
- "score": 817.7,
+ "score": 898.0,
  "status": "pass",
- "time": "2026-11-07T18:06:37Z"
+ "time": "2026-11-28T17:57:05Z"
 }
