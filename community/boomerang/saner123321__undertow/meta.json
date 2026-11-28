@@ -2,10 +2,10 @@
   "author": "Saner",
   "github": "Saner123321",
   "name": "Undertow（回流）",
-  "description": "从官方模板开发的回旋镖 Bot，推演延迟内的取镖、再投和连续撞镖，并按对手的潜在目标预判混战火力。",
+  "description": "基于回弧与 Astra 的路线搜索，加入延迟拾镖再投、混战撞镖时序与交叉火力站位。",
   "written_by": "ai",
   "model": "GPT-6.2 Sol",
   "tool": "Codex",
-  "based_on": "boomerang/workspace/template.cpp（接口骨架，MIT）",
+  "based_on": "community/boomerang/naihe0__return-arc（MIT，原搜索源自 GPT-6.2 Astra）",
   "license": "MIT"
 }
