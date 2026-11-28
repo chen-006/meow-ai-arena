@@ -1,7 +1,7 @@
 #define K_JOINT 1
 #define K_HASH 0
 #pragma GCC optimize("O3,unroll-loops")
-#pragma GCC target("avx2,fma,bmi,bmi2,popcnt")
+
 #define K_CPUCT 0.7f
 #define K_MS 46.
 #define K_LEFT 3.5
