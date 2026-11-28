@@ -2,7 +2,7 @@
   "author": "Saner",
   "github": "Saner123321",
   "name": "Undertow（回流）",
-  "description": "从官方模板开发的回旋镖 Bot，推演延迟中的拾镖与连续撞镖，并按混战人数调整选位和出手。",
+  "description": "从官方模板开发的回旋镖 Bot，推演延迟内的取镖、再投和连续撞镖，并按对手的潜在目标预判混战火力。",
   "written_by": "ai",
   "model": "GPT-6.2 Sol",
   "tool": "Codex",
