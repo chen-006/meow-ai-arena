@@ -34,6 +34,8 @@ for _k in cast.ORDER12 + cast.EXTRA:    # 正赛 12 位（+ 名单外可点名�
     ART_TWEAK[_k] = cast.ART_TWEAK12[_k]
     if _k not in COLOR or cast.style() == "voxel":
         COLOR[_k] = voxchars.color(_k)
+for _k in voxchars.DEMO:                # 示范小人上信息栏时补齐颜色和默认名（可用 DART_LABELS 覆盖显示名）
+    COLOR.setdefault(_k, voxchars.color(_k)); LABEL.setdefault(_k, voxchars.label(_k))
 LABEL.update(cast.LABEL12)              # 第 12 集：Carbon / Hydrogen 的显示名
 # 显示名覆盖：环境变量 DART_LABELS="gemini=Carbon,gemini_s=Hydrogen"；不设时使用默认名
 for _kv in os.environ.get("DART_LABELS", "").split(","):
@@ -43,7 +45,7 @@ for _kv in os.environ.get("DART_LABELS", "").split(","):
 if cast.style() == "voxel":             # 旧名字在像素造型下跟着换主色
     for _old, _new in cast.TO_VOXEL.items():
         COLOR[_old] = voxchars.color(_new)
-TEAM = ("#FF5B4D", "#2E8CFF")
+TEAM = ("#FF5B4D", "#2E8CFF")       # 只是兜底；画的时候一律用 Hud.tcol（按队伍身份算的）
 TEAM_NAME = ("红队", "蓝队")
 MODE_NAME = {0: "单挑", 1: "四人乱斗", 2: "4 v 4", 3: "歼灭", 4: "占点", 5: "刺王"}
 NEUTRAL = (196, 190, 182)
@@ -82,9 +84,24 @@ def rgb(h):
 _AV = {}
 
 
+# 环境变量 DART_AVATAR_FILES="demo_blue=/path/to/avatar.png"：给某个造型直接指定现成圆头像（不按立绘裁切）
+_AVF = dict(kv.split("=", 1) for kv in os.environ.get("DART_AVATAR_FILES", "").split(";") if "=" in kv)
+
+
 def avatar(key, size, dead=False):
     k = (key, size, dead)
     if k in _AV:
+        return _AV[k]
+    if key in _AVF:
+        im = Image.open(_AVF[key]).convert("RGBA").resize((size * 3, size * 3), Image.LANCZOS)
+        if dead:
+            g = im.convert("L").convert("RGBA")
+            im = Image.blend(g, Image.new("RGBA", g.size, (240, 236, 230, 255)), 0.35)
+        mask = Image.new("L", im.size, 0)
+        ImageDraw.Draw(mask).ellipse((0, 0, im.size[0] - 1, im.size[1] - 1), fill=255)
+        out = Image.new("RGBA", im.size, (0, 0, 0, 0))
+        out.paste(im, (0, 0), mask)
+        _AV[k] = out.resize((size, size), Image.LANCZOS)
         return _AV[k]
     im = Image.open(os.path.join(ART, ART_FILES[key])).convert("RGBA")
     a = np.array(im)[:, :, 3]
@@ -235,7 +252,13 @@ class Hud:
         self.tl = TLM.Timeline(rp, self.roster)
         A = self.tl.anim
         self.team_mode = rp.mode in (2, 3, 4, 5)
-        self.tname = cast.team_names(self.roster, rp.players) if rp.mode >= 3 else TEAM_NAME
+        # 队伍色按队伍身份（cast.team_colors：Astra 队蓝、Fable 队红），换边局也不变；队名跟着颜色
+        self.tcol = cast.team_colors(self.roster, rp.players)
+        self.tname = (cast.team_names(self.roster, rp.players) if rp.mode >= 3
+                      else tuple(cast.COLOR_NAME.get(c, d) for c, d in zip(self.tcol, TEAM_NAME)))
+        # 环境变量 DART_TEAMNAMES="左队名,右队名" 覆盖队名（team 0, team 1）；不设时使用默认队名
+        if os.environ.get("DART_TEAMNAMES", "").count(",") == 1:
+            self.tname = tuple(os.environ["DART_TEAMNAMES"].split(","))
         # 播报：(时刻, 文字段落)
         self.feed = []
         for (t_, k, B) in sorted(((B.deaths[k][0], k, B) for B, k in A.all_deaths()), key=lambda e: (e[0], e[1])):
@@ -365,7 +388,7 @@ class Hud:
                 if rp.mode == 4 and rp.ctl:
                     sc = rp.ctl[rp.T]["score"]
                     txt += "  %d : %d" % (sc[0] // 20, sc[1] // 20)
-                banner = (txt, TEAM[rp.winner], a, None)
+                banner = (txt, self.tcol[rp.winner], a, None)
             else:
                 winner_key = self.roster[rp.winner]
                 winner_name = LABEL[winner_key]
@@ -434,7 +457,7 @@ class Hud:
         cnt = [0, 0]
         idx = [0, 0]
         for team in (0, 1):
-            tc = rgb(TEAM[team])
+            tc = rgb(self.tcol[team])
             zx0 = box[0] + 8 + (cw * per + mid_w if team == 1 else 0)
             zx1 = zx0 + cw * per + 2
             zone = Image.new("RGBA", (zx1 - zx0, box[3] - box[1] - 12), (0, 0, 0, 0))
@@ -454,19 +477,19 @@ class Hud:
             x = box[0] + 10 + cw * (i + (per if team == 1 else 0)) + (mid_w if team == 1 else 0)
             key = self.roster[k]
             st = ("击杀 %d" % kills[k]) if alive[k] else ("出局 · " + CAUSE_SHORT.get(cause[k], ""))
-            card(cv, x, box[1] + 14, cw - 8, box[3] - box[1] - 22, key, alive[k], st, TEAM[team], av=54, name_size=22,
+            card(cv, x, box[1] + 14, cw - 8, box[3] - box[1] - 22, key, alive[k], st, self.tcol[team], av=54, name_size=22,
                  sub_size=16, tint=None, pop=pops[k])
         cx = box[0] + 10 + cw * per + mid_w // 2 - 4
         f1, f2, f3 = font(42, "Black"), font(15, "Medium"), font(17, "Bold")
         a, b = str(cnt[0]), str(cnt[1])
-        d.text((cx - 18 - d.textlength(a, font=f1), box[1] + 3), a, font=f1, fill=rgb(TEAM[0]))
+        d.text((cx - 18 - d.textlength(a, font=f1), box[1] + 3), a, font=f1, fill=rgb(self.tcol[0]))
         d.text((cx - 7, box[1] + 5), ":", font=font(36, "Bold"), fill=(170, 160, 150))
-        d.text((cx + 18, box[1] + 3), b, font=f1, fill=rgb(TEAM[1]))
+        d.text((cx + 18, box[1] + 3), b, font=f1, fill=rgb(self.tcol[1]))
         for team, sg in ((0, -1), (1, 1)):
-            nm = TEAM_NAME[team]
+            nm = self.tname[team]
             tw = d.textlength(nm, font=f3)
             px = cx - 62 - tw / 2 if sg < 0 else cx + 62 - tw / 2
-            d.rounded_rectangle((px - 9, box[1] + 58, px + tw + 9, box[1] + 84), 12, fill=rgb(TEAM[team]) + (255,))
+            d.rounded_rectangle((px - 9, box[1] + 58, px + tw + 9, box[1] + 84), 12, fill=rgb(self.tcol[team]) + (255,))
             d.text((px, box[1] + 59), nm, font=f3, fill=(255, 255, 255))
         lab = "%d:%02d" % (left // 60, left % 60)
         d.text((cx - d.textlength(lab, font=f2) / 2, box[1] + 62), lab, font=f2, fill=SUB)
@@ -481,9 +504,11 @@ class Hud:
         mid_w = 300
         per = rp.n // 2
         cw = (box[2] - box[0] - mid_w - 16) // rp.n
+        sd = (lambda tm: 1 - tm) if getattr(rp, "blueleft", False) else (lambda tm: tm)   # 蓝左视角：Astra 队（team 1）排在左
+        LT, RT = sd(0), sd(1)   # 左边、右边分别是哪个队伍号
         for team in (0, 1):
-            tc = rgb(TEAM[team])
-            zx0 = box[0] + 6 + (cw * per + mid_w if team == 1 else 0)
+            tc = rgb(self.tcol[team])
+            zx0 = box[0] + 6 + (cw * per + mid_w if sd(team) == 1 else 0)
             zx1 = zx0 + cw * per + 2
             zone = Image.new("RGBA", (zx1 - zx0, box[3] - box[1] - 12), (0, 0, 0, 0))
             zd = ImageDraw.Draw(zone)
@@ -502,7 +527,7 @@ class Hud:
                 cnt[team] += 1
             i = idx[team]
             idx[team] += 1
-            x = box[0] + 8 + cw * (i + (per if team == 1 else 0)) + (mid_w if team == 1 else 0)
+            x = box[0] + 8 + cw * (i + (per if sd(team) == 1 else 0)) + (mid_w if sd(team) == 1 else 0)
             key = self.roster[k]
             if alive[k]:
                 st = "击杀 %d" % kills[k]
@@ -512,7 +537,7 @@ class Hud:
                 st = ("复活 %d" % max(1, int(math.ceil((nxt - gt) / 20.0 - 1e-6)))) if nxt is not None else "出局"
             else:
                 st = "出局 · " + CAUSE_SHORT.get(cause[k], "")
-            card(cv, x, box[1] + 15, cw - 6, box[3] - box[1] - 24, key, alive[k], st, TEAM[team], av=50, name_size=20,
+            card(cv, x, box[1] + 15, cw - 6, box[3] - box[1] - 24, key, alive[k], st, self.tcol[team], av=50, name_size=20,
                  sub_size=15, tint=None, pop=pops[k])
             if k in kings:
                 ay = box[1] + 15 + (box[3] - box[1] - 24 - 50) // 2
@@ -521,19 +546,19 @@ class Hud:
         d = ImageDraw.Draw(cv)
         f3 = font(17, "Bold")
         # 两队队名牌
-        for team, sg in ((0, -1), (1, 1)):
+        for team, sg in ((LT, -1), (RT, 1)):
             nm = self.tname[team]
             tw = d.textlength(nm, font=f3)
             px = cx - 80 - tw / 2 if sg < 0 else cx + 80 - tw / 2
-            d.rounded_rectangle((px - 9, box[1] + 62, px + tw + 9, box[1] + 88), 12, fill=rgb(TEAM[team]) + (255,))
+            d.rounded_rectangle((px - 9, box[1] + 62, px + tw + 9, box[1] + 88), 12, fill=rgb(self.tcol[team]) + (255,))
             d.text((px, box[1] + 63), nm, font=f3, fill=(255, 255, 255))
         f2 = font(15, "Medium")
         if rp.mode == 4:
             c = rp.ctl_at(gt) or dict(owner=[-1] * 3, taking=[-1] * 3, prog=[0] * 3, score=[0, 0])
-            a, b = str(c["score"][0] // 20), str(c["score"][1] // 20)
+            a, b = str(c["score"][LT] // 20), str(c["score"][RT] // 20)
             f1 = font(40, "Black")
-            d.text((cx - 16 - d.textlength(a, font=f1), box[1] + 2), a, font=f1, fill=rgb(TEAM[0]))
-            d.text((cx + 16, box[1] + 2), b, font=f1, fill=rgb(TEAM[1]))
+            d.text((cx - 16 - d.textlength(a, font=f1), box[1] + 2), a, font=f1, fill=rgb(self.tcol[LT]))
+            d.text((cx + 16, box[1] + 2), b, font=f1, fill=rgb(self.tcol[RT]))
             lab = "%d:%02d" % (left // 60, left % 60)
             d.text((cx - d.textlength(lab, font=f2) / 2, box[1] + 66), lab, font=f2, fill=SUB)
             d.text((cx - 6, box[1] + 4), ":", font=font(32, "Bold"), fill=(170, 160, 150))
@@ -545,16 +570,16 @@ class Hud:
                 hs = 22
                 gap = 26
                 wtot = gap * (tot - 1)
-                x0 = (cx - 30 - wtot) if team == 0 else (cx + 30)
+                x0 = (cx - 30 - wtot) if sd(team) == 0 else (cx + 30)
                 for h_ in range(tot):
-                    heart(cv, x0 + h_ * gap, box[1] + 30, hs, filled=h_ < n_, col=TEAM[team])
+                    heart(cv, x0 + h_ * gap, box[1] + 30, hs, filled=h_ < n_, col=self.tcol[team])
             d.text((cx - d.textlength("VS", font=font(18, "Black")) / 2, box[1] + 19), "VS", font=font(18, "Black"), fill=(170, 160, 150))
         else:
             f1 = font(42, "Black")
-            a, b = str(cnt[0]), str(cnt[1])
-            d.text((cx - 18 - d.textlength(a, font=f1), box[1] + 3), a, font=f1, fill=rgb(TEAM[0]))
+            a, b = str(cnt[LT]), str(cnt[RT])
+            d.text((cx - 18 - d.textlength(a, font=f1), box[1] + 3), a, font=f1, fill=rgb(self.tcol[LT]))
             d.text((cx - 7, box[1] + 5), ":", font=font(36, "Bold"), fill=(170, 160, 150))
-            d.text((cx + 18, box[1] + 3), b, font=f1, fill=rgb(TEAM[1]))
+            d.text((cx + 18, box[1] + 3), b, font=f1, fill=rgb(self.tcol[RT]))
         lab = MODE_NAME.get(rp.mode, "")
         if rp.mode != 4:
             d.text((cx - d.textlength(lab, font=f2) / 2, box[1] + 66), lab, font=f2, fill=SUB)
@@ -653,11 +678,11 @@ class Hud:
         d = ImageDraw.Draw(cv)
         own, tk = c["owner"][i], c["taking"][i]
         pr = c["prog"][i] / float(self.rp.cfg.get("CAPTURE", 20))
-        fill = rgb(TEAM[own]) if own >= 0 else NEUTRAL
+        fill = rgb(self.tcol[own]) if own >= 0 else NEUTRAL
         d.ellipse((x - r - 4, y - r - 4, x + r + 4, y + r + 4), fill=(255, 252, 246))
         d.ellipse((x - r, y - r, x + r, y + r), fill=fill)
         if tk >= 0 and pr > 0:
-            d.arc((x - r - 4, y - r - 4, x + r + 4, y + r + 4), -90, -90 + 360 * pr, fill=rgb(TEAM[tk]), width=5)
+            d.arc((x - r - 4, y - r - 4, x + r + 4, y + r + 4), -90, -90 + 360 * pr, fill=rgb(self.tcol[tk]), width=5)
         f = font(int(r * 1.25), "Black")
         d.text((x - d.textlength(nm, font=f) / 2, y - r * 0.86), nm, font=f, fill=(255, 255, 255))
 
@@ -667,11 +692,11 @@ class Hud:
         d = ImageDraw.Draw(lay)
         r = 22 + 6 * pop
         c0 = 60
-        fill = rgb(TEAM[own]) if own >= 0 else NEUTRAL
+        fill = rgb(self.tcol[own]) if own >= 0 else NEUTRAL
         d.ellipse((c0 - r - 5, c0 - r - 5, c0 + r + 5, c0 + r + 5), fill=(255, 252, 246, 235))
         d.ellipse((c0 - r, c0 - r, c0 + r, c0 + r), fill=fill + (255,))
         if tk >= 0 and pr > 0:
-            d.arc((c0 - r - 5, c0 - r - 5, c0 + r + 5, c0 + r + 5), -90, -90 + 360 * pr, fill=rgb(TEAM[tk]) + (255,), width=7)
+            d.arc((c0 - r - 5, c0 - r - 5, c0 + r + 5, c0 + r + 5), -90, -90 + 360 * pr, fill=rgb(self.tcol[tk]) + (255,), width=7)
         f = font(int(r * 1.3), "Black")
         d.text((c0 - d.textlength(nm, font=f) / 2, c0 - r * 0.9), nm, font=f, fill=(255, 255, 255))
         sh = Image.new("RGBA", lay.size, (0, 0, 0, 0))
@@ -684,7 +709,7 @@ class Hud:
         """复活点上的倒计时：头像 + 一圈还剩多少的弧 + 秒数。"""
         key = self.roster[k]
         team = self.rp.players[k][1]
-        tc = rgb(TEAM[team])
+        tc = rgb(self.tcol[team])
         S = 130
         lay = Image.new("RGBA", (S, S), (0, 0, 0, 0))
         d = ImageDraw.Draw(lay)
@@ -712,12 +737,12 @@ class Hud:
         x0 = S[0] / 2 - gap * (tot - 1) / 2
         for i in range(tot):
             if i < n_:
-                heart(lay, x0 + i * gap, 56, hs, filled=True, col=TEAM[team], glow=blink)
+                heart(lay, x0 + i * gap, 56, hs, filled=True, col=self.tcol[team], glow=blink)
             elif i == n_ and brk > 0:
                 u = 1 - brk
-                heart(lay, x0 + i * gap, 56 - 34 * u, hs * (1 + 0.5 * u), filled=True, col=TEAM[team], alpha=brk, broken=True)
+                heart(lay, x0 + i * gap, 56 - 34 * u, hs * (1 + 0.5 * u), filled=True, col=self.tcol[team], alpha=brk, broken=True)
             else:
-                heart(lay, x0 + i * gap, 56, hs, filled=False, col=TEAM[team])
+                heart(lay, x0 + i * gap, 56, hs, filled=False, col=self.tcol[team])
         if a < 0.999:
             lay.putalpha(lay.getchannel("A").point(lambda v: int(v * a)))
         paste_clip(cv, lay, px - S[0] // 2, py - 70)
@@ -747,7 +772,7 @@ class Hud:
         for kind, v in segs:
             if kind == "av":
                 key = self.roster[v]
-                col = TEAM[self.rp.players[v][1]] if self.team_mode else COLOR[key]
+                col = self.tcol[self.rp.players[v][1]] if self.team_mode else COLOR[key]
                 d.ellipse((x - 3, y + 4, x + av + 2, y + 9 + av), fill=rgb(col))
                 lay.alpha_composite(avatar(key, av), (int(x), y + 7))
                 d = ImageDraw.Draw(lay)
@@ -759,7 +784,7 @@ class Hud:
             elif kind == "team":
                 s = self.tname[v]
                 tw = d.textlength(s, font=f)
-                d.rounded_rectangle((x - 2, y + 8, x + tw + 18, y + 42), 14, fill=rgb(TEAM[v]))
+                d.rounded_rectangle((x - 2, y + 8, x + tw + 18, y + 42), 14, fill=rgb(self.tcol[v]))
                 d.text((x + 8, y + 8), s, font=f, fill=(255, 255, 255))
                 x += tw + 30
             else:
@@ -788,7 +813,7 @@ class Hud:
         f = font(22, "Bold")
         s = LABEL[key]
         tw = d.textlength(s, font=f)
-        col = TEAM[self.rp.players[k][1]] if self.team_mode else COLOR[key]
+        col = self.tcol[self.rp.players[k][1]] if self.team_mode else COLOR[key]
         x0, y0 = px - tw / 2 - 14, py - 40
         d.rounded_rectangle((x0, y0, x0 + tw + 28, y0 + 34), 17, fill=rgb(col) + (245,))
         d.polygon([(px - 7, y0 + 33), (px + 7, y0 + 33), (px, y0 + 42)], fill=rgb(col) + (245,))

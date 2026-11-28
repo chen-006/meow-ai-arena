@@ -9,7 +9,7 @@
 1. **团队开发 120 分钟**：队长只能用文字任务书指挥四名队员，各人改各人的程序，编译成功的程序自动发给队友联调；全场另有 3 次、每次不超过 30 行的亲手改。时间到，十个程序全部冻结。
 2. **六回合布阵对决**：火山口（歼灭）、三座栈桥（占点）、双堡（刺王）各两回合。每回合两队同时交布阵和战术单，正式那套打 1,300～2,000 局定这一回合的分，六回合共 **10,600 局**。赛后再把每回合两队的正式和两套备选两两对打，得到 6 张 3×3"如果当时"矩阵（**54,000 局**）。
 
-- **目录里有什么**：`workspace/` 团队赛选手包 · `engine/` 裁判与三档陪练源码 · `build_engine.py` 一键编译裁判与陪练 · `prompt.md` 与 `prompts/` 全部提示词与通知原文 · `dispatches/` 83 笔正式派活记录 · `hand_edits/` 3 笔生效亲手改 diff · `rounds/` 6 回合全部 36 套布阵与战术单 · `bots/` 10 位选手程序与笔记（含赛后复盘） · `results/` 6 回合正式成绩、逐局结果与 6 张 3×3 矩阵 · `tournament/` 一条命令重算与核对脚本 · `replays/` 28 局代表性与经典回放 · `purecut/` 纯享版 72 局分层抽局脚本与选局清单 · `analysis/` 脱敏比赛全景、分析稿、费用表、帕累托数据与三波控制变量实验 · `team-tools/` 队长派活与亲手改工具（选手端） · `rank-kit/` 1v1 排位赛本地选手包源文件 · `web-play/` 第 11～12 期网页可玩版前端源码 · `renderer/` 5v5 团队赛渲染器
+- **目录里有什么**：`workspace/` 团队赛选手包 · `engine/` 裁判与三档陪练源码 · `build_engine.py` 一键编译裁判与陪练 · `prompt.md` 与 `prompts/` 全部提示词与通知原文 · `dispatches/` 83 笔正式派活记录 · `hand_edits/` 3 笔生效亲手改 diff · `rounds/` 6 回合全部 36 套布阵与战术单 · `bots/` 10 位选手程序与笔记（含赛后复盘） · `results/` 6 回合正式成绩、逐局结果与 6 张 3×3 矩阵 · `tournament/` 一条命令重算与核对脚本 · `replays/` 28 局代表性与经典回放 · `purecut/` 纯享版 72 局分层抽局脚本与选局清单 · `analysis/` 脱敏比赛全景、分析稿、费用表、帕累托数据与三波控制变量实验 · `team-tools/` 队长派活与亲手改工具（选手端） · `rank-kit/` 1v1 排位赛本地选手包源文件 · `web-play/` 第 11～12 期网页可玩版前端源码 · `renderer/` 5v5 团队赛渲染器 · `production/` 第 12 集配乐署名与配音提示词/语气表
 - **复现成绩与矩阵**：`cd boomerang-team && python tournament/score.py`：只要 Python 3.9+（无第三方依赖），约 1～2 秒从 `results/formal_games.jsonl.gz`（10,600 局）和 `results/matrix_games.jsonl.gz`（54,000 局）重算全部 6 回合正式比分（含种子配对标准误与两倍 SE 平局判定）及 6 张 3×3 共 54 格矩阵，逐项核对并输出“核对通过”。
 
 ## 规则速览
@@ -96,6 +96,7 @@ python renderer/render_game.py replays/R1_g366_astra_1v5.txt -o R1_g366.mp4
 | [`rank-kit/`](rank-kit/README.md) | 网站 1v1 排位赛本地选手包源文件（Windows/Linux 通用，源码上限 262,144 字符）与打包脚本 |
 | [`web-play/`](web-play/README.md) | 第 11～12 期网页可玩版前端源码（WASM 裁判与 Bot 桥接、3D/2D 渲染、构建与场景导出脚本） |
 | [`renderer/`](renderer/README.md) | 第 12 集 5v5 团队赛 Blender 渲染器 |
+| [`production/`](production/) | 第 12 集配乐署名（[`配乐署名.md`](production/配乐署名.md)，全片 8 首含 CC BY 署名格式）与配音提示词/语气表（[`配音提示词.md`](production/配音提示词.md)、[`语气表.md`](production/语气表.md)） |
 | [`CONDITIONS.md`](CONDITIONS.md) | 比赛条件：模型、工具、思考档、用时、中断和事故、赛场负载 |
 | [`MANIFEST.md`](MANIFEST.md) | 收录范围：放了什么、不放什么 |
 | [`source_manifest.json`](source_manifest.json) | 全部收录文件与比赛原件的 SHA-256 清单 |
@@ -107,7 +108,7 @@ python renderer/render_game.py replays/R1_g366_astra_1v5.txt -o R1_g366.mp4
 - 提示词、派活记录与两份选手笔记（`gemini-4-hydrogen/notes.md`、`gemini-4-carbon/notes.md`）中指向主办方本机的绝对路径已替换为相对路径或 `{WORKDIR}` 占位，原件 SHA-256 记录于 [`source_manifest.json`](source_manifest.json)。
 - 渲染器中主办方本机绝对路径已改为环境变量（`DART_BLENDER`、`DART_PYTHON`、`DART_WORK`、`DART_CACHE`、`DART_AVATARS`、`DART_FONT`、`DART_FFMPEG`、`DART_PORTRAITS`）和相对仓库的默认值，头像默认复用 [`../boomerang/renderer/assets/avatars/`](../boomerang/renderer/assets/avatars/NOTICE.md)。
 - 比赛中的中断和事故（Kimi 工具开局不可用及退还亲手改、队员单次任务 30 分钟上限、Fable 队长触发 Claude 5 小时额度上限与补时 37.7 分钟、第 5、6 回合之间隔夜）见 [`CONDITIONS.md`](CONDITIONS.md)"中断和事故"。
-- 不收录：选手原始会话日志与原始思考内容、纯主办方运营脚本与内部日志、排位赛服务端代码、密钥/账号/余额、配音/解说稿/字幕/音乐 MP3/剪辑工程、网页大体积可再生 3D 场景包与 wasm 编译产物、全部 10,600 局原始回放及实验原始大回放。详见 [`MANIFEST.md`](MANIFEST.md)。
+- 不收录：选手原始会话日志与原始思考内容、纯主办方运营脚本与内部日志、排位赛服务端代码、密钥/账号/余额、解说稿/配音成品/字幕/音乐 MP3/剪辑工程（配乐署名与配音提示词见 `production/`）、网页大体积可再生 3D 场景包与 wasm 编译产物、全部 10,600 局原始回放及实验原始大回放。详见 [`MANIFEST.md`](MANIFEST.md)。
 
 ## 视频
 

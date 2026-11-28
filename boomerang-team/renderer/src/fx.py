@@ -20,9 +20,6 @@ def _lin(hex_):
     return (c[0], c[1], c[2])
 
 
-TEAMC = None     # 两队的队伍色（线性），第一次用时从 chars.TEAM_COLORS 取
-
-
 def _mixc(a, b, w):
     return tuple(x + (y - x) * w for x, y in zip(a, b))
 
@@ -171,9 +168,14 @@ class Pool:
 
 
 class FX:
-    def __init__(self, coll, colors, pitch_deg=58.0):
-        """colors：每个座位的主色（#RRGGBB）。"""
+    def __init__(self, coll, colors, pitch_deg=58.0, team_colors=None):
+        """colors：每个座位的主色（#RRGGBB）。team_colors：(team 0, team 1) 的队伍色，已按队伍身份算好（cast.team_colors），
+        不给就用 chars.TEAM_COLORS 兜底。存在实例上、不用模块级缓存，同一进程建第二局也不会沿用上一局的颜色。"""
         self.col = [_lin(c) for c in colors]
+        if team_colors is None:
+            import chars as _CH
+            team_colors = _CH.TEAM_COLORS
+        self.teamc = [_lin(c) for c in team_colors]
         m = mat_emit_alpha("M_fx", strength=1.25)
         mhot = mat_emit_alpha("M_fx_hot", strength=2.2)
         self.ring = Pool("fx_ring", 28, coll, _ring_mesh("r"), m)
@@ -238,10 +240,6 @@ class FX:
         """offs / hide / no_fx 只在演示模式（demo.py）用：某座位的特效晚几步、某座位的特效不画、某类特效不画。"""
         self.reset()
         rp = anim.rp
-        global TEAMC
-        if TEAMC is None:
-            import chars as _CH
-            TEAMC = [_lin(c) for c in _CH.TEAM_COLORS]
         Y = _lin("#FFE066")
         offs = offs or {}
         for (T, ty, P) in anim.static_fx:
@@ -255,7 +253,7 @@ class FX:
             if ty == "respawn" and -12 <= u < 0:
                 # 复活前：复活点上落下一道队伍色的光柱，越来越亮、越来越细，地上一圈往里收
                 x, y = P["pos"]
-                tc = TEAMC[P.get("team", 0) % 2]
+                tc = self.teamc[P.get("team", 0) % 2]
                 w = clamp((u + 12) / 10.0)
                 ob = self.beam.take()
                 if ob is not None:
@@ -373,7 +371,7 @@ class FX:
                 self.put(self.ring, x, y, z + 0.1, 0.6 + 2.2 * eout(u / 6), WHITE, 0.75 * clamp(1 - u / 8) ** 1.3)
             elif ty == "respawn" and u < 12:
                 # 复活落地：光柱散开、地上一圈冲出去、几粒光点
-                tc = TEAMC[P.get("team", 0) % 2]
+                tc = self.teamc[P.get("team", 0) % 2]
                 ob = self.beam.take()
                 if ob is not None and u < 5:
                     ob.location = (x, -y, 0.0)
@@ -395,7 +393,7 @@ class FX:
                 self.sparks(x, y, 1.0, u, 12, 0.7, G, seed=T, life=12, size=0.18, col2=WHITE, up=1.0)
             elif ty == "capture" and u < 22:
                 # 翻点完成：圈的边上冲出一圈新主人颜色的环，绕圈一串光点
-                tc = TEAMC[P.get("team", 0) % 2]
+                tc = self.teamc[P.get("team", 0) % 2]
                 r = P.get("r", 2.0)
                 self.put(self.ring, x, y, 0.05, r * (1.0 + 0.5 * eout(u / 8)), _mixc(tc, WHITE, 0.2), 0.95 * clamp(1 - u / 14) ** 1.2)
                 self.put(self.disc, x, y, 0.03, r * 1.05, _mixc(tc, WHITE, 0.5), 0.35 * clamp(1 - u / 6))

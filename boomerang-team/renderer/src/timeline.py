@@ -348,6 +348,10 @@ class Timeline:
             c = cams[f]
             self.frames.append(dict(gt=gts[f], cam=(c[0], c[1], c[2] * zoom), shake=(sx, sy), pitch=c[3], yaw=c[4]))
         self.n = n
+        import os as _os
+        if _os.environ.get("DART_TLPATCH"):            # 慢放 / 近景时间表补丁（见 tlpatch.py）
+            import tlpatch
+            tlpatch.apply(self, _os.environ["DART_TLPATCH"])
 
     def cam_location(self, f):
         fr = self.frames[f]

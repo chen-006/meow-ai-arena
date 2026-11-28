@@ -329,11 +329,42 @@ def _frames(rp):
     return frames, others
 
 
-def team_cols(rp, bbox):
+# 两边城堡 / 远景城塔的颜色：跟着"这一边出生的是哪队"走，队伍色按队伍身份（Astra 队蓝、Fable 队红）。
+# env.build_env 每建一局先调 set_teams 整个覆盖，不会沿用上一局。
+ROOF_OF = {"#FF5B4D": "#D9573F", "#2E8CFF": "#4A78C8"}     # 旗是队伍色，屋顶用压暗一点的同色
+SIDES = {}
+
+
+def set_teams(rp, team_colors=None):
+    """team_colors：(team 0, team 1)。左边 = 出生点平均 x 更小的那队（回放里一向是 team 0，这里按出生点算，不靠约定）。"""
+    import chars as _CH
+    tc = tuple(team_colors) if team_colors else tuple(_CH.TEAM_COLORS)
+    xs = [[], []]
+    try:
+        sp = rp.spawns()
+        for (s, t, _) in rp.players:
+            if t in (0, 1) and s < len(sp):
+                xs[t].append(sp[s][0])
+    except Exception:
+        pass
+    left_team = 1 if (xs[0] and xs[1] and sum(xs[1]) / len(xs[1]) < sum(xs[0]) / len(xs[0])) else 0
+    SIDES.clear()
+    SIDES.update(left=tc[left_team].upper(), right=tc[1 - left_team].upper(), mid_x=rp.Wm / 2)
+
+
+def side_cols(left):
+    """这一边的 (旗色, 屋顶色)，#RRGGBB。主题 rock 里的 red / blue 可以微调这两种旗色。"""
     from env import ROCK
+    if not SIDES:
+        SIDES.update(left="#FF5B4D", right="#2E8CFF", mid_x=0.0)
+    tc = SIDES["left" if left else "right"]
+    flag = {"#FF5B4D": ROCK.get("red", "#FF5B4D"), "#2E8CFF": ROCK.get("blue", "#2E8CFF")}.get(tc, tc)
+    return flag, ROOF_OF.get(tc, tc)
+
+
+def team_cols(rp, bbox):
     left = (bbox[0] + bbox[2]) / 2 < rp.W / 2
-    flag = ROCK.get("red", "#FF5B4D") if left else ROCK.get("blue", "#2E8CFF")
-    roof = "#D9573F" if left else "#4A78C8"
+    flag, roof = side_cols(left)
     return C(flag), C(roof), left
 
 
@@ -767,13 +798,14 @@ def far_seastack(x, y, z, s, rng, T, L, S, pal=None):
 
 
 def f_keep_tower(x, y, z, s, rng, T, L, S):
-    """远处城里的圆塔：石头塔身、一圈垛口、尖顶（红 / 蓝轮换）、顶上一面小旗。"""
+    """远处城里的圆塔：石头塔身、一圈垛口、尖顶（跟着它在哪一边：左边的塔用左边那队的屋顶色）、顶上一面小旗。"""
     st = [C("#E6DED0"), C("#D2C8B8"), C("#EEE8DC")]
     H = rng.uniform(2.4, 3.2) * s
     r = 0.5 * s
     stack(S, x, y, [(r * 1.05, z - 0.1), (r, z + H * 0.5), (r * 0.96, z + H)], [st[0], st[1]], n=14, smooth=True)
     stack(S, x, y, [(r * 0.96, z + H), (r * 1.15, z + H + 0.1 * s), (r * 1.15, z + H + 0.25 * s)], [C("#A89E90"), st[2]], n=14, cap=st[2])
-    roof = C(["#D9573F", "#4A78C8", "#D9573F"][int(rng.integers(0, 3))])
+    int(rng.integers(0, 3))                     # 原来按这个随机数挑红 / 蓝；照样取一次，后面的随机摆放不变
+    roof = C(side_cols(x < SIDES.get("mid_x", 0.0))[1])
     stack(S, x, y, [(r * 1.05, z + H + 0.25 * s), (0.02, z + H + 1.4 * s)], [roof], n=14)
     for k in range(3):
         a = -math.pi / 2 + (k - 1) * 0.6

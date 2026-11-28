@@ -43,6 +43,10 @@ class Replay:
         self.Wm = self.W * self.cell
         self.Hm = self.H * self.cell
         self.n = len(self.players)
+        self.blueleft = False
+        if blueleft_wanted(self):
+            _rotate180(self)
+            self.blueleft = True
         self.T = max(self.states)
         self._index_events()
 
@@ -332,3 +336,54 @@ class Replay:
 
 def load(path):
     return Replay(path)
+
+
+# ------------------------------------------------------------ 蓝左视角
+# 环境变量 DART_BLUELEFT=1 时：换边局（team 0 是 Fable 队、Astra 队在右出生）读进来后，把全部坐标绕地图中心转 180 度
+# （三张图的 MAP / WAVE 绕中心转 180 度完全一致，所以地图不变），速度、朝向、动作方向一起转。座位号、队伍号、时间、事件步都不变，
+# 画面上 = 同一局从对面看过去：Astra 队（蓝）在左、Fable 队（红）在右，灯光布景和常规局一样。信息栏按 rp.blueleft 把 Astra 队排在左。
+# 不设环境变量时行为和原来完全一样。DART_BLUELEFT=0 / 不设 = 关。
+_ASTRA_NAMES = {"astra", "sol", "hydrogen", "gemini_s", "grok", "kimi"}
+_FABLE_NAMES = {"fable", "opus", "carbon", "gemini", "glm", "deepseek"}
+
+
+def blueleft_wanted(rp):
+    import os
+    if os.environ.get("DART_BLUELEFT", "0") not in ("1", "true", "yes", "on"):
+        return False
+    # Astra 本人（名字以 astra 开头，含实验里的 astra2..）在 team 1、team 0 里没有 Astra 本人 = 换边局（含赛后实验的换边局）
+    t0 = [nm.lower() for (s, tm, nm) in rp.players if tm == 0]
+    t1 = [nm.lower() for (s, tm, nm) in rp.players if tm == 1]
+    return any(n.startswith("astra") for n in t1) and not any(n.startswith("astra") for n in t0)
+
+
+def _rotate180(rp):
+    Wmm = int(round(rp.Wm * 1000))
+    Hmm = int(round(rp.Hm * 1000))
+    rp.grid = [list(reversed(r)) for r in reversed(rp.grid)]
+    rp.wave = [list(reversed(r)) for r in reversed(rp.wave)]
+    rp.points = [(nm, rp.Wm - x, rp.Hm - y, r) for (nm, x, y, r) in rp.points]
+    for t, S in rp.states.items():
+        for c in S["chars"]:
+            c["x"], c["y"] = Wmm - c["x"], Hmm - c["y"]
+            c["vx"], c["vy"] = -c["vx"], -c["vy"]
+            c["ax"], c["ay"] = -c["ax"], -c["ay"]
+            c["face"] = (c["face"] + 18000) % 36000
+        for d in S["darts"]:
+            d["x"], d["y"] = Wmm - d["x"], Hmm - d["y"]
+            d["vx"], d["vy"] = -d["vx"], -d["vy"]
+    DIR_BC = ("THROW", "SLASH", "KICK", "DASH")
+    POS_BC = ("RELEASE", "TURN", "DROP", "RECALL", "CALL", "LOST", "STOP", "RESPAWN")
+    POS_CD = ("CLASH", "BLOCK", "FALL")
+    for t, L in rp.events.items():
+        out = []
+        for e in L:
+            ty, v = e[0], list(e[1:])
+            if ty in DIR_BC and len(v) >= 3:
+                v[1], v[2] = -v[1], -v[2]
+            elif ty in POS_BC and len(v) >= 3:
+                v[1], v[2] = Wmm - v[1], Hmm - v[2]
+            elif ty in POS_CD and len(v) >= 4:
+                v[2], v[3] = Wmm - v[2], Hmm - v[3]
+            out.append((ty,) + tuple(v))
+        rp.events[t] = out

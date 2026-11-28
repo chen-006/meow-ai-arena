@@ -33,6 +33,7 @@ renderer\出片.cmd replays\R5_g1662_glm_kick_king.txt -o R5_g1662.mp4 --procs 3
 - **模式自动识别**：从回放头部的 `MODE 3/4/5`、`POINTS`、`KING` 自动切换歼灭 / 占点 / 刺王视觉元素。
 - **地图主题自动匹配**：`caldera` → 火山口岩浆、`piers` → 三座栈桥海港、`keeps` → 双堡石城；可用 `--theme <名字>` 覆盖。首次渲染某张图会自动做数分钟地形与贴图预处理，并按地图指纹缓存在 `renderer/work/cache/`。
 - **常用参数**：`-o 输出.mp4`、`--procs 3`（并行 Blender 进程数）、`--samples 12`（EEVEE 采样数）、`--frames a:b`（仅渲片段）、`--roster ...`（手动指定 10 个造型名）、`--no-hud`、`--keep`（保留中间帧）。中断后重跑同一命令可自动跳过已渲帧。
+- **蓝左视角（换边局统一视角）**：设置环境变量 `DART_BLUELEFT=1` 时，读入换边局（Astra 队在右侧出生的回放）会自动把地图、角色、飞镖与事件坐标绕中心旋转 180°，并在顶部信息栏固定 Astra 队（蓝）在左、Fable 队（红）在右；不设或设为 `0` 时按回放原始朝向渲染。此外，设置 `DART_TLPATCH=<补丁.json>` 可按 `src/tlpatch.py` 施加局部慢放与近景镜头接管。
 
 没装 Blender 时，可以先确认回放和信息栏没问题（只需要 Python 和 pillow，几秒钟）：
 

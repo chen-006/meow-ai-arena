@@ -58,7 +58,7 @@ CHARS = {
                     feats=["purple_ribbons", "taiji_pendant", "sleeves"]),
 }
 ORDER = ["claude", "gpt", "gemini", "doubao", "kimi", "deepseek", "grok", "hunyuan"]
-TEAM_COLORS = ("#FF5B4D", "#2E8CFF")  # 4v4：珊瑚红队 / 天蓝队
+TEAM_COLORS = ("#FF5B4D", "#2E8CFF")  # 认不出队伍时的兜底（team 0 红 / team 1 蓝）；正式按 cast.team_colors（Astra 队蓝、Fable 队红）
 
 HEAD_Z = 0.63
 HEAD_R = 0.245

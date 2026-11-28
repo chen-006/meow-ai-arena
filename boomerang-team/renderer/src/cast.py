@@ -83,17 +83,61 @@ def default_roster_10():
     return TEAM_ASTRA + TEAM_FABLE
 
 
+# 队伍色跟着队伍身份走：Astra 队永远蓝、Fable 队永远红，不管这一局谁在左边。
+# 回放里 team 0 永远是左边出生的那队；换边局（奇数局号）是 Fable 队当 team 0，所以不能按 team 号给颜色。
+BLUE = "#2E8CFF"
+RED = "#FF5B4D"
+LEGACY = (RED, BLUE)        # 认不出队伍时的兜底：第 11 集 4v4 的老规矩（team 0 红、team 1 蓝）
+COLOR_NAME = {RED: "红队", BLUE: "蓝队"}
+
+
+def _team_keys(roster, players, team):
+    """这一队的人：造型名 + 回放 PLAYER 名字（小写、按 NAME_KEY 归一），两样都算。"""
+    ks = set()
+    for (s, t, nm) in players:
+        if t != team:
+            continue
+        if roster and s < len(roster):
+            ks.add(roster[s])
+        ks.add(NAME_KEY.get(nm.strip().lower(), nm.strip().lower()))
+    return ks
+
+
+def _team_id(roster, players, team):
+    ks = _team_keys(roster, players, team)
+    if "astra" in ks:
+        return "astra"
+    if "fable" in ks:
+        return "fable"
+    return None
+
+
+def team_colors(roster, players):
+    """(team 0 的颜色, team 1 的颜色)：有 Astra 的队蓝、有 Fable 的队红；只认出一队，另一队给另一种颜色；都认不出用 LEGACY。"""
+    ids = [_team_id(roster, players, t) for t in (0, 1)]
+    want = {"astra": BLUE, "fable": RED}
+    c = [want.get(i) for i in ids]
+    if c[0] and c[1] and c[0] != c[1]:
+        return (c[0], c[1])
+    if c[0] and not c[1]:
+        return (c[0], RED if c[0] == BLUE else BLUE)
+    if c[1] and not c[0]:
+        return (RED if c[1] == BLUE else BLUE, c[1])
+    return LEGACY
+
+
 def team_names(roster, players):
-    """两队的显示名：队里有 Astra / Fable 就叫"Astra 队 / Fable 队"，否则红队 / 蓝队。"""
+    """两队的显示名：队里有 Astra / Fable 就叫"Astra 队 / Fable 队"，否则按这队的颜色叫红队 / 蓝队。"""
+    cols = team_colors(roster, players)
     out = []
-    for team, dflt in ((0, "红队"), (1, "蓝队")):
-        ks = [roster[s] for (s, t, _) in players if t == team and s < len(roster)]
-        if "astra" in ks:
+    for team in (0, 1):
+        i = _team_id(roster, players, team)
+        if i == "astra":
             out.append("Astra 队")
-        elif "fable" in ks:
+        elif i == "fable":
             out.append("Fable 队")
         else:
-            out.append(dflt)
+            out.append(COLOR_NAME.get(cols[team], "红队" if team == 0 else "蓝队"))
     return tuple(out)
 
 

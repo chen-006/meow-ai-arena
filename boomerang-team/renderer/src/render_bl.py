@@ -135,7 +135,9 @@ class Stage:
         self.no_fx = set(dm.get("no_fx", []))
         self.anim = self.tl.anim
         SL.clear_scene()
-        self.env = ENV.build_env(rp, decor=decor)
+        # 队伍色按队伍身份（Astra 队蓝、Fable 队红），换边局也不变；小人、地上的圈、特效、城堡都用这一份
+        self.team_colors = cast.team_colors(self.roster, rp.players)
+        self.env = ENV.build_env(rp, decor=decor, team_colors=self.team_colors)
         ENV.std_light()
         cd = bpy.data.cameras.new("cam")
         cd.lens = TLM.LENS
@@ -153,7 +155,7 @@ class Stage:
         self.colors = []
         for k in range(n):
             key = self.roster[k]
-            tc = CH.TEAM_COLORS[rp.players[k][1]] if team else None
+            tc = self.team_colors[rp.players[k][1]] if team else None
             self.rigs.append(CH.make_rig(key, coll, "c%d" % k, team_color=tc, ring_color=tc, crown=k in kings))
             self.colors.append(CH.rig_color(key))
         for k in range(n):                      # 像素小人：被镖打中的，预先把"切成两半"建好（占点有复活：每条命各一套）
@@ -167,13 +169,13 @@ class Stage:
         self.points = None
         if getattr(rp, "points", None):         # 第 12 集占点：地上三个圈
             import modes_bl
-            self.points = modes_bl.Points(rp, ENV.new_coll("points"), CH.TEAM_COLORS)
+            self.points = modes_bl.Points(rp, ENV.new_coll("points"), self.team_colors)
         self.darts = [CH.make_dart_any(self.colors[k], coll, "dart%d" % k, scale=1.42) for k in range(n)]
         self.blurs = [CH.make_blur_disc(self.colors[k], coll, "blur%d" % k) for k in range(n)]
         self.trails = [Ribbon("trail%d" % k, coll) for k in range(n)]
         self.dashes = [Ribbon("dash%d" % k, coll, n=11) for k in range(n)]
         self.lin = [SL.hexc(c)[:3] for c in self.colors]
-        self.fx = FXM.FX(ENV.new_coll("fx"), self.colors, TLM.PITCH)
+        self.fx = FXM.FX(ENV.new_coll("fx"), self.colors, TLM.PITCH, team_colors=self.team_colors)
         if self.ghost:
             self._ghost_mats(int(self.ghost["seat"]))
 

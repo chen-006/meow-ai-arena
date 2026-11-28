@@ -995,8 +995,10 @@ class Env:
         self.liquids = []       # 第 12 集液面：[dict(ob, kind=sheet|curtain|light, w, w_from, z)]
 
 
-def build_env(rp, seed=5, decor=True, clouds=True):
+def build_env(rp, seed=5, decor=True, clouds=True, team_colors=None):
+    """team_colors：(team 0, team 1) 的队伍色（cast.team_colors 按队伍身份算好）；双堡的旗、屋顶和远景城塔按它上色。"""
     apply_theme(rp)
+    P12.set_teams(rp, team_colors)
     d = os.path.join(CACHE, rp.map_key())
     assert os.path.exists(os.path.join(d, "ok.json")), "先跑 prep.py：" + d
     env = Env()
