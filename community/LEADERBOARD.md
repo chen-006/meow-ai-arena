@@ -121,13 +121,16 @@
 | 2 | [Crosscurrent（交叉火线）](tank/saner123321__crosscurrent/) | Saner（[@saner123321](https://github.com/saner123321)） | AI 写 | GPT-6 / Codex | 850 | 1 / 15 | 2026-11-26 |
 | 3 | [MCTS Vanguard](tank/lite0812__mcts-vanguard/) | Lite0812（[@lite0812](https://github.com/lite0812)） | AI 写 | GPT-6.1 Sol / Codex | 818 | 1 / 15 | 2026-10-27 |
 | 4 | [NNUE Vanguard](tank/lite0812__nnue-vanguard/) | Lite0812（[@lite0812](https://github.com/lite0812)） | AI 写 | GPT-6.1 Sol / Codex | 818 | 1 / 15 | 2026-10-27 |
-| 5 | [NNUE Vanguard·AVX2 调优版](tank/owo9891__nnue-avx2-tuned/) | DeepSeek-V4.1-Flash（[@owo9891](https://github.com/owo9891)） | AI 写 | DeepSeek-V4.1-Flash + Claude-Opus-5-5 + Kimi-K3 + GPT-6-Astra / DeepSeek Harness | 818 | 1 / 15 | 2026-11-07 |
-| 6 | [value-based PUCT](tank/slzhta__value-based-puct/) | slzhta（[@slzhta](https://github.com/slzhta)） | 人和 AI 合写 | GPT-6 Astra / Codex | 765 | 1 / 15 | 2026-10-21 |
-| 7 | [神经网络搜索 (自适应预算版)](tank/mbfcasper__neural-search/) | mbfcasper（[@mbfcasper](https://github.com/mbfcasper)） | AI 写 | GPT-6.1 Sol + Gemini 4 Argon + Gemini 3.8 Flash + Claude Opus 5.5 / Codex / Antigravity / Claude Code | 670 | 1 / 15 | 2026-10-20 |
-| 8 | [Astra6.2](tank/swe-et__astra6-2/) | Swe-et（[@swe-et](https://github.com/swe-et)） | AI 写 | Astra6.2 / Codex | 633 | 1 / 15 | 2026-11-10 |
-| 9 | [GPT-6.2 Sol](tank/t66sun__gpt-6-2-sol/) | t66sun（[@t66sun](https://github.com/t66sun)） | AI 写 | GPT-6.2 Sol / Codex | 619 | 1 / 15 | 2026-11-11 |
+| 5 | [value-based PUCT](tank/slzhta__value-based-puct/) | slzhta（[@slzhta](https://github.com/slzhta)） | 人和 AI 合写 | GPT-6 Astra / Codex | 765 | 1 / 15 | 2026-10-21 |
+| 6 | [神经网络搜索 (自适应预算版)](tank/mbfcasper__neural-search/) | mbfcasper（[@mbfcasper](https://github.com/mbfcasper)） | AI 写 | GPT-6.1 Sol + Gemini 4 Argon + Gemini 3.8 Flash + Claude Opus 5.5 / Codex / Antigravity / Claude Code | 670 | 1 / 15 | 2026-10-20 |
+| 7 | [Astra6.2](tank/swe-et__astra6-2/) | Swe-et（[@swe-et](https://github.com/swe-et)） | AI 写 | Astra6.2 / Codex | 633 | 1 / 15 | 2026-11-10 |
+| 8 | [GPT-6.2 Sol](tank/t66sun__gpt-6-2-sol/) | t66sun（[@t66sun](https://github.com/t66sun)） | AI 写 | GPT-6.2 Sol / Codex | 619 | 1 / 15 | 2026-11-11 |
 
 固定参照来自 [`tank/results/final/成绩.md`](../tank/results/final/成绩.md)。社区对局使用新地图，在不同机器上运行，局数较少；参照分数不是本次在虚拟机上重新测出的官方成绩。
+
+没有成绩的投稿：
+
+- [NNUE Vanguard·联合出招版](tank/owo9891__nnue-avx2-tuned/)（@owo9891）：代码有更新，等待重新评测
 
 ## 第 7 集 · 光轮对战（`tron/`）
 
@@ -161,12 +164,15 @@
 |---:|---|---|---|---|---:|---:|---:|---|---|
 | 1 | [回弧](boomerang/naihe0__return-arc/) | Naihe0（[@naihe0](https://github.com/naihe0)） | AI 写 | GPT-6.2 Astra / Codex | 307 | 360 | 255 | 1 / 14 | 2026-11-27 |
 | 2 | [NeonVortex](boomerang/mattewsx__neon-vortex/) | Mattewsx（[@mattewsx](https://github.com/mattewsx)） | AI 写 | Gemini 4 Neon / Antigravity | 290 | 365 | 214 | 2 / 14 | 2026-11-25 |
-| 3 | [Undertow（回流）](boomerang/saner123321__undertow/) | Saner（[@saner123321](https://github.com/saner123321)） | AI 写 | GPT-6.2 Sol / Codex | 209 | 242 | 175 | 2 / 14 | 2026-11-27 |
-| 4 | [sword（纯手刀bot）](boomerang/assdbdbdgghyu-alt__sword/) | fdsfds（[@assdbdbdgghyu-alt](https://github.com/assdbdbdgghyu-alt)） | 人和 AI 合写 | GPT-6.2 Sol / Codex | 146 | 147 | 146 | 2 / 14 | 2026-11-26 |
-| 5 | [氖光回旋镖](boomerang/lushangyi99-boop__neon-boomerang/) | 氖猫猫（[@lushangyi99-boop](https://github.com/lushangyi99-boop)） | AI 写 | Gemini 4 Neon (XHigh) / Antigravity | 101 | 113 | 89 | 3 / 14 | 2026-11-21 |
-| 6 | [GLM 回旋镖](boomerang/yunxiu0621__glm-boomerang/) | yunxiu0621（[@yunxiu0621](https://github.com/yunxiu0621)） | AI 写 | GLM-5.4 / ZCode | 85 | 81 | 88 | 3 / 14 | 2026-11-25 |
-| 7 | [小白](boomerang/dreamshome__xiaobai/) | dreamshome（[@dreamshome](https://github.com/dreamshome)） | AI 写 | GPT-6.2 Sol (Max) / Codex CLI | 76 | 75 | 78 | 3 / 14 | 2026-11-22 |
-| 8 | [混元回旋镖](boomerang/rustsnowsu__hunyuan-boomerang/) | 苏醒锈雪（[@rustsnowsu](https://github.com/rustsnowsu)） | AI 写 | Tencent Hunyuan Hy / WorkBuddy | -43 | -34 | -51 | 10 / 14 | 2026-11-25 |
-| 9 | [旋猎](boomerang/jasonczh4__spin-hunter/) | Jason CZH（[@jasonczh4](https://github.com/jasonczh4)） | AI 写 | Muse Spark / Codex | -167 | -246 | -88 | 13 / 14 | 2026-11-27 |
+| 3 | [sword（纯手刀bot）](boomerang/assdbdbdgghyu-alt__sword/) | fdsfds（[@assdbdbdgghyu-alt](https://github.com/assdbdbdgghyu-alt)） | 人和 AI 合写 | GPT-6.2 Sol / Codex | 146 | 147 | 146 | 2 / 14 | 2026-11-26 |
+| 4 | [氖光回旋镖](boomerang/lushangyi99-boop__neon-boomerang/) | 氖猫猫（[@lushangyi99-boop](https://github.com/lushangyi99-boop)） | AI 写 | Gemini 4 Neon (XHigh) / Antigravity | 101 | 113 | 89 | 3 / 14 | 2026-11-21 |
+| 5 | [GLM 回旋镖](boomerang/yunxiu0621__glm-boomerang/) | yunxiu0621（[@yunxiu0621](https://github.com/yunxiu0621)） | AI 写 | GLM-5.4 / ZCode | 85 | 81 | 88 | 3 / 14 | 2026-11-25 |
+| 6 | [小白](boomerang/dreamshome__xiaobai/) | dreamshome（[@dreamshome](https://github.com/dreamshome)） | AI 写 | GPT-6.2 Sol (Max) / Codex CLI | 76 | 75 | 78 | 3 / 14 | 2026-11-22 |
+| 7 | [混元回旋镖](boomerang/rustsnowsu__hunyuan-boomerang/) | 苏醒锈雪（[@rustsnowsu](https://github.com/rustsnowsu)） | AI 写 | Tencent Hunyuan Hy / WorkBuddy | -43 | -34 | -51 | 10 / 14 | 2026-11-25 |
+| 8 | [旋猎](boomerang/jasonczh4__spin-hunter/) | Jason CZH（[@jasonczh4](https://github.com/jasonczh4)） | AI 写 | Muse Spark / Codex | -167 | -246 | -88 | 13 / 14 | 2026-11-27 |
 
 固定参照来自 [`boomerang/results/海选榜.md`](../boomerang/results/海选榜.md)。默认 416 局（一对一 312、四人局 104），种子和海选不同；参照名次只和 13 位选手比较，不能当作正式名次。
+
+没有成绩的投稿：
+
+- [Undertow（回流）](boomerang/saner123321__undertow/)（@saner123321）：代码有更新，等待重新评测
