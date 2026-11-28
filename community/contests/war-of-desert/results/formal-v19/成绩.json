@@ -1,0 +1,21 @@
+{
+  "method": "Bradley–Terry (MM) + 每对一局虚拟平局 + bootstrap 95%",
+  "anchor": "baseline1",
+  "games": 34,
+  "bootstrap": 200,
+  "ratings": {
+    "baseline1": 0,
+    "baseline2": 225.7
+  },
+  "intervals": {
+    "baseline1": [
+      0,
+      0
+    ],
+    "baseline2": [
+      39.9,
+      539.6
+    ]
+  },
+  "scale": "基准 = 0，差 400 ≈ 10:1；区间按对局整块重抽样"
+}

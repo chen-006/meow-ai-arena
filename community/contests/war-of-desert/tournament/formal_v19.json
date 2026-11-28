@@ -1,0 +1,60 @@
+{
+  "name": "Desert Arena · 正式赛 v1.9.2（第 6 季 · 双基线）",
+  "season": "第 6 季 · v1.9.2：预制 Bot 合并为 baseline@1（中等）/ baseline@2（极强）；旧 7 参考 Bot 归档至 experiment-records/reference-bots-archive/",
+  "version": "1.9.2",
+  "engine": {
+    "kind": "native",
+    "host": "bots/bin/enginehost.exe",
+    "snapshot": "engine/golden"
+  },
+  "rules": {
+    "tickLimit": 1500,
+    "tickMs": 50,
+    "decideMs": 120,
+    "initMs": 2000,
+    "maxStrikes": 3,
+    "strikeMode": "consecutive",
+    "generator": "minecraft",
+    "vision": false,
+    "ruleset": "v15"
+  },
+  "schedule": {
+    "seeds": [
+      20261109,
+      20261116,
+      20261123,
+      20261130,
+      20261137,
+      20261144,
+      20261151,
+      20261158,
+      20261165,
+      20261172,
+      20261179,
+      20261186,
+      20261193,
+      20261200,
+      20261207,
+      20261214,
+      20261221
+    ],
+    "mirror": true,
+    "bootstrap": 200
+  },
+  "entries": [
+    {
+      "name": "baseline1",
+      "author": "官方基线 · 中等战术",
+      "source": "workspace/bots/baseline1",
+      "bin": "bots/bin/baseline1.exe"
+    },
+    {
+      "name": "baseline2",
+      "author": "官方基线 · 极强（多轮调试）",
+      "source": "workspace/bots/baseline2",
+      "bin": "bots/bin/baseline2.exe"
+    }
+  ],
+  "output": "results/formal-v19",
+  "verify": true
+}

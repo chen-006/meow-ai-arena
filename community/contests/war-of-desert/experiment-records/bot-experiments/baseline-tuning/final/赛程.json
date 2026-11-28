@@ -1,0 +1,4361 @@
+{
+  "version": 1,
+  "createdBy": "cmd/arena plan",
+  "rulesVersion": "1.9.2",
+  "rulesHash": "077336ff",
+  "engine": "native",
+  "mirror": true,
+  "entries": [
+    {
+      "name": "Vanguard",
+      "author": "官方参考 Bot",
+      "source": "_tmp_archive_src/vanguard",
+      "bin": "experiment-records/reference-bots-archive/bin/vanguard.exe"
+    },
+    {
+      "name": "Nomad",
+      "author": "官方参考 Bot",
+      "source": "_tmp_archive_src/nomad",
+      "bin": "experiment-records/reference-bots-archive/bin/nomad.exe"
+    },
+    {
+      "name": "Swarm",
+      "author": "官方参考 Bot",
+      "source": "_tmp_archive_src/swarm",
+      "bin": "experiment-records/reference-bots-archive/bin/swarm.exe"
+    },
+    {
+      "name": "Sapper",
+      "author": "官方参考 Bot",
+      "source": "_tmp_archive_src/sapper",
+      "bin": "experiment-records/reference-bots-archive/bin/sapper.exe"
+    },
+    {
+      "name": "Bulwark",
+      "author": "官方参考 Bot",
+      "source": "_tmp_archive_src/bulwark",
+      "bin": "experiment-records/reference-bots-archive/bin/bulwark.exe"
+    },
+    {
+      "name": "Hunter",
+      "author": "官方参考 Bot",
+      "source": "_tmp_archive_src/hunter",
+      "bin": "experiment-records/reference-bots-archive/bin/hunter.exe"
+    },
+    {
+      "name": "Warden",
+      "author": "官方参考 Bot · 攻城压制",
+      "source": "_tmp_archive_src/warden",
+      "bin": "experiment-records/reference-bots-archive/bin/warden.exe"
+    },
+    {
+      "name": "baseline1",
+      "author": "官方基线 · 中等",
+      "source": "workspace/bots/baseline1",
+      "bin": "bots/bin/baseline1.exe"
+    },
+    {
+      "name": "baseline2",
+      "author": "官方基线 · 极强",
+      "source": "workspace/bots/baseline2",
+      "bin": "bots/bin/baseline2.exe"
+    }
+  ],
+  "matches": [
+    {
+      "id": 0,
+      "seed": 20261109,
+      "a": "Vanguard",
+      "b": "Nomad",
+      "mirror": true
+    },
+    {
+      "id": 1,
+      "seed": 20261110,
+      "a": "Vanguard",
+      "b": "Swarm",
+      "mirror": true
+    },
+    {
+      "id": 2,
+      "seed": 20261111,
+      "a": "Vanguard",
+      "b": "Sapper",
+      "mirror": true
+    },
+    {
+      "id": 3,
+      "seed": 20261112,
+      "a": "Vanguard",
+      "b": "Bulwark",
+      "mirror": true
+    },
+    {
+      "id": 4,
+      "seed": 20261113,
+      "a": "Vanguard",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 5,
+      "seed": 20261114,
+      "a": "Vanguard",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 6,
+      "seed": 20261115,
+      "a": "Vanguard",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 7,
+      "seed": 20261116,
+      "a": "Vanguard",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 8,
+      "seed": 20261117,
+      "a": "Nomad",
+      "b": "Swarm",
+      "mirror": true
+    },
+    {
+      "id": 9,
+      "seed": 20261118,
+      "a": "Nomad",
+      "b": "Sapper",
+      "mirror": true
+    },
+    {
+      "id": 10,
+      "seed": 20261119,
+      "a": "Nomad",
+      "b": "Bulwark",
+      "mirror": true
+    },
+    {
+      "id": 11,
+      "seed": 20261120,
+      "a": "Nomad",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 12,
+      "seed": 20261121,
+      "a": "Nomad",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 13,
+      "seed": 20261122,
+      "a": "Nomad",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 14,
+      "seed": 20261123,
+      "a": "Nomad",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 15,
+      "seed": 20261124,
+      "a": "Swarm",
+      "b": "Sapper",
+      "mirror": true
+    },
+    {
+      "id": 16,
+      "seed": 20261125,
+      "a": "Swarm",
+      "b": "Bulwark",
+      "mirror": true
+    },
+    {
+      "id": 17,
+      "seed": 20261126,
+      "a": "Swarm",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 18,
+      "seed": 20261127,
+      "a": "Swarm",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 19,
+      "seed": 20261128,
+      "a": "Swarm",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 20,
+      "seed": 20261129,
+      "a": "Swarm",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 21,
+      "seed": 20261130,
+      "a": "Sapper",
+      "b": "Bulwark",
+      "mirror": true
+    },
+    {
+      "id": 22,
+      "seed": 20261131,
+      "a": "Sapper",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 23,
+      "seed": 20261132,
+      "a": "Sapper",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 24,
+      "seed": 20261133,
+      "a": "Sapper",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 25,
+      "seed": 20261134,
+      "a": "Sapper",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 26,
+      "seed": 20261135,
+      "a": "Bulwark",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 27,
+      "seed": 20261136,
+      "a": "Bulwark",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 28,
+      "seed": 20261137,
+      "a": "Bulwark",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 29,
+      "seed": 20261138,
+      "a": "Bulwark",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 30,
+      "seed": 20261139,
+      "a": "Hunter",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 31,
+      "seed": 20261140,
+      "a": "Hunter",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 32,
+      "seed": 20261141,
+      "a": "Hunter",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 33,
+      "seed": 20261142,
+      "a": "Warden",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 34,
+      "seed": 20261143,
+      "a": "Warden",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 35,
+      "seed": 20261144,
+      "a": "baseline1",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 36,
+      "seed": 20261152,
+      "a": "Vanguard",
+      "b": "Nomad",
+      "mirror": true
+    },
+    {
+      "id": 37,
+      "seed": 20261153,
+      "a": "Vanguard",
+      "b": "Swarm",
+      "mirror": true
+    },
+    {
+      "id": 38,
+      "seed": 20261154,
+      "a": "Vanguard",
+      "b": "Sapper",
+      "mirror": true
+    },
+    {
+      "id": 39,
+      "seed": 20261155,
+      "a": "Vanguard",
+      "b": "Bulwark",
+      "mirror": true
+    },
+    {
+      "id": 40,
+      "seed": 20261156,
+      "a": "Vanguard",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 41,
+      "seed": 20261157,
+      "a": "Vanguard",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 42,
+      "seed": 20261158,
+      "a": "Vanguard",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 43,
+      "seed": 20261159,
+      "a": "Vanguard",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 44,
+      "seed": 20261160,
+      "a": "Nomad",
+      "b": "Swarm",
+      "mirror": true
+    },
+    {
+      "id": 45,
+      "seed": 20261161,
+      "a": "Nomad",
+      "b": "Sapper",
+      "mirror": true
+    },
+    {
+      "id": 46,
+      "seed": 20261162,
+      "a": "Nomad",
+      "b": "Bulwark",
+      "mirror": true
+    },
+    {
+      "id": 47,
+      "seed": 20261163,
+      "a": "Nomad",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 48,
+      "seed": 20261164,
+      "a": "Nomad",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 49,
+      "seed": 20261165,
+      "a": "Nomad",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 50,
+      "seed": 20261166,
+      "a": "Nomad",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 51,
+      "seed": 20261167,
+      "a": "Swarm",
+      "b": "Sapper",
+      "mirror": true
+    },
+    {
+      "id": 52,
+      "seed": 20261168,
+      "a": "Swarm",
+      "b": "Bulwark",
+      "mirror": true
+    },
+    {
+      "id": 53,
+      "seed": 20261169,
+      "a": "Swarm",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 54,
+      "seed": 20261170,
+      "a": "Swarm",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 55,
+      "seed": 20261171,
+      "a": "Swarm",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 56,
+      "seed": 20261172,
+      "a": "Swarm",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 57,
+      "seed": 20261173,
+      "a": "Sapper",
+      "b": "Bulwark",
+      "mirror": true
+    },
+    {
+      "id": 58,
+      "seed": 20261174,
+      "a": "Sapper",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 59,
+      "seed": 20261175,
+      "a": "Sapper",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 60,
+      "seed": 20261176,
+      "a": "Sapper",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 61,
+      "seed": 20261177,
+      "a": "Sapper",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 62,
+      "seed": 20261178,
+      "a": "Bulwark",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 63,
+      "seed": 20261179,
+      "a": "Bulwark",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 64,
+      "seed": 20261180,
+      "a": "Bulwark",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 65,
+      "seed": 20261181,
+      "a": "Bulwark",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 66,
+      "seed": 20261182,
+      "a": "Hunter",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 67,
+      "seed": 20261183,
+      "a": "Hunter",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 68,
+      "seed": 20261184,
+      "a": "Hunter",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 69,
+      "seed": 20261185,
+      "a": "Warden",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 70,
+      "seed": 20261186,
+      "a": "Warden",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 71,
+      "seed": 20261187,
+      "a": "baseline1",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 72,
+      "seed": 20261195,
+      "a": "Vanguard",
+      "b": "Nomad",
+      "mirror": true
+    },
+    {
+      "id": 73,
+      "seed": 20261196,
+      "a": "Vanguard",
+      "b": "Swarm",
+      "mirror": true
+    },
+    {
+      "id": 74,
+      "seed": 20261197,
+      "a": "Vanguard",
+      "b": "Sapper",
+      "mirror": true
+    },
+    {
+      "id": 75,
+      "seed": 20261198,
+      "a": "Vanguard",
+      "b": "Bulwark",
+      "mirror": true
+    },
+    {
+      "id": 76,
+      "seed": 20261199,
+      "a": "Vanguard",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 77,
+      "seed": 20261200,
+      "a": "Vanguard",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 78,
+      "seed": 20261201,
+      "a": "Vanguard",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 79,
+      "seed": 20261202,
+      "a": "Vanguard",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 80,
+      "seed": 20261203,
+      "a": "Nomad",
+      "b": "Swarm",
+      "mirror": true
+    },
+    {
+      "id": 81,
+      "seed": 20261204,
+      "a": "Nomad",
+      "b": "Sapper",
+      "mirror": true
+    },
+    {
+      "id": 82,
+      "seed": 20261205,
+      "a": "Nomad",
+      "b": "Bulwark",
+      "mirror": true
+    },
+    {
+      "id": 83,
+      "seed": 20261206,
+      "a": "Nomad",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 84,
+      "seed": 20261207,
+      "a": "Nomad",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 85,
+      "seed": 20261208,
+      "a": "Nomad",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 86,
+      "seed": 20261209,
+      "a": "Nomad",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 87,
+      "seed": 20261210,
+      "a": "Swarm",
+      "b": "Sapper",
+      "mirror": true
+    },
+    {
+      "id": 88,
+      "seed": 20261211,
+      "a": "Swarm",
+      "b": "Bulwark",
+      "mirror": true
+    },
+    {
+      "id": 89,
+      "seed": 20261212,
+      "a": "Swarm",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 90,
+      "seed": 20261213,
+      "a": "Swarm",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 91,
+      "seed": 20261214,
+      "a": "Swarm",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 92,
+      "seed": 20261215,
+      "a": "Swarm",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 93,
+      "seed": 20261216,
+      "a": "Sapper",
+      "b": "Bulwark",
+      "mirror": true
+    },
+    {
+      "id": 94,
+      "seed": 20261217,
+      "a": "Sapper",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 95,
+      "seed": 20261218,
+      "a": "Sapper",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 96,
+      "seed": 20261219,
+      "a": "Sapper",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 97,
+      "seed": 20261220,
+      "a": "Sapper",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 98,
+      "seed": 20261221,
+      "a": "Bulwark",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 99,
+      "seed": 20261222,
+      "a": "Bulwark",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 100,
+      "seed": 20261223,
+      "a": "Bulwark",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 101,
+      "seed": 20261224,
+      "a": "Bulwark",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 102,
+      "seed": 20261225,
+      "a": "Hunter",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 103,
+      "seed": 20261226,
+      "a": "Hunter",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 104,
+      "seed": 20261227,
+      "a": "Hunter",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 105,
+      "seed": 20261228,
+      "a": "Warden",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 106,
+      "seed": 20261229,
+      "a": "Warden",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 107,
+      "seed": 20261230,
+      "a": "baseline1",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 108,
+      "seed": 20261238,
+      "a": "Vanguard",
+      "b": "Nomad",
+      "mirror": true
+    },
+    {
+      "id": 109,
+      "seed": 20261239,
+      "a": "Vanguard",
+      "b": "Swarm",
+      "mirror": true
+    },
+    {
+      "id": 110,
+      "seed": 20261240,
+      "a": "Vanguard",
+      "b": "Sapper",
+      "mirror": true
+    },
+    {
+      "id": 111,
+      "seed": 20261241,
+      "a": "Vanguard",
+      "b": "Bulwark",
+      "mirror": true
+    },
+    {
+      "id": 112,
+      "seed": 20261242,
+      "a": "Vanguard",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 113,
+      "seed": 20261243,
+      "a": "Vanguard",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 114,
+      "seed": 20261244,
+      "a": "Vanguard",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 115,
+      "seed": 20261245,
+      "a": "Vanguard",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 116,
+      "seed": 20261246,
+      "a": "Nomad",
+      "b": "Swarm",
+      "mirror": true
+    },
+    {
+      "id": 117,
+      "seed": 20261247,
+      "a": "Nomad",
+      "b": "Sapper",
+      "mirror": true
+    },
+    {
+      "id": 118,
+      "seed": 20261248,
+      "a": "Nomad",
+      "b": "Bulwark",
+      "mirror": true
+    },
+    {
+      "id": 119,
+      "seed": 20261249,
+      "a": "Nomad",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 120,
+      "seed": 20261250,
+      "a": "Nomad",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 121,
+      "seed": 20261251,
+      "a": "Nomad",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 122,
+      "seed": 20261252,
+      "a": "Nomad",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 123,
+      "seed": 20261253,
+      "a": "Swarm",
+      "b": "Sapper",
+      "mirror": true
+    },
+    {
+      "id": 124,
+      "seed": 20261254,
+      "a": "Swarm",
+      "b": "Bulwark",
+      "mirror": true
+    },
+    {
+      "id": 125,
+      "seed": 20261255,
+      "a": "Swarm",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 126,
+      "seed": 20261256,
+      "a": "Swarm",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 127,
+      "seed": 20261257,
+      "a": "Swarm",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 128,
+      "seed": 20261258,
+      "a": "Swarm",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 129,
+      "seed": 20261259,
+      "a": "Sapper",
+      "b": "Bulwark",
+      "mirror": true
+    },
+    {
+      "id": 130,
+      "seed": 20261260,
+      "a": "Sapper",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 131,
+      "seed": 20261261,
+      "a": "Sapper",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 132,
+      "seed": 20261262,
+      "a": "Sapper",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 133,
+      "seed": 20261263,
+      "a": "Sapper",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 134,
+      "seed": 20261264,
+      "a": "Bulwark",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 135,
+      "seed": 20261265,
+      "a": "Bulwark",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 136,
+      "seed": 20261266,
+      "a": "Bulwark",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 137,
+      "seed": 20261267,
+      "a": "Bulwark",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 138,
+      "seed": 20261268,
+      "a": "Hunter",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 139,
+      "seed": 20261269,
+      "a": "Hunter",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 140,
+      "seed": 20261270,
+      "a": "Hunter",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 141,
+      "seed": 20261271,
+      "a": "Warden",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 142,
+      "seed": 20261272,
+      "a": "Warden",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 143,
+      "seed": 20261273,
+      "a": "baseline1",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 144,
+      "seed": 20261281,
+      "a": "Vanguard",
+      "b": "Nomad",
+      "mirror": true
+    },
+    {
+      "id": 145,
+      "seed": 20261282,
+      "a": "Vanguard",
+      "b": "Swarm",
+      "mirror": true
+    },
+    {
+      "id": 146,
+      "seed": 20261283,
+      "a": "Vanguard",
+      "b": "Sapper",
+      "mirror": true
+    },
+    {
+      "id": 147,
+      "seed": 20261284,
+      "a": "Vanguard",
+      "b": "Bulwark",
+      "mirror": true
+    },
+    {
+      "id": 148,
+      "seed": 20261285,
+      "a": "Vanguard",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 149,
+      "seed": 20261286,
+      "a": "Vanguard",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 150,
+      "seed": 20261287,
+      "a": "Vanguard",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 151,
+      "seed": 20261288,
+      "a": "Vanguard",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 152,
+      "seed": 20261289,
+      "a": "Nomad",
+      "b": "Swarm",
+      "mirror": true
+    },
+    {
+      "id": 153,
+      "seed": 20261290,
+      "a": "Nomad",
+      "b": "Sapper",
+      "mirror": true
+    },
+    {
+      "id": 154,
+      "seed": 20261291,
+      "a": "Nomad",
+      "b": "Bulwark",
+      "mirror": true
+    },
+    {
+      "id": 155,
+      "seed": 20261292,
+      "a": "Nomad",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 156,
+      "seed": 20261293,
+      "a": "Nomad",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 157,
+      "seed": 20261294,
+      "a": "Nomad",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 158,
+      "seed": 20261295,
+      "a": "Nomad",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 159,
+      "seed": 20261296,
+      "a": "Swarm",
+      "b": "Sapper",
+      "mirror": true
+    },
+    {
+      "id": 160,
+      "seed": 20261297,
+      "a": "Swarm",
+      "b": "Bulwark",
+      "mirror": true
+    },
+    {
+      "id": 161,
+      "seed": 20261298,
+      "a": "Swarm",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 162,
+      "seed": 20261299,
+      "a": "Swarm",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 163,
+      "seed": 20261300,
+      "a": "Swarm",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 164,
+      "seed": 20261301,
+      "a": "Swarm",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 165,
+      "seed": 20261302,
+      "a": "Sapper",
+      "b": "Bulwark",
+      "mirror": true
+    },
+    {
+      "id": 166,
+      "seed": 20261303,
+      "a": "Sapper",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 167,
+      "seed": 20261304,
+      "a": "Sapper",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 168,
+      "seed": 20261305,
+      "a": "Sapper",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 169,
+      "seed": 20261306,
+      "a": "Sapper",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 170,
+      "seed": 20261307,
+      "a": "Bulwark",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 171,
+      "seed": 20261308,
+      "a": "Bulwark",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 172,
+      "seed": 20261309,
+      "a": "Bulwark",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 173,
+      "seed": 20261310,
+      "a": "Bulwark",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 174,
+      "seed": 20261311,
+      "a": "Hunter",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 175,
+      "seed": 20261312,
+      "a": "Hunter",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 176,
+      "seed": 20261313,
+      "a": "Hunter",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 177,
+      "seed": 20261314,
+      "a": "Warden",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 178,
+      "seed": 20261315,
+      "a": "Warden",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 179,
+      "seed": 20261316,
+      "a": "baseline1",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 180,
+      "seed": 20261324,
+      "a": "Vanguard",
+      "b": "Nomad",
+      "mirror": true
+    },
+    {
+      "id": 181,
+      "seed": 20261325,
+      "a": "Vanguard",
+      "b": "Swarm",
+      "mirror": true
+    },
+    {
+      "id": 182,
+      "seed": 20261326,
+      "a": "Vanguard",
+      "b": "Sapper",
+      "mirror": true
+    },
+    {
+      "id": 183,
+      "seed": 20261327,
+      "a": "Vanguard",
+      "b": "Bulwark",
+      "mirror": true
+    },
+    {
+      "id": 184,
+      "seed": 20261328,
+      "a": "Vanguard",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 185,
+      "seed": 20261329,
+      "a": "Vanguard",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 186,
+      "seed": 20261330,
+      "a": "Vanguard",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 187,
+      "seed": 20261331,
+      "a": "Vanguard",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 188,
+      "seed": 20261332,
+      "a": "Nomad",
+      "b": "Swarm",
+      "mirror": true
+    },
+    {
+      "id": 189,
+      "seed": 20261333,
+      "a": "Nomad",
+      "b": "Sapper",
+      "mirror": true
+    },
+    {
+      "id": 190,
+      "seed": 20261334,
+      "a": "Nomad",
+      "b": "Bulwark",
+      "mirror": true
+    },
+    {
+      "id": 191,
+      "seed": 20261335,
+      "a": "Nomad",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 192,
+      "seed": 20261336,
+      "a": "Nomad",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 193,
+      "seed": 20261337,
+      "a": "Nomad",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 194,
+      "seed": 20261338,
+      "a": "Nomad",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 195,
+      "seed": 20261339,
+      "a": "Swarm",
+      "b": "Sapper",
+      "mirror": true
+    },
+    {
+      "id": 196,
+      "seed": 20261340,
+      "a": "Swarm",
+      "b": "Bulwark",
+      "mirror": true
+    },
+    {
+      "id": 197,
+      "seed": 20261341,
+      "a": "Swarm",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 198,
+      "seed": 20261342,
+      "a": "Swarm",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 199,
+      "seed": 20261343,
+      "a": "Swarm",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 200,
+      "seed": 20261344,
+      "a": "Swarm",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 201,
+      "seed": 20261345,
+      "a": "Sapper",
+      "b": "Bulwark",
+      "mirror": true
+    },
+    {
+      "id": 202,
+      "seed": 20261346,
+      "a": "Sapper",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 203,
+      "seed": 20261347,
+      "a": "Sapper",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 204,
+      "seed": 20261348,
+      "a": "Sapper",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 205,
+      "seed": 20261349,
+      "a": "Sapper",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 206,
+      "seed": 20261350,
+      "a": "Bulwark",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 207,
+      "seed": 20261351,
+      "a": "Bulwark",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 208,
+      "seed": 20261352,
+      "a": "Bulwark",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 209,
+      "seed": 20261353,
+      "a": "Bulwark",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 210,
+      "seed": 20261354,
+      "a": "Hunter",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 211,
+      "seed": 20261355,
+      "a": "Hunter",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 212,
+      "seed": 20261356,
+      "a": "Hunter",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 213,
+      "seed": 20261357,
+      "a": "Warden",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 214,
+      "seed": 20261358,
+      "a": "Warden",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 215,
+      "seed": 20261359,
+      "a": "baseline1",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 216,
+      "seed": 20261367,
+      "a": "Vanguard",
+      "b": "Nomad",
+      "mirror": true
+    },
+    {
+      "id": 217,
+      "seed": 20261368,
+      "a": "Vanguard",
+      "b": "Swarm",
+      "mirror": true
+    },
+    {
+      "id": 218,
+      "seed": 20261369,
+      "a": "Vanguard",
+      "b": "Sapper",
+      "mirror": true
+    },
+    {
+      "id": 219,
+      "seed": 20261370,
+      "a": "Vanguard",
+      "b": "Bulwark",
+      "mirror": true
+    },
+    {
+      "id": 220,
+      "seed": 20261371,
+      "a": "Vanguard",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 221,
+      "seed": 20261372,
+      "a": "Vanguard",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 222,
+      "seed": 20261373,
+      "a": "Vanguard",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 223,
+      "seed": 20261374,
+      "a": "Vanguard",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 224,
+      "seed": 20261375,
+      "a": "Nomad",
+      "b": "Swarm",
+      "mirror": true
+    },
+    {
+      "id": 225,
+      "seed": 20261376,
+      "a": "Nomad",
+      "b": "Sapper",
+      "mirror": true
+    },
+    {
+      "id": 226,
+      "seed": 20261377,
+      "a": "Nomad",
+      "b": "Bulwark",
+      "mirror": true
+    },
+    {
+      "id": 227,
+      "seed": 20261378,
+      "a": "Nomad",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 228,
+      "seed": 20261379,
+      "a": "Nomad",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 229,
+      "seed": 20261380,
+      "a": "Nomad",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 230,
+      "seed": 20261381,
+      "a": "Nomad",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 231,
+      "seed": 20261382,
+      "a": "Swarm",
+      "b": "Sapper",
+      "mirror": true
+    },
+    {
+      "id": 232,
+      "seed": 20261383,
+      "a": "Swarm",
+      "b": "Bulwark",
+      "mirror": true
+    },
+    {
+      "id": 233,
+      "seed": 20261384,
+      "a": "Swarm",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 234,
+      "seed": 20261385,
+      "a": "Swarm",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 235,
+      "seed": 20261386,
+      "a": "Swarm",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 236,
+      "seed": 20261387,
+      "a": "Swarm",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 237,
+      "seed": 20261388,
+      "a": "Sapper",
+      "b": "Bulwark",
+      "mirror": true
+    },
+    {
+      "id": 238,
+      "seed": 20261389,
+      "a": "Sapper",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 239,
+      "seed": 20261390,
+      "a": "Sapper",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 240,
+      "seed": 20261391,
+      "a": "Sapper",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 241,
+      "seed": 20261392,
+      "a": "Sapper",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 242,
+      "seed": 20261393,
+      "a": "Bulwark",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 243,
+      "seed": 20261394,
+      "a": "Bulwark",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 244,
+      "seed": 20261395,
+      "a": "Bulwark",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 245,
+      "seed": 20261396,
+      "a": "Bulwark",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 246,
+      "seed": 20261397,
+      "a": "Hunter",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 247,
+      "seed": 20261398,
+      "a": "Hunter",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 248,
+      "seed": 20261399,
+      "a": "Hunter",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 249,
+      "seed": 20261400,
+      "a": "Warden",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 250,
+      "seed": 20261401,
+      "a": "Warden",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 251,
+      "seed": 20261402,
+      "a": "baseline1",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 252,
+      "seed": 20261410,
+      "a": "Vanguard",
+      "b": "Nomad",
+      "mirror": true
+    },
+    {
+      "id": 253,
+      "seed": 20261411,
+      "a": "Vanguard",
+      "b": "Swarm",
+      "mirror": true
+    },
+    {
+      "id": 254,
+      "seed": 20261412,
+      "a": "Vanguard",
+      "b": "Sapper",
+      "mirror": true
+    },
+    {
+      "id": 255,
+      "seed": 20261413,
+      "a": "Vanguard",
+      "b": "Bulwark",
+      "mirror": true
+    },
+    {
+      "id": 256,
+      "seed": 20261414,
+      "a": "Vanguard",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 257,
+      "seed": 20261415,
+      "a": "Vanguard",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 258,
+      "seed": 20261416,
+      "a": "Vanguard",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 259,
+      "seed": 20261417,
+      "a": "Vanguard",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 260,
+      "seed": 20261418,
+      "a": "Nomad",
+      "b": "Swarm",
+      "mirror": true
+    },
+    {
+      "id": 261,
+      "seed": 20261419,
+      "a": "Nomad",
+      "b": "Sapper",
+      "mirror": true
+    },
+    {
+      "id": 262,
+      "seed": 20261420,
+      "a": "Nomad",
+      "b": "Bulwark",
+      "mirror": true
+    },
+    {
+      "id": 263,
+      "seed": 20261421,
+      "a": "Nomad",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 264,
+      "seed": 20261422,
+      "a": "Nomad",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 265,
+      "seed": 20261423,
+      "a": "Nomad",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 266,
+      "seed": 20261424,
+      "a": "Nomad",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 267,
+      "seed": 20261425,
+      "a": "Swarm",
+      "b": "Sapper",
+      "mirror": true
+    },
+    {
+      "id": 268,
+      "seed": 20261426,
+      "a": "Swarm",
+      "b": "Bulwark",
+      "mirror": true
+    },
+    {
+      "id": 269,
+      "seed": 20261427,
+      "a": "Swarm",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 270,
+      "seed": 20261428,
+      "a": "Swarm",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 271,
+      "seed": 20261429,
+      "a": "Swarm",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 272,
+      "seed": 20261430,
+      "a": "Swarm",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 273,
+      "seed": 20261431,
+      "a": "Sapper",
+      "b": "Bulwark",
+      "mirror": true
+    },
+    {
+      "id": 274,
+      "seed": 20261432,
+      "a": "Sapper",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 275,
+      "seed": 20261433,
+      "a": "Sapper",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 276,
+      "seed": 20261434,
+      "a": "Sapper",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 277,
+      "seed": 20261435,
+      "a": "Sapper",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 278,
+      "seed": 20261436,
+      "a": "Bulwark",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 279,
+      "seed": 20261437,
+      "a": "Bulwark",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 280,
+      "seed": 20261438,
+      "a": "Bulwark",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 281,
+      "seed": 20261439,
+      "a": "Bulwark",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 282,
+      "seed": 20261440,
+      "a": "Hunter",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 283,
+      "seed": 20261441,
+      "a": "Hunter",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 284,
+      "seed": 20261442,
+      "a": "Hunter",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 285,
+      "seed": 20261443,
+      "a": "Warden",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 286,
+      "seed": 20261444,
+      "a": "Warden",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 287,
+      "seed": 20261445,
+      "a": "baseline1",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 288,
+      "seed": 20261453,
+      "a": "Vanguard",
+      "b": "Nomad",
+      "mirror": true
+    },
+    {
+      "id": 289,
+      "seed": 20261454,
+      "a": "Vanguard",
+      "b": "Swarm",
+      "mirror": true
+    },
+    {
+      "id": 290,
+      "seed": 20261455,
+      "a": "Vanguard",
+      "b": "Sapper",
+      "mirror": true
+    },
+    {
+      "id": 291,
+      "seed": 20261456,
+      "a": "Vanguard",
+      "b": "Bulwark",
+      "mirror": true
+    },
+    {
+      "id": 292,
+      "seed": 20261457,
+      "a": "Vanguard",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 293,
+      "seed": 20261458,
+      "a": "Vanguard",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 294,
+      "seed": 20261459,
+      "a": "Vanguard",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 295,
+      "seed": 20261460,
+      "a": "Vanguard",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 296,
+      "seed": 20261461,
+      "a": "Nomad",
+      "b": "Swarm",
+      "mirror": true
+    },
+    {
+      "id": 297,
+      "seed": 20261462,
+      "a": "Nomad",
+      "b": "Sapper",
+      "mirror": true
+    },
+    {
+      "id": 298,
+      "seed": 20261463,
+      "a": "Nomad",
+      "b": "Bulwark",
+      "mirror": true
+    },
+    {
+      "id": 299,
+      "seed": 20261464,
+      "a": "Nomad",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 300,
+      "seed": 20261465,
+      "a": "Nomad",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 301,
+      "seed": 20261466,
+      "a": "Nomad",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 302,
+      "seed": 20261467,
+      "a": "Nomad",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 303,
+      "seed": 20261468,
+      "a": "Swarm",
+      "b": "Sapper",
+      "mirror": true
+    },
+    {
+      "id": 304,
+      "seed": 20261469,
+      "a": "Swarm",
+      "b": "Bulwark",
+      "mirror": true
+    },
+    {
+      "id": 305,
+      "seed": 20261470,
+      "a": "Swarm",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 306,
+      "seed": 20261471,
+      "a": "Swarm",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 307,
+      "seed": 20261472,
+      "a": "Swarm",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 308,
+      "seed": 20261473,
+      "a": "Swarm",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 309,
+      "seed": 20261474,
+      "a": "Sapper",
+      "b": "Bulwark",
+      "mirror": true
+    },
+    {
+      "id": 310,
+      "seed": 20261475,
+      "a": "Sapper",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 311,
+      "seed": 20261476,
+      "a": "Sapper",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 312,
+      "seed": 20261477,
+      "a": "Sapper",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 313,
+      "seed": 20261478,
+      "a": "Sapper",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 314,
+      "seed": 20261479,
+      "a": "Bulwark",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 315,
+      "seed": 20261480,
+      "a": "Bulwark",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 316,
+      "seed": 20261481,
+      "a": "Bulwark",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 317,
+      "seed": 20261482,
+      "a": "Bulwark",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 318,
+      "seed": 20261483,
+      "a": "Hunter",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 319,
+      "seed": 20261484,
+      "a": "Hunter",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 320,
+      "seed": 20261485,
+      "a": "Hunter",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 321,
+      "seed": 20261486,
+      "a": "Warden",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 322,
+      "seed": 20261487,
+      "a": "Warden",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 323,
+      "seed": 20261488,
+      "a": "baseline1",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 324,
+      "seed": 20261496,
+      "a": "Vanguard",
+      "b": "Nomad",
+      "mirror": true
+    },
+    {
+      "id": 325,
+      "seed": 20261497,
+      "a": "Vanguard",
+      "b": "Swarm",
+      "mirror": true
+    },
+    {
+      "id": 326,
+      "seed": 20261498,
+      "a": "Vanguard",
+      "b": "Sapper",
+      "mirror": true
+    },
+    {
+      "id": 327,
+      "seed": 20261499,
+      "a": "Vanguard",
+      "b": "Bulwark",
+      "mirror": true
+    },
+    {
+      "id": 328,
+      "seed": 20261500,
+      "a": "Vanguard",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 329,
+      "seed": 20261501,
+      "a": "Vanguard",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 330,
+      "seed": 20261502,
+      "a": "Vanguard",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 331,
+      "seed": 20261503,
+      "a": "Vanguard",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 332,
+      "seed": 20261504,
+      "a": "Nomad",
+      "b": "Swarm",
+      "mirror": true
+    },
+    {
+      "id": 333,
+      "seed": 20261505,
+      "a": "Nomad",
+      "b": "Sapper",
+      "mirror": true
+    },
+    {
+      "id": 334,
+      "seed": 20261506,
+      "a": "Nomad",
+      "b": "Bulwark",
+      "mirror": true
+    },
+    {
+      "id": 335,
+      "seed": 20261507,
+      "a": "Nomad",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 336,
+      "seed": 20261508,
+      "a": "Nomad",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 337,
+      "seed": 20261509,
+      "a": "Nomad",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 338,
+      "seed": 20261510,
+      "a": "Nomad",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 339,
+      "seed": 20261511,
+      "a": "Swarm",
+      "b": "Sapper",
+      "mirror": true
+    },
+    {
+      "id": 340,
+      "seed": 20261512,
+      "a": "Swarm",
+      "b": "Bulwark",
+      "mirror": true
+    },
+    {
+      "id": 341,
+      "seed": 20261513,
+      "a": "Swarm",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 342,
+      "seed": 20261514,
+      "a": "Swarm",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 343,
+      "seed": 20261515,
+      "a": "Swarm",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 344,
+      "seed": 20261516,
+      "a": "Swarm",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 345,
+      "seed": 20261517,
+      "a": "Sapper",
+      "b": "Bulwark",
+      "mirror": true
+    },
+    {
+      "id": 346,
+      "seed": 20261518,
+      "a": "Sapper",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 347,
+      "seed": 20261519,
+      "a": "Sapper",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 348,
+      "seed": 20261520,
+      "a": "Sapper",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 349,
+      "seed": 20261521,
+      "a": "Sapper",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 350,
+      "seed": 20261522,
+      "a": "Bulwark",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 351,
+      "seed": 20261523,
+      "a": "Bulwark",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 352,
+      "seed": 20261524,
+      "a": "Bulwark",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 353,
+      "seed": 20261525,
+      "a": "Bulwark",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 354,
+      "seed": 20261526,
+      "a": "Hunter",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 355,
+      "seed": 20261527,
+      "a": "Hunter",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 356,
+      "seed": 20261528,
+      "a": "Hunter",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 357,
+      "seed": 20261529,
+      "a": "Warden",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 358,
+      "seed": 20261530,
+      "a": "Warden",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 359,
+      "seed": 20261531,
+      "a": "baseline1",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 360,
+      "seed": 20261539,
+      "a": "Vanguard",
+      "b": "Nomad",
+      "mirror": true
+    },
+    {
+      "id": 361,
+      "seed": 20261540,
+      "a": "Vanguard",
+      "b": "Swarm",
+      "mirror": true
+    },
+    {
+      "id": 362,
+      "seed": 20261541,
+      "a": "Vanguard",
+      "b": "Sapper",
+      "mirror": true
+    },
+    {
+      "id": 363,
+      "seed": 20261542,
+      "a": "Vanguard",
+      "b": "Bulwark",
+      "mirror": true
+    },
+    {
+      "id": 364,
+      "seed": 20261543,
+      "a": "Vanguard",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 365,
+      "seed": 20261544,
+      "a": "Vanguard",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 366,
+      "seed": 20261545,
+      "a": "Vanguard",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 367,
+      "seed": 20261546,
+      "a": "Vanguard",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 368,
+      "seed": 20261547,
+      "a": "Nomad",
+      "b": "Swarm",
+      "mirror": true
+    },
+    {
+      "id": 369,
+      "seed": 20261548,
+      "a": "Nomad",
+      "b": "Sapper",
+      "mirror": true
+    },
+    {
+      "id": 370,
+      "seed": 20261549,
+      "a": "Nomad",
+      "b": "Bulwark",
+      "mirror": true
+    },
+    {
+      "id": 371,
+      "seed": 20261550,
+      "a": "Nomad",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 372,
+      "seed": 20261551,
+      "a": "Nomad",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 373,
+      "seed": 20261552,
+      "a": "Nomad",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 374,
+      "seed": 20261553,
+      "a": "Nomad",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 375,
+      "seed": 20261554,
+      "a": "Swarm",
+      "b": "Sapper",
+      "mirror": true
+    },
+    {
+      "id": 376,
+      "seed": 20261555,
+      "a": "Swarm",
+      "b": "Bulwark",
+      "mirror": true
+    },
+    {
+      "id": 377,
+      "seed": 20261556,
+      "a": "Swarm",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 378,
+      "seed": 20261557,
+      "a": "Swarm",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 379,
+      "seed": 20261558,
+      "a": "Swarm",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 380,
+      "seed": 20261559,
+      "a": "Swarm",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 381,
+      "seed": 20261560,
+      "a": "Sapper",
+      "b": "Bulwark",
+      "mirror": true
+    },
+    {
+      "id": 382,
+      "seed": 20261561,
+      "a": "Sapper",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 383,
+      "seed": 20261562,
+      "a": "Sapper",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 384,
+      "seed": 20261563,
+      "a": "Sapper",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 385,
+      "seed": 20261564,
+      "a": "Sapper",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 386,
+      "seed": 20261565,
+      "a": "Bulwark",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 387,
+      "seed": 20261566,
+      "a": "Bulwark",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 388,
+      "seed": 20261567,
+      "a": "Bulwark",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 389,
+      "seed": 20261568,
+      "a": "Bulwark",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 390,
+      "seed": 20261569,
+      "a": "Hunter",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 391,
+      "seed": 20261570,
+      "a": "Hunter",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 392,
+      "seed": 20261571,
+      "a": "Hunter",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 393,
+      "seed": 20261572,
+      "a": "Warden",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 394,
+      "seed": 20261573,
+      "a": "Warden",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 395,
+      "seed": 20261574,
+      "a": "baseline1",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 396,
+      "seed": 20261582,
+      "a": "Vanguard",
+      "b": "Nomad",
+      "mirror": true
+    },
+    {
+      "id": 397,
+      "seed": 20261583,
+      "a": "Vanguard",
+      "b": "Swarm",
+      "mirror": true
+    },
+    {
+      "id": 398,
+      "seed": 20261584,
+      "a": "Vanguard",
+      "b": "Sapper",
+      "mirror": true
+    },
+    {
+      "id": 399,
+      "seed": 20261585,
+      "a": "Vanguard",
+      "b": "Bulwark",
+      "mirror": true
+    },
+    {
+      "id": 400,
+      "seed": 20261586,
+      "a": "Vanguard",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 401,
+      "seed": 20261587,
+      "a": "Vanguard",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 402,
+      "seed": 20261588,
+      "a": "Vanguard",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 403,
+      "seed": 20261589,
+      "a": "Vanguard",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 404,
+      "seed": 20261590,
+      "a": "Nomad",
+      "b": "Swarm",
+      "mirror": true
+    },
+    {
+      "id": 405,
+      "seed": 20261591,
+      "a": "Nomad",
+      "b": "Sapper",
+      "mirror": true
+    },
+    {
+      "id": 406,
+      "seed": 20261592,
+      "a": "Nomad",
+      "b": "Bulwark",
+      "mirror": true
+    },
+    {
+      "id": 407,
+      "seed": 20261593,
+      "a": "Nomad",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 408,
+      "seed": 20261594,
+      "a": "Nomad",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 409,
+      "seed": 20261595,
+      "a": "Nomad",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 410,
+      "seed": 20261596,
+      "a": "Nomad",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 411,
+      "seed": 20261597,
+      "a": "Swarm",
+      "b": "Sapper",
+      "mirror": true
+    },
+    {
+      "id": 412,
+      "seed": 20261598,
+      "a": "Swarm",
+      "b": "Bulwark",
+      "mirror": true
+    },
+    {
+      "id": 413,
+      "seed": 20261599,
+      "a": "Swarm",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 414,
+      "seed": 20261600,
+      "a": "Swarm",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 415,
+      "seed": 20261601,
+      "a": "Swarm",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 416,
+      "seed": 20261602,
+      "a": "Swarm",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 417,
+      "seed": 20261603,
+      "a": "Sapper",
+      "b": "Bulwark",
+      "mirror": true
+    },
+    {
+      "id": 418,
+      "seed": 20261604,
+      "a": "Sapper",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 419,
+      "seed": 20261605,
+      "a": "Sapper",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 420,
+      "seed": 20261606,
+      "a": "Sapper",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 421,
+      "seed": 20261607,
+      "a": "Sapper",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 422,
+      "seed": 20261608,
+      "a": "Bulwark",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 423,
+      "seed": 20261609,
+      "a": "Bulwark",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 424,
+      "seed": 20261610,
+      "a": "Bulwark",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 425,
+      "seed": 20261611,
+      "a": "Bulwark",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 426,
+      "seed": 20261612,
+      "a": "Hunter",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 427,
+      "seed": 20261613,
+      "a": "Hunter",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 428,
+      "seed": 20261614,
+      "a": "Hunter",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 429,
+      "seed": 20261615,
+      "a": "Warden",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 430,
+      "seed": 20261616,
+      "a": "Warden",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 431,
+      "seed": 20261617,
+      "a": "baseline1",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 432,
+      "seed": 20261625,
+      "a": "Vanguard",
+      "b": "Nomad",
+      "mirror": true
+    },
+    {
+      "id": 433,
+      "seed": 20261626,
+      "a": "Vanguard",
+      "b": "Swarm",
+      "mirror": true
+    },
+    {
+      "id": 434,
+      "seed": 20261627,
+      "a": "Vanguard",
+      "b": "Sapper",
+      "mirror": true
+    },
+    {
+      "id": 435,
+      "seed": 20261628,
+      "a": "Vanguard",
+      "b": "Bulwark",
+      "mirror": true
+    },
+    {
+      "id": 436,
+      "seed": 20261629,
+      "a": "Vanguard",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 437,
+      "seed": 20261630,
+      "a": "Vanguard",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 438,
+      "seed": 20261631,
+      "a": "Vanguard",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 439,
+      "seed": 20261632,
+      "a": "Vanguard",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 440,
+      "seed": 20261633,
+      "a": "Nomad",
+      "b": "Swarm",
+      "mirror": true
+    },
+    {
+      "id": 441,
+      "seed": 20261634,
+      "a": "Nomad",
+      "b": "Sapper",
+      "mirror": true
+    },
+    {
+      "id": 442,
+      "seed": 20261635,
+      "a": "Nomad",
+      "b": "Bulwark",
+      "mirror": true
+    },
+    {
+      "id": 443,
+      "seed": 20261636,
+      "a": "Nomad",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 444,
+      "seed": 20261637,
+      "a": "Nomad",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 445,
+      "seed": 20261638,
+      "a": "Nomad",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 446,
+      "seed": 20261639,
+      "a": "Nomad",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 447,
+      "seed": 20261640,
+      "a": "Swarm",
+      "b": "Sapper",
+      "mirror": true
+    },
+    {
+      "id": 448,
+      "seed": 20261641,
+      "a": "Swarm",
+      "b": "Bulwark",
+      "mirror": true
+    },
+    {
+      "id": 449,
+      "seed": 20261642,
+      "a": "Swarm",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 450,
+      "seed": 20261643,
+      "a": "Swarm",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 451,
+      "seed": 20261644,
+      "a": "Swarm",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 452,
+      "seed": 20261645,
+      "a": "Swarm",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 453,
+      "seed": 20261646,
+      "a": "Sapper",
+      "b": "Bulwark",
+      "mirror": true
+    },
+    {
+      "id": 454,
+      "seed": 20261647,
+      "a": "Sapper",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 455,
+      "seed": 20261648,
+      "a": "Sapper",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 456,
+      "seed": 20261649,
+      "a": "Sapper",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 457,
+      "seed": 20261650,
+      "a": "Sapper",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 458,
+      "seed": 20261651,
+      "a": "Bulwark",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 459,
+      "seed": 20261652,
+      "a": "Bulwark",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 460,
+      "seed": 20261653,
+      "a": "Bulwark",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 461,
+      "seed": 20261654,
+      "a": "Bulwark",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 462,
+      "seed": 20261655,
+      "a": "Hunter",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 463,
+      "seed": 20261656,
+      "a": "Hunter",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 464,
+      "seed": 20261657,
+      "a": "Hunter",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 465,
+      "seed": 20261658,
+      "a": "Warden",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 466,
+      "seed": 20261659,
+      "a": "Warden",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 467,
+      "seed": 20261660,
+      "a": "baseline1",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 468,
+      "seed": 20261668,
+      "a": "Vanguard",
+      "b": "Nomad",
+      "mirror": true
+    },
+    {
+      "id": 469,
+      "seed": 20261669,
+      "a": "Vanguard",
+      "b": "Swarm",
+      "mirror": true
+    },
+    {
+      "id": 470,
+      "seed": 20261670,
+      "a": "Vanguard",
+      "b": "Sapper",
+      "mirror": true
+    },
+    {
+      "id": 471,
+      "seed": 20261671,
+      "a": "Vanguard",
+      "b": "Bulwark",
+      "mirror": true
+    },
+    {
+      "id": 472,
+      "seed": 20261672,
+      "a": "Vanguard",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 473,
+      "seed": 20261673,
+      "a": "Vanguard",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 474,
+      "seed": 20261674,
+      "a": "Vanguard",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 475,
+      "seed": 20261675,
+      "a": "Vanguard",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 476,
+      "seed": 20261676,
+      "a": "Nomad",
+      "b": "Swarm",
+      "mirror": true
+    },
+    {
+      "id": 477,
+      "seed": 20261677,
+      "a": "Nomad",
+      "b": "Sapper",
+      "mirror": true
+    },
+    {
+      "id": 478,
+      "seed": 20261678,
+      "a": "Nomad",
+      "b": "Bulwark",
+      "mirror": true
+    },
+    {
+      "id": 479,
+      "seed": 20261679,
+      "a": "Nomad",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 480,
+      "seed": 20261680,
+      "a": "Nomad",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 481,
+      "seed": 20261681,
+      "a": "Nomad",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 482,
+      "seed": 20261682,
+      "a": "Nomad",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 483,
+      "seed": 20261683,
+      "a": "Swarm",
+      "b": "Sapper",
+      "mirror": true
+    },
+    {
+      "id": 484,
+      "seed": 20261684,
+      "a": "Swarm",
+      "b": "Bulwark",
+      "mirror": true
+    },
+    {
+      "id": 485,
+      "seed": 20261685,
+      "a": "Swarm",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 486,
+      "seed": 20261686,
+      "a": "Swarm",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 487,
+      "seed": 20261687,
+      "a": "Swarm",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 488,
+      "seed": 20261688,
+      "a": "Swarm",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 489,
+      "seed": 20261689,
+      "a": "Sapper",
+      "b": "Bulwark",
+      "mirror": true
+    },
+    {
+      "id": 490,
+      "seed": 20261690,
+      "a": "Sapper",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 491,
+      "seed": 20261691,
+      "a": "Sapper",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 492,
+      "seed": 20261692,
+      "a": "Sapper",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 493,
+      "seed": 20261693,
+      "a": "Sapper",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 494,
+      "seed": 20261694,
+      "a": "Bulwark",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 495,
+      "seed": 20261695,
+      "a": "Bulwark",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 496,
+      "seed": 20261696,
+      "a": "Bulwark",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 497,
+      "seed": 20261697,
+      "a": "Bulwark",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 498,
+      "seed": 20261698,
+      "a": "Hunter",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 499,
+      "seed": 20261699,
+      "a": "Hunter",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 500,
+      "seed": 20261700,
+      "a": "Hunter",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 501,
+      "seed": 20261701,
+      "a": "Warden",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 502,
+      "seed": 20261702,
+      "a": "Warden",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 503,
+      "seed": 20261703,
+      "a": "baseline1",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 504,
+      "seed": 20261711,
+      "a": "Vanguard",
+      "b": "Nomad",
+      "mirror": true
+    },
+    {
+      "id": 505,
+      "seed": 20261712,
+      "a": "Vanguard",
+      "b": "Swarm",
+      "mirror": true
+    },
+    {
+      "id": 506,
+      "seed": 20261713,
+      "a": "Vanguard",
+      "b": "Sapper",
+      "mirror": true
+    },
+    {
+      "id": 507,
+      "seed": 20261714,
+      "a": "Vanguard",
+      "b": "Bulwark",
+      "mirror": true
+    },
+    {
+      "id": 508,
+      "seed": 20261715,
+      "a": "Vanguard",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 509,
+      "seed": 20261716,
+      "a": "Vanguard",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 510,
+      "seed": 20261717,
+      "a": "Vanguard",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 511,
+      "seed": 20261718,
+      "a": "Vanguard",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 512,
+      "seed": 20261719,
+      "a": "Nomad",
+      "b": "Swarm",
+      "mirror": true
+    },
+    {
+      "id": 513,
+      "seed": 20261720,
+      "a": "Nomad",
+      "b": "Sapper",
+      "mirror": true
+    },
+    {
+      "id": 514,
+      "seed": 20261721,
+      "a": "Nomad",
+      "b": "Bulwark",
+      "mirror": true
+    },
+    {
+      "id": 515,
+      "seed": 20261722,
+      "a": "Nomad",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 516,
+      "seed": 20261723,
+      "a": "Nomad",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 517,
+      "seed": 20261724,
+      "a": "Nomad",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 518,
+      "seed": 20261725,
+      "a": "Nomad",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 519,
+      "seed": 20261726,
+      "a": "Swarm",
+      "b": "Sapper",
+      "mirror": true
+    },
+    {
+      "id": 520,
+      "seed": 20261727,
+      "a": "Swarm",
+      "b": "Bulwark",
+      "mirror": true
+    },
+    {
+      "id": 521,
+      "seed": 20261728,
+      "a": "Swarm",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 522,
+      "seed": 20261729,
+      "a": "Swarm",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 523,
+      "seed": 20261730,
+      "a": "Swarm",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 524,
+      "seed": 20261731,
+      "a": "Swarm",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 525,
+      "seed": 20261732,
+      "a": "Sapper",
+      "b": "Bulwark",
+      "mirror": true
+    },
+    {
+      "id": 526,
+      "seed": 20261733,
+      "a": "Sapper",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 527,
+      "seed": 20261734,
+      "a": "Sapper",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 528,
+      "seed": 20261735,
+      "a": "Sapper",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 529,
+      "seed": 20261736,
+      "a": "Sapper",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 530,
+      "seed": 20261737,
+      "a": "Bulwark",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 531,
+      "seed": 20261738,
+      "a": "Bulwark",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 532,
+      "seed": 20261739,
+      "a": "Bulwark",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 533,
+      "seed": 20261740,
+      "a": "Bulwark",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 534,
+      "seed": 20261741,
+      "a": "Hunter",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 535,
+      "seed": 20261742,
+      "a": "Hunter",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 536,
+      "seed": 20261743,
+      "a": "Hunter",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 537,
+      "seed": 20261744,
+      "a": "Warden",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 538,
+      "seed": 20261745,
+      "a": "Warden",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 539,
+      "seed": 20261746,
+      "a": "baseline1",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 540,
+      "seed": 20261754,
+      "a": "Vanguard",
+      "b": "Nomad",
+      "mirror": true
+    },
+    {
+      "id": 541,
+      "seed": 20261755,
+      "a": "Vanguard",
+      "b": "Swarm",
+      "mirror": true
+    },
+    {
+      "id": 542,
+      "seed": 20261756,
+      "a": "Vanguard",
+      "b": "Sapper",
+      "mirror": true
+    },
+    {
+      "id": 543,
+      "seed": 20261757,
+      "a": "Vanguard",
+      "b": "Bulwark",
+      "mirror": true
+    },
+    {
+      "id": 544,
+      "seed": 20261758,
+      "a": "Vanguard",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 545,
+      "seed": 20261759,
+      "a": "Vanguard",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 546,
+      "seed": 20261760,
+      "a": "Vanguard",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 547,
+      "seed": 20261761,
+      "a": "Vanguard",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 548,
+      "seed": 20261762,
+      "a": "Nomad",
+      "b": "Swarm",
+      "mirror": true
+    },
+    {
+      "id": 549,
+      "seed": 20261763,
+      "a": "Nomad",
+      "b": "Sapper",
+      "mirror": true
+    },
+    {
+      "id": 550,
+      "seed": 20261764,
+      "a": "Nomad",
+      "b": "Bulwark",
+      "mirror": true
+    },
+    {
+      "id": 551,
+      "seed": 20261765,
+      "a": "Nomad",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 552,
+      "seed": 20261766,
+      "a": "Nomad",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 553,
+      "seed": 20261767,
+      "a": "Nomad",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 554,
+      "seed": 20261768,
+      "a": "Nomad",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 555,
+      "seed": 20261769,
+      "a": "Swarm",
+      "b": "Sapper",
+      "mirror": true
+    },
+    {
+      "id": 556,
+      "seed": 20261770,
+      "a": "Swarm",
+      "b": "Bulwark",
+      "mirror": true
+    },
+    {
+      "id": 557,
+      "seed": 20261771,
+      "a": "Swarm",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 558,
+      "seed": 20261772,
+      "a": "Swarm",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 559,
+      "seed": 20261773,
+      "a": "Swarm",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 560,
+      "seed": 20261774,
+      "a": "Swarm",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 561,
+      "seed": 20261775,
+      "a": "Sapper",
+      "b": "Bulwark",
+      "mirror": true
+    },
+    {
+      "id": 562,
+      "seed": 20261776,
+      "a": "Sapper",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 563,
+      "seed": 20261777,
+      "a": "Sapper",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 564,
+      "seed": 20261778,
+      "a": "Sapper",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 565,
+      "seed": 20261779,
+      "a": "Sapper",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 566,
+      "seed": 20261780,
+      "a": "Bulwark",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 567,
+      "seed": 20261781,
+      "a": "Bulwark",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 568,
+      "seed": 20261782,
+      "a": "Bulwark",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 569,
+      "seed": 20261783,
+      "a": "Bulwark",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 570,
+      "seed": 20261784,
+      "a": "Hunter",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 571,
+      "seed": 20261785,
+      "a": "Hunter",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 572,
+      "seed": 20261786,
+      "a": "Hunter",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 573,
+      "seed": 20261787,
+      "a": "Warden",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 574,
+      "seed": 20261788,
+      "a": "Warden",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 575,
+      "seed": 20261789,
+      "a": "baseline1",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 576,
+      "seed": 20261797,
+      "a": "Vanguard",
+      "b": "Nomad",
+      "mirror": true
+    },
+    {
+      "id": 577,
+      "seed": 20261798,
+      "a": "Vanguard",
+      "b": "Swarm",
+      "mirror": true
+    },
+    {
+      "id": 578,
+      "seed": 20261799,
+      "a": "Vanguard",
+      "b": "Sapper",
+      "mirror": true
+    },
+    {
+      "id": 579,
+      "seed": 20261800,
+      "a": "Vanguard",
+      "b": "Bulwark",
+      "mirror": true
+    },
+    {
+      "id": 580,
+      "seed": 20261801,
+      "a": "Vanguard",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 581,
+      "seed": 20261802,
+      "a": "Vanguard",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 582,
+      "seed": 20261803,
+      "a": "Vanguard",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 583,
+      "seed": 20261804,
+      "a": "Vanguard",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 584,
+      "seed": 20261805,
+      "a": "Nomad",
+      "b": "Swarm",
+      "mirror": true
+    },
+    {
+      "id": 585,
+      "seed": 20261806,
+      "a": "Nomad",
+      "b": "Sapper",
+      "mirror": true
+    },
+    {
+      "id": 586,
+      "seed": 20261807,
+      "a": "Nomad",
+      "b": "Bulwark",
+      "mirror": true
+    },
+    {
+      "id": 587,
+      "seed": 20261808,
+      "a": "Nomad",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 588,
+      "seed": 20261809,
+      "a": "Nomad",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 589,
+      "seed": 20261810,
+      "a": "Nomad",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 590,
+      "seed": 20261811,
+      "a": "Nomad",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 591,
+      "seed": 20261812,
+      "a": "Swarm",
+      "b": "Sapper",
+      "mirror": true
+    },
+    {
+      "id": 592,
+      "seed": 20261813,
+      "a": "Swarm",
+      "b": "Bulwark",
+      "mirror": true
+    },
+    {
+      "id": 593,
+      "seed": 20261814,
+      "a": "Swarm",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 594,
+      "seed": 20261815,
+      "a": "Swarm",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 595,
+      "seed": 20261816,
+      "a": "Swarm",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 596,
+      "seed": 20261817,
+      "a": "Swarm",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 597,
+      "seed": 20261818,
+      "a": "Sapper",
+      "b": "Bulwark",
+      "mirror": true
+    },
+    {
+      "id": 598,
+      "seed": 20261819,
+      "a": "Sapper",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 599,
+      "seed": 20261820,
+      "a": "Sapper",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 600,
+      "seed": 20261821,
+      "a": "Sapper",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 601,
+      "seed": 20261822,
+      "a": "Sapper",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 602,
+      "seed": 20261823,
+      "a": "Bulwark",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 603,
+      "seed": 20261824,
+      "a": "Bulwark",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 604,
+      "seed": 20261825,
+      "a": "Bulwark",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 605,
+      "seed": 20261826,
+      "a": "Bulwark",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 606,
+      "seed": 20261827,
+      "a": "Hunter",
+      "b": "Warden",
+      "mirror": true
+    },
+    {
+      "id": 607,
+      "seed": 20261828,
+      "a": "Hunter",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 608,
+      "seed": 20261829,
+      "a": "Hunter",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 609,
+      "seed": 20261830,
+      "a": "Warden",
+      "b": "baseline1",
+      "mirror": true
+    },
+    {
+      "id": 610,
+      "seed": 20261831,
+      "a": "Warden",
+      "b": "baseline2",
+      "mirror": true
+    },
+    {
+      "id": 611,
+      "seed": 20261832,
+      "a": "baseline1",
+      "b": "baseline2",
+      "mirror": true
+    }
+  ],
+  "config": {
+    "tickLimit": 1500,
+    "tickMs": 50,
+    "decideMs": 120,
+    "initMs": 2000,
+    "maxStrikes": 3,
+    "strikeMode": "consecutive",
+    "generator": "minecraft",
+    "vision": false,
+    "ruleset": "v15"
+  }
+}

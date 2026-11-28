@@ -1,0 +1,8 @@
+{
+  "mode": "siege",
+  "base": "engine/oracle/rules.js",
+  "baseRulesHash": "906f1b14",
+  "sha256": "199129dfc392062ebef37302b96c232fa23719eadfe3f6c34db2e280a8fb0484",
+  "bytes": 110881,
+  "note": "攻守实验规则变体；冻结 rules.js 未修改。矿场替代 VP、守方工事、母舰 HP 1250、工事预算 16、tickLimit 1260、三模式指挥契约。哈希按 LF 原始字节计（.gitattributes 已禁 EOL 转换）。"
+}

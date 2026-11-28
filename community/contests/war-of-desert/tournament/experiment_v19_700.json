@@ -1,0 +1,90 @@
+{
+  "name": "Desert Arena · v1.9.1 714 局标定（7 人 · 遗产提速与攻城并行）",
+  "season": "v1.9.1 标定：遗产补给 70 tick / 场上 3 件 + 遗产科技加速 + 远程兵机动 + Warden",
+  "version": "1.9.1",
+  "engine": {
+    "kind": "native",
+    "host": "bots/bin/enginehost.exe",
+    "snapshot": "engine/golden"
+  },
+  "rules": {
+    "tickLimit": 1500,
+    "tickMs": 50,
+    "decideMs": 120,
+    "initMs": 2000,
+    "maxStrikes": 3,
+    "strikeMode": "consecutive",
+    "generator": "minecraft",
+    "vision": false,
+    "ruleset": "v15"
+  },
+  "schedule": {
+    "seeds": [
+      20261109,
+      20261116,
+      20261123,
+      20261130,
+      20261137,
+      20261144,
+      20261151,
+      20261158,
+      20261165,
+      20261172,
+      20261179,
+      20261186,
+      20261193,
+      20261200,
+      20261207,
+      20261214,
+      20261221
+    ],
+    "mirror": true,
+    "bootstrap": 200
+  },
+  "entries": [
+    {
+      "name": "Vanguard",
+      "author": "官方参考 Bot",
+      "source": "workspace/bots/vanguard",
+      "bin": "bots/bin/vanguard.exe"
+    },
+    {
+      "name": "Nomad",
+      "author": "官方参考 Bot",
+      "source": "workspace/bots/nomad",
+      "bin": "bots/bin/nomad.exe"
+    },
+    {
+      "name": "Swarm",
+      "author": "官方参考 Bot",
+      "source": "workspace/bots/swarm",
+      "bin": "bots/bin/swarm.exe"
+    },
+    {
+      "name": "Sapper",
+      "author": "官方参考 Bot",
+      "source": "workspace/bots/sapper",
+      "bin": "bots/bin/sapper.exe"
+    },
+    {
+      "name": "Bulwark",
+      "author": "官方参考 Bot",
+      "source": "workspace/bots/bulwark",
+      "bin": "bots/bin/bulwark.exe"
+    },
+    {
+      "name": "Hunter",
+      "author": "官方参考 Bot",
+      "source": "workspace/bots/hunter",
+      "bin": "bots/bin/hunter.exe"
+    },
+    {
+      "name": "Warden",
+      "author": "v1.9 规则 · 攻城压制",
+      "source": "workspace/bots/warden",
+      "bin": "bots/bin/warden.exe"
+    }
+  ],
+  "output": "results/exp-v191-700",
+  "verify": true
+}

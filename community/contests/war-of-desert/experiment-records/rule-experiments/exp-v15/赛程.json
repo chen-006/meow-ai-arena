@@ -1,0 +1,374 @@
+{
+  "version": 1,
+  "createdBy": "cmd/arena plan",
+  "rulesVersion": "1.5",
+  "rulesHash": "24d4935b",
+  "engine": "native",
+  "mirror": true,
+  "entries": [
+    {
+      "name": "Vanguard",
+      "author": "官方参考 Bot",
+      "source": "workspace/bots/vanguard",
+      "bin": "bots/bin/vanguard.exe"
+    },
+    {
+      "name": "Nomad",
+      "author": "官方参考 Bot",
+      "source": "workspace/bots/nomad",
+      "bin": "bots/bin/nomad.exe"
+    },
+    {
+      "name": "Swarm",
+      "author": "官方参考 Bot",
+      "source": "workspace/bots/swarm",
+      "bin": "bots/bin/swarm.exe"
+    },
+    {
+      "name": "Sapper",
+      "author": "官方参考 Bot",
+      "source": "workspace/bots/sapper",
+      "bin": "bots/bin/sapper.exe"
+    },
+    {
+      "name": "Bulwark",
+      "author": "官方参考 Bot",
+      "source": "workspace/bots/bulwark",
+      "bin": "bots/bin/bulwark.exe"
+    },
+    {
+      "name": "Hunter",
+      "author": "v1.5 实验 Bot",
+      "source": "workspace/bots/hunter",
+      "bin": "bots/bin/hunter.exe"
+    }
+  ],
+  "matches": [
+    {
+      "id": 0,
+      "seed": 20261109,
+      "a": "Vanguard",
+      "b": "Nomad",
+      "mirror": true
+    },
+    {
+      "id": 1,
+      "seed": 20261110,
+      "a": "Vanguard",
+      "b": "Swarm",
+      "mirror": true
+    },
+    {
+      "id": 2,
+      "seed": 20261111,
+      "a": "Vanguard",
+      "b": "Sapper",
+      "mirror": true
+    },
+    {
+      "id": 3,
+      "seed": 20261112,
+      "a": "Vanguard",
+      "b": "Bulwark",
+      "mirror": true
+    },
+    {
+      "id": 4,
+      "seed": 20261113,
+      "a": "Vanguard",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 5,
+      "seed": 20261114,
+      "a": "Nomad",
+      "b": "Swarm",
+      "mirror": true
+    },
+    {
+      "id": 6,
+      "seed": 20261115,
+      "a": "Nomad",
+      "b": "Sapper",
+      "mirror": true
+    },
+    {
+      "id": 7,
+      "seed": 20261116,
+      "a": "Nomad",
+      "b": "Bulwark",
+      "mirror": true
+    },
+    {
+      "id": 8,
+      "seed": 20261117,
+      "a": "Nomad",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 9,
+      "seed": 20261118,
+      "a": "Swarm",
+      "b": "Sapper",
+      "mirror": true
+    },
+    {
+      "id": 10,
+      "seed": 20261119,
+      "a": "Swarm",
+      "b": "Bulwark",
+      "mirror": true
+    },
+    {
+      "id": 11,
+      "seed": 20261120,
+      "a": "Swarm",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 12,
+      "seed": 20261121,
+      "a": "Sapper",
+      "b": "Bulwark",
+      "mirror": true
+    },
+    {
+      "id": 13,
+      "seed": 20261122,
+      "a": "Sapper",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 14,
+      "seed": 20261123,
+      "a": "Bulwark",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 15,
+      "seed": 20261125,
+      "a": "Vanguard",
+      "b": "Nomad",
+      "mirror": true
+    },
+    {
+      "id": 16,
+      "seed": 20261126,
+      "a": "Vanguard",
+      "b": "Swarm",
+      "mirror": true
+    },
+    {
+      "id": 17,
+      "seed": 20261127,
+      "a": "Vanguard",
+      "b": "Sapper",
+      "mirror": true
+    },
+    {
+      "id": 18,
+      "seed": 20261128,
+      "a": "Vanguard",
+      "b": "Bulwark",
+      "mirror": true
+    },
+    {
+      "id": 19,
+      "seed": 20261129,
+      "a": "Vanguard",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 20,
+      "seed": 20261130,
+      "a": "Nomad",
+      "b": "Swarm",
+      "mirror": true
+    },
+    {
+      "id": 21,
+      "seed": 20261131,
+      "a": "Nomad",
+      "b": "Sapper",
+      "mirror": true
+    },
+    {
+      "id": 22,
+      "seed": 20261132,
+      "a": "Nomad",
+      "b": "Bulwark",
+      "mirror": true
+    },
+    {
+      "id": 23,
+      "seed": 20261133,
+      "a": "Nomad",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 24,
+      "seed": 20261134,
+      "a": "Swarm",
+      "b": "Sapper",
+      "mirror": true
+    },
+    {
+      "id": 25,
+      "seed": 20261135,
+      "a": "Swarm",
+      "b": "Bulwark",
+      "mirror": true
+    },
+    {
+      "id": 26,
+      "seed": 20261136,
+      "a": "Swarm",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 27,
+      "seed": 20261137,
+      "a": "Sapper",
+      "b": "Bulwark",
+      "mirror": true
+    },
+    {
+      "id": 28,
+      "seed": 20261138,
+      "a": "Sapper",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 29,
+      "seed": 20261139,
+      "a": "Bulwark",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 30,
+      "seed": 20261141,
+      "a": "Vanguard",
+      "b": "Nomad",
+      "mirror": true
+    },
+    {
+      "id": 31,
+      "seed": 20261142,
+      "a": "Vanguard",
+      "b": "Swarm",
+      "mirror": true
+    },
+    {
+      "id": 32,
+      "seed": 20261143,
+      "a": "Vanguard",
+      "b": "Sapper",
+      "mirror": true
+    },
+    {
+      "id": 33,
+      "seed": 20261144,
+      "a": "Vanguard",
+      "b": "Bulwark",
+      "mirror": true
+    },
+    {
+      "id": 34,
+      "seed": 20261145,
+      "a": "Vanguard",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 35,
+      "seed": 20261146,
+      "a": "Nomad",
+      "b": "Swarm",
+      "mirror": true
+    },
+    {
+      "id": 36,
+      "seed": 20261147,
+      "a": "Nomad",
+      "b": "Sapper",
+      "mirror": true
+    },
+    {
+      "id": 37,
+      "seed": 20261148,
+      "a": "Nomad",
+      "b": "Bulwark",
+      "mirror": true
+    },
+    {
+      "id": 38,
+      "seed": 20261149,
+      "a": "Nomad",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 39,
+      "seed": 20261150,
+      "a": "Swarm",
+      "b": "Sapper",
+      "mirror": true
+    },
+    {
+      "id": 40,
+      "seed": 20261151,
+      "a": "Swarm",
+      "b": "Bulwark",
+      "mirror": true
+    },
+    {
+      "id": 41,
+      "seed": 20261152,
+      "a": "Swarm",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 42,
+      "seed": 20261153,
+      "a": "Sapper",
+      "b": "Bulwark",
+      "mirror": true
+    },
+    {
+      "id": 43,
+      "seed": 20261154,
+      "a": "Sapper",
+      "b": "Hunter",
+      "mirror": true
+    },
+    {
+      "id": 44,
+      "seed": 20261155,
+      "a": "Bulwark",
+      "b": "Hunter",
+      "mirror": true
+    }
+  ],
+  "config": {
+    "tickLimit": 1500,
+    "tickMs": 50,
+    "decideMs": 120,
+    "initMs": 2000,
+    "maxStrikes": 3,
+    "strikeMode": "consecutive",
+    "generator": "minecraft",
+    "vision": false,
+    "ruleset": "v15"
+  }
+}

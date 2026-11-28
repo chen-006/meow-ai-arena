@@ -1,0 +1,70 @@
+{
+  "name": "Desert Arena · 沙漠遭遇战",
+  "season": "第 4 季 · 基准赛（Go 原生引擎，v1.3 规则）",
+  "version": "1.3",
+  "engine": {
+    "kind": "native",
+    "host": "bots/bin/enginehost.exe",
+    "snapshot": "engine/golden",
+    "oracleCommit": "b9643b0（移植基线：MVP 合并版 + v0.11 收尾，见 engine/parity/BASELINE.md）"
+  },
+  "rules": {
+    "tickLimit": 1200,
+    "tickMs": 50,
+    "decideMs": 120,
+    "initMs": 2000,
+    "maxStrikes": 3,
+    "strikeMode": "consecutive",
+    "generator": "minecraft",
+    "vision": false
+  },
+  "schedule": {
+    "seeds": [
+      20261109,
+      20261110,
+      20261111
+    ],
+    "mirror": true,
+    "bootstrap": 200
+  },
+  "entries": [
+    {
+      "name": "Vanguard",
+      "author": "官方参考 Bot",
+      "source": "workspace/bots/vanguard",
+      "bin": "bots/bin/vanguard.exe"
+    },
+    {
+      "name": "Bulwark",
+      "author": "官方参考 Bot",
+      "source": "workspace/bots/bulwark",
+      "bin": "bots/bin/bulwark.exe"
+    },
+    {
+      "name": "Swarm",
+      "author": "官方参考 Bot",
+      "source": "workspace/bots/swarm",
+      "bin": "bots/bin/swarm.exe"
+    },
+    {
+      "name": "Nomad",
+      "author": "官方参考 Bot",
+      "source": "workspace/bots/nomad",
+      "bin": "bots/bin/nomad.exe"
+    },
+    {
+      "name": "Sapper",
+      "author": "官方参考 Bot",
+      "source": "workspace/bots/sapper",
+      "bin": "bots/bin/sapper.exe"
+    },
+    {
+      "name": "Starter",
+      "author": "选手提交模板",
+      "source": "workspace/submission",
+      "bin": "bots/bin/submission.exe"
+    }
+  ],
+  "output": "results/formal-v13",
+  "verify": true
+}

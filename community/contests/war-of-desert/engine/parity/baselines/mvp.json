@@ -1,0 +1,244 @@
+{
+  "generatedAt": "2026-11-14T14:22:07.264Z",
+  "rulesHash": "4e0a8e2b",
+  "source": "Dev/MVP working tree @ b9643b0 + v0.11 WIP (diff ad32ea3a23e035a8), rulesHash=4e0a8e2b",
+  "config": {
+    "bots": [
+      "greedy",
+      "tactical"
+    ],
+    "seeds": [
+      20261109,
+      20261110,
+      20261111,
+      20261112,
+      20261113
+    ],
+    "tickLimit": 1200,
+    "mirror": true,
+    "generator": "minecraft",
+    "vision": false
+  },
+  "games": [
+    {
+      "seed": 20261109,
+      "game": 0,
+      "swap": false,
+      "winner": 0,
+      "level": 2,
+      "turns": 1200,
+      "reason": "时间到 · 按 VP 累计分",
+      "vp": [
+        1849,
+        1165
+      ],
+      "kills": [],
+      "cardsTotal": [
+        54.08,
+        48.86
+      ],
+      "faults": [
+        0,
+        0
+      ]
+    },
+    {
+      "seed": 20261109,
+      "game": 1,
+      "swap": true,
+      "winner": 1,
+      "level": 2,
+      "turns": 1200,
+      "reason": "时间到 · 按 VP 累计分",
+      "vp": [
+        702,
+        1644
+      ],
+      "kills": [],
+      "cardsTotal": [
+        45.59,
+        52.58
+      ],
+      "faults": [
+        0,
+        0
+      ]
+    },
+    {
+      "seed": 20261110,
+      "game": 0,
+      "swap": false,
+      "winner": 1,
+      "level": 2,
+      "turns": 1200,
+      "reason": "时间到 · 按 VP 累计分",
+      "vp": [
+        1150,
+        1211
+      ],
+      "kills": [],
+      "cardsTotal": [
+        48.04,
+        49.22
+      ],
+      "faults": [
+        0,
+        0
+      ]
+    },
+    {
+      "seed": 20261110,
+      "game": 1,
+      "swap": true,
+      "winner": 0,
+      "level": 2,
+      "turns": 1200,
+      "reason": "时间到 · 按 VP 累计分",
+      "vp": [
+        1400,
+        510
+      ],
+      "kills": [],
+      "cardsTotal": [
+        50.54,
+        43.54
+      ],
+      "faults": [
+        0,
+        0
+      ]
+    },
+    {
+      "seed": 20261111,
+      "game": 0,
+      "swap": false,
+      "winner": 1,
+      "level": 2,
+      "turns": 1200,
+      "reason": "时间到 · 按 VP 累计分",
+      "vp": [
+        606,
+        1112
+      ],
+      "kills": [],
+      "cardsTotal": [
+        44.21,
+        48.47
+      ],
+      "faults": [
+        0,
+        0
+      ]
+    },
+    {
+      "seed": 20261111,
+      "game": 1,
+      "swap": true,
+      "winner": 0,
+      "level": 2,
+      "turns": 1200,
+      "reason": "时间到 · 按 VP 累计分",
+      "vp": [
+        1112,
+        606
+      ],
+      "kills": [],
+      "cardsTotal": [
+        48.47,
+        44.21
+      ],
+      "faults": [
+        0,
+        0
+      ]
+    },
+    {
+      "seed": 20261112,
+      "game": 0,
+      "swap": false,
+      "winner": 1,
+      "level": 2,
+      "turns": 1200,
+      "reason": "时间到 · 按 VP 累计分",
+      "vp": [
+        616,
+        1244
+      ],
+      "kills": [],
+      "cardsTotal": [
+        44.47,
+        49.62
+      ],
+      "faults": [
+        0,
+        0
+      ]
+    },
+    {
+      "seed": 20261112,
+      "game": 1,
+      "swap": true,
+      "winner": 0,
+      "level": 2,
+      "turns": 1200,
+      "reason": "时间到 · 按 VP 累计分",
+      "vp": [
+        1157,
+        635
+      ],
+      "kills": [],
+      "cardsTotal": [
+        49.27,
+        44.61
+      ],
+      "faults": [
+        0,
+        0
+      ]
+    },
+    {
+      "seed": 20261113,
+      "game": 0,
+      "swap": false,
+      "winner": 1,
+      "level": 2,
+      "turns": 1200,
+      "reason": "时间到 · 按 VP 累计分",
+      "vp": [
+        0,
+        1509
+      ],
+      "kills": [],
+      "cardsTotal": [
+        35,
+        52.87
+      ],
+      "faults": [
+        0,
+        0
+      ]
+    },
+    {
+      "seed": 20261113,
+      "game": 1,
+      "swap": true,
+      "winner": 0,
+      "level": 2,
+      "turns": 1200,
+      "reason": "时间到 · 按 VP 累计分",
+      "vp": [
+        1426,
+        0
+      ],
+      "kills": [],
+      "cardsTotal": [
+        50.71,
+        35
+      ],
+      "faults": [
+        0,
+        0
+      ]
+    }
+  ]
+}
