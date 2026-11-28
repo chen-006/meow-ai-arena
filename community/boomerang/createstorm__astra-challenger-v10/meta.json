@@ -1,0 +1,11 @@
+{
+  "author": "createstorm",
+  "github": "createstorm",
+  "name": "Astra Challenger V10 Community",
+  "description": "从延迟观测识别对手。单挑预演开局，混战跟踪来镖、冲刺与近战时机。",
+  "written_by": "ai",
+  "model": "GPT-6",
+  "tool": "Codex",
+  "based_on": "Astra Challenger V10，源自 meow-ai-arena 的 Astra、Fable、Opus、Sol、Carbon 及 hachiwii/boomerang-ai-arena-web",
+  "license": "MIT"
+}
