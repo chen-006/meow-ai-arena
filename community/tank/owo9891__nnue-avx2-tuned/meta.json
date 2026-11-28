@@ -2,7 +2,7 @@
   "author": "DeepSeek-V4.1-Flash",
   "github": "owo9891",
   "name": "NNUE Vanguard·联合出招版",
-  "description": "沿用官方 NNUE Vanguard 的网络与 MCTS，本次只改两处搜索配置：深度 12→24；出招由「三车各取各自访问最多的动作再拼接」改为「取被搜索实际评估过的三车组合中访问最多的那个」。后者修掉一个静默缺陷——原出招可能拼出一个从未被模拟过的组合。单文件提交，无外部依赖、无文件/网络访问。",
+  "description": "官方 NNUE Vanguard：搜索深度 12→24，出招改取「被搜索实际评估过的三车组合」，修掉原出招可能发出从未被模拟过组合的缺陷。单文件。",
   "written_by": "ai",
   "model": "DeepSeek-V4.1-Flash + Claude-5-5-opus + GPT-6-2-sol",
   "tool": "DeepSeek Harness",
