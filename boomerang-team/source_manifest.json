@@ -18,8 +18,8 @@
       "bytes": 5974
     },
     "MANIFEST.md": {
-      "sha256": "92be8fed4adb8be936f5bb416ae813875709926e9089ca00c1bb1c45917519fc",
-      "bytes": 6353
+      "sha256": "6ac0c3ebc0bb4b826c2d6bf464185c9f61e4fe93d2161b7ce823254fe46e8c8e",
+      "bytes": 6406
     },
     "README.md": {
       "sha256": "b816fd02958a28117d323064f47f5029c8cb9ae45c9f188d129c400b831025d0",
@@ -1358,8 +1358,8 @@
       "bytes": 58
     },
     "web-play/README.md": {
-      "sha256": "86d18f5d8319e08dc11cd033f3b4298c64c73e56b88e015e5cad88e263d88f43",
-      "bytes": 6965
+      "sha256": "83ac02bc80d723c77d1b6063a2629790d87e0148533a8ed6e7c918afcc2ad1f0",
+      "bytes": 7094
     },
     "web-play/ep11/index.html": {
       "sha256": "c4bdf56406a488a9301efb9a8a24cdf6ae79e51dd9d6c4ffeeab5467e614c2eb",
@@ -1794,8 +1794,8 @@
       "bytes": 488
     },
     "web-play/src/games/boomerang/arena-page.ts": {
-      "sha256": "a94c73e79a9dd5746ff63406559508eecf16cdf5593cea8f582596a55330c138",
-      "bytes": 73736
+      "sha256": "b5ba4067289224f11fd68903bab5700d1082e3534cf360ea00dc44f51367d879",
+      "bytes": 73824
     },
     "web-play/src/games/boomerang/arena.css": {
       "sha256": "f1eb13f3a5069d09fdd01eba76c78b23e24ed00e6036637cab4992e4df2d649b",

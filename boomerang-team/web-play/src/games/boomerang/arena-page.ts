@@ -796,10 +796,13 @@ export async function startBoomerangArena(initialMode: 'play' | 'watch' | 'repla
     sideEl.querySelector<HTMLButtonElement>('#p-start')!.onclick = () => startPlay();
   }
   function playTitle() { return `${MODE_NAME[play.mode]} · ${mapMeta(play.map).name}`; }
+  let previewSeq = 0;
   async function doPreview() {
     if (tab !== 'play') return;
+    const seq = ++previewSeq;
     const { seats, roundPlan } = playSeats();
     await preview(play.mode, play.map, seats, roundPlan);
+    if (seq !== previewSeq) return;
     if (tab === 'play' && S.kind === 'preview') {
       const opp = play.mode >= 3 ? (play.side === 0 ? '加入 Astra 队' : '加入 Fable 队') : play.mode === 2 ? '4v4：你 + 3 位 AI 队友' : '对手：' + seats.slice(1).map((s) => displayName(s.bot || s.name)).join('、');
       showStart(playTitle(), opp, () => startPlay());

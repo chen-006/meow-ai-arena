@@ -18,7 +18,7 @@
 | 纯享版分层抽局 | 纯享版 72 局分层随机抽样脚本 `select_pure.py`（直接读取 `results/formal_games.jsonl.gz` 复现 seed 263）、统计摘要与选局清单 `纯享版选局.md` | `purecut/` |
 | 1v1 排位赛本地选手包 | 网站排位赛本地选手包源文件（`player.cpp`、`config.json`［源码上限 262,144 字符］、跨平台 `arena.cpp`、Linux 计时补丁版 `dart.hpp`、`play.py`、`viewer.html`、三档陪练与 6 张地图源码）及打包/补丁脚本 | `rank-kit/` |
 | 队长派活与亲手改工具（选手端） | 队长与队员直接使用的派活与亲手改工具（`team_cli.py`、`team12.py`、`common.py`、`session_lookup.py`、`grok_cli.py`、`opencode_runtime.py`、`fake_member.py`、入口模板 `ask.cmd`/`ask_entry.py`/`亲手改.cmd`/`edit_entry.py`、队长须知与前言模板、脱敏配置样例，已清理内部路径和密钥） | `team-tools/` |
-| 网页可玩版前端 | 第 11～12 期浏览器可玩版前端源码与依赖锁文件 `package-lock.json`（`src/games/boomerang/`、Three.js 3D/2D 渲染、WASM 裁判与 Asyncify Bot 桥接、构建脚本与 3D 场景导出管线、体素与精简元数据；不含网站其他期、部署配置及大体积可再生 `.wasm`/`.bin.br` 产物） | `web-play/` |
+| 网页可玩版前端 | 第 11～12 期浏览器可玩版前端源码与依赖锁文件 `package-lock.json`（`src/games/boomerang/`、Three.js 3D/2D 渲染、WASM 裁判与 Asyncify Bot 桥接、构建脚本与 3D 场景导出管线、体素与精简元数据；不含网站其他期、部署配置、依赖排位赛服务端的玩家 Bot 联机入口及大体积可再生 `.wasm`/`.bin.br` 产物） | `web-play/` |
 | 5v5 渲染器 | 第 12 集 5v5 渲染器源码（已剔除 `.bak*`、`__pycache__` 及内部脚本，清除所有内部绝对路径）、三张定稿地图、出片脚本与使用说明 | `renderer/` |
 | 顶层清单更新 | 第 12 集新选 15 首 Mixkit 配乐清单（仅曲名、作者、编号、链接与授权，不含 MP3） | 顶层 `audio/music.md` |
 
