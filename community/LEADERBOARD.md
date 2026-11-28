@@ -47,26 +47,23 @@
 |---:|---|---|---|---|---:|---|---|
 | 1 | [墨痕喵](bomberman/mohen2006__bomberman-gpt-61-sol/) | mohen2006（[@mohen2006](https://github.com/mohen2006)） | AI 写 | gpt-6.1-sol / Codex | 484 | 1 / 11 | 2026-10-20 |
 | 2 | [Opus](bomberman/abottomcoder__opus/) | ABottomCoder（[@abottomcoder](https://github.com/abottomcoder)） | AI 写 | Opus 5.5 / Claude Code | 367 | 2 / 11 | 2026-11-05 |
-| 3 | [deepseek屎山v35](bomberman/dinson98__deepseek-shishan-v35/) | Dinson（[@dinson98](https://github.com/dinson98)） | 人和 AI 合写 | DeepSeek-V4.1-Flash / WorkBuddy | 312 | 2 / 11 | 2026-10-20 |
+| 3 | [余焰](bomberman/ffzmxc__afterglow/) | ffZmxc（[@ffzmxc](https://github.com/ffzmxc)） | AI 写 | GPT-6 / Codex | 314 | 2 / 11 | 2026-11-28 |
+| 4 | [deepseek屎山v35](bomberman/dinson98__deepseek-shishan-v35/) | Dinson（[@dinson98](https://github.com/dinson98)） | 人和 AI 合写 | DeepSeek-V4.1-Flash / WorkBuddy | 312 | 2 / 11 | 2026-10-20 |
 
 官方选手参照：每份投稿评测时，官方选手和基准也在同一台虚拟机上打了同一轮小比赛。下表是它们在各次评测里实力值的中位数。
 
 | 官方选手 | 实力值（中位数） | 出现在几次评测里 |
 |---|---:|---:|
-| GPT-6 Astra | 383 | 3 |
-| GPT-6 Sol | 296 | 3 |
-| Opus 5.5 | 290 | 3 |
-| DeepSeek V4.1 Flash | 241 | 3 |
-| Qwen 3.8 Max | 218 | 3 |
-| GLM 5.3 | 181 | 3 |
-| Kimi K3 | 179 | 3 |
-| 豆包 Seed 2.1 | 130 | 3 |
-| MiMo V2.6 Pro | 42 | 3 |
-| Base | 0 | 3 |
-
-没有成绩的投稿：
-
-- [余焰](bomberman/ffzmxc__afterglow/)（@ffzmxc）：还没有评测
+| GPT-6 Astra | 385 | 4 |
+| Opus 5.5 | 282 | 4 |
+| GPT-6 Sol | 273 | 4 |
+| DeepSeek V4.1 Flash | 233 | 4 |
+| Qwen 3.8 Max | 206 | 4 |
+| Kimi K3 | 193 | 4 |
+| GLM 5.3 | 160 | 4 |
+| 豆包 Seed 2.1 | 109 | 4 |
+| MiMo V2.6 Pro | 51 | 4 |
+| Base | 0 | 4 |
 
 ## 第 3 集 · 夺旗（`ctf/`）
 
