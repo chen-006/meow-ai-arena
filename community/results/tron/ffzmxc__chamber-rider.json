@@ -1,0 +1,479 @@
+{
+ "commit": "38b841ea3a22cf6357b27d33e9b1399e582fbf2b",
+ "detail": {
+  "budget": {
+   "budget_kind": "cpu",
+   "first_ms": 2000,
+   "turn_ms": 50
+  },
+  "complete": true,
+  "field": [
+   {
+    "is_entry": false,
+    "name": "Mistral",
+    "score": 120.0
+   },
+   {
+    "is_entry": false,
+    "name": "LongCat",
+    "score": 12.7
+   },
+   {
+    "is_entry": false,
+    "name": "Doubao",
+    "score": 0.0
+   },
+   {
+    "is_entry": false,
+    "name": "Step",
+    "score": -8.5
+   },
+   {
+    "is_entry": false,
+    "name": "Pangu",
+    "score": -193.2
+   },
+   {
+    "is_entry": false,
+    "name": "Hunyuan",
+    "score": -220.5
+   },
+   {
+    "is_entry": false,
+    "name": "Qwen27B",
+    "score": -265.2
+   },
+   {
+    "is_entry": false,
+    "name": "Mercury",
+    "score": -275.9
+   },
+   {
+    "is_entry": false,
+    "name": "Wenxin",
+    "score": -276.1
+   },
+   {
+    "is_entry": false,
+    "name": "Dots",
+    "score": -407.8
+   },
+   {
+    "is_entry": false,
+    "name": "AstraUF",
+    "score": 313.1
+   },
+   {
+    "is_entry": false,
+    "name": "DSNew",
+    "score": 127.5
+   },
+   {
+    "is_entry": true,
+    "name": "你的 bot",
+    "score": 218.0
+   }
+  ],
+  "field_size": 13,
+  "full": false,
+  "games": 82,
+  "games_by_mode": {
+   "12": 6,
+   "1v1": 52,
+   "3-4": 24
+  },
+  "games_note": "82 局（1v1 52、4 人 24、12 人 6）",
+  "mode": "formal",
+  "opponents": [
+   {
+    "name": "Mistral",
+    "ranked": true,
+    "rating": 119.95,
+    "ratings": {
+     "12": -119.04,
+     "1v1": 383.28,
+     "3-4": -159.61
+    },
+    "tally": {
+     "12": [
+      4,
+      0,
+      1
+     ],
+     "1v1": [
+      3,
+      0,
+      1
+     ],
+     "3-4": [
+      4,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "name": "LongCat",
+    "ranked": true,
+    "rating": 12.69,
+    "ratings": {
+     "12": -174.48,
+     "1v1": 239.9,
+     "3-4": -241.21
+    },
+    "tally": {
+     "12": [
+      3,
+      0,
+      1
+     ],
+     "1v1": [
+      3,
+      0,
+      1
+     ],
+     "3-4": [
+      4,
+      0,
+      1
+     ]
+    }
+   },
+   {
+    "name": "Doubao",
+    "ranked": true,
+    "rating": 0.0,
+    "ratings": {
+     "12": 0.0,
+     "1v1": 0.0,
+     "3-4": 0.0
+    },
+    "tally": {
+     "12": [
+      4,
+      0,
+      1
+     ],
+     "1v1": [
+      4,
+      0,
+      0
+     ],
+     "3-4": [
+      2,
+      0,
+      3
+     ]
+    }
+   },
+   {
+    "name": "Step",
+    "ranked": true,
+    "rating": -8.51,
+    "ratings": {
+     "12": -37.17,
+     "1v1": 20.43,
+     "3-4": -37.63
+    },
+    "tally": {
+     "12": [
+      3,
+      0,
+      2
+     ],
+     "1v1": [
+      4,
+      0,
+      0
+     ],
+     "3-4": [
+      1,
+      0,
+      3
+     ]
+    }
+   },
+   {
+    "name": "Pangu",
+    "ranked": true,
+    "rating": -193.16,
+    "ratings": {
+     "12": -283.18,
+     "1v1": -167.45,
+     "3-4": -175.98
+    },
+    "tally": {
+     "12": [
+      1,
+      0,
+      1
+     ],
+     "1v1": [
+      4,
+      0,
+      0
+     ],
+     "3-4": [
+      4,
+      0,
+      1
+     ]
+    }
+   },
+   {
+    "name": "Hunyuan",
+    "ranked": true,
+    "rating": -220.51,
+    "ratings": {
+     "12": 90.82,
+     "1v1": -340.48,
+     "3-4": -228.13
+    },
+    "tally": {
+     "12": [
+      3,
+      0,
+      3
+     ],
+     "1v1": [
+      4,
+      0,
+      0
+     ],
+     "3-4": [
+      8,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "name": "Qwen27B",
+    "ranked": true,
+    "rating": -265.19,
+    "ratings": {
+     "12": -146.63,
+     "1v1": -355.23,
+     "3-4": -194.16
+    },
+    "tally": {
+     "12": [
+      5,
+      1,
+      0
+     ],
+     "1v1": [
+      4,
+      0,
+      0
+     ],
+     "3-4": [
+      9,
+      0,
+      1
+     ]
+    }
+   },
+   {
+    "name": "Mercury",
+    "ranked": true,
+    "rating": -275.88,
+    "ratings": {
+     "12": -172.01,
+     "1v1": -373.14,
+     "3-4": -183.02
+    },
+    "tally": {
+     "12": [
+      3,
+      0,
+      2
+     ],
+     "1v1": [
+      4,
+      0,
+      0
+     ],
+     "3-4": [
+      4,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "name": "Wenxin",
+    "ranked": true,
+    "rating": -276.15,
+    "ratings": {
+     "12": -232.57,
+     "1v1": -331.98,
+     "3-4": -212.16
+    },
+    "tally": {
+     "12": [
+      4,
+      0,
+      1
+     ],
+     "1v1": [
+      4,
+      0,
+      0
+     ],
+     "3-4": [
+      8,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "name": "Dots",
+    "ranked": true,
+    "rating": -407.76,
+    "ratings": {
+     "12": -365.25,
+     "1v1": -492.76,
+     "3-4": -294.44
+    },
+    "tally": {
+     "12": [
+      6,
+      0,
+      0
+     ],
+     "1v1": [
+      4,
+      0,
+      0
+     ],
+     "3-4": [
+      6,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "name": "AstraUF",
+    "ranked": true,
+    "rating": 313.14,
+    "ratings": {
+     "12": 162.38,
+     "1v1": 418.21,
+     "3-4": 238.55
+    },
+    "tally": {
+     "12": [
+      2,
+      0,
+      3
+     ],
+     "1v1": [
+      1,
+      0,
+      3
+     ],
+     "3-4": [
+      1,
+      0,
+      3
+     ]
+    }
+   },
+   {
+    "name": "DSNew",
+    "ranked": true,
+    "rating": 127.53,
+    "ratings": {
+     "12": -67.09,
+     "1v1": 276.54,
+     "3-4": 8.91
+    },
+    "tally": {
+     "12": [
+      6,
+      0,
+      0
+     ],
+     "1v1": [
+      2,
+      0,
+      2
+     ],
+     "3-4": [
+      5,
+      0,
+      0
+     ]
+    }
+   },
+   {
+    "name": "sparring_hard",
+    "ranked": false,
+    "rating": 324.4,
+    "ratings": {
+     "12": 134.6,
+     "1v1": 487.35,
+     "3-4": 179.35
+    },
+    "tally": {
+     "12": [
+      3,
+      0,
+      3
+     ],
+     "1v1": [
+      2,
+      1,
+      1
+     ],
+     "3-4": [
+      2,
+      0,
+      2
+     ]
+    }
+   }
+  ],
+  "rank": 2,
+  "rating": 218.00436144537528,
+  "rating_method": "fixed-final-strong",
+  "ratings": {
+   "12": 74.08130264557497,
+   "1v1": 344.1932350802433,
+   "3-4": 103.63827792046209
+  },
+  "reference": {
+   "anchor": "Doubao",
+   "board": "强对手榜",
+   "path": "tron/results/results.json"
+  },
+  "schema": 1,
+  "seed": 5001,
+  "source_sha256": "e689ee232717b7decaf0812f7b7378b84bd477cf53352101c79b613d3bf83262",
+  "weights": {
+   "12": 0.2,
+   "1v1": 0.5,
+   "3-4": 0.3
+  }
+ },
+ "entry": "ffzmxc__chamber-rider",
+ "env": {
+  "compiler": "g++.exe (x86_64-posix-seh-rev1, Built by MinGW-Builds project) 15.2.0",
+  "cpus": 4,
+  "platform": "Windows-2025Server-10.0.26100-SP0",
+  "python": "3.12.10"
+ },
+ "episode": "tron",
+ "errors": [],
+ "files": {
+  "bot.cpp": "e689ee232717b7decaf0812f7b7378b84bd477cf53352101c79b613d3bf83262"
+ },
+ "mode": "quick",
+ "schema": 1,
+ "score": 218.0,
+ "status": "pass",
+ "time": "2026-11-28T05:47:43Z"
+}

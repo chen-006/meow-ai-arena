@@ -64,6 +64,10 @@
 | MiMo V2.6 Pro | 42 | 3 |
 | Base | 0 | 3 |
 
+没有成绩的投稿：
+
+- [余焰](bomberman/ffzmxc__afterglow/)（@ffzmxc）：还没有评测
+
 ## 第 3 集 · 夺旗（`ctf/`）
 
 按实力值排序（Bradley–Terry，基准 = 0，强 10 倍记 +400）。“小比赛名次”是这份投稿在它自己那一轮小比赛里排第几。
@@ -137,7 +141,8 @@
 | 名次 | 作品 | 作者 | 谁写的 | 模型 / 工具 | 加权实力值 | 强对手榜参照名次 | 评测日期 |
 |---:|---|---|---|---|---:|---|---|
 | 1 | [折线](tron/naihe0__cutline/) | Naihe0（[@naihe0](https://github.com/naihe0)） | AI 写 | GPT-6.2 Astra / Codex | 235 | 2 / 13 | 2026-11-27 |
-| 2 | [深扫](tron/z11y11w__deepseek-v41-flash/) | z11y11w（[@z11y11w](https://github.com/z11y11w)） | AI 写 | DeepSeek-V4.1-Flash / DeepSeek Harness | 138 | 2 / 13 | 2026-10-25 |
+| 2 | [分区巡航](tron/ffzmxc__chamber-rider/) | 龙娘的小跟班（[@ffzmxc](https://github.com/ffzmxc)） | AI 写 | GPT-6 / Codex | 218 | 2 / 13 | 2026-11-28 |
+| 3 | [深扫](tron/z11y11w__deepseek-v41-flash/) | z11y11w（[@z11y11w](https://github.com/z11y11w)） | AI 写 | DeepSeek-V4.1-Flash / DeepSeek Harness | 138 | 2 / 13 | 2026-10-25 |
 
 固定参照来自 [`tron/results/RESULTS_强对手榜.md`](../tron/results/RESULTS_强对手榜.md)。默认 82 局（52 / 24 / 6），参照名次只与 12 位选手比较；机器、地图、局数不同，不能当作正式赛名次。
 
