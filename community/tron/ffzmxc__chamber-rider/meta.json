@@ -1,0 +1,11 @@
+{
+  "author": "龙娘的小跟班",
+  "github": "ffZmxc",
+  "name": "分区巡航",
+  "description": "单挑用位棋盘推演抢格与分区，混战按人数预测对手，分区后规划长路线。",
+  "written_by": "ai",
+  "model": "GPT-6",
+  "tool": "Codex",
+  "based_on": "tron/bots/reference/gpt-6-astra-ultra-fast.cpp, tron/sparring/sparring_hard.cpp, tron/bots/mistral-large-4.cpp",
+  "license": "MIT"
+}
