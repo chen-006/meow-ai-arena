@@ -27,8 +27,8 @@
   "limits": {
     "max_source_chars": 262144,
     "max_source_bytes": 1048576,
-    "compile_cpu_sec": 20,
-    "compile_wall_sec": 30,
+    "compile_cpu_sec": 60,
+    "compile_wall_sec": 90,
     "step_cpu_ms": 10,
     "first_cpu_ms": 1000,
     "match_cpu_limit_sec": 10.0,

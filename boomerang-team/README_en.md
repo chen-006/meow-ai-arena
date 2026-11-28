@@ -44,7 +44,7 @@ To watch replays without installing anything, open [`workspace/viewer.html`](wor
 
 ## Video
 
-Bilibili: <B站链接>
+Bilibili: https://www.bilibili.com/video/BV1X41uzyEgi
 
 ## License & Attribution
 

@@ -438,7 +438,7 @@
       "bytes": 44796
     },
     "rank-kit/config.json": {
-      "sha256": "78ac1317e8e848dd371c28a11727f08c2acb0216db072eaa52fb69ecc762277c",
+      "sha256": "911f6a691d9ecb7bed5aec375d6cb27760c3d8324b66761dfadca23c318abf32",
       "bytes": 794
     },
     "rank-kit/dart.hpp": {
@@ -482,7 +482,7 @@
       "bytes": 1319
     },
     "rank-kit/README.md": {
-      "sha256": "30e0487655abb4a82b774b1bd8eba54b0bf134a19af5874394700729001ad5c7",
+      "sha256": "7bc74dc26eef94a73e1fb5cb70be73553f456e058454bfdb67ce19e83e5db41b",
       "bytes": 4842
     },
     "rank-kit/scripts/pack_kit.py": {
@@ -510,12 +510,12 @@
       "bytes": 87459
     },
     "README.md": {
-      "sha256": "16fcaee4427ba5d363a2add71cacec7d6cc6546518e83d429172b0a8519c71e1",
-      "bytes": 13310
+      "sha256": "c36cdd788d3ea8d59c5dfb4196ebaa490366bd6c8f7396f5377840e2b24abadd",
+      "bytes": 13341
     },
     "README_en.md": {
-      "sha256": "be78a958f4cd9090ed6409c3a3b0442721d5f3db6c45f13e7ad455cd9b6cf28e",
-      "bytes": 4589
+      "sha256": "046c122f4f302c37509d26d54353fa042c3f47dbf03f75ec6515822d56ebd2ca",
+      "bytes": 4620
     },
     "renderer/maps/caldera.txt": {
       "sha256": "b3b2e326deddea0150089e10a4b266c14ea071bb615069a1c18d72410e77e634",

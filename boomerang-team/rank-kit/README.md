@@ -67,7 +67,7 @@ python3 play.py --vs strong --swap
 - **源码上限**：**按字符计 262,144 字符**（Unicode 码位，`max_source_chars: 262144`；UTF-8 解码后字节上限 1 MiB，`max_source_bytes: 1048576`）
 - **编译参数**：`g++ -std=c++17 -O2 -static -s -ftemplate-depth=128 -fconstexpr-depth=128 -fconstexpr-ops-limit=10000000 -fmax-errors=20 -fno-diagnostics-show-caret -Werror=return-type`
 - **运行时限**：第 0 步（启动与初始化）CPU 预算 **1,000 ms**，每步 CPU 预算 **10 ms**；单局总 CPU 上限 **10 秒**，墙钟上限 **35 秒**
-- **内存与栈**：内存上限 **512 MB**，栈上限 **64 MB**；编译限 CPU 20 秒 / 墙钟 30 秒
+- **内存与栈**：内存上限 **512 MB**，栈上限 **64 MB**；编译限 CPU 60 秒 / 墙钟 90 秒
 
 ## 重新生成 `dart.hpp` 与打包 `kit.zip`
 

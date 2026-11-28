@@ -112,7 +112,7 @@ python renderer/render_game.py replays/R1_g366_astra_1v5.txt -o R1_g366.mp4
 
 ## 视频
 
-B 站：<B站链接>
+B 站：https://www.bilibili.com/video/BV1X41uzyEgi
 
 ## 声明和许可
 
